@@ -472,23 +472,23 @@
         "affectsGlobalScope": false
       },
       "./src/services/p2p-payments.types.ts": {
-        "version": "70e856141981bbca2cd51d1db4ed394380d97e887b94f6166d1ae03bcb37d6fa",
-        "signature": "9974e3a2b846a7b7230d19ddb25394757e4c75380c433ddcd9e2e3803e4a9725",
+        "version": "8b982ef54dd55110a94a25ec216225afafba110554faea25ffab866fdf882510",
+        "signature": "6e1be133ffff20139f85951d2ba699970838549b899f46a211e1a24bd753560b",
         "affectsGlobalScope": false
       },
       "./src/services/p2p-payments.ts": {
-        "version": "66b7d6f0a602d2cdbffa86a43e82a345a44a527a1e2e9295b81a2aef22236412",
-        "signature": "8ca7f6c90c92d40d8420104f7023cf400fe1a1e67bec660cfcfb9ebba56201eb",
+        "version": "edf63553895f0910518379c302ac57aa033d710c915527b1f7fde3d8a3b34619",
+        "signature": "a841ddaa79fe3aa4064bce781fe311c31471ec87896fe38d865f7b717f411166",
         "affectsGlobalScope": false
       },
       "./src/services/personal.types.ts": {
-        "version": "c0fc86ceba4464e2d2b8019b637d8b9e05c160204811d095fb85bbda76eb6da4",
-        "signature": "673e3a62fcfeed08ee64064115e57c74fe4af1262fdce67445dfff7ba29338a2",
+        "version": "d3408a656cbf15de72a5380ab1772924bbc672f769c1e005140c2c4c4ac2713c",
+        "signature": "85ab7c6b22a9814eba0ebc2acd2705fb3bef67f02debf403b38ddd5a32cdd469",
         "affectsGlobalScope": false
       },
       "./src/services/personal.ts": {
-        "version": "c40e24ca3745a690a597571db234c87843d9a6f0dd81563292800493f19fabb0",
-        "signature": "31bc3cec1a868f3a268034a8e0b812b03eaadc885ccb9fabf802d141613c6cff",
+        "version": "60e69098464af294cf707a58d8351af1ec61bf8562254c1d86f96a8f323e0f35",
+        "signature": "46135626d06f348fd69e213ff9636097e1e3c2a8c8e3efc242bd522c2868b6f1",
         "affectsGlobalScope": false
       },
       "./src/index.ts": {
@@ -789,9 +789,11 @@
         "./src/services/personal.types.ts"
       ],
       "./src/services/p2p-payments.ts": [
+        "./node_modules/@types/node/crypto.d.ts",
         "./node_modules/@types/uuid/index.d.ts",
         "./src/error.ts",
         "./src/http.ts",
+        "./src/index.ts",
         "./src/services/p2p-payments.types.ts"
       ],
       "./src/services/personal.ts": [

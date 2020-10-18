@@ -128,7 +128,7 @@ export class P2PPayments extends HttpAPI {
     }
   }
 
-  public formatLifetime(days = 1) {
+  public static formatLifetime(days = 1) {
     const date = new Date();
 
     const time = Math.round(date.getTime() + days * 24 * 60 * 60 * 1000);
