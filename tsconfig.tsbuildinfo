@@ -487,8 +487,8 @@
         "affectsGlobalScope": false
       },
       "./src/services/personal.ts": {
-        "version": "60e69098464af294cf707a58d8351af1ec61bf8562254c1d86f96a8f323e0f35",
-        "signature": "46135626d06f348fd69e213ff9636097e1e3c2a8c8e3efc242bd522c2868b6f1",
+        "version": "93ae63d46e518448dbfed43315fe724505a8d31476f8ea8bab828dc7f9471736",
+        "signature": "3ab5aded17081df91503ac9055251cc724bb00f197a0b618778998320af8ffa5",
         "affectsGlobalScope": false
       },
       "./src/index.ts": {

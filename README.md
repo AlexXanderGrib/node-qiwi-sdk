@@ -13,21 +13,20 @@
 
 ### Получение информации о владельце кошелька
 
-```JavaScript
-const QIWI = require('qiwi-sdk');
+```javascript
+const QIWI = require("qiwi-sdk");
 
 const qp = new QIWI.Personal(process.env.QIWI_TOKEN);
 
-qp.getPersonProfile()
-  .then(console.log);
+qp.getPersonProfile().then(console.log);
 
 // => { contractInfo: {...}, authInfo: {...}, userInfo: {...} }
 ```
 
 ### Как слить баланс кошелька
 
-```JavaScript
-const QIWI = require('qiwi-sdk');
+```javascript
+const QIWI = require("qiwi-sdk");
 
 const qp = new QIWI.Personal(process.env.QIWI_TOKEN);
 const receiver = "+79123456789";
@@ -39,8 +38,7 @@ async function main() {
   const accounts = await qp.getAccounts(wallet);
 
   const rubleAccount = accounts.find(
-    acc => acc.balance &&
-      acc.balance.currency === QIWI.Personal.Currency.RUB
+    (acc) => acc.balance && acc.balance.currency === QIWI.Personal.Currency.RUB
   );
 
   const commission = await qp.getCommission(
@@ -49,15 +47,9 @@ async function main() {
     rubleAccount.balance.amount
   );
 
-  const totalToSteal = parseFloat(
-    (rubleAccount.balance.amount - balance)
-  );
+  const totalToSteal = parseFloat(rubleAccount.balance.amount - balance);
 
-  const payment = await qp.pay(
-    provider,
-    receiver,
-    totalToSteal
-  );
+  const payment = await qp.pay(provider, receiver, totalToSteal);
 
   console.log(payment);
 }
@@ -67,8 +59,8 @@ main();
 
 ### Создание пары ключей для взаимодействия с P2P
 
-```JavaScript
-const QIWI = require('qiwi-sdk');
+```javascript
+const QIWI = require("qiwi-sdk");
 
 const qp = new QIWI.Personal(process.env.QIWI_TOKEN);
 
@@ -76,7 +68,7 @@ async function main() {
   const profile = await qp.getPersonProfile();
   const wallet = profile.authInfo.personId;
 
-  const [pk, sk] = await qp.createP2PKeyPair('My super name');
+  const [pk, sk] = await qp.createP2PKeyPair("My super name");
 
   // Да, они инвертированы в порядке,
   // так как PublicKey не всегда нужен
@@ -92,7 +84,6 @@ async function main() {
   });
 
   console.log(bill.payUrl);
-
 }
 
 main();
