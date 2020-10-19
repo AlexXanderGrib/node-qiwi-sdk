@@ -7,13 +7,13 @@
 В коде довфига комментариев, взятых из официального описания API,
 поэтому если у вас `VSCode` или `WebStorm`, которые умеют их подгружать как подсказки в коде, проблем не должно возникнуть.
 
-`@todo` Нормальные доки потом напишу
+`@todo` Полноценные доки потом напишу
 
 ## Примеры
 
 ### Получение информации о владельце кошелька
 
-```JS
+```JavaScript
 const QIWI = require('qiwi-sdk');
 
 const qp = new QIWI.Personal(process.env.QIWI_TOKEN);
@@ -26,7 +26,7 @@ qp.getPersonProfile()
 
 ### Как слить баланс кошелька
 
-```JS
+```JavaScript
 const QIWI = require('qiwi-sdk');
 
 const qp = new QIWI.Personal(process.env.QIWI_TOKEN);
@@ -36,7 +36,7 @@ const provider = 99;
 async function main() {
   const profile = await qp.getPersonProfile();
   const wallet = profile.authInfo.personId;
-  const {accounts} = await qp.getAccounts(wallet);
+  const accounts = await qp.getAccounts(wallet);
 
   const rubleAccount = accounts.find(
     acc => acc.balance &&
@@ -50,7 +50,7 @@ async function main() {
   );
 
   const totalToSteal = parseFloat(
-    (rubleAccount.balance.amount - balance).toFixed(2)
+    (rubleAccount.balance.amount - balance)
   );
 
   const payment = await qp.pay(
@@ -67,7 +67,7 @@ main();
 
 ### Создание пары ключей для взаимодействия с P2P
 
-```JS
+```JavaScript
 const QIWI = require('qiwi-sdk');
 
 const qp = new QIWI.Personal(process.env.QIWI_TOKEN);

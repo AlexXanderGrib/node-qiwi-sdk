@@ -134,14 +134,16 @@ export class Personal extends HttpAPI {
    * @param type тип транзакции из {@link https://developer.qiwi.com/ru/qiwi-wallet-personal/#history_data|истории платежей} (параметр data[].type в ответе)
    * @param format тип файла, в который сохраняется квитанция. Допустимые значения: `JPEG`, `PDF`
    */
-  getTransactionCheque(
+  async getTransactionCheque(
     transactionId: number,
     type: t.TransactionType,
     format: t.ChequeFormat = ChequeFormat.JPEG
-  ): Promise<t.Transaction> {
-    return this.get(
+  ): Promise<Buffer> {
+    const response = await this.get(
       `payment-history/v2/transactions/${transactionId}/cheque/file?type=${type}&format=${format}`
     );
+
+    return Buffer.from(response as string);
   }
 
   /**
@@ -154,7 +156,7 @@ export class Personal extends HttpAPI {
     transactionId: number,
     type: t.TransactionType,
     email: string
-  ): Promise<t.Transaction> {
+  ): Promise<""> {
     return this.post(
       `payment-history/v2/transactions/${transactionId}/cheque/send?type=${type}`,
       {},
@@ -166,8 +168,14 @@ export class Personal extends HttpAPI {
    * Успешный ответ содержит JSON-массив счетов вашего QIWI Кошелька для фондирования платежей и текущие балансы счетов
    * @param wallet Номер кошелька
    */
-  getAccounts(wallet: string): Promise<t.GetAccountsResponse> {
-    return this.get(`funding-sources/v2/persons/${wallet}/accounts`);
+  async getAccounts(
+    wallet: string
+  ): Promise<t.GetAccountsResponse["accounts"]> {
+    const { accounts } = await this.get(
+      `funding-sources/v2/persons/${wallet}/accounts`
+    );
+
+    return accounts;
   }
 
   /**
