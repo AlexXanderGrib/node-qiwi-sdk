@@ -6,7 +6,9 @@ import { HttpAPI, HttpError } from "../http";
 import type * as t from "./p2p-payments.types";
 import { BillCurrency, BillStatus } from "./p2p-payments.types";
 
-export class P2PPaymentError extends ErrorWithCode<string> {}
+export class P2PPaymentError extends ErrorWithCode<string> {
+  data!: any;
+}
 
 export class P2PPayments extends HttpAPI {
   public static readonly BillStatus = BillStatus;
@@ -108,7 +110,10 @@ export class P2PPayments extends HttpAPI {
       if ("errorCode" in response) {
         const error = (response$ as any) as t.BillError;
 
-        throw new P2PPaymentError(error.description, error.errorCode);
+        const e = new P2PPaymentError(error.description, error.errorCode);
+        e.data = error;
+
+        throw e;
       }
 
       return response;

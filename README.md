@@ -68,7 +68,7 @@ async function main() {
   const profile = await qp.getPersonProfile();
   const wallet = profile.authInfo.personId;
 
-  const [pk, sk] = await qp.createP2PKeyPair("My super name");
+  const [pk, sk] = await qp.createP2PKeyPair("My super pair name");
 
   // Да, они инвертированы в порядке,
   // так как PublicKey не всегда нужен
