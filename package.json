@@ -28,10 +28,15 @@
     "api",
     "sdk",
     "киви",
-    "qiwi",
-    "bank",
     "promise",
-    "client"
+    "client",
+    "qiwi api",
+    "qiwi sdk",
+    "qiwi-api",
+    "qiwi-sdk",
+    "@qiwi/bill-payments-node-js-sdk",
+    "node-qiwi",
+    "node-qiwi-api"
   ],
   "dependencies": {
     "node-fetch": "^2.6.1",
