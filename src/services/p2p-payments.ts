@@ -1,13 +1,40 @@
 import { createHmac } from "crypto";
 import { v4 as uuid } from "uuid";
 import { createQS, formatDate } from "..";
+import { MapAsyncErrors } from "../decorators";
 import { ErrorWithCode } from "../error";
 import { HttpAPI, HttpError } from "../http";
+import { USER_AGENT } from "../indentity";
 import type * as t from "./p2p-payments.types";
 import { BillCurrency, BillStatus } from "./p2p-payments.types";
 
 export class P2PPaymentError extends ErrorWithCode<string> {
-  data!: any;
+  constructor(public data: any) {
+    super(data.description, data.errorCode);
+  }
+}
+
+/**
+ * Проверяет ответ на предмет ошибки.
+ * Если вернулась ошибка - кидает её
+ *
+ * @throws {P2PPaymentError} Ошибка запроса к QIWI P2P
+ * @param {T | Promise<T>} response$ Ответ от сервера
+ */
+function mapErrors(e: any) {
+  if (e instanceof HttpError) {
+    if (!e.body) return e;
+
+    const error = JSON.parse(e.body) as t.BillError;
+
+    error.description += ` (${e.code})`;
+
+    if ("errorCode" in error) {
+      return new P2PPaymentError(error);
+    }
+  }
+
+  return e;
 }
 
 export class P2PPayments extends HttpAPI {
@@ -17,7 +44,8 @@ export class P2PPayments extends HttpAPI {
   public readonly API_HEADERS = {
     Accept: "application/json",
     "Content-Type": "application/json;charset=UTF-8",
-    Authorization: `Bearer ${this.secretKey}`
+    Authorization: `Bearer ${this.secretKey}`,
+    "User-Agent": USER_AGENT
   };
 
   public readonly API_URL = "https://api.qiwi.com/partner/bill/v1/bills";
@@ -50,6 +78,7 @@ export class P2PPayments extends HttpAPI {
    *
    * @param {t.BillCreationRequest} data Сформированный запрос на создание счёта
    */
+  @MapAsyncErrors(mapErrors)
   public createBill(
     data: t.BillCreationRequest,
     id = this.generateId()
@@ -62,7 +91,7 @@ export class P2PPayments extends HttpAPI {
       }
     };
 
-    return this.throwError(this.put(id, {}, JSON.stringify(patchedBill)));
+    return this.put(id, {}, JSON.stringify(patchedBill));
   }
 
   private normalizeAmount(amount: string | number): string {
@@ -79,8 +108,9 @@ export class P2PPayments extends HttpAPI {
    *
    * @param {string} billId Уникальный идентификатор счета в вашей системе.
    */
+  @MapAsyncErrors(mapErrors)
   public billStatus(billId: string): Promise<t.BillStatusData> {
-    return this.throwError(this.get(billId));
+    return this.get(billId);
   }
 
   /**
@@ -90,47 +120,9 @@ export class P2PPayments extends HttpAPI {
    *
    * @param {string} billId Уникальный идентификатор счета в вашей системе.
    */
+  @MapAsyncErrors(mapErrors)
   public rejectBill(billId: string): Promise<t.BillStatusData> {
-    return this.throwError(this.post(`${billId}/reject`));
-  }
-
-  /**
-   * Проверяет ответ на предмет ошибки.
-   * Если вернулась ошибка - кидает её
-   *
-   * @throws {P2PPaymentError} Ошибка запроса к QIWI P2P
-   * @param {T | Promise<T>} response$ Ответ от сервера
-   */
-  private async throwError<T extends object>(
-    response$: T | Promise<T>
-  ): Promise<T> {
-    try {
-      const response = await response$;
-
-      if ("errorCode" in response) {
-        const error = (response$ as any) as t.BillError;
-
-        const e = new P2PPaymentError(error.description, error.errorCode);
-        e.data = error;
-
-        throw e;
-      }
-
-      return response;
-    } catch (e) {
-      if (e instanceof HttpError) {
-        if (!e.body) throw e;
-
-        const error = JSON.parse(e.body) as t.BillError;
-
-        throw new P2PPaymentError(
-          error.description + ` (${e.code})`,
-          error.errorCode
-        );
-      } else {
-        throw e;
-      }
-    }
+    return this.post(`${billId}/reject`);
   }
 
   public static formatLifetime(days = 1) {

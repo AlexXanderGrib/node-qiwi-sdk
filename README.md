@@ -7,7 +7,7 @@
 В коде довфига комментариев, взятых из официального описания API,
 поэтому если у вас `VSCode` или `WebStorm`, которые умеют их подгружать как подсказки в коде, проблем не должно возникнуть.
 
-`@todo` Полноценные доки потом напишу
+`@todo` Написать доки
 
 ## Примеры
 
@@ -34,11 +34,13 @@ const provider = 99;
 
 async function main() {
   const profile = await qp.getPersonProfile();
-  const wallet = profile.authInfo.personId;
+  const wallet = profile.authInfo.personId.toString();
   const accounts = await qp.getAccounts(wallet);
 
   const rubleAccount = accounts.find(
-    (acc) => acc.balance && acc.balance.currency === QIWI.Personal.Currency.RUB
+    (accumulator) =>
+      accumulator.balance &&
+      accumulator.balance.currency === Personal.Currency.RUB
   );
 
   const commission = await qp.getCommission(
@@ -47,7 +49,7 @@ async function main() {
     rubleAccount.balance.amount
   );
 
-  const totalToSteal = parseFloat(rubleAccount.balance.amount - balance);
+  const totalToSteal = rubleAccount.balance.amount - commission;
 
   const payment = await qp.pay(provider, receiver, totalToSteal);
 
@@ -87,4 +89,23 @@ async function main() {
 }
 
 main();
+```
+
+### Получение Лимитов (на TypeScript)
+
+```typescript
+import { Personal } from "qiwi-sdk";
+
+const qp = new Personal(process.env.QIWI_TOKEN);
+
+async function main() {
+  const { limits } = await qp.getLimits(process.env.QIWI_WALLET as string, [
+    Personal.LimitType.TURNOVER
+  ]);
+
+  const [limit] = limits.RU;
+
+  console.log(limit);
+  // => { type: "TURNOVER", currency: "RUB", max: 400000, spent: 0, rest: 400000, ... }
+}
 ```

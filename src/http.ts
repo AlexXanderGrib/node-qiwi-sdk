@@ -4,7 +4,7 @@ import { ErrorWithCode, ExtendedError } from "./error";
 
 export class HttpError extends ErrorWithCode<number> {
   constructor(public code: number, public body: string) {
-    super("API Responded with Error response code", code);
+    super(`API Responded with Error response code: ${code}`, code);
   }
 
   toJSON() {
@@ -57,22 +57,23 @@ export class HttpAPI {
     });
 
     const contentType = response.headers.get("content-type")?.split(";")[0];
-
-    const responseText = await response.text();
+    const responseBuffer = await response.buffer();
 
     if (!this.API_OK_RESPONSE_CODES.includes(response.status)) {
-      throw new HttpError(response.status, responseText);
+      throw new HttpError(response.status, responseBuffer.toString());
     }
 
     try {
+      if (contentType?.startsWith("text/")) return responseBuffer.toString();
+
       switch (contentType) {
         case "application/json":
-          return JSON.parse(responseText);
+          return JSON.parse(responseBuffer.toString());
         case "application/x-www-urlencoded":
-          return querystring.parse(responseText);
-        default:
-          return responseText;
+          return querystring.parse(responseBuffer.toString());
       }
+
+      return responseBuffer;
     } catch (e) {
       throw new DecodingError(e.message);
     }
@@ -82,14 +83,14 @@ export class HttpAPI {
     url: string,
     headers: Record<string, string> = {}
   ): Promise<T> {
-    return this.request(url, "GET", headers);
+    return await this.request(url, "GET", headers);
   }
 
   protected async head<T>(
     url: string,
     headers: Record<string, string> = {}
   ): Promise<T> {
-    return this.request(url, "HEAD", headers);
+    return await this.request(url, "HEAD", headers);
   }
 
   protected async post<T>(
@@ -97,7 +98,7 @@ export class HttpAPI {
     headers: Record<string, string> = {},
     body: string | undefined = undefined
   ): Promise<T> {
-    return this.request(url, "POST", headers, body);
+    return await this.request(url, "POST", headers, body);
   }
 
   protected async put<T>(
@@ -105,7 +106,7 @@ export class HttpAPI {
     headers: Record<string, string> = {},
     body: string | undefined = undefined
   ): Promise<T> {
-    return this.request(url, "PUT", headers, body);
+    return await this.request(url, "PUT", headers, body);
   }
 
   protected async patch<T>(
@@ -113,7 +114,7 @@ export class HttpAPI {
     headers: Record<string, string> = {},
     body: string | undefined = undefined
   ): Promise<T> {
-    return this.request(url, "PATCH", headers, body);
+    return await this.request(url, "PATCH", headers, body);
   }
 
   protected async delete<T>(
@@ -121,6 +122,6 @@ export class HttpAPI {
     headers: Record<string, string> = {},
     body: string | undefined = undefined
   ): Promise<T> {
-    return this.request(url, "DELETE", headers, body);
+    return await this.request(url, "DELETE", headers, body);
   }
 }

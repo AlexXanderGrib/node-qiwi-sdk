@@ -409,15 +409,19 @@ export type Transaction = {
     keys: string | null;
     /** сайт провайдера */
     siteUrl: string | null;
-    /** Служебная информация */
-    source: object;
-    /** Комментарий к платежу */
-    comment: string;
-    /** Курс конвертации (если применяется в транзакции) */
-    currencyRate: number;
-    /** Служебная информация */
-    extras: object;
+  };
 
+  /** Служебная информация */
+  source: object;
+  /** Комментарий к платежу */
+  comment: string;
+  /** Курс конвертации (если применяется в транзакции) */
+  currencyRate: number;
+  /** Служебная информация */
+  extras: object;
+
+  /** Поидее содержимое этого поля должно быть напрямую в Transaction. Но QIWI возвращает именно так */
+  features: {
     /** Специальное поле */
     chequeReady: boolean;
     /** Специальное поле */

@@ -10,7 +10,7 @@ export class ExtendedError extends Error {
   }
 
   toString() {
-    `[Object ${this.name}]`;
+    `[Error ${this.name}]`;
   }
 
   [Symbol.toStringTag]() {
@@ -35,6 +35,6 @@ export class ErrorWithCode<
   }
 
   toString() {
-    `[Object ${this.name}.${this.code}]`;
+    `[Error ${this.name}; CODE=${this.code}]`;
   }
 }
