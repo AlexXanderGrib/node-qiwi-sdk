@@ -1,7 +1,7 @@
 import { createHmac } from "crypto";
+import { MapErrorsAsync } from "sweet-decorators";
 import { v4 as uuid } from "uuid";
 import { createQS, formatDate } from "..";
-import { MapAsyncErrors } from "../decorators";
 import { ErrorWithCode } from "../error";
 import { HttpAPI, HttpError } from "../http";
 import { USER_AGENT } from "../indentity";
@@ -78,7 +78,7 @@ export class P2PPayments extends HttpAPI {
    *
    * @param {t.BillCreationRequest} data Сформированный запрос на создание счёта
    */
-  @MapAsyncErrors(mapErrors)
+  @MapErrorsAsync(mapErrors)
   public createBill(
     data: t.BillCreationRequest,
     id = this.generateId()
@@ -108,7 +108,7 @@ export class P2PPayments extends HttpAPI {
    *
    * @param {string} billId Уникальный идентификатор счета в вашей системе.
    */
-  @MapAsyncErrors(mapErrors)
+  @MapErrorsAsync(mapErrors)
   public billStatus(billId: string): Promise<t.BillStatusData> {
     return this.get(billId);
   }
@@ -120,7 +120,7 @@ export class P2PPayments extends HttpAPI {
    *
    * @param {string} billId Уникальный идентификатор счета в вашей системе.
    */
-  @MapAsyncErrors(mapErrors)
+  @MapErrorsAsync(mapErrors)
   public rejectBill(billId: string): Promise<t.BillStatusData> {
     return this.post(`${billId}/reject`);
   }

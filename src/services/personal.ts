@@ -1,5 +1,5 @@
+import { MapErrorsAsync } from "sweet-decorators";
 import { createQS } from "..";
-import { MapAsyncErrors } from "../decorators";
 import { ExtendedError } from "../error";
 import { HttpAPI, HttpError } from "../http";
 import { USER_AGENT } from "../indentity";
@@ -51,7 +51,7 @@ export class Personal extends HttpAPI {
   /**
    * Запрос возвращает информацию о вашем профиле - наборе пользовательских данных и настроек вашего QIWI кошелька.
    */
-  @MapAsyncErrors(mapError)
+  @MapErrorsAsync(mapError)
   async getPersonProfile(): Promise<types.PersonProfile> {
     return await this.get(
       "person-profile/v1/profile/current?authInfoEnabled=true&contractInfoEnabled=true&userInfoEnabled=true"
@@ -63,7 +63,7 @@ export class Personal extends HttpAPI {
    * @param wallet
    * @param data
    */
-  @MapAsyncErrors(mapError)
+  @MapErrorsAsync(mapError)
   async setIdentification(
     wallet: string,
     data: types.IdentificationBase
@@ -79,7 +79,7 @@ export class Personal extends HttpAPI {
    * Данный запрос позволяет выгрузить маскированные данные и статус идентификации своего QIWI кошелька.
    * @param wallet
    */
-  @MapAsyncErrors(mapError)
+  @MapErrorsAsync(mapError)
   async getIdentification(
     wallet: string
   ): Promise<types.IdentificationResponse> {
@@ -91,7 +91,7 @@ export class Personal extends HttpAPI {
    * @param wallet
    * @param limits
    */
-  @MapAsyncErrors(mapError)
+  @MapErrorsAsync(mapError)
   async getLimits<L extends types.LimitType[] = types.LimitType[]>(
     wallet: string,
     limits: L
@@ -107,7 +107,7 @@ export class Personal extends HttpAPI {
    * Запрос проверяет, есть ли ограничение на исходящие платежи с QIWI Кошелька.
    * @param wallet
    */
-  @MapAsyncErrors(mapError)
+  @MapErrorsAsync(mapError)
   async getRestrictions(wallet: string): Promise<types.Restrictions> {
     return await this.get(
       `person-profile/v1/persons/${wallet}/status/restrictions`
@@ -119,7 +119,7 @@ export class Personal extends HttpAPI {
    * @param wallet Номер кошелька
    * @param params Тело запроса
    */
-  @MapAsyncErrors(mapError)
+  @MapErrorsAsync(mapError)
   async getPaymentHistory(
     wallet: string,
     params: types.GetPaymentHistoryParams
@@ -135,7 +135,7 @@ export class Personal extends HttpAPI {
    * @param wallet
    * @param params
    */
-  @MapAsyncErrors(mapError)
+  @MapErrorsAsync(mapError)
   async getPaymentHistoryTotal(
     wallet: string,
     params: types.GetPaymentHistoryTotalParams
@@ -151,7 +151,7 @@ export class Personal extends HttpAPI {
    * @param transactionId Номер транзакции
    * @param type Тип транзакции
    */
-  @MapAsyncErrors(mapError)
+  @MapErrorsAsync(mapError)
   async getTransaction(
     transactionId: number,
     type: types.TransactionType
@@ -167,7 +167,7 @@ export class Personal extends HttpAPI {
    * @param type тип транзакции из {@link https://developer.qiwi.com/ru/qiwi-wallet-personal/#history_data|истории платежей} (параметр data[].type в ответе)
    * @param format тип файла, в который сохраняется квитанция. Допустимые значения: `JPEG`, `PDF`
    */
-  @MapAsyncErrors(mapError)
+  @MapErrorsAsync(mapError)
   async getTransactionCheque(
     transactionId: number | string,
     type: types.TransactionType,
@@ -184,7 +184,7 @@ export class Personal extends HttpAPI {
    * @param type тип транзакции из {@link https://developer.qiwi.com/ru/qiwi-wallet-personal/#history_data|истории платежей} (параметр data[].type в ответе)
    * @param email Адрес для отправки электронной квитанции
    */
-  @MapAsyncErrors(mapError)
+  @MapErrorsAsync(mapError)
   async sendTransactionCheque(
     transactionId: number,
     type: types.TransactionType,
@@ -201,7 +201,7 @@ export class Personal extends HttpAPI {
    * Успешный ответ содержит JSON-массив счетов вашего QIWI Кошелька для фондирования платежей и текущие балансы счетов
    * @param wallet Номер кошелька
    */
-  @MapAsyncErrors(mapError)
+  @MapErrorsAsync(mapError)
   async getAccounts(
     wallet: string
   ): Promise<types.GetAccountsResponse["accounts"]> {
@@ -216,7 +216,7 @@ export class Personal extends HttpAPI {
    * Успешный JSON-ответ содержит данные о счетах, которые можно создать
    * @param wallet Номер кошелька
    */
-  @MapAsyncErrors(mapError)
+  @MapErrorsAsync(mapError)
   async getAccountOffers(
     wallet: string
   ): Promise<types.GetAccountOffersResponse> {
@@ -231,7 +231,7 @@ export class Personal extends HttpAPI {
    * @param wallet Номер кошелька
    * @param alias Псевдоним нового счета (см. {@link https://developer.qiwi.com/ru/qiwi-wallet-personal/?http#funding_offer|запрос доступных счетов})
    */
-  @MapAsyncErrors(mapError)
+  @MapErrorsAsync(mapError)
   async createAccount(wallet: string, alias: string): Promise<""> {
     return await this.post(
       `funding-sources/v2/persons/${wallet}/accounts`,
@@ -246,7 +246,7 @@ export class Personal extends HttpAPI {
    * @param wallet Номер кошелька
    * @param alias Псевдоним счета (см. {@link https://developer.qiwi.com/ru/qiwi-wallet-personal/?http#funding_offer|запрос доступных счетов})
    */
-  @MapAsyncErrors(mapError)
+  @MapErrorsAsync(mapError)
   async setDefaultAccount(wallet: string, alias: string) {
     return await this.patch(
       `funding-sources/v2/persons/${wallet}/accounts/${alias}`,
@@ -255,7 +255,7 @@ export class Personal extends HttpAPI {
     );
   }
 
-  @MapAsyncErrors(mapError)
+  @MapErrorsAsync(mapError)
   async getCommission(
     provider: number,
     account: string,
@@ -289,7 +289,7 @@ export class Personal extends HttpAPI {
    * @param provider ID
    * @param options
    */
-  @MapAsyncErrors(mapError)
+  @MapErrorsAsync(mapError)
   createFormUrl(provider: number, options: types.FormUrlOptions) {
     let data = {
       currency: Personal.Currency.RUB
@@ -327,7 +327,7 @@ export class Personal extends HttpAPI {
    * @param fields Доп. поля, их невозможно типизировать, просто читайте доки
    * @param comment Комментарий к платежу, необязательный
    */
-  @MapAsyncErrors(mapError)
+  @MapErrorsAsync(mapError)
   async pay(
     provider: number | types.Recipients,
     account: string,
@@ -370,7 +370,7 @@ export class Personal extends HttpAPI {
    *
    * const [PublicKey, SecretKey] = await createP2PKeyPair('my-key-pair');
    */
-  @MapAsyncErrors(mapError)
+  @MapErrorsAsync(mapError)
   async createP2PKeyPair(
     name: string,
     server?: string

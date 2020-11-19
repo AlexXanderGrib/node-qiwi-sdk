@@ -1,6 +1,6 @@
 {
   "name": "qiwi-sdk",
-  "version": "1.2.5",
+  "version": "1.3.0",
   "description": "Promise based QIWI API client",
   "main": "dist/index.js",
   "type": "commonjs",
@@ -43,6 +43,7 @@
   "dependencies": {
     "node-fetch": "^2.6.1",
     "query-string": "^6.13.6",
+    "sweet-decorators": "^1.3.0",
     "uuid": "^8.3.1"
   },
   "devDependencies": {
