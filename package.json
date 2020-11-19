@@ -22,7 +22,7 @@
   "homepage": "https://github.com/AlexXanderGrib/node-qiwi-sdk#readme",
   "scripts": {
     "test": "jest --runInBand",
-    "build": "tsc --project package.json",
+    "build": "tsc --project tsconfig.build.json",
     "prepublishOnly": "npm run build"
   },
   "keywords": [
