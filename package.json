@@ -16,12 +16,14 @@
   "license": "MIT",
   "private": false,
   "bugs": {
-    "url": "https://github.com/AlexXanderGrib/node-qiwi-sdk/issues"
+    "url": "https://github.com/AlexXanderGrib/node-qiwi-sdk/issues",
+    "email": "me@alexxgrib.me"
   },
   "homepage": "https://github.com/AlexXanderGrib/node-qiwi-sdk#readme",
   "scripts": {
     "test": "jest --runInBand",
-    "build": "tsc"
+    "build": "tsc --project package.json",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "qiwi",
