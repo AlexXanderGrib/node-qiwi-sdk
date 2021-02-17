@@ -1,17 +1,9 @@
 import qs from "query-string";
-import { P2PPayments } from "./services/p2p-payments";
-import { Personal as PersonalAPI } from "./services/personal";
 
-export * from "./services/p2p-payments";
-export * from "./services/p2p-payments.types";
+export * from "./services/p2p";
+export * from "./services/p2p.types";
 export * from "./services/personal";
 export * from "./services/personal.types";
-
-/** API для P2P переводов (Создания счетов)  */
-export const P2P = P2PPayments;
-
-/** API для управления кошельком  */
-export const Personal = PersonalAPI;
 
 /**
  * Форматирует дату в понятную для QIWI строку:

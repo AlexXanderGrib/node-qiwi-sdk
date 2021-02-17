@@ -5,8 +5,8 @@ import { createQS, formatDate } from "..";
 import { ErrorWithCode } from "../error";
 import { HttpAPI, HttpError } from "../http";
 import { USER_AGENT } from "../indentity";
-import type * as t from "./p2p-payments.types";
-import { BillCurrency, BillStatus } from "./p2p-payments.types";
+import type * as t from "./p2p.types";
+import { BillCurrency, BillStatus } from "./p2p.types";
 
 export class P2PPaymentError extends ErrorWithCode<string> {
   constructor(public data: any) {
@@ -37,18 +37,18 @@ function mapErrors(e: any) {
   return e;
 }
 
-export class P2PPayments extends HttpAPI {
+export class P2P extends HttpAPI {
   public static readonly BillStatus = BillStatus;
   public static readonly Currency = BillCurrency;
 
-  public readonly API_HEADERS = {
+  protected readonly API_HEADERS = {
     Accept: "application/json",
     "Content-Type": "application/json;charset=UTF-8",
     Authorization: `Bearer ${this.secretKey}`,
     "User-Agent": USER_AGENT
   };
 
-  public readonly API_URL = "https://api.qiwi.com/partner/bill/v1/bills";
+  protected readonly API_URL = "https://api.qiwi.com/partner/bill/v1/bills";
 
   /**
    *

@@ -30,15 +30,15 @@ export class Personal extends HttpAPI {
   public static readonly TransactionStatus = values.TransactionStatus;
   public static readonly ChequeFormat = values.ChequeFormat;
 
-  public readonly API_HEADERS = {
+  protected readonly API_HEADERS = {
     Accept: "application/json",
     "Content-Type": "application/json",
     Authorization: `Bearer ${this.API_TOKEN}`,
     "User-Agent": USER_AGENT
   };
 
-  public readonly API_URL = "https://edge.qiwi.com";
-  public readonly API_OK_RESPONSE_CODES = [200, 201, 204];
+  protected readonly API_URL = "https://edge.qiwi.com";
+  protected readonly API_OK_RESPONSE_CODES = [200, 201, 204];
 
   /**
    *
