@@ -20,10 +20,10 @@ export class HttpError extends ErrorWithCode<number> {
 export class DecodingError extends ExtendedError {}
 
 export class HttpAPI {
-  public readonly API_URL: string = "";
-  public readonly API_HEADERS: Record<string, string> = {};
-  public readonly API_TIMEOUT: number = 10000;
-  public readonly API_OK_RESPONSE_CODES: number[] = [200];
+  protected readonly API_URL: string = "";
+  protected readonly API_HEADERS: Record<string, string> = {};
+  protected readonly API_TIMEOUT: number = 10000;
+  protected readonly API_OK_RESPONSE_CODES: number[] = [200];
 
   /**
    * Simplified http request function
