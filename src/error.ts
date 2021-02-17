@@ -9,12 +9,8 @@ export class ExtendedError extends Error {
     };
   }
 
-  toString() {
-    `[Error ${this.name}]`;
-  }
-
   [Symbol.toStringTag]() {
-    return this.toString();
+    return this.name;
   }
 }
 
