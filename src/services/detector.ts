@@ -1,9 +1,16 @@
 import { stringify } from "query-string";
 import { ExtendedError } from "../error";
 import { HttpAPI } from "../http";
+import { AnyResponse } from "./shared.types";
 
+/**
+ *  Ошибка, которую выбрасывает персональное API в случае неправильного кода ответа от QIWI
+ */
 export class DetectorError extends ExtendedError {}
 
+/**
+ * API получения ID провайдера QIWI по Номеру Телефона/Карте
+ */
 export class Detector extends HttpAPI {
   protected readonly API_URL = "https://qiwi.com";
   protected readonly API_HEADERS = {
@@ -11,10 +18,16 @@ export class Detector extends HttpAPI {
     Accept: "application/json"
   };
 
-  private _extractProvider(response: any): number {
+  /**
+   * Вытаскивает ID провайдера из объекта ответа
+   *
+   * @param {*} response
+   * @return {number} ID провайдера
+   */
+  private _extractProvider(response: AnyResponse): number {
     if (response.code.value !== "0") throw new DetectorError(response.message);
 
-    return parseInt(response.message);
+    return Number.parseInt(response.message);
   }
 
   /**
@@ -24,7 +37,7 @@ export class Detector extends HttpAPI {
    * @param {string} phone
    */
   async getPhoneProvider(phone: string): Promise<number> {
-    const response = await this.post(
+    const response = await this.post<any>(
       "mobile/detect.action",
       {},
       stringify({ phone })
@@ -40,7 +53,7 @@ export class Detector extends HttpAPI {
    * @param {string} cardNumber
    */
   async getCardProvider(cardNumber: string): Promise<number> {
-    const response = await this.post(
+    const response = await this.post<any>(
       "card/detect.action",
       {},
       stringify({ cardNumber })

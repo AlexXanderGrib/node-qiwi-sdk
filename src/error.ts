@@ -1,7 +1,13 @@
+/* eslint-disable require-jsdoc */
+/* eslint-disable no-invalid-this */
+
+/**
+ * Ошибка, которую можно преобразовать в JSON
+ */
 export class ExtendedError extends Error {
   name = this.constructor.name;
 
-  toJSON() {
+  toJSON(): Error {
     return {
       message: this.message,
       name: this.name,
@@ -9,7 +15,7 @@ export class ExtendedError extends Error {
     };
   }
 
-  [Symbol.toStringTag]() {
+  get [Symbol.toStringTag](): string {
     return this.name;
   }
 }
@@ -21,7 +27,7 @@ export class ErrorWithCode<
     super(message);
   }
 
-  toJSON() {
+  toJSON(): Error & { code: CodeType } {
     return {
       message: this.message,
       name: this.name,
@@ -30,7 +36,7 @@ export class ErrorWithCode<
     };
   }
 
-  toString() {
-    `[Error ${this.name}; CODE=${this.code}]`;
+  toString(): string {
+    return `[Error ${this.name}; CODE=${this.code}]`;
   }
 }

@@ -1,3 +1,4 @@
+/* eslint-disable unicorn/prevent-abbreviations */
 export enum PersonIdentificationLevel {
   /** Пользователь не вошёл в кошелёк */
   ANONYMOUS = "ANONYMOUS",
@@ -84,10 +85,26 @@ export enum Recipients {
   /** Перевод на QIWI-Кошелёк по номеру телефона */
   QIWI = 99,
   /** Перевод на QIWI-Кошелёк по никнейму */
+  QIWINickname = 99999,
+
+  /**
+   * Перевод на QIWI-Кошелёк по никнейму
+   * @deprecated Переименовано в `QIWINickname`
+   */
+  // eslint-disable-next-line camelcase
   QIWI_Nickname = 99999,
+
   /** Перевод по банковским реквизитам */
   BankRequisites = 1717,
+
   /** Перевод на QIWI-Кошелёк по номеру виртуальной карты */
+  QIWIVirtualCard = 22351,
+
+  /**
+   * Перевод на QIWI-Кошелёк по номеру виртуальной карты
+   * @deprecated Переименовано в `QIWIVirtualCard`
+   */
+  // eslint-disable-next-line camelcase
   QIWI_VirtualCard = 22351
 }
 
@@ -560,6 +577,36 @@ export type PaymentCommissionRequest = {
       currency: "643";
     };
   };
+};
+
+export type PaymentResponse = {
+  /** Копия параметра `id` из платежного запроса */
+  id: string;
+
+  /** Идентификатор провайдера, на которого был отправлен платеж */
+  terms: string;
+
+  /** Копия объекта `fields` из платежного запроса. **Номер карты (если был выполнен перевод на карту) возвращается в маскированном виде** */
+  fields: Record<string, string>;
+
+  /** Копия объекта `sum` из платежного запроса */
+  sum: {
+    amount: number;
+    currency: Currency;
+  };
+
+  transaction: {
+    id: string;
+    state: {
+      code: "Accepted";
+    };
+  };
+
+  /** Константа, `account_643` */
+  source: "account_643";
+
+  /** Копия параметра `comment` из платежного запроса (возвращается, если присутствует в запросе) */
+  comment?: string;
 };
 
 export type FormUrlOptions = {

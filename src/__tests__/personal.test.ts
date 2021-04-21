@@ -29,9 +29,7 @@ describe("Personal API", () => {
     expect(limit.type).toBe(Personal.LimitType.TURNOVER);
     expect(limit.currency).toBe("RUB");
 
-    expect(Math.round(limit.spent + limit.rest)).toBeGreaterThanOrEqual(
-      limit.max
-    );
+    expect(Math.round(limit.spent + limit.rest)).toBeGreaterThanOrEqual(limit.max);
   });
 
   test("Can't send 1 million rubles to unknown wallet", async () => {

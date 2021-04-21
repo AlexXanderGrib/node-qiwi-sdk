@@ -2,12 +2,24 @@ import fetch from "node-fetch";
 import querystring from "querystring";
 import { ErrorWithCode, ExtendedError } from "./error";
 
+/**
+ * Ошибка, которую выбрасывает Http API при неправильном коде ответа
+ */
 export class HttpError extends ErrorWithCode<number> {
+  /**
+   *
+   * @param {number} code Код ответа
+   * @param {number} body Тело ответа
+   */
   constructor(public code: number, public body: string) {
     super(`API Responded with Error response code: ${code}`, code);
   }
 
-  toJSON() {
+  /**
+   *
+   * @return {Error}
+   */
+  toJSON(): Error & { code: number; body: string } {
     return {
       message: this.message,
       name: this.name,
@@ -17,8 +29,15 @@ export class HttpError extends ErrorWithCode<number> {
     };
   }
 }
+
+/**
+ * Ошибка раскодировки ответа сервера
+ */
 export class DecodingError extends ExtendedError {}
 
+/**
+ *
+ */
 export class HttpAPI {
   protected readonly API_URL: string = "";
   protected readonly API_HEADERS: Record<string, string> = {};
@@ -36,13 +55,13 @@ export class HttpAPI {
    * @param {Record<string, string>} headers Additional headers to API
    * @param {string?} body Request body
    *
-   * @returns {Promise<*>} Decoded response
+   * @return {Promise<*>} Decoded response
    */
-  protected async request(
+  protected async _request(
     url: string,
     method: string,
     headers: Record<string, string> = {},
-    body: string | undefined = undefined
+    body?: string | undefined
   ): Promise<any> {
     const absoluteUrl =
       url.startsWith("https://") || url.startsWith("http://")
@@ -74,54 +93,108 @@ export class HttpAPI {
       }
 
       return responseBuffer;
-    } catch (e) {
-      throw new DecodingError(e.message);
+    } catch (error) {
+      throw new DecodingError(error.message);
     }
   }
 
-  protected async get<T>(
+  /**
+   * Делает GET запрос и парсит ответ
+   * @template T
+   * @param {string} url URL запроса
+   * @param {Record<string, string>=} headers Заголовки запроса
+   * @return {Promise<T>}
+   */
+  protected async get<T = any>(
     url: string,
     headers: Record<string, string> = {}
   ): Promise<T> {
-    return await this.request(url, "GET", headers);
+    return await this._request(url, "GET", headers);
   }
 
+  /**
+   * Делает HEAD запрос и парсит ответ
+   * @template T
+   * @param {string} url URL запроса
+   * @param {Record<string, string>=} headers Заголовки запроса
+   * @return {Promise<T>}
+   */
   protected async head<T>(
     url: string,
     headers: Record<string, string> = {}
   ): Promise<T> {
-    return await this.request(url, "HEAD", headers);
+    return await this._request(url, "HEAD", headers);
   }
 
+  /**
+   * Делает POST запрос и парсит ответ
+   * @template T
+   *
+   * @param {string} url URL запроса
+   * @param {Record<string, string>=} headers Заголовки запроса
+   * @param {string=} body Тело запроса
+   *
+   * @return {Promise<T>}
+   */
   protected async post<T>(
     url: string,
     headers: Record<string, string> = {},
-    body: string | undefined = undefined
+    body: string | undefined
   ): Promise<T> {
-    return await this.request(url, "POST", headers, body);
+    return await this._request(url, "POST", headers, body);
   }
 
+  /**
+   * Делает PUT запрос и парсит ответ
+   * @template T
+   *
+   * @param {string} url URL запроса
+   * @param {Record<string, string>=} headers Заголовки запроса
+   * @param {string=} body Тело запроса
+   *
+   * @return {Promise<T>}
+   */
   protected async put<T>(
     url: string,
     headers: Record<string, string> = {},
-    body: string | undefined = undefined
+    body: string | undefined
   ): Promise<T> {
-    return await this.request(url, "PUT", headers, body);
+    return await this._request(url, "PUT", headers, body);
   }
 
+  /**
+   * Делает PATCH запрос и парсит ответ
+   * @template T
+   *
+   * @param {string} url URL запроса
+   * @param {Record<string, string>=} headers Заголовки запроса
+   * @param {string=} body Тело запроса
+   *
+   * @return {Promise<T>}
+   */
   protected async patch<T>(
     url: string,
     headers: Record<string, string> = {},
-    body: string | undefined = undefined
+    body: string | undefined
   ): Promise<T> {
-    return await this.request(url, "PATCH", headers, body);
+    return await this._request(url, "PATCH", headers, body);
   }
 
+  /**
+   * Делает DELETE запрос и парсит ответ
+   * @template T
+   *
+   * @param {string} url URL запроса
+   * @param {Record<string, string>=} headers Заголовки запроса
+   * @param {string=} body Тело запроса
+   *
+   * @return {Promise<T>}
+   */
   protected async delete<T>(
     url: string,
     headers: Record<string, string> = {},
-    body: string | undefined = undefined
+    body: string | undefined
   ): Promise<T> {
-    return await this.request(url, "DELETE", headers, body);
+    return await this._request(url, "DELETE", headers, body);
   }
 }

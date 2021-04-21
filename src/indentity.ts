@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const { name, repository, version } = require("../package.json");
 
 export const VERSION: string = version;

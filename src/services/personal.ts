@@ -1,3 +1,4 @@
+/* eslint-disable no-invalid-this */
 import { MapErrorsAsync } from "sweet-decorators";
 import { createQS } from "..";
 import { ExtendedError } from "../error";
@@ -5,13 +6,27 @@ import { HttpAPI, HttpError } from "../http";
 import { USER_AGENT } from "../indentity";
 import type * as types from "./personal.types";
 import * as values from "./personal.types";
+import { AnyResponse } from "./shared.types";
 
+/**
+ * Ошибка, которую выбрасывает персональное API в случае неправильного кода ответа от QIWI
+ */
 export class PersonalApiError extends ExtendedError {
-  constructor(public message: string = "", public data?: any) {
+  /**
+   * @param {string=} message Сообщение
+   * @param {*=} data Данные которыми ответил QIWI
+   */
+  constructor(public message: string = "", public data?: AnyResponse) {
     super(message);
   }
 }
 
+/**
+ * Оборачивает ошибки чтобы чтобы их было удобнее обрабатывать
+ *
+ * @param {Error} error
+ * @return {Error}
+ */
 function mapError(error: any) {
   if (error instanceof HttpError) {
     return new PersonalApiError(error.message, JSON.parse(error.body));
@@ -20,6 +35,11 @@ function mapError(error: any) {
   return error;
 }
 
+/**
+ * Имплементирует [персональное API QIWI](https://developer.qiwi.com/ru/qiwi-wallet-personal)
+ *
+ * @see {@link https://developer.qiwi.com/ru/qiwi-wallet-personal|Описание}
+ */
 export class Personal extends HttpAPI {
   public static readonly Currency = values.Currency;
   public static readonly IdentificationLevel = values.PersonIdentificationLevel;
@@ -60,8 +80,8 @@ export class Personal extends HttpAPI {
 
   /**
    * Данный запрос позволяет отправить данные для идентификации вашего QIWI кошелька.
-   * @param wallet
-   * @param data
+   * @param {string} wallet
+   * @param {types.IdentificationBase} data
    */
   @MapErrorsAsync(mapError)
   async setIdentification(
@@ -77,19 +97,17 @@ export class Personal extends HttpAPI {
 
   /**
    * Данный запрос позволяет выгрузить маскированные данные и статус идентификации своего QIWI кошелька.
-   * @param wallet
+   * @param {string} wallet
    */
   @MapErrorsAsync(mapError)
-  async getIdentification(
-    wallet: string
-  ): Promise<types.IdentificationResponse> {
+  async getIdentification(wallet: string): Promise<types.IdentificationResponse> {
     return await this.get(`identification/v1/persons/${wallet}/identification`);
   }
 
   /**
    * Запрос возвращает текущие уровни лимитов по операциям в вашем QIWI кошельке. Лимиты действуют как ограничения на сумму определенных операций.
-   * @param wallet
-   * @param limits
+   * @param {string} wallet
+   * @param {L} limits
    */
   @MapErrorsAsync(mapError)
   async getLimits<L extends types.LimitType[] = types.LimitType[]>(
@@ -98,49 +116,43 @@ export class Personal extends HttpAPI {
   ): Promise<types.LimitsResponse<L[number]>> {
     const query = createQS({ types: limits });
 
-    return await this.get(
-      `qw-limits/v1/persons/${wallet}/actual-limits?${query}`
-    );
+    return await this.get(`qw-limits/v1/persons/${wallet}/actual-limits?${query}`);
   }
 
   /**
    * Запрос проверяет, есть ли ограничение на исходящие платежи с QIWI Кошелька.
-   * @param wallet
+   * @param {string} wallet
    */
   @MapErrorsAsync(mapError)
   async getRestrictions(wallet: string): Promise<types.Restrictions> {
-    return await this.get(
-      `person-profile/v1/persons/${wallet}/status/restrictions`
-    );
+    return await this.get(`person-profile/v1/persons/${wallet}/status/restrictions`);
   }
 
   /**
    * Запрос выгружает список платежей и пополнений вашего кошелька. Можно использовать фильтр по количеству, ID и дате (интервалу дат) транзакций.
-   * @param wallet Номер кошелька
-   * @param params Тело запроса
+   * @param {string} wallet Номер кошелька
+   * @param {types.GetPaymentHistoryParams} parameters Тело запроса
    */
   @MapErrorsAsync(mapError)
   async getPaymentHistory(
     wallet: string,
-    params: types.GetPaymentHistoryParams
+    parameters: types.GetPaymentHistoryParams
   ): Promise<types.GetTransactionsHistoryResponse> {
-    const query = createQS(params);
+    const query = createQS(parameters);
 
-    return await this.get(
-      `payment-history/v2/persons/${wallet}/payments?${query}`
-    );
+    return await this.get(`payment-history/v2/persons/${wallet}/payments?${query}`);
   }
   /**
    * Данный запрос используется для получения сводной статистики по суммам платежей за заданный период.
-   * @param wallet
-   * @param params
+   * @param {string} wallet
+   * @param {types.GetPaymentHistoryTotalParams} parameters
    */
   @MapErrorsAsync(mapError)
   async getPaymentHistoryTotal(
     wallet: string,
-    params: types.GetPaymentHistoryTotalParams
+    parameters: types.GetPaymentHistoryTotalParams
   ): Promise<types.GetPaymentHistoryTotalResponse> {
-    const query = createQS(params);
+    const query = createQS(parameters);
 
     return await this.get(
       `payment-history/v2/persons/${wallet}/payments/total?${query}`
@@ -148,8 +160,8 @@ export class Personal extends HttpAPI {
   }
   /**
    * Запрос используется для получения информации по определенной транзакции из вашей истории платежей.
-   * @param transactionId Номер транзакции
-   * @param type Тип транзакции
+   * @param {number} transactionId Номер транзакции
+   * @param {types.TransactionType} type Тип транзакции
    */
   @MapErrorsAsync(mapError)
   async getTransaction(
@@ -163,9 +175,9 @@ export class Personal extends HttpAPI {
 
   /**
    *
-   * @param transactionId  номер транзакции из {@link https://developer.qiwi.com/ru/qiwi-wallet-personal/#history_data|истории платежей} (параметр data[].txnId в ответе)
-   * @param type тип транзакции из {@link https://developer.qiwi.com/ru/qiwi-wallet-personal/#history_data|истории платежей} (параметр data[].type в ответе)
-   * @param format тип файла, в который сохраняется квитанция. Допустимые значения: `JPEG`, `PDF`
+   * @param {number|string} transactionId  номер транзакции из {@link https://developer.qiwi.com/ru/qiwi-wallet-personal/#history_data|истории платежей} (параметр data[].txnId в ответе)
+   * @param {types.TransactionType} type тип транзакции из {@link https://developer.qiwi.com/ru/qiwi-wallet-personal/#history_data|истории платежей} (параметр data[].type в ответе)
+   * @param {types.ChequeFormat} format тип файла, в который сохраняется квитанция. Допустимые значения: `JPEG`, `PDF`
    */
   @MapErrorsAsync(mapError)
   async getTransactionCheque(
@@ -180,9 +192,9 @@ export class Personal extends HttpAPI {
 
   /**
    *
-   * @param transactionId  номер транзакции из {@link https://developer.qiwi.com/ru/qiwi-wallet-personal/#history_data|истории платежей} (параметр data[].txnId в ответе)
-   * @param type тип транзакции из {@link https://developer.qiwi.com/ru/qiwi-wallet-personal/#history_data|истории платежей} (параметр data[].type в ответе)
-   * @param email Адрес для отправки электронной квитанции
+   * @param {number} transactionId  номер транзакции из {@link https://developer.qiwi.com/ru/qiwi-wallet-personal/#history_data|истории платежей} (параметр data[].txnId в ответе)
+   * @param {types.TransactionType} type тип транзакции из {@link https://developer.qiwi.com/ru/qiwi-wallet-personal/#history_data|истории платежей} (параметр data[].type в ответе)
+   * @param {string} email Адрес для отправки электронной квитанции
    */
   @MapErrorsAsync(mapError)
   async sendTransactionCheque(
@@ -199,12 +211,10 @@ export class Personal extends HttpAPI {
 
   /**
    * Успешный ответ содержит JSON-массив счетов вашего QIWI Кошелька для фондирования платежей и текущие балансы счетов
-   * @param wallet Номер кошелька
+   * @param {string} wallet Номер кошелька
    */
   @MapErrorsAsync(mapError)
-  async getAccounts(
-    wallet: string
-  ): Promise<types.GetAccountsResponse["accounts"]> {
+  async getAccounts(wallet: string): Promise<types.GetAccountsResponse["accounts"]> {
     const { accounts } = await this.get(
       `funding-sources/v2/persons/${wallet}/accounts`
     );
@@ -214,22 +224,18 @@ export class Personal extends HttpAPI {
 
   /**
    * Успешный JSON-ответ содержит данные о счетах, которые можно создать
-   * @param wallet Номер кошелька
+   * @param {string} wallet Номер кошелька
    */
   @MapErrorsAsync(mapError)
-  async getAccountOffers(
-    wallet: string
-  ): Promise<types.GetAccountOffersResponse> {
-    return await this.get(
-      `funding-sources/v2/persons/${wallet}/accounts/offer`
-    );
+  async getAccountOffers(wallet: string): Promise<types.GetAccountOffersResponse> {
+    return await this.get(`funding-sources/v2/persons/${wallet}/accounts/offer`);
   }
 
   /**
    * Создаёт новый счёт по параметру `alias`
    * Успешный ответ возвращает пустую строку
-   * @param wallet Номер кошелька
-   * @param alias Псевдоним нового счета (см. {@link https://developer.qiwi.com/ru/qiwi-wallet-personal/?http#funding_offer|запрос доступных счетов})
+   * @param {string} wallet Номер кошелька
+   * @param {string} alias Псевдоним нового счета (см. {@link https://developer.qiwi.com/ru/qiwi-wallet-personal/?http#funding_offer|запрос доступных счетов})
    */
   @MapErrorsAsync(mapError)
   async createAccount(wallet: string, alias: string): Promise<""> {
@@ -243,11 +249,11 @@ export class Personal extends HttpAPI {
   /**
    * Устанавливает счёт по умолчанию
    * Успешный ответ возвращает пустую строку
-   * @param wallet Номер кошелька
-   * @param alias Псевдоним счета (см. {@link https://developer.qiwi.com/ru/qiwi-wallet-personal/?http#funding_offer|запрос доступных счетов})
+   * @param {string} wallet Номер кошелька
+   * @param {string} alias Псевдоним счета (см. {@link https://developer.qiwi.com/ru/qiwi-wallet-personal/?http#funding_offer|запрос доступных счетов})
    */
   @MapErrorsAsync(mapError)
-  async setDefaultAccount(wallet: string, alias: string) {
+  async setDefaultAccount(wallet: string, alias: string): Promise<""> {
     return await this.patch(
       `funding-sources/v2/persons/${wallet}/accounts/${alias}`,
       {},
@@ -255,6 +261,15 @@ export class Personal extends HttpAPI {
     );
   }
 
+  /**
+   *
+   * Получает сумму комиссии по заданным реквизитам
+   *
+   * @param {number} provider ID Провайдера у QIWI
+   * @param {string} account ID получателя у провайдера
+   * @param {number} amount Сумма
+   * @return {Promise<number>}
+   */
   @MapErrorsAsync(mapError)
   async getCommission(
     provider: number,
@@ -285,20 +300,21 @@ export class Personal extends HttpAPI {
   }
 
   /**
-   * Данный метод создаёт ссылку на автозаполненную форму
-   * @param provider ID
-   * @param options
+   * Данный метод создаёт ссылку на предзаполненную форму
+   *
+   * @param {number} provider ID провайдера
+   * @param {types.FormUrlOptions} options
+   * @return {string}
    */
   @MapErrorsAsync(mapError)
-  createFormUrl(provider: number, options: types.FormUrlOptions) {
-    let data = {
+  createFormUrl(provider: number, options: types.FormUrlOptions): string {
+    const data = {
       currency: Personal.Currency.RUB
     } as any;
 
     if (options.amount) {
       data.amountInteger = Math.trunc(options.amount);
-      data.amountFraction =
-        Math.round(options.amount - data.amountInteger) * 10;
+      data.amountFraction = Math.round(options.amount - data.amountInteger) * 10;
     }
 
     if (options.comment) data["extra['comment']"] = options.comment;
@@ -318,14 +334,14 @@ export class Personal extends HttpAPI {
    * Типизирование это метода - очень больно и бессмысленно. Его
    * описание в документации занимает 6 страниц
    *
-   * {@link https://developer.qiwi.com/ru/qiwi-wallet-personal/#payments Документация QIWI по методу оплаты}
+   * {@link https://developer.qiwi.com/ru/qiwi-wallet-personal/#payments|Документация QIWI по методу оплаты}
    *
-   * @param provider Ака ID, в доках, номер провайдера у QIWI
-   * @param account Номер кошелька или карты или типа того
-   * @param amount Сумма платежа
-   * @param currency Валюта платежа, по умолчанию = рубли
-   * @param fields Доп. поля, их невозможно типизировать, просто читайте доки
-   * @param comment Комментарий к платежу, необязательный
+   * @param {number | types.Recipients} provider Ака ID, в доках, номер провайдера у QIWI
+   * @param {string} account Номер кошелька или карты или типа того
+   * @param {number} amount Сумма платежа
+   * @param {types.Currency=} currency Валюта платежа, по умолчанию = рубли
+   * @param {Object=} fields Доп. поля, их невозможно типизировать, просто читайте доки
+   * @param {string=} comment Комментарий к платежу, необязательный
    */
   @MapErrorsAsync(mapError)
   async pay(
@@ -334,8 +350,8 @@ export class Personal extends HttpAPI {
     amount: number,
     currency: types.Currency = Personal.Currency.RUB,
     fields: Record<string, string> = {},
-    comment: string = ""
-  ) {
+    comment = ""
+  ): Promise<types.PaymentResponse> {
     return await this.post(
       `sinap/api/v2/terms/${provider}/payments`,
       {},
@@ -361,10 +377,10 @@ export class Personal extends HttpAPI {
   /**
    * Создаёт пару ключей для взаимодействия с P2P BILLS API
    *
-   * @param name Название связки ключей
-   * @param server URL сервера для отправки уведомлений
+   * @param {string} name Название связки ключей
+   * @param {string=} server URL сервера для отправки уведомлений
    *
-   * @returns {[string, string]} Массив, где - [0=Публичный ключ, 1=Секретный ключ]
+   * @return {[string, string]} Массив, где - [0=Публичный ключ, 1=Секретный ключ]
    *
    * @example
    *

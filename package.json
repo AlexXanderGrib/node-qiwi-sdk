@@ -23,11 +23,13 @@
   "homepage": "https://github.com/AlexXanderGrib/node-qiwi-sdk#readme",
   "scripts": {
     "test": "jest --runInBand",
-    "build": "tsc --project tsconfig.build.json",
+    "build": "rimraf dist && tsc --project tsconfig.build.json",
     "prepack": "npm run build",
     "prepublishOnly": "npm run generate-lock-files",
     "generate-lock-files": "npm i && yarn install",
-    "glf": "npm run generate-lock-files"
+    "glf": "npm run generate-lock-files",
+    "lint": "eslint src/*",
+    "prettify": "prettier --write src/**/*"
   },
   "keywords": [
     "qiwi",
@@ -59,11 +61,30 @@
     "@types/node": "^14.14.28",
     "@types/node-fetch": "^2.5.7",
     "@types/uuid": "^8.3.0",
+    "@typescript-eslint/eslint-plugin": "^4.22.0",
+    "@typescript-eslint/parser": "^4.22.0",
     "dotenv": "^8.2.0",
+    "eslint": "^7.24.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^8.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-security": "^1.4.0",
+    "eslint-plugin-unicorn": "^30.0.0",
+    "husky": "^6.0.0",
     "jest": "^26.5.3",
+    "prettier": "^2.2.1",
+    "rimraf": "^3.0.2",
     "runtypes": "^5.0.1",
     "ts-jest": "^26.5.1",
     "ts-node": "^9.0.0",
     "typescript": "^4.1.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm run prettify",
+      "pre-push": "npm test"
+    }
   }
 }

@@ -1,3 +1,4 @@
+/* eslint-disable unicorn/prevent-abbreviations */
 export enum BillStatus {
   /** Счет выставлен, ожидает оплаты */
   WAITING = "WAITING",
