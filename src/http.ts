@@ -139,7 +139,7 @@ export class HttpAPI {
   protected async post<T>(
     url: string,
     headers: Record<string, string> = {},
-    body: string | undefined
+    body?: string | undefined
   ): Promise<T> {
     return await this._request(url, "POST", headers, body);
   }
@@ -157,7 +157,7 @@ export class HttpAPI {
   protected async put<T>(
     url: string,
     headers: Record<string, string> = {},
-    body: string | undefined
+    body?: string | undefined
   ): Promise<T> {
     return await this._request(url, "PUT", headers, body);
   }
@@ -175,7 +175,7 @@ export class HttpAPI {
   protected async patch<T>(
     url: string,
     headers: Record<string, string> = {},
-    body: string | undefined
+    body?: string | undefined
   ): Promise<T> {
     return await this._request(url, "PATCH", headers, body);
   }
@@ -193,7 +193,7 @@ export class HttpAPI {
   protected async delete<T>(
     url: string,
     headers: Record<string, string> = {},
-    body: string | undefined
+    body?: string | undefined
   ): Promise<T> {
     return await this._request(url, "DELETE", headers, body);
   }
