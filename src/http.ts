@@ -1,4 +1,4 @@
-import fetch from "node-fetch";
+import fetch, { RequestInit } from "node-fetch";
 import querystring from "querystring";
 import { ErrorWithCode, ExtendedError } from "./error";
 
@@ -30,6 +30,8 @@ export class HttpError extends ErrorWithCode<number> {
   }
 }
 
+export type Agent = RequestInit["agent"];
+
 /**
  * Ошибка раскодировки ответа сервера
  */
@@ -43,6 +45,7 @@ export class HttpAPI {
   protected readonly API_HEADERS: Record<string, string> = {};
   protected readonly API_TIMEOUT: number = 10000;
   protected readonly API_OK_RESPONSE_CODES: number[] = [200];
+  protected agent?: Agent;
 
   /**
    * Simplified http request function
@@ -72,7 +75,8 @@ export class HttpAPI {
       method,
       headers: { ...this.API_HEADERS, ...headers },
       timeout: this.API_TIMEOUT,
-      body
+      body,
+      agent: this.agent
     });
 
     const contentType = response.headers.get("content-type")?.split(";")[0];

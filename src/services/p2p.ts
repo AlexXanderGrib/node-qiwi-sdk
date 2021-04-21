@@ -4,7 +4,7 @@ import { MapErrorsAsync } from "sweet-decorators";
 import { v4 as uuid } from "uuid";
 import { createQS, formatDate } from "..";
 import { ErrorWithCode } from "../error";
-import { HttpAPI, HttpError } from "../http";
+import { Agent, HttpAPI, HttpError } from "../http";
 import { USER_AGENT } from "../indentity";
 import type * as types from "./p2p.types";
 import { BillCurrency, BillStatus } from "./p2p.types";
@@ -55,6 +55,8 @@ function mapErrors(error: any) {
 export class P2P extends HttpAPI {
   public static readonly BillStatus = BillStatus;
   public static readonly Currency = BillCurrency;
+
+  public agent?: Agent;
 
   protected readonly API_HEADERS = {
     Accept: "application/json",

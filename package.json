@@ -1,6 +1,6 @@
 {
   "name": "qiwi-sdk",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "description": "Typed, Promise based, QIWI API (P2P & Personal) client",
   "main": "dist/index.js",
   "type": "commonjs",

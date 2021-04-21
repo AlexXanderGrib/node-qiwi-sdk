@@ -2,7 +2,7 @@
 import { MapErrorsAsync } from "sweet-decorators";
 import { createQS } from "..";
 import { ExtendedError } from "../error";
-import { HttpAPI, HttpError } from "../http";
+import { Agent, HttpAPI, HttpError } from "../http";
 import { USER_AGENT } from "../indentity";
 import type * as types from "./personal.types";
 import * as values from "./personal.types";
@@ -49,6 +49,8 @@ export class Personal extends HttpAPI {
   public static readonly TransactionType = values.TransactionType;
   public static readonly TransactionStatus = values.TransactionStatus;
   public static readonly ChequeFormat = values.ChequeFormat;
+
+  public agent?: Agent;
 
   protected readonly API_HEADERS = {
     Accept: "application/json",
