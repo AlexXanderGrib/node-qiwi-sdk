@@ -612,7 +612,7 @@ export type PaymentResponse = {
 export type FormUrlOptions = {
   /** Сумма платежа в рублях */
   amount?: number;
-  /** Комментарий. **Параметр используется только для ID=99** */
+  /** Комментарий. **Параметр используется только для `ID=99`** */
   comment?: string;
   /**
    * Формат совпадает с форматом параметра `fields.account` при оплате

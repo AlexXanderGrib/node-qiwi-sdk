@@ -1,6 +1,7 @@
 import { config } from "dotenv";
 import { Personal } from "..";
 import { PersonalApiError } from "../services/personal";
+import { Currency } from "../services/personal.types";
 
 jest.setTimeout(30000);
 
@@ -88,5 +89,22 @@ describe("Personal API", () => {
         buffer[1] === 216 &&
         buffer[2] === 255
     ).toBeTruthy();
+  });
+
+  // SRP = СБП (Система Быстрых Платежей)
+  test("Can transfer money thru SRP", async () => {
+    try {
+      const {
+        contractInfo: { contractId }
+      } = await qiwi.getPersonProfile();
+
+      // See https://qiwi.com/payment/form/36699
+      await qiwi.pay(36699, contractId.toString(), 1, Currency.RUB, {
+        receiverBankMemberId: "100000000111", // Сбербанк
+        purpose: "NodeJS QIWI SDK Test npmjs.com/package/qiwi-sdk" // = Comment
+      });
+    } catch (error) {
+      console.log(error.data);
+    }
   });
 });
