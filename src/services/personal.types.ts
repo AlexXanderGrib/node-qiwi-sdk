@@ -73,11 +73,11 @@ export enum Recipients {
   /** Перевод на карту VISA по СНГ */
   VisaSngCard = 1960,
   /** Перевод на карту MasterCard по России */
-  MasterCardRus = 21013,
+  MasterCardRus = 21_013,
   /** Перевод на карту MasterCard по СНГ */
-  MasterCardSng = 21012,
+  MasterCardSng = 21_012,
   /** Перевод на карту МИР */
-  MirCard = 31652,
+  MirCard = 31_652,
   /** Перевод в `OnLime` */
   OnLime = 674,
   /** Перевод в фонд "Подари Жизнь" */
@@ -85,27 +85,27 @@ export enum Recipients {
   /** Перевод на QIWI-Кошелёк по номеру телефона */
   QIWI = 99,
   /** Перевод на QIWI-Кошелёк по никнейму */
-  QIWINickname = 99999,
+  QIWINickname = 99_999,
 
   /**
    * Перевод на QIWI-Кошелёк по никнейму
    * @deprecated Переименовано в `QIWINickname`
    */
   // eslint-disable-next-line camelcase
-  QIWI_Nickname = 99999,
+  QIWI_Nickname = 99_999,
 
   /** Перевод по банковским реквизитам */
   BankRequisites = 1717,
 
   /** Перевод на QIWI-Кошелёк по номеру виртуальной карты */
-  QIWIVirtualCard = 22351,
+  QIWIVirtualCard = 22_351,
 
   /**
    * Перевод на QIWI-Кошелёк по номеру виртуальной карты
    * @deprecated Переименовано в `QIWIVirtualCard`
    */
   // eslint-disable-next-line camelcase
-  QIWI_VirtualCard = 22351
+  QIWI_VirtualCard = 22_351
 }
 
 export type PersonProfile = {

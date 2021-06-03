@@ -3,7 +3,7 @@ import { v4 as uuid } from "uuid";
 import { P2P } from "..";
 import { P2PPaymentError } from "../services/p2p";
 
-jest.setTimeout(30000);
+jest.setTimeout(30_000);
 
 config();
 

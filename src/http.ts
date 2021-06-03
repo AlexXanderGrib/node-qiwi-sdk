@@ -43,7 +43,7 @@ export class DecodingError extends ExtendedError {}
 export class HttpAPI {
   protected readonly API_URL: string = "";
   protected readonly API_HEADERS: Record<string, string> = {};
-  protected readonly API_TIMEOUT: number = 10000;
+  protected readonly API_TIMEOUT: number = 10_000;
   protected readonly API_OK_RESPONSE_CODES: number[] = [200];
   protected agent?: Agent;
 

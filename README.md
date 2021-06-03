@@ -5,7 +5,6 @@
 [![GitHub](https://img.shields.io/github/stars/AlexXanderGrib/node-qiwi-sdk?style=flat-square)](https://github.com/AlexXanderGrib/node-qiwi-sdk)
 [![last commit](https://img.shields.io/github/last-commit/AlexXanderGrib/node-qiwi-sdk?style=flat-square)](https://github.com/AlexXanderGrib/node-qiwi-sdk)
 
-
 <center>
   <img src="docs/assets/logo.svg" alt="QIWI SDK" /> 
 </center>
@@ -26,7 +25,6 @@ This document is primarily on Russian, because QIWI Bank (JSC) is Russian bank a
     - [NPM:](#npm)
     - [Yarn:](#yarn)
   - [✏️ Примеры / Examples](#️-примеры--examples)
-    - [🌐 Перевод через **СБП** **`[NEW]`**](#-перевод-через-сбп-new)
     - [🔎 Получение информации о владельце кошелька](#-получение-информации-о-владельце-кошелька)
     - [🔑 Создание пары ключей для взаимодействия с P2P](#-создание-пары-ключей-для-взаимодействия-с-p2p)
     - [🧱 Получение Лимитов (на TypeScript)](#-получение-лимитов-на-typescript)
@@ -57,10 +55,6 @@ yarn add qiwi-sdk
 ```
 
 ## ✏️ Примеры / Examples
-
-### 🌐 Перевод через **[СБП](https://sbp.nspk.ru)** **`[NEW]`**
-
-Смотрите подробнее в [docs/SRP.md](docs/SRP.md)
 
 ### 🔎 Получение информации о владельце кошелька
 
