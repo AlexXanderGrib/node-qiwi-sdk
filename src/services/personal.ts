@@ -1,5 +1,5 @@
 /* eslint-disable no-invalid-this */
-import { MapErrorsAsync } from "sweet-decorators";
+import { MapErrorsAsync, MapErrors } from "sweet-decorators";
 import { createQS } from "..";
 import { ExtendedError } from "../error";
 import { Agent, HttpAPI, HttpError } from "../http";
@@ -308,7 +308,7 @@ export class Personal extends HttpAPI {
    * @param {types.FormUrlOptions} options
    * @return {string}
    */
-  @MapErrorsAsync(mapError)
+  @MapErrors(mapError)
   createFormUrl(provider: number, options: types.FormUrlOptions): string {
     const data = {
       currency: Personal.Currency.RUB
