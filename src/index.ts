@@ -1,6 +1,7 @@
 import qs from "query-string";
 import { AnyResponse } from "./services/shared.types";
 
+export * from "./services/detector";
 export * from "./services/p2p";
 export * from "./services/p2p.types";
 export * from "./services/personal";
