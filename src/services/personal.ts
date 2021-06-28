@@ -1,6 +1,6 @@
 /* eslint-disable no-invalid-this */
 import { MapErrorsAsync, MapErrors } from "sweet-decorators";
-import { createQS } from "..";
+import { createQS } from "./shared";
 import { ExtendedError } from "../error";
 import { Agent, HttpAPI, HttpError } from "../http";
 import { USER_AGENT } from "../indentity";
@@ -29,7 +29,10 @@ export class PersonalApiError extends ExtendedError {
  */
 function mapError(error: any) {
   if (error instanceof HttpError) {
-    return new PersonalApiError(error.message, JSON.parse(error.body));
+    return new PersonalApiError(
+      error.message,
+      error.body ? JSON.parse(error.body) : undefined
+    );
   }
 
   return error;

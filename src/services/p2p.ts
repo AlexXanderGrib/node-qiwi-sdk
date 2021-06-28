@@ -2,7 +2,7 @@
 import { createHmac } from "crypto";
 import { MapErrorsAsync } from "sweet-decorators";
 import { v4 as uuid } from "uuid";
-import { createQS, formatDate } from "..";
+import { createQS, formatDate } from "./shared";
 import { ErrorWithCode } from "../error";
 import { Agent, HttpAPI, HttpError } from "../http";
 import { USER_AGENT } from "../indentity";
