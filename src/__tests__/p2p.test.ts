@@ -69,7 +69,7 @@ describe("P2P", () => {
       });
 
       expect(false).toBeTruthy();
-    } catch (error) {
+    } catch (error: any) {
       expect(error).toBeInstanceOf(P2PPaymentError);
       expect(error.message).toContain("Validation error");
     }
