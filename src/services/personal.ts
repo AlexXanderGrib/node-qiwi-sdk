@@ -13,7 +13,8 @@ import { v4 as uuid } from "uuid";
 type StringOrNumber = string | number;
 
 /**
- * Ошибка, которую выбрасывает персональное API в случае неправильного кода ответа от QIWI
+ * Ошибка, которую выбрасывает персональное API в случае
+ * неправильного кода ответа от QIWI
  */
 export class PersonalApiError extends ExtendedError {
   /**
@@ -71,14 +72,16 @@ export class Personal extends HttpAPI {
 
   /**
    *
-   * @param {string} API_TOKEN Токен полученный на {@link https://qiwi.com/api|Странице QIWI API}
+   * @param {string} API_TOKEN Токен полученный на
+   * {@link https://qiwi.com/api|Странице QIWI API}
    */
   constructor(public readonly API_TOKEN: string) {
     super();
   }
 
   /**
-   * Запрос возвращает информацию о вашем профиле - наборе пользовательских данных и настроек вашего QIWI кошелька.
+   * Запрос возвращает информацию о вашем профиле - наборе
+   * пользовательских данных и настроек вашего QIWI кошелька.
    */
   @MapErrorsAsync(mapError)
   async getPersonProfile(): Promise<types.PersonProfile> {
@@ -88,7 +91,9 @@ export class Personal extends HttpAPI {
   }
 
   /**
-   * Данный запрос позволяет отправить данные для идентификации вашего QIWI кошелька.
+   * Данный запрос позволяет отправить данные для идентификации
+   * вашего QIWI кошелька.
+   *
    * @param {StringOrNumber} wallet
    * @param {types.IdentificationBase} data
    */
@@ -105,7 +110,9 @@ export class Personal extends HttpAPI {
   }
 
   /**
-   * Данный запрос позволяет выгрузить маскированные данные и статус идентификации своего QIWI кошелька.
+   * Данный запрос позволяет выгрузить маскированные данные и
+   * статус идентификации своего QIWI кошелька.
+   *
    * @param {StringOrNumber} wallet
    */
   @MapErrorsAsync(mapError)
@@ -116,7 +123,10 @@ export class Personal extends HttpAPI {
   }
 
   /**
-   * Запрос возвращает текущие уровни лимитов по операциям в вашем QIWI кошельке. Лимиты действуют как ограничения на сумму определенных операций.
+   * Запрос возвращает текущие уровни лимитов по операциям в вашем
+   * QIWI кошельке. Лимиты действуют как ограничения на сумму
+   * определенных операций.
+   *
    * @template L
    * @param {StringOrNumber} wallet
    * @param {L} limits
@@ -132,7 +142,9 @@ export class Personal extends HttpAPI {
   }
 
   /**
-   * Запрос проверяет, есть ли ограничение на исходящие платежи с QIWI Кошелька.
+   * Запрос проверяет, есть ли ограничение на исходящие платежи с
+   * QIWI Кошелька.
+   *
    * @param {StringOrNumber} wallet
    */
   @MapErrorsAsync(mapError)
@@ -141,7 +153,10 @@ export class Personal extends HttpAPI {
   }
 
   /**
-   * Запрос выгружает список платежей и пополнений вашего кошелька. Можно использовать фильтр по количеству, ID и дате (интервалу дат) транзакций.
+   * Запрос выгружает список платежей и пополнений вашего кошелька.
+   * Можно использовать фильтр по количеству, ID и дате
+   * (интервалу дат) транзакций.
+   *
    * @param {StringOrNumber} wallet Номер кошелька
    * @param {types.GetPaymentHistoryParams} parameters Тело запроса
    */
@@ -155,7 +170,9 @@ export class Personal extends HttpAPI {
     return await this.get(`payment-history/v2/persons/${wallet}/payments?${query}`);
   }
   /**
-   * Данный запрос используется для получения сводной статистики по суммам платежей за заданный период.
+   * Данный запрос используется для получения сводной статистики
+   * по суммам платежей за заданный период.
+   *
    * @param {StringOrNumber} wallet
    * @param {types.GetPaymentHistoryTotalParams} parameters
    */
@@ -171,7 +188,9 @@ export class Personal extends HttpAPI {
     );
   }
   /**
-   * Запрос используется для получения информации по определенной транзакции из вашей истории платежей.
+   * Запрос используется для получения информации по определенной
+   * транзакции из вашей истории платежей.
+   *
    * @param {number} transactionId Номер транзакции
    * @param {types.TransactionType} type Тип транзакции
    */
@@ -222,7 +241,9 @@ export class Personal extends HttpAPI {
   }
 
   /**
-   * Успешный ответ содержит JSON-массив счетов вашего QIWI Кошелька для фондирования платежей и текущие балансы счетов
+   * Успешный ответ содержит JSON-массив счетов вашего QIWI
+   * Кошелька для фондирования платежей и текущие балансы счетов
+   *
    * @param {StringOrNumber} wallet Номер кошелька
    */
   @MapErrorsAsync(mapError)
@@ -237,7 +258,9 @@ export class Personal extends HttpAPI {
   }
 
   /**
-   * Успешный JSON-ответ содержит данные о счетах, которые можно создать
+   * Успешный JSON-ответ содержит данные о счетах, которые можно
+   * создать
+   *
    * @param {StringOrNumber} wallet Номер кошелька
    */
   @MapErrorsAsync(mapError)

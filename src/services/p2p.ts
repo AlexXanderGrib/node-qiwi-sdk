@@ -11,7 +11,8 @@ import { BillCurrency, BillStatus } from "./p2p.types";
 import { AnyResponse } from "./shared.types";
 
 /**
- *  Ошибка, которую выбрасывает P2P API в случае неправильного кода ответа от QIWI
+ * Ошибка, которую выбрасывает P2P API в случае неправильного
+ * кода ответа от QIWI
  */
 export class P2PPaymentError extends ErrorWithCode<string> {
   /**
@@ -69,7 +70,8 @@ export class P2P extends HttpAPI {
 
   /**
    *
-   * Создаёт клиент P2P API используя Публичный и Приватный ключи, полученные на {@link https://qiwi.com/p2p-admin/transfers/api|Странице P2P API QIWI}
+   * Создаёт клиент P2P API используя Публичный и Приватный ключи,
+   * полученные на {@link https://qiwi.com/p2p-admin/transfers/api|Странице P2P API QIWI}
    *
    * @param {string} secretKey Публичный ключ
    * @param {string=} publicKey Приватный ключ (необязателен)
@@ -84,10 +86,11 @@ export class P2P extends HttpAPI {
    * **По оплаченным счетам возврат денежных средств не предусмотрен.**
    *
    * Доступно выставление счетов в рублях и тенге.
-   * Надежный способ для интеграции. Параметры передаются server2server
-   * с использованием авторизации. Метод позволяет выставить счет: при
-   * успешном выполнении запроса в ответе вернется параметр
-   * `payUrl` - ссылка для редиректа пользователя на форму.
+   * Надежный способ для интеграции. Параметры передаются
+   * server2server с использованием авторизации. Метод позволяет
+   * выставить счет: при успешном выполнении запроса в ответе
+   * вернется параметр `payUrl` - ссылка для редиректа
+   * пользователя на форму.
    *
    * {@link https://developer.qiwi.com/ru/p2p-payments/#option|Настройки формы и счета}
    *
@@ -186,7 +189,13 @@ export class P2P extends HttpAPI {
     signature: string,
     body: types.BillStatusData
   ): boolean {
-    const data = `${body.amount.currency}|${body.amount.value}|${body.billId}|${body.siteId}|${body.status.value}`;
+    const data = [
+      body.amount.currency,
+      body.amount.value,
+      body.billId,
+      body.siteId,
+      body.status.value
+    ].join("|");
     const hash = createHmac("sha256", this.secretKey).update(data).digest("hex");
 
     return signature === hash;

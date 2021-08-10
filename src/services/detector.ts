@@ -4,7 +4,8 @@ import { HttpAPI } from "../http";
 import { AnyResponse } from "./shared.types";
 
 /**
- *  Ошибка, которую выбрасывает персональное API в случае неправильного кода ответа от QIWI
+ * Ошибка, которую выбрасывает персональное API в случае
+ * неправильного кода ответа от QIWI
  */
 export class DetectorError extends ExtendedError {}
 
