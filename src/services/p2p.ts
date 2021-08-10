@@ -5,7 +5,7 @@ import { v4 as uuid } from "uuid";
 import { createQS, formatDate } from "./shared";
 import { ErrorWithCode } from "../error";
 import { Agent, HttpAPI, HttpError } from "../http";
-import { USER_AGENT } from "../indentity";
+import { USER_AGENT } from "../identity";
 import type * as types from "./p2p.types";
 import { BillCurrency, BillStatus } from "./p2p.types";
 import { AnyResponse } from "./shared.types";

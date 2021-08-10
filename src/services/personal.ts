@@ -3,10 +3,14 @@ import { MapErrorsAsync, MapErrors } from "sweet-decorators";
 import { createQS } from "./shared";
 import { ExtendedError } from "../error";
 import { Agent, HttpAPI, HttpError } from "../http";
-import { USER_AGENT } from "../indentity";
+import { USER_AGENT } from "../identity";
 import type * as types from "./personal.types";
 import * as values from "./personal.types";
 import { AnyResponse } from "./shared.types";
+import { stringify } from "query-string";
+import { v4 as uuid } from "uuid";
+
+type StringOrNumber = string | number;
 
 /**
  * Ошибка, которую выбрасывает персональное API в случае неправильного кода ответа от QIWI
@@ -85,12 +89,12 @@ export class Personal extends HttpAPI {
 
   /**
    * Данный запрос позволяет отправить данные для идентификации вашего QIWI кошелька.
-   * @param {string | number} wallet
+   * @param {StringOrNumber} wallet
    * @param {types.IdentificationBase} data
    */
   @MapErrorsAsync(mapError)
   async setIdentification(
-    wallet: string | number,
+    wallet: StringOrNumber,
     data: types.IdentificationBase
   ): Promise<types.IdentificationResponse> {
     return await this.post(
@@ -102,23 +106,24 @@ export class Personal extends HttpAPI {
 
   /**
    * Данный запрос позволяет выгрузить маскированные данные и статус идентификации своего QIWI кошелька.
-   * @param {string | number} wallet
+   * @param {StringOrNumber} wallet
    */
   @MapErrorsAsync(mapError)
   async getIdentification(
-    wallet: string | number
+    wallet: StringOrNumber
   ): Promise<types.IdentificationResponse> {
     return await this.get(`identification/v1/persons/${wallet}/identification`);
   }
 
   /**
    * Запрос возвращает текущие уровни лимитов по операциям в вашем QIWI кошельке. Лимиты действуют как ограничения на сумму определенных операций.
-   * @param {string | number} wallet
+   * @template L
+   * @param {StringOrNumber} wallet
    * @param {L} limits
    */
   @MapErrorsAsync(mapError)
   async getLimits<L extends types.LimitType[] = types.LimitType[]>(
-    wallet: string | number,
+    wallet: StringOrNumber,
     limits: L
   ): Promise<types.LimitsResponse<L[number]>> {
     const query = createQS({ types: limits });
@@ -128,21 +133,21 @@ export class Personal extends HttpAPI {
 
   /**
    * Запрос проверяет, есть ли ограничение на исходящие платежи с QIWI Кошелька.
-   * @param {string | number} wallet
+   * @param {StringOrNumber} wallet
    */
   @MapErrorsAsync(mapError)
-  async getRestrictions(wallet: string | number): Promise<types.Restrictions> {
+  async getRestrictions(wallet: StringOrNumber): Promise<types.Restrictions> {
     return await this.get(`person-profile/v1/persons/${wallet}/status/restrictions`);
   }
 
   /**
    * Запрос выгружает список платежей и пополнений вашего кошелька. Можно использовать фильтр по количеству, ID и дате (интервалу дат) транзакций.
-   * @param {string | number} wallet Номер кошелька
+   * @param {StringOrNumber} wallet Номер кошелька
    * @param {types.GetPaymentHistoryParams} parameters Тело запроса
    */
   @MapErrorsAsync(mapError)
   async getPaymentHistory(
-    wallet: string | number,
+    wallet: StringOrNumber,
     parameters: types.GetPaymentHistoryParams
   ): Promise<types.GetTransactionsHistoryResponse> {
     const query = createQS(parameters);
@@ -151,12 +156,12 @@ export class Personal extends HttpAPI {
   }
   /**
    * Данный запрос используется для получения сводной статистики по суммам платежей за заданный период.
-   * @param {string | number} wallet
+   * @param {StringOrNumber} wallet
    * @param {types.GetPaymentHistoryTotalParams} parameters
    */
   @MapErrorsAsync(mapError)
   async getPaymentHistoryTotal(
-    wallet: string | number,
+    wallet: StringOrNumber,
     parameters: types.GetPaymentHistoryTotalParams
   ): Promise<types.GetPaymentHistoryTotalResponse> {
     const query = createQS(parameters);
@@ -182,13 +187,13 @@ export class Personal extends HttpAPI {
 
   /**
    *
-   * @param {number|string} transactionId  номер транзакции из {@link https://developer.qiwi.com/ru/qiwi-wallet-personal/#history_data|истории платежей} (параметр data[].txnId в ответе)
+   * @param {StringOrNumber} transactionId  номер транзакции из {@link https://developer.qiwi.com/ru/qiwi-wallet-personal/#history_data|истории платежей} (параметр data[].txnId в ответе)
    * @param {types.TransactionType} type тип транзакции из {@link https://developer.qiwi.com/ru/qiwi-wallet-personal/#history_data|истории платежей} (параметр data[].type в ответе)
    * @param {types.ChequeFormat} format тип файла, в который сохраняется квитанция. Допустимые значения: `JPEG`, `PDF`
    */
   @MapErrorsAsync(mapError)
   async getTransactionCheque(
-    transactionId: number | string,
+    transactionId: StringOrNumber,
     type: types.TransactionType,
     format: types.ChequeFormat = Personal.ChequeFormat.JPEG
   ): Promise<Buffer> {
@@ -218,11 +223,11 @@ export class Personal extends HttpAPI {
 
   /**
    * Успешный ответ содержит JSON-массив счетов вашего QIWI Кошелька для фондирования платежей и текущие балансы счетов
-   * @param {string | number} wallet Номер кошелька
+   * @param {StringOrNumber} wallet Номер кошелька
    */
   @MapErrorsAsync(mapError)
   async getAccounts(
-    wallet: string | number
+    wallet: StringOrNumber
   ): Promise<types.GetAccountsResponse["accounts"]> {
     const { accounts } = await this.get(
       `funding-sources/v2/persons/${wallet}/accounts`
@@ -233,11 +238,11 @@ export class Personal extends HttpAPI {
 
   /**
    * Успешный JSON-ответ содержит данные о счетах, которые можно создать
-   * @param {string | number} wallet Номер кошелька
+   * @param {StringOrNumber} wallet Номер кошелька
    */
   @MapErrorsAsync(mapError)
   async getAccountOffers(
-    wallet: string | number
+    wallet: StringOrNumber
   ): Promise<types.GetAccountOffersResponse> {
     return await this.get(`funding-sources/v2/persons/${wallet}/accounts/offer`);
   }
@@ -245,11 +250,11 @@ export class Personal extends HttpAPI {
   /**
    * Создаёт новый счёт по параметру `alias`
    * Успешный ответ возвращает пустую строку
-   * @param {string | number} wallet Номер кошелька
+   * @param {StringOrNumber} wallet Номер кошелька
    * @param {string} alias Псевдоним нового счета (см. {@link https://developer.qiwi.com/ru/qiwi-wallet-personal/?http#funding_offer|запрос доступных счетов})
    */
   @MapErrorsAsync(mapError)
-  async createAccount(wallet: string | number, alias: string): Promise<""> {
+  async createAccount(wallet: StringOrNumber, alias: string): Promise<""> {
     return await this.post(
       `funding-sources/v2/persons/${wallet}/accounts`,
       {},
@@ -260,11 +265,11 @@ export class Personal extends HttpAPI {
   /**
    * Устанавливает счёт по умолчанию
    * Успешный ответ возвращает пустую строку
-   * @param {string | number} wallet Номер кошелька
+   * @param {StringOrNumber} wallet Номер кошелька
    * @param {string} alias Псевдоним счета (см. {@link https://developer.qiwi.com/ru/qiwi-wallet-personal/?http#funding_offer|запрос доступных счетов})
    */
   @MapErrorsAsync(mapError)
-  async setDefaultAccount(wallet: string | number, alias: string): Promise<""> {
+  async setDefaultAccount(wallet: StringOrNumber, alias: string): Promise<""> {
     return await this.patch(
       `funding-sources/v2/persons/${wallet}/accounts/${alias}`,
       {},
@@ -412,5 +417,108 @@ export class Personal extends HttpAPI {
     );
 
     return [PublicKey, SecretKey];
+  }
+
+  /**
+   * Создаёт токен с увеличенным сроком действия (10 лет)
+   *
+   * @see {@link https://developer.qiwi.com/ru/qiwi-wallet-personal-advanced/?http#intro|Документация}
+   */
+  async createOauthToken(): Promise<types.PrettyTokenResponse<Personal>> {
+    const { code } = await this.post<types.CodeResponse>(
+      "https://qiwi.com/oauth/authorize",
+      {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      stringify({
+        response_type: "code",
+        client_id: "api_wallet_private",
+        token: this.API_TOKEN,
+        client_software: "api"
+      })
+    );
+
+    const { access_token: token, expires_in: expiry } =
+      await this.post<types.TokenResponse>(
+        "https://qiwi.com/oauth/token",
+        {
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        stringify({
+          grant_type: "authorization_code",
+          client_id: "api_wallet_private",
+          client_secret: "hTFPyt",
+          code
+        })
+      );
+
+    return {
+      token: token,
+      expiry: Number.parseInt(expiry, 10),
+      client: new Personal(token)
+    };
+  }
+
+  /**
+   * Возвращает список карт
+   *
+   * @return {Promise<types.CardResponse>}
+   */
+  getCards(): Promise<types.CardResponse[]> {
+    return this.get("cards/v1/cards", {});
+  }
+
+  /**
+   * Блокирует карту
+   *
+   * @param {StringOrNumber} wallet
+   * @param {StringOrNumber} cardId
+   * @return {*}
+   */
+  blockCard(wallet: StringOrNumber, cardId: StringOrNumber): Promise<any> {
+    return this.put(`cards/v2/persons/${wallet}/cards/${cardId}/block`);
+  }
+
+  /**
+   * Разблокирует карту
+   *
+   * @param {StringOrNumber} wallet
+   * @param {StringOrNumber} cardId
+   * @return {Promise<types.CardUnblockResponse>}
+   */
+  unblockCard(
+    wallet: StringOrNumber,
+    cardId: StringOrNumber
+  ): Promise<types.CardUnblockResponse> {
+    return this.put(`cards/v2/persons/${wallet}/cards/${cardId}/unblock`);
+  }
+
+  /**
+   * Получает реквизиты карты
+   *
+   * @param {StringOrNumber} cardId
+   * @return {Promise<types.CardRequisitesResponse>}
+   */
+  getCardRequisites(cardId: StringOrNumber): Promise<types.CardRequisitesResponse> {
+    return this.put(
+      `cards/v1/cards/${cardId}/details`,
+      {},
+      JSON.stringify({
+        operationId: uuid()
+      })
+    );
+  }
+
+  /**
+   *
+   * @param {StringOrNumber} cardId
+   * @param {StringOrNumber} alias
+   * @return {types.CardRenameResponse}
+   */
+  renameCard(
+    cardId: StringOrNumber,
+    alias: string
+  ): Promise<types.CardRenameResponse> {
+    return this.put(`cards/v1/cards/${cardId}/alias`, {}, JSON.stringify({ alias }));
   }
 }

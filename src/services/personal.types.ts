@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 /* eslint-disable unicorn/prevent-abbreviations */
 export enum PersonIdentificationLevel {
   /** Пользователь не вошёл в кошелёк */
@@ -41,6 +42,14 @@ export enum Currency {
   /** Тенге */
   KZT = 398
 }
+
+export type MoneyAmount = {
+  /** Сумма */
+  amount: number;
+
+  /** Валюты */
+  currency: Currency;
+};
 
 export enum ChequeFormat {
   JPEG = "JPEG",
@@ -335,15 +344,9 @@ export type GetPaymentHistoryTotalParams = Omit<
 
 export type GetPaymentHistoryTotalResponse = {
   /** Данные о входящих платежах (пополнениях), отдельно по каждой валюте */
-  incomingTotal: {
-    amount: number;
-    currency: string;
-  }[];
+  incomingTotal: MoneyAmount[];
   /** Данные об исходящих платежах, отдельно по каждой валюте */
-  outgoingTotal: {
-    amount: number;
-    currency: string;
-  }[];
+  outgoingTotal: MoneyAmount[];
 };
 
 export type Transaction = {
@@ -390,26 +393,11 @@ export type Transaction = {
   /** Для платежей - номер счета получателя. Для пополнений - номер отправителя, терминала или название агента пополнения кошелька */
   account: string;
   /** Данные о сумме платежа или пополнения. */
-  sum: {
-    /** сумма платежа */
-    amount: number;
-    /** валюта платежа */
-    currency: Currency;
-  };
+  sum: MoneyAmount;
   /**	Данные о комиссии платежа */
-  commission: {
-    /** сумма */
-    amount: number;
-    /** валюта */
-    currency: Currency;
-  };
+  commission: MoneyAmount;
   /** Данные о фактической сумме платежа или пополнения. */
-  total: {
-    /** сумма (равна сумме платежа `sum.amount` и комиссии `commission.amount`) */
-    amount: number;
-    /** валюта */
-    currency: Currency;
-  };
+  total: MoneyAmount;
   /** Данные о провайдере. */
   provider: {
     /** ID провайдера в QIWI Wallet */
@@ -459,12 +447,12 @@ export type GetTransactionsHistoryResponse = {
    */
   data: Transaction[];
   /** ID следующей транзакции в полном списке */
-  nextTxnId: number;
+  nextTxnId: Transaction["txnId"] | null;
   /**
    * Дата/время следующей транзакции в полном списке, время московское (в формате
    * `ГГГГ-ММ-ДД'T'чч:мм:сс+03:00`)
    */
-  nextTxnDate: string;
+  nextTxnDate: Transaction["date"] | null;
 };
 
 export enum LimitType {
@@ -532,11 +520,7 @@ export type Account = {
   };
   /** Логический признак реального баланса в системе QIWI Кошелек (не привязанная карта, не счет мобильного телефона и т.д.) */
   hasBalance: boolean;
-  balance: {
-    amount: number;
-    /** Код валюты баланса (number-3 ISO-4217). Возвращаются балансы в следующих валютах: 643 - российский рубль, 840 - американский доллар, 978 - евро */
-    currency: Currency;
-  } | null;
+  balance: MoneyAmount | null;
   /** Код валюты баланса (number-3 ISO-4217) */
   currency: Currency;
 
@@ -590,10 +574,7 @@ export type PaymentResponse = {
   fields: Record<string, string>;
 
   /** Копия объекта `sum` из платежного запроса */
-  sum: {
-    amount: number;
-    currency: Currency;
-  };
+  sum: MoneyAmount;
 
   transaction: {
     id: string;
@@ -612,8 +593,10 @@ export type PaymentResponse = {
 export type FormUrlOptions = {
   /** Сумма платежа в рублях */
   amount?: number;
+
   /** Комментарий. **Параметр используется только для `ID=99`** */
   comment?: string;
+
   /**
    * Формат совпадает с форматом параметра `fields.account` при оплате
    * соответствующих провайдеров: для провайдера `99` - номер кошелька
@@ -625,6 +608,7 @@ export type FormUrlOptions = {
    * соответствующее значение параметра `extra['accountType']`).
    */
   account?: string;
+
   /**
    * Признак неактивного поля формы. Пользователь не сможет менять
    * значение данного поля. Каждый параметр задает соответствующее
@@ -642,6 +626,7 @@ export type FormUrlOptions = {
    * Пример (неактивное поле суммы платежа): `blocked[0]=sum`
    */
   blocked?: ("account" | "comment" | "sum")[];
+
   /**
    * **Параметр используется только для ID=99999**. Значение определяет
    * перевод на QIWI кошелек по никнейму или по номеру кошелька. Если
@@ -653,4 +638,207 @@ export type FormUrlOptions = {
    * `nickname` - для перевода по никнейму.
    */
   accountType?: string;
+};
+
+export type CodeResponse = {
+  code: string;
+};
+
+export type TokenResponse = {
+  /** Токен с расширенным сроком действия */
+  access_token: string;
+
+  /** Тип токена */
+  token_type: "Bearer";
+
+  /** Кол-во секунд в формате строки: `"316224000"` */
+  expires_in: string;
+
+  /** Не используется */
+  refresh_token: string;
+};
+
+export type PrettyTokenResponse<C> = {
+  token: string;
+  expiry: number;
+  client: C;
+};
+
+/** Статус карты */
+export enum CardStatus {
+  /** Активна */
+  ACTIVE = "ACTIVE",
+
+  /** Отправлена в банк */
+  SENDED_TO_BANK = "SENDED_TO_BANK",
+
+  /** Отправлена владельцу */
+  SENDED_TO_USER = "SENDED_TO_USER",
+
+  /** Заблокированная */
+  BLOCKED = "BLOCKED",
+
+  /** Хз */
+  UNKNOWN = "UNKNOWN"
+}
+
+type ImageObject = {
+  /** URL изображения */
+  url: string;
+
+  /** Ширина изображения */
+  width: number;
+
+  /** Высота изображения */
+  height: number;
+
+  /** Размер изображения относительно минимального в наборе. Пример: `2x` */
+  ratio: string;
+};
+
+type KVObject = { name: string; value: string };
+
+export type CardResponse = {
+  /** Общая информация о карте */
+  qvx: {
+    /** ID карты */
+    id: number;
+
+    /** Маскированный номер карты (отображаются только последние 4 цифры). Пример: `****9078` */
+    maskedPan: string;
+
+    /** Текущий статус карты */
+    status: CardStatus;
+
+    /** Срок действия карты в формате: `2022-01-31T00:00:00+03:00` */
+    cardExpire: string;
+
+    /** Вид карты */
+    cardType: "VIRTUAL" | "PLASTIC";
+
+    /** [Название карты](https://developer.qiwi.com/ru/qiwi-wallet-personal/?http#qvc-rename) в интерфейсе сайта [qiwi.com](https://qiwi.com/) */
+    cardAlias: string;
+
+    cardLimit: null | {
+      value: number;
+      currencyCode: Currency;
+    };
+
+    /** Дата активации карты в формате: `2022-01-31T00:00:00+03:00` */
+    activated: string;
+
+    /** Дата высылки СМС с реквизитами в формате: `2022-01-31T00:00:00+03:00` */
+    smsResended: string;
+
+    /** Дата блокировки в формате: `2022-01-31T00:00:00+03:00` */
+    blockedDate: string;
+
+    /** Признак возможности разблокировать карту */
+    unblockAvailable: boolean;
+
+    /** ID транзакции заказа карты */
+    txnId: string;
+
+    /** Месяц окончания действия карты. Например: `01` */
+    cardExpireMonth: string;
+
+    /** Год окончания действия карты. Например: `2022` */
+    cardExpireYear: string;
+  };
+
+  /** Данные баланса карты */
+  balance: MoneyAmount | null;
+
+  /** Тарифы и банковские реквизиты карты */
+  info: {
+    /** [Тип карты](https://developer.qiwi.com/ru/qiwi-wallet-personal/?http#card-types) */
+    alias: "qvc-cpa" | "qvc-cpa-debit" | "qvp-gold";
+
+    /** Название карты */
+    name: string;
+
+    /**
+     * Тариф карты:
+     *
+     * `amount` - Стоимость обслуживания
+     * `currency` - Код валюты баланса (по ISO)
+     */
+    price: MoneyAmount;
+
+    /** Период обслуживания (по тарифу). Пример: `за год` */
+    period: string;
+
+    details: {
+      /** Краткое описание тарифа карты. Пример: `99 ₽, действует 1 год` */
+      info: string;
+
+      /** Описание карты */
+      description: string;
+
+      /** Изображения карты для лендинга с "примерными" данными */
+      images: ImageObject[];
+
+      /** Иконки карты */
+      imagesMin: ImageObject[];
+
+      /** Изображения карты без данных */
+      imagesDet: ImageObject[];
+
+      /** Список условий обслуживания карты */
+      tariffs: KVObject[];
+
+      /** Ссылка на описание тарифа */
+      tariffLink: string;
+
+      /** Ссылка на договор оферты на выпуск карты */
+      offerLink: string;
+
+      /** Список возможностей карты на русском */
+      features: string[];
+
+      /** Список пар "ключ-значение" с данными банковских реквизитов для пополнения карты */
+      requisites: KVObject[];
+    };
+
+    [key: string]: any;
+  };
+};
+
+export enum CardActionStatus {
+  OK = "OK",
+  FAIL = "FAIL",
+  CONFIRMATION_REQUIRED = "CONFIRMATION_REQUIRED",
+  CONFIRMATION_LIMIT_EXCEED = "CONFIRMATION_LIMIT_EXCEED"
+}
+
+export type CardUnblockResponse = {
+  status: CardActionStatus;
+  nextConfirmationRequest: null;
+  confirmationId: null;
+  operationId: null;
+};
+
+export type CardRequisitesResponse = {
+  status: CardActionStatus;
+
+  /** CVV карты */
+  cvv: string;
+
+  /** Полный номер карты */
+  pan: string;
+
+  /** Код ошибки */
+  errorCode: string;
+
+  [key: string]: any;
+};
+
+export type CardRenameResponse = {
+  status: CardActionStatus.OK | CardActionStatus.FAIL;
+
+  /** Текстовое описание ошибки */
+  error: string;
+
+  /** Код ошибки */
+  errorCode: string;
 };

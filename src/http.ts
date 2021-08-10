@@ -97,7 +97,7 @@ export class HttpAPI {
       }
 
       return responseBuffer;
-    } catch (error) {
+    } catch (error: any) {
       throw new DecodingError(error.message);
     }
   }

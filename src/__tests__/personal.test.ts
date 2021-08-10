@@ -82,7 +82,7 @@ describe("Personal API", () => {
 
     expect(response).toBeInstanceOf(Buffer);
     expect(
-      /** @see {@link https://github.com/sindresorhus/is-jpg/blob/master/index.js | Пакет is-jpeg} */
+      /** @see {@link https://github.com/sindresorhus/is-jpg/blob/master/index.js Пакет is-jpeg} */
       buffer.length > 3 &&
         buffer[0] === 255 &&
         buffer[1] === 216 &&
