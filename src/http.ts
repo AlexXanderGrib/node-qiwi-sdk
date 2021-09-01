@@ -1,5 +1,6 @@
 import fetch, { RequestInit } from "node-fetch";
-import querystring from "querystring";
+import AbortController from "abort-controller";
+import querystring from "query-string";
 import { ErrorWithCode, ExtendedError } from "./error";
 
 /**
@@ -71,13 +72,19 @@ export class HttpAPI {
         ? url
         : `${this.API_URL}/${url}`;
 
+    const abortController = new AbortController();
+    const timeout = setTimeout(() => abortController.abort(), this.API_TIMEOUT);
+
     const response = await fetch(absoluteUrl, {
       method,
       headers: { ...this.API_HEADERS, ...headers },
-      timeout: this.API_TIMEOUT,
       body,
-      agent: this.agent
+      agent: this.agent,
+      signal: abortController.signal
     });
+
+    // Чистим, чтобы Jest не кричал `Detected open handles`
+    clearTimeout(timeout);
 
     const contentType = response.headers.get("content-type")?.split(";")[0];
     const responseBuffer = await response.buffer();
