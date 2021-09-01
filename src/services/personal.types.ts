@@ -104,6 +104,7 @@ export enum Recipients {
   /**
    * Перевод на QIWI-Кошелёк по никнейму
    * @deprecated Переименовано в `QIWINickname`
+   * @see {@link QIWINickname}
    */
   // eslint-disable-next-line camelcase
   QIWI_Nickname = 99_999,
@@ -117,9 +118,21 @@ export enum Recipients {
   /**
    * Перевод на QIWI-Кошелёк по номеру виртуальной карты
    * @deprecated Переименовано в `QIWIVirtualCard`
+   * @see {@link QIWIVirtualCard}
    */
   // eslint-disable-next-line camelcase
-  QIWI_VirtualCard = 22_351
+  QIWI_VirtualCard = 22_351,
+
+  /**
+   * Перевод в Яндекс.Деньги
+   *
+   * @deprecated Сейчас называется `YooMoney`
+   * @see {@link YooMoney}
+   */
+  YandexMoney = 26_476,
+
+  /** Перевод в YooMoney (бывшие Яндекс.Деньги) */
+  YooMoney = 26_476
 }
 
 export type PersonProfile = {
@@ -1022,4 +1035,133 @@ export type CardRenameResponse = {
 
   /** Код ошибки */
   errorCode: string;
+};
+
+export type FreePayFields = {
+  /**
+   * Наименование банка получателя. Например: `ПАО "Сбербанк"`
+   */
+  name: string;
+
+  /**
+   * БИК банка получателя
+   */
+  to_bik: string;
+
+  /**
+   * БИК банка получателя. Почти всегда равен `to_bik`
+   */
+  extra_to_bik: string;
+
+  /**
+   * Город местонахождения получателя
+   */
+  city: string;
+
+  info: "Коммерческие организации";
+  is_commercial: "1";
+
+  /**
+   * Наименование организации. Например: `ООО "Технический Центр ДЕЛЬТА"`
+   */
+  to_name: string;
+
+  /**
+   * ИНН организации
+   */
+  to_inn: string;
+
+  /**
+   * КПП организации
+   */
+  to_kpp: string;
+
+  /**
+   * Признак уплаты НДС. Если вы оплачиваете квитанцию и в ней не
+   * указан НДС, то строка `НДС не облагается`. В ином случае,
+   * строка `В т.ч. НДС`.
+   */
+  nds: "НДС не облагается" | "В т.ч. НДС";
+
+  /**
+   * Назначение платежа
+   */
+  goal: string;
+
+  /**
+   * Признак срочного платежа (`0` - нет, `1` - да). Срочный
+   * платеж выполняется от 10 минут. Возможен по будням с 9:00
+   * до 20:30 по московскому времени.
+   *
+   * **Стоимость услуги — 25 рублей.**
+   */
+  urgent: "0" | "1";
+
+  /**
+   * Имя плательщика
+   */
+  from_name: string;
+
+  /**
+   * Отчество плательщика
+   */
+  from_name_p: string;
+
+  /**
+   * Фамилия плательщика
+   */
+  from_name_f: string;
+
+  requestProtocol: "qw1";
+  toServiceId: "1717";
+
+  /**
+   * Номер счета получателя
+   */
+  account: string;
+};
+
+/**
+ * @see [Документация по платежам](https://developer.qiwi.com/ru/qiwi-wallet-personal/#payments)
+ */
+export type Pay2Params = {
+  /**
+   * Ака ID в доках, номер провайдера(платёжной системы) у QIWI
+   *
+   * @see {@link Recipients}
+   * @default 99
+   */
+  provider?: number | Recipients;
+
+  /**
+   * Номер счёта в указанной платёжной системе (у `provider`'а)
+   * Если он не задан, но следует указывать номер телефона(киви)
+   * получателя.
+   *
+   * Записывается в `fields.account`, можно поставить `""`, если
+   * переопределяете в `fields`
+   */
+  account: string;
+
+  /**
+   * Сумма платежа в указанной валюте. Если валюта не указана, то
+   * в рублях. Советую округлять до 2ух знаков после ,
+   */
+  amount: number;
+
+  /**
+   * Валюта платежа
+   */
+  currency?: Currency;
+
+  /**
+   * Дополнительные параметры платежа. Обычно необходимо для
+   * [платежа по свободным реквизитам](https://developer.qiwi.com/ru/qiwi-wallet-personal/#freepay)
+   */
+  fields?: Partial<FreePayFields> & Record<string, string>;
+
+  /**
+   * Комментарий к платежу
+   */
+  comment?: string;
 };
