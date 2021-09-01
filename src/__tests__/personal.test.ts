@@ -34,14 +34,11 @@ describe("Personal API", () => {
 
   test("Can't send 1 million rubles to unknown wallet", async () => {
     try {
-      await qiwi.pay(
-        99,
-        "79123456789",
-        1e6, // 1 лям
-        Personal.Currency.RUB,
-        {},
-        "NodeJS QIWI SDK Test npmjs.com/package/qiwi-sdk"
-      );
+      await qiwi.pay2({
+        account: "79123456789",
+        amount: 1e6, // 1 лям
+        comment: "NodeJS QIWI SDK Test npmjs.com/package/qiwi-sdk"
+      });
     } catch (error) {
       expect(error).toBeInstanceOf(PersonalApiError);
     }
