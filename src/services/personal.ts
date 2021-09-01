@@ -373,7 +373,7 @@ export class Personal extends HttpAPI {
    * Типизирование это метода - очень больно и бессмысленно. Его
    * описание в документации занимает 6 страниц
    *
-   * {@link https://developer.qiwi.com/ru/qiwi-wallet-personal/#payments|Документация QIWI по методу оплаты}
+   * [Документация QIWI по методу оплаты](https://developer.qiwi.com/ru/qiwi-wallet-personal/#payments)
    *
    * @param {number | types.Recipients} provider Ака ID, в доках, номер провайдера у QIWI
    * @param {string} account Номер кошелька или карты или типа того
@@ -381,15 +381,18 @@ export class Personal extends HttpAPI {
    * @param {types.Currency=} currency Валюта платежа, по умолчанию = рубли
    * @param {Object=} fields Доп. поля, их невозможно типизировать, просто читайте доки
    * @param {string=} comment Комментарий к платежу, необязательный
+   *
+   * @deprecated Используйте {@link pay2}, так-как он более читаемый
+   * @return {Promise<types.PaymentResponse>}
    */
   @MapErrorsAsync(mapError)
   async pay(
-    provider: number | types.Recipients,
-    account: string,
-    amount: number,
-    currency: types.Currency = Personal.Currency.RUB,
-    fields: Record<string, string> = {},
-    comment = ""
+    provider: types.Pay2Params["provider"],
+    account: types.Pay2Params["account"],
+    amount: types.Pay2Params["amount"],
+    currency: types.Pay2Params["currency"] = Personal.Currency.RUB,
+    fields: types.Pay2Params["fields"] = {},
+    comment: types.Pay2Params["comment"] = ""
   ): Promise<types.PaymentResponse> {
     return await this.post(
       `sinap/api/v2/terms/${provider}/payments`,
@@ -411,6 +414,26 @@ export class Personal extends HttpAPI {
         ...(comment && { comment })
       })
     );
+  }
+
+  /**
+   * Более читаемая версия метода {@link pay}
+   *
+   * [Документация QIWI по методу оплаты](https://developer.qiwi.com/ru/qiwi-wallet-personal/#payments)
+   *
+   * @param {types.Pay2Params} params Параметры платежа
+   * @return {Promise<types.PaymentResponse>}
+   */
+  @MapErrorsAsync(mapError)
+  async pay2({
+    account,
+    amount,
+    provider = Personal.Recipients.QIWI,
+    comment = "",
+    currency = Personal.Currency.RUB,
+    fields = {}
+  }: types.Pay2Params): Promise<types.PaymentResponse> {
+    return await this.pay(provider, account, amount, currency, fields, comment);
   }
 
   /**
