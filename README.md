@@ -26,8 +26,12 @@ This document is primarily on Russian, because QIWI Bank (JSC) is Russian bank a
     - [Yarn:](#yarn)
   - [✏️ Примеры / Examples](#️-примеры--examples)
     - [🔎 Получение информации о владельце кошелька](#-получение-информации-о-владельце-кошелька)
+    - [**💸 Отправка платежа (TypeScript)**](#-отправка-платежа-typescript)
     - [🔑 Создание пары ключей для взаимодействия с P2P](#-создание-пары-ключей-для-взаимодействия-с-p2p)
-    - [🧱 Получение Лимитов (на TypeScript)](#-получение-лимитов-на-typescript)
+    - [🧱 Получение Лимитов (TypeScript)](#-получение-лимитов-typescript)
+  - [ℹ️ Доп. информация](#ℹ️-доп-информация)
+    - [🧑‍⚖️ Лицензия](#️-лицензия)
+    - [🙋 Поддержка](#-поддержка)
     - [Интересует приём и отправка P2P платежей по РФ на NodeJS?](#интересует-приём-и-отправка-p2p-платежей-по-рф-на-nodejs)
 
 ## 🍬 Почему именно эта библиотека?
@@ -70,6 +74,65 @@ qp.getPersonProfile().then(console.log);
 // => { contractInfo: {...}, authInfo: {...}, userInfo: {...} }
 ```
 
+### **💸 Отправка платежа (TypeScript)**
+
+**🇬🇧: `Sending a payment`**
+
+```typescript
+// Платёжка с выводом (почти) куда-угодно 101
+
+import { Personal, Recipients, Detector, Currency } from "qiwi-sdk";
+
+const qiwi = new Personal(process.env.QIWI_TOKEN);
+const detector = new Detector();
+
+type PayoutMethod = "qiwi" | "yoomoney" | "card" | "mobile";
+
+async function getProvider(
+  method: PayoutMethod,
+  account: string
+): Promise<Recipients | number> {
+  switch (method) {
+    // Киви и YooMoney одни, поэтому с ними всё просто
+    case "qiwi":
+      return Recipients.QIWI;
+
+    case "yoomoney":
+      return Recipients.YooMoney;
+
+    // А вот банков которые выпускают карты
+    // и моб. операторов куча, поэтому тут надо чекать
+    case "card":
+      return detector.getCardProvider(account);
+
+    case "mobile":
+      return detector.getPhoneProvider(account);
+  }
+}
+
+async function sendPayment(method: PayoutMethod, account: string, amount: number) {
+  const provider = await getProvider(method, account);
+  const commission = await qiwi.getCommission(provider, account, amount);
+
+  // Используем метод `pay2` вместо `pay` для лучшей читаемости
+  await qiwi.pay2({
+    // Пускай комиссию платит получатель
+    amount: amount - commission,
+    account,
+
+    // Указываем провайдера так-как переводим не только на КИВИ
+    provider,
+
+    // Указываем валюту (хотя можно этого не делать)
+    currency: Currency.RUB,
+    comment: "Hello world!"
+  });
+}
+
+// Донатим мне, чтобы я поддерживал библиотеку :)
+sendPayment("yoomoney", "410016348581848", 100);
+```
+
 ### 🔑 Создание пары ключей для взаимодействия с P2P
 
 **🇬🇧: `Creating key pair for P2P API`**
@@ -85,7 +148,7 @@ async function main() {
 
   const [pk, sk] = await qp.createP2PKeyPair("My super pair name");
 
-  // Да, они инвертированы в порядке,
+  // Да, они обратном в порядке,
   // так как PublicKey не всегда нужен
   const p2pc = new QIWI.P2P(sk, pk);
 
@@ -98,15 +161,16 @@ async function main() {
     comment: "Создание сайта"
   });
 
+  // Выводим ссылку чтобы отправить заказчику
   console.log(bill.payUrl);
 }
 
 main();
 ```
 
-### 🧱 Получение Лимитов (на TypeScript)
+### 🧱 Получение Лимитов (TypeScript)
 
-**🇬🇧: `Getting wallet's limits (on TypeScript)`**
+**🇬🇧: `Getting wallet's limits`**
 
 ```typescript
 import { Personal } from "qiwi-sdk";
@@ -124,6 +188,21 @@ async function main() {
   // => { type: "TURNOVER", currency: "RUB", max: 400000, spent: 0, rest: 400000, ... }
 }
 ```
+
+## ℹ️ Доп. информация 
+**🇬🇧: `Additional info`**
+
+### 🧑‍⚖️ Лицензия
+**🇬🇧: `License`**
+
+[**MIT**](./LICENSE)
+
+### 🙋 Поддержка
+**🇬🇧: `Support`**
+
+Библиотека - маленькая, я отвечаю быстро. Не стесняйтесь писать Issue, даже если кажется что они глупые. Если что, можете писать в 
+
+**Telegram: [@AlexXanderGrib](https://t.me/AlexXanderGrib)**
 
 ### Интересует приём и отправка P2P платежей по РФ на NodeJS?
 
