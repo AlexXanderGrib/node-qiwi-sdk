@@ -3348,11 +3348,6 @@
   dependencies:
     "queue-microtask" "^1.2.2"
 
-"runtypes@^6.3.2":
-  "integrity" "sha512-wQMHj5F4yxVIgCTtV+2QaDfeyCUiesHzgkBpUUhL1dZph2ekOcZcttJvk3pTdw/qBhbEdXvXKDHRm6wfoNke0w=="
-  "resolved" "https://registry.npmjs.org/runtypes/-/runtypes-6.3.2.tgz"
-  "version" "6.3.2"
-
 "safe-buffer@~5.1.1":
   "integrity" "sha512-Gd2UZBJDkXlY7GbJxfsE8/nvKkUEU1G38c1siN6QP6a9PT9MmHB8GnpscSmMJSoF8LOIrt8ud/wPtojys4G6+g=="
   "resolved" "https://registry.npmjs.org/safe-buffer/-/safe-buffer-5.1.2.tgz"

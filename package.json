@@ -1,14 +1,20 @@
 {
   "name": "qiwi-sdk",
-  "version": "1.7.1",
+  "version": "1.7.2",
   "description": "Typed, Promise based, QIWI API (P2P & Personal) client",
   "main": "dist/index.js",
   "type": "commonjs",
   "types": "dist/index.d.ts",
+  "typings": "dist/index.d.ts",
   "files": [
     "dist",
     "docs"
   ],
+  "directories": {
+    "doc": "./docs",
+    "lib": "./dist",
+    "test": "./src/__tests__"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AlexXanderGrib/node-qiwi-sdk.git"
@@ -40,15 +46,7 @@
     "qiwi personal",
     "qiwi p2p",
     "киви",
-    "promise",
-    "client",
-    "qiwi api",
-    "qiwi sdk",
-    "qiwi-api",
-    "qiwi-sdk",
-    "@qiwi/bill-payments-node-js-sdk",
-    "node-qiwi",
-    "node-qiwi-api"
+    "typed"
   ],
   "dependencies": {
     "abort-controller": "^3.0.0",
@@ -77,7 +75,6 @@
     "jest": "^27.1.0",
     "prettier": "^2.3.2",
     "rimraf": "^3.0.2",
-    "runtypes": "^6.3.2",
     "ts-jest": "^27.0.5",
     "ts-node": "^10.2.1",
     "typescript": "^4.4.2"
@@ -87,5 +84,9 @@
       "pre-commit": "npm run lint && npm run prettify",
       "pre-push": "npm test"
     }
+  },
+  "readme": "./README.md",
+  "engines": {
+    "node": ">10"
   }
 }
