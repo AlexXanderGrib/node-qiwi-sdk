@@ -1,0 +1,8 @@
+.gitignore
+*.sublime-workspace
+*.sublime-project
+*.code-workspace
+.vscode
+.idea
+.log
+.env
