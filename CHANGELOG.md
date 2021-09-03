@@ -1,19 +1,28 @@
-# Changelog
+# Список изменений
 
 ## 2.0
 
-Параметр `walletId` был перенесён в конец и стал необязательным, 
+Добавлен `CHANGELOG.md`
+
+### 2.0.1
+
+Починена возможная дырка в безопасности связанная с конкатенацией
+querystring в [personal.ts](./src/services/personal.ts)
+
+### 2.0.0
+
+Параметр `walletId` был перенесён в конец и стал необязательным,
 так какпри создании класса `Personal` можно указать номер кошелька
 или изменить его через свойство `walletId`
 
 ```javascript
+const { Personal } = require("qiwi-sdk");
 
-const { Personal } = require('qiwi-sdk');
-
-const qiwi = new Personal('token', '79123456789');
+const qiwi = new Personal("token", "79123456789");
 ```
 
 **Затронутые методы:**
+
 - `unblockCard()`
 - `blockCard()`
 - `setDefaultAccount()`

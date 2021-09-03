@@ -89,7 +89,11 @@ export class Personal extends HttpAPI {
   @MapErrorsAsync(mapError)
   async getPersonProfile(): Promise<types.PersonProfile> {
     return await this.get(
-      "person-profile/v1/profile/current?authInfoEnabled=true&contractInfoEnabled=true&userInfoEnabled=true"
+      `person-profile/v1/profile/current?${createQS({
+        authInfoEnabled: true,
+        contractInfoEnabled: true,
+        userInfoEnabled: true
+      })}`
     );
   }
 
@@ -139,9 +143,9 @@ export class Personal extends HttpAPI {
     limits: L,
     wallet = this.walletId
   ): Promise<types.LimitsResponse<L[number]>> {
-    const query = createQS({ types: limits });
-
-    return await this.get(`qw-limits/v1/persons/${wallet}/actual-limits?${query}`);
+    return await this.get(
+      `qw-limits/v1/persons/${wallet}/actual-limits?${createQS({ types: limits })}`
+    );
   }
 
   /**
@@ -168,9 +172,9 @@ export class Personal extends HttpAPI {
     parameters: types.GetPaymentHistoryParams,
     wallet = this.walletId
   ): Promise<types.GetTransactionsHistoryResponse> {
-    const query = createQS(parameters);
-
-    return await this.get(`payment-history/v2/persons/${wallet}/payments?${query}`);
+    return await this.get(
+      `payment-history/v2/persons/${wallet}/payments?${createQS(parameters)}`
+    );
   }
   /**
    * Данный запрос используется для получения сводной статистики
@@ -184,10 +188,8 @@ export class Personal extends HttpAPI {
     parameters: types.GetPaymentHistoryTotalParams,
     wallet = this.walletId
   ): Promise<types.GetPaymentHistoryTotalResponse> {
-    const query = createQS(parameters);
-
     return await this.get(
-      `payment-history/v2/persons/${wallet}/payments/total?${query}`
+      `payment-history/v2/persons/${wallet}/payments/total?${createQS(parameters)}`
     );
   }
   /**
@@ -203,7 +205,7 @@ export class Personal extends HttpAPI {
     type: types.TransactionType
   ): Promise<types.Transaction> {
     return await this.get(
-      `payment-history/v2/transactions/${transactionId}?type=${type}`
+      `payment-history/v2/transactions/${transactionId}?${createQS({ type })}`
     );
   }
 
@@ -220,7 +222,10 @@ export class Personal extends HttpAPI {
     format: types.ChequeFormat = Personal.ChequeFormat.JPEG
   ): Promise<Buffer> {
     return await this.get(
-      `payment-history/v1/transactions/${transactionId}/cheque/file?type=${type}&format=${format}`
+      `payment-history/v1/transactions/${transactionId}/cheque/file?${createQS({
+        type,
+        format
+      })}`
     );
   }
 
@@ -237,7 +242,9 @@ export class Personal extends HttpAPI {
     email: string
   ): Promise<""> {
     return await this.post(
-      `payment-history/v2/transactions/${transactionId}/cheque/send?type=${type}`,
+      `payment-history/v2/transactions/${transactionId}/cheque/send?${createQS({
+        type
+      })}`,
       {},
       JSON.stringify({ email })
     );
@@ -365,9 +372,7 @@ export class Personal extends HttpAPI {
 
     if (options.blocked) data.blocked = options.blocked;
 
-    const query = createQS(data);
-
-    return `https://qiwi.com/payment/form/${provider}?${query}`;
+    return `https://qiwi.com/payment/form/${provider}?${createQS(data)}`;
   }
 
   /**
