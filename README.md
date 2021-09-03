@@ -25,6 +25,7 @@ This document is primarily on Russian, because QIWI Bank (JSC) is Russian bank a
   - [📦 Установка / Installation](#-установка--installation)
     - [NPM:](#npm)
     - [Yarn:](#yarn)
+  - [⚠️ Миграция с 1.x](#️-миграция-с-1x)
   - [✏️ Примеры / Examples](#️-примеры--examples)
     - [🔎 Получение информации о владельце кошелька](#-получение-информации-о-владельце-кошелька)
     - [**💸 Отправка платежа (TypeScript)**](#-отправка-платежа-typescript)
@@ -59,6 +60,36 @@ npm i -S qiwi-sdk
 ```shell
 yarn add qiwi-sdk
 ```
+
+## ⚠️ Миграция с 1.x
+**🇬🇧: `Breaking change in following methods`**
+
+Параметр `walletId` был перенесён в конец и стал необязательным, 
+так какпри создании класса `Personal` можно указать номер кошелька
+или изменить его через свойство `walletId`
+
+```javascript
+
+const { Personal } = require('qiwi-sdk');
+
+const qiwi = new Personal('token', '79123456789');
+```
+
+**Затронутые методы:**
+- `unblockCard()`
+- `blockCard()`
+- `setDefaultAccount()`
+- `createAccount()`
+- `getAccountOffers()`
+- `getAccounts()`
+- `getPaymentHistoryTotal()`
+- `getPaymentHistory()`
+- `getRestrictions()`
+- `getLimits()`
+- `getIdentification()`
+- `setIdentification()`
+
+О менее крупных изменениях можно почитать в [CHANGELOG.md](./CHANGELOG.md)
 
 ## ✏️ Примеры / Examples
 
@@ -146,7 +177,6 @@ const qp = new QIWI.Personal(process.env.QIWI_TOKEN);
 
 async function main() {
   const profile = await qp.getPersonProfile();
-  const wallet = profile.authInfo.personId;
 
   const [pk, sk] = await qp.createP2PKeyPair("My super pair name");
 
@@ -177,10 +207,11 @@ main();
 ```typescript
 import { Personal } from "qiwi-sdk";
 
-const qp = new Personal(process.env.QIWI_TOKEN);
+const qp = new Personal(process.env.QIWI_TOKEN, process.env.QIWI_WALLET);
 
 async function main() {
-  const { limits } = await qp.getLimits(process.env.QIWI_WALLET as string, [
+  // 2.0
+  const { limits } = await qp.getLimits([
     Personal.LimitType.TURNOVER
   ]);
 

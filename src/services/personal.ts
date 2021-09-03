@@ -72,10 +72,13 @@ export class Personal extends HttpAPI {
 
   /**
    *
-   * @param {string} API_TOKEN Токен полученный на
-   * {@link https://qiwi.com/api|Странице QIWI API}
+   * @param {string} API_TOKEN Токен полученный на [Странице QIWI API](https://qiwi.com/api)
+   * @param {StringOrNumber} walletId Номер кошелька
    */
-  constructor(public readonly API_TOKEN: string) {
+  constructor(
+    public readonly API_TOKEN: string,
+    public walletId: StringOrNumber = ""
+  ) {
     super();
   }
 
@@ -94,13 +97,13 @@ export class Personal extends HttpAPI {
    * Данный запрос позволяет отправить данные для идентификации
    * вашего QIWI кошелька.
    *
-   * @param {StringOrNumber} wallet
    * @param {types.IdentificationBase} data
+   * @param {StringOrNumber} wallet
    */
   @MapErrorsAsync(mapError)
   async setIdentification(
-    wallet: StringOrNumber,
-    data: types.IdentificationBase
+    data: types.IdentificationBase,
+    wallet = this.walletId
   ): Promise<types.IdentificationResponse> {
     return await this.post(
       `identification/v1/persons/${wallet}/identification`,
@@ -117,7 +120,7 @@ export class Personal extends HttpAPI {
    */
   @MapErrorsAsync(mapError)
   async getIdentification(
-    wallet: StringOrNumber
+    wallet = this.walletId
   ): Promise<types.IdentificationResponse> {
     return await this.get(`identification/v1/persons/${wallet}/identification`);
   }
@@ -128,13 +131,13 @@ export class Personal extends HttpAPI {
    * определенных операций.
    *
    * @template L
-   * @param {StringOrNumber} wallet
    * @param {L} limits
+   * @param {StringOrNumber} wallet
    */
   @MapErrorsAsync(mapError)
   async getLimits<L extends types.LimitType[] = types.LimitType[]>(
-    wallet: StringOrNumber,
-    limits: L
+    limits: L,
+    wallet = this.walletId
   ): Promise<types.LimitsResponse<L[number]>> {
     const query = createQS({ types: limits });
 
@@ -148,7 +151,7 @@ export class Personal extends HttpAPI {
    * @param {StringOrNumber} wallet
    */
   @MapErrorsAsync(mapError)
-  async getRestrictions(wallet: StringOrNumber): Promise<types.Restrictions> {
+  async getRestrictions(wallet = this.walletId): Promise<types.Restrictions> {
     return await this.get(`person-profile/v1/persons/${wallet}/status/restrictions`);
   }
 
@@ -157,13 +160,13 @@ export class Personal extends HttpAPI {
    * Можно использовать фильтр по количеству, ID и дате
    * (интервалу дат) транзакций.
    *
-   * @param {StringOrNumber} wallet Номер кошелька
    * @param {types.GetPaymentHistoryParams} parameters Тело запроса
+   * @param {StringOrNumber} wallet Номер кошелька
    */
   @MapErrorsAsync(mapError)
   async getPaymentHistory(
-    wallet: StringOrNumber,
-    parameters: types.GetPaymentHistoryParams
+    parameters: types.GetPaymentHistoryParams,
+    wallet = this.walletId
   ): Promise<types.GetTransactionsHistoryResponse> {
     const query = createQS(parameters);
 
@@ -173,13 +176,13 @@ export class Personal extends HttpAPI {
    * Данный запрос используется для получения сводной статистики
    * по суммам платежей за заданный период.
    *
-   * @param {StringOrNumber} wallet
    * @param {types.GetPaymentHistoryTotalParams} parameters
+   * @param {StringOrNumber} wallet
    */
   @MapErrorsAsync(mapError)
   async getPaymentHistoryTotal(
-    wallet: StringOrNumber,
-    parameters: types.GetPaymentHistoryTotalParams
+    parameters: types.GetPaymentHistoryTotalParams,
+    wallet = this.walletId
   ): Promise<types.GetPaymentHistoryTotalResponse> {
     const query = createQS(parameters);
 
@@ -248,7 +251,7 @@ export class Personal extends HttpAPI {
    */
   @MapErrorsAsync(mapError)
   async getAccounts(
-    wallet: StringOrNumber
+    wallet = this.walletId
   ): Promise<types.GetAccountsResponse["accounts"]> {
     const { accounts } = await this.get(
       `funding-sources/v2/persons/${wallet}/accounts`
@@ -265,7 +268,7 @@ export class Personal extends HttpAPI {
    */
   @MapErrorsAsync(mapError)
   async getAccountOffers(
-    wallet: StringOrNumber
+    wallet = this.walletId
   ): Promise<types.GetAccountOffersResponse> {
     return await this.get(`funding-sources/v2/persons/${wallet}/accounts/offer`);
   }
@@ -273,11 +276,11 @@ export class Personal extends HttpAPI {
   /**
    * Создаёт новый счёт по параметру `alias`
    * Успешный ответ возвращает пустую строку
-   * @param {StringOrNumber} wallet Номер кошелька
    * @param {string} alias Псевдоним нового счета (см. {@link https://developer.qiwi.com/ru/qiwi-wallet-personal/?http#funding_offer|запрос доступных счетов})
+   * @param {StringOrNumber} wallet Номер кошелька
    */
   @MapErrorsAsync(mapError)
-  async createAccount(wallet: StringOrNumber, alias: string): Promise<""> {
+  async createAccount(alias: string, wallet = this.walletId): Promise<""> {
     return await this.post(
       `funding-sources/v2/persons/${wallet}/accounts`,
       {},
@@ -288,11 +291,11 @@ export class Personal extends HttpAPI {
   /**
    * Устанавливает счёт по умолчанию
    * Успешный ответ возвращает пустую строку
-   * @param {StringOrNumber} wallet Номер кошелька
    * @param {string} alias Псевдоним счета (см. {@link https://developer.qiwi.com/ru/qiwi-wallet-personal/?http#funding_offer|запрос доступных счетов})
+   * @param {StringOrNumber} wallet Номер кошелька
    */
   @MapErrorsAsync(mapError)
-  async setDefaultAccount(wallet: StringOrNumber, alias: string): Promise<""> {
+  async setDefaultAccount(alias: string, wallet = this.walletId): Promise<""> {
     return await this.patch(
       `funding-sources/v2/persons/${wallet}/accounts/${alias}`,
       {},
@@ -517,24 +520,25 @@ export class Personal extends HttpAPI {
   /**
    * Блокирует карту
    *
-   * @param {StringOrNumber} wallet
    * @param {StringOrNumber} cardId
-   * @return {*}
+   * @param {StringOrNumber} wallet
+
+   * @return {Promise<*>}
    */
-  blockCard(wallet: StringOrNumber, cardId: StringOrNumber): Promise<any> {
+  blockCard(cardId: StringOrNumber, wallet = this.walletId): Promise<any> {
     return this.put(`cards/v2/persons/${wallet}/cards/${cardId}/block`);
   }
 
   /**
    * Разблокирует карту
    *
-   * @param {StringOrNumber} wallet
    * @param {StringOrNumber} cardId
+   * @param {StringOrNumber} wallet
    * @return {Promise<types.CardUnblockResponse>}
    */
   unblockCard(
-    wallet: StringOrNumber,
-    cardId: StringOrNumber
+    cardId: StringOrNumber,
+    wallet = this.walletId
   ): Promise<types.CardUnblockResponse> {
     return this.put(`cards/v2/persons/${wallet}/cards/${cardId}/unblock`);
   }

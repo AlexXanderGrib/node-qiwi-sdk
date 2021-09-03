@@ -7,7 +7,10 @@ jest.setTimeout(30_000);
 config();
 
 describe("Personal API", () => {
-  const qiwi = new Personal(process.env.QIWI_TOKEN as string);
+  const qiwi = new Personal(
+    process.env.QIWI_TOKEN as string,
+    process.env.QIWI_WALLET as string
+  );
 
   test("Can be initialized", () => expect(qiwi).toBeTruthy());
 
@@ -20,9 +23,7 @@ describe("Personal API", () => {
   });
 
   test("Can get personal limits", async () => {
-    const { limits } = await qiwi.getLimits(process.env.QIWI_WALLET as string, [
-      Personal.LimitType.TURNOVER
-    ]);
+    const { limits } = await qiwi.getLimits([Personal.LimitType.TURNOVER]);
 
     const [limit] = limits.RU;
 
@@ -45,18 +46,11 @@ describe("Personal API", () => {
   });
 
   test("Get Cheque methods return valid image", async () => {
-    const {
-      contractInfo: { contractId }
-    } = await qiwi.getPersonProfile();
-
     const transactionType = Personal.TransactionType.OUT;
-    const { data: transactions } = await qiwi.getPaymentHistory(
-      contractId.toString(),
-      {
-        rows: 50,
-        operation: transactionType
-      }
-    );
+    const { data: transactions } = await qiwi.getPaymentHistory({
+      rows: 50,
+      operation: transactionType
+    });
 
     const transaction = transactions.find(
       (txn) =>
