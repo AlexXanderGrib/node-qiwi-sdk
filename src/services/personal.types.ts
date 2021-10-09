@@ -827,6 +827,8 @@ export type FormUrlOptions = {
    * `nickname` - для перевода по никнейму.
    */
   accountType?: string;
+
+  custom?: Record<string, unknown>;
 };
 
 export type CodeResponse = {

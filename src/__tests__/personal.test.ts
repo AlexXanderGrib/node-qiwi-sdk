@@ -1,3 +1,4 @@
+/* eslint-disable unicorn/consistent-function-scoping */
 import { config } from "dotenv";
 import { Personal } from "..";
 import { PersonalApiError } from "../services/personal";
@@ -79,5 +80,23 @@ describe("Personal API", () => {
         buffer[1] === 216 &&
         buffer[2] === 255
     ).toBeTruthy();
+  });
+
+  test("Payment form URL generation", () => {
+    /**
+     *
+     * @param {number} amount
+     * @param {string[]} substrings
+     */
+    function check(amount: number, substrings: string[]) {
+      const url = qiwi.createFormUrl(Personal.Recipients.QIWI, { amount });
+
+      for (const substring of substrings) {
+        expect(url).toContain(substring);
+      }
+    }
+
+    check(1.01, ["amountFraction=1"]);
+    check(1.1, ["amountFraction=10"]);
   });
 });

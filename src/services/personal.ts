@@ -356,18 +356,21 @@ export class Personal extends HttpAPI {
    * @return {string}
    */
   @MapErrors(mapError)
-  createFormUrl(provider: number, options: types.FormUrlOptions): string {
+  createFormUrl(
+    provider: number | types.Recipients,
+    options: types.FormUrlOptions
+  ): string {
     const data = {
       currency: Personal.Currency.RUB
     } as any;
 
     if (options.amount) {
       data.amountInteger = Math.trunc(options.amount);
-      data.amountFraction = Math.round(options.amount - data.amountInteger) * 10;
+      data.amountFraction = Math.round((options.amount - data.amountInteger) * 100);
     }
 
     if (options.comment) data["extra['comment']"] = options.comment;
-    if (options.account) data["extra['account']"] = options.account;
+    if (options.account) data["extra['account']"] = options.account ?? this.walletId;
     if (options.accountType) data["extra['accountType']"] = options.accountType;
 
     if (options.blocked) data.blocked = options.blocked;
@@ -507,7 +510,7 @@ export class Personal extends HttpAPI {
       );
 
     return {
-      token: token,
+      token,
       expiry: Number.parseInt(expiry, 10),
       client: new Personal(token)
     };
