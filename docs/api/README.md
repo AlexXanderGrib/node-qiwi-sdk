@@ -1,3 +1,5 @@
+qiwi-sdk / [Exports](modules.md)
+
 # 🥝 NodeJS QIWI SDK
 
 [![codecov](https://codecov.io/gh/AlexXanderGrib/node-qiwi-sdk/branch/main/graph/badge.svg)](https://codecov.io/gh/AlexXanderGrib/node-qiwi-sdk)
@@ -25,20 +27,17 @@ This document is primarily on Russian, because QIWI Bank (JSC) is Russian bank a
   - [📦 Установка / Installation](#-установка--installation)
     - [NPM:](#npm)
     - [Yarn:](#yarn)
-  - [👉 👨‍💻 Документация по методам / API Reference 👈](#--документация-по-методам--api-reference-)
   - [⚠️ Миграция с 1.x](#️-миграция-с-1x)
   - [✏️ Примеры / Examples](#️-примеры--examples)
     - [🔎 Получение информации о владельце кошелька](#-получение-информации-о-владельце-кошелька)
     - [**💸 Отправка платежа (TypeScript)**](#-отправка-платежа-typescript)
     - [🔑 Создание пары ключей для взаимодействия с P2P](#-создание-пары-ключей-для-взаимодействия-с-p2p)
     - [🧱 Получение Лимитов (TypeScript)](#-получение-лимитов-typescript)
-  - [👉 👨‍💻 Документация по методам / API Reference 👈](#--документация-по-методам--api-reference--1)
   - [ℹ️ Доп. информация](#ℹ️-доп-информация)
     - [🧑‍⚖️ Лицензия](#️-лицензия)
     - [❤️ Контрибьютинг](#️-контрибьютинг)
     - [🙋 Поддержка](#-поддержка)
     - [Интересует приём и отправка P2P платежей по РФ на NodeJS?](#интересует-приём-и-отправка-p2p-платежей-по-рф-на-nodejs)
-  - [👉 👨‍💻 Документация по методам / API Reference 👈](#--документация-по-методам--api-reference--2)
 
 ## 🍬 Почему именно эта библиотека?
 
@@ -63,10 +62,6 @@ npm i -S qiwi-sdk
 ```shell
 yarn add qiwi-sdk
 ```
-
-
-## 👉 [👨‍💻 Документация по методам / API Reference](./docs/api/modules.md) 👈
-
 
 ## ⚠️ Миграция с 1.x
 **🇬🇧: `Breaking change in following methods`**
@@ -229,8 +224,6 @@ async function main() {
 }
 ```
 
-## 👉 [👨‍💻 Документация по методам / API Reference](./docs/api/modules.md) 👈
-
 ## ℹ️ Доп. информация
 
 **🇬🇧: `Additional info`**
@@ -265,5 +258,3 @@ async function main() {
 У нас есть точно такое-же типизированное SDK для YooMoney 👉 [**github.com/AlexXanderGrib/yoomoney-sdk**](https://github.com/AlexXanderGrib/yoomoney-sdk)
 
 **🇬🇧: `Have interest in well-done SDK for YooMoney (formerly Yandex.Money)? Check out my other lib`**
-
-## 👉 [👨‍💻 Документация по методам / API Reference](./docs/api/modules.md) 👈

@@ -450,7 +450,7 @@ export class Personal extends HttpAPI {
    * @param {string} name Название связки ключей
    * @param {string=} server URL сервера для отправки уведомлений
    *
-   * @return {[string, string]} Массив, где - [0=Публичный ключ, 1=Секретный ключ]
+   * @return {string[]} Массив, где - [0=Публичный ключ, 1=Секретный ключ]
    *
    * @example
    *
