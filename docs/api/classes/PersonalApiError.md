@@ -54,7 +54,7 @@ ExtendedError.constructor
 
 #### Defined in
 
-[src/services/personal.ts:24](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/17d13cd/src/services/personal.ts#L24)
+[src/services/personal.ts:24](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/3eb2fbd/src/services/personal.ts#L24)
 
 ## Properties
 
@@ -84,7 +84,7 @@ ExtendedError.name
 
 #### Defined in
 
-[src/error.ts:8](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/17d13cd/src/error.ts#L8)
+[src/error.ts:8](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/3eb2fbd/src/error.ts#L8)
 
 ___
 
@@ -157,7 +157,7 @@ node_modules/@types/node/globals.d.ts:13
 
 #### Defined in
 
-[src/error.ts:18](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/17d13cd/src/error.ts#L18)
+[src/error.ts:18](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/3eb2fbd/src/error.ts#L18)
 
 ## Methods
 
@@ -175,7 +175,7 @@ ExtendedError.toJSON
 
 #### Defined in
 
-[src/error.ts:10](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/17d13cd/src/error.ts#L10)
+[src/error.ts:10](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/3eb2fbd/src/error.ts#L10)
 
 ___
 
