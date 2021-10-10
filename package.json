@@ -1,6 +1,6 @@
 {
   "name": "qiwi-sdk",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Typed QIWI (Bank) SDK",
   "main": "dist/index.js",
   "type": "commonjs",
@@ -9,14 +9,17 @@
   "files": [
     "dist",
     "docs",
+    "examples",
     "README.md",
+    "README.ru.md",
     "CONTRIBUTING.md",
     "CHANGELOG.md"
   ],
   "directories": {
     "doc": "./docs",
     "lib": "./dist",
-    "test": "./src/__tests__"
+    "test": "./src/__tests__",
+    "example": "./examples"
   },
   "repository": {
     "type": "git",
