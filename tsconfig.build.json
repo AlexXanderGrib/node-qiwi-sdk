@@ -2,6 +2,7 @@
   "extends": "./tsconfig.json",
   "exclude": [
     "src/__tests__",
-    "dist"
+    "dist",
+    "examples"
   ]
 }
