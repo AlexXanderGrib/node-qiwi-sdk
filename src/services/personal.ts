@@ -361,7 +361,8 @@ export class Personal extends HttpAPI {
     options: types.FormUrlOptions
   ): string {
     const data = {
-      currency: Personal.Currency.RUB
+      currency: Personal.Currency.RUB,
+      ...(options.custom ?? {})
     } as any;
 
     if (options.amount) {
@@ -369,8 +370,11 @@ export class Personal extends HttpAPI {
       data.amountFraction = Math.round((options.amount - data.amountInteger) * 100);
     }
 
+    const defaultAccount = provider === 99 ? this.walletId : undefined;
+
     if (options.comment) data["extra['comment']"] = options.comment;
-    if (options.account) data["extra['account']"] = options.account ?? this.walletId;
+    if (options.account)
+      data["extra['account']"] = options.account ?? defaultAccount;
     if (options.accountType) data["extra['accountType']"] = options.accountType;
 
     if (options.blocked) data.blocked = options.blocked;
