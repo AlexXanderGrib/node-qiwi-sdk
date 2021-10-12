@@ -9,6 +9,7 @@ import { USER_AGENT } from "../identity";
 import type * as types from "./p2p.types";
 import { BillCurrency, BillStatus } from "./p2p.types";
 import { AnyResponse } from "./shared.types";
+import { RequestHandler } from "express";
 
 /**
  * Ошибка, которую выбрасывает P2P API в случае неправильного
@@ -46,6 +47,30 @@ function mapErrors(error: any) {
   }
 
   return error;
+}
+
+/**
+ * @template {CallableFunction} T
+ *
+ * @param {T} function_
+ * @return {T}
+ */
+function promise<T extends (...parameters: any) => any>(function_: T) {
+  const wrapper = (...parameters: any[]): any => {
+    try {
+      const result = function_(...parameters);
+
+      if (result instanceof Promise) return result;
+
+      return Promise.resolve(result);
+    } catch (error) {
+      return Promise.reject(error);
+    }
+  };
+
+  return wrapper as (
+    ...arguments_: Parameters<T>
+  ) => ReturnType<T> extends Promise<any> ? ReturnType<T> : Promise<ReturnType<T>>;
 }
 
 /**
@@ -199,6 +224,90 @@ export class P2P extends HttpAPI {
     const hash = createHmac("sha256", this.secretKey).update(data).digest("hex");
 
     return signature === hash;
+  }
+
+  /**
+   * `[Экспериментально]` Упрощает интеграцию с `express`
+   *
+   * ## Это middleware кидает ошибки, позаботьтесь об их обработке
+   *
+   * @param {Object} [options={}] Параметры обработки запроса
+   * @param {boolean} [options.memo=true] Флаг для включения/отключения пропуска повторяющихся запросов, если один из них был успешно обработан
+   *
+   * @param {RequestHandler<Record<string, string>, any, types.BillStatusData>} actualHandler
+   *
+   * @return {RequestHandler}
+   *
+   * ##### Пример:
+   * **В начале файла**
+   * ```js
+   * const p2p = new QIWI.P2P(process.env.QIWI_PRIVATE_KEY);
+   *
+   * // Повторяю
+   * // Это middleware кидает ошибки, позаботьтесь об их обработке
+   * app.use(errorHandling())
+   * ```
+   * *`Вариант 1 - Классический`*
+   *
+   * ```js
+   * app.post('/webhook/qiwi', p2p.notificationMiddleware(), (req, res) => {
+   *  req.body // Это `BillStatusData`
+   * })
+   * ```
+   *
+   * *`Вариант 2 - Если нужны подсказки типов`*
+   *
+   * ```js
+   * app.post('/webhook/qiwi', p2p.notificationMiddleware({}, (req, res) => {
+   *  req.body // Это `BillStatusData`
+   * }))
+   * ```
+   */
+  public notificationMiddleware(
+    options: { memo?: boolean } = {},
+    actualHandler: RequestHandler<
+      Record<string, string>,
+      any,
+      types.BillStatusData
+    > = (_request, _response, next) => next()
+  ): RequestHandler {
+    const calls = new Set<string>();
+    const { memo = true } = options;
+
+    return async (request, response, next) => {
+      let notification: any = {};
+
+      if (!request.body) {
+        const text = await new Promise<string>((resolve, reject) => {
+          let accumulated = "";
+
+          request.on("error", (error) => reject(error));
+          request.on("data", (data) => (accumulated += String(data)));
+          request.on("end", () => resolve(accumulated));
+        });
+
+        notification = JSON.parse(text) as any;
+      }
+
+      if (typeof request.body === "object") {
+        notification = request.body;
+      }
+
+      const hash = request.headers["x-api-signature-sha256"] as string;
+
+      if (memo && calls.has(hash)) return;
+
+      if (this.checkNotificationSignature(hash, notification.bill)) {
+        throw new Error("Notification signature mismatch");
+      }
+
+      request.body = notification.bill;
+
+      if (!memo) return actualHandler(request, response, next);
+      await promise(actualHandler)(request, response, next);
+
+      calls.add(hash);
+    };
   }
 
   /**

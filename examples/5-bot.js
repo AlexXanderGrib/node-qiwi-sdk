@@ -1,5 +1,4 @@
 // const QIWI = require('qiwi-sdk');
-
 const { Personal } = require("..");
 const { Telegraf } = require("telegraf");
 const { promisify } = require("util");
