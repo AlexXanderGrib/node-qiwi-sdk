@@ -1,6 +1,6 @@
 # 🥝 NodeJS QIWI SDK
 
-**Язык: (*🇷🇺 Русский* / [🇬🇧 English](./README.en.md))**
+**Язык: (_🇷🇺 Русский_ / [🇬🇧 English](./README.en.md))**
 
 [![codecov](https://codecov.io/gh/AlexXanderGrib/node-qiwi-sdk/branch/main/graph/badge.svg)](https://codecov.io/gh/AlexXanderGrib/node-qiwi-sdk)
 [![license MIT](https://img.shields.io/npm/l/qiwi-sdk?style=flat-square)](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/main/LICENSE)
@@ -20,18 +20,21 @@
 
 ## 📦 Установка
 
+**Используя `NPM`**
+
 ```shell
-# Через NPM
 npm i -S qiwi-sdk
 ```
 
+**Используя `Yarn`**
+
 ```shell
-# Через Yarn
 yarn add qiwi-sdk
 ```
 
+**Используя `pnpm`**
+
 ```shell
-# Через pnpm
 pnpm add qiwi-sdk
 ```
 
@@ -51,7 +54,7 @@ pnpm add qiwi-sdk
 
 ## 🙋 Поддержка
 
-Вы можете написать `Issue`, а если я долго не отвечаю пишите в 
+Вы можете написать `Issue`, а если я долго не отвечаю пишите в
 
 **Telegram: [@AlexXanderGrib](https://t.me/AlexXanderGrib)**
 

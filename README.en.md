@@ -21,18 +21,21 @@
 
 ## 📦 Installation
 
+**Using `NPM`**
+
 ```shell
-# Using NPM
 npm i -S qiwi-sdk
 ```
 
+**Using `Yarn`**
+
 ```shell
-# Using Yarn
 yarn add qiwi-sdk
 ```
 
+**Using `pnpm`**
+
 ```shell
-# Using pnpm
 pnpm add qiwi-sdk
 ```
 
