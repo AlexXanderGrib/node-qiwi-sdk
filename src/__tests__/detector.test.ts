@@ -1,4 +1,4 @@
-import { Detector } from "../services/detector";
+import { Detector, DetectorError } from "../services/detector";
 
 describe("Detector", () => {
   const detect = new Detector();
@@ -17,5 +17,11 @@ describe("Detector", () => {
 
     // Переводы VISA по РУ - 1963
     expect(providerId).toBe(1963);
+  });
+
+  test("Invalid", () => {
+    const promise = detect.getPhoneProvider("34985");
+
+    expect(promise).rejects.toThrow(DetectorError);
   });
 });

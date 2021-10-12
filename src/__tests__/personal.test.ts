@@ -98,5 +98,21 @@ describe("Personal API", () => {
 
     check(1.01, ["amountFraction=1"]);
     check(1.1, ["amountFraction=10"]);
+
+    const url = qiwi.createFormUrl(Personal.Recipients.QIWI, {
+      blocked: ["account", "sum"],
+      comment: "1000 - 7"
+    });
+
+    expect(url).toContain(`extra%5B%27account%27%5D=${qiwi.walletId}`);
+    expect(url).toContain(`blocked[0]=account`);
+    expect(url).toContain(`blocked[1]=sum`);
+
+    const url2 = qiwi.createFormUrl(Personal.Recipients.QIWINickname, {
+      custom: { a: "b" }
+    });
+
+    expect(url2).toContain("a=b");
+    expect(url2).not.toContain(`extra%5B%27account%27%5D=${qiwi.walletId}`);
   });
 });

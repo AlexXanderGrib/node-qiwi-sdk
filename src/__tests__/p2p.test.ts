@@ -1,3 +1,4 @@
+import { createHmac } from "crypto";
 import { config } from "dotenv";
 import { v4 as uuid } from "uuid";
 import { P2P } from "..";
@@ -8,7 +9,10 @@ jest.setTimeout(30_000);
 config();
 
 describe("P2P", () => {
-  const qiwi = new P2P(process.env.QIWI_PK as string);
+  const qiwi = new P2P(
+    process.env.QIWI_PK as string,
+    process.env.QIWI_PUBK as string
+  );
 
   const billId = uuid();
   const amount = {
@@ -37,6 +41,18 @@ describe("P2P", () => {
     expect(response?.status?.value).toBe(P2P.BillStatus.WAITING);
     expect(response?.billId).toBe(billId);
     expect(response?.amount?.currency).toStrictEqual(amount.currency);
+
+    const hash = createHmac("sha256", qiwi.secretKey).update(
+      [
+        response.amount.currency,
+        response.amount.value,
+        response.billId,
+        response.siteId,
+        response.status.value
+      ].join("|")
+    );
+
+    expect(qiwi.checkNotificationSignature(hash.digest("hex"), response)).toBe(true);
   });
 
   test("Can get bill status", async () => {
@@ -73,5 +89,15 @@ describe("P2P", () => {
       expect(error).toBeInstanceOf(P2PPaymentError);
       expect(error.message).toContain("Validation error");
     }
+  });
+
+  test("Bill form url", () => {
+    const url = qiwi.createBillFormUrl({
+      customFields: { a: "b" },
+      amount: "100.019"
+    });
+
+    expect(url).toContain(`${encodeURIComponent("customFields[a]")}=b`);
+    expect(url).toContain("amount=100.02");
   });
 });

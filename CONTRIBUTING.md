@@ -37,12 +37,14 @@ npm i
 QIWI_TOKEN=<TOKEN>
 QIWI_WALLET=<PHONE>
 QIWI_PK=<KEY>
+QIWI_PUBK=<PUB_KEY>
 ```
 
 2. Меняем:
   1. `<TOKEN>` на ваш токен киви, полученный на [официальном сайте](https://qiwi.com/api) (должен быть со всеми правами)
   2. `<PHONE>` на номер телефона, на который зарегистрирован кошелёк (в формате `79123456789`)
   3. `<KEY>` на секретный ключ, полученный на сайте [QIWI P2P API](https://qiwi.com/p2p-admin/transfers/api)
+  4. `<PUB_KEY>` на публичный ключ
 3. Запускаем 
 ```
 npm test

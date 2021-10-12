@@ -150,7 +150,7 @@ export class P2P extends HttpAPI {
   private _normalizeAmount(amount: string | number): string {
     if (typeof amount === "number") return amount.toFixed(2);
 
-    return amount;
+    return this._normalizeAmount(Number.parseFloat(amount));
   }
 
   /**
@@ -323,9 +323,18 @@ export class P2P extends HttpAPI {
   ): string {
     const options: types.BillFormParams = {
       ...parameters,
+      amount: this._normalizeAmount(parameters.amount),
       billId,
-      publicKey: this.publicKey
+      publicKey: this.publicKey,
+      ...Object.fromEntries(
+        Object.entries(parameters.customFields ?? {}).map(([key, value]) => [
+          `customFields[${key}]`,
+          value
+        ])
+      )
     };
+
+    delete options.customFields;
 
     return `https://oplata.qiwi.com/create?${createQS(options)}`;
   }

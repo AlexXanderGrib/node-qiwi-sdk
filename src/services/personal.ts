@@ -370,11 +370,11 @@ export class Personal extends HttpAPI {
       data.amountFraction = Math.round((options.amount - data.amountInteger) * 100);
     }
 
-    const defaultAccount = provider === 99 ? this.walletId : undefined;
+    const account = options.account || (provider === 99 ? this.walletId : undefined);
 
     if (options.comment) data["extra['comment']"] = options.comment;
-    if (options.account)
-      data["extra['account']"] = options.account ?? defaultAccount;
+    if (account) data["extra['account']"] = account;
+
     if (options.accountType) data["extra['accountType']"] = options.accountType;
 
     if (options.blocked) data.blocked = options.blocked;
@@ -516,7 +516,7 @@ export class Personal extends HttpAPI {
     return {
       token,
       expiry: Number.parseInt(expiry, 10),
-      client: new Personal(token)
+      client: new Personal(token, this.walletId)
     };
   }
 
