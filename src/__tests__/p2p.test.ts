@@ -1,8 +1,11 @@
 import { createHmac } from "crypto";
 import { config } from "dotenv";
+import { Application, ErrorRequestHandler } from "express";
+import fetch from "node-fetch";
 import { v4 as uuid } from "uuid";
-import { P2P } from "..";
+import { BillCurrency, BillStatusData, P2P } from "..";
 import { P2PPaymentError } from "../services/p2p";
+import { createMockServer, MockServer } from "./server";
 
 jest.setTimeout(30_000);
 
@@ -99,5 +102,123 @@ describe("P2P", () => {
 
     expect(url).toContain(`${encodeURIComponent("customFields[a]")}=b`);
     expect(url).toContain("amount=100.02");
+  });
+
+  describe("Middleware", () => {
+    const mock = jest.fn();
+    let bill1: BillStatusData;
+    let bill2: BillStatusData;
+
+    let server: MockServer;
+    let app: Application;
+    let url = "";
+
+    beforeAll(async () => {
+      server = await createMockServer();
+
+      app = server.app;
+      url = server.url;
+
+      app.post(
+        "/",
+        qiwi.notificationMiddleware({}, (request, response) => {
+          mock({ type: "success", body: request.body });
+
+          response.json(request.body);
+        })
+      );
+
+      app.use(((error, _request, response, next) => {
+        mock({ type: "error", error });
+        response.json({ type: "error" });
+
+        return next();
+      }) as ErrorRequestHandler);
+
+      const data = {
+        amount: { currency: BillCurrency.RUB, value: 1 },
+        expirationDateTime: P2P.formatLifetime(1)
+      };
+
+      [bill1, bill2] = await Promise.all([
+        qiwi.createBill(data),
+        qiwi.createBill(data)
+      ]);
+    });
+
+    afterAll(async () => {
+      server.close();
+
+      await Promise.all([
+        qiwi.rejectBill(bill1.billId),
+        qiwi.rejectBill(bill2.billId)
+      ]);
+    });
+
+    afterEach(() => mock.mockClear());
+
+    /**
+     *
+     * @param {BillStatusData} bill
+     * @param {boolean=} valid
+     * @return {Promise<Response>}
+     */
+    function sendNotification(bill: BillStatusData, valid = true) {
+      const hash = createHmac("sha256", valid ? qiwi.secretKey : "aboba").update(
+        [
+          bill.amount.currency,
+          bill.amount.value,
+          bill.billId,
+          bill.siteId,
+          bill.status.value
+        ].join("|")
+      );
+
+      return fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "X-Api-Signature-SHA256": hash.digest("hex")
+        },
+        body: JSON.stringify({ bill })
+      });
+    }
+
+    test("with invalid data", async () => {
+      await sendNotification(bill1, false);
+      expect(mock).toBeCalledWith({
+        type: "error",
+        error: new Error("Notification signature mismatch")
+      });
+    });
+
+    test("with repeating invalid data", async () => {
+      await sendNotification(bill1, false);
+      expect(mock).toBeCalledWith({
+        type: "error",
+        error: new Error("Notification signature mismatch")
+      });
+    });
+
+    test("with valid data", async () => {
+      const response = await sendNotification(bill1);
+      const json = await response.json();
+
+      expect(mock).toBeCalledWith({ type: "success", body: bill1 });
+      expect(json).toEqual(bill1);
+    });
+
+    test("with repeating valid data", async () => {
+      await sendNotification(bill1);
+      expect(mock).toBeCalledTimes(0);
+    });
+
+    test("with not repeating valid data", async () => {
+      const response = await sendNotification(bill2);
+      const json = await response.json();
+
+      expect(mock).toBeCalledWith({ type: "success", body: bill2 });
+      expect(json).toEqual(bill2);
+    });
   });
 });

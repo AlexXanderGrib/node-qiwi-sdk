@@ -242,10 +242,6 @@ export class P2P extends HttpAPI {
    * **В начале файла**
    * ```js
    * const p2p = new QIWI.P2P(process.env.QIWI_PRIVATE_KEY);
-   *
-   * // Повторяю
-   * // Это middleware кидает ошибки, позаботьтесь об их обработке
-   * app.use(errorHandling())
    * ```
    * *`Вариант 1 - Классический`*
    *
@@ -261,6 +257,13 @@ export class P2P extends HttpAPI {
    * app.post('/webhook/qiwi', p2p.notificationMiddleware({}, (req, res) => {
    *  req.body // Это `BillStatusData`
    * }))
+   * ```
+   *
+   * **Обработка ошибок**
+   * ```js
+   * app.use((error, request, response, next) => {
+   *  console.log(error); // [Error: Notification signature mismatch]
+   * })
    * ```
    */
   public notificationMiddleware(
@@ -295,10 +298,10 @@ export class P2P extends HttpAPI {
 
       const hash = request.headers["x-api-signature-sha256"] as string;
 
-      if (memo && calls.has(hash)) return;
+      if (memo && calls.has(hash)) return next();
 
-      if (this.checkNotificationSignature(hash, notification.bill)) {
-        throw new Error("Notification signature mismatch");
+      if (!this.checkNotificationSignature(hash, notification.bill)) {
+        return next(new Error("Notification signature mismatch"));
       }
 
       request.body = notification.bill;

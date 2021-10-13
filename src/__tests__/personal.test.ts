@@ -67,8 +67,7 @@ describe("Personal API", () => {
 
     const response = await qiwi.getTransactionCheque(
       transaction.txnId,
-      transactionType,
-      Personal.ChequeFormat.JPEG
+      transactionType
     );
     const buffer = response.slice(0, 32);
 

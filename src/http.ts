@@ -64,13 +64,15 @@ export class HttpAPI {
   protected async _request(
     url: string,
     method: string,
-    headers: Record<string, string> = {},
+    headers: Record<string, string>,
     body?: string | undefined
   ): Promise<any> {
     const absoluteUrl =
       url.startsWith("https://") || url.startsWith("http://")
         ? url
-        : `${this.API_URL}/${url}`;
+        : `${this.API_URL}///${url}`.replace(/\/{3,}/g, "/");
+    //                    ^^^ 3 cлеша не встречаются в URL, поэтому их можно
+    // использовать как костыль для нормализации. Чтобы было не GET //path, а GET /path
 
     const abortController = new AbortController();
     const timeout = setTimeout(() => abortController.abort(), this.API_TIMEOUT);
@@ -81,10 +83,11 @@ export class HttpAPI {
       body,
       agent: this.agent,
       signal: abortController.signal
-    });
+    }).finally(() => clearTimeout(timeout));
 
-    // Чистим, чтобы Jest не кричал `Detected open handles`
-    clearTimeout(timeout);
+    if (method.toLowerCase() === "head") {
+      return undefined;
+    }
 
     const contentType = response.headers.get("content-type")?.split(";")[0];
     const responseBuffer = await response.buffer();
@@ -99,7 +102,7 @@ export class HttpAPI {
       switch (contentType) {
         case "application/json":
           return JSON.parse(responseBuffer.toString());
-        case "application/x-www-urlencoded":
+        case "application/x-www-form-urlencoded":
           return querystring.parse(responseBuffer.toString());
       }
 

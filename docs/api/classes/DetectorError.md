@@ -80,7 +80,7 @@ ExtendedError.name
 
 #### Defined in
 
-[src/error.ts:8](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9311a31/src/error.ts#L8)
+[src/error.ts:8](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/abde202/src/error.ts#L8)
 
 ___
 
@@ -153,7 +153,7 @@ node_modules/@types/node/globals.d.ts:13
 
 #### Defined in
 
-[src/error.ts:18](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9311a31/src/error.ts#L18)
+[src/error.ts:18](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/abde202/src/error.ts#L18)
 
 ## Methods
 
@@ -171,7 +171,7 @@ ExtendedError.toJSON
 
 #### Defined in
 
-[src/error.ts:10](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9311a31/src/error.ts#L10)
+[src/error.ts:10](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/abde202/src/error.ts#L10)
 
 ___
 
