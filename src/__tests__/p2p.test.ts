@@ -13,8 +13,8 @@ config();
 
 describe(P2P.name, () => {
   const qiwi = new P2P(
-    process.env.QIWI_PK as string,
-    process.env.QIWI_PUBK as string
+    process.env.QIWI_SECRET_KEY as string,
+    process.env.QIWI_PUBLIC_KEY as string
   );
 
   const billId = uuid();

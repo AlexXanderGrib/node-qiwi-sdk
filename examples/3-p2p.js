@@ -4,13 +4,11 @@ const QIWI = require("..");
 const qiwi = new QIWI.Personal(process.env.QIWI_TOKEN);
 
 async function main() {
-  const profile = await qiwi.getPersonProfile();
-
-  const [pk, sk] = await qiwi.createP2PKeyPair("My super pair name");
+  const [publicKey, secretKey] = await qiwi.createP2PKeyPair("My super pair name");
 
   // Да, они обратном в порядке,
   // так как PublicKey не всегда нужен
-  const p2p = new QIWI.P2P(sk, pk);
+  const p2p = new QIWI.P2P(secretKey, publicKey);
 
   const bill = await p2p.createBill({
     amount: {

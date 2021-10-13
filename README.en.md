@@ -44,14 +44,14 @@ pnpm add qiwi-sdk
 
 ```typescript
 // TypeScript
-import { P2P, Personal } from "qiwi-sdk";
+import { P2P, Personal, Detector } from "qiwi-sdk";
 
 // CommonJS
-const { P2P, Personal } = require("qiwi-sdk");
+const { P2P, Personal, Detector } = require("qiwi-sdk");
 
 // ESM
 import QIWI from "qiwi-sdk";
-const { P2P, Personal } = QIWI;
+const { P2P, Personal, Detector } = QIWI;
 ```
 
 ### Choosing API
@@ -62,6 +62,9 @@ const qiwi = new Personal(process.env.QIWI_TOKEN, process.env.QIWI_WALLET);
 
 // P2P - convenient api for issuing bills
 const p2p = new P2P(process.env.QIWI_SECRET_KEY, process.env.QIWI_PUBLIC_KEY);
+
+// Detector - API for getting Provider Id by phone or card number
+const detector = new Detector();
 ```
 
 #### _Environment variables:_

@@ -26,8 +26,8 @@ jobs:
         env:
           QIWI_TOKEN: ${{ secrets.QIWI_TOKEN }}
           QIWI_WALLET: ${{ secrets.QIWI_WALLET }}
-          QIWI_PK: ${{ secrets.QIWI_PK }}
-          QIWI_PUBK: ${{ secrets.QIWI_PUBK }}
+          QIWI_SECRET_KEY: ${{ secrets.QIWI_PK }}
+          QIWI_PUBLIC_KEY: ${{ secrets.QIWI_PUBK }}
 
 
       - name: Upload coverage
