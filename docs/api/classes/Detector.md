@@ -66,7 +66,7 @@ HttpAPI.API\_HEADERS
 
 #### Defined in
 
-[src/services/detector.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d8775dc/src/services/detector.ts#L17)
+[src/services/detector.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/c127ca6/src/services/detector.ts#L17)
 
 ___
 
@@ -80,7 +80,7 @@ HttpAPI.API\_OK\_RESPONSE\_CODES
 
 #### Defined in
 
-[src/http.ts:48](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d8775dc/src/http.ts#L48)
+[src/http.ts:48](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/c127ca6/src/http.ts#L48)
 
 ___
 
@@ -94,7 +94,7 @@ HttpAPI.API\_TIMEOUT
 
 #### Defined in
 
-[src/http.ts:47](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d8775dc/src/http.ts#L47)
+[src/http.ts:47](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/c127ca6/src/http.ts#L47)
 
 ___
 
@@ -108,7 +108,7 @@ HttpAPI.API\_URL
 
 #### Defined in
 
-[src/services/detector.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d8775dc/src/services/detector.ts#L16)
+[src/services/detector.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/c127ca6/src/services/detector.ts#L16)
 
 ___
 
@@ -122,7 +122,7 @@ HttpAPI.agent
 
 #### Defined in
 
-[src/http.ts:49](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d8775dc/src/http.ts#L49)
+[src/http.ts:49](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/c127ca6/src/http.ts#L49)
 
 ## Methods
 
@@ -146,7 +146,7 @@ ID провайдера
 
 #### Defined in
 
-[src/services/detector.ts:28](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d8775dc/src/services/detector.ts#L28)
+[src/services/detector.ts:28](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/c127ca6/src/services/detector.ts#L28)
 
 ___
 
@@ -181,7 +181,7 @@ HttpAPI.\_request
 
 #### Defined in
 
-[src/http.ts:64](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d8775dc/src/http.ts#L64)
+[src/http.ts:64](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/c127ca6/src/http.ts#L64)
 
 ___
 
@@ -215,7 +215,7 @@ HttpAPI.delete
 
 #### Defined in
 
-[src/http.ts:207](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d8775dc/src/http.ts#L207)
+[src/http.ts:207](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/c127ca6/src/http.ts#L207)
 
 ___
 
@@ -248,7 +248,7 @@ HttpAPI.get
 
 #### Defined in
 
-[src/http.ts:122](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d8775dc/src/http.ts#L122)
+[src/http.ts:122](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/c127ca6/src/http.ts#L122)
 
 ___
 
@@ -271,7 +271,7 @@ ___
 
 #### Defined in
 
-[src/services/detector.ts:56](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d8775dc/src/services/detector.ts#L56)
+[src/services/detector.ts:56](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/c127ca6/src/services/detector.ts#L56)
 
 ___
 
@@ -294,7 +294,7 @@ ___
 
 #### Defined in
 
-[src/services/detector.ts:40](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d8775dc/src/services/detector.ts#L40)
+[src/services/detector.ts:40](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/c127ca6/src/services/detector.ts#L40)
 
 ___
 
@@ -327,7 +327,7 @@ HttpAPI.head
 
 #### Defined in
 
-[src/http.ts:136](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d8775dc/src/http.ts#L136)
+[src/http.ts:136](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/c127ca6/src/http.ts#L136)
 
 ___
 
@@ -361,7 +361,7 @@ HttpAPI.patch
 
 #### Defined in
 
-[src/http.ts:189](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d8775dc/src/http.ts#L189)
+[src/http.ts:189](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/c127ca6/src/http.ts#L189)
 
 ___
 
@@ -395,7 +395,7 @@ HttpAPI.post
 
 #### Defined in
 
-[src/http.ts:153](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d8775dc/src/http.ts#L153)
+[src/http.ts:153](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/c127ca6/src/http.ts#L153)
 
 ___
 
@@ -429,4 +429,4 @@ HttpAPI.put
 
 #### Defined in
 
-[src/http.ts:171](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d8775dc/src/http.ts#L171)
+[src/http.ts:171](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/c127ca6/src/http.ts#L171)
