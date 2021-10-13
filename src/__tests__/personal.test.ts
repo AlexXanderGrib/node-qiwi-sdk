@@ -7,7 +7,7 @@ jest.setTimeout(30_000);
 
 config();
 
-describe("Personal API", () => {
+describe(Personal.name, () => {
   const qiwi = new Personal(
     process.env.QIWI_TOKEN as string,
     process.env.QIWI_WALLET as string

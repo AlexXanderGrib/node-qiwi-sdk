@@ -24,7 +24,7 @@
 
 #### Defined in
 
-[src/services/personal.types.ts:861](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/abde202/src/services/personal.types.ts#L861)
+[src/services/personal.types.ts:861](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d8775dc/src/services/personal.types.ts#L861)
 
 ___
 
@@ -36,7 +36,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.types.ts:870](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/abde202/src/services/personal.types.ts#L870)
+[src/services/personal.types.ts:870](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d8775dc/src/services/personal.types.ts#L870)
 
 ___
 
@@ -48,7 +48,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.types.ts:864](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/abde202/src/services/personal.types.ts#L864)
+[src/services/personal.types.ts:864](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d8775dc/src/services/personal.types.ts#L864)
 
 ___
 
@@ -60,7 +60,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.types.ts:867](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/abde202/src/services/personal.types.ts#L867)
+[src/services/personal.types.ts:867](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d8775dc/src/services/personal.types.ts#L867)
 
 ___
 
@@ -72,4 +72,4 @@ ___
 
 #### Defined in
 
-[src/services/personal.types.ts:873](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/abde202/src/services/personal.types.ts#L873)
+[src/services/personal.types.ts:873](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d8775dc/src/services/personal.types.ts#L873)

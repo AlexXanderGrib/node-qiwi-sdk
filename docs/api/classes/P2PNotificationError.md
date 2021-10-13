@@ -1,44 +1,43 @@
-[qiwi-sdk](../README.md) / [Exports](../modules.md) / DetectorError
+[qiwi-sdk](../README.md) / [Exports](../modules.md) / P2PNotificationError
 
-# Class: DetectorError
+# Class: P2PNotificationError
 
-Ошибка, которую выбрасывает персональное API в случае
-неправильного кода ответа от QIWI
+Ошибка валидации уведомления
 
 ## Hierarchy
 
 - `ExtendedError`
 
-  ↳ **`DetectorError`**
+  ↳ **`P2PNotificationError`**
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](DetectorError.md#constructor)
+- [constructor](P2PNotificationError.md#constructor)
 
 ### Properties
 
-- [message](DetectorError.md#message)
-- [name](DetectorError.md#name)
-- [stack](DetectorError.md#stack)
-- [prepareStackTrace](DetectorError.md#preparestacktrace)
-- [stackTraceLimit](DetectorError.md#stacktracelimit)
+- [message](P2PNotificationError.md#message)
+- [name](P2PNotificationError.md#name)
+- [stack](P2PNotificationError.md#stack)
+- [prepareStackTrace](P2PNotificationError.md#preparestacktrace)
+- [stackTraceLimit](P2PNotificationError.md#stacktracelimit)
 
 ### Accessors
 
-- [[toStringTag]](DetectorError.md#[tostringtag])
+- [[toStringTag]](P2PNotificationError.md#[tostringtag])
 
 ### Methods
 
-- [toJSON](DetectorError.md#tojson)
-- [captureStackTrace](DetectorError.md#capturestacktrace)
+- [toJSON](P2PNotificationError.md#tojson)
+- [captureStackTrace](P2PNotificationError.md#capturestacktrace)
 
 ## Constructors
 
 ### constructor
 
-• **new DetectorError**(`message?`)
+• **new P2PNotificationError**(`message?`)
 
 #### Parameters
 

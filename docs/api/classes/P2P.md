@@ -29,6 +29,7 @@
 - [secretKey](P2P.md#secretkey)
 - [BillStatus](P2P.md#billstatus)
 - [Currency](P2P.md#currency)
+- [PaySource](P2P.md#paysource)
 
 ### Methods
 
@@ -48,6 +49,7 @@
 - [put](P2P.md#put)
 - [rejectBill](P2P.md#rejectbill)
 - [formatLifetime](P2P.md#formatlifetime)
+- [patchPayUrl](P2P.md#patchpayurl)
 
 ## Constructors
 
@@ -71,7 +73,7 @@ HttpAPI.constructor
 
 #### Defined in
 
-[src/services/p2p.ts:104](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/abde202/src/services/p2p.ts#L104)
+[src/services/p2p.ts:116](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d8775dc/src/services/p2p.ts#L116)
 
 ## Properties
 
@@ -94,7 +96,7 @@ HttpAPI.API\_HEADERS
 
 #### Defined in
 
-[src/services/p2p.ts:87](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/abde202/src/services/p2p.ts#L87)
+[src/services/p2p.ts:99](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d8775dc/src/services/p2p.ts#L99)
 
 ___
 
@@ -108,7 +110,7 @@ HttpAPI.API\_OK\_RESPONSE\_CODES
 
 #### Defined in
 
-[src/http.ts:48](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/abde202/src/http.ts#L48)
+[src/http.ts:48](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d8775dc/src/http.ts#L48)
 
 ___
 
@@ -122,7 +124,7 @@ HttpAPI.API\_TIMEOUT
 
 #### Defined in
 
-[src/http.ts:47](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/abde202/src/http.ts#L47)
+[src/http.ts:47](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d8775dc/src/http.ts#L47)
 
 ___
 
@@ -136,7 +138,7 @@ HttpAPI.API\_URL
 
 #### Defined in
 
-[src/services/p2p.ts:94](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/abde202/src/services/p2p.ts#L94)
+[src/services/p2p.ts:106](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d8775dc/src/services/p2p.ts#L106)
 
 ___
 
@@ -150,7 +152,7 @@ HttpAPI.agent
 
 #### Defined in
 
-[src/services/p2p.ts:85](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/abde202/src/services/p2p.ts#L85)
+[src/services/p2p.ts:97](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d8775dc/src/services/p2p.ts#L97)
 
 ___
 
@@ -172,7 +174,7 @@ ___
 
 #### Defined in
 
-[src/services/p2p.ts:82](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/abde202/src/services/p2p.ts#L82)
+[src/services/p2p.ts:93](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d8775dc/src/services/p2p.ts#L93)
 
 ___
 
@@ -182,7 +184,17 @@ ___
 
 #### Defined in
 
-[src/services/p2p.ts:83](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/abde202/src/services/p2p.ts#L83)
+[src/services/p2p.ts:94](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d8775dc/src/services/p2p.ts#L94)
+
+___
+
+### PaySource
+
+▪ `Static` `Readonly` **PaySource**: typeof [`BillPaySource`](../enums/BillPaySource.md)
+
+#### Defined in
+
+[src/services/p2p.ts:95](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d8775dc/src/services/p2p.ts#L95)
 
 ## Methods
 
@@ -200,7 +212,7 @@ UUID
 
 #### Defined in
 
-[src/services/p2p.ts:202](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/abde202/src/services/p2p.ts#L202)
+[src/services/p2p.ts:233](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d8775dc/src/services/p2p.ts#L233)
 
 ___
 
@@ -222,7 +234,7 @@ ___
 
 #### Defined in
 
-[src/services/p2p.ts:150](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/abde202/src/services/p2p.ts#L150)
+[src/services/p2p.ts:181](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d8775dc/src/services/p2p.ts#L181)
 
 ___
 
@@ -257,7 +269,7 @@ HttpAPI.\_request
 
 #### Defined in
 
-[src/http.ts:64](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/abde202/src/http.ts#L64)
+[src/http.ts:64](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d8775dc/src/http.ts#L64)
 
 ___
 
@@ -284,7 +296,7 @@ ___
 
 #### Defined in
 
-[src/services/p2p.ts:166](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/abde202/src/services/p2p.ts#L166)
+[src/services/p2p.ts:197](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d8775dc/src/services/p2p.ts#L197)
 
 ___
 
@@ -309,7 +321,7 @@ ___
 
 #### Defined in
 
-[src/services/p2p.ts:213](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/abde202/src/services/p2p.ts#L213)
+[src/services/p2p.ts:244](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d8775dc/src/services/p2p.ts#L244)
 
 ___
 
@@ -345,7 +357,7 @@ server2server с использованием авторизации. Метод
 
 #### Defined in
 
-[src/services/p2p.ts:129](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/abde202/src/services/p2p.ts#L129)
+[src/services/p2p.ts:160](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d8775dc/src/services/p2p.ts#L160)
 
 ___
 
@@ -370,7 +382,7 @@ ___
 
 #### Defined in
 
-[src/services/p2p.ts:323](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/abde202/src/services/p2p.ts#L323)
+[src/services/p2p.ts:354](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d8775dc/src/services/p2p.ts#L354)
 
 ___
 
@@ -404,7 +416,7 @@ HttpAPI.delete
 
 #### Defined in
 
-[src/http.ts:207](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/abde202/src/http.ts#L207)
+[src/http.ts:207](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d8775dc/src/http.ts#L207)
 
 ___
 
@@ -437,7 +449,7 @@ HttpAPI.get
 
 #### Defined in
 
-[src/http.ts:122](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/abde202/src/http.ts#L122)
+[src/http.ts:122](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d8775dc/src/http.ts#L122)
 
 ___
 
@@ -470,7 +482,7 @@ HttpAPI.head
 
 #### Defined in
 
-[src/http.ts:136](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/abde202/src/http.ts#L136)
+[src/http.ts:136](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d8775dc/src/http.ts#L136)
 
 ___
 
@@ -524,7 +536,7 @@ app.use((error, request, response, next) => {
 
 #### Defined in
 
-[src/services/p2p.ts:269](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/abde202/src/services/p2p.ts#L269)
+[src/services/p2p.ts:300](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d8775dc/src/services/p2p.ts#L300)
 
 ___
 
@@ -558,7 +570,7 @@ HttpAPI.patch
 
 #### Defined in
 
-[src/http.ts:189](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/abde202/src/http.ts#L189)
+[src/http.ts:189](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d8775dc/src/http.ts#L189)
 
 ___
 
@@ -592,7 +604,7 @@ HttpAPI.post
 
 #### Defined in
 
-[src/http.ts:153](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/abde202/src/http.ts#L153)
+[src/http.ts:153](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d8775dc/src/http.ts#L153)
 
 ___
 
@@ -626,7 +638,7 @@ HttpAPI.put
 
 #### Defined in
 
-[src/http.ts:171](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/abde202/src/http.ts#L171)
+[src/http.ts:171](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d8775dc/src/http.ts#L171)
 
 ___
 
@@ -652,7 +664,7 @@ ___
 
 #### Defined in
 
-[src/services/p2p.ts:179](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/abde202/src/services/p2p.ts#L179)
+[src/services/p2p.ts:210](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d8775dc/src/services/p2p.ts#L210)
 
 ___
 
@@ -674,4 +686,29 @@ ___
 
 #### Defined in
 
-[src/services/p2p.ts:188](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/abde202/src/services/p2p.ts#L188)
+[src/services/p2p.ts:219](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d8775dc/src/services/p2p.ts#L219)
+
+___
+
+### patchPayUrl
+
+▸ `Static` **patchPayUrl**(`payUrl`, `options?`): `string`
+
+Добавляет параметры
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `payUrl` | `string` |
+| `options` | `Partial`<`Object`\> |
+
+#### Returns
+
+`string`
+
+Новый URL для оплаты
+
+#### Defined in
+
+[src/services/p2p.ts:127](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d8775dc/src/services/p2p.ts#L127)
