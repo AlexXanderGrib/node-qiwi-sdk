@@ -3,13 +3,19 @@ import { createHmac } from "crypto";
 import { MapErrorsAsync } from "sweet-decorators";
 import { v4 as uuid } from "uuid";
 import { createQS, formatDate } from "./shared";
-import { ErrorWithCode } from "../error";
+import { ErrorWithCode, ExtendedError } from "../error";
 import { Agent, HttpAPI, HttpError } from "../http";
 import { USER_AGENT } from "../identity";
 import type * as types from "./p2p.types";
-import { BillCurrency, BillStatus } from "./p2p.types";
+import {
+  BillCurrency,
+  BillStatus,
+  BillPaySource,
+  PayUrlPatchParams as PayUrlPatchParameters
+} from "./p2p.types";
 import { AnyResponse } from "./shared.types";
 import { RequestHandler } from "express";
+import { URL } from "url";
 
 /**
  * Ошибка, которую выбрасывает P2P API в случае неправильного
@@ -24,6 +30,11 @@ export class P2PPaymentError extends ErrorWithCode<string> {
     super(data.description, data.errorCode);
   }
 }
+
+/**
+ * Ошибка валидации уведомления
+ */
+export class P2PNotificationError extends ExtendedError {}
 
 /**
  * Проверяет ответ на предмет ошибки.
@@ -81,6 +92,7 @@ function promise<T extends (...parameters: any) => any>(function_: T) {
 export class P2P extends HttpAPI {
   public static readonly BillStatus = BillStatus;
   public static readonly Currency = BillCurrency;
+  public static readonly PaySource = BillPaySource;
 
   public agent?: Agent;
 
@@ -103,6 +115,25 @@ export class P2P extends HttpAPI {
    */
   constructor(public secretKey: string, public publicKey: string = "") {
     super();
+  }
+
+  /**
+   * Добавляет параметры
+   *
+   * @param {string} payUrl
+   * @param {PayUrlPatchParams=} options
+   * @return {string} Новый URL для оплаты
+   */
+  public static patchPayUrl(
+    payUrl: string,
+    options: PayUrlPatchParameters = {}
+  ): string {
+    const url = new URL(payUrl);
+
+    if (options.paySource) url.searchParams.set("paySource", options.paySource);
+    if (options.successUrl) url.searchParams.set("successUrl", options.successUrl);
+
+    return url.toString();
   }
 
   /**
@@ -301,7 +332,7 @@ export class P2P extends HttpAPI {
       if (memo && calls.has(hash)) return next();
 
       if (!this.checkNotificationSignature(hash, notification.bill)) {
-        return next(new Error("Notification signature mismatch"));
+        return next(new P2PNotificationError("Notification signature mismatch"));
       }
 
       request.body = notification.bill;

@@ -163,3 +163,14 @@ export type BillFormParams = {
    */
   lifetime?: string;
 } & BillCreationRequest["customer"];
+
+export enum BillPaySource {
+  QIWI = "qw",
+  Card = "card",
+  Mobile = "mobile"
+}
+
+export type PayUrlPatchParams = Partial<{
+  paySource: BillPaySource;
+  successUrl: string;
+}>;
