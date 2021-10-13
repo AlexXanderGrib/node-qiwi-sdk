@@ -11,7 +11,7 @@ jest.setTimeout(30_000);
 
 config();
 
-describe("P2P", () => {
+describe(P2P.name, () => {
   const qiwi = new P2P(
     process.env.QIWI_PK as string,
     process.env.QIWI_PUBK as string
@@ -56,6 +56,9 @@ describe("P2P", () => {
     );
 
     expect(qiwi.checkNotificationSignature(hash.digest("hex"), response)).toBe(true);
+    expect(
+      P2P.patchPayUrl(response.payUrl, { paySource: P2P.PaySource.QIWI })
+    ).toContain("paySource=qw");
   });
 
   test("Can get bill status", async () => {
