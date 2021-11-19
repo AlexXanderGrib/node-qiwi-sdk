@@ -9,6 +9,7 @@ import * as values from "./personal.types";
 import { AnyResponse } from "./shared.types";
 import { stringify } from "query-string";
 import { v4 as uuid } from "uuid";
+import { IPersonalAPI } from "./personal.types";
 
 type StringOrNumber = string | number;
 
@@ -48,7 +49,7 @@ function mapError(error: any) {
  *
  * @see {@link https://developer.qiwi.com/ru/qiwi-wallet-personal|Описание}
  */
-export class Personal extends HttpAPI {
+export class Personal extends HttpAPI implements IPersonalAPI {
   public static readonly Currency = values.Currency;
   public static readonly IdentificationLevel = values.PersonIdentificationLevel;
   public static readonly ReceiptFormat = values.ChequeFormat;
@@ -134,15 +135,15 @@ export class Personal extends HttpAPI {
    * QIWI кошельке. Лимиты действуют как ограничения на сумму
    * определенных операций.
    *
-   * @template L
-   * @param {L} limits
+   * @template Limits
+   * @param {Limits} limits
    * @param {StringOrNumber} wallet
    */
   @MapErrorsAsync(mapError)
-  async getLimits<L extends types.LimitType[] = types.LimitType[]>(
-    limits: L,
+  async getLimits<Limits extends types.LimitType[] = types.LimitType[]>(
+    limits: Limits,
     wallet = this.walletId
-  ): Promise<types.LimitsResponse<L[number]>> {
+  ): Promise<types.LimitsResponse<Limits[number]>> {
     return await this.get(
       `qw-limits/v1/persons/${wallet}/actual-limits?${createQS({ types: limits })}`
     );
@@ -468,7 +469,7 @@ export class Personal extends HttpAPI {
     name: string,
     server?: string
   ): Promise<[PublicKey: string, SecretKey: string]> {
-    const { PublicKey, SecretKey } = await this.post(
+    const response = await this.post<any>(
       "widgets-api/api/p2p/protected/keys/create",
       {},
       JSON.stringify({
@@ -477,7 +478,10 @@ export class Personal extends HttpAPI {
       })
     );
 
-    return [PublicKey, SecretKey];
+    const publicKey: string = response.result?.publicKey ?? response.PublicKey;
+    const secretKey: string = response.result?.secretKey ?? response.SecretKey;
+
+    return [publicKey, secretKey];
   }
 
   /**

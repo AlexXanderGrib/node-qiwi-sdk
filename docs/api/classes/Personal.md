@@ -12,6 +12,10 @@
 
   ↳ **`Personal`**
 
+## Implements
+
+- [`IPersonalAPI`](../interfaces/IPersonalAPI.md)
+
 ## Table of contents
 
 ### Constructors
@@ -90,7 +94,7 @@ HttpAPI.constructor
 
 #### Defined in
 
-[src/services/personal.ts:78](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/6d1bad4/src/services/personal.ts#L78)
+[src/services/personal.ts:79](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L79)
 
 ## Properties
 
@@ -113,7 +117,7 @@ HttpAPI.API\_HEADERS
 
 #### Defined in
 
-[src/services/personal.ts:63](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/6d1bad4/src/services/personal.ts#L63)
+[src/services/personal.ts:64](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L64)
 
 ___
 
@@ -127,7 +131,7 @@ HttpAPI.API\_OK\_RESPONSE\_CODES
 
 #### Defined in
 
-[src/services/personal.ts:71](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/6d1bad4/src/services/personal.ts#L71)
+[src/services/personal.ts:72](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L72)
 
 ___
 
@@ -141,7 +145,7 @@ HttpAPI.API\_TIMEOUT
 
 #### Defined in
 
-[src/http.ts:47](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/6d1bad4/src/http.ts#L47)
+[src/http.ts:47](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/http.ts#L47)
 
 ___
 
@@ -161,7 +165,7 @@ HttpAPI.API\_URL
 
 #### Defined in
 
-[src/services/personal.ts:70](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/6d1bad4/src/services/personal.ts#L70)
+[src/services/personal.ts:71](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L71)
 
 ___
 
@@ -175,7 +179,7 @@ HttpAPI.agent
 
 #### Defined in
 
-[src/services/personal.ts:61](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/6d1bad4/src/services/personal.ts#L61)
+[src/services/personal.ts:62](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L62)
 
 ___
 
@@ -191,7 +195,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:59](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/6d1bad4/src/services/personal.ts#L59)
+[src/services/personal.ts:60](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L60)
 
 ___
 
@@ -201,7 +205,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:52](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/6d1bad4/src/services/personal.ts#L52)
+[src/services/personal.ts:53](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L53)
 
 ___
 
@@ -211,7 +215,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:53](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/6d1bad4/src/services/personal.ts#L53)
+[src/services/personal.ts:54](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L54)
 
 ___
 
@@ -221,7 +225,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:56](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/6d1bad4/src/services/personal.ts#L56)
+[src/services/personal.ts:57](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L57)
 
 ___
 
@@ -231,7 +235,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:54](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/6d1bad4/src/services/personal.ts#L54)
+[src/services/personal.ts:55](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L55)
 
 ___
 
@@ -241,7 +245,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:55](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/6d1bad4/src/services/personal.ts#L55)
+[src/services/personal.ts:56](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L56)
 
 ___
 
@@ -251,7 +255,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:58](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/6d1bad4/src/services/personal.ts#L58)
+[src/services/personal.ts:59](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L59)
 
 ___
 
@@ -261,7 +265,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:57](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/6d1bad4/src/services/personal.ts#L57)
+[src/services/personal.ts:58](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L58)
 
 ## Methods
 
@@ -296,7 +300,7 @@ HttpAPI.\_request
 
 #### Defined in
 
-[src/http.ts:64](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/6d1bad4/src/http.ts#L64)
+[src/http.ts:64](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/http.ts#L64)
 
 ___
 
@@ -317,9 +321,13 @@ ___
 
 `Promise`<`any`\>
 
+#### Implementation of
+
+[IPersonalAPI](../interfaces/IPersonalAPI.md).[blockCard](../interfaces/IPersonalAPI.md#blockcard)
+
 #### Defined in
 
-[src/services/personal.ts:540](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/6d1bad4/src/services/personal.ts#L540)
+[src/services/personal.ts:544](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L544)
 
 ___
 
@@ -341,9 +349,13 @@ ___
 
 `Promise`<``""``\>
 
+#### Implementation of
+
+[IPersonalAPI](../interfaces/IPersonalAPI.md).[createAccount](../interfaces/IPersonalAPI.md#createaccount)
+
 #### Defined in
 
-[src/services/personal.ts:290](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/6d1bad4/src/services/personal.ts#L290)
+[src/services/personal.ts:291](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L291)
 
 ___
 
@@ -364,9 +376,13 @@ ___
 
 `string`
 
+#### Implementation of
+
+[IPersonalAPI](../interfaces/IPersonalAPI.md).[createFormUrl](../interfaces/IPersonalAPI.md#createformurl)
+
 #### Defined in
 
-[src/services/personal.ts:359](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/6d1bad4/src/services/personal.ts#L359)
+[src/services/personal.ts:360](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L360)
 
 ___
 
@@ -382,9 +398,13 @@ ___
 
 `Promise`<[`PrettyTokenResponse`](../modules.md#prettytokenresponse)<[`Personal`](Personal.md)\>\>
 
+#### Implementation of
+
+[IPersonalAPI](../interfaces/IPersonalAPI.md).[createOauthToken](../interfaces/IPersonalAPI.md#createoauthtoken)
+
 #### Defined in
 
-[src/services/personal.ts:488](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/6d1bad4/src/services/personal.ts#L488)
+[src/services/personal.ts:492](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L492)
 
 ___
 
@@ -411,9 +431,13 @@ const [PublicKey, SecretKey] = await createP2PKeyPair('my-key-pair');
 
 Массив, где - [0=Публичный ключ, 1=Секретный ключ]
 
+#### Implementation of
+
+[IPersonalAPI](../interfaces/IPersonalAPI.md).[createP2PKeyPair](../interfaces/IPersonalAPI.md#createp2pkeypair)
+
 #### Defined in
 
-[src/services/personal.ts:467](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/6d1bad4/src/services/personal.ts#L467)
+[src/services/personal.ts:468](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L468)
 
 ___
 
@@ -447,7 +471,7 @@ HttpAPI.delete
 
 #### Defined in
 
-[src/http.ts:207](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/6d1bad4/src/http.ts#L207)
+[src/http.ts:207](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/http.ts#L207)
 
 ___
 
@@ -480,7 +504,7 @@ HttpAPI.get
 
 #### Defined in
 
-[src/http.ts:122](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/6d1bad4/src/http.ts#L122)
+[src/http.ts:122](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/http.ts#L122)
 
 ___
 
@@ -501,9 +525,13 @@ ___
 
 `Promise`<[`GetAccountOffersResponse`](../modules.md#getaccountoffersresponse)\>
 
+#### Implementation of
+
+[IPersonalAPI](../interfaces/IPersonalAPI.md).[getAccountOffers](../interfaces/IPersonalAPI.md#getaccountoffers)
+
 #### Defined in
 
-[src/services/personal.ts:277](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/6d1bad4/src/services/personal.ts#L277)
+[src/services/personal.ts:278](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L278)
 
 ___
 
@@ -524,9 +552,13 @@ ___
 
 `Promise`<[`Account`](../modules.md#account)[]\>
 
+#### Implementation of
+
+[IPersonalAPI](../interfaces/IPersonalAPI.md).[getAccounts](../interfaces/IPersonalAPI.md#getaccounts)
+
 #### Defined in
 
-[src/services/personal.ts:260](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/6d1bad4/src/services/personal.ts#L260)
+[src/services/personal.ts:261](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L261)
 
 ___
 
@@ -546,9 +578,13 @@ ___
 
 `Promise`<[`CardRequisitesResponse`](../modules.md#cardrequisitesresponse)\>
 
+#### Implementation of
+
+[IPersonalAPI](../interfaces/IPersonalAPI.md).[getCardRequisites](../interfaces/IPersonalAPI.md#getcardrequisites)
+
 #### Defined in
 
-[src/services/personal.ts:564](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/6d1bad4/src/services/personal.ts#L564)
+[src/services/personal.ts:568](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L568)
 
 ___
 
@@ -562,9 +598,13 @@ ___
 
 `Promise`<[`CardResponse`](../modules.md#cardresponse)[]\>
 
+#### Implementation of
+
+[IPersonalAPI](../interfaces/IPersonalAPI.md).[getCards](../interfaces/IPersonalAPI.md#getcards)
+
 #### Defined in
 
-[src/services/personal.ts:528](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/6d1bad4/src/services/personal.ts#L528)
+[src/services/personal.ts:532](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L532)
 
 ___
 
@@ -586,9 +626,13 @@ ___
 
 `Promise`<`number`\>
 
+#### Implementation of
+
+[IPersonalAPI](../interfaces/IPersonalAPI.md).[getCommission](../interfaces/IPersonalAPI.md#getcommission)
+
 #### Defined in
 
-[src/services/personal.ts:323](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/6d1bad4/src/services/personal.ts#L323)
+[src/services/personal.ts:324](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L324)
 
 ___
 
@@ -609,15 +653,19 @@ ___
 
 `Promise`<[`IdentificationResponse`](../modules.md#identificationresponse)\>
 
+#### Implementation of
+
+[IPersonalAPI](../interfaces/IPersonalAPI.md).[getIdentification](../interfaces/IPersonalAPI.md#getidentification)
+
 #### Defined in
 
-[src/services/personal.ts:126](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/6d1bad4/src/services/personal.ts#L126)
+[src/services/personal.ts:127](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L127)
 
 ___
 
 ### getLimits
 
-▸ **getLimits**<`L`\>(`limits`, `wallet?`): `Promise`<[`LimitsResponse`](../modules.md#limitsresponse)<`L`[`number`]\>\>
+▸ **getLimits**<`Limits`\>(`limits`, `wallet?`): `Promise`<[`LimitsResponse`](../modules.md#limitsresponse)<`Limits`[`number`]\>\>
 
 Запрос возвращает текущие уровни лимитов по операциям в вашем
 QIWI кошельке. Лимиты действуют как ограничения на сумму
@@ -627,22 +675,26 @@ QIWI кошельке. Лимиты действуют как ограничен
 
 | Name | Type |
 | :------ | :------ |
-| `L` | extends [`LimitType`](../enums/LimitType.md)[][`LimitType`](../enums/LimitType.md)[] |
+| `Limits` | extends [`LimitType`](../enums/LimitType.md)[][`LimitType`](../enums/LimitType.md)[] |
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `limits` | `L` |
+| `limits` | `Limits` |
 | `wallet` | `StringOrNumber` |
 
 #### Returns
 
-`Promise`<[`LimitsResponse`](../modules.md#limitsresponse)<`L`[`number`]\>\>
+`Promise`<[`LimitsResponse`](../modules.md#limitsresponse)<`Limits`[`number`]\>\>
+
+#### Implementation of
+
+[IPersonalAPI](../interfaces/IPersonalAPI.md).[getLimits](../interfaces/IPersonalAPI.md#getlimits)
 
 #### Defined in
 
-[src/services/personal.ts:142](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/6d1bad4/src/services/personal.ts#L142)
+[src/services/personal.ts:143](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L143)
 
 ___
 
@@ -665,9 +717,13 @@ ___
 
 `Promise`<[`GetTransactionsHistoryResponse`](../modules.md#gettransactionshistoryresponse)\>
 
+#### Implementation of
+
+[IPersonalAPI](../interfaces/IPersonalAPI.md).[getPaymentHistory](../interfaces/IPersonalAPI.md#getpaymenthistory)
+
 #### Defined in
 
-[src/services/personal.ts:171](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/6d1bad4/src/services/personal.ts#L171)
+[src/services/personal.ts:172](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L172)
 
 ___
 
@@ -689,9 +745,13 @@ ___
 
 `Promise`<[`GetPaymentHistoryTotalResponse`](../modules.md#getpaymenthistorytotalresponse)\>
 
+#### Implementation of
+
+[IPersonalAPI](../interfaces/IPersonalAPI.md).[getPaymentHistoryTotal](../interfaces/IPersonalAPI.md#getpaymenthistorytotal)
+
 #### Defined in
 
-[src/services/personal.ts:187](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/6d1bad4/src/services/personal.ts#L187)
+[src/services/personal.ts:188](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L188)
 
 ___
 
@@ -706,9 +766,13 @@ ___
 
 `Promise`<[`PersonProfile`](../modules.md#personprofile)\>
 
+#### Implementation of
+
+[IPersonalAPI](../interfaces/IPersonalAPI.md).[getPersonProfile](../interfaces/IPersonalAPI.md#getpersonprofile)
+
 #### Defined in
 
-[src/services/personal.ts:90](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/6d1bad4/src/services/personal.ts#L90)
+[src/services/personal.ts:91](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L91)
 
 ___
 
@@ -729,9 +793,13 @@ QIWI Кошелька.
 
 `Promise`<[`Restrictions`](../modules.md#restrictions)\>
 
+#### Implementation of
+
+[IPersonalAPI](../interfaces/IPersonalAPI.md).[getRestrictions](../interfaces/IPersonalAPI.md#getrestrictions)
+
 #### Defined in
 
-[src/services/personal.ts:158](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/6d1bad4/src/services/personal.ts#L158)
+[src/services/personal.ts:159](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L159)
 
 ___
 
@@ -753,9 +821,13 @@ ___
 
 `Promise`<[`Transaction`](../modules.md#transaction)\>
 
+#### Implementation of
+
+[IPersonalAPI](../interfaces/IPersonalAPI.md).[getTransaction](../interfaces/IPersonalAPI.md#gettransaction)
+
 #### Defined in
 
-[src/services/personal.ts:203](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/6d1bad4/src/services/personal.ts#L203)
+[src/services/personal.ts:204](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L204)
 
 ___
 
@@ -775,9 +847,13 @@ ___
 
 `Promise`<`Buffer`\>
 
+#### Implementation of
+
+[IPersonalAPI](../interfaces/IPersonalAPI.md).[getTransactionCheque](../interfaces/IPersonalAPI.md#gettransactioncheque)
+
 #### Defined in
 
-[src/services/personal.ts:219](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/6d1bad4/src/services/personal.ts#L219)
+[src/services/personal.ts:220](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L220)
 
 ___
 
@@ -810,7 +886,7 @@ HttpAPI.head
 
 #### Defined in
 
-[src/http.ts:136](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/6d1bad4/src/http.ts#L136)
+[src/http.ts:136](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/http.ts#L136)
 
 ___
 
@@ -844,7 +920,7 @@ HttpAPI.patch
 
 #### Defined in
 
-[src/http.ts:189](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/6d1bad4/src/http.ts#L189)
+[src/http.ts:189](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/http.ts#L189)
 
 ___
 
@@ -878,7 +954,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:404](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/6d1bad4/src/services/personal.ts#L404)
+[src/services/personal.ts:405](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L405)
 
 ___
 
@@ -900,9 +976,13 @@ ___
 
 `Promise`<[`PaymentResponse`](../modules.md#paymentresponse)\>
 
+#### Implementation of
+
+[IPersonalAPI](../interfaces/IPersonalAPI.md).[pay2](../interfaces/IPersonalAPI.md#pay2)
+
 #### Defined in
 
-[src/services/personal.ts:443](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/6d1bad4/src/services/personal.ts#L443)
+[src/services/personal.ts:444](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L444)
 
 ___
 
@@ -936,7 +1016,7 @@ HttpAPI.post
 
 #### Defined in
 
-[src/http.ts:153](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/6d1bad4/src/http.ts#L153)
+[src/http.ts:153](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/http.ts#L153)
 
 ___
 
@@ -970,7 +1050,7 @@ HttpAPI.put
 
 #### Defined in
 
-[src/http.ts:171](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/6d1bad4/src/http.ts#L171)
+[src/http.ts:171](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/http.ts#L171)
 
 ___
 
@@ -989,9 +1069,13 @@ ___
 
 `Promise`<[`CardRenameResponse`](../modules.md#cardrenameresponse)\>
 
+#### Implementation of
+
+[IPersonalAPI](../interfaces/IPersonalAPI.md).[renameCard](../interfaces/IPersonalAPI.md#renamecard)
+
 #### Defined in
 
-[src/services/personal.ts:580](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/6d1bad4/src/services/personal.ts#L580)
+[src/services/personal.ts:584](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L584)
 
 ___
 
@@ -1011,9 +1095,13 @@ ___
 
 `Promise`<``""``\>
 
+#### Implementation of
+
+[IPersonalAPI](../interfaces/IPersonalAPI.md).[sendTransactionCheque](../interfaces/IPersonalAPI.md#sendtransactioncheque)
+
 #### Defined in
 
-[src/services/personal.ts:239](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/6d1bad4/src/services/personal.ts#L239)
+[src/services/personal.ts:240](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L240)
 
 ___
 
@@ -1035,9 +1123,13 @@ ___
 
 `Promise`<``""``\>
 
+#### Implementation of
+
+[IPersonalAPI](../interfaces/IPersonalAPI.md).[setDefaultAccount](../interfaces/IPersonalAPI.md#setdefaultaccount)
+
 #### Defined in
 
-[src/services/personal.ts:305](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/6d1bad4/src/services/personal.ts#L305)
+[src/services/personal.ts:306](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L306)
 
 ___
 
@@ -1059,9 +1151,13 @@ ___
 
 `Promise`<[`IdentificationResponse`](../modules.md#identificationresponse)\>
 
+#### Implementation of
+
+[IPersonalAPI](../interfaces/IPersonalAPI.md).[setIdentification](../interfaces/IPersonalAPI.md#setidentification)
+
 #### Defined in
 
-[src/services/personal.ts:108](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/6d1bad4/src/services/personal.ts#L108)
+[src/services/personal.ts:109](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L109)
 
 ___
 
@@ -1082,6 +1178,10 @@ ___
 
 `Promise`<[`CardUnblockResponse`](../modules.md#cardunblockresponse)\>
 
+#### Implementation of
+
+[IPersonalAPI](../interfaces/IPersonalAPI.md).[unblockCard](../interfaces/IPersonalAPI.md#unblockcard)
+
 #### Defined in
 
-[src/services/personal.ts:551](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/6d1bad4/src/services/personal.ts#L551)
+[src/services/personal.ts:555](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L555)

@@ -16,6 +16,7 @@ import {
 import { AnyResponse } from "./shared.types";
 import { RequestHandler } from "express";
 import { URL } from "url";
+import { IP2PApi } from "..";
 
 /**
  * Ошибка, которую выбрасывает P2P API в случае неправильного
@@ -89,7 +90,7 @@ function promise<T extends (...parameters: any) => any>(function_: T) {
  *
  * @see {@link https://developer.qiwi.com/ru/p2p-payments|Описание}
  */
-export class P2P extends HttpAPI {
+export class P2P extends HttpAPI implements IP2PApi {
   public static readonly BillStatus = BillStatus;
   public static readonly Currency = BillCurrency;
   public static readonly PaySource = BillPaySource;
@@ -98,7 +99,7 @@ export class P2P extends HttpAPI {
 
   protected readonly API_HEADERS = {
     Accept: "application/json",
-    "Content-Type": "application/json;charset=UTF-8",
+    "Content-Type": "application/json; charset=UTF-8",
     Authorization: `Bearer ${this.secretKey}`,
     "User-Agent": USER_AGENT
   };

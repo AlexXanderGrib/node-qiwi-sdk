@@ -174,3 +174,14 @@ export type PayUrlPatchParams = Partial<{
   paySource: BillPaySource;
   successUrl: string;
 }>;
+
+export interface IP2PApi {
+  createBill(data: BillCreationRequest, id?: string): Promise<BillStatusData>;
+  rejectBill(billId: string): Promise<BillStatusData>;
+  checkNotificationSignature(signature: string, body: BillStatusData): boolean;
+  createBillFormUrl(
+    parameters: Omit<BillFormParams, "billId" | "publicKey">,
+    billId?: string
+  ): string;
+  billStatus(billId: string): Promise<BillStatusData>;
+}
