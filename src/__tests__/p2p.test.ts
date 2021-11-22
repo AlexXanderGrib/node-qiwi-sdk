@@ -1,4 +1,4 @@
-import { createHmac } from "crypto";
+import { createHmac, randomBytes } from "crypto";
 import { config } from "dotenv";
 import { Application, ErrorRequestHandler } from "express";
 import fetch from "node-fetch";
@@ -167,7 +167,10 @@ describe(P2P.name, () => {
      * @return {Promise<Response>}
      */
     function sendNotification(bill: BillStatusData, valid = true) {
-      const hash = createHmac("sha256", valid ? qiwi.secretKey : "aboba").update(
+      const hash = createHmac(
+        "sha256",
+        valid ? qiwi.secretKey : randomBytes(2)
+      ).update(
         [
           bill.amount.currency,
           bill.amount.value,
