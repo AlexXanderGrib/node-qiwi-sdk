@@ -18,13 +18,16 @@ body:
       placeholder: "2.0.0"
 
   - type: dropdown
+    id: language
     attributes:
       label: Язык
       options:
         - JavaScript
         - TypeScript
         - Другой, компилируемый в JS
+
   - type: dropdown
+    id: apis
     attributes:
       label: Затронутые секции API
       multiple: true
