@@ -14,9 +14,16 @@
 
 ## 🍬 Why use this lib?
 
-1. Written in TypeScript
+1. Written in TypeScript, covered by tests
 2. Covers [`Personal`](https://developer.qiwi.com/ru/qiwi-wallet-personal/) & [`P2P`](https://developer.qiwi.com/ru/p2p-payments/) APIs
 3. Documentation appears right in editor (on russian), cause JSDoc was used
+4. [Secure](./SECURITY.md) (relatively)
+5. Many [examples](./examples/)
+6. Supported rarely-used features:
+   1. Personal Webhooks
+   2. P2P payment method lock
+   3. Qiwi Master cards API
+7. English support
 
 ## 📦 Installation
 

@@ -30,7 +30,9 @@
 - [API\_TOKEN](Personal.md#api_token)
 - [API\_URL](Personal.md#api_url)
 - [agent](Personal.md#agent)
+- [hookId](Personal.md#hookid)
 - [walletId](Personal.md#walletid)
+- [webhookKey](Personal.md#webhookkey)
 - [ChequeFormat](Personal.md#chequeformat)
 - [Currency](Personal.md#currency)
 - [IdentificationLevel](Personal.md#identificationlevel)
@@ -43,7 +45,9 @@
 ### Methods
 
 - [\_request](Personal.md#_request)
+- [addWebHook](Personal.md#addwebhook)
 - [blockCard](Personal.md#blockcard)
+- [checkWebHookSign](Personal.md#checkwebhooksign)
 - [createAccount](Personal.md#createaccount)
 - [createFormUrl](Personal.md#createformurl)
 - [createOauthToken](Personal.md#createoauthtoken)
@@ -52,27 +56,32 @@
 - [get](Personal.md#get)
 - [getAccountOffers](Personal.md#getaccountoffers)
 - [getAccounts](Personal.md#getaccounts)
+- [getActiveWebHook](Personal.md#getactivewebhook)
 - [getCardRequisites](Personal.md#getcardrequisites)
 - [getCards](Personal.md#getcards)
 - [getCommission](Personal.md#getcommission)
 - [getIdentification](Personal.md#getidentification)
 - [getLimits](Personal.md#getlimits)
+- [getNewWebHookSecret](Personal.md#getnewwebhooksecret)
 - [getPaymentHistory](Personal.md#getpaymenthistory)
 - [getPaymentHistoryTotal](Personal.md#getpaymenthistorytotal)
 - [getPersonProfile](Personal.md#getpersonprofile)
 - [getRestrictions](Personal.md#getrestrictions)
 - [getTransaction](Personal.md#gettransaction)
 - [getTransactionCheque](Personal.md#gettransactioncheque)
+- [getWebHookSecret](Personal.md#getwebhooksecret)
 - [head](Personal.md#head)
 - [patch](Personal.md#patch)
 - [pay](Personal.md#pay)
 - [pay2](Personal.md#pay2)
 - [post](Personal.md#post)
 - [put](Personal.md#put)
+- [removeWebHook](Personal.md#removewebhook)
 - [renameCard](Personal.md#renamecard)
 - [sendTransactionCheque](Personal.md#sendtransactioncheque)
 - [setDefaultAccount](Personal.md#setdefaultaccount)
 - [setIdentification](Personal.md#setidentification)
+- [testActiveWebHook](Personal.md#testactivewebhook)
 - [unblockCard](Personal.md#unblockcard)
 
 ## Constructors
@@ -94,7 +103,7 @@ HttpAPI.constructor
 
 #### Defined in
 
-[src/services/personal.ts:79](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L79)
+[src/services/personal.ts:84](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e7b0b44/src/services/personal.ts#L84)
 
 ## Properties
 
@@ -117,7 +126,7 @@ HttpAPI.API\_HEADERS
 
 #### Defined in
 
-[src/services/personal.ts:64](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L64)
+[src/services/personal.ts:69](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e7b0b44/src/services/personal.ts#L69)
 
 ___
 
@@ -131,7 +140,7 @@ HttpAPI.API\_OK\_RESPONSE\_CODES
 
 #### Defined in
 
-[src/services/personal.ts:72](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L72)
+[src/services/personal.ts:77](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e7b0b44/src/services/personal.ts#L77)
 
 ___
 
@@ -145,7 +154,7 @@ HttpAPI.API\_TIMEOUT
 
 #### Defined in
 
-[src/http.ts:47](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/http.ts#L47)
+[src/http.ts:47](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e7b0b44/src/http.ts#L47)
 
 ___
 
@@ -165,7 +174,7 @@ HttpAPI.API\_URL
 
 #### Defined in
 
-[src/services/personal.ts:71](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L71)
+[src/services/personal.ts:76](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e7b0b44/src/services/personal.ts#L76)
 
 ___
 
@@ -179,7 +188,17 @@ HttpAPI.agent
 
 #### Defined in
 
-[src/services/personal.ts:62](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L62)
+[src/services/personal.ts:64](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e7b0b44/src/services/personal.ts#L64)
+
+___
+
+### hookId
+
+• `Optional` **hookId**: `string`
+
+#### Defined in
+
+[src/services/personal.ts:67](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e7b0b44/src/services/personal.ts#L67)
 
 ___
 
@@ -189,13 +208,23 @@ ___
 
 ___
 
+### webhookKey
+
+• **webhookKey**: `Map`<`string`, `string`\>
+
+#### Defined in
+
+[src/services/personal.ts:66](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e7b0b44/src/services/personal.ts#L66)
+
+___
+
 ### ChequeFormat
 
 ▪ `Static` `Readonly` **ChequeFormat**: typeof [`ChequeFormat`](../enums/ChequeFormat.md)
 
 #### Defined in
 
-[src/services/personal.ts:60](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L60)
+[src/services/personal.ts:62](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e7b0b44/src/services/personal.ts#L62)
 
 ___
 
@@ -205,7 +234,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:53](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L53)
+[src/services/personal.ts:55](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e7b0b44/src/services/personal.ts#L55)
 
 ___
 
@@ -215,7 +244,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:54](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L54)
+[src/services/personal.ts:56](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e7b0b44/src/services/personal.ts#L56)
 
 ___
 
@@ -225,7 +254,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:57](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L57)
+[src/services/personal.ts:59](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e7b0b44/src/services/personal.ts#L59)
 
 ___
 
@@ -235,7 +264,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:55](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L55)
+[src/services/personal.ts:57](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e7b0b44/src/services/personal.ts#L57)
 
 ___
 
@@ -245,7 +274,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:56](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L56)
+[src/services/personal.ts:58](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e7b0b44/src/services/personal.ts#L58)
 
 ___
 
@@ -255,7 +284,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:59](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L59)
+[src/services/personal.ts:61](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e7b0b44/src/services/personal.ts#L61)
 
 ___
 
@@ -265,7 +294,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:58](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L58)
+[src/services/personal.ts:60](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e7b0b44/src/services/personal.ts#L60)
 
 ## Methods
 
@@ -300,7 +329,30 @@ HttpAPI.\_request
 
 #### Defined in
 
-[src/http.ts:64](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/http.ts#L64)
+[src/http.ts:64](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e7b0b44/src/http.ts#L64)
+
+___
+
+### addWebHook
+
+▸ **addWebHook**(`parameter`, `txnType`): `Promise`<[`WebHookInfo`](../modules.md#webhookinfo)\>
+
+Регистрирует обработчик вебхука
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `parameter` | `string` | Адрес сервера обработки вебхуков. **Внимание! Длина исходного (не URL-encoded) адреса сервиса обработчика не должна превышать 100 символов.** |
+| `txnType` | ``0`` \| ``1`` \| ``2`` | Тип транзакций, по которым будут включены уведомления.. 0 - "входящие", 1 - "исходящие". 2 - "все" |
+
+#### Returns
+
+`Promise`<[`WebHookInfo`](../modules.md#webhookinfo)\>
+
+#### Defined in
+
+[src/services/personal.ts:602](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e7b0b44/src/services/personal.ts#L602)
 
 ___
 
@@ -327,7 +379,29 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:544](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L544)
+[src/services/personal.ts:549](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e7b0b44/src/services/personal.ts#L549)
+
+___
+
+### checkWebHookSign
+
+▸ **checkWebHookSign**(`transaction`): `Promise`<`undefined` \| `boolean`\>
+
+Проверяет подпись уведомления вебхука
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `transaction` | [`WebhookTransaction`](../modules.md#webhooktransaction) | Объект уведомления транзакции вебхука |
+
+#### Returns
+
+`Promise`<`undefined` \| `boolean`\>
+
+#### Defined in
+
+[src/services/personal.ts:683](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e7b0b44/src/services/personal.ts#L683)
 
 ___
 
@@ -355,7 +429,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:291](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L291)
+[src/services/personal.ts:296](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e7b0b44/src/services/personal.ts#L296)
 
 ___
 
@@ -382,7 +456,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:360](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L360)
+[src/services/personal.ts:365](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e7b0b44/src/services/personal.ts#L365)
 
 ___
 
@@ -404,7 +478,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:492](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L492)
+[src/services/personal.ts:497](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e7b0b44/src/services/personal.ts#L497)
 
 ___
 
@@ -437,7 +511,7 @@ const [PublicKey, SecretKey] = await createP2PKeyPair('my-key-pair');
 
 #### Defined in
 
-[src/services/personal.ts:468](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L468)
+[src/services/personal.ts:473](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e7b0b44/src/services/personal.ts#L473)
 
 ___
 
@@ -471,7 +545,7 @@ HttpAPI.delete
 
 #### Defined in
 
-[src/http.ts:207](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/http.ts#L207)
+[src/http.ts:207](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e7b0b44/src/http.ts#L207)
 
 ___
 
@@ -504,7 +578,7 @@ HttpAPI.get
 
 #### Defined in
 
-[src/http.ts:122](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/http.ts#L122)
+[src/http.ts:122](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e7b0b44/src/http.ts#L122)
 
 ___
 
@@ -531,7 +605,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:278](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L278)
+[src/services/personal.ts:283](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e7b0b44/src/services/personal.ts#L283)
 
 ___
 
@@ -558,7 +632,21 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:261](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L261)
+[src/services/personal.ts:266](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e7b0b44/src/services/personal.ts#L266)
+
+___
+
+### getActiveWebHook
+
+▸ **getActiveWebHook**(): `Promise`<[`WebHookInfo`](../modules.md#webhookinfo)\>
+
+#### Returns
+
+`Promise`<[`WebHookInfo`](../modules.md#webhookinfo)\>
+
+#### Defined in
+
+[src/services/personal.ts:660](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e7b0b44/src/services/personal.ts#L660)
 
 ___
 
@@ -584,7 +672,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:568](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L568)
+[src/services/personal.ts:573](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e7b0b44/src/services/personal.ts#L573)
 
 ___
 
@@ -604,7 +692,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:532](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L532)
+[src/services/personal.ts:537](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e7b0b44/src/services/personal.ts#L537)
 
 ___
 
@@ -632,7 +720,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:324](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L324)
+[src/services/personal.ts:329](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e7b0b44/src/services/personal.ts#L329)
 
 ___
 
@@ -659,7 +747,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:127](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L127)
+[src/services/personal.ts:132](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e7b0b44/src/services/personal.ts#L132)
 
 ___
 
@@ -694,7 +782,29 @@ QIWI кошельке. Лимиты действуют как ограничен
 
 #### Defined in
 
-[src/services/personal.ts:143](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L143)
+[src/services/personal.ts:148](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e7b0b44/src/services/personal.ts#L148)
+
+___
+
+### getNewWebHookSecret
+
+▸ **getNewWebHookSecret**(`hookId?`): `Promise`<`string`\>
+
+Измененяет секретный ключ вебхука
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `hookId` | `string` | UUID вебхука |
+
+#### Returns
+
+`Promise`<`string`\>
+
+#### Defined in
+
+[src/services/personal.ts:648](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e7b0b44/src/services/personal.ts#L648)
 
 ___
 
@@ -723,7 +833,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:172](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L172)
+[src/services/personal.ts:177](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e7b0b44/src/services/personal.ts#L177)
 
 ___
 
@@ -751,7 +861,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:188](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L188)
+[src/services/personal.ts:193](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e7b0b44/src/services/personal.ts#L193)
 
 ___
 
@@ -772,7 +882,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:91](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L91)
+[src/services/personal.ts:96](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e7b0b44/src/services/personal.ts#L96)
 
 ___
 
@@ -799,7 +909,7 @@ QIWI Кошелька.
 
 #### Defined in
 
-[src/services/personal.ts:159](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L159)
+[src/services/personal.ts:164](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e7b0b44/src/services/personal.ts#L164)
 
 ___
 
@@ -827,7 +937,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:204](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L204)
+[src/services/personal.ts:209](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e7b0b44/src/services/personal.ts#L209)
 
 ___
 
@@ -853,7 +963,29 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:220](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L220)
+[src/services/personal.ts:225](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e7b0b44/src/services/personal.ts#L225)
+
+___
+
+### getWebHookSecret
+
+▸ **getWebHookSecret**(`hookId?`): `Promise`<`string`\>
+
+Получает секретный ключ вебхука
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `hookId` | `string` | UUID вебхука |
+
+#### Returns
+
+`Promise`<`string`\>
+
+#### Defined in
+
+[src/services/personal.ts:635](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e7b0b44/src/services/personal.ts#L635)
 
 ___
 
@@ -886,7 +1018,7 @@ HttpAPI.head
 
 #### Defined in
 
-[src/http.ts:136](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/http.ts#L136)
+[src/http.ts:136](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e7b0b44/src/http.ts#L136)
 
 ___
 
@@ -920,7 +1052,7 @@ HttpAPI.patch
 
 #### Defined in
 
-[src/http.ts:189](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/http.ts#L189)
+[src/http.ts:189](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e7b0b44/src/http.ts#L189)
 
 ___
 
@@ -954,7 +1086,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:405](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L405)
+[src/services/personal.ts:410](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e7b0b44/src/services/personal.ts#L410)
 
 ___
 
@@ -982,7 +1114,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:444](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L444)
+[src/services/personal.ts:449](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e7b0b44/src/services/personal.ts#L449)
 
 ___
 
@@ -1016,7 +1148,7 @@ HttpAPI.post
 
 #### Defined in
 
-[src/http.ts:153](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/http.ts#L153)
+[src/http.ts:153](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e7b0b44/src/http.ts#L153)
 
 ___
 
@@ -1050,7 +1182,29 @@ HttpAPI.put
 
 #### Defined in
 
-[src/http.ts:171](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/http.ts#L171)
+[src/http.ts:171](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e7b0b44/src/http.ts#L171)
+
+___
+
+### removeWebHook
+
+▸ **removeWebHook**(`hookId?`): `Promise`<`any`\>
+
+Удаляет обработчик вебхука
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `hookId` | `string` | UUID вебхука |
+
+#### Returns
+
+`Promise`<`any`\>
+
+#### Defined in
+
+[src/services/personal.ts:622](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e7b0b44/src/services/personal.ts#L622)
 
 ___
 
@@ -1075,7 +1229,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:584](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L584)
+[src/services/personal.ts:589](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e7b0b44/src/services/personal.ts#L589)
 
 ___
 
@@ -1101,7 +1255,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:240](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L240)
+[src/services/personal.ts:245](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e7b0b44/src/services/personal.ts#L245)
 
 ___
 
@@ -1129,7 +1283,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:306](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L306)
+[src/services/personal.ts:311](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e7b0b44/src/services/personal.ts#L311)
 
 ___
 
@@ -1157,7 +1311,25 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:109](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L109)
+[src/services/personal.ts:114](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e7b0b44/src/services/personal.ts#L114)
+
+___
+
+### testActiveWebHook
+
+▸ **testActiveWebHook**(): `Promise`<`any`\>
+
+Отправляет тестовое уведомление
+
+**`link`** https://developer.qiwi.com/ru/qiwi-wallet-personal/#hook_test
+
+#### Returns
+
+`Promise`<`any`\>
+
+#### Defined in
+
+[src/services/personal.ts:674](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e7b0b44/src/services/personal.ts#L674)
 
 ___
 
@@ -1184,4 +1356,4 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:555](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/110642c/src/services/personal.ts#L555)
+[src/services/personal.ts:560](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e7b0b44/src/services/personal.ts#L560)
