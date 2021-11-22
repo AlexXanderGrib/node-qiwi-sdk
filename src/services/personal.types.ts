@@ -1169,6 +1169,91 @@ export type Pay2Params = {
   comment?: string;
 };
 
+export type WebHookInfo = {
+  /** UUID действующего обработчика вебхуков */
+  hookId: string;
+  /** Набор параметров обработчика (только URL) */
+  hookParameters: { url: string };
+  /** Тип вебхука (только WEB) */
+  hookType: "WEB";
+  /** Тип транзакций, по которым отсылаются уведомления (IN - входящие, OUT - исходящие, BOTH - все) */
+  txnType: TransactionType;
+};
+
+/**
+ * @see [Документация по вебхукам](https://developer.qiwi.com/ru/qiwi-wallet-personal/#hook_format)
+ */
+export type WebhookTransaction = {
+  /** Хэш цифровой подписи уведомления */
+  hash: string;
+
+  /** Уникальный id хука */
+  hookId: string;
+
+  /** Уникальный id уведомления */
+  messageId: string;
+
+  /** Данные платежа */
+  payment: {
+    account: string;
+    comment: string;
+
+    /** Данные о комиссии для платежа или пополнения */
+    commission: MoneyAmount | null;
+
+    /**
+     * Для запросов истории платежей - Дата/время платежа, во
+     * временной зоне запроса (см. параметр `startDate`). Формат
+     * даты `ГГГГ-ММ-ДД'T'чч:мм:сс+03:00`
+     *
+     * Для запросов данных о транзакции - Дата/время платежа, время
+     * московское (в формате `ГГГГ-ММ-ДД'T'чч:мм:сс+03:00`)
+     */
+    date: string;
+
+    /** {@link https://developer.qiwi.com/ru/qiwi-wallet-personal/#errorCode|Код ошибки платежа} */
+    errorCode: number;
+
+    /** Номер кошелька */
+    personId: number;
+
+    /** ID провайдера QIWI Wallet */
+    provider: number | Recipients;
+
+    /** Список полей объекта payment (через ,), которые хешируются алгоритмом HmacSHA256 для проверки уведомления (см. параметр `hash`) */
+    signFields: string;
+
+    /** Статус платежа */
+    status: TransactionStatus;
+
+    /** Данные о сумме платежа или пополнения */
+    sum: MoneyAmount | null;
+
+    /** Данные об итоговой сумме платежа или пополнения */
+    total: MoneyAmount | null;
+
+    /**
+     * ID транзакции в процессинге QIWI Wallet
+     */
+    txnId: number;
+
+    /**
+     * Тип платежа. Возможные значения:
+     *
+     * `IN` - пополнение,
+     *
+     * `OUT` - платеж.
+     */
+    type: TransactionType.IN | TransactionType.OUT;
+  };
+
+  /** Признак тестового сообщения */
+  test: boolean;
+
+  /** Версия API */
+  version: string;
+};
+
 type StringOrNumber = string | number;
 
 export interface IPersonalAPI {

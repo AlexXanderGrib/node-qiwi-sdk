@@ -9,6 +9,7 @@ import * as values from "./personal.types";
 import { AnyResponse } from "./shared.types";
 import { stringify } from "query-string";
 import { v4 as uuid } from "uuid";
+import { createHmac } from "crypto";
 import { IPersonalAPI } from "./personal.types";
 
 type StringOrNumber = string | number;
@@ -60,6 +61,9 @@ export class Personal extends HttpAPI implements IPersonalAPI {
   public static readonly ChequeFormat = values.ChequeFormat;
 
   public agent?: Agent;
+
+  public webhookKey: Map<string, string> = new Map();
+  public hookId?: string;
 
   protected readonly API_HEADERS = {
     Accept: "application/json",
@@ -586,5 +590,102 @@ export class Personal extends HttpAPI implements IPersonalAPI {
     alias: string
   ): Promise<types.CardRenameResponse> {
     return this.put(`cards/v1/cards/${cardId}/alias`, {}, JSON.stringify({ alias }));
+  }
+
+  /**
+   * Регистрирует обработчик вебхука
+   * @param {string} param Адрес сервера обработки вебхуков. **Внимание! Длина исходного (не URL-encoded) адреса сервиса обработчика не должна превышать 100 символов.**
+   * @param {number} txnType Тип транзакций, по которым будут включены уведомления.. 0 - "входящие", 1 - "исходящие". 2 - "все"
+   */
+  async addWebHook(param: string, txnType: 0 | 1 | 2) {
+    const hookResponse = await this.put<types.WebHookInfo>(`payment-notifier/v1/hooks?${createQS({ hookType: 1, param, txnType })}`);
+    this.hookId = hookResponse.hookId;
+    return hookResponse;
+  }
+
+  /**
+   * Удаляет обработчик вебхука
+   * @param {string} hookId UUID вебхука
+   */
+  removeWebHook(hookId: string = this.hookId!) {
+    this.webhookKey.delete(hookId);
+    this.hookId = undefined;
+    return this.delete<{ response: "Hook deleted" }>(
+      `payment-notifier/v1/hooks/${hookId}`
+    );
+  }
+
+  /**
+   * Получает секретный ключ вебхука
+   * @param {string} hookId UUID вебхука
+   */
+  async getWebHookSecret(hookId: string = this.hookId!) {
+    const { key } = await this.get<{ key: string }>(
+      `payment-notifier/v1/hooks/${hookId}/key`
+    );
+    this.webhookKey.set(hookId, key);
+    return key;
+  }
+
+  /**
+   * Измененяет секретный ключ вебхука
+   * @param {string} hookId UUID вебхука
+   */
+  async getNewWebHookSecret(hookId: string = this.hookId!) {
+    const { key } = await this.post<{ key: string }>(
+      `payment-notifier/v1/hooks/${hookId}/newkey`
+    );
+    this.webhookKey.set(hookId, key);
+    return key;
+  }
+
+  /**
+   * Получает данные об обработчике уведомлений
+   * @link https://developer.qiwi.com/ru/qiwi-wallet-personal/#hook_active
+   */
+  async getActiveWebHook() {
+    const hookResponse = await this.get<types.WebHookInfo>(
+      "payment-notifier/v1/hooks/active"
+    );
+    this.hookId = hookResponse.hookId;
+    return hookResponse;
+  }
+
+  /**
+   * Отправляет тестовое уведомление
+   * @link https://developer.qiwi.com/ru/qiwi-wallet-personal/#hook_test
+   */
+  testActiveWebHook() {
+    return this.get<{ response: "Webhook sent" }>("payment-notifier/v1/hooks/test");
+  }
+
+  /**
+   * Проверяет подпись уведомления вебхука
+   * @param transaction Объект уведомления транзакции вебхука
+   * @return {Promise<boolean | null>}
+   */
+  async checkWebHookSign(transaction: types.WebhookTransaction) {
+    const { hookId, payment, hash } = transaction;
+    if (!this.webhookKey.has(hookId)) {
+      try {
+        await this.getWebHookSecret(hookId);
+      } catch (err) {
+        return null;
+      }
+    }
+
+    const signPayload = payment.signFields
+      .split(",")
+      .map((p) => p.split(".").reduce((p: any, c) => p?.[c] || null, payment))
+      .join("|");
+
+    const hash2 = createHmac(
+      "sha256",
+      Buffer.from(this.webhookKey.get(hookId)!, "base64")
+    )
+      .update(signPayload)
+      .digest("hex");
+
+    return hash === hash2;
   }
 }
