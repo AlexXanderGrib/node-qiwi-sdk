@@ -1,38 +1,22 @@
 ---
 name: 🐛 Bug report
 about: Create a report to help us improve
-title: ''
-labels: 'bug'
-assignees: ''
-
+title: "🐛 Баг: "
+labels: "bug"
+assignees: "@AlexXanderGrib"
 ---
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+## Описание
 
-**To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+<!-- Опишите тут что случилось -->
+## Контекст
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
+<!-- Добавьте немного мета информации, чтобы было проще решить -->
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
+| **Параметр**        | **Значение**   |
+| ------------------- | -------------- |
+| _Версия библиотеки_ | `2.0.0`        |
+| _Язык_              | `JS/TS`        |
+| _API_               | `Personal/P2P` |
 
-**Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
-
-**Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
-
-**Additional context**
-Add any other context about the problem here.
+<!-- Если автор долго не отвечает, пишите в Телеграм @AlexXanderGrib -->
