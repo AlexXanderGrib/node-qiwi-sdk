@@ -2,28 +2,34 @@ import qs from "query-string";
 import { AnyResponse } from "./shared.types";
 
 /**
- * Форматирует часть даты
- * @param {number} x
+ * Превращает число в двухзначную строку
+ * @param {number} number
  * @return {string}
+ *
+ * @example
+ * 3 // -> '03'
  */
-const fd = (x: number) => x.toString().padStart(2, "0");
+const dd = (number: number): string => number.toFixed(0).padStart(2, "0");
 
 /**
  * Форматирует дату в понятную для QIWI строку:
  *
  * `ГГГГ-ММ-ДДTЧЧ:ММ:СС+\-ЧЧ:ММ`
  *
- * @param {Date | number | string} date Аргумент для конструктора
+ * @param {Date | number | string} dateTime Аргумент для конструктора
  * @return {string}
  */
-export function formatDate(date: Date | number | string): string {
-  const d = new Date(date);
-  const tz = d.getTimezoneOffset();
-  const sign = tz > 0 ? "-" : "+";
+export function formatDate(dateTime: Date | number | string): string {
+  const date = new Date(dateTime);
+  const offset = date.getTimezoneOffset();
+  const sign = offset > 0 ? "-" : "+";
 
-  const base = d.toISOString().split(".")[0];
+  const base = date.toISOString().split(".")[0];
+  const hours = dd(Math.trunc(Math.abs(offset) / 60));
+  const minutes = dd(offset % 60);
 
-  return base + sign + fd(Math.trunc(Math.abs(tz) / 60)) + ":" + fd(tz % 60);
+  //      [ Дата ][    Временная зона     ]
+  return `${base}${sign}${hours}:${minutes}`;
 }
 
 /**

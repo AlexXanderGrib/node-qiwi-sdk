@@ -10,6 +10,7 @@ import { AnyResponse } from "./shared.types";
 import { stringify } from "query-string";
 import { v4 as uuid } from "uuid";
 import { createHmac } from "crypto";
+import { IPersonalAPI } from "./personal.types";
 
 type StringOrNumber = string | number;
 
@@ -49,7 +50,7 @@ function mapError(error: any) {
  *
  * @see {@link https://developer.qiwi.com/ru/qiwi-wallet-personal|Описание}
  */
-export class Personal extends HttpAPI {
+export class Personal extends HttpAPI implements IPersonalAPI {
   public static readonly Currency = values.Currency;
   public static readonly IdentificationLevel = values.PersonIdentificationLevel;
   public static readonly ReceiptFormat = values.ChequeFormat;
@@ -138,15 +139,15 @@ export class Personal extends HttpAPI {
    * QIWI кошельке. Лимиты действуют как ограничения на сумму
    * определенных операций.
    *
-   * @template L
-   * @param {L} limits
+   * @template Limits
+   * @param {Limits} limits
    * @param {StringOrNumber} wallet
    */
   @MapErrorsAsync(mapError)
-  async getLimits<L extends types.LimitType[] = types.LimitType[]>(
-    limits: L,
+  async getLimits<Limits extends types.LimitType[] = types.LimitType[]>(
+    limits: Limits,
     wallet = this.walletId
-  ): Promise<types.LimitsResponse<L[number]>> {
+  ): Promise<types.LimitsResponse<Limits[number]>> {
     return await this.get(
       `qw-limits/v1/persons/${wallet}/actual-limits?${createQS({ types: limits })}`
     );
@@ -472,7 +473,7 @@ export class Personal extends HttpAPI {
     name: string,
     server?: string
   ): Promise<[PublicKey: string, SecretKey: string]> {
-    const { PublicKey, SecretKey } = await this.post(
+    const response = await this.post<any>(
       "widgets-api/api/p2p/protected/keys/create",
       {},
       JSON.stringify({
@@ -481,7 +482,10 @@ export class Personal extends HttpAPI {
       })
     );
 
-    return [PublicKey, SecretKey];
+    const publicKey: string = response.result?.publicKey ?? response.PublicKey;
+    const secretKey: string = response.result?.secretKey ?? response.SecretKey;
+
+    return [publicKey, secretKey];
   }
 
   /**
@@ -593,7 +597,7 @@ export class Personal extends HttpAPI {
    * @param {string} param Адрес сервера обработки вебхуков. **Внимание! Длина исходного (не URL-encoded) адреса сервиса обработчика не должна превышать 100 символов.**
    * @param {number} txnType Тип транзакций, по которым будут включены уведомления.. 0 - "входящие", 1 - "исходящие". 2 - "все"
    */
-  public async addWebHook(param: string, txnType: 0 | 1 | 2) {
+  async addWebHook(param: string, txnType: 0 | 1 | 2) {
     const hookResponse = await this.put<types.WebHookInfo>(`payment-notifier/v1/hooks?${createQS({ hookType: 1, param, txnType })}`);
     this.hookId = hookResponse.hookId;
     return hookResponse;
@@ -603,7 +607,7 @@ export class Personal extends HttpAPI {
    * Удаляет обработчик вебхука
    * @param {string} hookId UUID вебхука
    */
-  public removeWebHook(hookId: string = this.hookId!) {
+  removeWebHook(hookId: string = this.hookId!) {
     this.webhookKey.delete(hookId);
     this.hookId = undefined;
     return this.delete<{ response: "Hook deleted" }>(
@@ -615,7 +619,7 @@ export class Personal extends HttpAPI {
    * Получает секретный ключ вебхука
    * @param {string} hookId UUID вебхука
    */
-  public async getWebHookSecret(hookId: string = this.hookId!) {
+  async getWebHookSecret(hookId: string = this.hookId!) {
     const { key } = await this.get<{ key: string }>(
       `payment-notifier/v1/hooks/${hookId}/key`
     );
@@ -627,7 +631,7 @@ export class Personal extends HttpAPI {
    * Измененяет секретный ключ вебхука
    * @param {string} hookId UUID вебхука
    */
-  public async getNewWebHookSecret(hookId: string = this.hookId!) {
+  async getNewWebHookSecret(hookId: string = this.hookId!) {
     const { key } = await this.post<{ key: string }>(
       `payment-notifier/v1/hooks/${hookId}/newkey`
     );
@@ -639,7 +643,7 @@ export class Personal extends HttpAPI {
    * Получает данные об обработчике уведомлений
    * @link https://developer.qiwi.com/ru/qiwi-wallet-personal/#hook_active
    */
-  public async getActiveWebHook() {
+  async getActiveWebHook() {
     const hookResponse = await this.get<types.WebHookInfo>(
       "payment-notifier/v1/hooks/active"
     );
@@ -651,7 +655,7 @@ export class Personal extends HttpAPI {
    * Отправляет тестовое уведомление
    * @link https://developer.qiwi.com/ru/qiwi-wallet-personal/#hook_test
    */
-  public testActiveWebHook() {
+  testActiveWebHook() {
     return this.get<{ response: "Webhook sent" }>("payment-notifier/v1/hooks/test");
   }
 
@@ -660,7 +664,7 @@ export class Personal extends HttpAPI {
    * @param transaction Объект уведомления транзакции вебхука
    * @return {Promise<boolean | null>}
    */
-  public async checkWebHookSign(transaction: types.WebhookTransaction) {
+  async checkWebHookSign(transaction: types.WebhookTransaction) {
     const { hookId, payment, hash } = transaction;
     if (!this.webhookKey.has(hookId)) {
       try {

@@ -1253,3 +1253,244 @@ export type WebhookTransaction = {
   /** Версия API */
   version: string;
 };
+
+type StringOrNumber = string | number;
+
+export interface IPersonalAPI {
+  /**
+   * Запрос возвращает информацию о вашем профиле - наборе
+   * пользовательских данных и настроек вашего QIWI кошелька.
+   */
+  getPersonProfile(): Promise<PersonProfile>;
+
+  /**
+   * Данный запрос позволяет отправить данные для идентификации
+   * вашего QIWI кошелька.
+   *
+   * @param {types.IdentificationBase} data
+   * @param {StringOrNumber} wallet
+   */
+  setIdentification(
+    data: IdentificationBase,
+    wallet?: StringOrNumber
+  ): Promise<IdentificationResponse>;
+
+  /**
+   * Данный запрос позволяет выгрузить маскированные данные и
+   * статус идентификации своего QIWI кошелька.
+   *
+   * @param {StringOrNumber} wallet
+   */
+  getIdentification(wallet?: string): Promise<IdentificationResponse>;
+
+  /**
+   * Запрос возвращает текущие уровни лимитов по операциям в вашем
+   * QIWI кошельке. Лимиты действуют как ограничения на сумму
+   * определенных операций.
+   *
+   * @template {LimitType[]} Limits
+   * @param {Limits} limits
+   * @param {StringOrNumber} wallet
+   */
+  getLimits<Limits extends LimitType[] = LimitType[]>(
+    limits: Limits,
+    wallet?: StringOrNumber
+  ): Promise<LimitsResponse<Limits[number]>>;
+
+  /**
+   * Запрос проверяет, есть ли ограничение на исходящие платежи с
+   * QIWI Кошелька.
+   *
+   * @param {StringOrNumber} wallet
+   */
+  getRestrictions(wallet?: StringOrNumber): Promise<Restrictions>;
+
+  /**
+   * Запрос выгружает список платежей и пополнений вашего кошелька.
+   * Можно использовать фильтр по количеству, ID и дате
+   * (интервалу дат) транзакций.
+   *
+   * @param {GetPaymentHistoryParams} parameters Тело запроса
+   * @param {StringOrNumber} wallet Номер кошелька
+   */
+
+  getPaymentHistory(
+    parameters: GetPaymentHistoryParams,
+    wallet?: StringOrNumber
+  ): Promise<GetTransactionsHistoryResponse>;
+  /**
+   * Данный запрос используется для получения сводной статистики
+   * по суммам платежей за заданный период.
+   *
+   * @param {GetPaymentHistoryTotalParams} parameters
+   * @param {StringOrNumber} wallet
+   */
+
+  getPaymentHistoryTotal(
+    parameters: GetPaymentHistoryTotalParams,
+    wallet?: StringOrNumber
+  ): Promise<GetPaymentHistoryTotalResponse>;
+  /**
+   * Запрос используется для получения информации по определенной
+   * транзакции из вашей истории платежей.
+   *
+   * @param {number} transactionId Номер транзакции
+   * @param {TransactionType} type Тип транзакции
+   */
+
+  getTransaction(transactionId: number, type: TransactionType): Promise<Transaction>;
+
+  /**
+   *
+   * @param {StringOrNumber} transactionId  номер транзакции из {@link https://developer.qiwi.com/ru/qiwi-wallet-personal/#history_data|истории платежей} (параметр data[].txnId в ответе)
+   * @param {TransactionType} type тип транзакции из {@link https://developer.qiwi.com/ru/qiwi-wallet-personal/#history_data|истории платежей} (параметр data[].type в ответе)
+   * @param {ChequeFormat} format тип файла, в который сохраняется квитанция. Допустимые значения: `JPEG`, `PDF`
+   */
+  getTransactionCheque(
+    transactionId: StringOrNumber,
+    type: TransactionType,
+    format?: ChequeFormat
+  ): Promise<Buffer>;
+
+  /**
+   *
+   * @param {number} transactionId  номер транзакции из {@link https://developer.qiwi.com/ru/qiwi-wallet-personal/#history_data|истории платежей} (параметр data[].txnId в ответе)
+   * @param {TransactionType} type тип транзакции из {@link https://developer.qiwi.com/ru/qiwi-wallet-personal/#history_data|истории платежей} (параметр data[].type в ответе)
+   * @param {string} email Адрес для отправки электронной квитанции
+   */
+  sendTransactionCheque(
+    transactionId: number,
+    type: TransactionType,
+    email: string
+  ): Promise<"">;
+
+  /**
+   * Успешный ответ содержит JSON-массив счетов вашего QIWI
+   * Кошелька для фондирования платежей и текущие балансы счетов
+   *
+   * @param {StringOrNumber} wallet Номер кошелька
+   */
+  getAccounts(wallet: StringOrNumber): Promise<GetAccountsResponse["accounts"]>;
+
+  /**
+   * Успешный JSON-ответ содержит данные о счетах, которые можно
+   * создать
+   *
+   * @param {StringOrNumber} wallet Номер кошелька
+   */
+  getAccountOffers(wallet: StringOrNumber): Promise<GetAccountOffersResponse>;
+
+  /**
+   * Создаёт новый счёт по параметру `alias`
+   * Успешный ответ возвращает пустую строку
+   * @param {string} alias Псевдоним нового счета (см. {@link https://developer.qiwi.com/ru/qiwi-wallet-personal/?http#funding_offer|запрос доступных счетов})
+   * @param {StringOrNumber} wallet Номер кошелька
+   */
+  createAccount(alias: string, wallet?: StringOrNumber): Promise<"">;
+
+  /**
+   * Устанавливает счёт по умолчанию
+   * Успешный ответ возвращает пустую строку
+   * @param {string} alias Псевдоним счета (см. {@link https://developer.qiwi.com/ru/qiwi-wallet-personal/?http#funding_offer|запрос доступных счетов})
+   * @param {StringOrNumber} wallet Номер кошелька
+   */
+
+  setDefaultAccount(alias: string, wallet?: StringOrNumber): Promise<"">;
+
+  /**
+   *
+   * Получает сумму комиссии по заданным реквизитам
+   *
+   * @param {number} provider ID Провайдера у QIWI
+   * @param {string} account ID получателя у провайдера
+   * @param {number} amount Сумма
+   * @return {Promise<number>}
+   */
+
+  getCommission(provider: number, account: string, amount: number): Promise<number>;
+
+  /**
+   * Данный метод создаёт ссылку на предзаполненную форму
+   *
+   * @param {number} provider ID провайдера
+   * @param {FormUrlOptions} options
+   * @return {string}
+   */
+
+  createFormUrl(provider: number | Recipients, options: FormUrlOptions): string;
+
+  /**
+   * Более читаемая версия метода {@link pay}
+   *
+   * [Документация QIWI по методу оплаты](https://developer.qiwi.com/ru/qiwi-wallet-personal/#payments)
+   *
+   * @param {Pay2Params} params Параметры платежа
+   * @return {Promise<PaymentResponse>}
+   */
+
+  pay2(options: Pay2Params): Promise<PaymentResponse>;
+
+  /**
+   * Создаёт пару ключей для взаимодействия с P2P BILLS API
+   *
+   * @param {string} name Название связки ключей
+   * @param {string=} server URL сервера для отправки уведомлений
+   *
+   * @return {string[]} Массив, где - [0=Публичный ключ, 1=Секретный ключ]
+   *
+   * @example
+   *
+   * const [PublicKey, SecretKey] = await createP2PKeyPair('my-key-pair');
+   */
+
+  createP2PKeyPair(
+    name: string,
+    server?: string
+  ): Promise<[PublicKey: string, SecretKey: string]>;
+
+  /**
+   * Создаёт токен с увеличенным сроком действия (10 лет)
+   *
+   * @see {@link https://developer.qiwi.com/ru/qiwi-wallet-personal-advanced/?http#intro|Документация}
+   */
+  createOauthToken(): Promise<PrettyTokenResponse<IPersonalAPI>>;
+
+  /**
+   * Возвращает список карт
+   *
+   * @return {Promise<CardResponse>}
+   */
+  getCards(): Promise<CardResponse[]>;
+
+  /**
+   * Блокирует карту
+   *
+   * @param {StringOrNumber} cardId
+   * @param {StringOrNumber} wallet
+
+   * @return {Promise<*>}
+   */
+  blockCard(cardId: StringOrNumber, wallet?: StringOrNumber): Promise<any>;
+
+  /**
+   * Разблокирует карту
+   *
+   * @param {StringOrNumber} cardId
+   * @param {StringOrNumber} wallet
+   * @return {Promise<CardUnblockResponse>}
+   */
+  unblockCard(
+    cardId: StringOrNumber,
+    wallet?: StringOrNumber
+  ): Promise<CardUnblockResponse>;
+
+  /**
+   * Получает реквизиты карты
+   *
+   * @param {StringOrNumber} cardId
+   * @return {Promise<CardRequisitesResponse>}
+   */
+  getCardRequisites(cardId: StringOrNumber): Promise<CardRequisitesResponse>;
+
+  renameCard(cardId: StringOrNumber, alias: string): Promise<CardRenameResponse>;
+}
