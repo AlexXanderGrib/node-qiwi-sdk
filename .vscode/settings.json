@@ -1,6 +1,15 @@
 {
+  "editor.formatOnSave": true,
   "cSpell.words": [
+    "коммиты",
+    "qiwi",
     "codecov",
-    "PUBK"
-  ]
+    "PUBK",
+    "QIWI"
+  ],
+  "editor.rulers": [
+    65,
+    85,
+    105
+  ],
 }
