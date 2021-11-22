@@ -1,5 +1,5 @@
 /* eslint-disable no-invalid-this */
-import { createHmac } from "crypto";
+import { createHmac, timingSafeEqual } from "crypto";
 import { MapErrorsAsync } from "sweet-decorators";
 import { v4 as uuid } from "uuid";
 import { createQS, formatDate } from "./shared";
@@ -253,9 +253,9 @@ export class P2P extends HttpAPI implements IP2PApi {
       body.siteId,
       body.status.value
     ].join("|");
-    const hash = createHmac("sha256", this.secretKey).update(data).digest("hex");
+    const hash = createHmac("sha256", this.secretKey).update(data).digest();
 
-    return signature === hash;
+    return timingSafeEqual(Buffer.from(signature, "hex"), hash);
   }
 
   /**

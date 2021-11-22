@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
 /* eslint-disable no-invalid-this */
 import { MapErrorsAsync, MapErrors } from "sweet-decorators";
 import { createQS } from "./shared";
@@ -9,7 +10,7 @@ import * as values from "./personal.types";
 import { AnyResponse } from "./shared.types";
 import { stringify } from "query-string";
 import { v4 as uuid } from "uuid";
-import { createHmac } from "crypto";
+import { createHmac, timingSafeEqual } from "crypto";
 import { IPersonalAPI } from "./personal.types";
 
 type StringOrNumber = string | number;
@@ -583,7 +584,7 @@ export class Personal extends HttpAPI implements IPersonalAPI {
    *
    * @param {StringOrNumber} cardId
    * @param {StringOrNumber} alias
-   * @return {types.CardRenameResponse}
+   * @return {Promise<types.CardRenameResponse>}
    */
   renameCard(
     cardId: StringOrNumber,
@@ -594,11 +595,21 @@ export class Personal extends HttpAPI implements IPersonalAPI {
 
   /**
    * Регистрирует обработчик вебхука
-   * @param {string} param Адрес сервера обработки вебхуков. **Внимание! Длина исходного (не URL-encoded) адреса сервиса обработчика не должна превышать 100 символов.**
+   * @param {string} parameter Адрес сервера обработки вебхуков. **Внимание! Длина исходного (не URL-encoded) адреса сервиса обработчика не должна превышать 100 символов.**
    * @param {number} txnType Тип транзакций, по которым будут включены уведомления.. 0 - "входящие", 1 - "исходящие". 2 - "все"
+   * @return {Promise<types.WebHookInfo>}
    */
-  async addWebHook(param: string, txnType: 0 | 1 | 2) {
-    const hookResponse = await this.put<types.WebHookInfo>(`payment-notifier/v1/hooks?${createQS({ hookType: 1, param, txnType })}`);
+  async addWebHook(
+    parameter: string,
+    txnType: 0 | 1 | 2
+  ): Promise<types.WebHookInfo> {
+    const hookResponse = await this.put<types.WebHookInfo>(
+      `payment-notifier/v1/hooks?${createQS({
+        hookType: 1,
+        param: parameter,
+        txnType
+      })}`
+    );
     this.hookId = hookResponse.hookId;
     return hookResponse;
   }
@@ -606,8 +617,9 @@ export class Personal extends HttpAPI implements IPersonalAPI {
   /**
    * Удаляет обработчик вебхука
    * @param {string} hookId UUID вебхука
+   * @return {Promise<*>}
    */
-  removeWebHook(hookId: string = this.hookId!) {
+  removeWebHook(hookId: string = this.hookId!): Promise<any> {
     this.webhookKey.delete(hookId);
     this.hookId = undefined;
     return this.delete<{ response: "Hook deleted" }>(
@@ -618,8 +630,9 @@ export class Personal extends HttpAPI implements IPersonalAPI {
   /**
    * Получает секретный ключ вебхука
    * @param {string} hookId UUID вебхука
+   * @return {Promise<string>}
    */
-  async getWebHookSecret(hookId: string = this.hookId!) {
+  async getWebHookSecret(hookId: string = this.hookId!): Promise<string> {
     const { key } = await this.get<{ key: string }>(
       `payment-notifier/v1/hooks/${hookId}/key`
     );
@@ -630,8 +643,9 @@ export class Personal extends HttpAPI implements IPersonalAPI {
   /**
    * Измененяет секретный ключ вебхука
    * @param {string} hookId UUID вебхука
+   * @return {Promise<string>}
    */
-  async getNewWebHookSecret(hookId: string = this.hookId!) {
+  async getNewWebHookSecret(hookId: string = this.hookId!): Promise<string> {
     const { key } = await this.post<{ key: string }>(
       `payment-notifier/v1/hooks/${hookId}/newkey`
     );
@@ -640,10 +654,10 @@ export class Personal extends HttpAPI implements IPersonalAPI {
   }
 
   /**
-   * Получает данные об обработчике уведомлений
-   * @link https://developer.qiwi.com/ru/qiwi-wallet-personal/#hook_active
+   *
+   * @return {Promise<types.WebHookInfo>}
    */
-  async getActiveWebHook() {
+  async getActiveWebHook(): Promise<types.WebHookInfo> {
     const hookResponse = await this.get<types.WebHookInfo>(
       "payment-notifier/v1/hooks/active"
     );
@@ -654,29 +668,39 @@ export class Personal extends HttpAPI implements IPersonalAPI {
   /**
    * Отправляет тестовое уведомление
    * @link https://developer.qiwi.com/ru/qiwi-wallet-personal/#hook_test
+   *
+   * @return {Promise<*>}
    */
-  testActiveWebHook() {
+  testActiveWebHook(): Promise<any> {
     return this.get<{ response: "Webhook sent" }>("payment-notifier/v1/hooks/test");
   }
 
   /**
    * Проверяет подпись уведомления вебхука
-   * @param transaction Объект уведомления транзакции вебхука
-   * @return {Promise<boolean | null>}
+   * @param {types.WebhookTransaction} transaction Объект уведомления транзакции вебхука
+   * @return {Promise<boolean | undefined>}
    */
-  async checkWebHookSign(transaction: types.WebhookTransaction) {
+  async checkWebHookSign(
+    transaction: types.WebhookTransaction
+  ): Promise<boolean | undefined> {
     const { hookId, payment, hash } = transaction;
     if (!this.webhookKey.has(hookId)) {
       try {
         await this.getWebHookSecret(hookId);
-      } catch (err) {
-        return null;
+      } catch {
+        return;
       }
     }
 
     const signPayload = payment.signFields
       .split(",")
-      .map((p) => p.split(".").reduce((p: any, c) => p?.[c] || null, payment))
+      .map((p) =>
+        // eslint-disable-next-line unicorn/no-array-reduce
+        p.split(".").reduce((p: any, c) => {
+          // eslint-disable-next-line security/detect-object-injection
+          return p?.[c] || "null";
+        }, payment)
+      )
       .join("|");
 
     const hash2 = createHmac(
@@ -684,8 +708,8 @@ export class Personal extends HttpAPI implements IPersonalAPI {
       Buffer.from(this.webhookKey.get(hookId)!, "base64")
     )
       .update(signPayload)
-      .digest("hex");
+      .digest();
 
-    return hash === hash2;
+    return timingSafeEqual(Buffer.from(hash), hash2);
   }
 }
