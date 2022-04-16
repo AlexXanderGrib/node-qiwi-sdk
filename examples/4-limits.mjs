@@ -1,13 +1,11 @@
 // import QIWI from "qiwi-sdk";
-import QIWI from "..";
+import { Personal, LimitType } from "..";
 
-const qp = new QIWI.Personal(process.env.QIWI_TOKEN, process.env.QIWI_WALLET);
+const qp = new Personal(process.env.QIWI_TOKEN, process.env.QIWI_WALLET);
 
 async function main() {
   // 2.0
-  const { limits } = await qp.getLimits([
-    Personal.LimitType.TURNOVER
-  ]);
+  const { limits } = await qp.getLimits([LimitType.TURNOVER]);
 
   const [limit] = limits.RU;
 

@@ -10,10 +10,16 @@ export enum BillStatus {
   EXPIRED = "EXPIRED"
 }
 
+export type BillStatusPlain = keyof typeof BillStatus;
+export type BillStatusAny = BillStatus | BillStatusPlain;
+
 export enum BillCurrency {
   RUB = "RUB",
   KZT = "KZT"
 }
+
+export type BillCurrencyPlain = keyof typeof BillCurrency;
+export type BillCurrencyAny = BillCurrency | BillCurrencyPlain;
 
 export type BillCreationRequest = {
   /** Данные о сумме счета */
@@ -84,7 +90,7 @@ export type BillStatusData = {
 
   status: {
     /** Текущий статус счета */
-    value: BillStatus;
+    value: BillStatusAny;
     /** Дата обновления статуса */
     changedDateTime: string;
   };
@@ -183,5 +189,7 @@ export interface IP2PApi {
     parameters: Omit<BillFormParams, "billId" | "publicKey">,
     billId?: string
   ): string;
+  getBillStatus(billId: string): Promise<BillStatusData>;
+  /** @deprecated */
   billStatus(billId: string): Promise<BillStatusData>;
 }

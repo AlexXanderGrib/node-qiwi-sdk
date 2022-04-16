@@ -1,7 +1,7 @@
+import axios from "axios";
 import { createHmac, randomBytes } from "crypto";
 import { config } from "dotenv";
 import { Application, ErrorRequestHandler } from "express";
-import fetch from "node-fetch";
 import { v4 as uuid } from "uuid";
 import { BillCurrency, BillStatusData, P2P } from "..";
 import { P2PPaymentError } from "../services/p2p";
@@ -26,7 +26,7 @@ describe(P2P.name, () => {
   test("Can be initialized", () => expect(qiwi).toBeTruthy());
 
   test("Can create Bill", async () => {
-    const date = P2P.formatLifetime(1 + Math.round(Math.random() * 39));
+    const date = P2P.formatLifetimeDays(1 + Math.round(Math.random() * 39));
 
     const response = await qiwi.createBill(
       {
@@ -62,7 +62,7 @@ describe(P2P.name, () => {
   });
 
   test("Can get bill status", async () => {
-    const response = await qiwi.billStatus(billId);
+    const response = await qiwi.getBillStatus(billId);
 
     expect(typeof response?.payUrl).toBe("string");
 
@@ -82,7 +82,7 @@ describe(P2P.name, () => {
   });
 
   test("Cant create Bill date back", async () => {
-    const date = P2P.formatLifetime(-Math.round(Math.random() * 40));
+    const date = P2P.formatLifetimeDays(-1);
 
     try {
       await qiwi.createBill({
@@ -140,7 +140,7 @@ describe(P2P.name, () => {
 
       const data = {
         amount: { currency: BillCurrency.RUB, value: 1 },
-        expirationDateTime: P2P.formatLifetime(1)
+        expirationDateTime: P2P.formatLifetimeDays(1)
       };
 
       [bill1, bill2] = await Promise.all([
@@ -163,7 +163,7 @@ describe(P2P.name, () => {
     /**
      *
      * @param {BillStatusData} bill
-     * @param {boolean=} valid
+     * @param {boolean} [valid]
      * @return {Promise<Response>}
      */
     function sendNotification(bill: BillStatusData, valid = true) {
@@ -180,14 +180,18 @@ describe(P2P.name, () => {
         ].join("|")
       );
 
-      return fetch(url, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "X-Api-Signature-SHA256": hash.digest("hex")
-        },
-        body: JSON.stringify({ bill })
-      });
+      return axios
+        .post(url, JSON.stringify({ bill }), {
+          headers: {
+            "Content-Type": "application/json",
+            "X-Api-Signature-SHA256": hash.digest("hex")
+          }
+        })
+        .catch((error) =>
+          axios.isAxiosError(error) && error.response
+            ? error.response
+            : Promise.reject(error)
+        );
     }
 
     test("with invalid data", async () => {
@@ -208,7 +212,7 @@ describe(P2P.name, () => {
 
     test("with valid data", async () => {
       const response = await sendNotification(bill1);
-      const json = await response.json();
+      const json = response.data;
 
       expect(mock).toBeCalledWith({ type: "success", body: bill1 });
       expect(json).toEqual(bill1);
@@ -221,7 +225,7 @@ describe(P2P.name, () => {
 
     test("with not repeating valid data", async () => {
       const response = await sendNotification(bill2);
-      const json = await response.json();
+      const json = response.data;
 
       expect(mock).toBeCalledWith({ type: "success", body: bill2 });
       expect(json).toEqual(bill2);

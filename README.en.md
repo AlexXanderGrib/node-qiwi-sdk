@@ -30,7 +30,7 @@
 **Using `NPM`**
 
 ```shell
-npm i -S qiwi-sdk
+npm i qiwi-sdk
 ```
 
 **Using `Yarn`**
@@ -57,20 +57,24 @@ import { P2P, Personal, Detector } from "qiwi-sdk";
 const { P2P, Personal, Detector } = require("qiwi-sdk");
 
 // ESM
-import QIWI from "qiwi-sdk";
-const { P2P, Personal, Detector } = QIWI;
+import { P2P, Personal, Detector } from "qiwi-sdk";
 ```
 
 ### Choosing API
 
 ```typescript
 // Personal - API for working with individual wallet
+// Documentation:
+// https://developer.qiwi.com/ru/qiwi-wallet-personal
 const qiwi = new Personal(process.env.QIWI_TOKEN, process.env.QIWI_WALLET);
 
 // P2P - convenient api for issuing bills
+// Documentation:
+// https://developer.qiwi.com/ru/p2p-payments
 const p2p = new P2P(process.env.QIWI_SECRET_KEY, process.env.QIWI_PUBLIC_KEY);
 
 // Detector - API for getting Provider Id by phone or card number
+// Contains only one method
 const detector = new Detector();
 ```
 

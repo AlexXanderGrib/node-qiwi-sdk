@@ -1,7 +1,7 @@
 import { stringify } from "query-string";
 import { ExtendedError } from "../error";
 import { HttpAPI } from "../http";
-import { AnyResponse } from "./shared.types";
+import type { AnyResponse } from "./shared.types";
 
 /**
  * Ошибка, которую выбрасывает персональное API в случае
@@ -13,7 +13,7 @@ export class DetectorError extends ExtendedError {}
  * API получения ID провайдера QIWI по Номеру Телефона/Карте
  */
 export class Detector extends HttpAPI {
-  protected readonly API_URL = "https://qiwi.com";
+  protected readonly API_URL = "https://qiwi.com/";
   protected readonly API_HEADERS = {
     "Content-Type": "application/x-www-form-urlencoded",
     Accept: "application/json"
@@ -52,6 +52,9 @@ export class Detector extends HttpAPI {
    * Используется для переводов на карту
    *
    * @param {string} cardNumber
+   *
+   * @deprecated После ухода VISA и MasterCard из РФ стал работать хуже.
+   * Советую использовать константу `Recipients.AnyRusCard` вместо вызова метода.
    */
   async getCardProvider(cardNumber: string): Promise<number> {
     const response = await this.post<any>(

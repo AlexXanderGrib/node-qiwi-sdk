@@ -16,6 +16,11 @@ export enum PersonIdentificationLevel {
   FULL = "FULL"
 }
 
+export type PersonIdentificationLevelPlain = keyof typeof PersonIdentificationLevel;
+export type PersonIdentificationLevelAny =
+  | PersonIdentificationLevel
+  | PersonIdentificationLevelPlain;
+
 export enum TransactionType {
   /** Все операции */
   ALL = "ALL",
@@ -27,6 +32,9 @@ export enum TransactionType {
   QIWI_CARD = "QIWI_CARD"
 }
 
+export type TransactionTypePlain = keyof typeof TransactionType;
+export type TransactionTypeAny = TransactionType | TransactionTypePlain;
+
 /** Статус платежа */
 export enum TransactionStatus {
   /** Платеж проводится */
@@ -36,6 +44,9 @@ export enum TransactionStatus {
   /** Ошибка платежа */
   ERROR = "ERROR"
 }
+
+export type TransactionStatusPlain = keyof typeof TransactionStatus;
+export type TransactionStatusAny = TransactionStatus | TransactionStatusPlain;
 
 export enum Currency {
   /** Рубли */
@@ -47,6 +58,9 @@ export enum Currency {
   /** Тенге */
   KZT = 398
 }
+
+export type CurrencyPlain = keyof typeof Currency;
+export type CurrencyAny = Currency | CurrencyPlain;
 
 export type MoneyAmount = {
   /** Сумма */
@@ -61,7 +75,25 @@ export enum ChequeFormat {
   PDF = "PDF"
 }
 
+export type ChequeFormatPlain = keyof typeof ChequeFormat;
+export type ChequeFormatAny = ChequeFormat | ChequeFormatPlain;
+
 export enum Recipients {
+  /** МТС */
+  MTS = 1,
+  /** Билайн */
+  Beeline = 2,
+  /** Мегафон */
+  MegaFon = 3,
+  /** Теле2 */
+  Tele2 = 42,
+  /** Йота (ООО "Скартел") */
+  Yota = 25_598,
+  /** Тинькофф Мобайл */
+  TinkoffMobile = 32_596,
+  /** Сбер Мобайл */
+  SberMobile = 34_050,
+
   /** Альфа Банк */
   AlfaBank = 464,
   /** Тинькофф Банк */
@@ -101,6 +133,10 @@ export enum Recipients {
   /** Перевод на QIWI-Кошелёк по никнейму */
   QIWINickname = 99_999,
 
+  /** Перевод на любую карту РФ */
+  AnyRusCard = 31_873,
+  AnyKzCard = 27_292,
+
   /**
    * Перевод на QIWI-Кошелёк по никнейму
    * @deprecated Переименовано в `QIWINickname`
@@ -132,7 +168,11 @@ export enum Recipients {
   YandexMoney = 26_476,
 
   /** Перевод в YooMoney (бывшие Яндекс.Деньги) */
-  YooMoney = 26_476
+  YooMoney = 26_476,
+  YooMoneyKz = 36_459,
+
+  UnionPayMoneyExpress = 26_340,
+  Contact = 26_580
 }
 
 export type PersonProfile = {
@@ -341,6 +381,36 @@ export type Restrictions = {
   restrictionDescription: string;
 }[];
 
+export enum PaymentHistorySource {
+  /**
+   * Рублевый счет кошелька
+   */
+  QW_RUB = "QW_RUB",
+  /**
+   * Счет кошелька в долларах
+   */
+  QW_USD = "QW_USD",
+  /**
+   * Счет кошелька в евро
+   */
+  QW_EUR = "QW_EUR",
+  /**
+   * Привязанные и непривязанные к кошельку банковские
+   * карты,
+   */
+  CARD = "CARD",
+  /**
+   * Счет мобильного оператора. Если не указан, учитываются
+   * все источники
+   */
+  MK = "MK"
+}
+
+export type PaymentHistorySourcePlain = keyof typeof PaymentHistorySource;
+export type PaymentHistorySourceAny =
+  | PaymentHistorySource
+  | PaymentHistorySourcePlain;
+
 export type GetPaymentHistoryParamsBase = {
   /**
    * Число платежей в ответе, для разбивки отчета на страницы.
@@ -363,7 +433,7 @@ export type GetPaymentHistoryParamsBase = {
    *
    * По умолчанию `ALL`
    */
-  operation?: TransactionType;
+  operation?: TransactionTypeAny;
 
   /**
    * Список источников платежа, для фильтра. Каждый источник
@@ -383,7 +453,7 @@ export type GetPaymentHistoryParamsBase = {
    * `MK` - счет мобильного оператора. Если не указан, учитываются
    * все источники
    */
-  sources?: ("QW_RUB" | "QW_USD" | "QW_EUR" | "CARD" | "MK")[];
+  sources?: PaymentHistorySourceAny[];
 };
 
 export type GetPaymentHistoryParamsStartEnd = {
@@ -616,9 +686,12 @@ export enum LimitType {
   WITHDRAW_CASH = "WITHDRAW_CASH"
 }
 
+export type LimitTypePlain = keyof typeof LimitType;
+export type LimitTypeAny = LimitType | LimitTypePlain;
+
 export type Limit<
   Cur extends keyof typeof Currency = "RUB",
-  Type extends LimitType = LimitType
+  Type extends LimitTypeAny = LimitTypeAny
 > = {
   /** Валюта операций */
   currency: Cur;
@@ -648,7 +721,7 @@ export type Limit<
   type: Type;
 };
 
-export type LimitsResponse<RequestedLimits extends LimitType = LimitType> = {
+export type LimitsResponse<RequestedLimits extends LimitTypeAny = LimitTypeAny> = {
   /** Описание лимитов */
   limits: {
     /** Массив лимитов на операции */
@@ -777,6 +850,8 @@ export type PaymentResponse = {
   comment?: string;
 };
 
+export type LockableField = "account" | "comment" | "sum";
+
 export type FormUrlOptions = {
   /** Сумма платежа в рублях */
   amount?: number;
@@ -814,7 +889,7 @@ export type FormUrlOptions = {
    *
    * Пример (неактивное поле суммы платежа): `blocked[0]=sum`
    */
-  blocked?: ("account" | "comment" | "sum")[];
+  blocked?: LockableField[];
 
   /**
    * **Параметр используется только для ID=99999**. Значение
@@ -873,6 +948,9 @@ export enum CardStatus {
   UNKNOWN = "UNKNOWN"
 }
 
+export type CardStatusPlain = keyof typeof CardStatus;
+export type CardStatusAny = CardStatus | CardStatusPlain;
+
 type ImageObject = {
   /** URL изображения */
   url: string;
@@ -891,6 +969,8 @@ type ImageObject = {
 };
 
 type KVObject = { name: string; value: string };
+
+type CardType = "VIRTUAL" | "PLASTIC";
 
 export type CardResponse = {
   /** Общая информация о карте */
@@ -911,7 +991,7 @@ export type CardResponse = {
     cardExpire: string;
 
     /** Вид карты */
-    cardType: "VIRTUAL" | "PLASTIC";
+    cardType: CardType;
 
     /** [Название карты](https://developer.qiwi.com/ru/qiwi-wallet-personal/?http#qvc-rename) в интерфейсе сайта [qiwi.com](https://qiwi.com/) */
     cardAlias: string;
@@ -1008,15 +1088,18 @@ export enum CardActionStatus {
   CONFIRMATION_LIMIT_EXCEED = "CONFIRMATION_LIMIT_EXCEED"
 }
 
+export type CardActionStatusPlain = keyof typeof CardActionStatus;
+export type CardActionStatusAny = CardActionStatus | CardActionStatusPlain;
+
 export type CardUnblockResponse = {
-  status: CardActionStatus;
+  status: CardActionStatusAny;
   nextConfirmationRequest: null;
   confirmationId: null;
   operationId: null;
 };
 
 export type CardRequisitesResponse = {
-  status: CardActionStatus;
+  status: CardActionStatusAny;
 
   /** CVV карты */
   cvv: string;
@@ -1138,7 +1221,7 @@ export type Pay2Params = {
 
   /**
    * Номер счёта в указанной платёжной системе (у `provider`'а)
-   * Если он не задан, но следует указывать номер телефона(киви)
+   * Если он не задан, то следует указывать номер телефона(киви)
    * получателя.
    *
    * Записывается в `fields.account`, можно поставить `""`, если
@@ -1288,11 +1371,11 @@ export interface IPersonalAPI {
    * QIWI кошельке. Лимиты действуют как ограничения на сумму
    * определенных операций.
    *
-   * @template {LimitType[]} Limits
+   * @template {LimitTypeAny[]} Limits
    * @param {Limits} limits
    * @param {StringOrNumber} wallet
    */
-  getLimits<Limits extends LimitType[] = LimitType[]>(
+  getLimits<Limits extends LimitTypeAny[] = LimitTypeAny[]>(
     limits: Limits,
     wallet?: StringOrNumber
   ): Promise<LimitsResponse<Limits[number]>>;

@@ -1,5 +1,5 @@
-import fetch, { RequestInit } from "node-fetch";
 import AbortController from "abort-controller";
+import axios, { Method } from "axios";
 import querystring from "query-string";
 import { ErrorWithCode, ExtendedError } from "./error";
 
@@ -31,7 +31,7 @@ export class HttpError extends ErrorWithCode<number> {
   }
 }
 
-export type Agent = RequestInit["agent"];
+export type Agent = any;
 
 /**
  * Ошибка раскодировки ответа сервера
@@ -56,41 +56,44 @@ export class HttpAPI {
    *
    * @param {string} url Relative to API url path
    * @param {string} method Http request method
-   * @param {Record<string, string>} headers Additional headers to API
-   * @param {string?} body Request body
+   * @param {Record<string, string>} [headers] Additional headers to API
+   * @param {string?} [body] Request body
    *
    * @return {Promise<*>} Decoded response
    */
   protected async _request(
     url: string,
-    method: string,
+    method: Method,
     headers: Record<string, string>,
     body?: string | undefined
   ): Promise<any> {
     const absoluteUrl =
       url.startsWith("https://") || url.startsWith("http://")
         ? url
-        : `${this.API_URL}///${url}`.replace(/\/{3,}/g, "/");
-    //                    ^^^ 3 cлеша не встречаются в URL, поэтому их можно
-    // использовать как костыль для нормализации. Чтобы было не GET //path, а GET /path
+        : new URL(url, this.API_URL).toString();
 
     const abortController = new AbortController();
     const timeout = setTimeout(() => abortController.abort(), this.API_TIMEOUT);
 
-    const response = await fetch(absoluteUrl, {
+    const allHeaders = { ...this.API_HEADERS, ...headers };
+    const response = await axios(absoluteUrl, {
       method,
-      headers: { ...this.API_HEADERS, ...headers },
-      body,
-      agent: this.agent,
-      signal: abortController.signal
+      headers: allHeaders,
+      data: body,
+      httpsAgent: this.agent,
+      httpAgent: this.agent,
+      signal: abortController.signal,
+      timeout: this.API_TIMEOUT,
+      responseType: "arraybuffer",
+      validateStatus: () => true
     }).finally(() => clearTimeout(timeout));
 
     if (method.toLowerCase() === "head") {
       return undefined;
     }
 
-    const contentType = response.headers.get("content-type")?.split(";")[0];
-    const responseBuffer = await response.buffer();
+    const contentType = response.headers["content-type"]?.split(";")[0];
+    const responseBuffer = Buffer.from(response.data);
 
     if (!this.API_OK_RESPONSE_CODES.includes(response.status)) {
       throw new HttpError(response.status, responseBuffer.toString());
@@ -116,7 +119,7 @@ export class HttpAPI {
    * Делает GET запрос и парсит ответ
    * @template T
    * @param {string} url URL запроса
-   * @param {Record<string, string>=} headers Заголовки запроса
+   * @param {Record<string, string>=} [headers] Заголовки запроса
    * @return {Promise<T>}
    */
   protected async get<T = any>(
@@ -130,7 +133,7 @@ export class HttpAPI {
    * Делает HEAD запрос и парсит ответ
    * @template T
    * @param {string} url URL запроса
-   * @param {Record<string, string>=} headers Заголовки запроса
+   * @param {Record<string, string>=} [headers] Заголовки запроса
    * @return {Promise<T>}
    */
   protected async head<T>(
@@ -145,8 +148,8 @@ export class HttpAPI {
    * @template T
    *
    * @param {string} url URL запроса
-   * @param {Record<string, string>=} headers Заголовки запроса
-   * @param {string=} body Тело запроса
+   * @param {Record<string, string>=} [headers] Заголовки запроса
+   * @param {string=} [body] Тело запроса
    *
    * @return {Promise<T>}
    */
@@ -163,8 +166,8 @@ export class HttpAPI {
    * @template T
    *
    * @param {string} url URL запроса
-   * @param {Record<string, string>=} headers Заголовки запроса
-   * @param {string=} body Тело запроса
+   * @param {Record<string, string>=} [headers] Заголовки запроса
+   * @param {string=} [body] Тело запроса
    *
    * @return {Promise<T>}
    */
@@ -181,8 +184,8 @@ export class HttpAPI {
    * @template T
    *
    * @param {string} url URL запроса
-   * @param {Record<string, string>=} headers Заголовки запроса
-   * @param {string=} body Тело запроса
+   * @param {Record<string, string>=} [headers] Заголовки запроса
+   * @param {string=} [body] Тело запроса
    *
    * @return {Promise<T>}
    */
@@ -199,8 +202,8 @@ export class HttpAPI {
    * @template T
    *
    * @param {string} url URL запроса
-   * @param {Record<string, string>=} headers Заголовки запроса
-   * @param {string=} body Тело запроса
+   * @param {Record<string, string>=} [headers] Заголовки запроса
+   * @param {string=} [body] Тело запроса
    *
    * @return {Promise<T>}
    */

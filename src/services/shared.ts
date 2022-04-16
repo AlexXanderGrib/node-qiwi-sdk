@@ -1,5 +1,5 @@
 import qs from "query-string";
-import { AnyResponse } from "./shared.types";
+import type { AnyResponse } from "./shared.types";
 
 /**
  * Превращает число в двухзначную строку

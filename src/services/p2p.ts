@@ -16,7 +16,6 @@ import {
 import { AnyResponse } from "./shared.types";
 import { RequestHandler } from "express";
 import { URL } from "url";
-import { IP2PApi } from "..";
 
 /**
  * Ошибка, которую выбрасывает P2P API в случае неправильного
@@ -90,7 +89,7 @@ function promise<T extends (...parameters: any) => any>(function_: T) {
  *
  * @see {@link https://developer.qiwi.com/ru/p2p-payments|Описание}
  */
-export class P2P extends HttpAPI implements IP2PApi {
+export class P2P extends HttpAPI implements types.IP2PApi {
   public static readonly BillStatus = BillStatus;
   public static readonly Currency = BillCurrency;
   public static readonly PaySource = BillPaySource;
@@ -104,7 +103,7 @@ export class P2P extends HttpAPI implements IP2PApi {
     "User-Agent": USER_AGENT
   };
 
-  protected readonly API_URL = "https://api.qiwi.com/partner/bill/v1/bills";
+  protected readonly API_URL = "https://api.qiwi.com/partner/bill/v1/bills/";
 
   /**
    *
@@ -154,13 +153,13 @@ export class P2P extends HttpAPI implements IP2PApi {
    * **Для тестирования и отладки сервиса рекомендуем выставлять и оплачивать счета суммой 1 рубль.**
    *
    * @param {types.BillCreationRequest} data Сформированный запрос на создание счёта
-   * @param {string=} id Свой ID счёта. По умолчанию генерируется UUID
+   * @param {string} [id] Свой ID счёта. По умолчанию генерируется UUID
    * @return {Promise<types.BillStatusData>}
    */
   @MapErrorsAsync(mapErrors)
   public createBill(
     data: types.BillCreationRequest,
-    id = this._generateId()
+    id: string = this._generateId()
   ): Promise<types.BillStatusData> {
     const patchedBill = {
       ...data,
@@ -191,11 +190,26 @@ export class P2P extends HttpAPI implements IP2PApi {
    * Метод позволяет проверить статус перевода по счету. Рекомендуется
    * его использовать после получения уведомления о переводе.
    *
+   * @deprecated Используйте метод {@link getBillStatus}
    * @param {string} billId Уникальный идентификатор счета в вашей системе.
    * @return {Promise<types.BillStatusData>} Объект счёта
    */
   @MapErrorsAsync(mapErrors)
   public billStatus(billId: string): Promise<types.BillStatusData> {
+    return this.get(billId);
+  }
+
+  /**
+   * ### Проверка статуса перевода по счету
+   *
+   * Метод позволяет проверить статус перевода по счету. Рекомендуется
+   * его использовать после получения уведомления о переводе.
+   *
+   * @param {string} billId Уникальный идентификатор счета в вашей системе.
+   * @return {Promise<types.BillStatusData>} Объект счёта
+   */
+  @MapErrorsAsync(mapErrors)
+  public getBillStatus(billId: string): Promise<types.BillStatusData> {
     return this.get(billId);
   }
 
@@ -216,11 +230,31 @@ export class P2P extends HttpAPI implements IP2PApi {
    *
    * @param {number} days Кол-во дней жизни счёта (может быть не целым числом)
    * @return {string} Дата понятная QIWI
+   *
+   * @deprecated Используйте {@link formatLifetimeDays} или {@link formatLifetimeMinutes}
    */
   public static formatLifetime(days = 1): string {
+    return this.formatLifetimeDays(days);
+  }
+
+  /**
+   *
+   * @param {number} days Кол-во дней жизни счёта (может быть не целым числом)
+   * @return {string} Дата понятная QIWI
+   */
+  public static formatLifetimeDays(days = 1): string {
+    return this.formatLifetimeMinutes(days * 24 * 60);
+  }
+
+  /**
+   *
+   * @param {number} [minutes] Кол-во минут жизни счёта (может быть не целым числом)
+   * @return {string} Дата понятная QIWI
+   */
+  public static formatLifetimeMinutes(minutes = 15): string {
     const date = new Date();
 
-    const time = Math.round(date.getTime() + days * 24 * 60 * 60 * 1000);
+    const time = Math.round(date.getTime() + minutes * 60 * 1000);
 
     date.setTime(time);
 
@@ -349,12 +383,12 @@ export class P2P extends HttpAPI implements IP2PApi {
    *  Создаёт ссылку оплаты счёта без запроса к API
    *
    * @param {Omit<types.BillFormParams, "billId" | "publicKey">} parameters GET-параметры ссылки
-   * @param {string=} billId Свой ID счёта, по умолчанию случайный UUID
+   * @param {string} [billId] Свой ID счёта, по умолчанию случайный UUID
    * @return {string} Ссылка на оплату счёта
    */
   public createBillFormUrl(
     parameters: Omit<types.BillFormParams, "billId" | "publicKey">,
-    billId = this._generateId()
+    billId: string = this._generateId()
   ): string {
     const options: types.BillFormParams = {
       ...parameters,

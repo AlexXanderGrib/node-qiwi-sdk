@@ -1,7 +1,6 @@
 /* eslint-disable unicorn/consistent-function-scoping */
 import { config } from "dotenv";
-import { Personal } from "..";
-import { PersonalApiError } from "../services/personal";
+import { PersonalApiError, Personal } from "../services/personal";
 
 jest.setTimeout(30_000);
 

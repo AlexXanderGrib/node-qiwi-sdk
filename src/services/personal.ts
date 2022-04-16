@@ -11,7 +11,7 @@ import { AnyResponse } from "./shared.types";
 import { stringify } from "query-string";
 import { v4 as uuid } from "uuid";
 import { createHmac, timingSafeEqual } from "crypto";
-import { IPersonalAPI } from "./personal.types";
+import type { IPersonalAPI } from "./personal.types";
 
 type StringOrNumber = string | number;
 
@@ -73,7 +73,7 @@ export class Personal extends HttpAPI implements IPersonalAPI {
     "User-Agent": USER_AGENT
   };
 
-  protected readonly API_URL = "https://edge.qiwi.com";
+  protected readonly API_URL = "https://edge.qiwi.com/";
   protected readonly API_OK_RESPONSE_CODES = [200, 201, 204];
 
   /**
@@ -145,7 +145,7 @@ export class Personal extends HttpAPI implements IPersonalAPI {
    * @param {StringOrNumber} wallet
    */
   @MapErrorsAsync(mapError)
-  async getLimits<Limits extends types.LimitType[] = types.LimitType[]>(
+  async getLimits<Limits extends types.LimitTypeAny[] = types.LimitTypeAny[]>(
     limits: Limits,
     wallet = this.walletId
   ): Promise<types.LimitsResponse<Limits[number]>> {
@@ -361,14 +361,13 @@ export class Personal extends HttpAPI implements IPersonalAPI {
    * @param {types.FormUrlOptions} options
    * @return {string}
    */
-  @MapErrors(mapError)
-  createFormUrl(
+  static createFormUrl(
     provider: number | types.Recipients,
-    options: types.FormUrlOptions
+    options: types.FormUrlOptions = {}
   ): string {
     const data = {
       currency: Personal.Currency.RUB,
-      ...(options.custom ?? {})
+      ...options.custom
     } as any;
 
     if (options.amount) {
@@ -376,10 +375,8 @@ export class Personal extends HttpAPI implements IPersonalAPI {
       data.amountFraction = Math.round((options.amount - data.amountInteger) * 100);
     }
 
-    const account = options.account || (provider === 99 ? this.walletId : undefined);
-
     if (options.comment) data["extra['comment']"] = options.comment;
-    if (account) data["extra['account']"] = account;
+    if (options.account) data["extra['account']"] = options.account;
 
     if (options.accountType) data["extra['accountType']"] = options.accountType;
 
@@ -389,10 +386,28 @@ export class Personal extends HttpAPI implements IPersonalAPI {
   }
 
   /**
-   * **От автора:**
+   * Данный метод создаёт ссылку на предзаполненную форму
    *
-   * Типизирование это метода - очень больно и бессмысленно. Его
-   * описание в документации занимает 6 страниц
+   * @param {number} provider ID провайдера
+   * @param {types.FormUrlOptions} options
+   * @return {string}
+   */
+  @MapErrors(mapError)
+  createFormUrl(
+    provider: number | types.Recipients,
+    options: types.FormUrlOptions = {}
+  ): string {
+    let account = options.account;
+
+    if (account === undefined && provider === Personal.Recipients.QIWI) {
+      account = this.walletId.toString();
+    }
+
+    return Personal.createFormUrl(provider, { ...options, account });
+  }
+
+  /**
+   * Перевод с кошелька
    *
    * [Документация QIWI по методу оплаты](https://developer.qiwi.com/ru/qiwi-wallet-personal/#payments)
    *
@@ -415,6 +430,26 @@ export class Personal extends HttpAPI implements IPersonalAPI {
     fields: types.Pay2Params["fields"] = {},
     comment: types.Pay2Params["comment"] = ""
   ): Promise<types.PaymentResponse> {
+    return await this.pay2({ provider, account, amount, currency, fields, comment });
+  }
+
+  /**
+   * Более читаемая версия метода {@link pay}
+   *
+   * [Документация QIWI по методу оплаты](https://developer.qiwi.com/ru/qiwi-wallet-personal/#payments)
+   *
+   * @param {types.Pay2Params} params Параметры платежа
+   * @return {Promise<types.PaymentResponse>}
+   */
+  @MapErrorsAsync(mapError)
+  async pay2({
+    account,
+    amount,
+    provider = Personal.Recipients.QIWI,
+    comment = "",
+    currency = Personal.Currency.RUB,
+    fields = {}
+  }: types.Pay2Params): Promise<types.PaymentResponse> {
     return await this.post(
       `sinap/api/v2/terms/${provider}/payments`,
       {},
@@ -435,26 +470,6 @@ export class Personal extends HttpAPI implements IPersonalAPI {
         ...(comment && { comment })
       })
     );
-  }
-
-  /**
-   * Более читаемая версия метода {@link pay}
-   *
-   * [Документация QIWI по методу оплаты](https://developer.qiwi.com/ru/qiwi-wallet-personal/#payments)
-   *
-   * @param {types.Pay2Params} params Параметры платежа
-   * @return {Promise<types.PaymentResponse>}
-   */
-  @MapErrorsAsync(mapError)
-  async pay2({
-    account,
-    amount,
-    provider = Personal.Recipients.QIWI,
-    comment = "",
-    currency = Personal.Currency.RUB,
-    fields = {}
-  }: types.Pay2Params): Promise<types.PaymentResponse> {
-    return await this.pay(provider, account, amount, currency, fields, comment);
   }
 
   /**

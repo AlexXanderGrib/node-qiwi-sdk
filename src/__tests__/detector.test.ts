@@ -1,3 +1,4 @@
+import { Recipients } from "../exports";
 import { Detector, DetectorError } from "../services/detector";
 
 describe("Detector", () => {
@@ -7,16 +8,7 @@ describe("Detector", () => {
     // Префикс 7920 принадлежит Мегафону
     const providerId = await detect.getPhoneProvider("79203903479");
 
-    // ID Мегафона у QIWI 3 - https://qiwi.com/payment/form/3
-    expect(providerId).toBe(3);
-  });
-
-  test("Card Number", async () => {
-    // Бин 427666 принадлежит Сберу (VISA)
-    const providerId = await detect.getCardProvider("4276662397052545");
-
-    // Переводы VISA по РУ - 1963
-    expect(providerId).toBe(1963);
+    expect(providerId).toBe(Recipients.MegaFon);
   });
 
   test("Invalid", () => {

@@ -1,5 +1,6 @@
+/* eslint-disable security/detect-object-injection */
 import { randomBytes } from "crypto";
-import { FetchError } from "node-fetch";
+
 import { DecodingError, HttpAPI, HttpError } from "../http";
 import bodyParser from "body-parser";
 import { Application } from "express";
@@ -127,7 +128,7 @@ describe(HttpAPI.name, () => {
   });
 
   test("FetchError", async () => {
-    expect(api[get]("http://localhost:3/")).rejects.toThrow(FetchError);
+    expect(api[get]("http://localhost:3/")).rejects.toThrow();
   });
 
   test("HttpError", async () => {

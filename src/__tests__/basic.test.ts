@@ -1,4 +1,4 @@
-import * as QIWI from "../index";
+import * as QIWI from "..";
 
 describe("Core", () => {
   test("Date formatting", () => {
