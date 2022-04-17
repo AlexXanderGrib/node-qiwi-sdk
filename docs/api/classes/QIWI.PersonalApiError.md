@@ -1,6 +1,8 @@
-[qiwi-sdk](../README.md) / [Exports](../modules.md) / PersonalApiError
+[qiwi-sdk](../README.md) / [Exports](../modules.md) / [QIWI](../modules/QIWI.md) / PersonalApiError
 
 # Class: PersonalApiError
+
+[QIWI](../modules/QIWI.md).PersonalApiError
 
 Ошибка, которую выбрасывает персональное API в случае
 неправильного кода ответа от QIWI
@@ -15,26 +17,26 @@
 
 ### Constructors
 
-- [constructor](PersonalApiError.md#constructor)
+- [constructor](QIWI.PersonalApiError.md#constructor)
 
 ### Properties
 
-- [cause](PersonalApiError.md#cause)
-- [data](PersonalApiError.md#data)
-- [message](PersonalApiError.md#message)
-- [name](PersonalApiError.md#name)
-- [stack](PersonalApiError.md#stack)
-- [prepareStackTrace](PersonalApiError.md#preparestacktrace)
-- [stackTraceLimit](PersonalApiError.md#stacktracelimit)
+- [cause](QIWI.PersonalApiError.md#cause)
+- [data](QIWI.PersonalApiError.md#data)
+- [message](QIWI.PersonalApiError.md#message)
+- [name](QIWI.PersonalApiError.md#name)
+- [stack](QIWI.PersonalApiError.md#stack)
+- [prepareStackTrace](QIWI.PersonalApiError.md#preparestacktrace)
+- [stackTraceLimit](QIWI.PersonalApiError.md#stacktracelimit)
 
 ### Accessors
 
-- [[toStringTag]](PersonalApiError.md#[tostringtag])
+- [[toStringTag]](QIWI.PersonalApiError.md#[tostringtag])
 
 ### Methods
 
-- [toJSON](PersonalApiError.md#tojson)
-- [captureStackTrace](PersonalApiError.md#capturestacktrace)
+- [toJSON](QIWI.PersonalApiError.md#tojson)
+- [captureStackTrace](QIWI.PersonalApiError.md#capturestacktrace)
 
 ## Constructors
 

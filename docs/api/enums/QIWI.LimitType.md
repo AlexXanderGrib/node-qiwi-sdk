@@ -1,17 +1,19 @@
-[qiwi-sdk](../README.md) / [Exports](../modules.md) / LimitType
+[qiwi-sdk](../README.md) / [Exports](../modules.md) / [QIWI](../modules/QIWI.md) / LimitType
 
 # Enumeration: LimitType
+
+[QIWI](../modules/QIWI.md).LimitType
 
 ## Table of contents
 
 ### Enumeration members
 
-- [PAYMENTS\_P2P](LimitType.md#payments_p2p)
-- [PAYMENTS\_PROVIDER\_INTERNATIONALS](LimitType.md#payments_provider_internationals)
-- [PAYMENTS\_PROVIDER\_PAYOUT](LimitType.md#payments_provider_payout)
-- [REFILL](LimitType.md#refill)
-- [TURNOVER](LimitType.md#turnover)
-- [WITHDRAW\_CASH](LimitType.md#withdraw_cash)
+- [PAYMENTS\_P2P](QIWI.LimitType.md#payments_p2p)
+- [PAYMENTS\_PROVIDER\_INTERNATIONALS](QIWI.LimitType.md#payments_provider_internationals)
+- [PAYMENTS\_PROVIDER\_PAYOUT](QIWI.LimitType.md#payments_provider_payout)
+- [REFILL](QIWI.LimitType.md#refill)
+- [TURNOVER](QIWI.LimitType.md#turnover)
+- [WITHDRAW\_CASH](QIWI.LimitType.md#withdraw_cash)
 
 ## Enumeration members
 

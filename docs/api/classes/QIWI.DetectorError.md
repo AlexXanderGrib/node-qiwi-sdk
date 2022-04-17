@@ -1,6 +1,8 @@
-[qiwi-sdk](../README.md) / [Exports](../modules.md) / PersonalApiError
+[qiwi-sdk](../README.md) / [Exports](../modules.md) / [QIWI](../modules/QIWI.md) / DetectorError
 
-# Class: PersonalApiError
+# Class: DetectorError
+
+[QIWI](../modules/QIWI.md).DetectorError
 
 Ошибка, которую выбрасывает персональное API в случае
 неправильного кода ответа от QIWI
@@ -9,53 +11,68 @@
 
 - `ExtendedError`
 
-  ↳ **`PersonalApiError`**
+  ↳ **`DetectorError`**
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](PersonalApiError.md#constructor)
+- [constructor](QIWI.DetectorError.md#constructor)
 
 ### Properties
 
-- [cause](PersonalApiError.md#cause)
-- [data](PersonalApiError.md#data)
-- [message](PersonalApiError.md#message)
-- [name](PersonalApiError.md#name)
-- [stack](PersonalApiError.md#stack)
-- [prepareStackTrace](PersonalApiError.md#preparestacktrace)
-- [stackTraceLimit](PersonalApiError.md#stacktracelimit)
+- [cause](QIWI.DetectorError.md#cause)
+- [message](QIWI.DetectorError.md#message)
+- [name](QIWI.DetectorError.md#name)
+- [stack](QIWI.DetectorError.md#stack)
+- [prepareStackTrace](QIWI.DetectorError.md#preparestacktrace)
+- [stackTraceLimit](QIWI.DetectorError.md#stacktracelimit)
 
 ### Accessors
 
-- [[toStringTag]](PersonalApiError.md#[tostringtag])
+- [[toStringTag]](QIWI.DetectorError.md#[tostringtag])
 
 ### Methods
 
-- [toJSON](PersonalApiError.md#tojson)
-- [captureStackTrace](PersonalApiError.md#capturestacktrace)
+- [toJSON](QIWI.DetectorError.md#tojson)
+- [captureStackTrace](QIWI.DetectorError.md#capturestacktrace)
 
 ## Constructors
 
 ### constructor
 
-• **new PersonalApiError**(`message?`, `data?`)
+• **new DetectorError**(`message?`)
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `message` | `string` | `""` | Сообщение |
-| `data?` | `AnyResponse` | `undefined` | Данные которыми ответил QIWI |
+| Name | Type |
+| :------ | :------ |
+| `message?` | `string` |
 
-#### Overrides
+#### Inherited from
 
 ExtendedError.constructor
 
 #### Defined in
 
-[src/services/personal.ts:27](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/df33dc3/src/services/personal.ts#L27)
+node_modules/typescript/lib/lib.es5.d.ts:1028
+
+• **new DetectorError**(`message?`, `options?`)
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `message?` | `string` |
+| `options?` | `ErrorOptions` |
+
+#### Inherited from
+
+ExtendedError.constructor
+
+#### Defined in
+
+node_modules/typescript/lib/lib.es2022.error.d.ts:30
 
 ## Properties
 
@@ -73,19 +90,17 @@ node_modules/typescript/lib/lib.es2022.error.d.ts:26
 
 ___
 
-### data
-
-• `Optional` **data**: `AnyResponse`
-
-___
-
 ### message
 
-• **message**: `string` = `""`
+• **message**: `string`
 
 #### Inherited from
 
 ExtendedError.message
+
+#### Defined in
+
+node_modules/typescript/lib/lib.es5.d.ts:1023
 
 ___
 

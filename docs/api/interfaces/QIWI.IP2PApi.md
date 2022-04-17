@@ -1,17 +1,24 @@
-[qiwi-sdk](../README.md) / [Exports](../modules.md) / IP2PApi
+[qiwi-sdk](../README.md) / [Exports](../modules.md) / [QIWI](../modules/QIWI.md) / IP2PApi
 
 # Interface: IP2PApi
+
+[QIWI](../modules/QIWI.md).IP2PApi
+
+## Implemented by
+
+- [`P2P`](../classes/QIWI.P2P.md)
+- [`P2P`](../classes/P2P.md)
 
 ## Table of contents
 
 ### Methods
 
-- [billStatus](IP2PApi.md#billstatus)
-- [checkNotificationSignature](IP2PApi.md#checknotificationsignature)
-- [createBill](IP2PApi.md#createbill)
-- [createBillFormUrl](IP2PApi.md#createbillformurl)
-- [getBillStatus](IP2PApi.md#getbillstatus)
-- [rejectBill](IP2PApi.md#rejectbill)
+- [billStatus](QIWI.IP2PApi.md#billstatus)
+- [checkNotificationSignature](QIWI.IP2PApi.md#checknotificationsignature)
+- [createBill](QIWI.IP2PApi.md#createbill)
+- [createBillFormUrl](QIWI.IP2PApi.md#createbillformurl)
+- [getBillStatus](QIWI.IP2PApi.md#getbillstatus)
+- [rejectBill](QIWI.IP2PApi.md#rejectbill)
 
 ## Methods
 

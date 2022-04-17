@@ -1,35 +1,42 @@
-[qiwi-sdk](../README.md) / [Exports](../modules.md) / IPersonalAPI
+[qiwi-sdk](../README.md) / [Exports](../modules.md) / [QIWI](../modules/QIWI.md) / IPersonalAPI
 
 # Interface: IPersonalAPI
+
+[QIWI](../modules/QIWI.md).IPersonalAPI
+
+## Implemented by
+
+- [`Personal`](../classes/QIWI.Personal.md)
+- [`Personal`](../classes/Personal.md)
 
 ## Table of contents
 
 ### Methods
 
-- [blockCard](IPersonalAPI.md#blockcard)
-- [createAccount](IPersonalAPI.md#createaccount)
-- [createFormUrl](IPersonalAPI.md#createformurl)
-- [createOauthToken](IPersonalAPI.md#createoauthtoken)
-- [createP2PKeyPair](IPersonalAPI.md#createp2pkeypair)
-- [getAccountOffers](IPersonalAPI.md#getaccountoffers)
-- [getAccounts](IPersonalAPI.md#getaccounts)
-- [getCardRequisites](IPersonalAPI.md#getcardrequisites)
-- [getCards](IPersonalAPI.md#getcards)
-- [getCommission](IPersonalAPI.md#getcommission)
-- [getIdentification](IPersonalAPI.md#getidentification)
-- [getLimits](IPersonalAPI.md#getlimits)
-- [getPaymentHistory](IPersonalAPI.md#getpaymenthistory)
-- [getPaymentHistoryTotal](IPersonalAPI.md#getpaymenthistorytotal)
-- [getPersonProfile](IPersonalAPI.md#getpersonprofile)
-- [getRestrictions](IPersonalAPI.md#getrestrictions)
-- [getTransaction](IPersonalAPI.md#gettransaction)
-- [getTransactionCheque](IPersonalAPI.md#gettransactioncheque)
-- [pay2](IPersonalAPI.md#pay2)
-- [renameCard](IPersonalAPI.md#renamecard)
-- [sendTransactionCheque](IPersonalAPI.md#sendtransactioncheque)
-- [setDefaultAccount](IPersonalAPI.md#setdefaultaccount)
-- [setIdentification](IPersonalAPI.md#setidentification)
-- [unblockCard](IPersonalAPI.md#unblockcard)
+- [blockCard](QIWI.IPersonalAPI.md#blockcard)
+- [createAccount](QIWI.IPersonalAPI.md#createaccount)
+- [createFormUrl](QIWI.IPersonalAPI.md#createformurl)
+- [createOauthToken](QIWI.IPersonalAPI.md#createoauthtoken)
+- [createP2PKeyPair](QIWI.IPersonalAPI.md#createp2pkeypair)
+- [getAccountOffers](QIWI.IPersonalAPI.md#getaccountoffers)
+- [getAccounts](QIWI.IPersonalAPI.md#getaccounts)
+- [getCardRequisites](QIWI.IPersonalAPI.md#getcardrequisites)
+- [getCards](QIWI.IPersonalAPI.md#getcards)
+- [getCommission](QIWI.IPersonalAPI.md#getcommission)
+- [getIdentification](QIWI.IPersonalAPI.md#getidentification)
+- [getLimits](QIWI.IPersonalAPI.md#getlimits)
+- [getPaymentHistory](QIWI.IPersonalAPI.md#getpaymenthistory)
+- [getPaymentHistoryTotal](QIWI.IPersonalAPI.md#getpaymenthistorytotal)
+- [getPersonProfile](QIWI.IPersonalAPI.md#getpersonprofile)
+- [getRestrictions](QIWI.IPersonalAPI.md#getrestrictions)
+- [getTransaction](QIWI.IPersonalAPI.md#gettransaction)
+- [getTransactionCheque](QIWI.IPersonalAPI.md#gettransactioncheque)
+- [pay2](QIWI.IPersonalAPI.md#pay2)
+- [renameCard](QIWI.IPersonalAPI.md#renamecard)
+- [sendTransactionCheque](QIWI.IPersonalAPI.md#sendtransactioncheque)
+- [setDefaultAccount](QIWI.IPersonalAPI.md#setdefaultaccount)
+- [setIdentification](QIWI.IPersonalAPI.md#setidentification)
+- [unblockCard](QIWI.IPersonalAPI.md#unblockcard)
 
 ## Methods
 

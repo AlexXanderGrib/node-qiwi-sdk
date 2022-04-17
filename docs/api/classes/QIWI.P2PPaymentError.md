@@ -1,61 +1,64 @@
-[qiwi-sdk](../README.md) / [Exports](../modules.md) / PersonalApiError
+[qiwi-sdk](../README.md) / [Exports](../modules.md) / [QIWI](../modules/QIWI.md) / P2PPaymentError
 
-# Class: PersonalApiError
+# Class: P2PPaymentError
 
-Ошибка, которую выбрасывает персональное API в случае
-неправильного кода ответа от QIWI
+[QIWI](../modules/QIWI.md).P2PPaymentError
+
+Ошибка, которую выбрасывает P2P API в случае неправильного
+кода ответа от QIWI
 
 ## Hierarchy
 
-- `ExtendedError`
+- `ErrorWithCode`<`string`\>
 
-  ↳ **`PersonalApiError`**
+  ↳ **`P2PPaymentError`**
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](PersonalApiError.md#constructor)
+- [constructor](QIWI.P2PPaymentError.md#constructor)
 
 ### Properties
 
-- [cause](PersonalApiError.md#cause)
-- [data](PersonalApiError.md#data)
-- [message](PersonalApiError.md#message)
-- [name](PersonalApiError.md#name)
-- [stack](PersonalApiError.md#stack)
-- [prepareStackTrace](PersonalApiError.md#preparestacktrace)
-- [stackTraceLimit](PersonalApiError.md#stacktracelimit)
+- [cause](QIWI.P2PPaymentError.md#cause)
+- [code](QIWI.P2PPaymentError.md#code)
+- [data](QIWI.P2PPaymentError.md#data)
+- [message](QIWI.P2PPaymentError.md#message)
+- [name](QIWI.P2PPaymentError.md#name)
+- [stack](QIWI.P2PPaymentError.md#stack)
+- [prepareStackTrace](QIWI.P2PPaymentError.md#preparestacktrace)
+- [stackTraceLimit](QIWI.P2PPaymentError.md#stacktracelimit)
 
 ### Accessors
 
-- [[toStringTag]](PersonalApiError.md#[tostringtag])
+- [[toStringTag]](QIWI.P2PPaymentError.md#[tostringtag])
 
 ### Methods
 
-- [toJSON](PersonalApiError.md#tojson)
-- [captureStackTrace](PersonalApiError.md#capturestacktrace)
+- [toJSON](QIWI.P2PPaymentError.md#tojson)
+- [toString](QIWI.P2PPaymentError.md#tostring)
+- [captureStackTrace](QIWI.P2PPaymentError.md#capturestacktrace)
 
 ## Constructors
 
 ### constructor
 
-• **new PersonalApiError**(`message?`, `data?`)
+• **new P2PPaymentError**(`data`)
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `message` | `string` | `""` | Сообщение |
-| `data?` | `AnyResponse` | `undefined` | Данные которыми ответил QIWI |
+| Name | Type |
+| :------ | :------ |
+| `data` | `AnyResponse` |
 
 #### Overrides
 
-ExtendedError.constructor
+ErrorWithCode&lt;string\&gt;.constructor
 
 #### Defined in
 
-[src/services/personal.ts:27](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/df33dc3/src/services/personal.ts#L27)
+[src/services/p2p.ts:29](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/df33dc3/src/services/p2p.ts#L29)
 
 ## Properties
 
@@ -65,7 +68,7 @@ ExtendedError.constructor
 
 #### Inherited from
 
-ExtendedError.cause
+ErrorWithCode.cause
 
 #### Defined in
 
@@ -73,19 +76,29 @@ node_modules/typescript/lib/lib.es2022.error.d.ts:26
 
 ___
 
+### code
+
+• **code**: `string`
+
+#### Inherited from
+
+ErrorWithCode.code
+
+___
+
 ### data
 
-• `Optional` **data**: `AnyResponse`
+• **data**: `AnyResponse`
 
 ___
 
 ### message
 
-• **message**: `string` = `""`
+• **message**: `string`
 
 #### Inherited from
 
-ExtendedError.message
+ErrorWithCode.message
 
 ___
 
@@ -95,7 +108,7 @@ ___
 
 #### Inherited from
 
-ExtendedError.name
+ErrorWithCode.name
 
 #### Defined in
 
@@ -109,7 +122,7 @@ ___
 
 #### Inherited from
 
-ExtendedError.stack
+ErrorWithCode.stack
 
 #### Defined in
 
@@ -142,7 +155,7 @@ Optional override for formatting stack traces
 
 #### Inherited from
 
-ExtendedError.prepareStackTrace
+ErrorWithCode.prepareStackTrace
 
 #### Defined in
 
@@ -156,7 +169,7 @@ ___
 
 #### Inherited from
 
-ExtendedError.stackTraceLimit
+ErrorWithCode.stackTraceLimit
 
 #### Defined in
 
@@ -178,7 +191,7 @@ node_modules/@types/node/globals.d.ts:13
 
 #### Inherited from
 
-ExtendedError.\_\_@toStringTag@11
+ErrorWithCode.\_\_@toStringTag@11
 
 #### Defined in
 
@@ -188,23 +201,45 @@ ExtendedError.\_\_@toStringTag@11
 
 ### toJSON
 
-▸ **toJSON**(): `Error`
+▸ **toJSON**(): `Error` & { `code`: `string`  }
 
-**`memberof`** ExtendedError
+**`memberof`** ErrorWithCode
 
 #### Returns
 
-`Error`
+`Error` & { `code`: `string`  }
 
-{Error}
+{(Error & { code: CodeType })}
 
 #### Inherited from
 
-ExtendedError.toJSON
+ErrorWithCode.toJSON
 
 #### Defined in
 
-[src/error.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/df33dc3/src/error.ts#L17)
+[src/error.ts:64](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/df33dc3/src/error.ts#L64)
+
+___
+
+### toString
+
+▸ **toString**(): `string`
+
+**`memberof`** ErrorWithCode
+
+#### Returns
+
+`string`
+
+{string}
+
+#### Inherited from
+
+ErrorWithCode.toString
+
+#### Defined in
+
+[src/error.ts:79](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/df33dc3/src/error.ts#L79)
 
 ___
 
@@ -227,7 +262,7 @@ Create .stack property on a target object
 
 #### Inherited from
 
-ExtendedError.captureStackTrace
+ErrorWithCode.captureStackTrace
 
 #### Defined in
 

@@ -1,13 +1,15 @@
-[qiwi-sdk](../README.md) / [Exports](../modules.md) / BillCurrency
+[qiwi-sdk](../README.md) / [Exports](../modules.md) / [QIWI](../modules/QIWI.md) / BillCurrency
 
 # Enumeration: BillCurrency
+
+[QIWI](../modules/QIWI.md).BillCurrency
 
 ## Table of contents
 
 ### Enumeration members
 
-- [KZT](BillCurrency.md#kzt)
-- [RUB](BillCurrency.md#rub)
+- [KZT](QIWI.BillCurrency.md#kzt)
+- [RUB](QIWI.BillCurrency.md#rub)
 
 ## Enumeration members
 

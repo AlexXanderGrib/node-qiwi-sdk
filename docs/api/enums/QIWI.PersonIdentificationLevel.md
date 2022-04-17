@@ -1,15 +1,17 @@
-[qiwi-sdk](../README.md) / [Exports](../modules.md) / PersonIdentificationLevel
+[qiwi-sdk](../README.md) / [Exports](../modules.md) / [QIWI](../modules/QIWI.md) / PersonIdentificationLevel
 
 # Enumeration: PersonIdentificationLevel
+
+[QIWI](../modules/QIWI.md).PersonIdentificationLevel
 
 ## Table of contents
 
 ### Enumeration members
 
-- [ANONYMOUS](PersonIdentificationLevel.md#anonymous)
-- [FULL](PersonIdentificationLevel.md#full)
-- [SIMPLE](PersonIdentificationLevel.md#simple)
-- [VERIFIED](PersonIdentificationLevel.md#verified)
+- [ANONYMOUS](QIWI.PersonIdentificationLevel.md#anonymous)
+- [FULL](QIWI.PersonIdentificationLevel.md#full)
+- [SIMPLE](QIWI.PersonIdentificationLevel.md#simple)
+- [VERIFIED](QIWI.PersonIdentificationLevel.md#verified)
 
 ## Enumeration members
 

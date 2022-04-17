@@ -1,15 +1,17 @@
-[qiwi-sdk](../README.md) / [Exports](../modules.md) / CardActionStatus
+[qiwi-sdk](../README.md) / [Exports](../modules.md) / [QIWI](../modules/QIWI.md) / CardActionStatus
 
 # Enumeration: CardActionStatus
+
+[QIWI](../modules/QIWI.md).CardActionStatus
 
 ## Table of contents
 
 ### Enumeration members
 
-- [CONFIRMATION\_LIMIT\_EXCEED](CardActionStatus.md#confirmation_limit_exceed)
-- [CONFIRMATION\_REQUIRED](CardActionStatus.md#confirmation_required)
-- [FAIL](CardActionStatus.md#fail)
-- [OK](CardActionStatus.md#ok)
+- [CONFIRMATION\_LIMIT\_EXCEED](QIWI.CardActionStatus.md#confirmation_limit_exceed)
+- [CONFIRMATION\_REQUIRED](QIWI.CardActionStatus.md#confirmation_required)
+- [FAIL](QIWI.CardActionStatus.md#fail)
+- [OK](QIWI.CardActionStatus.md#ok)
 
 ## Enumeration members
 

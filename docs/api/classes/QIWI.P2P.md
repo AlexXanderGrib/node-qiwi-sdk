@@ -1,6 +1,8 @@
-[qiwi-sdk](../README.md) / [Exports](../modules.md) / P2P
+[qiwi-sdk](../README.md) / [Exports](../modules.md) / [QIWI](../modules/QIWI.md) / P2P
 
 # Class: P2P
+
+[QIWI](../modules/QIWI.md).P2P
 
 Имплементирует [P2P API QIWI](https://developer.qiwi.com/ru/p2p-payments)
 
@@ -20,43 +22,43 @@
 
 ### Constructors
 
-- [constructor](P2P.md#constructor)
+- [constructor](QIWI.P2P.md#constructor)
 
 ### Properties
 
-- [API\_HEADERS](P2P.md#api_headers)
-- [API\_OK\_RESPONSE\_CODES](P2P.md#api_ok_response_codes)
-- [API\_TIMEOUT](P2P.md#api_timeout)
-- [API\_URL](P2P.md#api_url)
-- [agent](P2P.md#agent)
-- [publicKey](P2P.md#publickey)
-- [secretKey](P2P.md#secretkey)
-- [BillStatus](P2P.md#billstatus)
-- [Currency](P2P.md#currency)
-- [PaySource](P2P.md#paysource)
+- [API\_HEADERS](QIWI.P2P.md#api_headers)
+- [API\_OK\_RESPONSE\_CODES](QIWI.P2P.md#api_ok_response_codes)
+- [API\_TIMEOUT](QIWI.P2P.md#api_timeout)
+- [API\_URL](QIWI.P2P.md#api_url)
+- [agent](QIWI.P2P.md#agent)
+- [publicKey](QIWI.P2P.md#publickey)
+- [secretKey](QIWI.P2P.md#secretkey)
+- [BillStatus](QIWI.P2P.md#billstatus)
+- [Currency](QIWI.P2P.md#currency)
+- [PaySource](QIWI.P2P.md#paysource)
 
 ### Methods
 
-- [\_generateId](P2P.md#_generateid)
-- [\_normalizeAmount](P2P.md#_normalizeamount)
-- [\_request](P2P.md#_request)
-- [billStatus](P2P.md#billstatus-1)
-- [checkNotificationSignature](P2P.md#checknotificationsignature)
-- [createBill](P2P.md#createbill)
-- [createBillFormUrl](P2P.md#createbillformurl)
-- [delete](P2P.md#delete)
-- [get](P2P.md#get)
-- [getBillStatus](P2P.md#getbillstatus)
-- [head](P2P.md#head)
-- [notificationMiddleware](P2P.md#notificationmiddleware)
-- [patch](P2P.md#patch)
-- [post](P2P.md#post)
-- [put](P2P.md#put)
-- [rejectBill](P2P.md#rejectbill)
-- [formatLifetime](P2P.md#formatlifetime)
-- [formatLifetimeDays](P2P.md#formatlifetimedays)
-- [formatLifetimeMinutes](P2P.md#formatlifetimeminutes)
-- [patchPayUrl](P2P.md#patchpayurl)
+- [\_generateId](QIWI.P2P.md#_generateid)
+- [\_normalizeAmount](QIWI.P2P.md#_normalizeamount)
+- [\_request](QIWI.P2P.md#_request)
+- [billStatus](QIWI.P2P.md#billstatus-1)
+- [checkNotificationSignature](QIWI.P2P.md#checknotificationsignature)
+- [createBill](QIWI.P2P.md#createbill)
+- [createBillFormUrl](QIWI.P2P.md#createbillformurl)
+- [delete](QIWI.P2P.md#delete)
+- [get](QIWI.P2P.md#get)
+- [getBillStatus](QIWI.P2P.md#getbillstatus)
+- [head](QIWI.P2P.md#head)
+- [notificationMiddleware](QIWI.P2P.md#notificationmiddleware)
+- [patch](QIWI.P2P.md#patch)
+- [post](QIWI.P2P.md#post)
+- [put](QIWI.P2P.md#put)
+- [rejectBill](QIWI.P2P.md#rejectbill)
+- [formatLifetime](QIWI.P2P.md#formatlifetime)
+- [formatLifetimeDays](QIWI.P2P.md#formatlifetimedays)
+- [formatLifetimeMinutes](QIWI.P2P.md#formatlifetimeminutes)
+- [patchPayUrl](QIWI.P2P.md#patchpayurl)
 
 ## Constructors
 
@@ -289,7 +291,7 @@ ___
 Метод позволяет проверить статус перевода по счету. Рекомендуется
 его использовать после получения уведомления о переводе.
 
-**`deprecated`** Используйте метод [getBillStatus](P2P.md#getbillstatus)
+**`deprecated`** Используйте метод [getBillStatus](QIWI.P2P.md#getbillstatus)
 
 #### Parameters
 
@@ -732,7 +734,7 @@ ___
 
 ▸ `Static` **formatLifetime**(`days?`): `string`
 
-**`deprecated`** Используйте [formatLifetimeDays](P2P.md#formatlifetimedays) или [formatLifetimeMinutes](P2P.md#formatlifetimeminutes)
+**`deprecated`** Используйте [formatLifetimeDays](QIWI.P2P.md#formatlifetimedays) или [formatLifetimeMinutes](QIWI.P2P.md#formatlifetimeminutes)
 
 #### Parameters
 

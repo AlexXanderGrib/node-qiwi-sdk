@@ -1,13 +1,15 @@
-[qiwi-sdk](../README.md) / [Exports](../modules.md) / ChequeFormat
+[qiwi-sdk](../README.md) / [Exports](../modules.md) / [QIWI](../modules/QIWI.md) / ChequeFormat
 
 # Enumeration: ChequeFormat
+
+[QIWI](../modules/QIWI.md).ChequeFormat
 
 ## Table of contents
 
 ### Enumeration members
 
-- [JPEG](ChequeFormat.md#jpeg)
-- [PDF](ChequeFormat.md#pdf)
+- [JPEG](QIWI.ChequeFormat.md#jpeg)
+- [PDF](QIWI.ChequeFormat.md#pdf)
 
 ## Enumeration members
 

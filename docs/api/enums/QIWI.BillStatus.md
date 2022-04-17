@@ -1,15 +1,17 @@
-[qiwi-sdk](../README.md) / [Exports](../modules.md) / BillStatus
+[qiwi-sdk](../README.md) / [Exports](../modules.md) / [QIWI](../modules/QIWI.md) / BillStatus
 
 # Enumeration: BillStatus
+
+[QIWI](../modules/QIWI.md).BillStatus
 
 ## Table of contents
 
 ### Enumeration members
 
-- [EXPIRED](BillStatus.md#expired)
-- [PAID](BillStatus.md#paid)
-- [REJECTED](BillStatus.md#rejected)
-- [WAITING](BillStatus.md#waiting)
+- [EXPIRED](QIWI.BillStatus.md#expired)
+- [PAID](QIWI.BillStatus.md#paid)
+- [REJECTED](QIWI.BillStatus.md#rejected)
+- [WAITING](QIWI.BillStatus.md#waiting)
 
 ## Enumeration members
 

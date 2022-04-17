@@ -1,61 +1,77 @@
-[qiwi-sdk](../README.md) / [Exports](../modules.md) / PersonalApiError
+[qiwi-sdk](../README.md) / [Exports](../modules.md) / [QIWI](../modules/QIWI.md) / P2PNotificationError
 
-# Class: PersonalApiError
+# Class: P2PNotificationError
 
-Ошибка, которую выбрасывает персональное API в случае
-неправильного кода ответа от QIWI
+[QIWI](../modules/QIWI.md).P2PNotificationError
+
+Ошибка валидации уведомления
 
 ## Hierarchy
 
 - `ExtendedError`
 
-  ↳ **`PersonalApiError`**
+  ↳ **`P2PNotificationError`**
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](PersonalApiError.md#constructor)
+- [constructor](QIWI.P2PNotificationError.md#constructor)
 
 ### Properties
 
-- [cause](PersonalApiError.md#cause)
-- [data](PersonalApiError.md#data)
-- [message](PersonalApiError.md#message)
-- [name](PersonalApiError.md#name)
-- [stack](PersonalApiError.md#stack)
-- [prepareStackTrace](PersonalApiError.md#preparestacktrace)
-- [stackTraceLimit](PersonalApiError.md#stacktracelimit)
+- [cause](QIWI.P2PNotificationError.md#cause)
+- [message](QIWI.P2PNotificationError.md#message)
+- [name](QIWI.P2PNotificationError.md#name)
+- [stack](QIWI.P2PNotificationError.md#stack)
+- [prepareStackTrace](QIWI.P2PNotificationError.md#preparestacktrace)
+- [stackTraceLimit](QIWI.P2PNotificationError.md#stacktracelimit)
 
 ### Accessors
 
-- [[toStringTag]](PersonalApiError.md#[tostringtag])
+- [[toStringTag]](QIWI.P2PNotificationError.md#[tostringtag])
 
 ### Methods
 
-- [toJSON](PersonalApiError.md#tojson)
-- [captureStackTrace](PersonalApiError.md#capturestacktrace)
+- [toJSON](QIWI.P2PNotificationError.md#tojson)
+- [captureStackTrace](QIWI.P2PNotificationError.md#capturestacktrace)
 
 ## Constructors
 
 ### constructor
 
-• **new PersonalApiError**(`message?`, `data?`)
+• **new P2PNotificationError**(`message?`)
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `message` | `string` | `""` | Сообщение |
-| `data?` | `AnyResponse` | `undefined` | Данные которыми ответил QIWI |
+| Name | Type |
+| :------ | :------ |
+| `message?` | `string` |
 
-#### Overrides
+#### Inherited from
 
 ExtendedError.constructor
 
 #### Defined in
 
-[src/services/personal.ts:27](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/df33dc3/src/services/personal.ts#L27)
+node_modules/typescript/lib/lib.es5.d.ts:1028
+
+• **new P2PNotificationError**(`message?`, `options?`)
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `message?` | `string` |
+| `options?` | `ErrorOptions` |
+
+#### Inherited from
+
+ExtendedError.constructor
+
+#### Defined in
+
+node_modules/typescript/lib/lib.es2022.error.d.ts:30
 
 ## Properties
 
@@ -73,19 +89,17 @@ node_modules/typescript/lib/lib.es2022.error.d.ts:26
 
 ___
 
-### data
-
-• `Optional` **data**: `AnyResponse`
-
-___
-
 ### message
 
-• **message**: `string` = `""`
+• **message**: `string`
 
 #### Inherited from
 
 ExtendedError.message
+
+#### Defined in
+
+node_modules/typescript/lib/lib.es5.d.ts:1023
 
 ___
 

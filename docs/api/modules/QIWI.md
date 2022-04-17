@@ -1,122 +1,108 @@
-[qiwi-sdk](README.md) / Exports
+[qiwi-sdk](../README.md) / [Exports](../modules.md) / QIWI
 
-# qiwi-sdk
+# Namespace: QIWI
 
 ## Table of contents
 
-### References
-
-- [default](modules.md#default)
-
-### Namespaces
-
-- [QIWI](modules/QIWI.md)
-
 ### Enumerations
 
-- [BillCurrency](enums/BillCurrency.md)
-- [BillPaySource](enums/BillPaySource.md)
-- [BillStatus](enums/BillStatus.md)
-- [CardActionStatus](enums/CardActionStatus.md)
-- [CardStatus](enums/CardStatus.md)
-- [ChequeFormat](enums/ChequeFormat.md)
-- [Currency](enums/Currency.md)
-- [LimitType](enums/LimitType.md)
-- [PaymentHistorySource](enums/PaymentHistorySource.md)
-- [PersonIdentificationLevel](enums/PersonIdentificationLevel.md)
-- [Recipients](enums/Recipients.md)
-- [TransactionStatus](enums/TransactionStatus.md)
-- [TransactionType](enums/TransactionType.md)
+- [BillCurrency](../enums/QIWI.BillCurrency.md)
+- [BillPaySource](../enums/QIWI.BillPaySource.md)
+- [BillStatus](../enums/QIWI.BillStatus.md)
+- [CardActionStatus](../enums/QIWI.CardActionStatus.md)
+- [CardStatus](../enums/QIWI.CardStatus.md)
+- [ChequeFormat](../enums/QIWI.ChequeFormat.md)
+- [Currency](../enums/QIWI.Currency.md)
+- [LimitType](../enums/QIWI.LimitType.md)
+- [PaymentHistorySource](../enums/QIWI.PaymentHistorySource.md)
+- [PersonIdentificationLevel](../enums/QIWI.PersonIdentificationLevel.md)
+- [Recipients](../enums/QIWI.Recipients.md)
+- [TransactionStatus](../enums/QIWI.TransactionStatus.md)
+- [TransactionType](../enums/QIWI.TransactionType.md)
 
 ### Classes
 
-- [Detector](classes/Detector.md)
-- [DetectorError](classes/DetectorError.md)
-- [P2P](classes/P2P.md)
-- [P2PNotificationError](classes/P2PNotificationError.md)
-- [P2PPaymentError](classes/P2PPaymentError.md)
-- [Personal](classes/Personal.md)
-- [PersonalApiError](classes/PersonalApiError.md)
+- [Detector](../classes/QIWI.Detector.md)
+- [DetectorError](../classes/QIWI.DetectorError.md)
+- [P2P](../classes/QIWI.P2P.md)
+- [P2PNotificationError](../classes/QIWI.P2PNotificationError.md)
+- [P2PPaymentError](../classes/QIWI.P2PPaymentError.md)
+- [Personal](../classes/QIWI.Personal.md)
+- [PersonalApiError](../classes/QIWI.PersonalApiError.md)
 
 ### Interfaces
 
-- [IP2PApi](interfaces/IP2PApi.md)
-- [IPersonalAPI](interfaces/IPersonalAPI.md)
+- [IP2PApi](../interfaces/QIWI.IP2PApi.md)
+- [IPersonalAPI](../interfaces/QIWI.IPersonalAPI.md)
 
 ### Type aliases
 
-- [Account](modules.md#account)
-- [AccountOffer](modules.md#accountoffer)
-- [BillCreationRequest](modules.md#billcreationrequest)
-- [BillCurrencyAny](modules.md#billcurrencyany)
-- [BillCurrencyPlain](modules.md#billcurrencyplain)
-- [BillError](modules.md#billerror)
-- [BillFormParams](modules.md#billformparams)
-- [BillStatusAny](modules.md#billstatusany)
-- [BillStatusData](modules.md#billstatusdata)
-- [BillStatusPlain](modules.md#billstatusplain)
-- [CardActionStatusAny](modules.md#cardactionstatusany)
-- [CardActionStatusPlain](modules.md#cardactionstatusplain)
-- [CardRenameResponse](modules.md#cardrenameresponse)
-- [CardRequisitesResponse](modules.md#cardrequisitesresponse)
-- [CardResponse](modules.md#cardresponse)
-- [CardStatusAny](modules.md#cardstatusany)
-- [CardStatusPlain](modules.md#cardstatusplain)
-- [CardUnblockResponse](modules.md#cardunblockresponse)
-- [ChequeFormatAny](modules.md#chequeformatany)
-- [ChequeFormatPlain](modules.md#chequeformatplain)
-- [CodeResponse](modules.md#coderesponse)
-- [CurrencyAny](modules.md#currencyany)
-- [CurrencyPlain](modules.md#currencyplain)
-- [FormUrlOptions](modules.md#formurloptions)
-- [FreePayFields](modules.md#freepayfields)
-- [GetAccountOffersResponse](modules.md#getaccountoffersresponse)
-- [GetAccountsResponse](modules.md#getaccountsresponse)
-- [GetPaymentHistoryParams](modules.md#getpaymenthistoryparams)
-- [GetPaymentHistoryParamsBase](modules.md#getpaymenthistoryparamsbase)
-- [GetPaymentHistoryParamsStartEnd](modules.md#getpaymenthistoryparamsstartend)
-- [GetPaymentHistoryTotalParams](modules.md#getpaymenthistorytotalparams)
-- [GetPaymentHistoryTotalResponse](modules.md#getpaymenthistorytotalresponse)
-- [GetTransactionsHistoryResponse](modules.md#gettransactionshistoryresponse)
-- [IdentificationBase](modules.md#identificationbase)
-- [IdentificationResponse](modules.md#identificationresponse)
-- [Limit](modules.md#limit)
-- [LimitTypeAny](modules.md#limittypeany)
-- [LimitTypePlain](modules.md#limittypeplain)
-- [LimitsResponse](modules.md#limitsresponse)
-- [LockableField](modules.md#lockablefield)
-- [MoneyAmount](modules.md#moneyamount)
-- [Pay2Params](modules.md#pay2params)
-- [PayUrlPatchParams](modules.md#payurlpatchparams)
-- [PaymentCommissionRequest](modules.md#paymentcommissionrequest)
-- [PaymentHistorySourceAny](modules.md#paymenthistorysourceany)
-- [PaymentHistorySourcePlain](modules.md#paymenthistorysourceplain)
-- [PaymentResponse](modules.md#paymentresponse)
-- [PersonIdentificationLevelAny](modules.md#personidentificationlevelany)
-- [PersonIdentificationLevelPlain](modules.md#personidentificationlevelplain)
-- [PersonProfile](modules.md#personprofile)
-- [PrettyTokenResponse](modules.md#prettytokenresponse)
-- [Restrictions](modules.md#restrictions)
-- [TokenResponse](modules.md#tokenresponse)
-- [Transaction](modules.md#transaction-1)
-- [TransactionStatusAny](modules.md#transactionstatusany)
-- [TransactionStatusPlain](modules.md#transactionstatusplain)
-- [TransactionTypeAny](modules.md#transactiontypeany)
-- [TransactionTypePlain](modules.md#transactiontypeplain)
-- [WebHookInfo](modules.md#webhookinfo)
-- [WebhookTransaction](modules.md#webhooktransaction)
+- [Account](QIWI.md#account)
+- [AccountOffer](QIWI.md#accountoffer)
+- [BillCreationRequest](QIWI.md#billcreationrequest)
+- [BillCurrencyAny](QIWI.md#billcurrencyany)
+- [BillCurrencyPlain](QIWI.md#billcurrencyplain)
+- [BillError](QIWI.md#billerror)
+- [BillFormParams](QIWI.md#billformparams)
+- [BillStatusAny](QIWI.md#billstatusany)
+- [BillStatusData](QIWI.md#billstatusdata)
+- [BillStatusPlain](QIWI.md#billstatusplain)
+- [CardActionStatusAny](QIWI.md#cardactionstatusany)
+- [CardActionStatusPlain](QIWI.md#cardactionstatusplain)
+- [CardRenameResponse](QIWI.md#cardrenameresponse)
+- [CardRequisitesResponse](QIWI.md#cardrequisitesresponse)
+- [CardResponse](QIWI.md#cardresponse)
+- [CardStatusAny](QIWI.md#cardstatusany)
+- [CardStatusPlain](QIWI.md#cardstatusplain)
+- [CardUnblockResponse](QIWI.md#cardunblockresponse)
+- [ChequeFormatAny](QIWI.md#chequeformatany)
+- [ChequeFormatPlain](QIWI.md#chequeformatplain)
+- [CodeResponse](QIWI.md#coderesponse)
+- [CurrencyAny](QIWI.md#currencyany)
+- [CurrencyPlain](QIWI.md#currencyplain)
+- [FormUrlOptions](QIWI.md#formurloptions)
+- [FreePayFields](QIWI.md#freepayfields)
+- [GetAccountOffersResponse](QIWI.md#getaccountoffersresponse)
+- [GetAccountsResponse](QIWI.md#getaccountsresponse)
+- [GetPaymentHistoryParams](QIWI.md#getpaymenthistoryparams)
+- [GetPaymentHistoryParamsBase](QIWI.md#getpaymenthistoryparamsbase)
+- [GetPaymentHistoryParamsStartEnd](QIWI.md#getpaymenthistoryparamsstartend)
+- [GetPaymentHistoryTotalParams](QIWI.md#getpaymenthistorytotalparams)
+- [GetPaymentHistoryTotalResponse](QIWI.md#getpaymenthistorytotalresponse)
+- [GetTransactionsHistoryResponse](QIWI.md#gettransactionshistoryresponse)
+- [IdentificationBase](QIWI.md#identificationbase)
+- [IdentificationResponse](QIWI.md#identificationresponse)
+- [Limit](QIWI.md#limit)
+- [LimitTypeAny](QIWI.md#limittypeany)
+- [LimitTypePlain](QIWI.md#limittypeplain)
+- [LimitsResponse](QIWI.md#limitsresponse)
+- [LockableField](QIWI.md#lockablefield)
+- [MoneyAmount](QIWI.md#moneyamount)
+- [Pay2Params](QIWI.md#pay2params)
+- [PayUrlPatchParams](QIWI.md#payurlpatchparams)
+- [PaymentCommissionRequest](QIWI.md#paymentcommissionrequest)
+- [PaymentHistorySourceAny](QIWI.md#paymenthistorysourceany)
+- [PaymentHistorySourcePlain](QIWI.md#paymenthistorysourceplain)
+- [PaymentResponse](QIWI.md#paymentresponse)
+- [PersonIdentificationLevelAny](QIWI.md#personidentificationlevelany)
+- [PersonIdentificationLevelPlain](QIWI.md#personidentificationlevelplain)
+- [PersonProfile](QIWI.md#personprofile)
+- [PrettyTokenResponse](QIWI.md#prettytokenresponse)
+- [Restrictions](QIWI.md#restrictions)
+- [TokenResponse](QIWI.md#tokenresponse)
+- [Transaction](QIWI.md#transaction-1)
+- [TransactionStatusAny](QIWI.md#transactionstatusany)
+- [TransactionStatusPlain](QIWI.md#transactionstatusplain)
+- [TransactionTypeAny](QIWI.md#transactiontypeany)
+- [TransactionTypePlain](QIWI.md#transactiontypeplain)
+- [WebHookInfo](QIWI.md#webhookinfo)
+- [WebhookTransaction](QIWI.md#webhooktransaction)
 
 ### Functions
 
-- [createQS](modules.md#createqs)
-- [formatDate](modules.md#formatdate)
-- [parseQS](modules.md#parseqs)
-
-## References
-
-### default
-
-Renames and re-exports [QIWI](modules/QIWI.md)
+- [createQS](QIWI.md#createqs)
+- [formatDate](QIWI.md#formatdate)
+- [parseQS](QIWI.md#parseqs)
 
 ## Type aliases
 
@@ -129,9 +115,9 @@ Renames and re-exports [QIWI](modules/QIWI.md)
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `alias` | `string` | Псевдоним пользовательского баланса |
-| `balance` | [`MoneyAmount`](modules/QIWI.md#moneyamount) \| ``null`` | - |
+| `balance` | [`MoneyAmount`](QIWI.md#moneyamount) \| ``null`` | - |
 | `bankAlias` | `string` | Псевдоним банка |
-| `currency` | [`Currency`](enums/QIWI.Currency.md) | Код валюты баланса (number-3 ISO-4217) |
+| `currency` | [`Currency`](../enums/QIWI.Currency.md) | Код валюты баланса (number-3 ISO-4217) |
 | `defaultAccount?` | `boolean` | - |
 | `fsAlias` | `string` | Псевдоним банковского баланса |
 | `hasBalance` | `boolean` | Логический признак реального баланса в системе QIWI Кошелек (не привязанная карта, не счет мобильного телефона и т.д.) |
@@ -155,7 +141,7 @@ ___
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `alias` | `string` | Псевдоним счета |
-| `currency` | [`Currency`](enums/QIWI.Currency.md) | ID валюты счета |
+| `currency` | [`Currency`](../enums/QIWI.Currency.md) | ID валюты счета |
 
 #### Defined in
 
@@ -171,8 +157,8 @@ ___
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `amount` | { `currency`: [`BillCurrency`](enums/QIWI.BillCurrency.md) ; `value`: `number` \| `string`  } | Данные о сумме счета |
-| `amount.currency` | [`BillCurrency`](enums/QIWI.BillCurrency.md) | Валюта суммы счета. Возможные значения: `RUB` - рубли `KZT` - тенге |
+| `amount` | { `currency`: [`BillCurrency`](../enums/QIWI.BillCurrency.md) ; `value`: `number` \| `string`  } | Данные о сумме счета |
+| `amount.currency` | [`BillCurrency`](../enums/QIWI.BillCurrency.md) | Валюта суммы счета. Возможные значения: `RUB` - рубли `KZT` - тенге |
 | `amount.value` | `number` \| `string` | Сумма, на которую выставляется счет, округленная в меньшую сторону до 2 десятичных знаков |
 | `comment?` | `string` | Комментарий к счету  **`maxlength`** 255 |
 | `customFields?` | `Record`<`string`, `string`\> | Дополнительные данные счета. Так же при помощи этого параметра вы можете настроить [персонализацию](https://developer.qiwi.com/ru/p2p-payments/#custom) вашей формы, передав переменную `themeCode` |
@@ -190,7 +176,7 @@ ___
 
 ### BillCurrencyAny
 
-Ƭ **BillCurrencyAny**: [`BillCurrency`](enums/QIWI.BillCurrency.md) \| [`BillCurrencyPlain`](modules/QIWI.md#billcurrencyplain)
+Ƭ **BillCurrencyAny**: [`BillCurrency`](../enums/QIWI.BillCurrency.md) \| [`BillCurrencyPlain`](QIWI.md#billcurrencyplain)
 
 #### Defined in
 
@@ -200,7 +186,7 @@ ___
 
 ### BillCurrencyPlain
 
-Ƭ **BillCurrencyPlain**: keyof typeof [`BillCurrency`](enums/QIWI.BillCurrency.md)
+Ƭ **BillCurrencyPlain**: keyof typeof [`BillCurrency`](../enums/QIWI.BillCurrency.md)
 
 #### Defined in
 
@@ -231,7 +217,7 @@ ___
 
 ### BillFormParams
 
-Ƭ **BillFormParams**: { `amount`: `string` \| `number` ; `billId`: `string` ; `comment?`: `string` ; `customFields?`: `Record`<`string`, `string`\> ; `lifetime?`: `string` ; `publicKey`: `string` ; `successUrl?`: `string`  } & [`BillCreationRequest`](modules/QIWI.md#billcreationrequest)[``"customer"``]
+Ƭ **BillFormParams**: { `amount`: `string` \| `number` ; `billId`: `string` ; `comment?`: `string` ; `customFields?`: `Record`<`string`, `string`\> ; `lifetime?`: `string` ; `publicKey`: `string` ; `successUrl?`: `string`  } & [`BillCreationRequest`](QIWI.md#billcreationrequest)[``"customer"``]
 
 #### Defined in
 
@@ -241,7 +227,7 @@ ___
 
 ### BillStatusAny
 
-Ƭ **BillStatusAny**: [`BillStatus`](enums/QIWI.BillStatus.md) \| [`BillStatusPlain`](modules/QIWI.md#billstatusplain)
+Ƭ **BillStatusAny**: [`BillStatus`](../enums/QIWI.BillStatus.md) \| [`BillStatusPlain`](QIWI.md#billstatusplain)
 
 #### Defined in
 
@@ -257,18 +243,18 @@ ___
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `amount` | [`BillCreationRequest`](modules/QIWI.md#billcreationrequest)[``"amount"``] | Данные о сумме счета |
+| `amount` | [`BillCreationRequest`](QIWI.md#billcreationrequest)[``"amount"``] | Данные о сумме счета |
 | `billId` | `string` | Уникальный идентификатор выставляемого счета в вашей системе |
 | `comment?` | `string` | Комментарий к счету |
 | `creationDateTime` | `string` | Системная дата создания счета. Формат даты: `ГГГГ-ММ-ДДTчч:мм:сс` |
 | `customFields` | `Record`<`string`, `string`\> | Объект строковых дополнительных параметров, переданных вами |
-| `customer?` | [`BillCreationRequest`](modules/QIWI.md#billcreationrequest)[``"customer"``] | Идентификаторы пользователя |
+| `customer?` | [`BillCreationRequest`](QIWI.md#billcreationrequest)[``"customer"``] | Идентификаторы пользователя |
 | `expirationDateTime` | `string` | Срок действия созданной формы для перевода. Формат даты: `ГГГГ-ММ-ДДTчч:мм:сс+\-чч:мм` |
 | `payUrl` | `string` | [Ссылка для переадресации](https://developer.qiwi.com/ru/p2p-payments/#option) пользователя на созданную форму |
 | `siteId` | `string` | Ваш идентификатор в системе p2p.qiwi |
-| `status` | { `changedDateTime`: `string` ; `value`: [`BillStatusAny`](modules/QIWI.md#billstatusany)  } | - |
+| `status` | { `changedDateTime`: `string` ; `value`: [`BillStatusAny`](QIWI.md#billstatusany)  } | - |
 | `status.changedDateTime` | `string` | Дата обновления статуса |
-| `status.value` | [`BillStatusAny`](modules/QIWI.md#billstatusany) | Текущий статус счета |
+| `status.value` | [`BillStatusAny`](QIWI.md#billstatusany) | Текущий статус счета |
 
 #### Defined in
 
@@ -278,7 +264,7 @@ ___
 
 ### BillStatusPlain
 
-Ƭ **BillStatusPlain**: keyof typeof [`BillStatus`](enums/QIWI.BillStatus.md)
+Ƭ **BillStatusPlain**: keyof typeof [`BillStatus`](../enums/QIWI.BillStatus.md)
 
 #### Defined in
 
@@ -288,7 +274,7 @@ ___
 
 ### CardActionStatusAny
 
-Ƭ **CardActionStatusAny**: [`CardActionStatus`](enums/QIWI.CardActionStatus.md) \| [`CardActionStatusPlain`](modules/QIWI.md#cardactionstatusplain)
+Ƭ **CardActionStatusAny**: [`CardActionStatus`](../enums/QIWI.CardActionStatus.md) \| [`CardActionStatusPlain`](QIWI.md#cardactionstatusplain)
 
 #### Defined in
 
@@ -298,7 +284,7 @@ ___
 
 ### CardActionStatusPlain
 
-Ƭ **CardActionStatusPlain**: keyof typeof [`CardActionStatus`](enums/QIWI.CardActionStatus.md)
+Ƭ **CardActionStatusPlain**: keyof typeof [`CardActionStatus`](../enums/QIWI.CardActionStatus.md)
 
 #### Defined in
 
@@ -316,7 +302,7 @@ ___
 | :------ | :------ | :------ |
 | `error` | `string` | Текстовое описание ошибки |
 | `errorCode` | `string` | Код ошибки |
-| `status` | [`OK`](enums/QIWI.CardActionStatus.md#ok) \| [`FAIL`](enums/QIWI.CardActionStatus.md#fail) | - |
+| `status` | [`OK`](../enums/QIWI.CardActionStatus.md#ok) \| [`FAIL`](../enums/QIWI.CardActionStatus.md#fail) | - |
 
 #### Defined in
 
@@ -339,7 +325,7 @@ ___
 | `cvv` | `string` | CVV карты |
 | `errorCode` | `string` | Код ошибки |
 | `pan` | `string` | Полный номер карты |
-| `status` | [`CardActionStatusAny`](modules/QIWI.md#cardactionstatusany) | - |
+| `status` | [`CardActionStatusAny`](QIWI.md#cardactionstatusany) | - |
 
 #### Defined in
 
@@ -355,8 +341,8 @@ ___
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `balance` | [`MoneyAmount`](modules/QIWI.md#moneyamount) \| ``null`` | Данные баланса карты |
-| `info` | { `[key: string]`: `any`; `alias`: ``"qvc-cpa"`` \| ``"qvc-cpa-debit"`` \| ``"qvp-gold"`` ; `details`: { `description`: `string` ; `features`: `string`[] ; `images`: `ImageObject`[] ; `imagesDet`: `ImageObject`[] ; `imagesMin`: `ImageObject`[] ; `info`: `string` ; `offerLink`: `string` ; `requisites`: `KVObject`[] ; `tariffLink`: `string` ; `tariffs`: `KVObject`[]  } ; `name`: `string` ; `period`: `string` ; `price`: [`MoneyAmount`](modules/QIWI.md#moneyamount)  } | Тарифы и банковские реквизиты карты |
+| `balance` | [`MoneyAmount`](QIWI.md#moneyamount) \| ``null`` | Данные баланса карты |
+| `info` | { `[key: string]`: `any`; `alias`: ``"qvc-cpa"`` \| ``"qvc-cpa-debit"`` \| ``"qvp-gold"`` ; `details`: { `description`: `string` ; `features`: `string`[] ; `images`: `ImageObject`[] ; `imagesDet`: `ImageObject`[] ; `imagesMin`: `ImageObject`[] ; `info`: `string` ; `offerLink`: `string` ; `requisites`: `KVObject`[] ; `tariffLink`: `string` ; `tariffs`: `KVObject`[]  } ; `name`: `string` ; `period`: `string` ; `price`: [`MoneyAmount`](QIWI.md#moneyamount)  } | Тарифы и банковские реквизиты карты |
 | `info.alias` | ``"qvc-cpa"`` \| ``"qvc-cpa-debit"`` \| ``"qvp-gold"`` | [Тип карты](https://developer.qiwi.com/ru/qiwi-wallet-personal/?http#card-types) |
 | `info.details` | { `description`: `string` ; `features`: `string`[] ; `images`: `ImageObject`[] ; `imagesDet`: `ImageObject`[] ; `imagesMin`: `ImageObject`[] ; `info`: `string` ; `offerLink`: `string` ; `requisites`: `KVObject`[] ; `tariffLink`: `string` ; `tariffs`: `KVObject`[]  } | - |
 | `info.details.description` | `string` | Описание карты |
@@ -371,20 +357,20 @@ ___
 | `info.details.tariffs` | `KVObject`[] | Список условий обслуживания карты |
 | `info.name` | `string` | Название карты |
 | `info.period` | `string` | Период обслуживания (по тарифу). Пример: `за год` |
-| `info.price` | [`MoneyAmount`](modules/QIWI.md#moneyamount) | Тариф карты:  `amount` - Стоимость обслуживания `currency` - Код валюты баланса (по ISO) |
-| `qvx` | { `activated`: `string` ; `blockedDate`: `string` ; `cardAlias`: `string` ; `cardExpire`: `string` ; `cardExpireMonth`: `string` ; `cardExpireYear`: `string` ; `cardLimit`: ``null`` \| { `currencyCode`: [`Currency`](enums/QIWI.Currency.md) ; `value`: `number`  } ; `cardType`: `CardType` ; `id`: `number` ; `maskedPan`: `string` ; `smsResended`: `string` ; `status`: [`CardStatus`](enums/QIWI.CardStatus.md) ; `txnId`: `string` ; `unblockAvailable`: `boolean`  } | Общая информация о карте |
+| `info.price` | [`MoneyAmount`](QIWI.md#moneyamount) | Тариф карты:  `amount` - Стоимость обслуживания `currency` - Код валюты баланса (по ISO) |
+| `qvx` | { `activated`: `string` ; `blockedDate`: `string` ; `cardAlias`: `string` ; `cardExpire`: `string` ; `cardExpireMonth`: `string` ; `cardExpireYear`: `string` ; `cardLimit`: ``null`` \| { `currencyCode`: [`Currency`](../enums/QIWI.Currency.md) ; `value`: `number`  } ; `cardType`: `CardType` ; `id`: `number` ; `maskedPan`: `string` ; `smsResended`: `string` ; `status`: [`CardStatus`](../enums/QIWI.CardStatus.md) ; `txnId`: `string` ; `unblockAvailable`: `boolean`  } | Общая информация о карте |
 | `qvx.activated` | `string` | Дата активации карты в формате: `2022-01-31T00:00:00+03:00` |
 | `qvx.blockedDate` | `string` | Дата блокировки в формате: `2022-01-31T00:00:00+03:00` |
 | `qvx.cardAlias` | `string` | [Название карты](https://developer.qiwi.com/ru/qiwi-wallet-personal/?http#qvc-rename) в интерфейсе сайта [qiwi.com](https://qiwi.com/) |
 | `qvx.cardExpire` | `string` | Срок действия карты в формате: `2022-01-31T00:00:00+03:00` |
 | `qvx.cardExpireMonth` | `string` | Месяц окончания действия карты. Например: `01` |
 | `qvx.cardExpireYear` | `string` | Год окончания действия карты. Например: `2022` |
-| `qvx.cardLimit` | ``null`` \| { `currencyCode`: [`Currency`](enums/QIWI.Currency.md) ; `value`: `number`  } | - |
+| `qvx.cardLimit` | ``null`` \| { `currencyCode`: [`Currency`](../enums/QIWI.Currency.md) ; `value`: `number`  } | - |
 | `qvx.cardType` | `CardType` | Вид карты |
 | `qvx.id` | `number` | ID карты |
 | `qvx.maskedPan` | `string` | Маскированный номер карты (отображаются только последние 4 цифры). Пример: `****9078` |
 | `qvx.smsResended` | `string` | Дата высылки СМС с реквизитами в формате: `2022-01-31T00:00:00+03:00` |
-| `qvx.status` | [`CardStatus`](enums/QIWI.CardStatus.md) | Текущий статус карты |
+| `qvx.status` | [`CardStatus`](../enums/QIWI.CardStatus.md) | Текущий статус карты |
 | `qvx.txnId` | `string` | ID транзакции заказа карты |
 | `qvx.unblockAvailable` | `boolean` | Признак возможности разблокировать карту |
 
@@ -396,7 +382,7 @@ ___
 
 ### CardStatusAny
 
-Ƭ **CardStatusAny**: [`CardStatus`](enums/QIWI.CardStatus.md) \| [`CardStatusPlain`](modules/QIWI.md#cardstatusplain)
+Ƭ **CardStatusAny**: [`CardStatus`](../enums/QIWI.CardStatus.md) \| [`CardStatusPlain`](QIWI.md#cardstatusplain)
 
 #### Defined in
 
@@ -406,7 +392,7 @@ ___
 
 ### CardStatusPlain
 
-Ƭ **CardStatusPlain**: keyof typeof [`CardStatus`](enums/QIWI.CardStatus.md)
+Ƭ **CardStatusPlain**: keyof typeof [`CardStatus`](../enums/QIWI.CardStatus.md)
 
 #### Defined in
 
@@ -425,7 +411,7 @@ ___
 | `confirmationId` | ``null`` |
 | `nextConfirmationRequest` | ``null`` |
 | `operationId` | ``null`` |
-| `status` | [`CardActionStatusAny`](modules/QIWI.md#cardactionstatusany) |
+| `status` | [`CardActionStatusAny`](QIWI.md#cardactionstatusany) |
 
 #### Defined in
 
@@ -435,7 +421,7 @@ ___
 
 ### ChequeFormatAny
 
-Ƭ **ChequeFormatAny**: [`ChequeFormat`](enums/QIWI.ChequeFormat.md) \| [`ChequeFormatPlain`](modules/QIWI.md#chequeformatplain)
+Ƭ **ChequeFormatAny**: [`ChequeFormat`](../enums/QIWI.ChequeFormat.md) \| [`ChequeFormatPlain`](QIWI.md#chequeformatplain)
 
 #### Defined in
 
@@ -445,7 +431,7 @@ ___
 
 ### ChequeFormatPlain
 
-Ƭ **ChequeFormatPlain**: keyof typeof [`ChequeFormat`](enums/QIWI.ChequeFormat.md)
+Ƭ **ChequeFormatPlain**: keyof typeof [`ChequeFormat`](../enums/QIWI.ChequeFormat.md)
 
 #### Defined in
 
@@ -471,7 +457,7 @@ ___
 
 ### CurrencyAny
 
-Ƭ **CurrencyAny**: [`Currency`](enums/QIWI.Currency.md) \| [`CurrencyPlain`](modules/QIWI.md#currencyplain)
+Ƭ **CurrencyAny**: [`Currency`](../enums/QIWI.Currency.md) \| [`CurrencyPlain`](QIWI.md#currencyplain)
 
 #### Defined in
 
@@ -481,7 +467,7 @@ ___
 
 ### CurrencyPlain
 
-Ƭ **CurrencyPlain**: keyof typeof [`Currency`](enums/QIWI.Currency.md)
+Ƭ **CurrencyPlain**: keyof typeof [`Currency`](../enums/QIWI.Currency.md)
 
 #### Defined in
 
@@ -500,7 +486,7 @@ ___
 | `account?` | `string` | Формат совпадает с форматом параметра `fields.account` при оплате соответствующих провайдеров: для провайдера `99` - номер кошелька получателя; для провайдеров сотовой связи - номер мобильного телефона для пополнения (без префикса 8); для провайдеров перевода на карту - номер банковской карты получателя (без пробелов), для других провайдеров - идентификатор пользователя. Для провайдера `99999` указывается никнейм или номер кошелька получателя (задайте соответствующее значение параметра `extra['accountType']`). |
 | `accountType?` | `string` | **Параметр используется только для ID=99999**. Значение определяет перевод на QIWI кошелек по никнейму или по номеру кошелька. Если вы не хотите, чтобы пользователь видел номер вашего кошелька на форме, используйте перевод по никнейму.  `phone` - для перевода по номеру  `nickname` - для перевода по никнейму. |
 | `amount?` | `number` | Сумма платежа в рублях |
-| `blocked?` | [`LockableField`](modules/QIWI.md#lockablefield)[] | Признак неактивного поля формы. Пользователь не сможет менять значение данного поля. Каждый параметр задает соответствующее поле формы и нумеруется начиная с нуля (blocked[0], blocked[1]  и т.д.). Если не указан, пользователь сможет изменить все поля формы.  Допустимые значения:  `sum` - поле "сумма платежа",  `account` - поле "номер счета/телефона/карты",  `comment` - поле "комментарий".  Пример (неактивное поле суммы платежа): `blocked[0]=sum` |
+| `blocked?` | [`LockableField`](QIWI.md#lockablefield)[] | Признак неактивного поля формы. Пользователь не сможет менять значение данного поля. Каждый параметр задает соответствующее поле формы и нумеруется начиная с нуля (blocked[0], blocked[1]  и т.д.). Если не указан, пользователь сможет изменить все поля формы.  Допустимые значения:  `sum` - поле "сумма платежа",  `account` - поле "номер счета/телефона/карты",  `comment` - поле "комментарий".  Пример (неактивное поле суммы платежа): `blocked[0]=sum` |
 | `comment?` | `string` | Комментарий. **Параметр используется только для `ID=99`** |
 | `custom?` | `Record`<`string`, `unknown`\> | - |
 
@@ -545,7 +531,7 @@ ___
 
 ### GetAccountOffersResponse
 
-Ƭ **GetAccountOffersResponse**: [`AccountOffer`](modules/QIWI.md#accountoffer)[]
+Ƭ **GetAccountOffersResponse**: [`AccountOffer`](QIWI.md#accountoffer)[]
 
 #### Defined in
 
@@ -561,7 +547,7 @@ ___
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `accounts` | [`Account`](modules/QIWI.md#account)[] | Массив балансов |
+| `accounts` | [`Account`](QIWI.md#account)[] | Массив балансов |
 
 #### Defined in
 
@@ -571,7 +557,7 @@ ___
 
 ### GetPaymentHistoryParams
 
-Ƭ **GetPaymentHistoryParams**: [`GetPaymentHistoryParamsBase`](modules/QIWI.md#getpaymenthistoryparamsbase) \| [`GetPaymentHistoryParamsBase`](modules/QIWI.md#getpaymenthistoryparamsbase) & [`GetPaymentHistoryParamsStartEnd`](modules/QIWI.md#getpaymenthistoryparamsstartend) \| [`GetPaymentHistoryParamsBase`](modules/QIWI.md#getpaymenthistoryparamsbase) & { `nextTxnDate`: `string` ; `nextTxnId`: `number`  }
+Ƭ **GetPaymentHistoryParams**: [`GetPaymentHistoryParamsBase`](QIWI.md#getpaymenthistoryparamsbase) \| [`GetPaymentHistoryParamsBase`](QIWI.md#getpaymenthistoryparamsbase) & [`GetPaymentHistoryParamsStartEnd`](QIWI.md#getpaymenthistoryparamsstartend) \| [`GetPaymentHistoryParamsBase`](QIWI.md#getpaymenthistoryparamsbase) & { `nextTxnDate`: `string` ; `nextTxnId`: `number`  }
 
 #### Defined in
 
@@ -587,9 +573,9 @@ ___
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `operation?` | [`TransactionTypeAny`](modules/QIWI.md#transactiontypeany) | Тип операций в отчете, для отбора. Допустимые значения:  `ALL` - все операции,  `IN` - только пополнения,  `OUT` - только платежи,  `QIWI_CARD` - только платежи по картам QIWI (QVC, QVP).  По умолчанию `ALL` |
+| `operation?` | [`TransactionTypeAny`](QIWI.md#transactiontypeany) | Тип операций в отчете, для отбора. Допустимые значения:  `ALL` - все операции,  `IN` - только пополнения,  `OUT` - только платежи,  `QIWI_CARD` - только платежи по картам QIWI (QVC, QVP).  По умолчанию `ALL` |
 | `rows` | `number` | Число платежей в ответе, для разбивки отчета на страницы. Целое число от 1 до 50. Запрос возвращает указанное число платежей в обратном хронологическом порядке, начиная от текущей даты или даты в параметре `startDate` |
-| `sources?` | [`PaymentHistorySourceAny`](modules/QIWI.md#paymenthistorysourceany)[] | Список источников платежа, для фильтра. Каждый источник нумеруется, начиная с нуля (`sources[0]`, `sources[1]` и т.д.).  Допустимые значения:  `QW_RUB` - рублевый счет кошелька,  `QW_USD` - счет кошелька в долларах,  `QW_EUR` - счет кошелька в евро,  `CARD` - привязанные и непривязанные к кошельку банковские карты,  `MK` - счет мобильного оператора. Если не указан, учитываются все источники |
+| `sources?` | [`PaymentHistorySourceAny`](QIWI.md#paymenthistorysourceany)[] | Список источников платежа, для фильтра. Каждый источник нумеруется, начиная с нуля (`sources[0]`, `sources[1]` и т.д.).  Допустимые значения:  `QW_RUB` - рублевый счет кошелька,  `QW_USD` - счет кошелька в долларах,  `QW_EUR` - счет кошелька в евро,  `CARD` - привязанные и непривязанные к кошельку банковские карты,  `MK` - счет мобильного оператора. Если не указан, учитываются все источники |
 
 #### Defined in
 
@@ -616,7 +602,7 @@ ___
 
 ### GetPaymentHistoryTotalParams
 
-Ƭ **GetPaymentHistoryTotalParams**: `Omit`<[`GetPaymentHistoryParamsBase`](modules/QIWI.md#getpaymenthistoryparamsbase), ``"rows"``\> & [`GetPaymentHistoryParamsStartEnd`](modules/QIWI.md#getpaymenthistoryparamsstartend)
+Ƭ **GetPaymentHistoryTotalParams**: `Omit`<[`GetPaymentHistoryParamsBase`](QIWI.md#getpaymenthistoryparamsbase), ``"rows"``\> & [`GetPaymentHistoryParamsStartEnd`](QIWI.md#getpaymenthistoryparamsstartend)
 
 #### Defined in
 
@@ -632,8 +618,8 @@ ___
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `incomingTotal` | [`MoneyAmount`](modules/QIWI.md#moneyamount)[] | Данные о входящих платежах (пополнениях), отдельно по каждой валюте |
-| `outgoingTotal` | [`MoneyAmount`](modules/QIWI.md#moneyamount)[] | Данные об исходящих платежах, отдельно по каждой валюте |
+| `incomingTotal` | [`MoneyAmount`](QIWI.md#moneyamount)[] | Данные о входящих платежах (пополнениях), отдельно по каждой валюте |
+| `outgoingTotal` | [`MoneyAmount`](QIWI.md#moneyamount)[] | Данные об исходящих платежах, отдельно по каждой валюте |
 
 #### Defined in
 
@@ -649,9 +635,9 @@ ___
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `data` | [`Transaction`](modules/QIWI.md#transaction-1)[] | Список объектов [Transaction](https://developer.qiwi.com/ru/qiwi-wallet-personal/#txnid). Число транзакций в списке меньше или равно параметру rows из запроса |
-| `nextTxnDate` | [`Transaction`](modules/QIWI.md#transaction-1)[``"date"``] \| ``null`` | Дата/время следующей транзакции в полном списке, время московское (в формате `ГГГГ-ММ-ДД'T'чч:мм:сс+03:00`) |
-| `nextTxnId` | [`Transaction`](modules/QIWI.md#transaction-1)[``"txnId"``] \| ``null`` | ID следующей транзакции в полном списке |
+| `data` | [`Transaction`](QIWI.md#transaction-1)[] | Список объектов [Transaction](https://developer.qiwi.com/ru/qiwi-wallet-personal/#txnid). Число транзакций в списке меньше или равно параметру rows из запроса |
+| `nextTxnDate` | [`Transaction`](QIWI.md#transaction-1)[``"date"``] \| ``null`` | Дата/время следующей транзакции в полном списке, время московское (в формате `ГГГГ-ММ-ДД'T'чч:мм:сс+03:00`) |
+| `nextTxnId` | [`Transaction`](QIWI.md#transaction-1)[``"txnId"``] \| ``null`` | ID следующей транзакции в полном списке |
 
 #### Defined in
 
@@ -684,7 +670,7 @@ ___
 
 ### IdentificationResponse
 
-Ƭ **IdentificationResponse**: [`IdentificationBase`](modules/QIWI.md#identificationbase) & { `id`: `number` ; `type`: [`SIMPLE`](enums/QIWI.PersonIdentificationLevel.md#simple) \| [`VERIFIED`](enums/QIWI.PersonIdentificationLevel.md#verified) \| [`FULL`](enums/QIWI.PersonIdentificationLevel.md#full)  }
+Ƭ **IdentificationResponse**: [`IdentificationBase`](QIWI.md#identificationbase) & { `id`: `number` ; `type`: [`SIMPLE`](../enums/QIWI.PersonIdentificationLevel.md#simple) \| [`VERIFIED`](../enums/QIWI.PersonIdentificationLevel.md#verified) \| [`FULL`](../enums/QIWI.PersonIdentificationLevel.md#full)  }
 
 #### Defined in
 
@@ -700,8 +686,8 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `Cur` | extends keyof typeof [`Currency`](enums/QIWI.Currency.md) = ``"RUB"`` |
-| `Type` | extends [`LimitTypeAny`](modules/QIWI.md#limittypeany) = [`LimitTypeAny`](modules/QIWI.md#limittypeany) |
+| `Cur` | extends keyof typeof [`Currency`](../enums/QIWI.Currency.md) = ``"RUB"`` |
+| `Type` | extends [`LimitTypeAny`](QIWI.md#limittypeany) = [`LimitTypeAny`](QIWI.md#limittypeany) |
 
 #### Type declaration
 
@@ -724,7 +710,7 @@ ___
 
 ### LimitTypeAny
 
-Ƭ **LimitTypeAny**: [`LimitType`](enums/QIWI.LimitType.md) \| [`LimitTypePlain`](modules/QIWI.md#limittypeplain)
+Ƭ **LimitTypeAny**: [`LimitType`](../enums/QIWI.LimitType.md) \| [`LimitTypePlain`](QIWI.md#limittypeplain)
 
 #### Defined in
 
@@ -734,7 +720,7 @@ ___
 
 ### LimitTypePlain
 
-Ƭ **LimitTypePlain**: keyof typeof [`LimitType`](enums/QIWI.LimitType.md)
+Ƭ **LimitTypePlain**: keyof typeof [`LimitType`](../enums/QIWI.LimitType.md)
 
 #### Defined in
 
@@ -750,15 +736,15 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `RequestedLimits` | extends [`LimitTypeAny`](modules/QIWI.md#limittypeany) = [`LimitTypeAny`](modules/QIWI.md#limittypeany) |
+| `RequestedLimits` | extends [`LimitTypeAny`](QIWI.md#limittypeany) = [`LimitTypeAny`](QIWI.md#limittypeany) |
 
 #### Type declaration
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `limits` | { `KZ`: [`Limit`](modules/QIWI.md#limit)<``"KZT"``, `RequestedLimits`\>[] ; `RU`: [`Limit`](modules/QIWI.md#limit)<``"RUB"``, `RequestedLimits`\>[]  } | Описание лимитов |
-| `limits.KZ` | [`Limit`](modules/QIWI.md#limit)<``"KZT"``, `RequestedLimits`\>[] | - |
-| `limits.RU` | [`Limit`](modules/QIWI.md#limit)<``"RUB"``, `RequestedLimits`\>[] | Массив лимитов на операции |
+| `limits` | { `KZ`: [`Limit`](QIWI.md#limit)<``"KZT"``, `RequestedLimits`\>[] ; `RU`: [`Limit`](QIWI.md#limit)<``"RUB"``, `RequestedLimits`\>[]  } | Описание лимитов |
+| `limits.KZ` | [`Limit`](QIWI.md#limit)<``"KZT"``, `RequestedLimits`\>[] | - |
+| `limits.RU` | [`Limit`](QIWI.md#limit)<``"RUB"``, `RequestedLimits`\>[] | Массив лимитов на операции |
 
 #### Defined in
 
@@ -785,7 +771,7 @@ ___
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `amount` | `number` | Сумма |
-| `currency` | [`Currency`](enums/QIWI.Currency.md) | Валюты |
+| `currency` | [`Currency`](../enums/QIWI.Currency.md) | Валюты |
 
 #### Defined in
 
@@ -806,9 +792,9 @@ ___
 | `account` | `string` | Номер счёта в указанной платёжной системе (у `provider`'а) Если он не задан, то следует указывать номер телефона(киви) получателя.  Записывается в `fields.account`, можно поставить `""`, если переопределяете в `fields` |
 | `amount` | `number` | Сумма платежа в указанной валюте. Если валюта не указана, то в рублях. Советую округлять до 2ух знаков после , |
 | `comment?` | `string` | Комментарий к платежу |
-| `currency?` | [`Currency`](enums/QIWI.Currency.md) | Валюта платежа |
-| `fields?` | `Partial`<[`FreePayFields`](modules/QIWI.md#freepayfields)\> & `Record`<`string`, `string`\> | Дополнительные параметры платежа. Обычно необходимо для [платежа по свободным реквизитам](https://developer.qiwi.com/ru/qiwi-wallet-personal/#freepay) |
-| `provider?` | `number` \| [`Recipients`](enums/QIWI.Recipients.md) | Ака ID в доках, номер провайдера(платёжной системы) у QIWI  **`see`** [Recipients](classes/QIWI.Personal.md#recipients)  **`default`** 99 |
+| `currency?` | [`Currency`](../enums/QIWI.Currency.md) | Валюта платежа |
+| `fields?` | `Partial`<[`FreePayFields`](QIWI.md#freepayfields)\> & `Record`<`string`, `string`\> | Дополнительные параметры платежа. Обычно необходимо для [платежа по свободным реквизитам](https://developer.qiwi.com/ru/qiwi-wallet-personal/#freepay) |
+| `provider?` | `number` \| [`Recipients`](../enums/QIWI.Recipients.md) | Ака ID в доках, номер провайдера(платёжной системы) у QIWI  **`see`** [Recipients](../enums/QIWI.Recipients.md)  **`default`** 99 |
 
 #### Defined in
 
@@ -818,7 +804,7 @@ ___
 
 ### PayUrlPatchParams
 
-Ƭ **PayUrlPatchParams**: `Partial`<{ `paySource`: [`BillPaySource`](enums/QIWI.BillPaySource.md) ; `successUrl`: `string`  }\>
+Ƭ **PayUrlPatchParams**: `Partial`<{ `paySource`: [`BillPaySource`](../enums/QIWI.BillPaySource.md) ; `successUrl`: `string`  }\>
 
 #### Defined in
 
@@ -851,7 +837,7 @@ ___
 
 ### PaymentHistorySourceAny
 
-Ƭ **PaymentHistorySourceAny**: [`PaymentHistorySource`](enums/QIWI.PaymentHistorySource.md) \| [`PaymentHistorySourcePlain`](modules/QIWI.md#paymenthistorysourceplain)
+Ƭ **PaymentHistorySourceAny**: [`PaymentHistorySource`](../enums/QIWI.PaymentHistorySource.md) \| [`PaymentHistorySourcePlain`](QIWI.md#paymenthistorysourceplain)
 
 #### Defined in
 
@@ -861,7 +847,7 @@ ___
 
 ### PaymentHistorySourcePlain
 
-Ƭ **PaymentHistorySourcePlain**: keyof typeof [`PaymentHistorySource`](enums/QIWI.PaymentHistorySource.md)
+Ƭ **PaymentHistorySourcePlain**: keyof typeof [`PaymentHistorySource`](../enums/QIWI.PaymentHistorySource.md)
 
 #### Defined in
 
@@ -881,7 +867,7 @@ ___
 | `fields` | `Record`<`string`, `string`\> | Копия объекта `fields` из платежного запроса. **Номер карты (если был выполнен перевод на карту) возвращается в маскированном виде** |
 | `id` | `string` | Копия параметра `id` из платежного запроса |
 | `source` | ``"account_643"`` | Константа, `account_643` |
-| `sum` | [`MoneyAmount`](modules/QIWI.md#moneyamount) | Копия объекта `sum` из платежного запроса |
+| `sum` | [`MoneyAmount`](QIWI.md#moneyamount) | Копия объекта `sum` из платежного запроса |
 | `terms` | `string` | Идентификатор провайдера, на которого был отправлен платеж |
 | `transaction` | { `id`: `string` ; `state`: { `code`: ``"Accepted"``  }  } | - |
 | `transaction.id` | `string` | - |
@@ -896,7 +882,7 @@ ___
 
 ### PersonIdentificationLevelAny
 
-Ƭ **PersonIdentificationLevelAny**: [`PersonIdentificationLevel`](enums/QIWI.PersonIdentificationLevel.md) \| [`PersonIdentificationLevelPlain`](modules/QIWI.md#personidentificationlevelplain)
+Ƭ **PersonIdentificationLevelAny**: [`PersonIdentificationLevel`](../enums/QIWI.PersonIdentificationLevel.md) \| [`PersonIdentificationLevelPlain`](QIWI.md#personidentificationlevelplain)
 
 #### Defined in
 
@@ -906,7 +892,7 @@ ___
 
 ### PersonIdentificationLevelPlain
 
-Ƭ **PersonIdentificationLevelPlain**: keyof typeof [`PersonIdentificationLevel`](enums/QIWI.PersonIdentificationLevel.md)
+Ƭ **PersonIdentificationLevelPlain**: keyof typeof [`PersonIdentificationLevel`](../enums/QIWI.PersonIdentificationLevel.md)
 
 #### Defined in
 
@@ -938,14 +924,14 @@ ___
 | `authInfo.pinInfo` | { `pinUsed`: `boolean`  } | Данные об использовании PIN-кода к приложению QIWI Кошелька на QIWI терминалах самообслуживания |
 | `authInfo.pinInfo.pinUsed` | `boolean` | Логический признак использования PIN-кода для терминала (фактически означает факт использования приложения QIWI Кошелька на терминале) |
 | `authInfo.registrationDate` | `string` | Дата/время регистрации QIWI Кошелька (через сайт/мобильное приложение, либо другим способом) |
-| `contractInfo` | { `blocked`: `boolean` ; `contractId`: `number` ; `creationDate`: `string` ; `features`: `object`[] ; `identificationInfo`: { `bankAlias`: ``"QIWI"`` \| `string` ; `identificationLevel`: [`PersonIdentificationLevel`](enums/QIWI.PersonIdentificationLevel.md)  }[]  } | Информация о кошельке. Объект может отсутствовать, в зависимости от признака `contractInfoEnabled` в запросе. |
+| `contractInfo` | { `blocked`: `boolean` ; `contractId`: `number` ; `creationDate`: `string` ; `features`: `object`[] ; `identificationInfo`: { `bankAlias`: ``"QIWI"`` \| `string` ; `identificationLevel`: [`PersonIdentificationLevel`](../enums/QIWI.PersonIdentificationLevel.md)  }[]  } | Информация о кошельке. Объект может отсутствовать, в зависимости от признака `contractInfoEnabled` в запросе. |
 | `contractInfo.blocked` | `boolean` | Логический признак блокировки кошелька |
 | `contractInfo.contractId` | `number` | Номер кошелька |
 | `contractInfo.creationDate` | `string` | Дата/время создания QIWI Кошелька (через сайт/мобильное приложение, либо при первом пополнении, либо другим способом) |
 | `contractInfo.features` | `object`[] | Служебная информация |
-| `contractInfo.identificationInfo` | { `bankAlias`: ``"QIWI"`` \| `string` ; `identificationLevel`: [`PersonIdentificationLevel`](enums/QIWI.PersonIdentificationLevel.md)  }[] | Данные об [идентификации](https://qiwi.com/settings/identification#ru) пользователя. |
-| `userInfo` | { `defaultPayCurrency`: [`Currency`](enums/QIWI.Currency.md) ; `defaultPaySource`: `number` ; `email`: `string` ; `firstTxnId`: `string` ; `language`: `string` ; `operator`: `string` ; `phoneHash`: `string` ; `promoEnabled`: `string`  } | Прочие пользовательские данные. Объект может отсутствовать, в зависимости от признака `userInfoEnabled` в запросе. |
-| `userInfo.defaultPayCurrency` | [`Currency`](enums/QIWI.Currency.md) | Код валюты баланса кошелька по умолчанию (number-3 ISO-4217) |
+| `contractInfo.identificationInfo` | { `bankAlias`: ``"QIWI"`` \| `string` ; `identificationLevel`: [`PersonIdentificationLevel`](../enums/QIWI.PersonIdentificationLevel.md)  }[] | Данные об [идентификации](https://qiwi.com/settings/identification#ru) пользователя. |
+| `userInfo` | { `defaultPayCurrency`: [`Currency`](../enums/QIWI.Currency.md) ; `defaultPaySource`: `number` ; `email`: `string` ; `firstTxnId`: `string` ; `language`: `string` ; `operator`: `string` ; `phoneHash`: `string` ; `promoEnabled`: `string`  } | Прочие пользовательские данные. Объект может отсутствовать, в зависимости от признака `userInfoEnabled` в запросе. |
+| `userInfo.defaultPayCurrency` | [`Currency`](../enums/QIWI.Currency.md) | Код валюты баланса кошелька по умолчанию (number-3 ISO-4217) |
 | `userInfo.defaultPaySource` | `number` | Служебная информация |
 | `userInfo.email` | `string` | E-mail пользователя |
 | `userInfo.firstTxnId` | `string` | Номер первой транзакции после регистрации |
@@ -1023,7 +1009,7 @@ ___
 | :------ | :------ | :------ |
 | `account` | `string` | Для платежей - номер счета получателя. Для пополнений - номер отправителя, терминала или название агента пополнения кошелька |
 | `comment` | `string` | Комментарий к платежу |
-| `commission` | [`MoneyAmount`](modules/QIWI.md#moneyamount) | Данные о комиссии платежа |
+| `commission` | [`MoneyAmount`](QIWI.md#moneyamount) | Данные о комиссии платежа |
 | `currencyRate` | `number` | Курс конвертации (если применяется в транзакции) |
 | `date` | `string` | Для запросов истории платежей - Дата/время платежа, во временной зоне запроса (см. параметр `startDate`). Формат даты `ГГГГ-ММ-ДД'T'чч:мм:сс+03:00`  Для запросов данных о транзакции - Дата/время платежа, время московское (в формате `ГГГГ-ММ-ДД'T'чч:мм:сс+03:00`) |
 | `error` | `string` \| ``null`` | Описание ошибки |
@@ -1045,13 +1031,13 @@ ___
 | `provider.shortName` | `string` | краткое наименование провайдера |
 | `provider.siteUrl` | `string` \| ``null`` | сайт провайдера |
 | `source` | `object` | Служебная информация |
-| `status` | [`TransactionStatus`](enums/QIWI.TransactionStatus.md) | Статус платежа. Возможные значения:  `WAITING` - платеж проводится  `SUCCESS` - успешный платеж  `ERROR` - ошибка платежа. |
+| `status` | [`TransactionStatus`](../enums/QIWI.TransactionStatus.md) | Статус платежа. Возможные значения:  `WAITING` - платеж проводится  `SUCCESS` - успешный платеж  `ERROR` - ошибка платежа. |
 | `statusText` | `string` | Текстовое описание статуса платежа |
-| `sum` | [`MoneyAmount`](modules/QIWI.md#moneyamount) | Данные о сумме платежа или пополнения. |
-| `total` | [`MoneyAmount`](modules/QIWI.md#moneyamount) | Данные о фактической сумме платежа или пополнения. |
+| `sum` | [`MoneyAmount`](QIWI.md#moneyamount) | Данные о сумме платежа или пополнения. |
+| `total` | [`MoneyAmount`](QIWI.md#moneyamount) | Данные о фактической сумме платежа или пополнения. |
 | `trmTxnId` | `string` | Клиентский ID транзакции |
 | `txnId` | `number` | ID транзакции в сервисе QIWI Кошелек |
-| `type` | [`IN`](enums/QIWI.TransactionType.md#in) \| [`OUT`](enums/QIWI.TransactionType.md#out) \| [`QIWI_CARD`](enums/QIWI.TransactionType.md#qiwi_card) | Тип платежа. Возможные значения:  `IN` - пополнение,  `OUT` - платеж,  `QIWI_CARD` - платеж с карт QIWI (QVC, QVP). |
+| `type` | [`IN`](../enums/QIWI.TransactionType.md#in) \| [`OUT`](../enums/QIWI.TransactionType.md#out) \| [`QIWI_CARD`](../enums/QIWI.TransactionType.md#qiwi_card) | Тип платежа. Возможные значения:  `IN` - пополнение,  `OUT` - платеж,  `QIWI_CARD` - платеж с карт QIWI (QVC, QVP). |
 
 #### Defined in
 
@@ -1061,7 +1047,7 @@ ___
 
 ### TransactionStatusAny
 
-Ƭ **TransactionStatusAny**: [`TransactionStatus`](enums/QIWI.TransactionStatus.md) \| [`TransactionStatusPlain`](modules/QIWI.md#transactionstatusplain)
+Ƭ **TransactionStatusAny**: [`TransactionStatus`](../enums/QIWI.TransactionStatus.md) \| [`TransactionStatusPlain`](QIWI.md#transactionstatusplain)
 
 #### Defined in
 
@@ -1071,7 +1057,7 @@ ___
 
 ### TransactionStatusPlain
 
-Ƭ **TransactionStatusPlain**: keyof typeof [`TransactionStatus`](enums/QIWI.TransactionStatus.md)
+Ƭ **TransactionStatusPlain**: keyof typeof [`TransactionStatus`](../enums/QIWI.TransactionStatus.md)
 
 #### Defined in
 
@@ -1081,7 +1067,7 @@ ___
 
 ### TransactionTypeAny
 
-Ƭ **TransactionTypeAny**: [`TransactionType`](enums/QIWI.TransactionType.md) \| [`TransactionTypePlain`](modules/QIWI.md#transactiontypeplain)
+Ƭ **TransactionTypeAny**: [`TransactionType`](../enums/QIWI.TransactionType.md) \| [`TransactionTypePlain`](QIWI.md#transactiontypeplain)
 
 #### Defined in
 
@@ -1091,7 +1077,7 @@ ___
 
 ### TransactionTypePlain
 
-Ƭ **TransactionTypePlain**: keyof typeof [`TransactionType`](enums/QIWI.TransactionType.md)
+Ƭ **TransactionTypePlain**: keyof typeof [`TransactionType`](../enums/QIWI.TransactionType.md)
 
 #### Defined in
 
@@ -1111,7 +1097,7 @@ ___
 | `hookParameters` | { `url`: `string`  } | Набор параметров обработчика (только URL) |
 | `hookParameters.url` | `string` | - |
 | `hookType` | ``"WEB"`` | Тип вебхука (только WEB) |
-| `txnType` | [`TransactionType`](enums/QIWI.TransactionType.md) | Тип транзакций, по которым отсылаются уведомления (IN - входящие, OUT - исходящие, BOTH - все) |
+| `txnType` | [`TransactionType`](../enums/QIWI.TransactionType.md) | Тип транзакций, по которым отсылаются уведомления (IN - входящие, OUT - исходящие, BOTH - все) |
 
 #### Defined in
 
@@ -1132,20 +1118,20 @@ ___
 | `hash` | `string` | Хэш цифровой подписи уведомления |
 | `hookId` | `string` | Уникальный id хука |
 | `messageId` | `string` | Уникальный id уведомления |
-| `payment` | { `account`: `string` ; `comment`: `string` ; `commission`: [`MoneyAmount`](modules/QIWI.md#moneyamount) \| ``null`` ; `date`: `string` ; `errorCode`: `number` ; `personId`: `number` ; `provider`: `number` \| [`Recipients`](enums/QIWI.Recipients.md) ; `signFields`: `string` ; `status`: [`TransactionStatus`](enums/QIWI.TransactionStatus.md) ; `sum`: [`MoneyAmount`](modules/QIWI.md#moneyamount) \| ``null`` ; `total`: [`MoneyAmount`](modules/QIWI.md#moneyamount) \| ``null`` ; `txnId`: `number` ; `type`: [`IN`](enums/QIWI.TransactionType.md#in) \| [`OUT`](enums/QIWI.TransactionType.md#out)  } | Данные платежа |
+| `payment` | { `account`: `string` ; `comment`: `string` ; `commission`: [`MoneyAmount`](QIWI.md#moneyamount) \| ``null`` ; `date`: `string` ; `errorCode`: `number` ; `personId`: `number` ; `provider`: `number` \| [`Recipients`](../enums/QIWI.Recipients.md) ; `signFields`: `string` ; `status`: [`TransactionStatus`](../enums/QIWI.TransactionStatus.md) ; `sum`: [`MoneyAmount`](QIWI.md#moneyamount) \| ``null`` ; `total`: [`MoneyAmount`](QIWI.md#moneyamount) \| ``null`` ; `txnId`: `number` ; `type`: [`IN`](../enums/QIWI.TransactionType.md#in) \| [`OUT`](../enums/QIWI.TransactionType.md#out)  } | Данные платежа |
 | `payment.account` | `string` | - |
 | `payment.comment` | `string` | - |
-| `payment.commission` | [`MoneyAmount`](modules/QIWI.md#moneyamount) \| ``null`` | Данные о комиссии для платежа или пополнения |
+| `payment.commission` | [`MoneyAmount`](QIWI.md#moneyamount) \| ``null`` | Данные о комиссии для платежа или пополнения |
 | `payment.date` | `string` | Для запросов истории платежей - Дата/время платежа, во временной зоне запроса (см. параметр `startDate`). Формат даты `ГГГГ-ММ-ДД'T'чч:мм:сс+03:00`  Для запросов данных о транзакции - Дата/время платежа, время московское (в формате `ГГГГ-ММ-ДД'T'чч:мм:сс+03:00`) |
 | `payment.errorCode` | `number` | [Код ошибки платежа](https://developer.qiwi.com/ru/qiwi-wallet-personal/#errorCode) |
 | `payment.personId` | `number` | Номер кошелька |
-| `payment.provider` | `number` \| [`Recipients`](enums/QIWI.Recipients.md) | ID провайдера QIWI Wallet |
+| `payment.provider` | `number` \| [`Recipients`](../enums/QIWI.Recipients.md) | ID провайдера QIWI Wallet |
 | `payment.signFields` | `string` | Список полей объекта payment (через ,), которые хешируются алгоритмом HmacSHA256 для проверки уведомления (см. параметр `hash`) |
-| `payment.status` | [`TransactionStatus`](enums/QIWI.TransactionStatus.md) | Статус платежа |
-| `payment.sum` | [`MoneyAmount`](modules/QIWI.md#moneyamount) \| ``null`` | Данные о сумме платежа или пополнения |
-| `payment.total` | [`MoneyAmount`](modules/QIWI.md#moneyamount) \| ``null`` | Данные об итоговой сумме платежа или пополнения |
+| `payment.status` | [`TransactionStatus`](../enums/QIWI.TransactionStatus.md) | Статус платежа |
+| `payment.sum` | [`MoneyAmount`](QIWI.md#moneyamount) \| ``null`` | Данные о сумме платежа или пополнения |
+| `payment.total` | [`MoneyAmount`](QIWI.md#moneyamount) \| ``null`` | Данные об итоговой сумме платежа или пополнения |
 | `payment.txnId` | `number` | ID транзакции в процессинге QIWI Wallet |
-| `payment.type` | [`IN`](enums/QIWI.TransactionType.md#in) \| [`OUT`](enums/QIWI.TransactionType.md#out) | Тип платежа. Возможные значения:  `IN` - пополнение,  `OUT` - платеж. |
+| `payment.type` | [`IN`](../enums/QIWI.TransactionType.md#in) \| [`OUT`](../enums/QIWI.TransactionType.md#out) | Тип платежа. Возможные значения:  `IN` - пополнение,  `OUT` - платеж. |
 | `test` | `boolean` | Признак тестового сообщения |
 | `version` | `string` | Версия API |
 

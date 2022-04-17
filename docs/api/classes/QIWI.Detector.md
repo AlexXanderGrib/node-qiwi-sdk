@@ -1,6 +1,8 @@
-[qiwi-sdk](../README.md) / [Exports](../modules.md) / Detector
+[qiwi-sdk](../README.md) / [Exports](../modules.md) / [QIWI](../modules/QIWI.md) / Detector
 
 # Class: Detector
+
+[QIWI](../modules/QIWI.md).Detector
 
 API получения ID провайдера QIWI по Номеру Телефона/Карте
 
@@ -14,28 +16,28 @@ API получения ID провайдера QIWI по Номеру Телеф
 
 ### Constructors
 
-- [constructor](Detector.md#constructor)
+- [constructor](QIWI.Detector.md#constructor)
 
 ### Properties
 
-- [API\_HEADERS](Detector.md#api_headers)
-- [API\_OK\_RESPONSE\_CODES](Detector.md#api_ok_response_codes)
-- [API\_TIMEOUT](Detector.md#api_timeout)
-- [API\_URL](Detector.md#api_url)
-- [agent](Detector.md#agent)
+- [API\_HEADERS](QIWI.Detector.md#api_headers)
+- [API\_OK\_RESPONSE\_CODES](QIWI.Detector.md#api_ok_response_codes)
+- [API\_TIMEOUT](QIWI.Detector.md#api_timeout)
+- [API\_URL](QIWI.Detector.md#api_url)
+- [agent](QIWI.Detector.md#agent)
 
 ### Methods
 
-- [\_extractProvider](Detector.md#_extractprovider)
-- [\_request](Detector.md#_request)
-- [delete](Detector.md#delete)
-- [get](Detector.md#get)
-- [getCardProvider](Detector.md#getcardprovider)
-- [getPhoneProvider](Detector.md#getphoneprovider)
-- [head](Detector.md#head)
-- [patch](Detector.md#patch)
-- [post](Detector.md#post)
-- [put](Detector.md#put)
+- [\_extractProvider](QIWI.Detector.md#_extractprovider)
+- [\_request](QIWI.Detector.md#_request)
+- [delete](QIWI.Detector.md#delete)
+- [get](QIWI.Detector.md#get)
+- [getCardProvider](QIWI.Detector.md#getcardprovider)
+- [getPhoneProvider](QIWI.Detector.md#getphoneprovider)
+- [head](QIWI.Detector.md#head)
+- [patch](QIWI.Detector.md#patch)
+- [post](QIWI.Detector.md#post)
+- [put](QIWI.Detector.md#put)
 
 ## Constructors
 

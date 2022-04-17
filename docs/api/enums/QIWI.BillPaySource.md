@@ -1,14 +1,16 @@
-[qiwi-sdk](../README.md) / [Exports](../modules.md) / BillPaySource
+[qiwi-sdk](../README.md) / [Exports](../modules.md) / [QIWI](../modules/QIWI.md) / BillPaySource
 
 # Enumeration: BillPaySource
+
+[QIWI](../modules/QIWI.md).BillPaySource
 
 ## Table of contents
 
 ### Enumeration members
 
-- [Card](BillPaySource.md#card)
-- [Mobile](BillPaySource.md#mobile)
-- [QIWI](BillPaySource.md#qiwi)
+- [Card](QIWI.BillPaySource.md#card)
+- [Mobile](QIWI.BillPaySource.md#mobile)
+- [QIWI](QIWI.BillPaySource.md#qiwi)
 
 ## Enumeration members
 

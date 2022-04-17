@@ -19,6 +19,7 @@
 
 ### Properties
 
+- [cause](DetectorError.md#cause)
 - [message](DetectorError.md#message)
 - [name](DetectorError.md#name)
 - [stack](DetectorError.md#stack)
@@ -52,9 +53,40 @@ ExtendedError.constructor
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:979
+node_modules/typescript/lib/lib.es5.d.ts:1028
+
+• **new DetectorError**(`message?`, `options?`)
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `message?` | `string` |
+| `options?` | `ErrorOptions` |
+
+#### Inherited from
+
+ExtendedError.constructor
+
+#### Defined in
+
+node_modules/typescript/lib/lib.es2022.error.d.ts:30
 
 ## Properties
+
+### cause
+
+• `Optional` **cause**: `Error`
+
+#### Inherited from
+
+ExtendedError.cause
+
+#### Defined in
+
+node_modules/typescript/lib/lib.es2022.error.d.ts:26
+
+___
 
 ### message
 
@@ -66,7 +98,7 @@ ExtendedError.message
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:974
+node_modules/typescript/lib/lib.es5.d.ts:1023
 
 ___
 
@@ -80,7 +112,7 @@ ExtendedError.name
 
 #### Defined in
 
-[src/error.ts:8](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e7b0b44/src/error.ts#L8)
+[src/error.ts:9](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/df33dc3/src/error.ts#L9)
 
 ___
 
@@ -94,7 +126,7 @@ ExtendedError.stack
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:975
+node_modules/typescript/lib/lib.es5.d.ts:1024
 
 ___
 
@@ -107,6 +139,8 @@ ___
 ▸ (`err`, `stackTraces`): `any`
 
 Optional override for formatting stack traces
+
+**`see`** https://v8.dev/docs/stack-trace-api#customizing-stack-traces
 
 ##### Parameters
 
@@ -147,13 +181,21 @@ node_modules/@types/node/globals.d.ts:13
 
 • `get` **[toStringTag]**(): `string`
 
+**`readonly`**
+
+**`memberof`** ExtendedError
+
 #### Returns
 
 `string`
 
+#### Inherited from
+
+ExtendedError.\_\_@toStringTag@11
+
 #### Defined in
 
-[src/error.ts:18](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e7b0b44/src/error.ts#L18)
+[src/error.ts:32](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/df33dc3/src/error.ts#L32)
 
 ## Methods
 
@@ -161,9 +203,13 @@ node_modules/@types/node/globals.d.ts:13
 
 ▸ **toJSON**(): `Error`
 
+**`memberof`** ExtendedError
+
 #### Returns
 
 `Error`
+
+{Error}
 
 #### Inherited from
 
@@ -171,7 +217,7 @@ ExtendedError.toJSON
 
 #### Defined in
 
-[src/error.ts:10](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e7b0b44/src/error.ts#L10)
+[src/error.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/df33dc3/src/error.ts#L17)
 
 ___
 

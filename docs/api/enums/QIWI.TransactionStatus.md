@@ -1,6 +1,8 @@
-[qiwi-sdk](../README.md) / [Exports](../modules.md) / TransactionStatus
+[qiwi-sdk](../README.md) / [Exports](../modules.md) / [QIWI](../modules/QIWI.md) / TransactionStatus
 
 # Enumeration: TransactionStatus
+
+[QIWI](../modules/QIWI.md).TransactionStatus
 
 Статус платежа
 
@@ -8,9 +10,9 @@
 
 ### Enumeration members
 
-- [ERROR](TransactionStatus.md#error)
-- [SUCCESS](TransactionStatus.md#success)
-- [WAITING](TransactionStatus.md#waiting)
+- [ERROR](QIWI.TransactionStatus.md#error)
+- [SUCCESS](QIWI.TransactionStatus.md#success)
+- [WAITING](QIWI.TransactionStatus.md#waiting)
 
 ## Enumeration members
 

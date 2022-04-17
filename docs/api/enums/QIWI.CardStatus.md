@@ -1,6 +1,8 @@
-[qiwi-sdk](../README.md) / [Exports](../modules.md) / CardStatus
+[qiwi-sdk](../README.md) / [Exports](../modules.md) / [QIWI](../modules/QIWI.md) / CardStatus
 
 # Enumeration: CardStatus
+
+[QIWI](../modules/QIWI.md).CardStatus
 
 Статус карты
 
@@ -8,11 +10,11 @@
 
 ### Enumeration members
 
-- [ACTIVE](CardStatus.md#active)
-- [BLOCKED](CardStatus.md#blocked)
-- [SENDED\_TO\_BANK](CardStatus.md#sended_to_bank)
-- [SENDED\_TO\_USER](CardStatus.md#sended_to_user)
-- [UNKNOWN](CardStatus.md#unknown)
+- [ACTIVE](QIWI.CardStatus.md#active)
+- [BLOCKED](QIWI.CardStatus.md#blocked)
+- [SENDED\_TO\_BANK](QIWI.CardStatus.md#sended_to_bank)
+- [SENDED\_TO\_USER](QIWI.CardStatus.md#sended_to_user)
+- [UNKNOWN](QIWI.CardStatus.md#unknown)
 
 ## Enumeration members
 

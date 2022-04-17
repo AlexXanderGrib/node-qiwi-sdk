@@ -1,48 +1,50 @@
-[qiwi-sdk](../README.md) / [Exports](../modules.md) / Recipients
+[qiwi-sdk](../README.md) / [Exports](../modules.md) / [QIWI](../modules/QIWI.md) / Recipients
 
 # Enumeration: Recipients
+
+[QIWI](../modules/QIWI.md).Recipients
 
 ## Table of contents
 
 ### Enumeration members
 
-- [AlfaBank](Recipients.md#alfabank)
-- [AnyKzCard](Recipients.md#anykzcard)
-- [AnyRusCard](Recipients.md#anyruscard)
-- [BankRequisites](Recipients.md#bankrequisites)
-- [Beeline](Recipients.md#beeline)
-- [Contact](Recipients.md#contact)
-- [MKBank](Recipients.md#mkbank)
-- [MTS](Recipients.md#mts)
-- [MasterCardRus](Recipients.md#mastercardrus)
-- [MasterCardSng](Recipients.md#mastercardsng)
-- [MegaFon](Recipients.md#megafon)
-- [MirCard](Recipients.md#mircard)
-- [OTPBank](Recipients.md#otpbank)
-- [OnLime](Recipients.md#onlime)
-- [PodariZhiznFound](Recipients.md#podarizhiznfound)
-- [PromSvyazBank](Recipients.md#promsvyazbank)
-- [QIWI](Recipients.md#qiwi)
-- [QIWINickname](Recipients.md#qiwinickname)
-- [QIWIVirtualCard](Recipients.md#qiwivirtualcard)
-- [QIWI\_Nickname](Recipients.md#qiwi_nickname)
-- [QIWI\_VirtualCard](Recipients.md#qiwi_virtualcard)
-- [RenessansCreditBank](Recipients.md#renessanscreditbank)
-- [RosSelkhozBank](Recipients.md#rosselkhozbank)
-- [RusskiyStandardBank](Recipients.md#russkiystandardbank)
-- [SberBank](Recipients.md#sberbank)
-- [SberMobile](Recipients.md#sbermobile)
-- [Tele2](Recipients.md#tele2)
-- [TinkoffBank](Recipients.md#tinkoffbank)
-- [TinkoffMobile](Recipients.md#tinkoffmobile)
-- [UnionPayMoneyExpress](Recipients.md#unionpaymoneyexpress)
-- [VTBank](Recipients.md#vtbank)
-- [VisaRusCard](Recipients.md#visaruscard)
-- [VisaSngCard](Recipients.md#visasngcard)
-- [YandexMoney](Recipients.md#yandexmoney)
-- [YooMoney](Recipients.md#yoomoney)
-- [YooMoneyKz](Recipients.md#yoomoneykz)
-- [Yota](Recipients.md#yota)
+- [AlfaBank](QIWI.Recipients.md#alfabank)
+- [AnyKzCard](QIWI.Recipients.md#anykzcard)
+- [AnyRusCard](QIWI.Recipients.md#anyruscard)
+- [BankRequisites](QIWI.Recipients.md#bankrequisites)
+- [Beeline](QIWI.Recipients.md#beeline)
+- [Contact](QIWI.Recipients.md#contact)
+- [MKBank](QIWI.Recipients.md#mkbank)
+- [MTS](QIWI.Recipients.md#mts)
+- [MasterCardRus](QIWI.Recipients.md#mastercardrus)
+- [MasterCardSng](QIWI.Recipients.md#mastercardsng)
+- [MegaFon](QIWI.Recipients.md#megafon)
+- [MirCard](QIWI.Recipients.md#mircard)
+- [OTPBank](QIWI.Recipients.md#otpbank)
+- [OnLime](QIWI.Recipients.md#onlime)
+- [PodariZhiznFound](QIWI.Recipients.md#podarizhiznfound)
+- [PromSvyazBank](QIWI.Recipients.md#promsvyazbank)
+- [QIWI](QIWI.Recipients.md#qiwi)
+- [QIWINickname](QIWI.Recipients.md#qiwinickname)
+- [QIWIVirtualCard](QIWI.Recipients.md#qiwivirtualcard)
+- [QIWI\_Nickname](QIWI.Recipients.md#qiwi_nickname)
+- [QIWI\_VirtualCard](QIWI.Recipients.md#qiwi_virtualcard)
+- [RenessansCreditBank](QIWI.Recipients.md#renessanscreditbank)
+- [RosSelkhozBank](QIWI.Recipients.md#rosselkhozbank)
+- [RusskiyStandardBank](QIWI.Recipients.md#russkiystandardbank)
+- [SberBank](QIWI.Recipients.md#sberbank)
+- [SberMobile](QIWI.Recipients.md#sbermobile)
+- [Tele2](QIWI.Recipients.md#tele2)
+- [TinkoffBank](QIWI.Recipients.md#tinkoffbank)
+- [TinkoffMobile](QIWI.Recipients.md#tinkoffmobile)
+- [UnionPayMoneyExpress](QIWI.Recipients.md#unionpaymoneyexpress)
+- [VTBank](QIWI.Recipients.md#vtbank)
+- [VisaRusCard](QIWI.Recipients.md#visaruscard)
+- [VisaSngCard](QIWI.Recipients.md#visasngcard)
+- [YandexMoney](QIWI.Recipients.md#yandexmoney)
+- [YooMoney](QIWI.Recipients.md#yoomoney)
+- [YooMoneyKz](QIWI.Recipients.md#yoomoneykz)
+- [Yota](QIWI.Recipients.md#yota)
 
 ## Enumeration members
 
@@ -278,7 +280,7 @@ ___
 
 **`deprecated`** Переименовано в `QIWINickname`
 
-**`see`** [QIWINickname](Recipients.md#qiwinickname)
+**`see`** [QIWINickname](QIWI.Recipients.md#qiwinickname)
 
 #### Defined in
 
@@ -294,7 +296,7 @@ ___
 
 **`deprecated`** Переименовано в `QIWIVirtualCard`
 
-**`see`** [QIWIVirtualCard](Recipients.md#qiwivirtualcard)
+**`see`** [QIWIVirtualCard](QIWI.Recipients.md#qiwivirtualcard)
 
 #### Defined in
 
@@ -452,7 +454,7 @@ ___
 
 **`deprecated`** Сейчас называется `YooMoney`
 
-**`see`** [YooMoney](Recipients.md#yoomoney)
+**`see`** [YooMoney](QIWI.Recipients.md#yoomoney)
 
 #### Defined in
 

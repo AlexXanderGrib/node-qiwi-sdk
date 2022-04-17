@@ -19,6 +19,7 @@
 
 ### Properties
 
+- [cause](P2PPaymentError.md#cause)
 - [code](P2PPaymentError.md#code)
 - [data](P2PPaymentError.md#data)
 - [message](P2PPaymentError.md#message)
@@ -55,9 +56,23 @@ ErrorWithCode&lt;string\&gt;.constructor
 
 #### Defined in
 
-[src/services/p2p.ts:30](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e7b0b44/src/services/p2p.ts#L30)
+[src/services/p2p.ts:29](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/df33dc3/src/services/p2p.ts#L29)
 
 ## Properties
+
+### cause
+
+• `Optional` **cause**: `Error`
+
+#### Inherited from
+
+ErrorWithCode.cause
+
+#### Defined in
+
+node_modules/typescript/lib/lib.es2022.error.d.ts:26
+
+___
 
 ### code
 
@@ -95,7 +110,7 @@ ErrorWithCode.name
 
 #### Defined in
 
-[src/error.ts:8](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e7b0b44/src/error.ts#L8)
+[src/error.ts:9](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/df33dc3/src/error.ts#L9)
 
 ___
 
@@ -109,7 +124,7 @@ ErrorWithCode.stack
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:975
+node_modules/typescript/lib/lib.es5.d.ts:1024
 
 ___
 
@@ -122,6 +137,8 @@ ___
 ▸ (`err`, `stackTraces`): `any`
 
 Optional override for formatting stack traces
+
+**`see`** https://v8.dev/docs/stack-trace-api#customizing-stack-traces
 
 ##### Parameters
 
@@ -162,13 +179,21 @@ node_modules/@types/node/globals.d.ts:13
 
 • `get` **[toStringTag]**(): `string`
 
+**`readonly`**
+
+**`memberof`** ExtendedError
+
 #### Returns
 
 `string`
 
+#### Inherited from
+
+ErrorWithCode.\_\_@toStringTag@11
+
 #### Defined in
 
-[src/error.ts:18](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e7b0b44/src/error.ts#L18)
+[src/error.ts:32](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/df33dc3/src/error.ts#L32)
 
 ## Methods
 
@@ -176,9 +201,13 @@ node_modules/@types/node/globals.d.ts:13
 
 ▸ **toJSON**(): `Error` & { `code`: `string`  }
 
+**`memberof`** ErrorWithCode
+
 #### Returns
 
 `Error` & { `code`: `string`  }
+
+{(Error & { code: CodeType })}
 
 #### Inherited from
 
@@ -186,7 +215,7 @@ ErrorWithCode.toJSON
 
 #### Defined in
 
-[src/error.ts:30](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e7b0b44/src/error.ts#L30)
+[src/error.ts:64](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/df33dc3/src/error.ts#L64)
 
 ___
 
@@ -194,9 +223,13 @@ ___
 
 ▸ **toString**(): `string`
 
+**`memberof`** ErrorWithCode
+
 #### Returns
 
 `string`
+
+{string}
 
 #### Inherited from
 
@@ -204,7 +237,7 @@ ErrorWithCode.toString
 
 #### Defined in
 
-[src/error.ts:39](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e7b0b44/src/error.ts#L39)
+[src/error.ts:79](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/df33dc3/src/error.ts#L79)
 
 ___
 

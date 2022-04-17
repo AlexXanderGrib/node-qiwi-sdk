@@ -1,15 +1,17 @@
-[qiwi-sdk](../README.md) / [Exports](../modules.md) / Currency
+[qiwi-sdk](../README.md) / [Exports](../modules.md) / [QIWI](../modules/QIWI.md) / Currency
 
 # Enumeration: Currency
+
+[QIWI](../modules/QIWI.md).Currency
 
 ## Table of contents
 
 ### Enumeration members
 
-- [EUR](Currency.md#eur)
-- [KZT](Currency.md#kzt)
-- [RUB](Currency.md#rub)
-- [USD](Currency.md#usd)
+- [EUR](QIWI.Currency.md#eur)
+- [KZT](QIWI.Currency.md#kzt)
+- [RUB](QIWI.Currency.md#rub)
+- [USD](QIWI.Currency.md#usd)
 
 ## Enumeration members
 

@@ -1,6 +1,8 @@
-[qiwi-sdk](../README.md) / [Exports](../modules.md) / Personal
+[qiwi-sdk](../README.md) / [Exports](../modules.md) / [QIWI](../modules/QIWI.md) / Personal
 
 # Class: Personal
+
+[QIWI](../modules/QIWI.md).Personal
 
 Имплементирует [персональное API QIWI](https://developer.qiwi.com/ru/qiwi-wallet-personal)
 
@@ -20,70 +22,70 @@
 
 ### Constructors
 
-- [constructor](Personal.md#constructor)
+- [constructor](QIWI.Personal.md#constructor)
 
 ### Properties
 
-- [API\_HEADERS](Personal.md#api_headers)
-- [API\_OK\_RESPONSE\_CODES](Personal.md#api_ok_response_codes)
-- [API\_TIMEOUT](Personal.md#api_timeout)
-- [API\_TOKEN](Personal.md#api_token)
-- [API\_URL](Personal.md#api_url)
-- [agent](Personal.md#agent)
-- [hookId](Personal.md#hookid)
-- [walletId](Personal.md#walletid)
-- [webhookKey](Personal.md#webhookkey)
-- [ChequeFormat](Personal.md#chequeformat)
-- [Currency](Personal.md#currency)
-- [IdentificationLevel](Personal.md#identificationlevel)
-- [LimitType](Personal.md#limittype)
-- [ReceiptFormat](Personal.md#receiptformat)
-- [Recipients](Personal.md#recipients)
-- [TransactionStatus](Personal.md#transactionstatus)
-- [TransactionType](Personal.md#transactiontype)
+- [API\_HEADERS](QIWI.Personal.md#api_headers)
+- [API\_OK\_RESPONSE\_CODES](QIWI.Personal.md#api_ok_response_codes)
+- [API\_TIMEOUT](QIWI.Personal.md#api_timeout)
+- [API\_TOKEN](QIWI.Personal.md#api_token)
+- [API\_URL](QIWI.Personal.md#api_url)
+- [agent](QIWI.Personal.md#agent)
+- [hookId](QIWI.Personal.md#hookid)
+- [walletId](QIWI.Personal.md#walletid)
+- [webhookKey](QIWI.Personal.md#webhookkey)
+- [ChequeFormat](QIWI.Personal.md#chequeformat)
+- [Currency](QIWI.Personal.md#currency)
+- [IdentificationLevel](QIWI.Personal.md#identificationlevel)
+- [LimitType](QIWI.Personal.md#limittype)
+- [ReceiptFormat](QIWI.Personal.md#receiptformat)
+- [Recipients](QIWI.Personal.md#recipients)
+- [TransactionStatus](QIWI.Personal.md#transactionstatus)
+- [TransactionType](QIWI.Personal.md#transactiontype)
 
 ### Methods
 
-- [\_request](Personal.md#_request)
-- [addWebHook](Personal.md#addwebhook)
-- [blockCard](Personal.md#blockcard)
-- [checkWebHookSign](Personal.md#checkwebhooksign)
-- [createAccount](Personal.md#createaccount)
-- [createFormUrl](Personal.md#createformurl)
-- [createOauthToken](Personal.md#createoauthtoken)
-- [createP2PKeyPair](Personal.md#createp2pkeypair)
-- [delete](Personal.md#delete)
-- [get](Personal.md#get)
-- [getAccountOffers](Personal.md#getaccountoffers)
-- [getAccounts](Personal.md#getaccounts)
-- [getActiveWebHook](Personal.md#getactivewebhook)
-- [getCardRequisites](Personal.md#getcardrequisites)
-- [getCards](Personal.md#getcards)
-- [getCommission](Personal.md#getcommission)
-- [getIdentification](Personal.md#getidentification)
-- [getLimits](Personal.md#getlimits)
-- [getNewWebHookSecret](Personal.md#getnewwebhooksecret)
-- [getPaymentHistory](Personal.md#getpaymenthistory)
-- [getPaymentHistoryTotal](Personal.md#getpaymenthistorytotal)
-- [getPersonProfile](Personal.md#getpersonprofile)
-- [getRestrictions](Personal.md#getrestrictions)
-- [getTransaction](Personal.md#gettransaction)
-- [getTransactionCheque](Personal.md#gettransactioncheque)
-- [getWebHookSecret](Personal.md#getwebhooksecret)
-- [head](Personal.md#head)
-- [patch](Personal.md#patch)
-- [pay](Personal.md#pay)
-- [pay2](Personal.md#pay2)
-- [post](Personal.md#post)
-- [put](Personal.md#put)
-- [removeWebHook](Personal.md#removewebhook)
-- [renameCard](Personal.md#renamecard)
-- [sendTransactionCheque](Personal.md#sendtransactioncheque)
-- [setDefaultAccount](Personal.md#setdefaultaccount)
-- [setIdentification](Personal.md#setidentification)
-- [testActiveWebHook](Personal.md#testactivewebhook)
-- [unblockCard](Personal.md#unblockcard)
-- [createFormUrl](Personal.md#createformurl-1)
+- [\_request](QIWI.Personal.md#_request)
+- [addWebHook](QIWI.Personal.md#addwebhook)
+- [blockCard](QIWI.Personal.md#blockcard)
+- [checkWebHookSign](QIWI.Personal.md#checkwebhooksign)
+- [createAccount](QIWI.Personal.md#createaccount)
+- [createFormUrl](QIWI.Personal.md#createformurl)
+- [createOauthToken](QIWI.Personal.md#createoauthtoken)
+- [createP2PKeyPair](QIWI.Personal.md#createp2pkeypair)
+- [delete](QIWI.Personal.md#delete)
+- [get](QIWI.Personal.md#get)
+- [getAccountOffers](QIWI.Personal.md#getaccountoffers)
+- [getAccounts](QIWI.Personal.md#getaccounts)
+- [getActiveWebHook](QIWI.Personal.md#getactivewebhook)
+- [getCardRequisites](QIWI.Personal.md#getcardrequisites)
+- [getCards](QIWI.Personal.md#getcards)
+- [getCommission](QIWI.Personal.md#getcommission)
+- [getIdentification](QIWI.Personal.md#getidentification)
+- [getLimits](QIWI.Personal.md#getlimits)
+- [getNewWebHookSecret](QIWI.Personal.md#getnewwebhooksecret)
+- [getPaymentHistory](QIWI.Personal.md#getpaymenthistory)
+- [getPaymentHistoryTotal](QIWI.Personal.md#getpaymenthistorytotal)
+- [getPersonProfile](QIWI.Personal.md#getpersonprofile)
+- [getRestrictions](QIWI.Personal.md#getrestrictions)
+- [getTransaction](QIWI.Personal.md#gettransaction)
+- [getTransactionCheque](QIWI.Personal.md#gettransactioncheque)
+- [getWebHookSecret](QIWI.Personal.md#getwebhooksecret)
+- [head](QIWI.Personal.md#head)
+- [patch](QIWI.Personal.md#patch)
+- [pay](QIWI.Personal.md#pay)
+- [pay2](QIWI.Personal.md#pay2)
+- [post](QIWI.Personal.md#post)
+- [put](QIWI.Personal.md#put)
+- [removeWebHook](QIWI.Personal.md#removewebhook)
+- [renameCard](QIWI.Personal.md#renamecard)
+- [sendTransactionCheque](QIWI.Personal.md#sendtransactioncheque)
+- [setDefaultAccount](QIWI.Personal.md#setdefaultaccount)
+- [setIdentification](QIWI.Personal.md#setidentification)
+- [testActiveWebHook](QIWI.Personal.md#testactivewebhook)
+- [unblockCard](QIWI.Personal.md#unblockcard)
+- [createFormUrl](QIWI.Personal.md#createformurl-1)
 
 ## Constructors
 
@@ -1065,7 +1067,7 @@ ___
 
 [Документация QIWI по методу оплаты](https://developer.qiwi.com/ru/qiwi-wallet-personal/#payments)
 
-**`deprecated`** Используйте [pay2](Personal.md#pay2), так-как он более читаемый
+**`deprecated`** Используйте [pay2](QIWI.Personal.md#pay2), так-как он более читаемый
 
 #### Parameters
 
@@ -1092,7 +1094,7 @@ ___
 
 ▸ **pay2**(`params`): `Promise`<[`PaymentResponse`](../modules/QIWI.md#paymentresponse)\>
 
-Более читаемая версия метода [pay](Personal.md#pay)
+Более читаемая версия метода [pay](QIWI.Personal.md#pay)
 
 [Документация QIWI по методу оплаты](https://developer.qiwi.com/ru/qiwi-wallet-personal/#payments)
 

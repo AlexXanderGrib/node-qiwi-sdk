@@ -1,15 +1,17 @@
-[qiwi-sdk](../README.md) / [Exports](../modules.md) / TransactionType
+[qiwi-sdk](../README.md) / [Exports](../modules.md) / [QIWI](../modules/QIWI.md) / TransactionType
 
 # Enumeration: TransactionType
+
+[QIWI](../modules/QIWI.md).TransactionType
 
 ## Table of contents
 
 ### Enumeration members
 
-- [ALL](TransactionType.md#all)
-- [IN](TransactionType.md#in)
-- [OUT](TransactionType.md#out)
-- [QIWI\_CARD](TransactionType.md#qiwi_card)
+- [ALL](QIWI.TransactionType.md#all)
+- [IN](QIWI.TransactionType.md#in)
+- [OUT](QIWI.TransactionType.md#out)
+- [QIWI\_CARD](QIWI.TransactionType.md#qiwi_card)
 
 ## Enumeration members
 
