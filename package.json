@@ -1,6 +1,6 @@
 {
   "name": "qiwi-sdk",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "description": "Typed QIWI (Bank) SDK",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -62,7 +62,7 @@
     "abort-controller": "^3.0.0",
     "axios": "^0.26.1",
     "query-string": "^7.1.1",
-    "sweet-decorators": "^1.8.0",
+    "sweet-decorators": "^1.9.0",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
