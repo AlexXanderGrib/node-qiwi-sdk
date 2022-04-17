@@ -21,7 +21,7 @@
 
 #### Defined in
 
-[src/services/personal.types.ts:1088](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/df33dc3/src/services/personal.types.ts#L1088)
+[src/services/personal.types.ts:1088](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/074077c/src/services/personal.types.ts#L1088)
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.types.ts:1087](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/df33dc3/src/services/personal.types.ts#L1087)
+[src/services/personal.types.ts:1087](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/074077c/src/services/personal.types.ts#L1087)
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.types.ts:1086](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/df33dc3/src/services/personal.types.ts#L1086)
+[src/services/personal.types.ts:1086](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/074077c/src/services/personal.types.ts#L1086)
 
 ___
 
@@ -51,4 +51,4 @@ ___
 
 #### Defined in
 
-[src/services/personal.types.ts:1085](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/df33dc3/src/services/personal.types.ts#L1085)
+[src/services/personal.types.ts:1085](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/074077c/src/services/personal.types.ts#L1085)
