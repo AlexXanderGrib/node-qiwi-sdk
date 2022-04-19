@@ -1,6 +1,5 @@
-import AbortController from "abort-controller";
 import axios, { Method } from "axios";
-import querystring from "query-string";
+import querystring from "querystring";
 import { ErrorWithCode, ExtendedError } from "./error";
 
 /**
@@ -72,9 +71,6 @@ export class HttpAPI {
         ? url
         : new URL(url, this.API_URL).toString();
 
-    const abortController = new AbortController();
-    const timeout = setTimeout(() => abortController.abort(), this.API_TIMEOUT);
-
     const allHeaders = { ...this.API_HEADERS, ...headers };
     const response = await axios(absoluteUrl, {
       method,
@@ -82,11 +78,14 @@ export class HttpAPI {
       data: body,
       httpsAgent: this.agent,
       httpAgent: this.agent,
-      signal: abortController.signal,
       timeout: this.API_TIMEOUT,
       responseType: "arraybuffer",
       validateStatus: () => true
-    }).finally(() => clearTimeout(timeout));
+    }).catch((error) =>
+      axios.isAxiosError(error) && error.response
+        ? error.response
+        : Promise.reject(error)
+    );
 
     if (method.toLowerCase() === "head") {
       return undefined;

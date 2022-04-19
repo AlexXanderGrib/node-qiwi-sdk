@@ -58,7 +58,7 @@ ErrorWithCode&lt;string\&gt;.constructor
 
 #### Defined in
 
-[src/services/p2p.ts:29](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59731a2/src/services/p2p.ts#L29)
+[src/services/p2p.ts:28](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/p2p.ts#L28)
 
 ## Properties
 
@@ -112,7 +112,7 @@ ErrorWithCode.name
 
 #### Defined in
 
-[src/error.ts:9](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59731a2/src/error.ts#L9)
+[src/error.ts:9](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/error.ts#L9)
 
 ___
 
@@ -195,7 +195,7 @@ ErrorWithCode.\_\_@toStringTag@11
 
 #### Defined in
 
-[src/error.ts:32](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59731a2/src/error.ts#L32)
+[src/error.ts:32](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/error.ts#L32)
 
 ## Methods
 
@@ -217,7 +217,7 @@ ErrorWithCode.toJSON
 
 #### Defined in
 
-[src/error.ts:64](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59731a2/src/error.ts#L64)
+[src/error.ts:64](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/error.ts#L64)
 
 ___
 
@@ -239,7 +239,7 @@ ErrorWithCode.toString
 
 #### Defined in
 
-[src/error.ts:79](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59731a2/src/error.ts#L79)
+[src/error.ts:79](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/error.ts#L79)
 
 ___
 

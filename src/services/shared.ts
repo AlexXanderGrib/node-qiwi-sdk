@@ -1,5 +1,6 @@
 import qs from "query-string";
 import type { AnyResponse } from "./shared.types";
+import { v4 as uuid } from "uuid";
 
 /**
  * Превращает число в двухзначную строку
@@ -57,4 +58,14 @@ export function createQS(object: AnyResponse): string {
     skipNull: true,
     skipEmptyString: false
   });
+}
+
+/**
+ * Генерирует UUID
+ *
+ * @export
+ * @return {string}
+ */
+export function generateUUID() {
+  return uuid();
 }

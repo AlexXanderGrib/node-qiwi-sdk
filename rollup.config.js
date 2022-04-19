@@ -25,7 +25,7 @@ const config = {
     }
   ],
   plugins: [
-    typescript({ tsconfig: "./tsconfig.json" }),
+    typescript({ tsconfig: "./tsconfig.build.json" }),
     replace({
       values: {
         "process.env.USER_AGENT_STRING": JSON.stringify(

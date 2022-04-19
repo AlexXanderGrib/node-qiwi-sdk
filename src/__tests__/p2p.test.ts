@@ -2,8 +2,9 @@ import axios from "axios";
 import { createHmac, randomBytes } from "crypto";
 import { config } from "dotenv";
 import { Application, ErrorRequestHandler } from "express";
-import { v4 as uuid } from "uuid";
+
 import { BillCurrency, BillStatusData, P2P } from "..";
+import { generateUUID } from "../exports";
 import { P2PPaymentError } from "../services/p2p";
 import { createMockServer, MockServer } from "./server";
 
@@ -17,7 +18,7 @@ describe(P2P.name, () => {
     process.env.QIWI_PUBLIC_KEY as string
   );
 
-  const billId = uuid();
+  const billId = generateUUID();
   const amount = {
     currency: Math.random() >= 0.5 ? P2P.Currency.RUB : P2P.Currency.KZT,
     value: 20 + Math.round(Math.random() * 100)

@@ -1,8 +1,7 @@
 /* eslint-disable no-invalid-this */
 import { createHmac, timingSafeEqual } from "crypto";
 import { MapErrorsAsync } from "sweet-decorators";
-import { v4 as uuid } from "uuid";
-import { createQS, formatDate } from "./shared";
+import { createQS, generateUUID, formatDate } from "./shared";
 import { ErrorWithCode, ExtendedError } from "../error";
 import { Agent, HttpAPI, HttpError } from "../http";
 import { USER_AGENT } from "../identity";
@@ -266,7 +265,7 @@ export class P2P extends HttpAPI implements types.IP2PApi {
    * @return {string} UUID
    */
   protected _generateId(): string {
-    return uuid();
+    return generateUUID();
   }
 
   /**

@@ -1,15 +1,14 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 /* eslint-disable no-invalid-this */
 import { MapErrorsAsync, MapErrors } from "sweet-decorators";
-import { createQS } from "./shared";
+import { createQS, generateUUID } from "./shared";
 import { ExtendedError } from "../error";
 import { Agent, HttpAPI, HttpError } from "../http";
 import { USER_AGENT } from "../identity";
 import type * as types from "./personal.types";
 import * as values from "./personal.types";
 import { AnyResponse } from "./shared.types";
-import { stringify } from "query-string";
-import { v4 as uuid } from "uuid";
+import { stringify } from "querystring";
 import { createHmac, timingSafeEqual } from "crypto";
 import type { IPersonalAPI } from "./personal.types";
 
@@ -590,7 +589,7 @@ export class Personal extends HttpAPI implements IPersonalAPI {
       `cards/v1/cards/${cardId}/details`,
       {},
       JSON.stringify({
-        operationId: uuid()
+        operationId: generateUUID()
       })
     );
   }

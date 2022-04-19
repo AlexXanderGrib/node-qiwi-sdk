@@ -1,4 +1,4 @@
-import { stringify } from "query-string";
+import { stringify } from "querystring";
 import { ExtendedError } from "../error";
 import { HttpAPI } from "../http";
 import type { AnyResponse } from "./shared.types";
