@@ -106,7 +106,7 @@ HttpAPI.constructor
 
 #### Defined in
 
-[src/services/personal.ts:84](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/074077c/src/services/personal.ts#L84)
+[src/services/personal.ts:84](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59731a2/src/services/personal.ts#L84)
 
 ## Properties
 
@@ -129,7 +129,7 @@ HttpAPI.API\_HEADERS
 
 #### Defined in
 
-[src/services/personal.ts:69](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/074077c/src/services/personal.ts#L69)
+[src/services/personal.ts:69](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59731a2/src/services/personal.ts#L69)
 
 ___
 
@@ -143,7 +143,7 @@ HttpAPI.API\_OK\_RESPONSE\_CODES
 
 #### Defined in
 
-[src/services/personal.ts:77](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/074077c/src/services/personal.ts#L77)
+[src/services/personal.ts:77](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59731a2/src/services/personal.ts#L77)
 
 ___
 
@@ -157,7 +157,7 @@ HttpAPI.API\_TIMEOUT
 
 #### Defined in
 
-[src/http.ts:47](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/074077c/src/http.ts#L47)
+[src/http.ts:47](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59731a2/src/http.ts#L47)
 
 ___
 
@@ -177,7 +177,7 @@ HttpAPI.API\_URL
 
 #### Defined in
 
-[src/services/personal.ts:76](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/074077c/src/services/personal.ts#L76)
+[src/services/personal.ts:76](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59731a2/src/services/personal.ts#L76)
 
 ___
 
@@ -191,7 +191,7 @@ HttpAPI.agent
 
 #### Defined in
 
-[src/services/personal.ts:64](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/074077c/src/services/personal.ts#L64)
+[src/services/personal.ts:64](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59731a2/src/services/personal.ts#L64)
 
 ___
 
@@ -201,7 +201,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:67](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/074077c/src/services/personal.ts#L67)
+[src/services/personal.ts:67](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59731a2/src/services/personal.ts#L67)
 
 ___
 
@@ -217,7 +217,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:66](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/074077c/src/services/personal.ts#L66)
+[src/services/personal.ts:66](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59731a2/src/services/personal.ts#L66)
 
 ___
 
@@ -227,7 +227,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:62](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/074077c/src/services/personal.ts#L62)
+[src/services/personal.ts:62](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59731a2/src/services/personal.ts#L62)
 
 ___
 
@@ -237,7 +237,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:55](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/074077c/src/services/personal.ts#L55)
+[src/services/personal.ts:55](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59731a2/src/services/personal.ts#L55)
 
 ___
 
@@ -247,7 +247,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:56](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/074077c/src/services/personal.ts#L56)
+[src/services/personal.ts:56](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59731a2/src/services/personal.ts#L56)
 
 ___
 
@@ -257,7 +257,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:59](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/074077c/src/services/personal.ts#L59)
+[src/services/personal.ts:59](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59731a2/src/services/personal.ts#L59)
 
 ___
 
@@ -267,7 +267,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:57](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/074077c/src/services/personal.ts#L57)
+[src/services/personal.ts:57](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59731a2/src/services/personal.ts#L57)
 
 ___
 
@@ -277,7 +277,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:58](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/074077c/src/services/personal.ts#L58)
+[src/services/personal.ts:58](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59731a2/src/services/personal.ts#L58)
 
 ___
 
@@ -287,7 +287,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:61](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/074077c/src/services/personal.ts#L61)
+[src/services/personal.ts:61](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59731a2/src/services/personal.ts#L61)
 
 ___
 
@@ -297,7 +297,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:60](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/074077c/src/services/personal.ts#L60)
+[src/services/personal.ts:60](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59731a2/src/services/personal.ts#L60)
 
 ## Methods
 
@@ -332,7 +332,7 @@ HttpAPI.\_request
 
 #### Defined in
 
-[src/http.ts:64](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/074077c/src/http.ts#L64)
+[src/http.ts:64](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59731a2/src/http.ts#L64)
 
 ___
 
@@ -355,7 +355,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:617](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/074077c/src/services/personal.ts#L617)
+[src/services/personal.ts:617](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59731a2/src/services/personal.ts#L617)
 
 ___
 
@@ -382,7 +382,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:564](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/074077c/src/services/personal.ts#L564)
+[src/services/personal.ts:564](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59731a2/src/services/personal.ts#L564)
 
 ___
 
@@ -404,7 +404,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:698](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/074077c/src/services/personal.ts#L698)
+[src/services/personal.ts:698](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59731a2/src/services/personal.ts#L698)
 
 ___
 
@@ -432,7 +432,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:296](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/074077c/src/services/personal.ts#L296)
+[src/services/personal.ts:296](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59731a2/src/services/personal.ts#L296)
 
 ___
 
@@ -459,7 +459,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:396](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/074077c/src/services/personal.ts#L396)
+[src/services/personal.ts:396](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59731a2/src/services/personal.ts#L396)
 
 ___
 
@@ -481,7 +481,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:512](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/074077c/src/services/personal.ts#L512)
+[src/services/personal.ts:512](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59731a2/src/services/personal.ts#L512)
 
 ___
 
@@ -514,7 +514,7 @@ const [PublicKey, SecretKey] = await createP2PKeyPair('my-key-pair');
 
 #### Defined in
 
-[src/services/personal.ts:488](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/074077c/src/services/personal.ts#L488)
+[src/services/personal.ts:488](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59731a2/src/services/personal.ts#L488)
 
 ___
 
@@ -548,7 +548,7 @@ HttpAPI.delete
 
 #### Defined in
 
-[src/http.ts:210](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/074077c/src/http.ts#L210)
+[src/http.ts:210](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59731a2/src/http.ts#L210)
 
 ___
 
@@ -581,7 +581,7 @@ HttpAPI.get
 
 #### Defined in
 
-[src/http.ts:125](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/074077c/src/http.ts#L125)
+[src/http.ts:125](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59731a2/src/http.ts#L125)
 
 ___
 
@@ -608,7 +608,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:283](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/074077c/src/services/personal.ts#L283)
+[src/services/personal.ts:283](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59731a2/src/services/personal.ts#L283)
 
 ___
 
@@ -635,7 +635,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:266](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/074077c/src/services/personal.ts#L266)
+[src/services/personal.ts:266](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59731a2/src/services/personal.ts#L266)
 
 ___
 
@@ -649,7 +649,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:675](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/074077c/src/services/personal.ts#L675)
+[src/services/personal.ts:675](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59731a2/src/services/personal.ts#L675)
 
 ___
 
@@ -675,7 +675,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:588](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/074077c/src/services/personal.ts#L588)
+[src/services/personal.ts:588](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59731a2/src/services/personal.ts#L588)
 
 ___
 
@@ -695,7 +695,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:552](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/074077c/src/services/personal.ts#L552)
+[src/services/personal.ts:552](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59731a2/src/services/personal.ts#L552)
 
 ___
 
@@ -723,7 +723,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:329](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/074077c/src/services/personal.ts#L329)
+[src/services/personal.ts:329](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59731a2/src/services/personal.ts#L329)
 
 ___
 
@@ -750,7 +750,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:132](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/074077c/src/services/personal.ts#L132)
+[src/services/personal.ts:132](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59731a2/src/services/personal.ts#L132)
 
 ___
 
@@ -785,7 +785,7 @@ QIWI кошельке. Лимиты действуют как ограничен
 
 #### Defined in
 
-[src/services/personal.ts:148](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/074077c/src/services/personal.ts#L148)
+[src/services/personal.ts:148](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59731a2/src/services/personal.ts#L148)
 
 ___
 
@@ -807,7 +807,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:663](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/074077c/src/services/personal.ts#L663)
+[src/services/personal.ts:663](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59731a2/src/services/personal.ts#L663)
 
 ___
 
@@ -836,7 +836,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:177](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/074077c/src/services/personal.ts#L177)
+[src/services/personal.ts:177](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59731a2/src/services/personal.ts#L177)
 
 ___
 
@@ -864,7 +864,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:193](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/074077c/src/services/personal.ts#L193)
+[src/services/personal.ts:193](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59731a2/src/services/personal.ts#L193)
 
 ___
 
@@ -885,7 +885,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:96](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/074077c/src/services/personal.ts#L96)
+[src/services/personal.ts:96](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59731a2/src/services/personal.ts#L96)
 
 ___
 
@@ -912,7 +912,7 @@ QIWI Кошелька.
 
 #### Defined in
 
-[src/services/personal.ts:164](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/074077c/src/services/personal.ts#L164)
+[src/services/personal.ts:164](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59731a2/src/services/personal.ts#L164)
 
 ___
 
@@ -940,7 +940,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:209](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/074077c/src/services/personal.ts#L209)
+[src/services/personal.ts:209](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59731a2/src/services/personal.ts#L209)
 
 ___
 
@@ -966,7 +966,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:225](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/074077c/src/services/personal.ts#L225)
+[src/services/personal.ts:225](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59731a2/src/services/personal.ts#L225)
 
 ___
 
@@ -988,7 +988,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:650](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/074077c/src/services/personal.ts#L650)
+[src/services/personal.ts:650](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59731a2/src/services/personal.ts#L650)
 
 ___
 
@@ -1021,7 +1021,7 @@ HttpAPI.head
 
 #### Defined in
 
-[src/http.ts:139](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/074077c/src/http.ts#L139)
+[src/http.ts:139](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59731a2/src/http.ts#L139)
 
 ___
 
@@ -1055,7 +1055,7 @@ HttpAPI.patch
 
 #### Defined in
 
-[src/http.ts:192](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/074077c/src/http.ts#L192)
+[src/http.ts:192](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59731a2/src/http.ts#L192)
 
 ___
 
@@ -1086,7 +1086,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:425](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/074077c/src/services/personal.ts#L425)
+[src/services/personal.ts:425](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59731a2/src/services/personal.ts#L425)
 
 ___
 
@@ -1114,7 +1114,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:445](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/074077c/src/services/personal.ts#L445)
+[src/services/personal.ts:445](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59731a2/src/services/personal.ts#L445)
 
 ___
 
@@ -1148,7 +1148,7 @@ HttpAPI.post
 
 #### Defined in
 
-[src/http.ts:156](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/074077c/src/http.ts#L156)
+[src/http.ts:156](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59731a2/src/http.ts#L156)
 
 ___
 
@@ -1182,7 +1182,7 @@ HttpAPI.put
 
 #### Defined in
 
-[src/http.ts:174](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/074077c/src/http.ts#L174)
+[src/http.ts:174](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59731a2/src/http.ts#L174)
 
 ___
 
@@ -1204,7 +1204,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:637](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/074077c/src/services/personal.ts#L637)
+[src/services/personal.ts:637](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59731a2/src/services/personal.ts#L637)
 
 ___
 
@@ -1229,7 +1229,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:604](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/074077c/src/services/personal.ts#L604)
+[src/services/personal.ts:604](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59731a2/src/services/personal.ts#L604)
 
 ___
 
@@ -1255,7 +1255,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:245](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/074077c/src/services/personal.ts#L245)
+[src/services/personal.ts:245](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59731a2/src/services/personal.ts#L245)
 
 ___
 
@@ -1283,7 +1283,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:311](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/074077c/src/services/personal.ts#L311)
+[src/services/personal.ts:311](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59731a2/src/services/personal.ts#L311)
 
 ___
 
@@ -1311,7 +1311,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:114](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/074077c/src/services/personal.ts#L114)
+[src/services/personal.ts:114](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59731a2/src/services/personal.ts#L114)
 
 ___
 
@@ -1329,7 +1329,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:689](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/074077c/src/services/personal.ts#L689)
+[src/services/personal.ts:689](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59731a2/src/services/personal.ts#L689)
 
 ___
 
@@ -1356,7 +1356,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:575](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/074077c/src/services/personal.ts#L575)
+[src/services/personal.ts:575](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59731a2/src/services/personal.ts#L575)
 
 ___
 
@@ -1379,4 +1379,4 @@ ___
 
 #### Defined in
 
-[src/services/personal.ts:364](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/074077c/src/services/personal.ts#L364)
+[src/services/personal.ts:364](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59731a2/src/services/personal.ts#L364)

@@ -1,6 +1,6 @@
 {
   "name": "qiwi-sdk",
-  "version": "2.3.1",
+  "version": "2.3.2",
   "description": "Typed QIWI (Bank) SDK",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -15,7 +15,8 @@
     "README.en.md",
     "CONTRIBUTING.md",
     "CHANGELOG.md",
-    "SECURITY.md"
+    "SECURITY.md",
+    "CODE_OF_CONDUCT.md"
   ],
   "directories": {
     "doc": "./docs",

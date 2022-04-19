@@ -9,6 +9,7 @@ qiwi-sdk / [Exports](modules.md)
 [![npm](https://img.shields.io/npm/v/qiwi-sdk?style=flat-square)](https://npmjs.com/package/qiwi-sdk)
 [![GitHub](https://img.shields.io/github/stars/AlexXanderGrib/node-qiwi-sdk?style=flat-square)](https://github.com/AlexXanderGrib/node-qiwi-sdk)
 [![last commit](https://img.shields.io/github/last-commit/AlexXanderGrib/node-qiwi-sdk?style=flat-square)](https://github.com/AlexXanderGrib/node-qiwi-sdk)
+[![qiwi-sdk](https://snyk.io/advisor/npm-package/qiwi-sdk/badge.svg)](https://snyk.io/advisor/npm-package/qiwi-sdk)
 
 <center>
   <img src="docs/assets/logo.svg" alt="QIWI SDK" /> 
@@ -20,7 +21,7 @@ qiwi-sdk / [Exports](modules.md)
 2. Покрывает [`Personal`](https://developer.qiwi.com/ru/qiwi-wallet-personal/) и [`P2P`](https://developer.qiwi.com/ru/p2p-payments/) секции API
 3. Документация появляется прямо в редакторе, так-как используется JSDoc
 4. [Безопасная](./SECURITY.md) (Относительно)
-5. Много [примеров](./examples/)
+5. Много [примеров](./examples/README.md)
 6. Поддерживаются даже редко-используемые возможности, например:
    1. Персональные Вебхуки
    2. Блокировка метода оплаты P2P
