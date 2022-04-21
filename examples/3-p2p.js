@@ -1,34 +1,30 @@
-// const QIWI = require("qiwi-sdk");
-const { Personal, P2P, BillPaySource } = require("..");
+// const { Wallet, P2p, BillPaySource, formatOffsetDate } = require("qiwi-sdk");
+const { Wallet, P2p, BillPaySource, formatOffsetDate } = require("..");
 
-const qiwi = new Personal(process.env.QIWI_TOKEN);
+const qiwi = Wallet.create(process.env.QIWI_TOKEN);
 
 async function main() {
-  const [publicKey, secretKey] = await qiwi.createP2PKeyPair("My super pair name");
+  const { publicKey, secretKey } = await qiwi.bills.createP2PKeyPair(
+    "My super pair name"
+  );
 
   // Да, они обратном в порядке,
   // так как PublicKey не всегда нужен
-  const p2p = new P2P(secretKey, publicKey);
+  const p2p = P2p.create(secretKey, publicKey);
 
-  const bill = await p2p.createBill({
+  const bill = await p2p.bills.create({
     amount: {
       value: 1000,
-      currency: P2P.Currency.RUB
+      currency: P2p.Currency.RUB
     },
-    expirationDateTime: P2P.formatLifetime(2 /* 2 дня */),
-    comment: "Создание сайта"
-  });
-
-  // Выводим ссылку чтобы отправить заказчику
-  console.log(bill.payUrl);
-
-  // Теперь можно оплатить счёт только картой, а после оплаты его перенаправит на рикролл
-  const patchedPayUrl = P2P.patchPayUrl(bill.payUrl, {
+    expirationDateTime: formatOffsetDate(2, "day"),
+    comment: "Создание сайта",
     paySource: BillPaySource.Card,
     successUrl: "https://youtu.be/dQw4w9WgXcQ"
   });
 
-  console.log(patchedPayUrl);
+  // Выводим ссылку чтобы отправить заказчику
+  console.log(bill.payUrl);
 }
 
 main();

@@ -1,8 +1,8 @@
 // const QIWI = require("qiwi-sdk");
 const QIWI = require("..");
 
-const qiwi = new QIWI.Personal(process.env.QIWI_TOKEN);
+const qiwi = QIWI.Wallet.create(process.env.QIWI_TOKEN);
 
-qiwi.getPersonProfile().then(console.log);
+qiwi.personProfile.getCurrent().then(console.log);
 
 // => { contractInfo: {...}, authInfo: {...}, userInfo: {...} }

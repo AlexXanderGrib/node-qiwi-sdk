@@ -1,14 +1,19 @@
-import { Recipients } from "../exports";
-import { Detector, DetectorError } from "../services/detector";
+import { Recipients, DetectorCompat, DetectorError } from "../apis";
 
 describe("Detector", () => {
-  const detect = new Detector();
+  const detect = new DetectorCompat();
 
   test("Phone", async () => {
     // Префикс 7920 принадлежит Мегафону
     const providerId = await detect.getPhoneProvider("79203903479");
 
     expect(providerId).toBe(Recipients.MegaFon);
+  });
+
+  test("Card", async () => {
+    const providerId = await detect.getCardProvider("5536913960059463");
+
+    expect(providerId).toBe(Recipients.MasterCardRus);
   });
 
   test("Invalid", () => {

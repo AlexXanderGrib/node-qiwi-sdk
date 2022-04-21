@@ -3,9 +3,14 @@ import { createHmac, randomBytes } from "crypto";
 import { config } from "dotenv";
 import { Application, ErrorRequestHandler } from "express";
 
-import { BillCurrency, BillStatusData, P2P } from "..";
-import { generateUUID } from "../exports";
-import { P2PPaymentError } from "../services/p2p";
+import {
+  BillCurrency,
+  BillStatusData,
+  generateUUID,
+  P2P,
+  P2PPaymentError
+} from "..";
+
 import { createMockServer, MockServer } from "./server";
 
 jest.setTimeout(30_000);
@@ -94,7 +99,7 @@ describe(P2P.name, () => {
       expect(false).toBeTruthy();
     } catch (error: any) {
       expect(error).toBeInstanceOf(P2PPaymentError);
-      expect(error.message).toContain("Validation error");
+      expect(error.message).toContain("Неверные параметры");
     }
   });
 

@@ -2,9 +2,10 @@
   "editor.formatOnSave": true,
   "cSpell.words": [
     "коммиты",
-    "qiwi",
     "codecov",
+    "Compat",
     "PUBK",
+    "qiwi",
     "QIWI"
   ],
   "editor.rulers": [

@@ -1,6 +1,6 @@
 /* eslint-disable unicorn/consistent-function-scoping */
 import { config } from "dotenv";
-import { PersonalApiError, Personal } from "../services/personal";
+import { Personal, WalletApiShortError } from "..";
 
 jest.setTimeout(30_000);
 
@@ -41,7 +41,7 @@ describe(Personal.name, () => {
         comment: "NodeJS QIWI SDK Test npmjs.com/package/qiwi-sdk"
       });
     } catch (error) {
-      expect(error).toBeInstanceOf(PersonalApiError);
+      expect(error).toBeInstanceOf(WalletApiShortError);
     }
   });
 

@@ -1,0 +1,35 @@
+import { formatQuerystring } from "../shared";
+import { WalletApi } from "./api";
+import { LimitsResponse, LimitTypeAny } from "./wallet.types";
+
+/**
+ * # Лимиты QIWI Кошелька
+ * [Документация QIWI](https://developer.qiwi.com/ru/qiwi-wallet-personal/#limits)
+ *
+ * @export
+ * @class WalletLimitsApi
+ * @extends {WalletApi}
+ */
+export class WalletLimitsApi extends WalletApi {
+  /**
+   * ## Лимиты QIWI Кошелька
+   *
+   * Запрос возвращает текущие уровни лимитов по операциям в
+   * вашем QIWI кошельке. Лимиты действуют как ограничения на
+   * сумму определенных операций.
+   *
+   * @template {LimitTypeAny[]} Limits
+   * @param {Limits} limits
+   * @return {Promise<LimitsResponse>} {Promise<LimitsResponse<Limits[number]>>}
+   * @memberof WalletLimitsApi
+   */
+  async get<Limits extends LimitTypeAny[] = LimitTypeAny[]>(
+    limits: Limits
+  ): Promise<LimitsResponse<Limits[number]>> {
+    return await this.http.get(
+      `qw-limits/v1/persons/${this.walletId}/actual-limits?${formatQuerystring({
+        types: limits
+      })}`
+    );
+  }
+}

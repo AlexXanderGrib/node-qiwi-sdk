@@ -1,10 +1,10 @@
 // Платёжка с выводом (почти) куда-угодно 101
 
-// import { Personal, Recipients, Detector, Currency } from "qiwi-sdk";
-import { Personal, Recipients, Detector, Currency } from "..";
+// import { Recipients, Currency, Wallet, Detector } from "qiwi-sdk";
+import { Recipients, Currency, Wallet, Detector } from "..";
 
-const qiwi = new Personal(process.env.QIWI_TOKEN ?? "");
-const detector = new Detector();
+const qiwi = Wallet.create(process.env.QIWI_TOKEN ?? "");
+const detector = Detector.create();
 
 type PayoutMethod = "qiwi" | "yoomoney" | "card" | "mobile";
 
@@ -23,19 +23,18 @@ async function getProvider(
     // А вот банков которые выпускают карты
     // и моб. операторов куча, поэтому тут надо чекать
     case "card":
-      return Recipients.AnyRusCard;
+      return detector.detectProvider.byCardNumber(account);
 
     case "mobile":
-      return detector.getPhoneProvider(account);
+      return detector.detectProvider.byPhone(account);
   }
 }
 
 async function sendPayment(method: PayoutMethod, account: string, amount: number) {
   const provider = await getProvider(method, account);
-  const commission = await qiwi.getCommission(provider, account, amount);
+  const commission = await qiwi.payments.getCommission(provider, account, amount);
 
-  // Используем метод `pay2` вместо `pay` для лучшей читаемости
-  await qiwi.pay2({
+  await qiwi.payments.pay({
     // Пускай комиссию платит получатель
     amount: amount - commission,
     account,

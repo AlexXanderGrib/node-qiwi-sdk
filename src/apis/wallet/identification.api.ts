@@ -1,0 +1,46 @@
+import { WalletApi } from "./api";
+import { IdentificationBase, IdentificationResponse } from "./wallet.types";
+
+/**
+ * # Идентификация
+ * [Документация QIWI] (https://developer.qiwi.com/ru/qiwi-wallet-personal/#identification)
+ *
+ * @export
+ * @class WalletIdentificationApi
+ * @extends {WalletApi}
+ */
+export class WalletIdentificationApi extends WalletApi {
+  /**
+   * # Идентификация пользователя
+   *
+   * Данный запрос позволяет отправить данные для идентификации
+   * вашего QIWI кошелька.
+   *
+   * @param {IdentificationBase} data
+   * @param {StringOrNumber} wallet
+   * @return {Promise<IdentificationResponse>} {Promise<IdentificationResponse>}
+   * @memberof WalletIdentificationApi
+   */
+  async set(data: IdentificationBase): Promise<IdentificationResponse> {
+    return await this.http.post(
+      `identification/v1/persons/${this.walletId}/identification`,
+      data
+    );
+  }
+
+  /**
+   * # Данные идентификации
+   *
+   * Данный запрос позволяет выгрузить маскированные данные и
+   * статус идентификации своего QIWI кошелька.
+   *
+   * @param {StringOrNumber} wallet
+   * @return {Promise<IdentificationResponse>} {Promise<IdentificationResponse>}
+   * @memberof WalletIdentificationApi
+   */
+  async get(): Promise<IdentificationResponse> {
+    return await this.http.get(
+      `identification/v1/persons/${this.walletId}/identification`
+    );
+  }
+}

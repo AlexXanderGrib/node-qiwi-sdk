@@ -1,216 +1,278 @@
-import axios, { Method } from "axios";
-import querystring from "querystring";
-import { ErrorWithCode, ExtendedError } from "./error";
+import axios, { AxiosResponse, Method } from "axios";
+import { Collection, convertCollection, ReadonlyRecord } from "./apis/shared";
+
+export type Headers = ReadonlyRecord<string, string>;
+
+export interface HttpClientOptions<Rq = any, Rs = any> {
+  headers?: Headers;
+  agent?: any;
+  okStatusCodes?: Collection<number>;
+  baseURL?: string;
+  timeout?: number;
+
+  stringifyBody?: (body: Rq) => string | Buffer;
+  parseResponse?: (body: Buffer) => Rs;
+  mapHttpErrors?: (error: HttpError) => Error;
+}
+
+export interface HttpRequestOptions<Rq = any, Rs = any>
+  extends Partial<HttpClientOptions<Rq, Rs>> {
+  url: string;
+  method: string;
+  body?: Rq;
+}
+
+export interface HttpResponse<Rq = any, Rs = any> {
+  request: HttpRequestOptions<Rq, Rs>;
+  statusCode: number;
+  headers: Headers;
+  body?: Rs;
+}
 
 /**
- * Ошибка, которую выбрасывает Http API при неправильном коде ответа
+ *
+ *
+ * @export
+ * @class HttpError
+ * @extends {Error}
  */
-export class HttpError extends ErrorWithCode<number> {
+export class HttpError<Rq = any, Rs = any> extends Error {
+  /**
+   * Creates an instance of HttpError.
+   * @param {string} message
+   * @param {HttpResponse} response
+   * @memberof HttpError
+   */
+  constructor(message: string, public response: HttpResponse<Rq, Rs>) {
+    super(message);
+  }
+}
+
+export interface HttpClient<Rq = any, Rs = any> {
+  options: HttpClientOptions<Rq, Rs>;
+  request(options: HttpRequestOptions<Rq, Rs>): Promise<HttpResponse<Rq, Rs>>;
+}
+
+/**
+ * Identity function
+ *
+ * @template T
+ * @param {T} argument
+ * @return {T}
+ */
+function _<T>(argument: T): T {
+  return argument;
+}
+/**
+ *
+ *
+ * @export
+ * @class DefaultHttpClient
+ * @implements {HttpClient}
+ */
+export class DefaultHttpClient implements HttpClient {
+  private readonly _axios = axios.create();
+
+  /**
+   * Creates an instance of DefaultHttpClient.
+   * @param {HttpClientOptions} options
+   * @memberof DefaultHttpClient
+   */
+  constructor(public options: HttpClientOptions) {}
+
   /**
    *
-   * @param {number} code Код ответа
-   * @param {number} body Тело ответа
+   *
+   * @param {HttpRequestOptions} options
+   * @return {Promise<HttpResponse>}
+   * @memberof DefaultHttpClient
    */
-  constructor(public code: number, public body: string) {
-    super(`API Responded with Error response code: ${code}`, code);
+  async request(options: HttpRequestOptions): Promise<HttpResponse> {
+    const request = {
+      ...this.options,
+      ...options,
+      headers: { ...this.options.headers, ...options.headers }
+    };
+
+    const okStatusCodes = new Set(
+      request.okStatusCodes ? convertCollection(request.okStatusCodes) : []
+    );
+
+    const validateStatus = (status: number) =>
+      okStatusCodes.size === 0 ? true : okStatusCodes.has(status);
+
+    try {
+      const axiosResponse = await this._axios
+        .request({
+          httpAgent: request.agent,
+          httpsAgent: request.agent,
+          baseURL: request.baseURL,
+          timeout: request.timeout,
+          url: request.url,
+          method: request.method as Method,
+          headers: { ...request.headers },
+          responseType: "arraybuffer",
+          data: request.body
+            ? (request.stringifyBody ?? _)(request.body)
+            : undefined,
+          validateStatus
+        })
+        .catch((error) => {
+          if (axios.isAxiosError(error) && error.response) {
+            throw new HttpError(
+              error.message,
+              this._mapResponse(error.response, request)
+            );
+          }
+
+          throw error;
+        });
+
+      if (!validateStatus(axiosResponse.status)) {
+        throw new HttpError(
+          `Server responded with disallowed status code: ${axiosResponse.status}`,
+          this._mapResponse(axiosResponse, request)
+        );
+      }
+      return this._mapResponse(axiosResponse, request);
+    } catch (error: unknown) {
+      if (!(error instanceof HttpError)) throw error;
+
+      if (typeof request.mapHttpErrors !== "function") throw error;
+
+      throw request.mapHttpErrors(error);
+    }
   }
 
   /**
    *
-   * @return {Error}
+   *
+   * @private
+   * @param {AxiosResponse} axiosResponse
+   * @param {HttpRequestOptions} request
+   * @return {HttpResponse}  {HttpResponse}
+   * @memberof DefaultHttpClient
    */
-  toJSON(): Error & { code: number; body: string } {
+  private _mapResponse(
+    axiosResponse: AxiosResponse,
+    request: HttpRequestOptions
+  ): HttpResponse {
     return {
-      message: this.message,
-      name: this.name,
-      stack: this.stack,
-      code: this.code,
-      body: this.body
+      headers: axiosResponse.headers,
+      statusCode: axiosResponse.status,
+      body:
+        axiosResponse.data !== undefined
+          ? (request.parseResponse ?? _)(axiosResponse.data)
+          : undefined,
+      request
     };
   }
 }
 
-export type Agent = any;
-
-/**
- * Ошибка раскодировки ответа сервера
- */
-export class DecodingError extends ExtendedError {}
-
 /**
  *
+ *
+ * @export
+ * @class SimpleJsonHttp
  */
-export class HttpAPI {
-  protected readonly API_URL: string = "";
-  protected readonly API_HEADERS: Record<string, string> = {};
-  protected readonly API_TIMEOUT: number = 10_000;
-  protected readonly API_OK_RESPONSE_CODES: number[] = [200];
-  protected agent?: Agent;
+export class SimpleJsonHttp {
+  /**
+   * Creates an instance of SimpleJsonHttp.
+   * @param {HttpClient} client
+   * @memberof SimpleJsonHttp
+   */
+  constructor(
+    public client: HttpClient = new DefaultHttpClient({
+      parseResponse: (body) => JSON.parse(body.toString()),
+      stringifyBody: (body) => JSON.stringify(body)
+    })
+  ) {}
 
   /**
-   * Simplified http request function
    *
-   * @throws {HttpError} If http error code is not matched valid
-   * @throws {DecodingError} If unable to decode response
    *
-   * @param {string} url Relative to API url path
-   * @param {string} method Http request method
-   * @param {Record<string, string>} [headers] Additional headers to API
-   * @param {string?} [body] Request body
-   *
-   * @return {Promise<*>} Decoded response
+   * @template T
+   * @param {string} url
+   * @return {Promise<T>}
+   * @memberof SimpleJsonHttp
    */
-  protected async _request(
-    url: string,
-    method: Method,
-    headers: Record<string, string>,
-    body?: string | undefined
-  ): Promise<any> {
-    const absoluteUrl =
-      url.startsWith("https://") || url.startsWith("http://")
-        ? url
-        : new URL(url, this.API_URL).toString();
-
-    const allHeaders = { ...this.API_HEADERS, ...headers };
-    const response = await axios(absoluteUrl, {
-      method,
-      headers: allHeaders,
-      data: body,
-      httpsAgent: this.agent,
-      httpAgent: this.agent,
-      timeout: this.API_TIMEOUT,
-      responseType: "arraybuffer",
-      validateStatus: () => true
-    }).catch((error) =>
-      axios.isAxiosError(error) && error.response
-        ? error.response
-        : Promise.reject(error)
-    );
-
-    if (method.toLowerCase() === "head") {
-      return undefined;
-    }
-
-    const contentType = response.headers["content-type"]?.split(";")[0];
-    const responseBuffer = Buffer.from(response.data);
-
-    if (!this.API_OK_RESPONSE_CODES.includes(response.status)) {
-      throw new HttpError(response.status, responseBuffer.toString());
-    }
-
-    try {
-      if (contentType?.startsWith("text/")) return responseBuffer.toString();
-
-      switch (contentType) {
-        case "application/json":
-          return JSON.parse(responseBuffer.toString());
-        case "application/x-www-form-urlencoded":
-          return querystring.parse(responseBuffer.toString());
-      }
-
-      return responseBuffer;
-    } catch (error: any) {
-      throw new DecodingError(error.message);
-    }
+  async get<T>(url: string): Promise<T> {
+    return await this.simpleRequest("GET", url);
   }
 
   /**
-   * Делает GET запрос и парсит ответ
+   *
+   *
    * @template T
-   * @param {string} url URL запроса
-   * @param {Record<string, string>=} [headers] Заголовки запроса
+   * @param {string} url
+   * @param {*} [data]
    * @return {Promise<T>}
+   * @memberof SimpleJsonHttp
    */
-  protected async get<T = any>(
-    url: string,
-    headers: Record<string, string> = {}
-  ): Promise<T> {
-    return await this._request(url, "GET", headers);
+  async post<T>(url: string, data?: any): Promise<T> {
+    return await this.simpleRequest("POST", url, data);
   }
 
   /**
-   * Делает HEAD запрос и парсит ответ
+   *
+   *
    * @template T
-   * @param {string} url URL запроса
-   * @param {Record<string, string>=} [headers] Заголовки запроса
+   * @param {string} url
+   * @param {*} [data]
    * @return {Promise<T>}
+   * @memberof SimpleJsonHttp
    */
-  protected async head<T>(
-    url: string,
-    headers: Record<string, string> = {}
-  ): Promise<T> {
-    return await this._request(url, "HEAD", headers);
+  async put<T>(url: string, data?: any): Promise<T> {
+    return await this.simpleRequest("PUT", url, data);
   }
 
   /**
-   * Делает POST запрос и парсит ответ
+   *
+   *
    * @template T
-   *
-   * @param {string} url URL запроса
-   * @param {Record<string, string>=} [headers] Заголовки запроса
-   * @param {string=} [body] Тело запроса
-   *
+   * @param {string} url
+   * @param {*} [data]
    * @return {Promise<T>}
+   * @memberof SimpleJsonHttp
    */
-  protected async post<T>(
-    url: string,
-    headers: Record<string, string> = {},
-    body?: string | undefined
-  ): Promise<T> {
-    return await this._request(url, "POST", headers, body);
+  async patch<T>(url: string, data?: any): Promise<T> {
+    return await this.simpleRequest("PATCH", url, data);
   }
 
   /**
-   * Делает PUT запрос и парсит ответ
+   *
+   *
    * @template T
-   *
-   * @param {string} url URL запроса
-   * @param {Record<string, string>=} [headers] Заголовки запроса
-   * @param {string=} [body] Тело запроса
-   *
+   * @param {string} url
+   * @param {*} [data]
    * @return {Promise<T>}
+   * @memberof SimpleJsonHttp
    */
-  protected async put<T>(
-    url: string,
-    headers: Record<string, string> = {},
-    body?: string | undefined
-  ): Promise<T> {
-    return await this._request(url, "PUT", headers, body);
+  async delete<T>(url: string, data?: any): Promise<T> {
+    return await this.simpleRequest("DELETE", url, data);
   }
 
   /**
-   * Делает PATCH запрос и парсит ответ
+   *
    * @template T
-   *
-   * @param {string} url URL запроса
-   * @param {Record<string, string>=} [headers] Заголовки запроса
-   * @param {string=} [body] Тело запроса
-   *
-   * @return {Promise<T>}
+   * @param {string} method
+   * @param {string} url
+   * @param {*} [body]
+   * @return {Promise<T>} {Promise<T>}
+   * @memberof SimpleJsonHttp
    */
-  protected async patch<T>(
-    url: string,
-    headers: Record<string, string> = {},
-    body?: string | undefined
-  ): Promise<T> {
-    return await this._request(url, "PATCH", headers, body);
+  async simpleRequest<T>(method: string, url: string, body?: any): Promise<T> {
+    return await this.request<T>({ method, url, body });
   }
 
   /**
-   * Делает DELETE запрос и парсит ответ
+   *
    * @template T
-   *
-   * @param {string} url URL запроса
-   * @param {Record<string, string>=} [headers] Заголовки запроса
-   * @param {string=} [body] Тело запроса
-   *
-   * @return {Promise<T>}
+   * @param {HttpRequestOptions} option
+   * @return {Promise<T>} {Promise<T>}
+   * @memberof SimpleJsonHttp
    */
-  protected async delete<T>(
-    url: string,
-    headers: Record<string, string> = {},
-    body?: string | undefined
-  ): Promise<T> {
-    return await this._request(url, "DELETE", headers, body);
+  async request<T>(option: HttpRequestOptions): Promise<T> {
+    return await this.client.request(option).then((response) => response.body);
   }
 }

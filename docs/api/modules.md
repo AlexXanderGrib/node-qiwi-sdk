@@ -6,6 +6,30 @@
 
 ### References
 
+- [Detector](modules.md#detector)
+- [DetectorApiOptions](modules.md#detectorapioptions)
+- [DetectorCompat](modules.md#detectorcompat)
+- [DetectorError](modules.md#detectorerror)
+- [P2P](modules.md#p2p)
+- [P2PNotificationError](modules.md#p2pnotificationerror)
+- [P2PPaymentError](modules.md#p2ppaymenterror)
+- [P2p](modules.md#p2p-1)
+- [P2pApiError](modules.md#p2papierror)
+- [P2pApiErrorResponse](modules.md#p2papierrorresponse)
+- [P2pApiOptions](modules.md#p2papioptions)
+- [P2pAuthorizationError](modules.md#p2pauthorizationerror)
+- [P2pBillNotificationError](modules.md#p2pbillnotificationerror)
+- [P2pCompat](modules.md#p2pcompat)
+- [Personal](modules.md#personal)
+- [PersonalApiError](modules.md#personalapierror)
+- [Wallet](modules.md#wallet)
+- [WalletApiError](modules.md#walletapierror)
+- [WalletApiErrorResponse](modules.md#walletapierrorresponse)
+- [WalletApiOptions](modules.md#walletapioptions)
+- [WalletApiShortError](modules.md#walletapishorterror)
+- [WalletApiShortErrorResponse](modules.md#walletapishorterrorresponse)
+- [WalletAuthorizationError](modules.md#walletauthorizationerror)
+- [WalletCompat](modules.md#walletcompat)
 - [default](modules.md#default)
 
 ### Namespaces
@@ -25,36 +49,32 @@
 - [PaymentHistorySource](enums/PaymentHistorySource.md)
 - [PersonIdentificationLevel](enums/PersonIdentificationLevel.md)
 - [Recipients](enums/Recipients.md)
+- [TimeSpan](enums/TimeSpan.md)
 - [TransactionStatus](enums/TransactionStatus.md)
 - [TransactionType](enums/TransactionType.md)
 
-### Classes
-
-- [Detector](classes/Detector.md)
-- [DetectorError](classes/DetectorError.md)
-- [P2P](classes/P2P.md)
-- [P2PNotificationError](classes/P2PNotificationError.md)
-- [P2PPaymentError](classes/P2PPaymentError.md)
-- [Personal](classes/Personal.md)
-- [PersonalApiError](classes/PersonalApiError.md)
-
 ### Interfaces
 
-- [IP2PApi](interfaces/IP2PApi.md)
-- [IPersonalAPI](interfaces/IPersonalAPI.md)
+- [Bill](interfaces/Bill.md)
+- [BillProvider](interfaces/BillProvider.md)
 
 ### Type aliases
 
 - [Account](modules.md#account)
 - [AccountOffer](modules.md#accountoffer)
+- [AnyMapping](modules.md#anymapping)
+- [AnyResponse](modules.md#anyresponse)
+- [BillCreateParameters](modules.md#billcreateparameters)
 - [BillCreationRequest](modules.md#billcreationrequest)
 - [BillCurrencyAny](modules.md#billcurrencyany)
 - [BillCurrencyPlain](modules.md#billcurrencyplain)
 - [BillError](modules.md#billerror)
-- [BillFormParams](modules.md#billformparams)
+- [BillFormParameters](modules.md#billformparameters)
+- [BillPayResponse](modules.md#billpayresponse)
 - [BillStatusAny](modules.md#billstatusany)
 - [BillStatusData](modules.md#billstatusdata)
 - [BillStatusPlain](modules.md#billstatusplain)
+- [BillsGetParameters](modules.md#billsgetparameters)
 - [CardActionStatusAny](modules.md#cardactionstatusany)
 - [CardActionStatusPlain](modules.md#cardactionstatusplain)
 - [CardRenameResponse](modules.md#cardrenameresponse)
@@ -66,6 +86,7 @@
 - [ChequeFormatAny](modules.md#chequeformatany)
 - [ChequeFormatPlain](modules.md#chequeformatplain)
 - [CodeResponse](modules.md#coderesponse)
+- [Collection](modules.md#collection)
 - [CurrencyAny](modules.md#currencyany)
 - [CurrencyPlain](modules.md#currencyplain)
 - [FormUrlOptions](modules.md#formurloptions)
@@ -80,14 +101,18 @@
 - [GetTransactionsHistoryResponse](modules.md#gettransactionshistoryresponse)
 - [IdentificationBase](modules.md#identificationbase)
 - [IdentificationResponse](modules.md#identificationresponse)
+- [KeyPair](modules.md#keypair)
 - [Limit](modules.md#limit)
 - [LimitTypeAny](modules.md#limittypeany)
 - [LimitTypePlain](modules.md#limittypeplain)
 - [LimitsResponse](modules.md#limitsresponse)
 - [LockableField](modules.md#lockablefield)
+- [Mapping](modules.md#mapping)
 - [MoneyAmount](modules.md#moneyamount)
-- [Pay2Params](modules.md#pay2params)
-- [PayUrlPatchParams](modules.md#payurlpatchparams)
+- [ObjectKey](modules.md#objectkey)
+- [ObjectMapping](modules.md#objectmapping)
+- [PayParameters](modules.md#payparameters)
+- [PayUrlPatchParameters](modules.md#payurlpatchparameters)
 - [PaymentCommissionRequest](modules.md#paymentcommissionrequest)
 - [PaymentHistorySourceAny](modules.md#paymenthistorysourceany)
 - [PaymentHistorySourcePlain](modules.md#paymenthistorysourceplain)
@@ -96,7 +121,11 @@
 - [PersonIdentificationLevelPlain](modules.md#personidentificationlevelplain)
 - [PersonProfile](modules.md#personprofile)
 - [PrettyTokenResponse](modules.md#prettytokenresponse)
+- [ReadonlyRecord](modules.md#readonlyrecord)
 - [Restrictions](modules.md#restrictions)
+- [StringOrNumber](modules.md#stringornumber)
+- [TimeSpanKeys](modules.md#timespankeys)
+- [TimeSpanMapping](modules.md#timespanmapping)
 - [TokenResponse](modules.md#tokenresponse)
 - [Transaction](modules.md#transaction-1)
 - [TransactionStatusAny](modules.md#transactionstatusany)
@@ -106,14 +135,168 @@
 - [WebHookInfo](modules.md#webhookinfo)
 - [WebhookTransaction](modules.md#webhooktransaction)
 
+### Variables
+
+- [TimeSpanMapping](modules.md#timespanmapping-1)
+
 ### Functions
 
-- [createQS](modules.md#createqs)
+- [convertCollection](modules.md#convertcollection)
+- [convertMapping](modules.md#convertmapping)
+- [convertObjectMapping](modules.md#convertobjectmapping)
 - [formatDate](modules.md#formatdate)
+- [formatOffsetDate](modules.md#formatoffsetdate)
+- [formatQuerystring](modules.md#formatquerystring)
 - [generateUUID](modules.md#generateuuid)
-- [parseQS](modules.md#parseqs)
+- [isCollection](modules.md#iscollection)
+- [isMapping](modules.md#ismapping)
+- [parseQuerystring](modules.md#parsequerystring)
 
 ## References
+
+### Detector
+
+Re-exports [Detector](classes/QIWI.Detector.md)
+
+___
+
+### DetectorApiOptions
+
+Re-exports [DetectorApiOptions](modules/QIWI.md#detectorapioptions)
+
+___
+
+### DetectorCompat
+
+Re-exports [DetectorCompat](classes/QIWI.DetectorCompat.md)
+
+___
+
+### DetectorError
+
+Re-exports [DetectorError](classes/QIWI.DetectorError.md)
+
+___
+
+### P2P
+
+Renames and re-exports [P2pCompat](classes/QIWI.P2pCompat.md)
+
+___
+
+### P2PNotificationError
+
+Renames and re-exports [P2pBillNotificationError](classes/QIWI.P2pBillNotificationError.md)
+
+___
+
+### P2PPaymentError
+
+Renames and re-exports [P2pApiError](classes/QIWI.P2pApiError.md)
+
+___
+
+### P2p
+
+Re-exports [P2p](classes/QIWI.P2p.md)
+
+___
+
+### P2pApiError
+
+Re-exports [P2pApiError](classes/QIWI.P2pApiError.md)
+
+___
+
+### P2pApiErrorResponse
+
+Re-exports [P2pApiErrorResponse](modules/QIWI.md#p2papierrorresponse)
+
+___
+
+### P2pApiOptions
+
+Re-exports [P2pApiOptions](interfaces/QIWI.P2pApiOptions.md)
+
+___
+
+### P2pAuthorizationError
+
+Re-exports [P2pAuthorizationError](classes/QIWI.P2pAuthorizationError.md)
+
+___
+
+### P2pBillNotificationError
+
+Re-exports [P2pBillNotificationError](classes/QIWI.P2pBillNotificationError.md)
+
+___
+
+### P2pCompat
+
+Re-exports [P2pCompat](classes/QIWI.P2pCompat.md)
+
+___
+
+### Personal
+
+Renames and re-exports [WalletCompat](classes/QIWI.WalletCompat.md)
+
+___
+
+### PersonalApiError
+
+Renames and re-exports [WalletApiError](classes/QIWI.WalletApiError.md)
+
+___
+
+### Wallet
+
+Re-exports [Wallet](classes/QIWI.Wallet.md)
+
+___
+
+### WalletApiError
+
+Re-exports [WalletApiError](classes/QIWI.WalletApiError.md)
+
+___
+
+### WalletApiErrorResponse
+
+Re-exports [WalletApiErrorResponse](modules/QIWI.md#walletapierrorresponse)
+
+___
+
+### WalletApiOptions
+
+Re-exports [WalletApiOptions](interfaces/QIWI.WalletApiOptions.md)
+
+___
+
+### WalletApiShortError
+
+Re-exports [WalletApiShortError](classes/QIWI.WalletApiShortError.md)
+
+___
+
+### WalletApiShortErrorResponse
+
+Re-exports [WalletApiShortErrorResponse](modules/QIWI.md#walletapishorterrorresponse)
+
+___
+
+### WalletAuthorizationError
+
+Re-exports [WalletAuthorizationError](classes/QIWI.WalletAuthorizationError.md)
+
+___
+
+### WalletCompat
+
+Re-exports [WalletCompat](classes/QIWI.WalletCompat.md)
+
+___
 
 ### default
 
@@ -143,7 +326,7 @@ Renames and re-exports [QIWI](modules/QIWI.md)
 
 #### Defined in
 
-[src/services/personal.types.ts:733](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/personal.types.ts#L733)
+[src/apis/wallet/wallet.types.ts:733](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/wallet/wallet.types.ts#L733)
 
 ___
 
@@ -160,7 +343,44 @@ ___
 
 #### Defined in
 
-[src/services/personal.types.ts:774](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/personal.types.ts#L774)
+[src/apis/wallet/wallet.types.ts:774](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/wallet/wallet.types.ts#L774)
+
+___
+
+### AnyMapping
+
+Ƭ **AnyMapping**<`K`, `V`\>: [`Mapping`](modules/QIWI.md#mapping)<`K`, `V`\> \| `PropertyCollection`<`K`, `V`\>
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `K` |
+| `V` |
+
+#### Defined in
+
+[src/apis/shared/shared.types.ts:12](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/shared/shared.types.ts#L12)
+
+___
+
+### AnyResponse
+
+Ƭ **AnyResponse**: `Record`<`string`, `any`\>
+
+#### Defined in
+
+[src/apis/shared/shared.types.ts:1](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/shared/shared.types.ts#L1)
+
+___
+
+### BillCreateParameters
+
+Ƭ **BillCreateParameters**: [`BillCreationRequest`](modules/QIWI.md#billcreationrequest) & [`PayUrlPatchParameters`](modules/QIWI.md#payurlpatchparameters) & { `billId?`: `string`  }
+
+#### Defined in
+
+[src/apis/p2p/p2p.types.ts:184](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/p2p/p2p.types.ts#L184)
 
 ___
 
@@ -181,11 +401,11 @@ ___
 | `customer.account?` | `string` | Идентификатор пользователя в вашей системе |
 | `customer.email?` | `string` | E-mail пользователя |
 | `customer.phone?` | `string` | Номер телефона пользователя (в международном формате) |
-| `expirationDateTime` | `string` | Дата, до которой счет будет доступен для оплаты. Если перевод не будет совершен до этой даты, ему присваивается финальный статус `EXPIRED` и последующий перевод станет невозможен.  **`example`** "2020-07-10T09:02:00+03:00" |
+| `expirationDateTime?` | `string` \| `Date` | Дата, до которой счет будет доступен для оплаты. Если перевод не будет совершен до этой даты, ему присваивается финальный статус `EXPIRED` и последующий перевод станет невозможен.  **`example`** "2020-07-10T09:02:00+03:00" |
 
 #### Defined in
 
-[src/services/p2p.types.ts:24](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/p2p.types.ts#L24)
+[src/apis/p2p/p2p.types.ts:24](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/p2p/p2p.types.ts#L24)
 
 ___
 
@@ -195,7 +415,7 @@ ___
 
 #### Defined in
 
-[src/services/p2p.types.ts:22](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/p2p.types.ts#L22)
+[src/apis/p2p/p2p.types.ts:22](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/p2p/p2p.types.ts#L22)
 
 ___
 
@@ -205,7 +425,7 @@ ___
 
 #### Defined in
 
-[src/services/p2p.types.ts:21](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/p2p.types.ts#L21)
+[src/apis/p2p/p2p.types.ts:21](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/p2p/p2p.types.ts#L21)
 
 ___
 
@@ -226,17 +446,35 @@ ___
 
 #### Defined in
 
-[src/services/p2p.types.ts:126](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/p2p.types.ts#L126)
+[src/apis/p2p/p2p.types.ts:126](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/p2p/p2p.types.ts#L126)
 
 ___
 
-### BillFormParams
+### BillFormParameters
 
-Ƭ **BillFormParams**: { `amount`: `string` \| `number` ; `billId`: `string` ; `comment?`: `string` ; `customFields?`: `Record`<`string`, `string`\> ; `lifetime?`: `string` ; `publicKey`: `string` ; `successUrl?`: `string`  } & [`BillCreationRequest`](modules/QIWI.md#billcreationrequest)[``"customer"``]
+Ƭ **BillFormParameters**: { `amount`: `string` \| `number` ; `billId?`: `string` ; `comment?`: `string` ; `customFields?`: `Record`<`string`, `string`\> ; `lifetime?`: `string` ; `successUrl?`: `string`  } & [`BillCreationRequest`](modules/QIWI.md#billcreationrequest)[``"customer"``]
 
 #### Defined in
 
-[src/services/p2p.types.ts:141](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/p2p.types.ts#L141)
+[src/apis/p2p/p2p.types.ts:141](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/p2p/p2p.types.ts#L141)
+
+___
+
+### BillPayResponse
+
+Ƭ **BillPayResponse**: `Object`
+
+#### Type declaration
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `WALLET_ACCEPT_PAY_RESULT` | `any` | - |
+| `invoice_status` | `string` | Строка кода статуса оплаты счета, `PAID_STATUS`. Любой другой статус означает неуспех платежной транзакции. |
+| `is_sms_confirm` | `boolean` | Признак подтверждения по SMS |
+
+#### Defined in
+
+[src/apis/wallet/wallet.types.ts:1466](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/wallet/wallet.types.ts#L1466)
 
 ___
 
@@ -246,7 +484,7 @@ ___
 
 #### Defined in
 
-[src/services/p2p.types.ts:14](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/p2p.types.ts#L14)
+[src/apis/p2p/p2p.types.ts:14](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/p2p/p2p.types.ts#L14)
 
 ___
 
@@ -273,7 +511,7 @@ ___
 
 #### Defined in
 
-[src/services/p2p.types.ts:81](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/p2p.types.ts#L81)
+[src/apis/p2p/p2p.types.ts:81](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/p2p/p2p.types.ts#L81)
 
 ___
 
@@ -283,7 +521,28 @@ ___
 
 #### Defined in
 
-[src/services/p2p.types.ts:13](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/p2p.types.ts#L13)
+[src/apis/p2p/p2p.types.ts:13](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/p2p/p2p.types.ts#L13)
+
+___
+
+### BillsGetParameters
+
+Ƭ **BillsGetParameters**: `Object`
+
+#### Type declaration
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `max_creation_datetime?` | `number` | Верхняя временная граница для поиска счетов, Unix-time |
+| `min_creation_datetime?` | `number` | Нижняя временная граница для поиска счетов, Unix-time |
+| `next_creation_datetime?` | `number` | Начальное время для поиска (возвращаются только счета, выставленные ранее этого времени), Unix-time. Используется для продолжения списка, разбитого на страницы. |
+| `next_id?` | `number` | Начальный идентификатор счета для поиска. Будет возвращен список счетов с идентификаторами, равными или меньше этого значения. Используется для продолжения списка, разбитого на страницы. |
+| `rows?` | `number` | Максимальное число счетов в ответе, для разбивки списка на страницы. Целое число от 1 до 50. По умолчанию возвращается не более 50 счетов. |
+| `statuses?` | `string` | Статус неоплаченного счета. Обязательный параметр. Только строка `READY_FOR_PAY` |
+
+#### Defined in
+
+[src/apis/wallet/wallet.types.ts:1426](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/wallet/wallet.types.ts#L1426)
 
 ___
 
@@ -293,7 +552,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.types.ts:1092](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/personal.types.ts#L1092)
+[src/apis/wallet/wallet.types.ts:1092](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/wallet/wallet.types.ts#L1092)
 
 ___
 
@@ -303,7 +562,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.types.ts:1091](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/personal.types.ts#L1091)
+[src/apis/wallet/wallet.types.ts:1091](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/wallet/wallet.types.ts#L1091)
 
 ___
 
@@ -321,7 +580,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.types.ts:1116](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/personal.types.ts#L1116)
+[src/apis/wallet/wallet.types.ts:1116](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/wallet/wallet.types.ts#L1116)
 
 ___
 
@@ -344,7 +603,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.types.ts:1101](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/personal.types.ts#L1101)
+[src/apis/wallet/wallet.types.ts:1101](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/wallet/wallet.types.ts#L1101)
 
 ___
 
@@ -391,7 +650,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.types.ts:975](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/personal.types.ts#L975)
+[src/apis/wallet/wallet.types.ts:975](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/wallet/wallet.types.ts#L975)
 
 ___
 
@@ -401,7 +660,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.types.ts:952](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/personal.types.ts#L952)
+[src/apis/wallet/wallet.types.ts:952](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/wallet/wallet.types.ts#L952)
 
 ___
 
@@ -411,7 +670,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.types.ts:951](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/personal.types.ts#L951)
+[src/apis/wallet/wallet.types.ts:951](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/wallet/wallet.types.ts#L951)
 
 ___
 
@@ -430,7 +689,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.types.ts:1094](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/personal.types.ts#L1094)
+[src/apis/wallet/wallet.types.ts:1094](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/wallet/wallet.types.ts#L1094)
 
 ___
 
@@ -440,7 +699,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.types.ts:79](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/personal.types.ts#L79)
+[src/apis/wallet/wallet.types.ts:79](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/wallet/wallet.types.ts#L79)
 
 ___
 
@@ -450,7 +709,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.types.ts:78](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/personal.types.ts#L78)
+[src/apis/wallet/wallet.types.ts:78](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/wallet/wallet.types.ts#L78)
 
 ___
 
@@ -466,7 +725,23 @@ ___
 
 #### Defined in
 
-[src/services/personal.types.ts:909](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/personal.types.ts#L909)
+[src/apis/wallet/wallet.types.ts:909](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/wallet/wallet.types.ts#L909)
+
+___
+
+### Collection
+
+Ƭ **Collection**<`T`\>: `Iterable`<`T`\> \| `ArrayLike`<`T`\>
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `T` |
+
+#### Defined in
+
+[src/apis/shared/shared.types.ts:2](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/shared/shared.types.ts#L2)
 
 ___
 
@@ -476,7 +751,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.types.ts:63](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/personal.types.ts#L63)
+[src/apis/wallet/wallet.types.ts:63](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/wallet/wallet.types.ts#L63)
 
 ___
 
@@ -486,7 +761,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.types.ts:62](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/personal.types.ts#L62)
+[src/apis/wallet/wallet.types.ts:62](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/wallet/wallet.types.ts#L62)
 
 ___
 
@@ -507,7 +782,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.types.ts:855](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/personal.types.ts#L855)
+[src/apis/wallet/wallet.types.ts:855](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/wallet/wallet.types.ts#L855)
 
 ___
 
@@ -540,7 +815,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.types.ts:1126](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/personal.types.ts#L1126)
+[src/apis/wallet/wallet.types.ts:1126](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/wallet/wallet.types.ts#L1126)
 
 ___
 
@@ -550,7 +825,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.types.ts:782](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/personal.types.ts#L782)
+[src/apis/wallet/wallet.types.ts:782](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/wallet/wallet.types.ts#L782)
 
 ___
 
@@ -566,7 +841,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.types.ts:769](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/personal.types.ts#L769)
+[src/apis/wallet/wallet.types.ts:769](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/wallet/wallet.types.ts#L769)
 
 ___
 
@@ -576,7 +851,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.types.ts:489](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/personal.types.ts#L489)
+[src/apis/wallet/wallet.types.ts:489](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/wallet/wallet.types.ts#L489)
 
 ___
 
@@ -594,7 +869,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.types.ts:414](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/personal.types.ts#L414)
+[src/apis/wallet/wallet.types.ts:414](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/wallet/wallet.types.ts#L414)
 
 ___
 
@@ -611,7 +886,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.types.ts:459](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/personal.types.ts#L459)
+[src/apis/wallet/wallet.types.ts:459](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/wallet/wallet.types.ts#L459)
 
 ___
 
@@ -621,7 +896,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.types.ts:510](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/personal.types.ts#L510)
+[src/apis/wallet/wallet.types.ts:510](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/wallet/wallet.types.ts#L510)
 
 ___
 
@@ -638,7 +913,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.types.ts:516](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/personal.types.ts#L516)
+[src/apis/wallet/wallet.types.ts:516](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/wallet/wallet.types.ts#L516)
 
 ___
 
@@ -656,7 +931,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.types.ts:651](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/personal.types.ts#L651)
+[src/apis/wallet/wallet.types.ts:651](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/wallet/wallet.types.ts#L651)
 
 ___
 
@@ -679,7 +954,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.types.ts:328](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/personal.types.ts#L328)
+[src/apis/wallet/wallet.types.ts:328](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/wallet/wallet.types.ts#L328)
 
 ___
 
@@ -689,7 +964,24 @@ ___
 
 #### Defined in
 
-[src/services/personal.types.ts:354](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/personal.types.ts#L354)
+[src/apis/wallet/wallet.types.ts:354](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/wallet/wallet.types.ts#L354)
+
+___
+
+### KeyPair
+
+Ƭ **KeyPair**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `publicKey` | `string` |
+| `secretKey` | `string` |
+
+#### Defined in
+
+[src/apis/wallet/wallet.types.ts:1342](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/wallet/wallet.types.ts#L1342)
 
 ___
 
@@ -719,7 +1011,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.types.ts:692](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/personal.types.ts#L692)
+[src/apis/wallet/wallet.types.ts:692](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/wallet/wallet.types.ts#L692)
 
 ___
 
@@ -729,7 +1021,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.types.ts:690](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/personal.types.ts#L690)
+[src/apis/wallet/wallet.types.ts:690](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/wallet/wallet.types.ts#L690)
 
 ___
 
@@ -739,7 +1031,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.types.ts:689](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/personal.types.ts#L689)
+[src/apis/wallet/wallet.types.ts:689](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/wallet/wallet.types.ts#L689)
 
 ___
 
@@ -763,7 +1055,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.types.ts:724](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/personal.types.ts#L724)
+[src/apis/wallet/wallet.types.ts:724](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/wallet/wallet.types.ts#L724)
 
 ___
 
@@ -773,7 +1065,32 @@ ___
 
 #### Defined in
 
-[src/services/personal.types.ts:853](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/personal.types.ts#L853)
+[src/apis/wallet/wallet.types.ts:853](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/wallet/wallet.types.ts#L853)
+
+___
+
+### Mapping
+
+Ƭ **Mapping**<`K`, `V`\>: `Object`
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `K` |
+| `V` |
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `entries` | () => `PropertyCollection`<`K`, `V`\> |
+| `get` | (`key`: `K`) => `undefined` \| `V` |
+| `has` | (`key`: `K`) => `boolean` |
+
+#### Defined in
+
+[src/apis/shared/shared.types.ts:5](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/shared/shared.types.ts#L5)
 
 ___
 
@@ -790,13 +1107,40 @@ ___
 
 #### Defined in
 
-[src/services/personal.types.ts:65](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/personal.types.ts#L65)
+[src/apis/wallet/wallet.types.ts:65](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/wallet/wallet.types.ts#L65)
 
 ___
 
-### Pay2Params
+### ObjectKey
 
-Ƭ **Pay2Params**: `Object`
+Ƭ **ObjectKey**: `string` \| `number`
+
+#### Defined in
+
+[src/apis/shared/shared.types.ts:10](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/shared/shared.types.ts#L10)
+
+___
+
+### ObjectMapping
+
+Ƭ **ObjectMapping**<`K`, `V`\>: [`ReadonlyRecord`](modules/QIWI.md#readonlyrecord)<`K`, `V`\> \| [`AnyMapping`](modules/QIWI.md#anymapping)<`K`, `V`\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `K` | extends [`ObjectKey`](modules/QIWI.md#objectkey) |
+| `V` | `V` |
+
+#### Defined in
+
+[src/apis/shared/shared.types.ts:15](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/shared/shared.types.ts#L15)
+
+___
+
+### PayParameters
+
+Ƭ **PayParameters**: `Object`
 
 **`see`** [Документация по платежам](https://developer.qiwi.com/ru/qiwi-wallet-personal/#payments)
 
@@ -809,21 +1153,21 @@ ___
 | `comment?` | `string` | Комментарий к платежу |
 | `currency?` | [`Currency`](enums/QIWI.Currency.md) | Валюта платежа |
 | `fields?` | `Partial`<[`FreePayFields`](modules/QIWI.md#freepayfields)\> & `Record`<`string`, `string`\> | Дополнительные параметры платежа. Обычно необходимо для [платежа по свободным реквизитам](https://developer.qiwi.com/ru/qiwi-wallet-personal/#freepay) |
-| `provider?` | `number` \| [`Recipients`](enums/QIWI.Recipients.md) | Ака ID в доках, номер провайдера(платёжной системы) у QIWI  **`see`** [Recipients](classes/QIWI.Personal.md#recipients)  **`default`** 99 |
+| `provider?` | `number` \| [`Recipients`](enums/QIWI.Recipients.md) | Ака ID в доках, номер провайдера(платёжной системы) у QIWI  **`see`** [Recipients](classes/QIWI.Wallet.md#recipients)  **`default`** 99 |
 
 #### Defined in
 
-[src/services/personal.types.ts:1213](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/personal.types.ts#L1213)
+[src/apis/wallet/wallet.types.ts:1213](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/wallet/wallet.types.ts#L1213)
 
 ___
 
-### PayUrlPatchParams
+### PayUrlPatchParameters
 
-Ƭ **PayUrlPatchParams**: `Partial`<{ `paySource`: [`BillPaySource`](enums/QIWI.BillPaySource.md) ; `successUrl`: `string`  }\>
+Ƭ **PayUrlPatchParameters**: `Partial`<{ `paySource`: [`BillPaySource`](enums/QIWI.BillPaySource.md) ; `successUrl`: `string`  }\>
 
 #### Defined in
 
-[src/services/p2p.types.ts:179](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/p2p.types.ts#L179)
+[src/apis/p2p/p2p.types.ts:179](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/p2p/p2p.types.ts#L179)
 
 ___
 
@@ -846,7 +1190,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.types.ts:784](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/personal.types.ts#L784)
+[src/apis/wallet/wallet.types.ts:784](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/wallet/wallet.types.ts#L784)
 
 ___
 
@@ -856,7 +1200,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.types.ts:410](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/personal.types.ts#L410)
+[src/apis/wallet/wallet.types.ts:410](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/wallet/wallet.types.ts#L410)
 
 ___
 
@@ -866,7 +1210,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.types.ts:409](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/personal.types.ts#L409)
+[src/apis/wallet/wallet.types.ts:409](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/wallet/wallet.types.ts#L409)
 
 ___
 
@@ -891,7 +1235,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.types.ts:819](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/personal.types.ts#L819)
+[src/apis/wallet/wallet.types.ts:819](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/wallet/wallet.types.ts#L819)
 
 ___
 
@@ -901,7 +1245,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.types.ts:20](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/personal.types.ts#L20)
+[src/apis/wallet/wallet.types.ts:20](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/wallet/wallet.types.ts#L20)
 
 ___
 
@@ -911,7 +1255,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.types.ts:19](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/personal.types.ts#L19)
+[src/apis/wallet/wallet.types.ts:19](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/wallet/wallet.types.ts#L19)
 
 ___
 
@@ -957,7 +1301,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.types.ts:178](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/personal.types.ts#L178)
+[src/apis/wallet/wallet.types.ts:178](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/wallet/wallet.types.ts#L178)
 
 ___
 
@@ -981,7 +1325,24 @@ ___
 
 #### Defined in
 
-[src/services/personal.types.ts:927](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/personal.types.ts#L927)
+[src/apis/wallet/wallet.types.ts:927](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/wallet/wallet.types.ts#L927)
+
+___
+
+### ReadonlyRecord
+
+Ƭ **ReadonlyRecord**<`K`, `V`\>: `Readonly`<`Record`<`K`, `V`\>\>
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `K` | extends [`ObjectKey`](modules/QIWI.md#objectkey) |
+| `V` | `V` |
+
+#### Defined in
+
+[src/apis/shared/shared.types.ts:13](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/shared/shared.types.ts#L13)
 
 ___
 
@@ -991,7 +1352,37 @@ ___
 
 #### Defined in
 
-[src/services/personal.types.ts:376](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/personal.types.ts#L376)
+[src/apis/wallet/wallet.types.ts:376](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/wallet/wallet.types.ts#L376)
+
+___
+
+### StringOrNumber
+
+Ƭ **StringOrNumber**: `string` \| `number`
+
+#### Defined in
+
+[src/apis/wallet/wallet.types.ts:1340](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/wallet/wallet.types.ts#L1340)
+
+___
+
+### TimeSpanKeys
+
+Ƭ **TimeSpanKeys**: keyof [`TimeSpanMapping`](modules/QIWI.md#timespanmapping-1)
+
+#### Defined in
+
+[src/apis/shared/shared.ts:242](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/shared/shared.ts#L242)
+
+___
+
+### TimeSpanMapping
+
+Ƭ **TimeSpanMapping**: typeof [`TimeSpanMapping`](modules/QIWI.md#timespanmapping-1)
+
+#### Defined in
+
+[src/apis/shared/shared.ts:241](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/shared/shared.ts#L241)
 
 ___
 
@@ -1010,7 +1401,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.types.ts:913](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/personal.types.ts#L913)
+[src/apis/wallet/wallet.types.ts:913](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/wallet/wallet.types.ts#L913)
 
 ___
 
@@ -1056,7 +1447,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.types.ts:527](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/personal.types.ts#L527)
+[src/apis/wallet/wallet.types.ts:527](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/wallet/wallet.types.ts#L527)
 
 ___
 
@@ -1066,7 +1457,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.types.ts:49](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/personal.types.ts#L49)
+[src/apis/wallet/wallet.types.ts:49](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/wallet/wallet.types.ts#L49)
 
 ___
 
@@ -1076,7 +1467,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.types.ts:48](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/personal.types.ts#L48)
+[src/apis/wallet/wallet.types.ts:48](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/wallet/wallet.types.ts#L48)
 
 ___
 
@@ -1086,7 +1477,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.types.ts:36](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/personal.types.ts#L36)
+[src/apis/wallet/wallet.types.ts:36](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/wallet/wallet.types.ts#L36)
 
 ___
 
@@ -1096,7 +1487,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.types.ts:35](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/personal.types.ts#L35)
+[src/apis/wallet/wallet.types.ts:35](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/wallet/wallet.types.ts#L35)
 
 ___
 
@@ -1116,7 +1507,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.types.ts:1255](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/personal.types.ts#L1255)
+[src/apis/wallet/wallet.types.ts:1255](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/wallet/wallet.types.ts#L1255)
 
 ___
 
@@ -1152,29 +1543,132 @@ ___
 
 #### Defined in
 
-[src/services/personal.types.ts:1269](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/personal.types.ts#L1269)
+[src/apis/wallet/wallet.types.ts:1269](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/wallet/wallet.types.ts#L1269)
 
-## Functions
+## Variables
 
-### createQS
+### TimeSpanMapping
 
-▸ **createQS**(`object`): `string`
+• `Const` **TimeSpanMapping**: `Object`
 
-Создаёт строку запроса, в формате, который понимает QIWI
+#### Type declaration
 
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `object` | `AnyResponse` | Объект для преобразования |
-
-#### Returns
-
-`string`
+| Name | Type |
+| :------ | :------ |
+| `d` | [`TimeSpan`](enums/QIWI.TimeSpan.md) |
+| `day` | [`TimeSpan`](enums/QIWI.TimeSpan.md) |
+| `h` | [`TimeSpan`](enums/QIWI.TimeSpan.md) |
+| `hour` | [`TimeSpan`](enums/QIWI.TimeSpan.md) |
+| `hr` | [`TimeSpan`](enums/QIWI.TimeSpan.md) |
+| `m` | [`TimeSpan`](enums/QIWI.TimeSpan.md) |
+| `millisecond` | [`TimeSpan`](enums/QIWI.TimeSpan.md) |
+| `min` | [`TimeSpan`](enums/QIWI.TimeSpan.md) |
+| `minute` | [`TimeSpan`](enums/QIWI.TimeSpan.md) |
+| `mn` | [`TimeSpan`](enums/QIWI.TimeSpan.md) |
+| `mon` | [`TimeSpan`](enums/QIWI.TimeSpan.md) |
+| `month` | [`TimeSpan`](enums/QIWI.TimeSpan.md) |
+| `ms` | [`TimeSpan`](enums/QIWI.TimeSpan.md) |
+| `msec` | [`TimeSpan`](enums/QIWI.TimeSpan.md) |
+| `s` | [`TimeSpan`](enums/QIWI.TimeSpan.md) |
+| `sec` | [`TimeSpan`](enums/QIWI.TimeSpan.md) |
+| `second` | [`TimeSpan`](enums/QIWI.TimeSpan.md) |
+| `w` | [`TimeSpan`](enums/QIWI.TimeSpan.md) |
+| `week` | [`TimeSpan`](enums/QIWI.TimeSpan.md) |
+| `y` | [`TimeSpan`](enums/QIWI.TimeSpan.md) |
+| `year` | [`TimeSpan`](enums/QIWI.TimeSpan.md) |
+| `yr` | [`TimeSpan`](enums/QIWI.TimeSpan.md) |
 
 #### Defined in
 
-[src/services/shared.ts:55](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/shared.ts#L55)
+[src/apis/shared/shared.ts:217](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/shared/shared.ts#L217)
+
+## Functions
+
+### convertCollection
+
+▸ **convertCollection**<`T`\>(`collection`): `T`[]
+
+**`export`**
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `T` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `collection` | [`Collection`](modules/QIWI.md#collection)<`T`\> |
+
+#### Returns
+
+`T`[]
+
+#### Defined in
+
+[src/apis/shared/shared.ts:101](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/shared/shared.ts#L101)
+
+___
+
+### convertMapping
+
+▸ **convertMapping**<`K`, `V`\>(`mapping`): `ReadonlyMap`<`K`, `V`\>
+
+**`export`**
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `K` |
+| `V` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `mapping` | [`AnyMapping`](modules/QIWI.md#anymapping)<`K`, `V`\> |
+
+#### Returns
+
+`ReadonlyMap`<`K`, `V`\>
+
+#### Defined in
+
+[src/apis/shared/shared.ts:115](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/shared/shared.ts#L115)
+
+___
+
+### convertObjectMapping
+
+▸ **convertObjectMapping**<`K`, `V`\>(`mapping`): [`ReadonlyRecord`](modules/QIWI.md#readonlyrecord)<`K`, `V`\>
+
+**`export`**
+
+#### Type parameters
+
+| Name | Type |
+| :------ | :------ |
+| `K` | extends [`ObjectKey`](modules/QIWI.md#objectkey) |
+| `V` | `V` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `mapping` | [`ObjectMapping`](modules/QIWI.md#objectmapping)<`K`, `V`\> |
+
+#### Returns
+
+[`ReadonlyRecord`](modules/QIWI.md#readonlyrecord)<`K`, `V`\>
+
+{ReadonlyRecord<K, V>}
+
+#### Defined in
+
+[src/apis/shared/shared.ts:183](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/shared/shared.ts#L183)
 
 ___
 
@@ -1198,7 +1692,55 @@ ___
 
 #### Defined in
 
-[src/services/shared.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/shared.ts#L23)
+[src/apis/shared/shared.ts:31](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/shared/shared.ts#L31)
+
+___
+
+### formatOffsetDate
+
+▸ **formatOffsetDate**(`amount`, `unit?`, `currentDate?`): `string`
+
+**`export`**
+
+#### Parameters
+
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `amount` | `number` | `undefined` |
+| `unit` | `number` \| [`TimeSpan`](enums/QIWI.TimeSpan.md) \| ``"ms"`` \| ``"msec"`` \| ``"millisecond"`` \| ``"s"`` \| ``"sec"`` \| ``"second"`` \| ``"m"`` \| ``"min"`` \| ``"minute"`` \| ``"h"`` \| ``"hr"`` \| ``"hour"`` \| ``"d"`` \| ``"day"`` \| ``"w"`` \| ``"week"`` \| ``"mn"`` \| ``"mon"`` \| ``"month"`` \| ``"y"`` \| ``"yr"`` \| ``"year"`` | `TimeSpan.Millisecond` |
+| `currentDate` | `Date` | `undefined` |
+
+#### Returns
+
+`string`
+
+{string}
+
+#### Defined in
+
+[src/apis/shared/shared.ts:252](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/shared/shared.ts#L252)
+
+___
+
+### formatQuerystring
+
+▸ **formatQuerystring**(`object`): `string`
+
+Создаёт строку запроса, в формате, который понимает QIWI
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `object` | [`AnyResponse`](modules/QIWI.md#anyresponse) | Объект для преобразования |
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+[src/apis/shared/shared.ts:75](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/shared/shared.ts#L75)
 
 ___
 
@@ -1216,13 +1758,70 @@ ___
 
 #### Defined in
 
-[src/services/shared.ts:69](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/shared.ts#L69)
+[src/apis/shared/shared.ts:89](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/shared/shared.ts#L89)
 
 ___
 
-### parseQS
+### isCollection
 
-▸ **parseQS**(`querystring`): `AnyResponse`
+▸ **isCollection**<`T`\>(`object`): object is Collection<T\>
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `T` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `object` | `unknown` |
+
+#### Returns
+
+object is Collection<T\>
+
+{object is Collection<T>}
+
+#### Defined in
+
+[src/apis/shared/shared.ts:147](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/shared/shared.ts#L147)
+
+___
+
+### isMapping
+
+▸ **isMapping**<`K`, `V`\>(`object`): object is Mapping<K, V\>
+
+#### Type parameters
+
+| Name |
+| :------ |
+| `K` |
+| `V` |
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `object` | `unknown` |
+
+#### Returns
+
+object is Mapping<K, V\>
+
+{object is Mapping<K, V>}
+
+#### Defined in
+
+[src/apis/shared/shared.ts:131](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/shared/shared.ts#L131)
+
+___
+
+### parseQuerystring
+
+▸ **parseQuerystring**(`querystring`): [`AnyResponse`](modules/QIWI.md#anyresponse)
 
 Разбирает строку запроса, в том формате, который передаёт QIWI
 
@@ -1234,8 +1833,8 @@ ___
 
 #### Returns
 
-`AnyResponse`
+[`AnyResponse`](modules/QIWI.md#anyresponse)
 
 #### Defined in
 
-[src/services/shared.ts:41](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/shared.ts#L41)
+[src/apis/shared/shared.ts:61](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/shared/shared.ts#L61)

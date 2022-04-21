@@ -6,11 +6,15 @@
 
 API получения ID провайдера QIWI по Номеру Телефона/Карте
 
+**`export`**
+
 ## Hierarchy
 
-- `HttpAPI`
+- `ApiClass`<[`DetectorApiOptions`](../modules/QIWI.md#detectorapioptions)\>
 
   ↳ **`Detector`**
+
+  ↳↳ [`DetectorCompat`](QIWI.DetectorCompat.md)
 
 ## Table of contents
 
@@ -20,418 +24,174 @@ API получения ID провайдера QIWI по Номеру Телеф
 
 ### Properties
 
-- [API\_HEADERS](QIWI.Detector.md#api_headers)
-- [API\_OK\_RESPONSE\_CODES](QIWI.Detector.md#api_ok_response_codes)
-- [API\_TIMEOUT](QIWI.Detector.md#api_timeout)
-- [API\_URL](QIWI.Detector.md#api_url)
+- [\_options](QIWI.Detector.md#_options)
+- [detectProvider](QIWI.Detector.md#detectprovider)
+- [DetectApi](QIWI.Detector.md#detectapi)
+
+### Accessors
+
 - [agent](QIWI.Detector.md#agent)
+- [options](QIWI.Detector.md#options)
 
 ### Methods
 
-- [\_extractProvider](QIWI.Detector.md#_extractprovider)
-- [\_request](QIWI.Detector.md#_request)
-- [delete](QIWI.Detector.md#delete)
-- [get](QIWI.Detector.md#get)
-- [getCardProvider](QIWI.Detector.md#getcardprovider)
-- [getPhoneProvider](QIWI.Detector.md#getphoneprovider)
-- [head](QIWI.Detector.md#head)
-- [patch](QIWI.Detector.md#patch)
-- [post](QIWI.Detector.md#post)
-- [put](QIWI.Detector.md#put)
+- [create](QIWI.Detector.md#create)
+- [httpClientFactory](QIWI.Detector.md#httpclientfactory)
 
 ## Constructors
 
 ### constructor
 
-• **new Detector**()
+• **new Detector**(`_options`)
+
+Creates an instance of ApiClass.
+
+**`memberof`** ApiClass
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `_options` | `ApiClassOptions` |
 
 #### Inherited from
 
-HttpAPI.constructor
+ApiClass<DetectorApiOptions\>.constructor
+
+#### Defined in
+
+src/apis/api.ts:49
 
 ## Properties
 
-### API\_HEADERS
+### \_options
 
-• `Protected` `Readonly` **API\_HEADERS**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `Accept` | `string` |
-| `Content-Type` | `string` |
-
-#### Overrides
-
-HttpAPI.API\_HEADERS
-
-#### Defined in
-
-[src/services/detector.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/detector.ts#L17)
-
-___
-
-### API\_OK\_RESPONSE\_CODES
-
-• `Protected` `Readonly` **API\_OK\_RESPONSE\_CODES**: `number`[]
+• `Protected` `Readonly` **\_options**: `ApiClassOptions`
 
 #### Inherited from
 
-HttpAPI.API\_OK\_RESPONSE\_CODES
-
-#### Defined in
-
-[src/http.ts:47](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/http.ts#L47)
+ApiClass.\_options
 
 ___
 
-### API\_TIMEOUT
+### detectProvider
 
-• `Protected` `Readonly` **API\_TIMEOUT**: `number` = `10_000`
-
-#### Inherited from
-
-HttpAPI.API\_TIMEOUT
+• `Readonly` **detectProvider**: `DetectorDetectApi`
 
 #### Defined in
 
-[src/http.ts:46](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/http.ts#L46)
+[src/apis/detector/detector.ts:54](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/detector/detector.ts#L54)
 
 ___
 
-### API\_URL
+### DetectApi
 
-• `Protected` `Readonly` **API\_URL**: ``"https://qiwi.com/"``
-
-#### Overrides
-
-HttpAPI.API\_URL
+▪ `Static` `Readonly` **DetectApi**: typeof `DetectorDetectApi` = `DetectorDetectApi`
 
 #### Defined in
 
-[src/services/detector.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/detector.ts#L16)
+[src/apis/detector/detector.ts:15](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/detector/detector.ts#L15)
 
-___
+## Accessors
 
 ### agent
 
-• `Protected` `Optional` **agent**: `any`
+• `get` **agent**(): `any`
+
+**`memberof`** WalletCompat
+
+#### Returns
+
+`any`
 
 #### Inherited from
 
-HttpAPI.agent
+ApiClass.agent
 
 #### Defined in
 
-[src/http.ts:48](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/http.ts#L48)
+src/apis/api.ts:21
+
+• `set` **agent**(`agent`): `void`
+
+**`memberof`** WalletCompat
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `agent` | `any` |
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+ApiClass.agent
+
+#### Defined in
+
+src/apis/api.ts:30
+
+___
+
+### options
+
+• `get` **options**(): `T`
+
+**`readonly`**
+
+**`memberof`** ApiClass
+
+#### Returns
+
+`T`
+
+#### Inherited from
+
+ApiClass.options
+
+#### Defined in
+
+src/apis/api.ts:40
 
 ## Methods
 
-### \_extractProvider
+### create
 
-▸ `Private` **_extractProvider**(`response`): `number`
+▸ `Static` **create**(): [`Detector`](QIWI.Detector.md)
 
-Вытаскивает ID провайдера из объекта ответа
+**`static`**
 
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `response` | `AnyResponse` |
+**`memberof`** Detector
 
 #### Returns
 
-`number`
+[`Detector`](QIWI.Detector.md)
 
-ID провайдера
+{Detector}
 
 #### Defined in
 
-[src/services/detector.ts:28](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/detector.ts#L28)
+[src/apis/detector/detector.ts:50](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/detector/detector.ts#L50)
 
 ___
 
-### \_request
+### httpClientFactory
 
-▸ `Protected` **_request**(`url`, `method`, `headers`, `body?`): `Promise`<`any`\>
+▸ `Static` **httpClientFactory**(): `SimpleJsonHttp`
 
-Simplified http request function
+**`static`**
 
-**`throws`** {HttpError} If http error code is not matched valid
-
-**`throws`** {DecodingError} If unable to decode response
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `url` | `string` | Relative to API url path |
-| `method` | `Method` | Http request method |
-| `headers` | `Record`<`string`, `string`\> | - |
-| `body?` | `string` | - |
+**`memberof`** Detector
 
 #### Returns
 
-`Promise`<`any`\>
+`SimpleJsonHttp`
 
-Decoded response
-
-#### Inherited from
-
-HttpAPI.\_request
+{SimpleJsonHttp}
 
 #### Defined in
 
-[src/http.ts:63](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/http.ts#L63)
-
-___
-
-### delete
-
-▸ `Protected` **delete**<`T`\>(`url`, `headers?`, `body?`): `Promise`<`T`\>
-
-Делает DELETE запрос и парсит ответ
-
-#### Type parameters
-
-| Name |
-| :------ |
-| `T` |
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `url` | `string` | URL запроса |
-| `headers` | `Record`<`string`, `string`\> | - |
-| `body?` | `string` | - |
-
-#### Returns
-
-`Promise`<`T`\>
-
-#### Inherited from
-
-HttpAPI.delete
-
-#### Defined in
-
-[src/http.ts:209](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/http.ts#L209)
-
-___
-
-### get
-
-▸ `Protected` **get**<`T`\>(`url`, `headers?`): `Promise`<`T`\>
-
-Делает GET запрос и парсит ответ
-
-#### Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `T` | `any` |
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `url` | `string` | URL запроса |
-| `headers` | `Record`<`string`, `string`\> | - |
-
-#### Returns
-
-`Promise`<`T`\>
-
-#### Inherited from
-
-HttpAPI.get
-
-#### Defined in
-
-[src/http.ts:124](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/http.ts#L124)
-
-___
-
-### getCardProvider
-
-▸ **getCardProvider**(`cardNumber`): `Promise`<`number`\>
-
-Возвращает ID провайдера QIWI по номеру карты.
-Используется для переводов на карту
-
-**`deprecated`** После ухода VISA и MasterCard из РФ стал работать хуже.
-Советую использовать константу `Recipients.AnyRusCard` вместо вызова метода.
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `cardNumber` | `string` |
-
-#### Returns
-
-`Promise`<`number`\>
-
-#### Defined in
-
-[src/services/detector.ts:59](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/detector.ts#L59)
-
-___
-
-### getPhoneProvider
-
-▸ **getPhoneProvider**(`phone`): `Promise`<`number`\>
-
-Возвращает ID провайдера QIWI по номеру телефона.
-Используется для пополнения на счёта мобильного
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `phone` | `string` |
-
-#### Returns
-
-`Promise`<`number`\>
-
-#### Defined in
-
-[src/services/detector.ts:40](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/detector.ts#L40)
-
-___
-
-### head
-
-▸ `Protected` **head**<`T`\>(`url`, `headers?`): `Promise`<`T`\>
-
-Делает HEAD запрос и парсит ответ
-
-#### Type parameters
-
-| Name |
-| :------ |
-| `T` |
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `url` | `string` | URL запроса |
-| `headers` | `Record`<`string`, `string`\> | - |
-
-#### Returns
-
-`Promise`<`T`\>
-
-#### Inherited from
-
-HttpAPI.head
-
-#### Defined in
-
-[src/http.ts:138](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/http.ts#L138)
-
-___
-
-### patch
-
-▸ `Protected` **patch**<`T`\>(`url`, `headers?`, `body?`): `Promise`<`T`\>
-
-Делает PATCH запрос и парсит ответ
-
-#### Type parameters
-
-| Name |
-| :------ |
-| `T` |
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `url` | `string` | URL запроса |
-| `headers` | `Record`<`string`, `string`\> | - |
-| `body?` | `string` | - |
-
-#### Returns
-
-`Promise`<`T`\>
-
-#### Inherited from
-
-HttpAPI.patch
-
-#### Defined in
-
-[src/http.ts:191](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/http.ts#L191)
-
-___
-
-### post
-
-▸ `Protected` **post**<`T`\>(`url`, `headers?`, `body?`): `Promise`<`T`\>
-
-Делает POST запрос и парсит ответ
-
-#### Type parameters
-
-| Name |
-| :------ |
-| `T` |
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `url` | `string` | URL запроса |
-| `headers` | `Record`<`string`, `string`\> | - |
-| `body?` | `string` | - |
-
-#### Returns
-
-`Promise`<`T`\>
-
-#### Inherited from
-
-HttpAPI.post
-
-#### Defined in
-
-[src/http.ts:155](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/http.ts#L155)
-
-___
-
-### put
-
-▸ `Protected` **put**<`T`\>(`url`, `headers?`, `body?`): `Promise`<`T`\>
-
-Делает PUT запрос и парсит ответ
-
-#### Type parameters
-
-| Name |
-| :------ |
-| `T` |
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `url` | `string` | URL запроса |
-| `headers` | `Record`<`string`, `string`\> | - |
-| `body?` | `string` | - |
-
-#### Returns
-
-`Promise`<`T`\>
-
-#### Inherited from
-
-HttpAPI.put
-
-#### Defined in
-
-[src/http.ts:173](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/http.ts#L173)
+[src/apis/detector/detector.ts:24](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/detector/detector.ts#L24)
