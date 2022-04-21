@@ -10,9 +10,11 @@ API получения ID провайдера QIWI по Номеру Телеф
 
 ## Hierarchy
 
-- **`Detector`**
+- `ApiClass`<[`DetectorApiOptions`](../modules/QIWI.md#detectorapioptions)\>
 
-  ↳ [`DetectorCompat`](QIWI.DetectorCompat.md)
+  ↳ **`Detector`**
+
+  ↳↳ [`DetectorCompat`](QIWI.DetectorCompat.md)
 
 ## Table of contents
 
@@ -28,6 +30,7 @@ API получения ID провайдера QIWI по Номеру Телеф
 
 ### Accessors
 
+- [agent](QIWI.Detector.md#agent)
 - [options](QIWI.Detector.md#options)
 
 ### Methods
@@ -41,25 +44,33 @@ API получения ID провайдера QIWI по Номеру Телеф
 
 • **new Detector**(`_options`)
 
-Creates an instance of Detector.
+Creates an instance of ApiClass.
 
-**`memberof`** Detector
+**`memberof`** ApiClass
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `_options` | [`DetectorApiOptions`](../interfaces/QIWI.DetectorApiOptions.md) |
+| `_options` | `ApiClassOptions` |
+
+#### Inherited from
+
+ApiClass<DetectorApiOptions\>.constructor
 
 #### Defined in
 
-src/apis/detector/detector.ts:68
+src/apis/api.ts:49
 
 ## Properties
 
 ### \_options
 
-• `Protected` `Readonly` **\_options**: [`DetectorApiOptions`](../interfaces/QIWI.DetectorApiOptions.md)
+• `Protected` `Readonly` **\_options**: `ApiClassOptions`
+
+#### Inherited from
+
+ApiClass.\_options
 
 ___
 
@@ -69,7 +80,7 @@ ___
 
 #### Defined in
 
-src/apis/detector/detector.ts:70
+[src/apis/detector/detector.ts:54](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/detector/detector.ts#L54)
 
 ___
 
@@ -79,25 +90,71 @@ ___
 
 #### Defined in
 
-src/apis/detector/detector.ts:14
+[src/apis/detector/detector.ts:15](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/detector/detector.ts#L15)
 
 ## Accessors
 
-### options
+### agent
 
-• `get` **options**(): [`DetectorApiOptions`](../interfaces/QIWI.DetectorApiOptions.md)
+• `get` **agent**(): `any`
 
-**`readonly`**
-
-**`memberof`** Detector
+**`memberof`** WalletCompat
 
 #### Returns
 
-[`DetectorApiOptions`](../interfaces/QIWI.DetectorApiOptions.md)
+`any`
+
+#### Inherited from
+
+ApiClass.agent
 
 #### Defined in
 
-src/apis/detector/detector.ts:59
+src/apis/api.ts:21
+
+• `set` **agent**(`agent`): `void`
+
+**`memberof`** WalletCompat
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `agent` | `any` |
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+ApiClass.agent
+
+#### Defined in
+
+src/apis/api.ts:30
+
+___
+
+### options
+
+• `get` **options**(): `T`
+
+**`readonly`**
+
+**`memberof`** ApiClass
+
+#### Returns
+
+`T`
+
+#### Inherited from
+
+ApiClass.options
+
+#### Defined in
+
+src/apis/api.ts:40
 
 ## Methods
 
@@ -117,7 +174,7 @@ src/apis/detector/detector.ts:59
 
 #### Defined in
 
-src/apis/detector/detector.ts:49
+[src/apis/detector/detector.ts:50](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/detector/detector.ts#L50)
 
 ___
 
@@ -137,4 +194,4 @@ ___
 
 #### Defined in
 
-src/apis/detector/detector.ts:23
+[src/apis/detector/detector.ts:24](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/detector/detector.ts#L24)

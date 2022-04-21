@@ -4,6 +4,12 @@
 
 [QIWI](../modules/QIWI.md).P2pApiOptions
 
+## Hierarchy
+
+- `ApiClassOptions`
+
+  ↳ **`P2pApiOptions`**
+
 ## Table of contents
 
 ### Properties
@@ -18,9 +24,13 @@
 
 • `Readonly` **http**: `SimpleJsonHttp`
 
+#### Inherited from
+
+ApiClassOptions.http
+
 #### Defined in
 
-src/apis/p2p/p2p.options.ts:4
+src/apis/api.ts:4
 
 ___
 
@@ -30,7 +40,7 @@ ___
 
 #### Defined in
 
-src/apis/p2p/p2p.options.ts:6
+[src/apis/p2p/p2p.options.ts:5](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/p2p/p2p.options.ts#L5)
 
 ___
 
@@ -40,4 +50,4 @@ ___
 
 #### Defined in
 
-src/apis/p2p/p2p.options.ts:5
+[src/apis/p2p/p2p.options.ts:4](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/p2p/p2p.options.ts#L4)

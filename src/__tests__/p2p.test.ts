@@ -2,8 +2,14 @@ import axios from "axios";
 import { createHmac, randomBytes } from "crypto";
 import { config } from "dotenv";
 import { Application, ErrorRequestHandler } from "express";
-import { BillCurrency, BillStatusData, P2P, P2pApiError } from "..";
-import { generateUUID } from "../exports";
+
+import {
+  BillCurrency,
+  BillStatusData,
+  generateUUID,
+  P2P,
+  P2PPaymentError
+} from "..";
 
 import { createMockServer, MockServer } from "./server";
 
@@ -92,7 +98,7 @@ describe(P2P.name, () => {
 
       expect(false).toBeTruthy();
     } catch (error: any) {
-      expect(error).toBeInstanceOf(P2pApiError);
+      expect(error).toBeInstanceOf(P2PPaymentError);
       expect(error.message).toContain("Неверные параметры");
     }
   });

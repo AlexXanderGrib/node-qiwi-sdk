@@ -11,6 +11,9 @@ import * as types from "./wallet.types";
  * @extends {Wallet}
  */
 export class WalletCompat extends Wallet {
+  static readonly IdentificationLevel = types.PersonIdentificationLevel;
+  static readonly ReceiptFormat = types.ChequeFormat;
+
   /**
    * Creates an instance of WalletCompat.
    * @param {string} token
@@ -31,8 +34,18 @@ export class WalletCompat extends Wallet {
    * @readonly
    * @memberof WalletCompat
    */
+  get API_TOKEN() {
+    return this.token;
+  }
+
+  /**
+   *
+   *
+   * @readonly
+   * @memberof WalletCompat
+   */
   get webhookKey() {
-    return this.webhooks.webhookKey;
+    return this.webhooks.keys;
   }
 
   /**
@@ -42,7 +55,7 @@ export class WalletCompat extends Wallet {
    * @memberof WalletCompat
    */
   get hookId() {
-    return this.webhooks.hookId;
+    return this.webhooks.activeId;
   }
 
   /**

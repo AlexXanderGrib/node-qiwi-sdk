@@ -1,6 +1,7 @@
 import { stringify } from "querystring";
 import { SimpleJsonHttp } from "../../http";
 import { USER_AGENT } from "../../identity";
+import { ApiClass } from "../api";
 import { DetectorDetectApi } from "./detect.api";
 import { DetectorApiOptions } from "./detector.options";
 
@@ -10,7 +11,7 @@ import { DetectorApiOptions } from "./detector.options";
  * @export
  * @class Detector
  */
-export class Detector {
+export class Detector extends ApiClass<DetectorApiOptions> {
   static readonly DetectApi = DetectorDetectApi;
 
   /**
@@ -49,23 +50,6 @@ export class Detector {
   static create(): Detector {
     return new this({ http: this.httpClientFactory() });
   }
-
-  /**
-   *
-   *
-   * @readonly
-   * @memberof Detector
-   */
-  get options() {
-    return this._options;
-  }
-
-  /**
-   * Creates an instance of Detector.
-   * @param {DetectorApiOptions} _options
-   * @memberof Detector
-   */
-  constructor(protected readonly _options: DetectorApiOptions) {}
 
   readonly detectProvider = new Detector.DetectApi(this._options);
 }

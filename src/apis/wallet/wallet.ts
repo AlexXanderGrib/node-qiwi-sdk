@@ -30,6 +30,7 @@ import {
 import { stringify } from "querystring";
 import { USER_AGENT } from "../../identity";
 import { mapHttpErrors } from "./wallet.errors";
+import { ApiClass } from "../api";
 
 /**
  * # API Кошелька
@@ -38,7 +39,7 @@ import { mapHttpErrors } from "./wallet.errors";
  * @export
  * @class Wallet
  */
-export class Wallet {
+export class Wallet extends ApiClass<WalletApiOptions> {
   static readonly PersonIdentificationLevel = PersonIdentificationLevel;
   static readonly TransactionType = TransactionType;
   static readonly TransactionStatus = TransactionStatus;
@@ -127,23 +128,6 @@ export class Wallet {
 
     return new this({ ...options, walletId });
   }
-
-  /**
-   *
-   *
-   * @readonly
-   * @memberof Wallet
-   */
-  get options() {
-    return this._options;
-  }
-
-  /**
-   * Creates an instance of Wallet.
-   * @param {WalletApiOptions} _options
-   * @memberof Wallet
-   */
-  constructor(protected readonly _options: WalletApiOptions) {}
 
   readonly personProfile = new Wallet.PersonProfileApi(this._options);
   readonly identification = new Wallet.IdentificationApi(this._options);

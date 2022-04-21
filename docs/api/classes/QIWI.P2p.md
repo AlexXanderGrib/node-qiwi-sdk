@@ -11,9 +11,11 @@
 
 ## Hierarchy
 
-- **`P2p`**
+- `ApiClass`<[`P2pApiOptions`](../interfaces/QIWI.P2pApiOptions.md)\>
 
-  ↳ [`P2pCompat`](QIWI.P2pCompat.md)
+  ↳ **`P2p`**
+
+  ↳↳ [`P2pCompat`](QIWI.P2pCompat.md)
 
 ## Table of contents
 
@@ -32,6 +34,7 @@
 
 ### Accessors
 
+- [agent](QIWI.P2p.md#agent)
 - [options](QIWI.P2p.md#options)
 
 ### Methods
@@ -46,9 +49,9 @@
 
 • **new P2p**(`_options`)
 
-Creates an instance of P2p.
+Creates an instance of ApiClass.
 
-**`memberof`** P2p
+**`memberof`** ApiClass
 
 #### Parameters
 
@@ -56,15 +59,23 @@ Creates an instance of P2p.
 | :------ | :------ |
 | `_options` | [`P2pApiOptions`](../interfaces/QIWI.P2pApiOptions.md) |
 
+#### Inherited from
+
+ApiClass<P2pApiOptions\>.constructor
+
 #### Defined in
 
-src/apis/p2p/p2p.ts:112
+src/apis/api.ts:49
 
 ## Properties
 
 ### \_options
 
 • `Protected` `Readonly` **\_options**: [`P2pApiOptions`](../interfaces/QIWI.P2pApiOptions.md)
+
+#### Inherited from
+
+ApiClass.\_options
 
 ___
 
@@ -74,7 +85,7 @@ ___
 
 #### Defined in
 
-src/apis/p2p/p2p.ts:113
+[src/apis/p2p/p2p.ts:98](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/p2p/p2p.ts#L98)
 
 ___
 
@@ -84,7 +95,7 @@ ___
 
 #### Defined in
 
-src/apis/p2p/p2p.ts:48
+[src/apis/p2p/p2p.ts:49](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/p2p/p2p.ts#L49)
 
 ___
 
@@ -94,7 +105,7 @@ ___
 
 #### Defined in
 
-src/apis/p2p/p2p.ts:49
+[src/apis/p2p/p2p.ts:50](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/p2p/p2p.ts#L50)
 
 ___
 
@@ -104,7 +115,7 @@ ___
 
 #### Defined in
 
-src/apis/p2p/p2p.ts:50
+[src/apis/p2p/p2p.ts:51](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/p2p/p2p.ts#L51)
 
 ___
 
@@ -114,25 +125,71 @@ ___
 
 #### Defined in
 
-src/apis/p2p/p2p.ts:46
+[src/apis/p2p/p2p.ts:47](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/p2p/p2p.ts#L47)
 
 ## Accessors
 
-### options
+### agent
 
-• `get` **options**(): [`P2pApiOptions`](../interfaces/QIWI.P2pApiOptions.md)
+• `get` **agent**(): `any`
 
-**`readonly`**
-
-**`memberof`** P2p
+**`memberof`** WalletCompat
 
 #### Returns
 
-[`P2pApiOptions`](../interfaces/QIWI.P2pApiOptions.md)
+`any`
+
+#### Inherited from
+
+ApiClass.agent
 
 #### Defined in
 
-src/apis/p2p/p2p.ts:103
+src/apis/api.ts:21
+
+• `set` **agent**(`agent`): `void`
+
+**`memberof`** WalletCompat
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `agent` | `any` |
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+ApiClass.agent
+
+#### Defined in
+
+src/apis/api.ts:30
+
+___
+
+### options
+
+• `get` **options**(): `T`
+
+**`readonly`**
+
+**`memberof`** ApiClass
+
+#### Returns
+
+`T`
+
+#### Inherited from
+
+ApiClass.options
+
+#### Defined in
+
+src/apis/api.ts:40
 
 ## Methods
 
@@ -186,7 +243,7 @@ app.use((error, request, response, next) => {
 
 #### Defined in
 
-src/apis/p2p/p2p.ts:155
+[src/apis/p2p/p2p.ts:140](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/p2p/p2p.ts#L140)
 
 ___
 
@@ -213,7 +270,7 @@ ___
 
 #### Defined in
 
-src/apis/p2p/p2p.ts:89
+[src/apis/p2p/p2p.ts:90](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/p2p/p2p.ts#L90)
 
 ___
 
@@ -239,4 +296,4 @@ ___
 
 #### Defined in
 
-src/apis/p2p/p2p.ts:60
+[src/apis/p2p/p2p.ts:61](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/p2p/p2p.ts#L61)

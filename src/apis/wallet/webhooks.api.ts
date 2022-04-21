@@ -31,8 +31,8 @@ import { WebHookInfo, WebhookTransaction } from "./wallet.types";
  * @extends {WalletApi}
  */
 export class WalletWebhooksApi extends WalletApi {
-  public webhookKey: Map<string, string> = new Map();
-  public hookId?: string;
+  public keys: Map<string, string> = new Map();
+  public activeId?: string;
 
   /**
    * Регистрирует обработчик вебхука
@@ -48,7 +48,7 @@ export class WalletWebhooksApi extends WalletApi {
         txnType
       })}`
     );
-    this.hookId = hookResponse.hookId;
+    this.activeId = hookResponse.hookId;
     return hookResponse;
   }
 
@@ -57,9 +57,9 @@ export class WalletWebhooksApi extends WalletApi {
    * @param {string} hookId UUID вебхука
    * @return {Promise<*>}
    */
-  remove(hookId: string = this.hookId!): Promise<any> {
-    this.webhookKey.delete(hookId);
-    this.hookId = undefined;
+  remove(hookId: string = this.activeId!): Promise<any> {
+    this.keys.delete(hookId);
+    this.activeId = undefined;
     return this.http.delete<{ response: "Hook deleted" }>(
       `payment-notifier/v1/hooks/${hookId}`
     );
@@ -70,11 +70,11 @@ export class WalletWebhooksApi extends WalletApi {
    * @param {string} hookId UUID вебхука
    * @return {Promise<string>}
    */
-  async getSecret(hookId: string = this.hookId!): Promise<string> {
+  async getSecret(hookId: string = this.activeId!): Promise<string> {
     const { key } = await this.http.get<{ key: string }>(
       `payment-notifier/v1/hooks/${hookId}/key`
     );
-    this.webhookKey.set(hookId, key);
+    this.keys.set(hookId, key);
     return key;
   }
 
@@ -83,11 +83,11 @@ export class WalletWebhooksApi extends WalletApi {
    * @param {string} hookId UUID вебхука
    * @return {Promise<string>}
    */
-  async updateSecret(hookId: string = this.hookId!): Promise<string> {
+  async updateSecret(hookId: string = this.activeId!): Promise<string> {
     const { key } = await this.http.post<{ key: string }>(
       `payment-notifier/v1/hooks/${hookId}/newkey`
     );
-    this.webhookKey.set(hookId, key);
+    this.keys.set(hookId, key);
     return key;
   }
 
@@ -99,7 +99,7 @@ export class WalletWebhooksApi extends WalletApi {
     const hookResponse = await this.http.get<WebHookInfo>(
       "payment-notifier/v1/hooks/active"
     );
-    this.hookId = hookResponse.hookId;
+    this.activeId = hookResponse.hookId;
     return hookResponse;
   }
 
@@ -123,7 +123,7 @@ export class WalletWebhooksApi extends WalletApi {
   async checkSign(transaction: WebhookTransaction): Promise<boolean | undefined> {
     const { hookId, payment, hash } = transaction;
 
-    if (!this.webhookKey.has(hookId)) {
+    if (!this.keys.has(hookId)) {
       try {
         await this.getSecret(hookId);
       } catch {
@@ -142,10 +142,7 @@ export class WalletWebhooksApi extends WalletApi {
       )
       .join("|");
 
-    const hash2 = createHmac(
-      "sha256",
-      Buffer.from(this.webhookKey.get(hookId)!, "base64")
-    )
+    const hash2 = createHmac("sha256", Buffer.from(this.keys.get(hookId)!, "base64"))
       .update(signPayload)
       .digest();
 

@@ -1,6 +1,7 @@
 import { RequestHandler } from "express";
 import { SimpleJsonHttp } from "../../http";
 import { USER_AGENT } from "../../identity";
+import { ApiClass } from "../api";
 import { P2pBillsApi } from "./bills.api";
 import { mapHttpErrors, P2pBillNotificationError } from "./p2p.errors";
 import { P2pApiOptions } from "./p2p.options";
@@ -42,7 +43,7 @@ function promise<T extends (...parameters: any) => any>(function_: T) {
  * @export
  * @class P2p
  */
-export class P2p {
+export class P2p extends ApiClass<P2pApiOptions> {
   static readonly BillsApi = P2pBillsApi;
 
   static readonly BillCurrency = BillCurrency;
@@ -94,22 +95,6 @@ export class P2p {
     });
   }
 
-  /**
-   *
-   *
-   * @readonly
-   * @memberof P2p
-   */
-  get options() {
-    return this._options;
-  }
-
-  /**
-   * Creates an instance of P2p.
-   * @param {P2pApiOptions} _options
-   * @memberof P2p
-   */
-  constructor(protected readonly _options: P2pApiOptions) {}
   readonly bills = new P2p.BillsApi(this._options);
 
   /**
@@ -152,7 +137,7 @@ export class P2p {
    * })
    * ```
    */
-  public notificationMiddleware(
+  notificationMiddleware(
     options: { memo?: boolean } = {},
     actualHandler: RequestHandler<Record<string, string>, any, BillStatusData> = (
       _request,

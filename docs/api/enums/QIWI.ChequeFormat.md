@@ -19,7 +19,7 @@
 
 #### Defined in
 
-src/apis/wallet/wallet.types.ts:74
+[src/apis/wallet/wallet.types.ts:74](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/wallet/wallet.types.ts#L74)
 
 ___
 
@@ -29,4 +29,4 @@ ___
 
 #### Defined in
 
-src/apis/wallet/wallet.types.ts:75
+[src/apis/wallet/wallet.types.ts:75](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/wallet/wallet.types.ts#L75)

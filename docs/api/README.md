@@ -18,7 +18,7 @@ qiwi-sdk / [Exports](modules.md)
 ## 🍬 Почему именно эта библиотека?
 
 1. Она написана на TypeScript, покрыта тестами
-2. Покрывает [`Personal`](https://developer.qiwi.com/ru/qiwi-wallet-personal/) и [`P2P`](https://developer.qiwi.com/ru/p2p-payments/) секции API
+2. Покрывает [`Wallet Personal`](https://developer.qiwi.com/ru/qiwi-wallet-personal/) и [`P2P Payments`](https://developer.qiwi.com/ru/p2p-payments/) секции API
 3. Документация появляется прямо в редакторе, так-как используется JSDoc
 4. [Безопасная](./SECURITY.md) (Относительно)
 5. Много [примеров](./examples/README.md)
@@ -49,17 +49,22 @@ pnpm add qiwi-sdk
 
 ## 🛠️ Использование
 
+### Совместимость
+
+После обновления до версии `3.0` большая часть старого кода осталось совместимой. Подробнее об изменениях читайте в [`CHANGELOG.md`](./CHANGELOG.md)
+
+Если кратко, чтобы код остался совместимым, замените использование класса `Detector` на `DetectorCompat`.
+
+Все остальные классы должны остаться совместимыми
+
 ### Импорт
 
 ```typescript
-// TypeScript
-import { P2P, Personal, Detector } from "qiwi-sdk";
+// TypeScript или ESM
+import { P2p, Wallet, Detector } from "qiwi-sdk";
 
 // CommonJS
-const { P2P, Personal, Detector } = require("qiwi-sdk");
-
-// ESM
-import { P2P, Personal, Detector } from "qiwi-sdk";
+const { P2p, Wallet, Detector } = require("qiwi-sdk");
 ```
 
 ### Обзор API
@@ -68,16 +73,16 @@ import { P2P, Personal, Detector } from "qiwi-sdk";
 // Personal - API, отвечающее за работу с конкретным кошельком
 // Документация от QIWI:
 // https://developer.qiwi.com/ru/qiwi-wallet-personal
-const qiwi = new Personal(process.env.QIWI_TOKEN, process.env.QIWI_WALLET);
+const qiwi = Wallet.create(process.env.QIWI_TOKEN, process.env.QIWI_WALLET);
 
 // P2P - удобное API для выставления счетов
 // Документация от QIWI:
 // https://developer.qiwi.com/ru/p2p-payments
-const p2p = new P2P(process.env.QIWI_SECRET_KEY, process.env.QIWI_PUBLIC_KEY);
+const p2p = P2p.create(process.env.QIWI_SECRET_KEY, process.env.QIWI_PUBLIC_KEY);
 
 // Detector - API для определения Provider ID по номеру телефона или карты
 // Содержит всего 1 метод
-const detector = new Detector();
+const detector = Detector.create();
 ```
 
 #### _Переменные окружения:_

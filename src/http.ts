@@ -150,7 +150,7 @@ export class DefaultHttpClient implements HttpClient {
    * @private
    * @param {AxiosResponse} axiosResponse
    * @param {HttpRequestOptions} request
-   * @return {*}  {HttpResponse}
+   * @return {HttpResponse}  {HttpResponse}
    * @memberof DefaultHttpClient
    */
   private _mapResponse(

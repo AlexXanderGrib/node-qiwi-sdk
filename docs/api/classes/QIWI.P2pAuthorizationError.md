@@ -52,7 +52,7 @@ ExtendedError.constructor
 
 #### Defined in
 
-src/apis/p2p/p2p.errors.ts:46
+[src/apis/p2p/p2p.errors.ts:46](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/p2p/p2p.errors.ts#L46)
 
 ## Properties
 
@@ -94,7 +94,7 @@ ExtendedError.name
 
 #### Defined in
 
-[src/error.ts:9](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/142b6cc/src/error.ts#L9)
+[src/error.ts:9](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/error.ts#L9)
 
 ___
 
@@ -177,7 +177,7 @@ ExtendedError.\_\_@toStringTag@11
 
 #### Defined in
 
-[src/error.ts:32](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/142b6cc/src/error.ts#L32)
+[src/error.ts:32](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/error.ts#L32)
 
 ## Methods
 
@@ -199,7 +199,7 @@ ExtendedError.toJSON
 
 #### Defined in
 
-[src/error.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/142b6cc/src/error.ts#L17)
+[src/error.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/error.ts#L17)
 
 ___
 

@@ -23,7 +23,7 @@
 
 #### Defined in
 
-src/apis/shared/shared.ts:211
+[src/apis/shared/shared.ts:211](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/shared/shared.ts#L211)
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 #### Defined in
 
-src/apis/shared/shared.ts:210
+[src/apis/shared/shared.ts:210](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/shared/shared.ts#L210)
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 #### Defined in
 
-src/apis/shared/shared.ts:207
+[src/apis/shared/shared.ts:207](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/shared/shared.ts#L207)
 
 ___
 
@@ -53,7 +53,7 @@ ___
 
 #### Defined in
 
-src/apis/shared/shared.ts:209
+[src/apis/shared/shared.ts:209](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/shared/shared.ts#L209)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 #### Defined in
 
-src/apis/shared/shared.ts:213
+[src/apis/shared/shared.ts:213](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/shared/shared.ts#L213)
 
 ___
 
@@ -73,7 +73,7 @@ ___
 
 #### Defined in
 
-src/apis/shared/shared.ts:208
+[src/apis/shared/shared.ts:208](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/shared/shared.ts#L208)
 
 ___
 
@@ -83,7 +83,7 @@ ___
 
 #### Defined in
 
-src/apis/shared/shared.ts:212
+[src/apis/shared/shared.ts:212](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/shared/shared.ts#L212)
 
 ___
 
@@ -93,4 +93,4 @@ ___
 
 #### Defined in
 
-src/apis/shared/shared.ts:214
+[src/apis/shared/shared.ts:214](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/shared/shared.ts#L214)

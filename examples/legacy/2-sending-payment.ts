@@ -23,7 +23,7 @@ async function getProvider(
     // А вот банков которые выпускают карты
     // и моб. операторов куча, поэтому тут надо чекать
     case "card":
-      return Recipients.AnyRusCard;
+      return detector.getCardProvider(account);
 
     case "mobile":
       return detector.getPhoneProvider(account);

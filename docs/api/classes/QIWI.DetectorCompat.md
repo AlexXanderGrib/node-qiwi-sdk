@@ -29,6 +29,7 @@
 
 ### Accessors
 
+- [agent](QIWI.DetectorCompat.md#agent)
 - [options](QIWI.DetectorCompat.md#options)
 
 ### Methods
@@ -54,13 +55,13 @@ Creates an instance of DetectorCompat.
 
 #### Defined in
 
-src/apis/detector/detector.compat.ts:17
+[src/apis/detector/detector.compat.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/detector/detector.compat.ts#L17)
 
 ## Properties
 
 ### \_options
 
-• `Protected` `Readonly` **\_options**: [`DetectorApiOptions`](../interfaces/QIWI.DetectorApiOptions.md)
+• `Protected` `Readonly` **\_options**: `ApiClassOptions`
 
 #### Inherited from
 
@@ -78,7 +79,7 @@ ___
 
 #### Defined in
 
-src/apis/detector/detector.ts:70
+[src/apis/detector/detector.ts:54](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/detector/detector.ts#L54)
 
 ___
 
@@ -92,21 +93,63 @@ ___
 
 #### Defined in
 
-src/apis/detector/detector.ts:14
+[src/apis/detector/detector.ts:15](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/detector/detector.ts#L15)
 
 ## Accessors
 
-### options
+### agent
 
-• `get` **options**(): [`DetectorApiOptions`](../interfaces/QIWI.DetectorApiOptions.md)
+• `get` **agent**(): `any`
 
-**`readonly`**
-
-**`memberof`** Detector
+**`memberof`** WalletCompat
 
 #### Returns
 
-[`DetectorApiOptions`](../interfaces/QIWI.DetectorApiOptions.md)
+`any`
+
+#### Inherited from
+
+Detector.agent
+
+#### Defined in
+
+src/apis/api.ts:21
+
+• `set` **agent**(`agent`): `void`
+
+**`memberof`** WalletCompat
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `agent` | `any` |
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+Detector.agent
+
+#### Defined in
+
+src/apis/api.ts:30
+
+___
+
+### options
+
+• `get` **options**(): `T`
+
+**`readonly`**
+
+**`memberof`** ApiClass
+
+#### Returns
+
+`T`
 
 #### Inherited from
 
@@ -114,7 +157,7 @@ Detector.options
 
 #### Defined in
 
-src/apis/detector/detector.ts:59
+src/apis/api.ts:40
 
 ## Methods
 
@@ -138,7 +181,7 @@ src/apis/detector/detector.ts:59
 
 #### Defined in
 
-src/apis/detector/detector.compat.ts:37
+[src/apis/detector/detector.compat.ts:37](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/detector/detector.compat.ts#L37)
 
 ___
 
@@ -162,7 +205,7 @@ ___
 
 #### Defined in
 
-src/apis/detector/detector.compat.ts:27
+[src/apis/detector/detector.compat.ts:27](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/detector/detector.compat.ts#L27)
 
 ___
 
@@ -186,7 +229,7 @@ ___
 
 #### Defined in
 
-src/apis/detector/detector.ts:49
+[src/apis/detector/detector.ts:50](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/detector/detector.ts#L50)
 
 ___
 
@@ -210,4 +253,4 @@ ___
 
 #### Defined in
 
-src/apis/detector/detector.ts:23
+[src/apis/detector/detector.ts:24](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/detector/detector.ts#L24)

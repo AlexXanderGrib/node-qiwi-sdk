@@ -1,5 +1,3 @@
-import { SimpleJsonHttp } from "../../http";
+import { ApiClassOptions } from "../api";
 
-export interface DetectorApiOptions {
-  readonly http: SimpleJsonHttp;
-}
+export type DetectorApiOptions = ApiClassOptions;
