@@ -23,7 +23,7 @@
 
 #### Defined in
 
-[src/services/personal.types.ts:677](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/personal.types.ts#L677)
+src/apis/wallet/wallet.types.ts:677
 
 ___
 
@@ -35,7 +35,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.types.ts:680](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/personal.types.ts#L680)
+src/apis/wallet/wallet.types.ts:680
 
 ___
 
@@ -47,7 +47,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.types.ts:683](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/personal.types.ts#L683)
+src/apis/wallet/wallet.types.ts:683
 
 ___
 
@@ -59,7 +59,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.types.ts:671](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/personal.types.ts#L671)
+src/apis/wallet/wallet.types.ts:671
 
 ___
 
@@ -71,7 +71,7 @@ ___
 
 #### Defined in
 
-[src/services/personal.types.ts:674](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/personal.types.ts#L674)
+src/apis/wallet/wallet.types.ts:674
 
 ___
 
@@ -83,4 +83,4 @@ ___
 
 #### Defined in
 
-[src/services/personal.types.ts:686](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/9138ec0/src/services/personal.types.ts#L686)
+src/apis/wallet/wallet.types.ts:686

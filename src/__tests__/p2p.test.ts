@@ -2,10 +2,9 @@ import axios from "axios";
 import { createHmac, randomBytes } from "crypto";
 import { config } from "dotenv";
 import { Application, ErrorRequestHandler } from "express";
-
-import { BillCurrency, BillStatusData, P2P } from "..";
+import { BillCurrency, BillStatusData, P2P, P2pApiError } from "..";
 import { generateUUID } from "../exports";
-import { P2PPaymentError } from "../services/p2p";
+
 import { createMockServer, MockServer } from "./server";
 
 jest.setTimeout(30_000);
@@ -93,8 +92,8 @@ describe(P2P.name, () => {
 
       expect(false).toBeTruthy();
     } catch (error: any) {
-      expect(error).toBeInstanceOf(P2PPaymentError);
-      expect(error.message).toContain("Validation error");
+      expect(error).toBeInstanceOf(P2pApiError);
+      expect(error.message).toContain("Неверные параметры");
     }
   });
 

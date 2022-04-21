@@ -1,40 +1,36 @@
-// const { P2P } = require('qiwi-sdk');
-const { P2P, P2PNotificationError } = require("..");
+// const { P2p, P2pBillNotificationError, formatOffsetDate } = require('qiwi-sdk');
+const { P2p, P2pBillNotificationError, formatOffsetDate } = require("..");
 
 const express = require("express");
 const app = express();
-const p2p = new P2P(process.env.QIWI_SECRET_KEY, process.env.QIWI_PUBLIC_KEY);
+const p2p = P2p.create(process.env.QIWI_SECRET_KEY, process.env.QIWI_PUBLIC_KEY);
 const port = parseInt(process.env.PORT) || 3000;
 
 app.get("/pay", async (req, res) => {
-  const bill = await p2p.createBill({
+  const bill = await p2p.bills.create({
     amount: { value: 10, currency: P2P.Currency.RUB },
-    expirationDateTime: P2P.formatLifetime(2),
-  });
-
-  const url = P2P.patchPayUrl(bill.payUrl, {
+    expirationDateTime: formatOffsetDate(15, "min"),
     successUrl: `https://localhost:${port}/success`,
-    paySource: P2P.PaySource.Card
+    paySource: P2p.BillPaySource.Card
   });
 
-  res.redirect(url);
+  res.redirect(bill.payUrl);
 });
 
 app.get("/success", (req, res) => {
-  res.end("Спасибо за покупку!")
+  res.end("Спасибо за покупку!");
 });
 
 app.post(
   "/webhook/qiwi",
   p2p.notificationMiddleware({}, (req, res) => {
-    req.body // BillStatusData
+    req.body; // BillStatusData
   })
 );
 
-
 app.use((error, req, res, next) => {
-  if(error instanceof P2PNotificationError) {
-    console.log(error) // Кто-то отправил невалидное уведомление
+  if (error instanceof P2pBillNotificationError) {
+    console.log(error); // Кто-то отправил невалидное уведомление
   }
 
   return next();
