@@ -8,7 +8,7 @@
 
 ## Hierarchy
 
-- `ExtendedError`
+- [`ExtendedError`](internal_.ExtendedError.md)
 
   ↳ **`P2pApiError`**
 
@@ -57,11 +57,11 @@ Creates an instance of P2pApiError.
 
 #### Overrides
 
-ExtendedError.constructor
+[ExtendedError](internal_.ExtendedError.md).[constructor](internal_.ExtendedError.md#constructor)
 
 #### Defined in
 
-[src/apis/p2p/p2p.errors.ts:29](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/p2p/p2p.errors.ts#L29)
+[src/apis/p2p/p2p.errors.ts:29](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/apis/p2p/p2p.errors.ts#L29)
 
 ## Properties
 
@@ -71,7 +71,7 @@ ExtendedError.constructor
 
 #### Inherited from
 
-ExtendedError.cause
+[ExtendedError](internal_.ExtendedError.md).[cause](internal_.ExtendedError.md#cause)
 
 #### Defined in
 
@@ -85,7 +85,7 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/p2p.errors.ts:21](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/p2p/p2p.errors.ts#L21)
+[src/apis/p2p/p2p.errors.ts:21](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/apis/p2p/p2p.errors.ts#L21)
 
 ___
 
@@ -95,7 +95,7 @@ ___
 
 #### Inherited from
 
-ExtendedError.message
+[ExtendedError](internal_.ExtendedError.md).[message](internal_.ExtendedError.md#message)
 
 #### Defined in
 
@@ -109,11 +109,11 @@ ___
 
 #### Inherited from
 
-ExtendedError.name
+[ExtendedError](internal_.ExtendedError.md).[name](internal_.ExtendedError.md#name)
 
 #### Defined in
 
-[src/error.ts:9](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/error.ts#L9)
+[src/error.ts:9](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/error.ts#L9)
 
 ___
 
@@ -129,7 +129,7 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/p2p.errors.ts:22](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/p2p/p2p.errors.ts#L22)
+[src/apis/p2p/p2p.errors.ts:22](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/apis/p2p/p2p.errors.ts#L22)
 
 ___
 
@@ -139,7 +139,7 @@ ___
 
 #### Inherited from
 
-ExtendedError.stack
+[ExtendedError](internal_.ExtendedError.md).[stack](internal_.ExtendedError.md#stack)
 
 #### Defined in
 
@@ -149,7 +149,9 @@ ___
 
 ### prepareStackTrace
 
-▪ `Static` `Optional` **prepareStackTrace**: (`err`: `Error`, `stackTraces`: `CallSite`[]) => `any`
+▪ `Static` `Optional` **prepareStackTrace**: (`err`: `Error`, `stackTraces`: [`CallSite`](../interfaces/internal_.CallSite.md)[]) => `any`
+
+Optional override for formatting stack traces
 
 #### Type declaration
 
@@ -164,7 +166,7 @@ Optional override for formatting stack traces
 | Name | Type |
 | :------ | :------ |
 | `err` | `Error` |
-| `stackTraces` | `CallSite`[] |
+| `stackTraces` | [`CallSite`](../interfaces/internal_.CallSite.md)[] |
 
 ##### Returns
 
@@ -172,7 +174,7 @@ Optional override for formatting stack traces
 
 #### Inherited from
 
-ExtendedError.prepareStackTrace
+[ExtendedError](internal_.ExtendedError.md).[prepareStackTrace](internal_.ExtendedError.md#preparestacktrace)
 
 #### Defined in
 
@@ -186,7 +188,7 @@ ___
 
 #### Inherited from
 
-ExtendedError.stackTraceLimit
+[ExtendedError](internal_.ExtendedError.md).[stackTraceLimit](internal_.ExtendedError.md#stacktracelimit)
 
 #### Defined in
 
@@ -212,7 +214,7 @@ ExtendedError.\_\_@toStringTag@11
 
 #### Defined in
 
-[src/error.ts:32](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/error.ts#L32)
+[src/error.ts:32](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/error.ts#L32)
 
 ## Methods
 
@@ -230,11 +232,11 @@ ExtendedError.\_\_@toStringTag@11
 
 #### Inherited from
 
-ExtendedError.toJSON
+[ExtendedError](internal_.ExtendedError.md).[toJSON](internal_.ExtendedError.md#tojson)
 
 #### Defined in
 
-[src/error.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/error.ts#L17)
+[src/error.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/error.ts#L17)
 
 ___
 
@@ -257,7 +259,7 @@ Create .stack property on a target object
 
 #### Inherited from
 
-ExtendedError.captureStackTrace
+[ExtendedError](internal_.ExtendedError.md).[captureStackTrace](internal_.ExtendedError.md#capturestacktrace)
 
 #### Defined in
 

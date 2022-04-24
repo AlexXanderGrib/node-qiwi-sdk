@@ -1,13 +1,5 @@
 import qs from "query-string";
-import type {
-  AnyMapping,
-  AnyResponse,
-  Collection,
-  Mapping,
-  ObjectKey,
-  ObjectMapping,
-  ReadonlyRecord
-} from "./shared.types";
+import type { AnyResponse, Collection } from "./shared.types";
 import { v4 as uuid } from "uuid";
 
 /**
@@ -101,106 +93,6 @@ export function generateUUID() {
 export function convertCollection<T>(collection: Collection<T>): T[] {
   // eslint-disable-next-line unicorn/prefer-spread
   return Array.from(collection);
-}
-
-/**
- *
- *
- * @export
- * @template K
- * @template V
- * @param {AnyMapping<K, V>} mapping
- * @return {ReadonlyMap<K, V>}
- */
-export function convertMapping<K, V>(mapping: AnyMapping<K, V>): ReadonlyMap<K, V> {
-  if ("entries" in mapping) {
-    return new Map(convertCollection(mapping.entries()));
-  }
-
-  return new Map(convertCollection(mapping));
-}
-
-/**
- *
- *
- * @template K
- * @template V
- * @param {unknown} object
- * @return {*}  {object is Mapping<K, V>}
- */
-export function isMapping<K, V>(object: unknown): object is Mapping<K, V> {
-  return Boolean(
-    object &&
-      typeof object === "object" &&
-      "entries" in object &&
-      typeof (object as any).entries === "function"
-  );
-}
-
-/**
- *
- *
- * @template T
- * @param {unknown} object
- * @return {*}  {object is Collection<T>}
- */
-export function isCollection<T>(object: unknown): object is Collection<T> {
-  if (!(object && typeof object === "object")) return false;
-
-  if (Array.isArray(object)) return true;
-
-  const collection = object as any;
-
-  if (typeof collection[Symbol.iterator] === "function") {
-    return true;
-  }
-
-  const digits = /^\d+$/;
-
-  const numericKeysCount = Object.keys(collection).map(
-    (key) => digits.test(key) && !Number.isNaN(Number.parseInt(key))
-  ).length;
-
-  if (
-    typeof collection.length === "number" &&
-    collection.length <= numericKeysCount
-  ) {
-    return true;
-  }
-
-  return false;
-}
-
-/**
- *
- *
- * @export
- * @template K
- * @template V
- * @param {ObjectMapping<K, V>} mapping
- * @return {*}  {ReadonlyRecord<K, V>}
- */
-export function convertObjectMapping<K extends ObjectKey, V>(
-  mapping: ObjectMapping<K, V>
-): ReadonlyRecord<K, V> {
-  let map: ReadonlyMap<K, V>;
-
-  if (isMapping(mapping)) {
-    map = new Map(convertCollection(mapping.entries()));
-  } else if (isCollection(mapping)) {
-    map = new Map(convertCollection(mapping));
-  } else {
-    return mapping;
-  }
-
-  const record = {} as Record<K, V>;
-
-  for (const [key, value] of map.entries()) {
-    // eslint-disable-next-line security/detect-object-injection
-    record[key] = value;
-  }
-
-  return record;
 }
 
 export enum TimeSpan {

@@ -27,6 +27,8 @@ export class WalletPaymentHistoryApi extends WalletApi {
    * Можно использовать фильтр по количеству, ID и дате
    * (интервалу дат) транзакций.
    *
+   * **Этот метод требует наличия валидного `walletId` (номера телефона привязанного к кошельку) в конфигурации API.**
+   *
    * @param {GetPaymentHistoryParams} parameters Тело запроса
    * @return {Promise<GetTransactionsHistoryResponse>} {Promise<GetTransactionsHistoryResponse>}
    * @memberof WalletPaymentHistoryApi
@@ -45,6 +47,8 @@ export class WalletPaymentHistoryApi extends WalletApi {
    *
    * Данный запрос используется для получения сводной статистики
    * по суммам платежей за заданный период.
+   *
+   * **Этот метод требует наличия валидного `walletId` (номера телефона привязанного к кошельку) в конфигурации API.**
    *
    * @param {GetPaymentHistoryTotalParams} parameters Тело запроса
    * @return {Promise<GetPaymentHistoryTotalResponse>} {Promise<GetPaymentHistoryTotalResponse>}

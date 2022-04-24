@@ -33,6 +33,17 @@ import { mapHttpErrors } from "./wallet.errors";
 import { ApiClass } from "../api";
 
 /**
+ * @callback SetupHttp
+ * @param {SimpleJsonHttp} http
+ * @return {void} nothing
+ */
+type SetupHttp = (http: SimpleJsonHttp) => void;
+
+type CreateAndFetchWalletIdParameters = {
+  setupHttp?: SetupHttp;
+};
+
+/**
  * # API Кошелька
  * [Документация QIWI](https://developer.qiwi.com/ru/qiwi-wallet-personal/)
  *
@@ -108,19 +119,33 @@ export class Wallet extends ApiClass<WalletApiOptions> {
   }
 
   /**
+   * Автоматически подтягивает номер телефона из API QIWI.
+   * Номер телефона требуется для вызова большинства методов из
+   * классов API:
    *
+   * - {@link IdentificationApi}
+   * - {@link LimitsApi}
+   * - {@link RestrictionsApi}
+   * - {@link PaymentHistoryApi}
+   * - {@link FundingSourcesApi}
+   * - {@link CardsApi}
    *
    * @static
    * @param {string} token
    * @return {Promise<Wallet>}  {Promise<Wallet>}
    * @memberof Wallet
    */
-  static async createAndFetchWalletId(token: string): Promise<Wallet> {
+  static async createAndFetchWalletId(
+    token: string,
+    { setupHttp }: CreateAndFetchWalletIdParameters = {}
+  ): Promise<Wallet> {
     const options: WalletApiOptions = {
       token,
       walletId: "",
       http: this.httpClientFactory(token)
     };
+
+    setupHttp?.(options.http);
 
     const personProfileApi = new this.PersonProfileApi(options);
     const profile = await personProfileApi.getCurrent();

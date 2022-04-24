@@ -1,4 +1,4 @@
-import { Recipients, DetectorCompat, DetectorError } from "../apis";
+import { Recipients, DetectorCompat, DetectorError, Detector } from "../apis";
 
 describe("Detector", () => {
   const detect = new DetectorCompat();
@@ -20,5 +20,10 @@ describe("Detector", () => {
     const promise = detect.getPhoneProvider("34985");
 
     expect(promise).rejects.toThrow(DetectorError);
+  });
+
+  test("[v3] Can be instantiated", () => {
+    expect(Detector.create()).toBeInstanceOf(Detector);
+    expect(detect).toBeInstanceOf(Detector);
   });
 });

@@ -55,13 +55,13 @@ Creates an instance of DetectorCompat.
 
 #### Defined in
 
-[src/apis/detector/detector.compat.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/detector/detector.compat.ts#L17)
+[src/apis/detector/detector.compat.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/apis/detector/detector.compat.ts#L17)
 
 ## Properties
 
 ### \_options
 
-• `Protected` `Readonly` **\_options**: `ApiClassOptions`
+• `Protected` `Readonly` **\_options**: [`ApiClassOptions`](../interfaces/internal_.ApiClassOptions.md)
 
 #### Inherited from
 
@@ -71,7 +71,7 @@ ___
 
 ### detectProvider
 
-• `Readonly` **detectProvider**: `DetectorDetectApi`
+• `Readonly` **detectProvider**: [`DetectorDetectApi`](internal_.DetectorDetectApi.md)
 
 #### Inherited from
 
@@ -79,13 +79,13 @@ ___
 
 #### Defined in
 
-[src/apis/detector/detector.ts:54](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/detector/detector.ts#L54)
+[src/apis/detector/detector.ts:54](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/apis/detector/detector.ts#L54)
 
 ___
 
 ### DetectApi
 
-▪ `Static` `Readonly` **DetectApi**: typeof `DetectorDetectApi` = `DetectorDetectApi`
+▪ `Static` `Readonly` **DetectApi**: typeof [`DetectorDetectApi`](internal_.DetectorDetectApi.md) = `DetectorDetectApi`
 
 #### Inherited from
 
@@ -93,7 +93,7 @@ ___
 
 #### Defined in
 
-[src/apis/detector/detector.ts:15](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/detector/detector.ts#L15)
+[src/apis/detector/detector.ts:15](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/apis/detector/detector.ts#L15)
 
 ## Accessors
 
@@ -113,7 +113,7 @@ Detector.agent
 
 #### Defined in
 
-src/apis/api.ts:21
+[src/apis/api.ts:21](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/apis/api.ts#L21)
 
 • `set` **agent**(`agent`): `void`
 
@@ -135,7 +135,7 @@ Detector.agent
 
 #### Defined in
 
-src/apis/api.ts:30
+[src/apis/api.ts:30](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/apis/api.ts#L30)
 
 ___
 
@@ -157,7 +157,7 @@ Detector.options
 
 #### Defined in
 
-src/apis/api.ts:40
+[src/apis/api.ts:40](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/apis/api.ts#L40)
 
 ## Methods
 
@@ -181,7 +181,7 @@ src/apis/api.ts:40
 
 #### Defined in
 
-[src/apis/detector/detector.compat.ts:37](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/detector/detector.compat.ts#L37)
+[src/apis/detector/detector.compat.ts:37](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/apis/detector/detector.compat.ts#L37)
 
 ___
 
@@ -205,7 +205,7 @@ ___
 
 #### Defined in
 
-[src/apis/detector/detector.compat.ts:27](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/detector/detector.compat.ts#L27)
+[src/apis/detector/detector.compat.ts:27](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/apis/detector/detector.compat.ts#L27)
 
 ___
 
@@ -229,13 +229,13 @@ ___
 
 #### Defined in
 
-[src/apis/detector/detector.ts:50](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/detector/detector.ts#L50)
+[src/apis/detector/detector.ts:50](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/apis/detector/detector.ts#L50)
 
 ___
 
 ### httpClientFactory
 
-▸ `Static` **httpClientFactory**(): `SimpleJsonHttp`
+▸ `Static` **httpClientFactory**(): [`SimpleJsonHttp`](internal_.SimpleJsonHttp.md)
 
 **`static`**
 
@@ -243,7 +243,7 @@ ___
 
 #### Returns
 
-`SimpleJsonHttp`
+[`SimpleJsonHttp`](internal_.SimpleJsonHttp.md)
 
 {SimpleJsonHttp}
 
@@ -253,4 +253,4 @@ ___
 
 #### Defined in
 
-[src/apis/detector/detector.ts:24](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/detector/detector.ts#L24)
+[src/apis/detector/detector.ts:24](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/apis/detector/detector.ts#L24)

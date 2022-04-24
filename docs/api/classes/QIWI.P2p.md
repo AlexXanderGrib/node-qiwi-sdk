@@ -11,7 +11,7 @@
 
 ## Hierarchy
 
-- `ApiClass`<[`P2pApiOptions`](../interfaces/QIWI.P2pApiOptions.md)\>
+- [`ApiClass`](internal_.ApiClass.md)<[`P2pApiOptions`](../interfaces/QIWI.P2pApiOptions.md)\>
 
   ↳ **`P2p`**
 
@@ -61,11 +61,11 @@ Creates an instance of ApiClass.
 
 #### Inherited from
 
-ApiClass<P2pApiOptions\>.constructor
+[ApiClass](internal_.ApiClass.md).[constructor](internal_.ApiClass.md#constructor)
 
 #### Defined in
 
-src/apis/api.ts:49
+[src/apis/api.ts:49](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/apis/api.ts#L49)
 
 ## Properties
 
@@ -75,17 +75,17 @@ src/apis/api.ts:49
 
 #### Inherited from
 
-ApiClass.\_options
+[ApiClass](internal_.ApiClass.md).[_options](internal_.ApiClass.md#_options)
 
 ___
 
 ### bills
 
-• `Readonly` **bills**: `P2pBillsApi`
+• `Readonly` **bills**: [`P2pBillsApi`](internal_.P2pBillsApi.md)
 
 #### Defined in
 
-[src/apis/p2p/p2p.ts:98](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/p2p/p2p.ts#L98)
+[src/apis/p2p/p2p.ts:98](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/apis/p2p/p2p.ts#L98)
 
 ___
 
@@ -95,7 +95,7 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/p2p.ts:49](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/p2p/p2p.ts#L49)
+[src/apis/p2p/p2p.ts:49](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/apis/p2p/p2p.ts#L49)
 
 ___
 
@@ -105,7 +105,7 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/p2p.ts:50](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/p2p/p2p.ts#L50)
+[src/apis/p2p/p2p.ts:50](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/apis/p2p/p2p.ts#L50)
 
 ___
 
@@ -115,17 +115,17 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/p2p.ts:51](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/p2p/p2p.ts#L51)
+[src/apis/p2p/p2p.ts:51](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/apis/p2p/p2p.ts#L51)
 
 ___
 
 ### BillsApi
 
-▪ `Static` `Readonly` **BillsApi**: typeof `P2pBillsApi` = `P2pBillsApi`
+▪ `Static` `Readonly` **BillsApi**: typeof [`P2pBillsApi`](internal_.P2pBillsApi.md) = `P2pBillsApi`
 
 #### Defined in
 
-[src/apis/p2p/p2p.ts:47](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/p2p/p2p.ts#L47)
+[src/apis/p2p/p2p.ts:47](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/apis/p2p/p2p.ts#L47)
 
 ## Accessors
 
@@ -145,7 +145,7 @@ ApiClass.agent
 
 #### Defined in
 
-src/apis/api.ts:21
+[src/apis/api.ts:21](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/apis/api.ts#L21)
 
 • `set` **agent**(`agent`): `void`
 
@@ -167,7 +167,7 @@ ApiClass.agent
 
 #### Defined in
 
-src/apis/api.ts:30
+[src/apis/api.ts:30](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/apis/api.ts#L30)
 
 ___
 
@@ -189,13 +189,13 @@ ApiClass.options
 
 #### Defined in
 
-src/apis/api.ts:40
+[src/apis/api.ts:40](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/apis/api.ts#L40)
 
 ## Methods
 
 ### notificationMiddleware
 
-▸ **notificationMiddleware**(`options?`, `actualHandler?`): `RequestHandler`<`ParamsDictionary`, `any`, `any`, `ParsedQs`, `Record`<`string`, `any`\>\>
+▸ **notificationMiddleware**(`options?`, `actualHandler?`): [`RequestHandler`](../interfaces/internal_.RequestHandler.md)<[`ParamsDictionary`](../interfaces/internal_.ParamsDictionary.md), `any`, `any`, [`ParsedQs`](../interfaces/internal_.ParsedQs.md), [`Record`](../modules/internal_.md#record)<`string`, `any`\>\>
 
 `[Экспериментально]` Упрощает интеграцию с `express`
 
@@ -207,11 +207,11 @@ src/apis/api.ts:40
 | :------ | :------ |
 | `options` | `Object` |
 | `options.memo?` | `boolean` |
-| `actualHandler` | `RequestHandler`<`Record`<`string`, `string`\>, `any`, [`BillStatusData`](../modules/QIWI.md#billstatusdata), `ParsedQs`, `Record`<`string`, `any`\>\> |
+| `actualHandler` | [`RequestHandler`](../interfaces/internal_.RequestHandler.md)<[`Record`](../modules/internal_.md#record)<`string`, `string`\>, `any`, [`BillStatusData`](../modules/QIWI.md#billstatusdata), [`ParsedQs`](../interfaces/internal_.ParsedQs.md), [`Record`](../modules/internal_.md#record)<`string`, `any`\>\> |
 
 #### Returns
 
-`RequestHandler`<`ParamsDictionary`, `any`, `any`, `ParsedQs`, `Record`<`string`, `any`\>\>
+[`RequestHandler`](../interfaces/internal_.RequestHandler.md)<[`ParamsDictionary`](../interfaces/internal_.ParamsDictionary.md), `any`, `any`, [`ParsedQs`](../interfaces/internal_.ParsedQs.md), [`Record`](../modules/internal_.md#record)<`string`, `any`\>\>
 
 ##### Пример:
 **В начале файла**
@@ -243,7 +243,7 @@ app.use((error, request, response, next) => {
 
 #### Defined in
 
-[src/apis/p2p/p2p.ts:140](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/p2p/p2p.ts#L140)
+[src/apis/p2p/p2p.ts:140](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/apis/p2p/p2p.ts#L140)
 
 ___
 
@@ -270,13 +270,13 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/p2p.ts:90](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/p2p/p2p.ts#L90)
+[src/apis/p2p/p2p.ts:90](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/apis/p2p/p2p.ts#L90)
 
 ___
 
 ### httpClientFactory
 
-▸ `Static` **httpClientFactory**(`secretKey`): `SimpleJsonHttp`
+▸ `Static` **httpClientFactory**(`secretKey`): [`SimpleJsonHttp`](internal_.SimpleJsonHttp.md)
 
 **`static`**
 
@@ -290,10 +290,10 @@ ___
 
 #### Returns
 
-`SimpleJsonHttp`
+[`SimpleJsonHttp`](internal_.SimpleJsonHttp.md)
 
 {SimpleJsonHttp}
 
 #### Defined in
 
-[src/apis/p2p/p2p.ts:61](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/p2p/p2p.ts#L61)
+[src/apis/p2p/p2p.ts:61](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/apis/p2p/p2p.ts#L61)

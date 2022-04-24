@@ -33,6 +33,8 @@ export class WalletCardsApi extends WalletApi {
   /**
    * ## Блокировка карты
    *
+   * **Этот метод требует наличия валидного `walletId` (номера телефона привязанного к кошельку) в конфигурации API.**
+   *
    * @param {StringOrNumber} cardId
    * @return {Promise<void>} {Promise<void>}
    * @memberof WalletCardsApi
@@ -45,6 +47,8 @@ export class WalletCardsApi extends WalletApi {
    * ## Разблокировка карты
    *
    * Успешный ответ содержит JSON со статусом операции
+   *
+   * **Этот метод требует наличия валидного `walletId` (номера телефона привязанного к кошельку) в конфигурации API.**
    *
    * @param {StringOrNumber} cardId
    * @return {Promise<CardUnblockResponse>} {Promise<CardUnblockResponse>}
@@ -61,6 +65,8 @@ export class WalletCardsApi extends WalletApi {
    *
    * Успешный ответ содержит JSON с PAN и CVV карты
    *
+   * **Этот метод требует наличия валидного `walletId` (номера телефона привязанного к кошельку) в конфигурации API.**
+   *
    * @param {StringOrNumber} cardId
    * @return {Promise<CardRequisitesResponse>} {Promise<CardRequisitesResponse>}
    * @memberof WalletCardsApi
@@ -75,6 +81,8 @@ export class WalletCardsApi extends WalletApi {
    * ## Переименование карты
    *
    * Успешный ответ содержит JSON со статусом операции
+   *
+   * **Этот метод требует наличия валидного `walletId` (номера телефона привязанного к кошельку) в конфигурации API.**
    *
    * @param {StringOrNumber} cardId
    * @param {StringOrNumber} alias

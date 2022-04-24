@@ -18,6 +18,8 @@ export class WalletLimitsApi extends WalletApi {
    * вашем QIWI кошельке. Лимиты действуют как ограничения на
    * сумму определенных операций.
    *
+   * **Этот метод требует наличия валидного `walletId` (номера телефона привязанного к кошельку) в конфигурации API.**
+   *
    * @template {LimitTypeAny[]} Limits
    * @param {Limits} limits
    * @return {Promise<LimitsResponse>} {Promise<LimitsResponse<Limits[number]>>}

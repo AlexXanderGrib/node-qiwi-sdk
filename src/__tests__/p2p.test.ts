@@ -10,6 +10,7 @@ import {
   P2P,
   P2PPaymentError
 } from "..";
+import { P2p } from "../apis";
 
 import { createMockServer, MockServer } from "./server";
 
@@ -29,7 +30,10 @@ describe(P2P.name, () => {
     value: 20 + Math.round(Math.random() * 100)
   };
 
-  test("Can be initialized", () => expect(qiwi).toBeTruthy());
+  test("Can be initialized", () => {
+    expect(qiwi).toBeInstanceOf(P2p);
+    expect(P2p.create("")).toBeInstanceOf(P2p);
+  });
 
   test("Can create Bill", async () => {
     const date = P2P.formatLifetimeDays(1 + Math.round(Math.random() * 39));
@@ -68,7 +72,7 @@ describe(P2P.name, () => {
   });
 
   test("Can get bill status", async () => {
-    const response = await qiwi.getBillStatus(billId);
+    const response = await qiwi.billStatus(billId);
 
     expect(typeof response?.payUrl).toBe("string");
 
@@ -236,5 +240,17 @@ describe(P2P.name, () => {
       expect(mock).toBeCalledWith({ type: "success", body: bill2 });
       expect(json).toEqual(bill2);
     });
+  });
+
+  test("[v2 compat] Can format time in legacy way", () => {
+    const days = 3;
+    const minutes = days * 60 * 24;
+
+    const lt = P2P.formatLifetime(days);
+    const ltd = P2P.formatLifetimeDays(days);
+    const ltm = P2P.formatLifetimeMinutes(minutes);
+
+    expect(lt).toBe(ltd);
+    expect(lt).toBe(ltm);
   });
 });

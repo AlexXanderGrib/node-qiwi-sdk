@@ -16,6 +16,8 @@ export class WalletIdentificationApi extends WalletApi {
    * Данный запрос позволяет отправить данные для идентификации
    * вашего QIWI кошелька.
    *
+   * **Этот метод требует наличия валидного `walletId` (номера телефона привязанного к кошельку) в конфигурации API.**
+   *
    * @param {IdentificationBase} data
    * @param {StringOrNumber} wallet
    * @return {Promise<IdentificationResponse>} {Promise<IdentificationResponse>}
@@ -33,6 +35,8 @@ export class WalletIdentificationApi extends WalletApi {
    *
    * Данный запрос позволяет выгрузить маскированные данные и
    * статус идентификации своего QIWI кошелька.
+   *
+   * **Этот метод требует наличия валидного `walletId` (номера телефона привязанного к кошельку) в конфигурации API.**
    *
    * @param {StringOrNumber} wallet
    * @return {Promise<IdentificationResponse>} {Promise<IdentificationResponse>}

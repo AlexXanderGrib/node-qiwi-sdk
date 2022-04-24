@@ -10,7 +10,7 @@ API получения ID провайдера QIWI по Номеру Телеф
 
 ## Hierarchy
 
-- `ApiClass`<[`DetectorApiOptions`](../modules/QIWI.md#detectorapioptions)\>
+- [`ApiClass`](internal_.ApiClass.md)<[`DetectorApiOptions`](../modules/QIWI.md#detectorapioptions)\>
 
   ↳ **`Detector`**
 
@@ -52,45 +52,45 @@ Creates an instance of ApiClass.
 
 | Name | Type |
 | :------ | :------ |
-| `_options` | `ApiClassOptions` |
+| `_options` | [`ApiClassOptions`](../interfaces/internal_.ApiClassOptions.md) |
 
 #### Inherited from
 
-ApiClass<DetectorApiOptions\>.constructor
+[ApiClass](internal_.ApiClass.md).[constructor](internal_.ApiClass.md#constructor)
 
 #### Defined in
 
-src/apis/api.ts:49
+[src/apis/api.ts:49](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/apis/api.ts#L49)
 
 ## Properties
 
 ### \_options
 
-• `Protected` `Readonly` **\_options**: `ApiClassOptions`
+• `Protected` `Readonly` **\_options**: [`ApiClassOptions`](../interfaces/internal_.ApiClassOptions.md)
 
 #### Inherited from
 
-ApiClass.\_options
+[ApiClass](internal_.ApiClass.md).[_options](internal_.ApiClass.md#_options)
 
 ___
 
 ### detectProvider
 
-• `Readonly` **detectProvider**: `DetectorDetectApi`
+• `Readonly` **detectProvider**: [`DetectorDetectApi`](internal_.DetectorDetectApi.md)
 
 #### Defined in
 
-[src/apis/detector/detector.ts:54](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/detector/detector.ts#L54)
+[src/apis/detector/detector.ts:54](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/apis/detector/detector.ts#L54)
 
 ___
 
 ### DetectApi
 
-▪ `Static` `Readonly` **DetectApi**: typeof `DetectorDetectApi` = `DetectorDetectApi`
+▪ `Static` `Readonly` **DetectApi**: typeof [`DetectorDetectApi`](internal_.DetectorDetectApi.md) = `DetectorDetectApi`
 
 #### Defined in
 
-[src/apis/detector/detector.ts:15](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/detector/detector.ts#L15)
+[src/apis/detector/detector.ts:15](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/apis/detector/detector.ts#L15)
 
 ## Accessors
 
@@ -110,7 +110,7 @@ ApiClass.agent
 
 #### Defined in
 
-src/apis/api.ts:21
+[src/apis/api.ts:21](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/apis/api.ts#L21)
 
 • `set` **agent**(`agent`): `void`
 
@@ -132,7 +132,7 @@ ApiClass.agent
 
 #### Defined in
 
-src/apis/api.ts:30
+[src/apis/api.ts:30](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/apis/api.ts#L30)
 
 ___
 
@@ -154,7 +154,7 @@ ApiClass.options
 
 #### Defined in
 
-src/apis/api.ts:40
+[src/apis/api.ts:40](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/apis/api.ts#L40)
 
 ## Methods
 
@@ -174,13 +174,13 @@ src/apis/api.ts:40
 
 #### Defined in
 
-[src/apis/detector/detector.ts:50](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/detector/detector.ts#L50)
+[src/apis/detector/detector.ts:50](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/apis/detector/detector.ts#L50)
 
 ___
 
 ### httpClientFactory
 
-▸ `Static` **httpClientFactory**(): `SimpleJsonHttp`
+▸ `Static` **httpClientFactory**(): [`SimpleJsonHttp`](internal_.SimpleJsonHttp.md)
 
 **`static`**
 
@@ -188,10 +188,10 @@ ___
 
 #### Returns
 
-`SimpleJsonHttp`
+[`SimpleJsonHttp`](internal_.SimpleJsonHttp.md)
 
 {SimpleJsonHttp}
 
 #### Defined in
 
-[src/apis/detector/detector.ts:24](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/detector/detector.ts#L24)
+[src/apis/detector/detector.ts:24](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/apis/detector/detector.ts#L24)

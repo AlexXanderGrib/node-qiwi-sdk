@@ -1,6 +1,7 @@
 /* eslint-disable unicorn/consistent-function-scoping */
 import { config } from "dotenv";
 import { Personal, WalletApiShortError } from "..";
+import { Account, PaymentHistorySource, Wallet } from "../apis";
 
 jest.setTimeout(30_000);
 
@@ -12,7 +13,17 @@ describe(Personal.name, () => {
     process.env.QIWI_WALLET as string
   );
 
-  test("Can be initialized", () => expect(qiwi).toBeTruthy());
+  test("Can be initialized", () => {
+    expect(qiwi).toBeInstanceOf(Wallet);
+    expect(Wallet.create("")).toBeInstanceOf(Wallet);
+  });
+
+  test("[v3] Wallet id can be fetched", async () => {
+    const wallet = await Wallet.createAndFetchWalletId(
+      process.env.QIWI_TOKEN as string
+    );
+    expect(wallet.options.walletId).toBe(process.env.QIWI_WALLET as string);
+  });
 
   test("Can get person profile", async () => {
     const response = await qiwi.getPersonProfile();
@@ -22,7 +33,7 @@ describe(Personal.name, () => {
     expect(response).toHaveProperty("userInfo");
   });
 
-  test("Can get personal limits", async () => {
+  test("Can get personal limits and restrictions", async () => {
     const { limits } = await qiwi.getLimits([Personal.LimitType.TURNOVER]);
 
     const [limit] = limits.RU;
@@ -31,6 +42,9 @@ describe(Personal.name, () => {
     expect(limit.currency).toBe("RUB");
 
     expect(Math.round(limit.spent + limit.rest)).toBeGreaterThanOrEqual(limit.max);
+
+    const restrictions = await qiwi.getRestrictions();
+    expect(restrictions).toHaveLength(0);
   });
 
   test("Can't send 1 million rubles to unknown wallet", async () => {
@@ -49,6 +63,7 @@ describe(Personal.name, () => {
     const transactionType = Personal.TransactionType.OUT;
     const { data: transactions } = await qiwi.getPaymentHistory({
       rows: 50,
+      sources: [PaymentHistorySource.CARD],
       operation: transactionType
     });
 
@@ -63,6 +78,9 @@ describe(Personal.name, () => {
         "There is no successful in last 50 transactions in this QIWI WALLET"
       );
     }
+
+    const txn = await qiwi.getTransaction(transaction.txnId);
+    expect(txn).toMatchObject(transaction);
 
     const response = await qiwi.getTransactionCheque(
       transaction.txnId,
@@ -112,5 +130,51 @@ describe(Personal.name, () => {
 
     expect(url2).toContain("a=b");
     expect(url2).not.toContain(`extra%5B%27account%27%5D=${qiwi.walletId}`);
+  });
+
+  test("[v3] Can get agent and options", () => {
+    expect(qiwi).toHaveProperty("agent");
+    expect(qiwi.options).toMatchObject({
+      token: process.env.QIWI_TOKEN as string,
+      walletId: process.env.QIWI_WALLET as string
+    });
+  });
+
+  test("Can get identification", async () => {
+    const id = await qiwi.getIdentification();
+
+    expect(id).toMatchObject({
+      id: Number.parseInt(process.env.QIWI_WALLET as string)
+    });
+  });
+
+  test("Can get cards", async () => {
+    const cards = await qiwi.getCards();
+
+    expect(Array.isArray(cards)).toBeTruthy();
+  });
+
+  test("Can get accounts", async () => {
+    const accounts = await qiwi.getAccounts();
+    const offers = await qiwi.getAccountOffers();
+
+    const offeredAccounts = offers.map((offer) => offer.alias);
+    const currentAccounts = accounts.map((account) => account.alias);
+
+    for (const id of currentAccounts) {
+      expect(offeredAccounts).not.toContain(id);
+    }
+
+    const defaultAccount = accounts.find(
+      (account) => account.defaultAccount === true
+    ) as Account;
+
+    expect(defaultAccount.currency).toBe(defaultAccount.balance?.currency);
+  });
+
+  test("[v3] Can get bills", async () => {
+    const bills = await qiwi.bills.get();
+
+    expect(Array.isArray(bills)).toBeTruthy();
   });
 });

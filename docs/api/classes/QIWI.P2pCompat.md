@@ -79,7 +79,7 @@ Creates an instance of P2pCompat.
 
 #### Defined in
 
-[src/apis/p2p/p2p.compat.ts:32](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/p2p/p2p.compat.ts#L32)
+[src/apis/p2p/p2p.compat.ts:32](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/apis/p2p/p2p.compat.ts#L32)
 
 ## Properties
 
@@ -95,7 +95,7 @@ ___
 
 ### bills
 
-• `Readonly` **bills**: `P2pBillsApi`
+• `Readonly` **bills**: [`P2pBillsApi`](internal_.P2pBillsApi.md)
 
 #### Inherited from
 
@@ -103,7 +103,7 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/p2p.ts:98](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/p2p/p2p.ts#L98)
+[src/apis/p2p/p2p.ts:98](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/apis/p2p/p2p.ts#L98)
 
 ___
 
@@ -129,7 +129,7 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/p2p.ts:49](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/p2p/p2p.ts#L49)
+[src/apis/p2p/p2p.ts:49](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/apis/p2p/p2p.ts#L49)
 
 ___
 
@@ -143,7 +143,7 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/p2p.ts:50](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/p2p/p2p.ts#L50)
+[src/apis/p2p/p2p.ts:50](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/apis/p2p/p2p.ts#L50)
 
 ___
 
@@ -157,13 +157,13 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/p2p.ts:51](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/p2p/p2p.ts#L51)
+[src/apis/p2p/p2p.ts:51](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/apis/p2p/p2p.ts#L51)
 
 ___
 
 ### BillsApi
 
-▪ `Static` `Readonly` **BillsApi**: typeof `P2pBillsApi` = `P2pBillsApi`
+▪ `Static` `Readonly` **BillsApi**: typeof [`P2pBillsApi`](internal_.P2pBillsApi.md) = `P2pBillsApi`
 
 #### Inherited from
 
@@ -171,7 +171,7 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/p2p.ts:47](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/p2p/p2p.ts#L47)
+[src/apis/p2p/p2p.ts:47](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/apis/p2p/p2p.ts#L47)
 
 ___
 
@@ -181,7 +181,7 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/p2p.compat.ts:22](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/p2p/p2p.compat.ts#L22)
+[src/apis/p2p/p2p.compat.ts:22](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/apis/p2p/p2p.compat.ts#L22)
 
 ___
 
@@ -191,7 +191,7 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/p2p.compat.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/p2p/p2p.compat.ts#L23)
+[src/apis/p2p/p2p.compat.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/apis/p2p/p2p.compat.ts#L23)
 
 ___
 
@@ -201,7 +201,7 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/p2p.compat.ts:24](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/p2p/p2p.compat.ts#L24)
+[src/apis/p2p/p2p.compat.ts:24](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/apis/p2p/p2p.compat.ts#L24)
 
 ## Accessors
 
@@ -221,7 +221,7 @@ P2p.agent
 
 #### Defined in
 
-src/apis/api.ts:21
+[src/apis/api.ts:21](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/apis/api.ts#L21)
 
 • `set` **agent**(`agent`): `void`
 
@@ -243,7 +243,7 @@ P2p.agent
 
 #### Defined in
 
-src/apis/api.ts:30
+[src/apis/api.ts:30](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/apis/api.ts#L30)
 
 ___
 
@@ -265,7 +265,7 @@ P2p.options
 
 #### Defined in
 
-src/apis/api.ts:40
+[src/apis/api.ts:40](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/apis/api.ts#L40)
 
 ## Methods
 
@@ -294,7 +294,7 @@ src/apis/api.ts:40
 
 #### Defined in
 
-[src/apis/p2p/p2p.compat.ts:88](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/p2p/p2p.compat.ts#L88)
+[src/apis/p2p/p2p.compat.ts:88](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/apis/p2p/p2p.compat.ts#L88)
 
 ___
 
@@ -319,7 +319,7 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/p2p.compat.ts:164](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/p2p/p2p.compat.ts#L164)
+[src/apis/p2p/p2p.compat.ts:164](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/apis/p2p/p2p.compat.ts#L164)
 
 ___
 
@@ -355,7 +355,7 @@ server2server с использованием авторизации. Метод
 
 #### Defined in
 
-[src/apis/p2p/p2p.compat.ts:60](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/p2p/p2p.compat.ts#L60)
+[src/apis/p2p/p2p.compat.ts:60](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/apis/p2p/p2p.compat.ts#L60)
 
 ___
 
@@ -369,7 +369,7 @@ ___
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `parameters` | { `amount`: `string` \| `number` ; `billId?`: `string` ; `comment?`: `string` ; `customFields?`: `Record`<`string`, `string`\> ; `lifetime?`: `string` ; `successUrl?`: `string`  } & { `account?`: `string` ; `email?`: `string` ; `phone?`: `string`  } | GET-параметры ссылки |
+| `parameters` | { `amount`: `string` \| `number` ; `billId?`: `string` ; `comment?`: `string` ; `customFields?`: [`Record`](../modules/internal_.md#record)<`string`, `string`\> ; `lifetime?`: `string` ; `successUrl?`: `string`  } & { `account?`: `string` ; `email?`: `string` ; `phone?`: `string`  } | GET-параметры ссылки |
 
 #### Returns
 
@@ -379,7 +379,7 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/p2p.compat.ts:74](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/p2p/p2p.compat.ts#L74)
+[src/apis/p2p/p2p.compat.ts:74](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/apis/p2p/p2p.compat.ts#L74)
 
 ___
 
@@ -406,13 +406,13 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/p2p.compat.ts:101](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/p2p/p2p.compat.ts#L101)
+[src/apis/p2p/p2p.compat.ts:101](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/apis/p2p/p2p.compat.ts#L101)
 
 ___
 
 ### notificationMiddleware
 
-▸ **notificationMiddleware**(`options?`, `actualHandler?`): `RequestHandler`<`ParamsDictionary`, `any`, `any`, `ParsedQs`, `Record`<`string`, `any`\>\>
+▸ **notificationMiddleware**(`options?`, `actualHandler?`): [`RequestHandler`](../interfaces/internal_.RequestHandler.md)<[`ParamsDictionary`](../interfaces/internal_.ParamsDictionary.md), `any`, `any`, [`ParsedQs`](../interfaces/internal_.ParsedQs.md), [`Record`](../modules/internal_.md#record)<`string`, `any`\>\>
 
 `[Экспериментально]` Упрощает интеграцию с `express`
 
@@ -424,11 +424,11 @@ ___
 | :------ | :------ |
 | `options` | `Object` |
 | `options.memo?` | `boolean` |
-| `actualHandler` | `RequestHandler`<`Record`<`string`, `string`\>, `any`, [`BillStatusData`](../modules/QIWI.md#billstatusdata), `ParsedQs`, `Record`<`string`, `any`\>\> |
+| `actualHandler` | [`RequestHandler`](../interfaces/internal_.RequestHandler.md)<[`Record`](../modules/internal_.md#record)<`string`, `string`\>, `any`, [`BillStatusData`](../modules/QIWI.md#billstatusdata), [`ParsedQs`](../interfaces/internal_.ParsedQs.md), [`Record`](../modules/internal_.md#record)<`string`, `any`\>\> |
 
 #### Returns
 
-`RequestHandler`<`ParamsDictionary`, `any`, `any`, `ParsedQs`, `Record`<`string`, `any`\>\>
+[`RequestHandler`](../interfaces/internal_.RequestHandler.md)<[`ParamsDictionary`](../interfaces/internal_.ParamsDictionary.md), `any`, `any`, [`ParsedQs`](../interfaces/internal_.ParsedQs.md), [`Record`](../modules/internal_.md#record)<`string`, `any`\>\>
 
 ##### Пример:
 **В начале файла**
@@ -464,7 +464,7 @@ app.use((error, request, response, next) => {
 
 #### Defined in
 
-[src/apis/p2p/p2p.ts:140](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/p2p/p2p.ts#L140)
+[src/apis/p2p/p2p.ts:140](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/apis/p2p/p2p.ts#L140)
 
 ___
 
@@ -490,7 +490,7 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/p2p.compat.ts:113](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/p2p/p2p.compat.ts#L113)
+[src/apis/p2p/p2p.compat.ts:113](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/apis/p2p/p2p.compat.ts#L113)
 
 ___
 
@@ -521,7 +521,7 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/p2p.ts:90](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/p2p/p2p.ts#L90)
+[src/apis/p2p/p2p.ts:90](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/apis/p2p/p2p.ts#L90)
 
 ___
 
@@ -545,7 +545,7 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/p2p.compat.ts:124](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/p2p/p2p.compat.ts#L124)
+[src/apis/p2p/p2p.compat.ts:124](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/apis/p2p/p2p.compat.ts#L124)
 
 ___
 
@@ -567,7 +567,7 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/p2p.compat.ts:144](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/p2p/p2p.compat.ts#L144)
+[src/apis/p2p/p2p.compat.ts:144](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/apis/p2p/p2p.compat.ts#L144)
 
 ___
 
@@ -589,13 +589,13 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/p2p.compat.ts:153](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/p2p/p2p.compat.ts#L153)
+[src/apis/p2p/p2p.compat.ts:153](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/apis/p2p/p2p.compat.ts#L153)
 
 ___
 
 ### httpClientFactory
 
-▸ `Static` **httpClientFactory**(`secretKey`): `SimpleJsonHttp`
+▸ `Static` **httpClientFactory**(`secretKey`): [`SimpleJsonHttp`](internal_.SimpleJsonHttp.md)
 
 **`static`**
 
@@ -609,7 +609,7 @@ ___
 
 #### Returns
 
-`SimpleJsonHttp`
+[`SimpleJsonHttp`](internal_.SimpleJsonHttp.md)
 
 {SimpleJsonHttp}
 
@@ -619,7 +619,7 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/p2p.ts:61](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/p2p/p2p.ts#L61)
+[src/apis/p2p/p2p.ts:61](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/apis/p2p/p2p.ts#L61)
 
 ___
 
@@ -634,7 +634,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `payUrl` | `string` |
-| `options?` | `Partial`<{ `paySource`: [`BillPaySource`](../enums/QIWI.BillPaySource.md) ; `successUrl`: `string`  }\> |
+| `options?` | [`Partial`](../modules/internal_.md#partial)<{ `paySource`: [`BillPaySource`](../enums/QIWI.BillPaySource.md) ; `successUrl`: `string`  }\> |
 
 #### Returns
 
@@ -644,4 +644,4 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/p2p.compat.ts:135](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/46a7631/src/apis/p2p/p2p.compat.ts#L135)
+[src/apis/p2p/p2p.compat.ts:135](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/apis/p2p/p2p.compat.ts#L135)
