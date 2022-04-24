@@ -52,7 +52,7 @@ Creates an instance of P2pBillNotificationError.
 
 #### Defined in
 
-[src/apis/p2p/p2p.errors.ts:63](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/apis/p2p/p2p.errors.ts#L63)
+[src/apis/p2p/p2p.errors.ts:63](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0b4e701/src/apis/p2p/p2p.errors.ts#L63)
 
 ## Properties
 
@@ -94,7 +94,7 @@ ___
 
 #### Defined in
 
-[src/error.ts:9](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/error.ts#L9)
+[src/error.ts:9](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0b4e701/src/error.ts#L9)
 
 ___
 
@@ -179,7 +179,7 @@ ExtendedError.\_\_@toStringTag@11
 
 #### Defined in
 
-[src/error.ts:32](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/error.ts#L32)
+[src/error.ts:32](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0b4e701/src/error.ts#L32)
 
 ## Methods
 
@@ -201,7 +201,7 @@ ExtendedError.\_\_@toStringTag@11
 
 #### Defined in
 
-[src/error.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/error.ts#L17)
+[src/error.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0b4e701/src/error.ts#L17)
 
 ___
 

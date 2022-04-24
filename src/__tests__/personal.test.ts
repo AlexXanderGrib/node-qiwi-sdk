@@ -177,4 +177,10 @@ describe(Personal.name, () => {
 
     expect(Array.isArray(bills)).toBeTruthy();
   });
+
+  test("Can create oauth token", async () => {
+    const oauth = await qiwi.createOauthToken();
+
+    expect(oauth.client).toBeInstanceOf(Personal);
+  });
 });

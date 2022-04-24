@@ -114,7 +114,7 @@ ___
 
 #### Defined in
 
-[src/error.ts:9](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/error.ts#L9)
+[src/error.ts:9](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0b4e701/src/error.ts#L9)
 
 ___
 
@@ -199,7 +199,7 @@ ExtendedError.\_\_@toStringTag@11
 
 #### Defined in
 
-[src/error.ts:32](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/error.ts#L32)
+[src/error.ts:32](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0b4e701/src/error.ts#L32)
 
 ## Methods
 
@@ -221,7 +221,7 @@ ExtendedError.\_\_@toStringTag@11
 
 #### Defined in
 
-[src/error.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/error.ts#L17)
+[src/error.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0b4e701/src/error.ts#L17)
 
 ___
 

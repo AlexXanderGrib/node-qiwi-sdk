@@ -183,6 +183,7 @@ export class Wallet extends ApiClass<WalletApiOptions> {
 
     const codeResponse: CodeResponse = await this._options.http.request({
       ...commonOptions,
+      url: "authorize",
       body: {
         response_type: "code",
         client_id: "api_wallet_private",
@@ -195,6 +196,7 @@ export class Wallet extends ApiClass<WalletApiOptions> {
 
     const tokenResponse: TokenResponse = await this._options.http.request({
       ...commonOptions,
+      url: "token",
       body: {
         grant_type: "authorization_code",
         client_id: "api_wallet_private",

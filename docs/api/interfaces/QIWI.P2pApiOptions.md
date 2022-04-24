@@ -30,7 +30,7 @@
 
 #### Defined in
 
-[src/apis/api.ts:4](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/apis/api.ts#L4)
+[src/apis/api.ts:4](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0b4e701/src/apis/api.ts#L4)
 
 ___
 
@@ -40,7 +40,7 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/p2p.options.ts:5](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/apis/p2p/p2p.options.ts#L5)
+[src/apis/p2p/p2p.options.ts:5](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0b4e701/src/apis/p2p/p2p.options.ts#L5)
 
 ___
 
@@ -50,4 +50,4 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/p2p.options.ts:4](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0783ca8/src/apis/p2p/p2p.options.ts#L4)
+[src/apis/p2p/p2p.options.ts:4](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0b4e701/src/apis/p2p/p2p.options.ts#L4)
