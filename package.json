@@ -1,6 +1,6 @@
 {
   "name": "qiwi-sdk",
-  "version": "3.0.2",
+  "version": "3.0.8",
   "description": "Typed QIWI Wallet SDK. Supported API's: Personal & P2P Bill Payments",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
@@ -29,7 +29,18 @@
     "type": "git",
     "url": "git+https://github.com/AlexXanderGrib/node-qiwi-sdk.git"
   },
-  "author": "AlexXanderGrib <me@alexxgrib.me> (https://alexxgrib.me)",
+  "author": {
+    "name": "Alexander Gribochkin",
+    "email": "me@alexxgrib.me",
+    "url": "https://alexxgrib.me"
+  },
+  "maintainers": [
+    {
+      "name": "Alexander Gribochkin",
+      "email": "me@alexxgrib.me",
+      "url": "https://alexxgrib.me"
+    }
+  ],
   "license": "MIT",
   "private": false,
   "bugs": {
@@ -54,19 +65,15 @@
     "wallet",
     "api",
     "sdk",
+    "rest",
     "qiwi p2p",
     "qiwi personal",
-    "shop",
+    "qiwi payment",
+    "qiwi sdk",
     "money",
     "typed",
-    "typescript",
-    "qiwi-sdk",
-    "qiwi-shop",
-    "node-qiwi",
-    "qiwi-api",
     "node",
-    "nodejs",
-    "node-qiwi-api"
+    "nodejs"
   ],
   "dependencies": {
     "axios": "^0.26.1",
@@ -112,7 +119,6 @@
       "pre-push": "npm run docs"
     }
   },
-  "readme": "./README.md",
   "engines": {
     "node": ">10"
   }

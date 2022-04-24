@@ -1,15 +1,17 @@
 qiwi-sdk / [Exports](modules.md)
 
-# 🥝 NodeJS QIWI SDK
+# NodeJS QIWI SDK
+
+[![Test Status](https://github.com/AlexXanderGrib/node-qiwi-sdk/actions/workflows/test.yml/badge.svg)](https://github.com/AlexXanderGrib/node-qiwi-sdk)
+[![codecov](https://codecov.io/gh/AlexXanderGrib/node-qiwi-sdk/branch/main/graph/badge.svg)](https://codecov.io/gh/AlexXanderGrib/node-qiwi-sdk)
+[![license MIT](https://img.shields.io/npm/l/qiwi-sdk.svg)](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/main/LICENSE)
+[![npm](https://img.shields.io/npm/v/qiwi-sdk.svg)](https://npmjs.com/package/qiwi-sdk)
+[![GitHub](https://img.shields.io/github/stars/AlexXanderGrib/node-qiwi-sdk.svg)](https://github.com/AlexXanderGrib/node-qiwi-sdk)
+[![last commit](https://img.shields.io/github/last-commit/AlexXanderGrib/node-qiwi-sdk.svg)](https://github.com/AlexXanderGrib/node-qiwi-sdk)
+[![qiwi-sdk](https://snyk.io/advisor/npm-package/qiwi-sdk/badge.svg)](https://snyk.io/advisor/npm-package/qiwi-sdk)
+[![Quality (npms.io)](https://img.shields.io/npms-io/quality-score/qiwi-sdk.svg?label=Quality%20%28npms.io%29&)](https://npms.io/search?q=qiwi-sdk)
 
 **Язык: (_🇷🇺 Русский_ / [🇬🇧 English](./README.en.md))**
-
-[![codecov](https://codecov.io/gh/AlexXanderGrib/node-qiwi-sdk/branch/main/graph/badge.svg)](https://codecov.io/gh/AlexXanderGrib/node-qiwi-sdk)
-[![license MIT](https://img.shields.io/npm/l/qiwi-sdk?style=flat-square)](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/main/LICENSE)
-[![npm](https://img.shields.io/npm/v/qiwi-sdk?style=flat-square)](https://npmjs.com/package/qiwi-sdk)
-[![GitHub](https://img.shields.io/github/stars/AlexXanderGrib/node-qiwi-sdk?style=flat-square)](https://github.com/AlexXanderGrib/node-qiwi-sdk)
-[![last commit](https://img.shields.io/github/last-commit/AlexXanderGrib/node-qiwi-sdk?style=flat-square)](https://github.com/AlexXanderGrib/node-qiwi-sdk)
-[![qiwi-sdk](https://snyk.io/advisor/npm-package/qiwi-sdk/badge.svg)](https://snyk.io/advisor/npm-package/qiwi-sdk)
 
 <center>
   <img src="docs/assets/logo.svg" alt="QIWI SDK" /> 
@@ -101,6 +103,7 @@ const detector = Detector.create();
 4. [🔐 Получение лимитов (на ESM)](./examples/4-limits.mjs)
 5. [🤖 Телеграм бот с оплатой напрямую (по номеру кошелька)](./examples/5-bot.js)
 6. [🖥️ Магазин на Express](./examples/6-express.js)
+7. [🌐 Использование прокси](./examples/7-proxy.js)
 
 #### _Документация:_
 
@@ -109,19 +112,42 @@ const detector = Detector.create();
 3. 🧑‍⚖️ Лицензия - [**MIT**](./LICENSE)
 4. 🆙 [Список изменений](./CHANGELOG.md)
 
-## ❤️ Контрибьютинг
+## О пакете
+
+### Цели пакета
+
+- [ ] Покрыть все [API QIWI](https://developer.qiwi.com/) (в том числе для юридических лиц)
+  - [x] API QIWI Кошелька - (все API)
+  - [ ] Прием платежей
+  - [ ] Денежные выплаты
+  - [ ] Bank as a Service
+  - [ ] Идентификация
+        клиентов
+- [x] Сохранять обратную совместимость
+  - [x] v2 и v3
+  - [x] v1 и v2
+- [x] Обеспечить максимальную надёжность и качество кода
+  - [x] Типы: TypeScript
+  - [x] Тесты: Jest, Codecov
+  - [x] Авто-тесты в репозитории: Github Actions
+  - [x] Линтинг: Eslint, Prettier, Editorconfig
+  - [x] Безопасность: Eslint Плагин, Code QL, ручная проверка в Snyk
+
+### ❤️ Контрибьютинг
 
 1. ⁉️ Не стесняйтесь писать [Issues](https://github.com/AlexXanderGrib/node-qiwi-sdk/issues/new)
 2. 🛠️ Если хотите что-то поправить в коде, следуйте [`CONTRIBUTING.md`](./CONTRIBUTING.md)
 3. 💸 Так-же можете отправить донат 👉 https://qiwi.com/n/ALEXXGRIB
 4. 🌟 Или поставить библиотеке [звёздочку](https://github.com/AlexXanderGrib/node-qiwi-sdk/stargazers), если она вам понравилась
 
-## 🙋 Поддержка
+### 🙋 Поддержка
 
 Вы можете написать `Issue`, а если я долго не отвечаю пишите в
 
 **Telegram: [@AlexXanderGrib](https://t.me/AlexXanderGrib)**
 
-## Интересует приём платежей от физ. лиц по РФ?
+### Пакет для YooMoney
+
+**Интересует приём платежей от физ. лиц по РФ?**
 
 Попробуйте мою другую библиотеку - SDK для ЮMoney 👉 [**github.com/AlexXanderGrib/yoomoney-sdk**](https://github.com/AlexXanderGrib/yoomoney-sdk)

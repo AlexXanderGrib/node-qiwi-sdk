@@ -60,7 +60,7 @@ Creates an instance of ApiClass.
 
 #### Defined in
 
-[src/apis/api.ts:49](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0b4e701/src/apis/api.ts#L49)
+[src/apis/api.ts:49](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d0770ca/src/apis/api.ts#L49)
 
 ## Properties
 
@@ -80,7 +80,7 @@ ___
 
 #### Defined in
 
-[src/apis/detector/detector.ts:54](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0b4e701/src/apis/detector/detector.ts#L54)
+[src/apis/detector/detector.ts:54](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d0770ca/src/apis/detector/detector.ts#L54)
 
 ___
 
@@ -90,7 +90,7 @@ ___
 
 #### Defined in
 
-[src/apis/detector/detector.ts:15](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0b4e701/src/apis/detector/detector.ts#L15)
+[src/apis/detector/detector.ts:15](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d0770ca/src/apis/detector/detector.ts#L15)
 
 ## Accessors
 
@@ -110,7 +110,7 @@ ApiClass.agent
 
 #### Defined in
 
-[src/apis/api.ts:21](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0b4e701/src/apis/api.ts#L21)
+[src/apis/api.ts:21](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d0770ca/src/apis/api.ts#L21)
 
 • `set` **agent**(`agent`): `void`
 
@@ -132,7 +132,7 @@ ApiClass.agent
 
 #### Defined in
 
-[src/apis/api.ts:30](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0b4e701/src/apis/api.ts#L30)
+[src/apis/api.ts:30](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d0770ca/src/apis/api.ts#L30)
 
 ___
 
@@ -154,7 +154,7 @@ ApiClass.options
 
 #### Defined in
 
-[src/apis/api.ts:40](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0b4e701/src/apis/api.ts#L40)
+[src/apis/api.ts:40](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d0770ca/src/apis/api.ts#L40)
 
 ## Methods
 
@@ -174,7 +174,7 @@ ApiClass.options
 
 #### Defined in
 
-[src/apis/detector/detector.ts:50](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0b4e701/src/apis/detector/detector.ts#L50)
+[src/apis/detector/detector.ts:50](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d0770ca/src/apis/detector/detector.ts#L50)
 
 ___
 
@@ -194,4 +194,4 @@ ___
 
 #### Defined in
 
-[src/apis/detector/detector.ts:24](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0b4e701/src/apis/detector/detector.ts#L24)
+[src/apis/detector/detector.ts:24](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d0770ca/src/apis/detector/detector.ts#L24)

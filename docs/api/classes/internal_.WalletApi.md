@@ -63,7 +63,7 @@ Creates an instance of WalletApi.
 
 #### Defined in
 
-[src/apis/wallet/api.ts:36](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0b4e701/src/apis/wallet/api.ts#L36)
+[src/apis/wallet/api.ts:36](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d0770ca/src/apis/wallet/api.ts#L36)
 
 ## Properties
 
@@ -87,7 +87,7 @@ Creates an instance of WalletApi.
 
 #### Defined in
 
-[src/apis/wallet/api.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0b4e701/src/apis/wallet/api.ts#L16)
+[src/apis/wallet/api.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d0770ca/src/apis/wallet/api.ts#L16)
 
 ___
 
@@ -105,4 +105,4 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/api.ts:27](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0b4e701/src/apis/wallet/api.ts#L27)
+[src/apis/wallet/api.ts:27](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d0770ca/src/apis/wallet/api.ts#L27)

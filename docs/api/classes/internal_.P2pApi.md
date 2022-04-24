@@ -46,7 +46,7 @@ Creates an instance of P2pApi.
 
 #### Defined in
 
-[src/apis/p2p/api.ts:47](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0b4e701/src/apis/p2p/api.ts#L47)
+[src/apis/p2p/api.ts:47](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d0770ca/src/apis/p2p/api.ts#L47)
 
 ## Properties
 
@@ -70,7 +70,7 @@ Creates an instance of P2pApi.
 
 #### Defined in
 
-[src/apis/p2p/api.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0b4e701/src/apis/p2p/api.ts#L16)
+[src/apis/p2p/api.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d0770ca/src/apis/p2p/api.ts#L16)
 
 ___
 
@@ -88,7 +88,7 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/api.ts:27](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0b4e701/src/apis/p2p/api.ts#L27)
+[src/apis/p2p/api.ts:27](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d0770ca/src/apis/p2p/api.ts#L27)
 
 ___
 
@@ -106,4 +106,4 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/api.ts:38](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/0b4e701/src/apis/p2p/api.ts#L38)
+[src/apis/p2p/api.ts:38](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d0770ca/src/apis/p2p/api.ts#L38)
