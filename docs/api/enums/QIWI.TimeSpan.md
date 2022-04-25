@@ -25,7 +25,7 @@
 
 #### Defined in
 
-[src/apis/shared/shared.ts:103](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d0770ca/src/apis/shared/shared.ts#L103)
+[src/apis/shared/shared.ts:106](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/1f94fde/src/apis/shared/shared.ts#L106)
 
 ___
 
@@ -35,7 +35,7 @@ ___
 
 #### Defined in
 
-[src/apis/shared/shared.ts:102](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d0770ca/src/apis/shared/shared.ts#L102)
+[src/apis/shared/shared.ts:105](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/1f94fde/src/apis/shared/shared.ts#L105)
 
 ___
 
@@ -45,7 +45,7 @@ ___
 
 #### Defined in
 
-[src/apis/shared/shared.ts:99](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d0770ca/src/apis/shared/shared.ts#L99)
+[src/apis/shared/shared.ts:102](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/1f94fde/src/apis/shared/shared.ts#L102)
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 #### Defined in
 
-[src/apis/shared/shared.ts:101](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d0770ca/src/apis/shared/shared.ts#L101)
+[src/apis/shared/shared.ts:104](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/1f94fde/src/apis/shared/shared.ts#L104)
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 #### Defined in
 
-[src/apis/shared/shared.ts:105](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d0770ca/src/apis/shared/shared.ts#L105)
+[src/apis/shared/shared.ts:108](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/1f94fde/src/apis/shared/shared.ts#L108)
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 #### Defined in
 
-[src/apis/shared/shared.ts:100](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d0770ca/src/apis/shared/shared.ts#L100)
+[src/apis/shared/shared.ts:103](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/1f94fde/src/apis/shared/shared.ts#L103)
 
 ___
 
@@ -85,7 +85,7 @@ ___
 
 #### Defined in
 
-[src/apis/shared/shared.ts:104](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d0770ca/src/apis/shared/shared.ts#L104)
+[src/apis/shared/shared.ts:107](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/1f94fde/src/apis/shared/shared.ts#L107)
 
 ___
 
@@ -95,4 +95,4 @@ ___
 
 #### Defined in
 
-[src/apis/shared/shared.ts:106](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d0770ca/src/apis/shared/shared.ts#L106)
+[src/apis/shared/shared.ts:109](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/1f94fde/src/apis/shared/shared.ts#L109)

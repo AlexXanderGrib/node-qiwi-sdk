@@ -17,7 +17,7 @@
 
 #### Defined in
 
-[src/apis/p2p/p2p.types.ts:18](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d0770ca/src/apis/p2p/p2p.types.ts#L18)
+[src/apis/p2p/p2p.types.ts:18](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/1f94fde/src/apis/p2p/p2p.types.ts#L18)
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/p2p.types.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d0770ca/src/apis/p2p/p2p.types.ts#L17)
+[src/apis/p2p/p2p.types.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/1f94fde/src/apis/p2p/p2p.types.ts#L17)

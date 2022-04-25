@@ -11,30 +11,7 @@ import {
   BillPaySource,
   BillStatus
 } from "./p2p.types";
-
-/**
- * @template {CallableFunction} T
- *
- * @param {T} function_
- * @return {T}
- */
-function promise<T extends (...parameters: any) => any>(function_: T) {
-  const wrapper = (...parameters: any[]): any => {
-    try {
-      const result = function_(...parameters);
-
-      if (result instanceof Promise) return result;
-
-      return Promise.resolve(result);
-    } catch (error) {
-      return Promise.reject(error);
-    }
-  };
-
-  return wrapper as (
-    ...arguments_: Parameters<T>
-  ) => ReturnType<T> extends Promise<any> ? ReturnType<T> : Promise<ReturnType<T>>;
-}
+import { promise } from "./p2p.utils";
 
 /**
  * # P2P-счета
@@ -139,6 +116,8 @@ export class P2p extends ApiClass<P2pApiOptions> {
    */
   notificationMiddleware(
     options: { memo?: boolean } = {},
+    // Стандартный middleware. Не нуждается в тестировании
+    /* istanbul ignore next */
     actualHandler: RequestHandler<Record<string, string>, any, BillStatusData> = (
       _request,
       _response,
@@ -164,6 +143,9 @@ export class P2p extends ApiClass<P2pApiOptions> {
       }
 
       if (typeof request.body === "object") {
+        // Кейс нужен для обработки body, если до middleware
+        // использовался body-parser
+        /* istanbul ignore next */
         notification = request.body;
       }
 

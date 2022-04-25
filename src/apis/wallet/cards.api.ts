@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 import { generateUUID } from "../shared";
 import { WalletApi } from "./api";
 import {

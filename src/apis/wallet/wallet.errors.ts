@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 import { ExtendedError } from "../../error";
 import { HttpError } from "../../http";
 

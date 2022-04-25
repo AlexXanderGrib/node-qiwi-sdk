@@ -1,6 +1,6 @@
 {
   "name": "qiwi-sdk",
-  "version": "3.0.8",
+  "version": "3.0.9",
   "description": "Typed QIWI Wallet SDK. Supported API's: Personal & P2P Bill Payments",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",

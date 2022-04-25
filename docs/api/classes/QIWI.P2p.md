@@ -65,7 +65,7 @@ Creates an instance of ApiClass.
 
 #### Defined in
 
-[src/apis/api.ts:49](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d0770ca/src/apis/api.ts#L49)
+[src/apis/api.ts:50](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/1f94fde/src/apis/api.ts#L50)
 
 ## Properties
 
@@ -85,7 +85,7 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/p2p.ts:98](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d0770ca/src/apis/p2p/p2p.ts#L98)
+[src/apis/p2p/p2p.ts:75](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/1f94fde/src/apis/p2p/p2p.ts#L75)
 
 ___
 
@@ -95,7 +95,7 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/p2p.ts:49](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d0770ca/src/apis/p2p/p2p.ts#L49)
+[src/apis/p2p/p2p.ts:26](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/1f94fde/src/apis/p2p/p2p.ts#L26)
 
 ___
 
@@ -105,7 +105,7 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/p2p.ts:50](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d0770ca/src/apis/p2p/p2p.ts#L50)
+[src/apis/p2p/p2p.ts:27](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/1f94fde/src/apis/p2p/p2p.ts#L27)
 
 ___
 
@@ -115,7 +115,7 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/p2p.ts:51](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d0770ca/src/apis/p2p/p2p.ts#L51)
+[src/apis/p2p/p2p.ts:28](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/1f94fde/src/apis/p2p/p2p.ts#L28)
 
 ___
 
@@ -125,7 +125,7 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/p2p.ts:47](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d0770ca/src/apis/p2p/p2p.ts#L47)
+[src/apis/p2p/p2p.ts:24](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/1f94fde/src/apis/p2p/p2p.ts#L24)
 
 ## Accessors
 
@@ -145,7 +145,7 @@ ApiClass.agent
 
 #### Defined in
 
-[src/apis/api.ts:21](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d0770ca/src/apis/api.ts#L21)
+[src/apis/api.ts:21](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/1f94fde/src/apis/api.ts#L21)
 
 • `set` **agent**(`agent`): `void`
 
@@ -167,7 +167,7 @@ ApiClass.agent
 
 #### Defined in
 
-[src/apis/api.ts:30](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d0770ca/src/apis/api.ts#L30)
+[src/apis/api.ts:30](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/1f94fde/src/apis/api.ts#L30)
 
 ___
 
@@ -189,7 +189,7 @@ ApiClass.options
 
 #### Defined in
 
-[src/apis/api.ts:40](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d0770ca/src/apis/api.ts#L40)
+[src/apis/api.ts:41](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/1f94fde/src/apis/api.ts#L41)
 
 ## Methods
 
@@ -243,7 +243,7 @@ app.use((error, request, response, next) => {
 
 #### Defined in
 
-[src/apis/p2p/p2p.ts:140](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d0770ca/src/apis/p2p/p2p.ts#L140)
+[src/apis/p2p/p2p.ts:117](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/1f94fde/src/apis/p2p/p2p.ts#L117)
 
 ___
 
@@ -270,7 +270,7 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/p2p.ts:90](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d0770ca/src/apis/p2p/p2p.ts#L90)
+[src/apis/p2p/p2p.ts:67](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/1f94fde/src/apis/p2p/p2p.ts#L67)
 
 ___
 
@@ -296,4 +296,4 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/p2p.ts:61](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/d0770ca/src/apis/p2p/p2p.ts#L61)
+[src/apis/p2p/p2p.ts:38](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/1f94fde/src/apis/p2p/p2p.ts#L38)

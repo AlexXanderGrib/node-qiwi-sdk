@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { createHmac, timingSafeEqual } from "crypto";
 import { formatQuerystring } from "../shared";

@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 import { formatOffsetDate } from "../shared";
 import { P2p } from "./p2p";
 import {

@@ -1,7 +1,13 @@
 /* eslint-disable unicorn/consistent-function-scoping */
 import { config } from "dotenv";
 import { Personal, WalletApiShortError } from "..";
-import { Account, PaymentHistorySource, Wallet } from "../apis";
+import {
+  Account,
+  formatOffsetDate,
+  PaymentHistorySource,
+  Recipients,
+  Wallet
+} from "../apis";
 
 jest.setTimeout(30_000);
 
@@ -49,8 +55,12 @@ describe(Personal.name, () => {
 
   test("Can't send 1 million rubles to unknown wallet", async () => {
     try {
+      const account = "79123456789";
+      const commission = await qiwi.getCommission(Recipients.QIWI, account, 100);
+      expect(typeof commission).toBe("number");
+
       await qiwi.pay2({
-        account: "79123456789",
+        account,
         amount: 1e6, // 1 лям
         comment: "NodeJS QIWI SDK Test npmjs.com/package/qiwi-sdk"
       });
@@ -81,6 +91,13 @@ describe(Personal.name, () => {
 
     const txn = await qiwi.getTransaction(transaction.txnId);
     expect(txn).toMatchObject(transaction);
+
+    const totals = await qiwi.getPaymentHistoryTotal({
+      startDate: formatOffsetDate(-10, "day"),
+      endDate: formatOffsetDate(0)
+    });
+
+    expect(totals).toMatchObject({});
 
     const response = await qiwi.getTransactionCheque(
       transaction.txnId,
