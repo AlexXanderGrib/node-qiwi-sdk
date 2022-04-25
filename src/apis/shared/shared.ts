@@ -53,7 +53,7 @@ export function formatDate(dateTime: Date | number | string): string {
 export function parseQuerystring(querystring: string): AnyResponse {
   // Парсинг строки не используется в тестах
   // Пакет `query-string` уже протестирован
-  /* istanbul ignore */
+  /* istanbul ignore next */
   return qs.parse(querystring, {
     arrayFormat: "index",
     parseBooleans: true,

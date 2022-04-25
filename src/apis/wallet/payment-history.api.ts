@@ -127,7 +127,7 @@ export class WalletPaymentHistoryApi extends WalletApi {
   ): Promise<void> {
     // Деструктивный метод. Отправляет почту. Не может быть вызван
     // несколько раз подряд, что требуется для тестов
-    /* istanbul ignore */
+    /* istanbul ignore next */
     await this.http.post(
       `payment-history/v2/transactions/${transactionId}/cheque/send?${formatQuerystring(
         {

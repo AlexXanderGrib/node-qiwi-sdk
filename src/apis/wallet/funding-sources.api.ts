@@ -42,7 +42,7 @@ export class WalletFundingSourcesApi extends WalletApi {
    */
   async createAccount(alias: string): Promise<void> {
     // Деструктивный метод
-    /* istanbul ignore */
+    /* istanbul ignore next */
     await this.http.post(`funding-sources/v2/persons/${this.walletId}/accounts`, {
       alias
     });
@@ -80,7 +80,7 @@ export class WalletFundingSourcesApi extends WalletApi {
    */
   async setDefaultAccount(alias: string): Promise<void> {
     // Деструктивный метод
-    /* istanbul ignore */
+    /* istanbul ignore next */
     return await this.http.patch(
       `funding-sources/v2/persons/${this.walletId}/accounts/${alias}`,
       { defaultAccount: true }
