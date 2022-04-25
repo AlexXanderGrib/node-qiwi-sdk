@@ -20,9 +20,10 @@ qiwi-sdk / [Exports](modules.md)
 ## 🍬 Почему именно эта библиотека?
 
 1. Она написана на TypeScript, покрыта тестами
-2. Покрывает [`Wallet Personal`](https://developer.qiwi.com/ru/qiwi-wallet-personal/) и [`P2P Payments`](https://developer.qiwi.com/ru/p2p-payments/) секции API
+2. Покрывает [Wallet Personal](https://developer.qiwi.com/ru/qiwi-wallet-personal/) и [P2P Payments](https://developer.qiwi.com/ru/p2p-payments/) секции API
 3. Документация появляется прямо в редакторе, так-как используется JSDoc
 4. [Безопасная](./SECURITY.md) (Относительно)
+   1. Всего 3 зависимости: `axios`, `query-string` и `uuid`
 5. Много [примеров](./examples/README.md)
 6. Поддерживаются даже редко-используемые возможности, например:
    1. Персональные Вебхуки
@@ -71,6 +72,14 @@ const { P2p, Wallet, Detector } = require("qiwi-sdk");
 
 ### Обзор API
 
+| Класс (v3)                                        | Класс (Legacy v2)                                             | Документация от QIWI                                                 |
+| ------------------------------------------------- | ------------------------------------------------------------- | -------------------------------------------------------------------- |
+| [`Wallet`](./docs/api/classes/QIWI.Wallet.md)     | [`Personal`](./docs/api/classes/QIWI.WalletCompat.md)         | https://developer.qiwi.com/ru/qiwi-wallet-personal                   |
+| [`P2p`](./docs/api/classes/QIWI.P2p.md)           | [`P2P`](./docs/api/classes/QIWI.P2pCompat.md)                 | https://developer.qiwi.com/ru/p2p-payments                           |
+| [`Detector`](./docs/api/classes/QIWI.Detector.md) | [`DetectorCompat`](./docs/api/classes/QIWI.DetectorCompat.md) | https://developer.qiwi.com/ru/qiwi-wallet-personal/#search-providers |
+
+#### Создание
+
 ```typescript
 // Personal - API, отвечающее за работу с конкретным кошельком
 // Документация от QIWI:
@@ -89,9 +98,11 @@ const detector = Detector.create();
 
 #### _Переменные окружения:_
 
-- **`QIWI_TOKEN`** - токен киви, полученный на https://qiwi.com/api
-- **`QIWI_WALLET`** - номер телефона кошелька, к которому привязан токен. Формат: `79123456789`
-- **`QIWI_SECRET_KEY`** и **`QIWI_PUBLIC_KEY`** - пара ключей, созданные на https://qiwi.com/p2p-admin/transfers/api
+| Название                              | Тип                              | Описание                                                           |
+| ------------------------------------- | -------------------------------- | ------------------------------------------------------------------ |
+| `QIWI_TOKEN`                          | Строка(32 сим) - Hex             | Токен киви, полученный на https://qiwi.com/api                     |
+| `QIWI_WALLET`                         | Строка(10-16 сим) - только цифры | Номер телефона кошелька, к которому привязан                       |
+| `QIWI_SECRET_KEY` и `QIWI_PUBLIC_KEY` | Строки                           | Пара ключей, созданные на https://qiwi.com/p2p-admin/transfers/api |
 
 ### 🤝 Интеграция
 
@@ -114,7 +125,7 @@ const detector = Detector.create();
 
 ## О пакете
 
-### Цели пакета
+### 🏹 Цели пакета
 
 - [ ] Покрыть все [API QIWI](https://developer.qiwi.com/) (в том числе для юридических лиц)
   - [x] API QIWI Кошелька - (все API)
@@ -146,7 +157,7 @@ const detector = Detector.create();
 
 **Telegram: [@AlexXanderGrib](https://t.me/AlexXanderGrib)**
 
-### Пакет для YooMoney
+### 💜 Пакет для YooMoney
 
 **Интересует приём платежей от физ. лиц по РФ?**
 

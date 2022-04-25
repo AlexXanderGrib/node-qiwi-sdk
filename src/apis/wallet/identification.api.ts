@@ -26,7 +26,7 @@ export class WalletIdentificationApi extends WalletApi {
   async set(data: IdentificationBase): Promise<IdentificationResponse> {
     // Тесты не могут покрыть этот метод. Он - деструктивный
     // Он не может быть вызван много раз
-    /* istanbul ignore next */
+    /* istanbul ignore */
     return await this.http.post(
       `identification/v1/persons/${this.walletId}/identification`,
       data

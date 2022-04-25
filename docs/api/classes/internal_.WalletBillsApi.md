@@ -63,7 +63,7 @@ Creates an instance of WalletApi.
 
 #### Defined in
 
-[src/apis/wallet/api.ts:36](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/1f94fde/src/apis/wallet/api.ts#L36)
+[src/apis/wallet/api.ts:36](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e26069b/src/apis/wallet/api.ts#L36)
 
 ## Properties
 
@@ -95,7 +95,7 @@ WalletApi.http
 
 #### Defined in
 
-[src/apis/wallet/api.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/1f94fde/src/apis/wallet/api.ts#L16)
+[src/apis/wallet/api.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e26069b/src/apis/wallet/api.ts#L16)
 
 ___
 
@@ -117,7 +117,7 @@ WalletApi.walletId
 
 #### Defined in
 
-[src/apis/wallet/api.ts:27](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/1f94fde/src/apis/wallet/api.ts#L27)
+[src/apis/wallet/api.ts:27](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e26069b/src/apis/wallet/api.ts#L27)
 
 ## Methods
 
@@ -153,7 +153,7 @@ const { publicKey, secretKey } = await createP2PKeyPair('my-key-pair');
 
 #### Defined in
 
-[src/apis/wallet/bills.api.ts:43](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/1f94fde/src/apis/wallet/bills.api.ts#L43)
+[src/apis/wallet/bills.api.ts:43](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e26069b/src/apis/wallet/bills.api.ts#L43)
 
 ___
 
@@ -186,7 +186,7 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/bills.api.ts:72](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/1f94fde/src/apis/wallet/bills.api.ts#L72)
+[src/apis/wallet/bills.api.ts:72](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e26069b/src/apis/wallet/bills.api.ts#L72)
 
 ___
 
@@ -210,7 +210,7 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/bills.api.ts:80](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/1f94fde/src/apis/wallet/bills.api.ts#L80)
+[src/apis/wallet/bills.api.ts:80](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e26069b/src/apis/wallet/bills.api.ts#L80)
 
 ▸ **pay**(`id`, `currency`): `Promise`<[`BillPayResponse`](../modules/QIWI.md#billpayresponse)\>
 
@@ -231,7 +231,7 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/bills.api.ts:81](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/1f94fde/src/apis/wallet/bills.api.ts#L81)
+[src/apis/wallet/bills.api.ts:81](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e26069b/src/apis/wallet/bills.api.ts#L81)
 
 ___
 
@@ -260,4 +260,4 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/bills.api.ts:113](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/1f94fde/src/apis/wallet/bills.api.ts#L113)
+[src/apis/wallet/bills.api.ts:113](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e26069b/src/apis/wallet/bills.api.ts#L113)

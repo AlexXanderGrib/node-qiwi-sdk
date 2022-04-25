@@ -63,7 +63,7 @@ Creates an instance of ApiClass.
 
 #### Defined in
 
-[src/apis/api.ts:50](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/1f94fde/src/apis/api.ts#L50)
+[src/apis/api.ts:50](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e26069b/src/apis/api.ts#L50)
 
 ## Properties
 
@@ -85,7 +85,7 @@ Creates an instance of ApiClass.
 
 #### Defined in
 
-[src/apis/api.ts:21](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/1f94fde/src/apis/api.ts#L21)
+[src/apis/api.ts:21](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e26069b/src/apis/api.ts#L21)
 
 • `set` **agent**(`agent`): `void`
 
@@ -103,7 +103,7 @@ Creates an instance of ApiClass.
 
 #### Defined in
 
-[src/apis/api.ts:30](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/1f94fde/src/apis/api.ts#L30)
+[src/apis/api.ts:30](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e26069b/src/apis/api.ts#L30)
 
 ___
 
@@ -121,4 +121,4 @@ ___
 
 #### Defined in
 
-[src/apis/api.ts:41](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/1f94fde/src/apis/api.ts#L41)
+[src/apis/api.ts:41](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/e26069b/src/apis/api.ts#L41)

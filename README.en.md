@@ -18,9 +18,10 @@
 ## 🍬 Why use this lib?
 
 1. Written in TypeScript, covered by tests
-2. Covers [`Personal Wallet`](https://developer.qiwi.com/ru/qiwi-wallet-personal/) & [`P2P Payments`](https://developer.qiwi.com/ru/p2p-payments/) APIs
+2. Covers [Personal Wallet](https://developer.qiwi.com/en/qiwi-wallet-personal/) & [P2P Payments](https://developer.qiwi.com/en/p2p-payments/) APIs
 3. Documentation appears right in editor (on russian), cause JSDoc was used
 4. [Secure](./SECURITY.md) (relatively)
+   1. Only 3 dependencies: `axios`, `query-string` & `uuid`
 5. Many [examples](./examples/)
 6. Supported rarely-used features:
    1. Personal Webhooks
@@ -60,17 +61,23 @@ import { P2p, Wallet, Detector } from "qiwi-sdk";
 const { P2p, Wallet, Detector } = require("qiwi-sdk");
 ```
 
-### Choosing API
+### API Overview
+
+| Class (v3)                                        | Class (Legacy v2)                                             | Documentation by QIWI                                                |
+| ------------------------------------------------- | ------------------------------------------------------------- | -------------------------------------------------------------------- |
+| [`Wallet`](./docs/api/classes/QIWI.Wallet.md)     | [`Personal`](./docs/api/classes/QIWI.WalletCompat.md)         | https://developer.qiwi.com/en/qiwi-wallet-personal                   |
+| [`P2p`](./docs/api/classes/QIWI.P2p.md)           | [`P2P`](./docs/api/classes/QIWI.P2pCompat.md)                 | https://developer.qiwi.com/en/p2p-payments                           |
+| [`Detector`](./docs/api/classes/QIWI.Detector.md) | [`DetectorCompat`](./docs/api/classes/QIWI.DetectorCompat.md) | https://developer.qiwi.com/en/qiwi-wallet-personal/#search-providers |
 
 ```typescript
 // Personal - API for working with individual wallet
 // Documentation:
-// https://developer.qiwi.com/ru/qiwi-wallet-personal
+// https://developer.qiwi.com/en/qiwi-wallet-personal
 const qiwi = Wallet.create(process.env.QIWI_TOKEN, process.env.QIWI_WALLET);
 
 // P2P - convenient api for issuing bills
 // Documentation:
-// https://developer.qiwi.com/ru/p2p-payments
+// https://developer.qiwi.com/en/p2p-payments
 const p2p = P2p.create(process.env.QIWI_SECRET_KEY, process.env.QIWI_PUBLIC_KEY);
 
 // Detector - API for getting Provider Id by phone or card number
@@ -80,9 +87,11 @@ const detector = Detector.create();
 
 #### _Environment variables:_
 
-- **`QIWI_TOKEN`** - qiwi token, got on https://qiwi.com/api
-- **`QIWI_WALLET`** - phone number bound to the wallet. Format: `79123456789`
-- **`QIWI_SECRET_KEY`** and **`QIWI_PUBLIC_KEY`** - key pair created on https://qiwi.com/p2p-admin/transfers/api
+| Name                                  | Type                         | Description                                                  |
+| ------------------------------------- | ---------------------------- | ------------------------------------------------------------ |
+| `QIWI_TOKEN`                          | String(32 chars) - Hex       | Qiwi token got on https://qiwi.com/api                       |
+| `QIWI_WALLET`                         | String(10-16 chars) - Digits | Wallet's phone number                                        |
+| `QIWI_SECRET_KEY` и `QIWI_PUBLIC_KEY` | Strings                      | Key paid created on https://qiwi.com/p2p-admin/transfers/api |
 
 ### 🤝 Integration
 
@@ -104,7 +113,7 @@ const detector = Detector.create();
 
 ## About package
 
-### Goals
+### 🏹 Project Goals
 
 - [ ] Cover all [APIs](https://developer.qiwi.com/) (в том числе для юридических лиц)
   - [x] API QIWI Wallet
@@ -134,7 +143,7 @@ You can write issue, or if i am slow to answer it, you can DM me in
 
 **Telegram: [@AlexXanderGrib](https://t.me/AlexXanderGrib)**
 
-### YooMoney package
+### 💜 YooMoney package
 
 **Interested in P2P acquiring in Russia?**
 
