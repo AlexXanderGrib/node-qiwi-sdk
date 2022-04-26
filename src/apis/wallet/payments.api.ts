@@ -1,12 +1,15 @@
+import { Detector } from "../detector";
 import { formatQuerystring } from "../shared";
 import { WalletApi } from "./api";
 import {
-  PaymentCommissionRequest,
   Recipients,
   FormUrlOptions,
   Currency,
   PayParameters,
-  PaymentResponse
+  PaymentResponse,
+  QuickPayParameters,
+  CommissionPayer,
+  QuickPayRecipients
 } from "./wallet.types";
 
 /**
@@ -35,25 +38,24 @@ export class WalletPaymentsApi extends WalletApi {
   async getCommission(
     provider: number | Recipients,
     account: string,
-    amount: number
+    amount: number,
+    { accountCurrency = Currency.RUB, paymentCurrency = Currency.RUB } = {}
   ): Promise<number> {
-    const data: PaymentCommissionRequest = {
-      account,
-      paymentMethod: {
-        accountId: "643",
-        type: "Account"
-      },
-      purchaseTotals: {
-        total: {
-          amount,
-          currency: "643"
-        }
-      }
-    };
-
     const response: any = await this.http.post(
       `sinap/providers/${provider}/onlineCommission`,
-      data
+      {
+        account,
+        paymentMethod: {
+          accountId: String(accountCurrency),
+          type: "Account"
+        },
+        purchaseTotals: {
+          total: {
+            amount,
+            currency: String(paymentCurrency)
+          }
+        }
+      }
     );
 
     return response.qwCommission.amount;
@@ -128,7 +130,8 @@ export class WalletPaymentsApi extends WalletApi {
     provider = Recipients.QIWI,
     comment = "",
     currency = Currency.RUB,
-    fields = {}
+    fields = {},
+    accountCurrency = Currency.RUB
   }: PayParameters): Promise<PaymentResponse> {
     return await this.http.post(`sinap/api/v2/terms/${provider}/payments`, {
       id: (Date.now() * 1000).toString(),
@@ -138,7 +141,7 @@ export class WalletPaymentsApi extends WalletApi {
       },
       paymentMethod: {
         type: "Account",
-        accountId: "643"
+        accountId: String(accountCurrency)
       },
       fields: {
         account,
@@ -146,5 +149,77 @@ export class WalletPaymentsApi extends WalletApi {
       },
       ...(comment && { comment })
     });
+  }
+
+  /**
+   *
+   * @param {QuickPayParameters} params Параметры платежа
+   */
+  async quickPay({
+    account,
+    amount,
+    commissionPayer = CommissionPayer.SENDER,
+    provider = Recipients.QIWI,
+    comment = "",
+    currency = Currency.RUB,
+    fields = {},
+    accountCurrency = Currency.RUB
+  }: QuickPayParameters): Promise<PaymentResponse> {
+    provider = await this._resolveProvider(provider, account);
+
+    if (commissionPayer === CommissionPayer.RECEIVER) {
+      const commission = await this.getCommission(provider, account, amount, {
+        accountCurrency,
+        paymentCurrency: currency
+      });
+
+      amount -= commission;
+    }
+
+    return await this.pay({
+      account,
+      amount,
+      provider,
+      accountCurrency,
+      comment,
+      currency,
+      fields
+    });
+  }
+
+  /**
+   *
+   *
+   * @protected
+   * @param {string|number} provider
+   * @param {string} account
+   * @return {Promise<number>} {Promise<number>}
+   * @memberof WalletPaymentsApi
+   */
+  protected async _resolveProvider(
+    provider: QuickPayParameters["provider"],
+    account: string
+  ): Promise<number> {
+    if (typeof provider !== "number") {
+      const detector = Detector.create();
+      detector.agent = this._options.http.client.options.agent;
+      switch (provider) {
+        case "card":
+        case QuickPayRecipients.Card:
+          provider = await detector.detectProvider.byCardNumber(account);
+          break;
+        case "phone":
+        case QuickPayRecipients.Phone:
+          provider = await detector.detectProvider.byPhone(account);
+          break;
+        case "qiwi":
+          provider = Recipients.QIWI;
+          break;
+        case "yoomoney":
+          provider = Recipients.YooMoney;
+          break;
+      }
+    }
+    return provider as number;
   }
 }

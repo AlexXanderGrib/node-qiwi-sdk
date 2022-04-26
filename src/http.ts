@@ -1,5 +1,5 @@
 import axios, { AxiosResponse, Method } from "axios";
-import { Collection, convertCollection, ReadonlyRecord } from "./apis/shared";
+import { Collection, collect, ReadonlyRecord } from "./apis/shared";
 
 export type Headers = ReadonlyRecord<string, string>;
 
@@ -96,7 +96,7 @@ export class DefaultHttpClient implements HttpClient {
     };
 
     const okStatusCodes = new Set(
-      request.okStatusCodes ? convertCollection(request.okStatusCodes) : []
+      request.okStatusCodes ? collect(request.okStatusCodes) : []
     );
 
     const validateStatus = (status: number) =>

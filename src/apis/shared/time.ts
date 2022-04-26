@@ -1,7 +1,3 @@
-import qs from "query-string";
-import type { AnyResponse, Collection } from "./shared.types";
-import { v4 as uuid } from "uuid";
-
 /**
  * Превращает число в двухзначную строку
  * @param {number} number
@@ -43,59 +39,6 @@ export function formatDate(dateTime: Date | number | string): string {
 
   //      [ Дата ][    Временная зона     ]
   return `${base}${sign}${hours}:${minutes}`;
-}
-
-/**
- * Разбирает строку запроса, в том формате, который передаёт QIWI
- * @param {string} querystring Строка запроса
- * @return {*}
- */
-export function parseQuerystring(querystring: string): AnyResponse {
-  // Парсинг строки не используется в тестах
-  // Пакет `query-string` уже протестирован
-  /* istanbul ignore next */
-  return qs.parse(querystring, {
-    arrayFormat: "index",
-    parseBooleans: true,
-    parseNumbers: true
-  }) as any;
-}
-
-/**
- * Создаёт строку запроса, в формате, который понимает QIWI
- *
- * @param {AnyResponse} object Объект для преобразования
- * @return {string}
- */
-export function formatQuerystring(object: AnyResponse): string {
-  return qs.stringify(object as any, {
-    arrayFormat: "index",
-    skipNull: true,
-    skipEmptyString: false
-  });
-}
-
-/**
- * Генерирует UUID
- *
- * @export
- * @return {string}
- */
-export function generateUUID() {
-  return uuid();
-}
-
-/**
- *
- *
- * @export
- * @template T
- * @param {Collection<T>} collection
- * @return {T[]}
- */
-export function convertCollection<T>(collection: Collection<T>): T[] {
-  // eslint-disable-next-line unicorn/prefer-spread
-  return Array.from(collection);
 }
 
 export enum TimeSpan {

