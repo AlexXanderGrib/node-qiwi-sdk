@@ -40,6 +40,7 @@
 - [WalletPaymentHistoryApi](../classes/internal_.WalletPaymentHistoryApi.md)
 - [WalletPaymentsApi](../classes/internal_.WalletPaymentsApi.md)
 - [WalletPersonProfileApi](../classes/internal_.WalletPersonProfileApi.md)
+- [WalletProvidersApi](../classes/internal_.WalletProvidersApi.md)
 - [WalletRestrictionsApi](../classes/internal_.WalletRestrictionsApi.md)
 - [WalletWebhooksApi](../classes/internal_.WalletWebhooksApi.md)
 - [Writable](../classes/internal_.Writable.md)
@@ -136,8 +137,9 @@
 - [GetRouteParameter](internal_.md#getrouteparameter)
 - [ImageObject](internal_.md#imageobject)
 - [IteratorResult](internal_.md#iteratorresult)
-- [KVObject](internal_.md#kvobject)
+- [KeyValueObject](internal_.md#keyvalueobject)
 - [LookupFunction](internal_.md#lookupfunction)
+- [NameValueObject](internal_.md#namevalueobject)
 - [Omit](internal_.md#omit)
 - [OutgoingHttpHeader](internal_.md#outgoinghttpheader)
 - [Partial](internal_.md#partial)
@@ -223,7 +225,7 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/wallet.types.ts:973](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4f2e487/src/apis/wallet/wallet.types.ts#L973)
+[src/apis/wallet/wallet.types.ts:962](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/wallet/wallet.types.ts#L962)
 
 ___
 
@@ -239,7 +241,7 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/wallet.ts:42](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4f2e487/src/apis/wallet/wallet.ts#L42)
+[src/apis/wallet/wallet.ts:43](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/wallet/wallet.ts#L43)
 
 ___
 
@@ -371,7 +373,7 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/wallet.types.ts:954](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4f2e487/src/apis/wallet/wallet.types.ts#L954)
+[src/apis/wallet/wallet.types.ts:943](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/wallet/wallet.types.ts#L943)
 
 ___
 
@@ -392,20 +394,20 @@ node_modules/typescript/lib/lib.es2015.iterable.d.ts:41
 
 ___
 
-### KVObject
+### KeyValueObject
 
-Ƭ **KVObject**: `Object`
+Ƭ **KeyValueObject**: `Object`
 
 #### Type declaration
 
 | Name | Type |
 | :------ | :------ |
-| `name` | `string` |
+| `key` | `string` |
 | `value` | `string` |
 
 #### Defined in
 
-[src/apis/wallet/wallet.types.ts:971](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4f2e487/src/apis/wallet/wallet.types.ts#L971)
+[src/apis/wallet/wallet.types.ts:1495](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/wallet/wallet.types.ts#L1495)
 
 ___
 
@@ -432,6 +434,23 @@ ___
 #### Defined in
 
 node_modules/@types/node/net.d.ts:19
+
+___
+
+### NameValueObject
+
+Ƭ **NameValueObject**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `name` | `string` |
+| `value` | `string` |
+
+#### Defined in
+
+[src/apis/wallet/wallet.types.ts:960](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/wallet/wallet.types.ts#L960)
 
 ___
 
@@ -757,7 +776,7 @@ nothing
 
 #### Defined in
 
-[src/apis/wallet/wallet.ts:40](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4f2e487/src/apis/wallet/wallet.ts#L40)
+[src/apis/wallet/wallet.ts:41](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/wallet/wallet.ts#L41)
 
 ___
 

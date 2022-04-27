@@ -1,4 +1,4 @@
-import { Detector } from "../detector";
+import { Detector, DetectorError } from "../detector";
 import { formatQuerystring } from "../shared";
 import { WalletApi } from "./api";
 import {
@@ -152,8 +152,15 @@ export class WalletPaymentsApi extends WalletApi {
   }
 
   /**
+   * Метод для отправки платежа с возможностью автоматического вычета
+   * комиссии и распознавания `provider`'а
    *
-   * @param {QuickPayParameters} params Параметры платежа
+   * [Документация QIWI по методу оплаты](https://developer.qiwi.com/ru/qiwi-wallet-personal/#payments)
+   *
+   * @param {QuickPayParameters} parameters
+   * @throws {DetectorError} Под капотом создаётся и вызывается `Detector`. Он может выкинуть эту ошибку
+   * @return {Promise<PaymentResponse>}  {Promise<PaymentResponse>}
+   * @memberof WalletPaymentsApi
    */
   async quickPay({
     account,
@@ -194,32 +201,39 @@ export class WalletPaymentsApi extends WalletApi {
    * @param {string|number} provider
    * @param {string} account
    * @return {Promise<number>} {Promise<number>}
+   * @throws {DetectorError}
    * @memberof WalletPaymentsApi
    */
   protected async _resolveProvider(
     provider: QuickPayParameters["provider"],
     account: string
   ): Promise<number> {
-    if (typeof provider !== "number") {
-      const detector = Detector.create();
+    if (typeof provider === "number") return provider;
+
+    const detector = Detector.create();
+
+    try {
       detector.agent = this._options.http.client.options.agent;
+
       switch (provider) {
         case "card":
         case QuickPayRecipients.Card:
-          provider = await detector.detectProvider.byCardNumber(account);
-          break;
+          return await detector.detectProvider.byCardNumber(account);
+
         case "phone":
         case QuickPayRecipients.Phone:
-          provider = await detector.detectProvider.byPhone(account);
-          break;
+          return await detector.detectProvider.byPhone(account);
+
         case "qiwi":
-          provider = Recipients.QIWI;
-          break;
+          return Recipients.QIWI;
+
         case "yoomoney":
-          provider = Recipients.YooMoney;
-          break;
+          return Recipients.YooMoney;
       }
+    } finally {
+      detector.agent = undefined;
     }
-    return provider as number;
+
+    throw new DetectorError("Unable to detect provider");
   }
 }

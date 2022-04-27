@@ -42,25 +42,25 @@ API получения ID провайдера QIWI по Номеру Телеф
 
 ### constructor
 
-• **new Detector**(`_options`)
+• **new Detector**(`[options]?`)
 
-Creates an instance of ApiClass.
+Creates an instance of P2p.
 
-**`memberof`** ApiClass
+**`memberof`** P2p
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `_options` | [`ApiClassOptions`](../interfaces/internal_.ApiClassOptions.md) |
+| `[options]` | [`Partial`](../modules/internal_.md#partial)<[`ApiClassOptions`](../interfaces/internal_.ApiClassOptions.md)\> |
 
-#### Inherited from
+#### Overrides
 
 [ApiClass](internal_.ApiClass.md).[constructor](internal_.ApiClass.md#constructor)
 
 #### Defined in
 
-[src/apis/api.ts:50](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4f2e487/src/apis/api.ts#L50)
+[src/apis/detector/detector.ts:59](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/detector/detector.ts#L59)
 
 ## Properties
 
@@ -80,7 +80,7 @@ ___
 
 #### Defined in
 
-[src/apis/detector/detector.ts:54](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4f2e487/src/apis/detector/detector.ts#L54)
+[src/apis/detector/detector.ts:65](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/detector/detector.ts#L65)
 
 ___
 
@@ -90,7 +90,7 @@ ___
 
 #### Defined in
 
-[src/apis/detector/detector.ts:15](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4f2e487/src/apis/detector/detector.ts#L15)
+[src/apis/detector/detector.ts:15](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/detector/detector.ts#L15)
 
 ## Accessors
 
@@ -110,7 +110,7 @@ ApiClass.agent
 
 #### Defined in
 
-[src/apis/api.ts:21](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4f2e487/src/apis/api.ts#L21)
+[src/apis/api.ts:21](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/api.ts#L21)
 
 • `set` **agent**(`agent`): `void`
 
@@ -132,7 +132,7 @@ ApiClass.agent
 
 #### Defined in
 
-[src/apis/api.ts:30](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4f2e487/src/apis/api.ts#L30)
+[src/apis/api.ts:30](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/api.ts#L30)
 
 ___
 
@@ -154,7 +154,7 @@ ApiClass.options
 
 #### Defined in
 
-[src/apis/api.ts:41](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4f2e487/src/apis/api.ts#L41)
+[src/apis/api.ts:41](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/api.ts#L41)
 
 ## Methods
 
@@ -174,7 +174,7 @@ ApiClass.options
 
 #### Defined in
 
-[src/apis/detector/detector.ts:50](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4f2e487/src/apis/detector/detector.ts#L50)
+[src/apis/detector/detector.ts:50](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/detector/detector.ts#L50)
 
 ___
 
@@ -194,4 +194,4 @@ ___
 
 #### Defined in
 
-[src/apis/detector/detector.ts:24](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4f2e487/src/apis/detector/detector.ts#L24)
+[src/apis/detector/detector.ts:24](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/detector/detector.ts#L24)

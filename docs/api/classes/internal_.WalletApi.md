@@ -30,6 +30,8 @@
 
   ↳ [`WalletWebhooksApi`](internal_.WalletWebhooksApi.md)
 
+  ↳ [`WalletProvidersApi`](internal_.WalletProvidersApi.md)
+
 ## Table of contents
 
 ### Constructors
@@ -63,7 +65,7 @@ Creates an instance of WalletApi.
 
 #### Defined in
 
-[src/apis/wallet/api.ts:36](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4f2e487/src/apis/wallet/api.ts#L36)
+[src/apis/wallet/api.ts:36](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/wallet/api.ts#L36)
 
 ## Properties
 
@@ -87,7 +89,7 @@ Creates an instance of WalletApi.
 
 #### Defined in
 
-[src/apis/wallet/api.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4f2e487/src/apis/wallet/api.ts#L16)
+[src/apis/wallet/api.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/wallet/api.ts#L16)
 
 ___
 
@@ -105,4 +107,4 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/api.ts:27](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4f2e487/src/apis/wallet/api.ts#L27)
+[src/apis/wallet/api.ts:27](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/wallet/api.ts#L27)

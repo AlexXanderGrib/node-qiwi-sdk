@@ -31,6 +31,7 @@ import { stringify } from "querystring";
 import { USER_AGENT } from "../../identity";
 import { mapHttpErrors } from "./wallet.errors";
 import { ApiClass } from "../api";
+import { WalletProvidersApi } from "./providers.api";
 
 /**
  * @callback SetupHttp
@@ -72,6 +73,7 @@ export class Wallet extends ApiClass<WalletApiOptions> {
   static readonly PaymentsApi = WalletPaymentsApi;
   static readonly BillsApi = WalletBillsApi;
   static readonly WebhooksApi = WalletWebhooksApi;
+  static readonly ProvidersApi = WalletProvidersApi;
 
   /**
    *
@@ -154,6 +156,19 @@ export class Wallet extends ApiClass<WalletApiOptions> {
     return new this({ ...options, walletId });
   }
 
+  /**
+   * Creates an instance of Wallet.
+   * @param {WalletApiOptions} [options]
+   * @memberof Wallet
+   */
+  constructor({
+    token = "",
+    walletId = "",
+    http = Wallet.httpClientFactory(token)
+  }: Partial<WalletApiOptions> = {}) {
+    super({ token, walletId, http });
+  }
+
   readonly personProfile = new Wallet.PersonProfileApi(this._options);
   readonly identification = new Wallet.IdentificationApi(this._options);
   readonly limits = new Wallet.LimitsApi(this._options);
@@ -164,6 +179,7 @@ export class Wallet extends ApiClass<WalletApiOptions> {
   readonly payments = new Wallet.PaymentsApi(this._options);
   readonly bills = new Wallet.BillsApi(this._options);
   readonly webhooks = new Wallet.WebhooksApi(this._options);
+  readonly providers = new Wallet.ProvidersApi(this._options);
 
   /**
    * Создаёт токен с увеличенным сроком действия (10 лет)

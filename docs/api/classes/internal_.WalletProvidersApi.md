@@ -1,11 +1,11 @@
-[qiwi-sdk](../README.md) / [Exports](../modules.md) / [<internal\>](../modules/internal_.md) / WalletRestrictionsApi
+[qiwi-sdk](../README.md) / [Exports](../modules.md) / [<internal\>](../modules/internal_.md) / WalletProvidersApi
 
-# Class: WalletRestrictionsApi
+# Class: WalletProvidersApi
 
-[<internal>](../modules/internal_.md).WalletRestrictionsApi
+[<internal>](../modules/internal_.md).WalletProvidersApi
 
-# Проверка ограничений исходящих платежей с QIWI Кошелька
-[Документация QIWI](https://developer.qiwi.com/ru/qiwi-wallet-personal/#restrictions)
+# Информация о провайдере
+Не документированное
 
 **`export`**
 
@@ -13,32 +13,32 @@
 
 - [`WalletApi`](internal_.WalletApi.md)
 
-  ↳ **`WalletRestrictionsApi`**
+  ↳ **`WalletProvidersApi`**
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](internal_.WalletRestrictionsApi.md#constructor)
+- [constructor](internal_.WalletProvidersApi.md#constructor)
 
 ### Properties
 
-- [\_options](internal_.WalletRestrictionsApi.md#_options)
+- [\_options](internal_.WalletProvidersApi.md#_options)
 
 ### Accessors
 
-- [http](internal_.WalletRestrictionsApi.md#http)
-- [walletId](internal_.WalletRestrictionsApi.md#walletid)
+- [http](internal_.WalletProvidersApi.md#http)
+- [walletId](internal_.WalletProvidersApi.md#walletid)
 
 ### Methods
 
-- [get](internal_.WalletRestrictionsApi.md#get)
+- [getInfo](internal_.WalletProvidersApi.md#getinfo)
 
 ## Constructors
 
 ### constructor
 
-• **new WalletRestrictionsApi**(`_options`)
+• **new WalletProvidersApi**(`_options`)
 
 Creates an instance of WalletApi.
 
@@ -114,25 +114,29 @@ WalletApi.walletId
 
 ## Methods
 
-### get
+### getInfo
 
-▸ **get**(): `Promise`<[`Restrictions`](../modules/QIWI.md#restrictions)\>
+▸ **getInfo**(`providerId`): `Promise`<[`ProviderInfo`](../modules/QIWI.md#providerinfo)\>
 
-## Проверка ограничений исходящих платежей с QIWI Кошелька
+## Профиль пользователя
 
-Запрос проверяет, есть ли ограничение на исходящие платежи с
-QIWI Кошелька.
+Запрос возвращает информацию о вашем профиле - наборе
+пользовательских данных и настроек вашего QIWI кошелька.
 
-**Этот метод требует наличия валидного `walletId` (номера телефона привязанного к кошельку) в конфигурации API.**
+**`memberof`** WalletProvidersApi
 
-**`memberof`** WalletRestrictionsApi
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `providerId` | `number` |
 
 #### Returns
 
-`Promise`<[`Restrictions`](../modules/QIWI.md#restrictions)\>
+`Promise`<[`ProviderInfo`](../modules/QIWI.md#providerinfo)\>
 
-{Promise<Restrictions>}
+{Promise<ProviderInfo>}
 
 #### Defined in
 
-[src/apis/wallet/restrictions.api.ts:24](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/wallet/restrictions.api.ts#L24)
+src/apis/wallet/providers.api.ts:23

@@ -51,5 +51,16 @@ export class Detector extends ApiClass<DetectorApiOptions> {
     return new this({ http: this.httpClientFactory() });
   }
 
+  /**
+   * Creates an instance of P2p.
+   * @param {P2pApiOptions} [options]
+   * @memberof P2p
+   */
+  constructor({
+    http = Detector.httpClientFactory()
+  }: Partial<DetectorApiOptions> = {}) {
+    super({ http });
+  }
+
   readonly detectProvider = new Detector.DetectApi(this._options);
 }

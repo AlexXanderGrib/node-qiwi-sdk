@@ -65,6 +65,19 @@ describe(Personal.name, () => {
     expect(restrictions).toHaveLength(0);
   });
 
+  test("[v3] Can get provider info", async () => {
+    const info = await qiwi.providers.getInfo(99);
+
+    expect(info).toMatchObject({
+      type: "PROVIDER",
+      id: 99,
+      shortName: "Перевод на QIWI Кошелек",
+      hasPaymentForm: true,
+      siteUrl: "https://www.qiwi.com",
+      searchAvailable: true
+    });
+  });
+
   test("Can't send 1 million rubles to unknown wallet", () =>
     expectToThrow(WalletApiShortError, async () => {
       const commission = await qiwi.getCommission(

@@ -79,7 +79,7 @@ Creates an instance of P2pCompat.
 
 #### Defined in
 
-[src/apis/p2p/p2p.compat.ts:33](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4f2e487/src/apis/p2p/p2p.compat.ts#L33)
+[src/apis/p2p/p2p.compat.ts:33](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/p2p/p2p.compat.ts#L33)
 
 ## Properties
 
@@ -103,7 +103,7 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/p2p.ts:75](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4f2e487/src/apis/p2p/p2p.ts#L75)
+[src/apis/p2p/p2p.ts:88](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/p2p/p2p.ts#L88)
 
 ___
 
@@ -129,7 +129,7 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/p2p.ts:26](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4f2e487/src/apis/p2p/p2p.ts#L26)
+[src/apis/p2p/p2p.ts:26](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/p2p/p2p.ts#L26)
 
 ___
 
@@ -143,7 +143,7 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/p2p.ts:27](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4f2e487/src/apis/p2p/p2p.ts#L27)
+[src/apis/p2p/p2p.ts:27](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/p2p/p2p.ts#L27)
 
 ___
 
@@ -157,7 +157,7 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/p2p.ts:28](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4f2e487/src/apis/p2p/p2p.ts#L28)
+[src/apis/p2p/p2p.ts:28](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/p2p/p2p.ts#L28)
 
 ___
 
@@ -171,7 +171,7 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/p2p.ts:24](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4f2e487/src/apis/p2p/p2p.ts#L24)
+[src/apis/p2p/p2p.ts:24](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/p2p/p2p.ts#L24)
 
 ___
 
@@ -181,7 +181,7 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/p2p.compat.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4f2e487/src/apis/p2p/p2p.compat.ts#L23)
+[src/apis/p2p/p2p.compat.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/p2p/p2p.compat.ts#L23)
 
 ___
 
@@ -191,7 +191,7 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/p2p.compat.ts:24](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4f2e487/src/apis/p2p/p2p.compat.ts#L24)
+[src/apis/p2p/p2p.compat.ts:24](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/p2p/p2p.compat.ts#L24)
 
 ___
 
@@ -201,7 +201,7 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/p2p.compat.ts:25](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4f2e487/src/apis/p2p/p2p.compat.ts#L25)
+[src/apis/p2p/p2p.compat.ts:25](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/p2p/p2p.compat.ts#L25)
 
 ## Accessors
 
@@ -221,7 +221,7 @@ P2p.agent
 
 #### Defined in
 
-[src/apis/api.ts:21](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4f2e487/src/apis/api.ts#L21)
+[src/apis/api.ts:21](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/api.ts#L21)
 
 • `set` **agent**(`agent`): `void`
 
@@ -243,7 +243,7 @@ P2p.agent
 
 #### Defined in
 
-[src/apis/api.ts:30](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4f2e487/src/apis/api.ts#L30)
+[src/apis/api.ts:30](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/api.ts#L30)
 
 ___
 
@@ -265,7 +265,7 @@ P2p.options
 
 #### Defined in
 
-[src/apis/api.ts:41](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4f2e487/src/apis/api.ts#L41)
+[src/apis/api.ts:41](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/api.ts#L41)
 
 ## Methods
 
@@ -294,7 +294,7 @@ P2p.options
 
 #### Defined in
 
-[src/apis/p2p/p2p.compat.ts:89](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4f2e487/src/apis/p2p/p2p.compat.ts#L89)
+[src/apis/p2p/p2p.compat.ts:89](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/p2p/p2p.compat.ts#L89)
 
 ___
 
@@ -319,7 +319,7 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/p2p.compat.ts:165](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4f2e487/src/apis/p2p/p2p.compat.ts#L165)
+[src/apis/p2p/p2p.compat.ts:165](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/p2p/p2p.compat.ts#L165)
 
 ___
 
@@ -355,7 +355,7 @@ server2server с использованием авторизации. Метод
 
 #### Defined in
 
-[src/apis/p2p/p2p.compat.ts:61](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4f2e487/src/apis/p2p/p2p.compat.ts#L61)
+[src/apis/p2p/p2p.compat.ts:61](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/p2p/p2p.compat.ts#L61)
 
 ___
 
@@ -379,7 +379,7 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/p2p.compat.ts:75](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4f2e487/src/apis/p2p/p2p.compat.ts#L75)
+[src/apis/p2p/p2p.compat.ts:75](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/p2p/p2p.compat.ts#L75)
 
 ___
 
@@ -406,7 +406,7 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/p2p.compat.ts:102](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4f2e487/src/apis/p2p/p2p.compat.ts#L102)
+[src/apis/p2p/p2p.compat.ts:102](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/p2p/p2p.compat.ts#L102)
 
 ___
 
@@ -464,7 +464,7 @@ app.use((error, request, response, next) => {
 
 #### Defined in
 
-[src/apis/p2p/p2p.ts:117](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4f2e487/src/apis/p2p/p2p.ts#L117)
+[src/apis/p2p/p2p.ts:130](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/p2p/p2p.ts#L130)
 
 ___
 
@@ -490,7 +490,7 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/p2p.compat.ts:114](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4f2e487/src/apis/p2p/p2p.compat.ts#L114)
+[src/apis/p2p/p2p.compat.ts:114](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/p2p/p2p.compat.ts#L114)
 
 ___
 
@@ -521,7 +521,7 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/p2p.ts:67](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4f2e487/src/apis/p2p/p2p.ts#L67)
+[src/apis/p2p/p2p.ts:67](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/p2p/p2p.ts#L67)
 
 ___
 
@@ -545,7 +545,7 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/p2p.compat.ts:125](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4f2e487/src/apis/p2p/p2p.compat.ts#L125)
+[src/apis/p2p/p2p.compat.ts:125](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/p2p/p2p.compat.ts#L125)
 
 ___
 
@@ -567,7 +567,7 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/p2p.compat.ts:145](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4f2e487/src/apis/p2p/p2p.compat.ts#L145)
+[src/apis/p2p/p2p.compat.ts:145](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/p2p/p2p.compat.ts#L145)
 
 ___
 
@@ -589,7 +589,7 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/p2p.compat.ts:154](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4f2e487/src/apis/p2p/p2p.compat.ts#L154)
+[src/apis/p2p/p2p.compat.ts:154](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/p2p/p2p.compat.ts#L154)
 
 ___
 
@@ -619,7 +619,7 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/p2p.ts:38](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4f2e487/src/apis/p2p/p2p.ts#L38)
+[src/apis/p2p/p2p.ts:38](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/p2p/p2p.ts#L38)
 
 ___
 
@@ -644,4 +644,4 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/p2p.compat.ts:136](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4f2e487/src/apis/p2p/p2p.compat.ts#L136)
+[src/apis/p2p/p2p.compat.ts:136](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/p2p/p2p.compat.ts#L136)

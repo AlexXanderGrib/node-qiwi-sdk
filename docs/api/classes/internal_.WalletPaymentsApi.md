@@ -32,9 +32,11 @@
 
 ### Methods
 
+- [\_resolveProvider](internal_.WalletPaymentsApi.md#_resolveprovider)
 - [createFormUrl](internal_.WalletPaymentsApi.md#createformurl)
 - [getCommission](internal_.WalletPaymentsApi.md#getcommission)
 - [pay](internal_.WalletPaymentsApi.md#pay)
+- [quickPay](internal_.WalletPaymentsApi.md#quickpay)
 - [createFormUrl](internal_.WalletPaymentsApi.md#createformurl-1)
 
 ## Constructors
@@ -59,7 +61,7 @@ Creates an instance of WalletApi.
 
 #### Defined in
 
-[src/apis/wallet/api.ts:36](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4f2e487/src/apis/wallet/api.ts#L36)
+[src/apis/wallet/api.ts:36](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/wallet/api.ts#L36)
 
 ## Properties
 
@@ -91,7 +93,7 @@ WalletApi.http
 
 #### Defined in
 
-[src/apis/wallet/api.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4f2e487/src/apis/wallet/api.ts#L16)
+[src/apis/wallet/api.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/wallet/api.ts#L16)
 
 ___
 
@@ -113,9 +115,36 @@ WalletApi.walletId
 
 #### Defined in
 
-[src/apis/wallet/api.ts:27](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4f2e487/src/apis/wallet/api.ts#L27)
+[src/apis/wallet/api.ts:27](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/wallet/api.ts#L27)
 
 ## Methods
+
+### \_resolveProvider
+
+▸ `Protected` **_resolveProvider**(`provider`, `account`): `Promise`<`number`\>
+
+**`throws`** {DetectorError}
+
+**`memberof`** WalletPaymentsApi
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `provider` | `undefined` \| `number` \| [`Card`](../enums/QIWI.QuickPayRecipients.md#card) \| [`Phone`](../enums/QIWI.QuickPayRecipients.md#phone) \| ``"card"`` \| ``"phone"`` \| ``"qiwi"`` \| ``"yoomoney"`` |
+| `account` | `string` |
+
+#### Returns
+
+`Promise`<`number`\>
+
+{Promise<number>}
+
+#### Defined in
+
+[src/apis/wallet/payments.api.ts:207](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/wallet/payments.api.ts#L207)
+
+___
 
 ### createFormUrl
 
@@ -140,13 +169,13 @@ WalletApi.walletId
 
 #### Defined in
 
-[src/apis/wallet/payments.api.ts:103](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4f2e487/src/apis/wallet/payments.api.ts#L103)
+[src/apis/wallet/payments.api.ts:105](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/wallet/payments.api.ts#L105)
 
 ___
 
 ### getCommission
 
-▸ **getCommission**(`provider`, `account`, `amount`): `Promise`<`number`\>
+▸ **getCommission**(`provider`, `account`, `amount`, `__namedParameters?`): `Promise`<`number`\>
 
 ## Комиссионные тарифы
 
@@ -164,6 +193,9 @@ ___
 | `provider` | `number` | Идентификатор провайдера |
 | `account` | `string` | Пользовательский идентификатор (номер телефона с международным префиксом, номер карты/счета получателя, и т.д., в зависимости от провайдера) |
 | `amount` | `number` | Сумма |
+| `__namedParameters` | `Object` | - |
+| `__namedParameters.accountCurrency` | `undefined` \| [`Currency`](../enums/QIWI.Currency.md) | - |
+| `__namedParameters.paymentCurrency` | `undefined` \| [`Currency`](../enums/QIWI.Currency.md) | - |
 
 #### Returns
 
@@ -171,7 +203,7 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/payments.api.ts:35](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4f2e487/src/apis/wallet/payments.api.ts#L35)
+[src/apis/wallet/payments.api.ts:38](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/wallet/payments.api.ts#L38)
 
 ___
 
@@ -197,7 +229,38 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/payments.api.ts:125](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4f2e487/src/apis/wallet/payments.api.ts#L125)
+[src/apis/wallet/payments.api.ts:127](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/wallet/payments.api.ts#L127)
+
+___
+
+### quickPay
+
+▸ **quickPay**(`parameters`): `Promise`<[`PaymentResponse`](../modules/QIWI.md#paymentresponse)\>
+
+Метод для отправки платежа с возможностью автоматического вычета
+комиссии и распознавания `provider`'а
+
+[Документация QIWI по методу оплаты](https://developer.qiwi.com/ru/qiwi-wallet-personal/#payments)
+
+**`throws`** {DetectorError} Под капотом создаётся и вызывается `Detector`. Он может выкинуть эту ошибку
+
+**`memberof`** WalletPaymentsApi
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `parameters` | [`QuickPayParameters`](../modules/QIWI.md#quickpayparameters) |
+
+#### Returns
+
+`Promise`<[`PaymentResponse`](../modules/QIWI.md#paymentresponse)\>
+
+{Promise<PaymentResponse>}
+
+#### Defined in
+
+[src/apis/wallet/payments.api.ts:165](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/wallet/payments.api.ts#L165)
 
 ___
 
@@ -226,4 +289,4 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/payments.api.ts:71](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4f2e487/src/apis/wallet/payments.api.ts#L71)
+[src/apis/wallet/payments.api.ts:73](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/wallet/payments.api.ts#L73)

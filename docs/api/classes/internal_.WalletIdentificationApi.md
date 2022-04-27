@@ -57,7 +57,7 @@ Creates an instance of WalletApi.
 
 #### Defined in
 
-[src/apis/wallet/api.ts:36](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4f2e487/src/apis/wallet/api.ts#L36)
+[src/apis/wallet/api.ts:36](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/wallet/api.ts#L36)
 
 ## Properties
 
@@ -89,7 +89,7 @@ WalletApi.http
 
 #### Defined in
 
-[src/apis/wallet/api.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4f2e487/src/apis/wallet/api.ts#L16)
+[src/apis/wallet/api.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/wallet/api.ts#L16)
 
 ___
 
@@ -111,7 +111,7 @@ WalletApi.walletId
 
 #### Defined in
 
-[src/apis/wallet/api.ts:27](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4f2e487/src/apis/wallet/api.ts#L27)
+[src/apis/wallet/api.ts:27](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/wallet/api.ts#L27)
 
 ## Methods
 
@@ -136,7 +136,7 @@ WalletApi.walletId
 
 #### Defined in
 
-[src/apis/wallet/identification.api.ts:48](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4f2e487/src/apis/wallet/identification.api.ts#L48)
+[src/apis/wallet/identification.api.ts:48](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/wallet/identification.api.ts#L48)
 
 ___
 
@@ -167,4 +167,4 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/identification.api.ts:26](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4f2e487/src/apis/wallet/identification.api.ts#L26)
+[src/apis/wallet/identification.api.ts:26](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/wallet/identification.api.ts#L26)

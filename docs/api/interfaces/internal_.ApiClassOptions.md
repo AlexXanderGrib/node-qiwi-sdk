@@ -26,4 +26,4 @@
 
 #### Defined in
 
-[src/apis/api.ts:4](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4f2e487/src/apis/api.ts#L4)
+[src/apis/api.ts:4](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/api.ts#L4)

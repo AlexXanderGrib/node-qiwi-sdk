@@ -72,6 +72,19 @@ export class P2p extends ApiClass<P2pApiOptions> {
     });
   }
 
+  /**
+   * Creates an instance of P2p.
+   * @param {P2pApiOptions} [options]
+   * @memberof P2p
+   */
+  constructor({
+    publicKey = "",
+    secretKey = "",
+    http = P2p.httpClientFactory(secretKey)
+  }: Partial<P2pApiOptions> = {}) {
+    super({ publicKey, secretKey, http });
+  }
+
   readonly bills = new P2p.BillsApi(this._options);
 
   /**

@@ -957,7 +957,7 @@ type ImageObject = {
   ratio: string;
 };
 
-type KVObject = { name: string; value: string };
+type NameValueObject = { name: string; value: string };
 
 type CardType = "VIRTUAL" | "PLASTIC";
 
@@ -1051,7 +1051,7 @@ export type CardResponse = {
       imagesDet: ImageObject[];
 
       /** Список условий обслуживания карты */
-      tariffs: KVObject[];
+      tariffs: NameValueObject[];
 
       /** Ссылка на описание тарифа */
       tariffLink: string;
@@ -1063,7 +1063,7 @@ export type CardResponse = {
       features: string[];
 
       /** Список пар "ключ-значение" с данными банковских реквизитов для пополнения карты */
-      requisites: KVObject[];
+      requisites: NameValueObject[];
     };
 
     [key: string]: any;
@@ -1490,4 +1490,20 @@ export type BillPayResponse = {
    */
   is_sms_confirm: boolean;
   WALLET_ACCEPT_PAY_RESULT: any;
+};
+
+type KeyValueObject = { key: string; value: string };
+
+export type ProviderInfo = {
+  type: "PROVIDER";
+  id: number;
+  shortName: string;
+  longName: string;
+  logoUrl: string | null;
+  keys: string;
+  hasPaymentForm: boolean;
+  siteUrl: null | string;
+  searchAvailable: boolean;
+  description: null | string;
+  extras: KeyValueObject;
 };

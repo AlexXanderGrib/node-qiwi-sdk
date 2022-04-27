@@ -25,7 +25,7 @@
 
 #### Defined in
 
-[src/apis/shared/shared.ts:106](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4f2e487/src/apis/shared/shared.ts#L106)
+[src/apis/shared/time.ts:49](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/shared/time.ts#L49)
 
 ___
 
@@ -35,7 +35,7 @@ ___
 
 #### Defined in
 
-[src/apis/shared/shared.ts:105](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4f2e487/src/apis/shared/shared.ts#L105)
+[src/apis/shared/time.ts:48](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/shared/time.ts#L48)
 
 ___
 
@@ -45,7 +45,7 @@ ___
 
 #### Defined in
 
-[src/apis/shared/shared.ts:102](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4f2e487/src/apis/shared/shared.ts#L102)
+[src/apis/shared/time.ts:45](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/shared/time.ts#L45)
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 #### Defined in
 
-[src/apis/shared/shared.ts:104](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4f2e487/src/apis/shared/shared.ts#L104)
+[src/apis/shared/time.ts:47](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/shared/time.ts#L47)
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 #### Defined in
 
-[src/apis/shared/shared.ts:108](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4f2e487/src/apis/shared/shared.ts#L108)
+[src/apis/shared/time.ts:51](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/shared/time.ts#L51)
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 #### Defined in
 
-[src/apis/shared/shared.ts:103](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4f2e487/src/apis/shared/shared.ts#L103)
+[src/apis/shared/time.ts:46](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/shared/time.ts#L46)
 
 ___
 
@@ -85,7 +85,7 @@ ___
 
 #### Defined in
 
-[src/apis/shared/shared.ts:107](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4f2e487/src/apis/shared/shared.ts#L107)
+[src/apis/shared/time.ts:50](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/shared/time.ts#L50)
 
 ___
 
@@ -95,4 +95,4 @@ ___
 
 #### Defined in
 
-[src/apis/shared/shared.ts:109](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4f2e487/src/apis/shared/shared.ts#L109)
+[src/apis/shared/time.ts:52](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/shared/time.ts#L52)
