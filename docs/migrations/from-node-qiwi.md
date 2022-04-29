@@ -37,7 +37,7 @@
 
    ```diff
    - const Qiwi = require('node-qiwi');
-   + const { NodeQiwi } = require('qiwi-sdk');
+   + const { NodeQiwi: Qiwi } = require('qiwi-sdk');
    ```
 
    Импортированный класс `NodeQiwi` практически полностью
