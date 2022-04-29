@@ -16,7 +16,7 @@ qiwi-sdk / [Exports](modules.md)
 [![last commit](https://img.shields.io/github/last-commit/AlexXanderGrib/node-qiwi-sdk.svg)](https://github.com/AlexXanderGrib/node-qiwi-sdk)
 [![qiwi-sdk](https://snyk.io/advisor/npm-package/qiwi-sdk/badge.svg)](https://snyk.io/advisor/npm-package/qiwi-sdk)
 [![Quality](https://img.shields.io/npms-io/quality-score/qiwi-sdk.svg?label=Quality%20%28npms.io%29&)](https://npms.io/search?q=qiwi-sdk)
-[![Downloads](https://img.shields.io/npm/dt/qiwi-sdk.svg)]
+[![Downloads](https://img.shields.io/npm/dt/qiwi-sdk.svg)](https://npmjs.com/package/qiwi-sdk)
 
 ## 👅 Язык
 

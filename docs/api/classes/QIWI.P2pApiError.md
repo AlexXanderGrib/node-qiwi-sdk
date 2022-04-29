@@ -61,7 +61,7 @@ Creates an instance of P2pApiError.
 
 #### Defined in
 
-[src/apis/p2p/p2p.errors.ts:30](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/116975d/src/apis/p2p/p2p.errors.ts#L30)
+[src/apis/p2p/p2p.errors.ts:30](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/7ca37ed/src/apis/p2p/p2p.errors.ts#L30)
 
 ## Properties
 
@@ -85,7 +85,7 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/p2p.errors.ts:22](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/116975d/src/apis/p2p/p2p.errors.ts#L22)
+[src/apis/p2p/p2p.errors.ts:22](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/7ca37ed/src/apis/p2p/p2p.errors.ts#L22)
 
 ___
 
@@ -113,7 +113,7 @@ ___
 
 #### Defined in
 
-[src/error.ts:9](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/116975d/src/error.ts#L9)
+[src/error.ts:9](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/7ca37ed/src/error.ts#L9)
 
 ___
 
@@ -129,7 +129,7 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/p2p.errors.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/116975d/src/apis/p2p/p2p.errors.ts#L23)
+[src/apis/p2p/p2p.errors.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/7ca37ed/src/apis/p2p/p2p.errors.ts#L23)
 
 ___
 
@@ -214,7 +214,7 @@ ExtendedError.\_\_@toStringTag@11
 
 #### Defined in
 
-[src/error.ts:32](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/116975d/src/error.ts#L32)
+[src/error.ts:32](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/7ca37ed/src/error.ts#L32)
 
 ## Methods
 
@@ -236,7 +236,7 @@ ExtendedError.\_\_@toStringTag@11
 
 #### Defined in
 
-[src/error.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/116975d/src/error.ts#L17)
+[src/error.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/7ca37ed/src/error.ts#L17)
 
 ___
 

@@ -66,7 +66,7 @@ Creates an instance of P2pApi.
 
 #### Defined in
 
-[src/apis/p2p/api.ts:47](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/116975d/src/apis/p2p/api.ts#L47)
+[src/apis/p2p/api.ts:47](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/7ca37ed/src/apis/p2p/api.ts#L47)
 
 ## Properties
 
@@ -98,7 +98,7 @@ P2pApi.http
 
 #### Defined in
 
-[src/apis/p2p/api.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/116975d/src/apis/p2p/api.ts#L16)
+[src/apis/p2p/api.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/7ca37ed/src/apis/p2p/api.ts#L16)
 
 ___
 
@@ -120,7 +120,7 @@ P2pApi.publicKey
 
 #### Defined in
 
-[src/apis/p2p/api.ts:27](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/116975d/src/apis/p2p/api.ts#L27)
+[src/apis/p2p/api.ts:27](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/7ca37ed/src/apis/p2p/api.ts#L27)
 
 ___
 
@@ -142,7 +142,7 @@ P2pApi.secretKey
 
 #### Defined in
 
-[src/apis/p2p/api.ts:38](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/116975d/src/apis/p2p/api.ts#L38)
+[src/apis/p2p/api.ts:38](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/7ca37ed/src/apis/p2p/api.ts#L38)
 
 ## Methods
 
@@ -164,7 +164,7 @@ P2pApi.secretKey
 
 #### Defined in
 
-[src/apis/p2p/bills.api.ts:48](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/116975d/src/apis/p2p/bills.api.ts#L48)
+[src/apis/p2p/bills.api.ts:48](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/7ca37ed/src/apis/p2p/bills.api.ts#L48)
 
 ___
 
@@ -190,7 +190,7 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/bills.api.ts:138](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/116975d/src/apis/p2p/bills.api.ts#L138)
+[src/apis/p2p/bills.api.ts:138](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/7ca37ed/src/apis/p2p/bills.api.ts#L138)
 
 ___
 
@@ -229,7 +229,7 @@ server2server с использованием авторизации. Метод
 
 #### Defined in
 
-[src/apis/p2p/bills.api.ts:76](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/116975d/src/apis/p2p/bills.api.ts#L76)
+[src/apis/p2p/bills.api.ts:76](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/7ca37ed/src/apis/p2p/bills.api.ts#L76)
 
 ___
 
@@ -253,7 +253,7 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/bills.api.ts:164](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/116975d/src/apis/p2p/bills.api.ts#L164)
+[src/apis/p2p/bills.api.ts:164](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/7ca37ed/src/apis/p2p/bills.api.ts#L164)
 
 ___
 
@@ -267,7 +267,7 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/bills.api.ts:54](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/116975d/src/apis/p2p/bills.api.ts#L54)
+[src/apis/p2p/bills.api.ts:54](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/7ca37ed/src/apis/p2p/bills.api.ts#L54)
 
 ___
 
@@ -294,7 +294,7 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/bills.api.ts:214](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/116975d/src/apis/p2p/bills.api.ts#L214)
+[src/apis/p2p/bills.api.ts:214](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/7ca37ed/src/apis/p2p/bills.api.ts#L214)
 
 ___
 
@@ -321,7 +321,7 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/bills.api.ts:113](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/116975d/src/apis/p2p/bills.api.ts#L113)
+[src/apis/p2p/bills.api.ts:113](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/7ca37ed/src/apis/p2p/bills.api.ts#L113)
 
 ___
 
@@ -348,7 +348,7 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/bills.api.ts:192](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/116975d/src/apis/p2p/bills.api.ts#L192)
+[src/apis/p2p/bills.api.ts:192](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/7ca37ed/src/apis/p2p/bills.api.ts#L192)
 
 ___
 
@@ -374,7 +374,7 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/bills.api.ts:125](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/116975d/src/apis/p2p/bills.api.ts#L125)
+[src/apis/p2p/bills.api.ts:125](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/7ca37ed/src/apis/p2p/bills.api.ts#L125)
 
 ___
 
@@ -399,4 +399,4 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/bills.api.ts:30](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/116975d/src/apis/p2p/bills.api.ts#L30)
+[src/apis/p2p/bills.api.ts:30](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/7ca37ed/src/apis/p2p/bills.api.ts#L30)

@@ -28,7 +28,7 @@
 
 #### Defined in
 
-[src/http.ts:29](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/116975d/src/http.ts#L29)
+[src/http.ts:29](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/7ca37ed/src/http.ts#L29)
 
 ___
 
@@ -38,7 +38,7 @@ ___
 
 #### Defined in
 
-[src/http.ts:28](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/116975d/src/http.ts#L28)
+[src/http.ts:28](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/7ca37ed/src/http.ts#L28)
 
 ___
 
@@ -48,7 +48,7 @@ ___
 
 #### Defined in
 
-[src/http.ts:26](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/116975d/src/http.ts#L26)
+[src/http.ts:26](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/7ca37ed/src/http.ts#L26)
 
 ___
 
@@ -58,4 +58,4 @@ ___
 
 #### Defined in
 
-[src/http.ts:27](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/116975d/src/http.ts#L27)
+[src/http.ts:27](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/7ca37ed/src/http.ts#L27)
