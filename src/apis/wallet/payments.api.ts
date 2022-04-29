@@ -234,6 +234,7 @@ export class WalletPaymentsApi extends WalletApi {
       detector.agent = undefined;
     }
 
+    /* istanbul ignore next */
     throw new DetectorError("Unable to detect provider");
   }
 }

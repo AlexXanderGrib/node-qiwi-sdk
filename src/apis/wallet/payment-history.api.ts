@@ -5,10 +5,10 @@ import {
   GetTransactionsHistoryResponse,
   GetPaymentHistoryTotalParams as GetPaymentHistoryTotalParameters,
   GetPaymentHistoryTotalResponse,
-  TransactionType,
   Transaction,
   StringOrNumber,
-  ChequeFormat
+  ChequeFormat,
+  TransactionTypeAny
 } from "./wallet.types";
 
 /**
@@ -69,14 +69,14 @@ export class WalletPaymentHistoryApi extends WalletApi {
    * Запрос используется для получения информации по определенной
    * транзакции из вашей истории платежей.
    *
-   * @param {number} transactionId Номер транзакции
-   * @param {TransactionType} [type] Тип транзакции
+   * @param {StringOrNumber} transactionId Номер транзакции
+   * @param {TransactionTypeAny} [type] Тип транзакции
    * @return {Promise<Transaction>} {Promise<Transaction>}
    * @memberof WalletPaymentHistoryApi
    */
   async getTransaction(
-    transactionId: number,
-    type?: TransactionType
+    transactionId: StringOrNumber,
+    type?: TransactionTypeAny
   ): Promise<Transaction> {
     return await this.http.get(
       `payment-history/v2/transactions/${transactionId}?${formatQuerystring({
@@ -89,14 +89,14 @@ export class WalletPaymentHistoryApi extends WalletApi {
    * ### Файл квитанции
    *
    * @param {StringOrNumber} transactionId  номер транзакции из {@link getHistory} (параметр `data[].txnId` в ответе)
-   * @param {TransactionType} type тип транзакции из {@link getHistory} (параметр `data[].type` в ответе)
+   * @param {TransactionTypeAny} type тип транзакции из {@link getHistory} (параметр `data[].type` в ответе)
    * @param {ChequeFormat} format тип файла, в который сохраняется квитанция. Допустимые значения: `JPEG`, `PDF`
    * @return {Promise<Buffer>} {Promise<Buffer>}
    * @memberof WalletPaymentHistoryApi
    */
   async getTransactionCheque(
     transactionId: StringOrNumber,
-    type: TransactionType,
+    type: TransactionTypeAny,
     format: ChequeFormat = ChequeFormat.JPEG
   ): Promise<Buffer> {
     return await this.http.request({
@@ -115,14 +115,14 @@ export class WalletPaymentHistoryApi extends WalletApi {
    * ### Отправка квитанции
    *
    * @param {number} transactionId  номер транзакции из {@link getHistory} (параметр `data[].txnId` в ответе)
-   * @param {TransactionType} type тип транзакции из {@link getHistory} (параметр `data[].type` в ответе)
+   * @param {TransactionTypeAny} type тип транзакции из {@link getHistory} (параметр `data[].type` в ответе)
    * @param {string} email Адрес для отправки электронной квитанции
    * @return {Promise<void>} {Promise<void>}
    * @memberof WalletPaymentHistoryApi
    */
   async sendTransactionCheque(
     transactionId: StringOrNumber,
-    type: TransactionType,
+    type: TransactionTypeAny,
     email: string
   ): Promise<void> {
     // Деструктивный метод. Отправляет почту. Не может быть вызван

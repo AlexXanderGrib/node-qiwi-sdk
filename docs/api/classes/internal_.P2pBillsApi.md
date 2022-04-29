@@ -37,7 +37,10 @@
 - [checkNotificationSignature](internal_.P2pBillsApi.md#checknotificationsignature)
 - [create](internal_.P2pBillsApi.md#create)
 - [createFormUrl](internal_.P2pBillsApi.md#createformurl)
+- [generateId](internal_.P2pBillsApi.md#generateid)
+- [getRefundStatus](internal_.P2pBillsApi.md#getrefundstatus)
 - [getStatus](internal_.P2pBillsApi.md#getstatus)
+- [refund](internal_.P2pBillsApi.md#refund)
 - [reject](internal_.P2pBillsApi.md#reject)
 - [patchPayUrl](internal_.P2pBillsApi.md#patchpayurl)
 
@@ -63,7 +66,7 @@ Creates an instance of P2pApi.
 
 #### Defined in
 
-[src/apis/p2p/api.ts:47](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/p2p/api.ts#L47)
+[src/apis/p2p/api.ts:47](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/285ce1c/src/apis/p2p/api.ts#L47)
 
 ## Properties
 
@@ -95,7 +98,7 @@ P2pApi.http
 
 #### Defined in
 
-[src/apis/p2p/api.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/p2p/api.ts#L16)
+[src/apis/p2p/api.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/285ce1c/src/apis/p2p/api.ts#L16)
 
 ___
 
@@ -117,7 +120,7 @@ P2pApi.publicKey
 
 #### Defined in
 
-[src/apis/p2p/api.ts:27](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/p2p/api.ts#L27)
+[src/apis/p2p/api.ts:27](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/285ce1c/src/apis/p2p/api.ts#L27)
 
 ___
 
@@ -139,7 +142,7 @@ P2pApi.secretKey
 
 #### Defined in
 
-[src/apis/p2p/api.ts:38](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/p2p/api.ts#L38)
+[src/apis/p2p/api.ts:38](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/285ce1c/src/apis/p2p/api.ts#L38)
 
 ## Methods
 
@@ -161,32 +164,33 @@ P2pApi.secretKey
 
 #### Defined in
 
-[src/apis/p2p/bills.api.ts:45](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/p2p/bills.api.ts#L45)
+[src/apis/p2p/bills.api.ts:48](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/285ce1c/src/apis/p2p/bills.api.ts#L48)
 
 ___
 
 ### checkNotificationSignature
 
-▸ **checkNotificationSignature**(`signature`, `body`): `boolean`
+▸ **checkNotificationSignature**(`signature`, `body`, `merchantSecret?`): `boolean`
 
-Проверяет подпись уведомления о статусе счёта
+**`memberof`** P2pBillsApi
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `signature` | `string` | Подпись |
-| `body` | [`BillStatusData`](../modules/QIWI.md#billstatusdata) | Объект уведомления |
+| Name | Type |
+| :------ | :------ |
+| `signature` | `string` |
+| `body` | [`BillStatusData`](../modules/QIWI.md#billstatusdata) \| [`BillStatusBody`](../modules/QIWI.md#billstatusbody) |
+| `merchantSecret` | `string` |
 
 #### Returns
 
 `boolean`
 
-Признак валидности
+{boolean}
 
 #### Defined in
 
-[src/apis/p2p/bills.api.ts:131](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/p2p/bills.api.ts#L131)
+[src/apis/p2p/bills.api.ts:138](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/285ce1c/src/apis/p2p/bills.api.ts#L138)
 
 ___
 
@@ -225,7 +229,7 @@ server2server с использованием авторизации. Метод
 
 #### Defined in
 
-[src/apis/p2p/bills.api.ts:71](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/p2p/bills.api.ts#L71)
+[src/apis/p2p/bills.api.ts:76](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/285ce1c/src/apis/p2p/bills.api.ts#L76)
 
 ___
 
@@ -249,7 +253,48 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/bills.api.ts:151](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/p2p/bills.api.ts#L151)
+[src/apis/p2p/bills.api.ts:164](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/285ce1c/src/apis/p2p/bills.api.ts#L164)
+
+___
+
+### generateId
+
+▸ **generateId**(): `string`
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+[src/apis/p2p/bills.api.ts:54](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/285ce1c/src/apis/p2p/bills.api.ts#L54)
+
+___
+
+### getRefundStatus
+
+▸ **getRefundStatus**(`billId`, `refundId`): `Promise`<[`BillRefundStatusData`](../modules/QIWI.md#billrefundstatusdata)\>
+
+**`deprecated`** API заархивировано
+
+**`memberof`** P2pBillsApi
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `billId` | `string` |
+| `refundId` | `string` |
+
+#### Returns
+
+`Promise`<[`BillRefundStatusData`](../modules/QIWI.md#billrefundstatusdata)\>
+
+{Promise<BillRefundStatusData>}
+
+#### Defined in
+
+[src/apis/p2p/bills.api.ts:214](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/285ce1c/src/apis/p2p/bills.api.ts#L214)
 
 ___
 
@@ -276,7 +321,34 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/bills.api.ts:108](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/p2p/bills.api.ts#L108)
+[src/apis/p2p/bills.api.ts:113](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/285ce1c/src/apis/p2p/bills.api.ts#L113)
+
+___
+
+### refund
+
+▸ **refund**(`billId`, `options`): `Promise`<[`BillRefundStatusData`](../modules/QIWI.md#billrefundstatusdata)\>
+
+**`deprecated`** API заархивировано
+
+**`memberof`** P2pBillsApi
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `billId` | `string` |
+| `options` | [`RefundCreationRequest`](../modules/QIWI.md#refundcreationrequest) |
+
+#### Returns
+
+`Promise`<[`BillRefundStatusData`](../modules/QIWI.md#billrefundstatusdata)\>
+
+{Promise<BillRefundStatusData>}
+
+#### Defined in
+
+[src/apis/p2p/bills.api.ts:192](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/285ce1c/src/apis/p2p/bills.api.ts#L192)
 
 ___
 
@@ -302,7 +374,7 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/bills.api.ts:120](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/p2p/bills.api.ts#L120)
+[src/apis/p2p/bills.api.ts:125](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/285ce1c/src/apis/p2p/bills.api.ts#L125)
 
 ___
 
@@ -327,4 +399,4 @@ ___
 
 #### Defined in
 
-[src/apis/p2p/bills.api.ts:27](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/p2p/bills.api.ts#L27)
+[src/apis/p2p/bills.api.ts:30](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/285ce1c/src/apis/p2p/bills.api.ts#L30)

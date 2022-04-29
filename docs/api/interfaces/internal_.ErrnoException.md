@@ -45,7 +45,7 @@ ___
 
 #### Defined in
 
-node_modules/@types/node/globals.d.ts:185
+node_modules/@types/node/globals.d.ts:195
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 #### Defined in
 
-node_modules/@types/node/globals.d.ts:184
+node_modules/@types/node/globals.d.ts:194
 
 ___
 
@@ -93,7 +93,7 @@ ___
 
 #### Defined in
 
-node_modules/@types/node/globals.d.ts:186
+node_modules/@types/node/globals.d.ts:196
 
 ___
 
@@ -117,4 +117,4 @@ ___
 
 #### Defined in
 
-node_modules/@types/node/globals.d.ts:187
+node_modules/@types/node/globals.d.ts:197

@@ -4,8 +4,11 @@ import { P2pApi } from "./api";
 import {
   BillCreateParameters,
   BillFormParameters as BillFormParameters,
+  BillRefundStatusData,
+  BillStatusBody,
   BillStatusData,
-  PayUrlPatchParameters
+  PayUrlPatchParameters,
+  RefundCreationRequest
 } from "./p2p.types";
 
 /**
@@ -48,6 +51,8 @@ export class P2pBillsApi extends P2pApi {
     return this._normalizeAmount(Number.parseFloat(amount));
   }
 
+  generateId = () => generateUUID();
+
   /**
    * ### Выставление счета
    *
@@ -72,7 +77,7 @@ export class P2pBillsApi extends P2pApi {
     const {
       paySource,
       successUrl,
-      billId = generateUUID(),
+      billId = this.generateId(),
       expirationDateTime = formatOffsetDate(15, "min"),
       ...bill
     } = data;
@@ -122,13 +127,21 @@ export class P2pBillsApi extends P2pApi {
   }
 
   /**
-   * Проверяет подпись уведомления о статусе счёта
    *
-   * @param {string} signature Подпись
-   * @param {BillStatusData} body Объект уведомления
-   * @return {boolean} Признак валидности
+   *
+   * @param {string} signature
+   * @param {(BillStatusData | BillStatusBody)} body
+   * @param {*} [merchantSecret=this.secretKey]
+   * @return {*}  {boolean}
+   * @memberof P2pBillsApi
    */
-  checkNotificationSignature(signature: string, body: BillStatusData): boolean {
+  checkNotificationSignature(
+    signature: string,
+    body: BillStatusData | BillStatusBody,
+    merchantSecret = this.secretKey
+  ): boolean {
+    if ("bill" in body) body = body.bill;
+
     const data = [
       body.amount.currency,
       body.amount.value,
@@ -136,7 +149,7 @@ export class P2pBillsApi extends P2pApi {
       body.siteId,
       body.status.value
     ].join("|");
-    const hash = createHmac("sha256", this.secretKey).update(data).digest();
+    const hash = createHmac("sha256", merchantSecret).update(data).digest();
 
     return timingSafeEqual(Buffer.from(signature, "hex"), hash);
   }
@@ -166,5 +179,43 @@ export class P2pBillsApi extends P2pApi {
     delete options.customFields;
 
     return `https://oplata.qiwi.com/create?${formatQuerystring(options)}`;
+  }
+
+  /**
+   *
+   * @deprecated API заархивировано
+   * @param {string} billId
+   * @param {RefundCreationRequest} options
+   * @return {Promise<BillRefundStatusData>}  {Promise<BillRefundStatusData>}
+   * @memberof P2pBillsApi
+   */
+  async refund(
+    billId: string,
+    options: RefundCreationRequest
+  ): Promise<BillRefundStatusData> {
+    /* istanbul ignore next */
+    const { refundId = this.generateId(), amount } = options;
+
+    /* istanbul ignore next */
+    amount.value = this._normalizeAmount(amount.value);
+
+    /* istanbul ignore next */
+    return await this.http.put(`${billId}/refunds/${refundId}`);
+  }
+
+  /**
+   *
+   * @deprecated API заархивировано
+   * @param {string} billId
+   * @param {string} refundId
+   * @return {Promise<BillRefundStatusData>}  {Promise<BillRefundStatusData>}
+   * @memberof P2pBillsApi
+   */
+  async getRefundStatus(
+    billId: string,
+    refundId: string
+  ): Promise<BillRefundStatusData> {
+    /* istanbul ignore next */
+    return await this.http.get(`${billId}/refunds/${refundId}`);
   }
 }

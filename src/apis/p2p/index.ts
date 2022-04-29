@@ -1,6 +1,14 @@
 export { P2p } from "./p2p";
 export type { P2pApiOptions } from "./p2p.options";
-export { P2pCompat, P2pCompat as P2P } from "./p2p.compat";
+export {
+  _P2pCompat,
+  _P2pCompat as P2pCompat,
+  _P2pCompat as P2P
+} from "./p2p.compat";
+export {
+  _P2pCompatBillPayments,
+  _P2pCompatBillPayments as QiwiBillPaymentsAPI
+} from "./p2p.compat-bill-payments";
 export {
   P2pApiError,
   P2pApiErrorResponse,

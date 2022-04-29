@@ -1,4 +1,4 @@
-# NodeJS QIWI SDK
+# QIWI SDK
 
 [![Test Status](https://github.com/AlexXanderGrib/node-qiwi-sdk/actions/workflows/test.yml/badge.svg)](https://github.com/AlexXanderGrib/node-qiwi-sdk)
 [![codecov](https://codecov.io/gh/AlexXanderGrib/node-qiwi-sdk/branch/main/graph/badge.svg)](https://codecov.io/gh/AlexXanderGrib/node-qiwi-sdk)
@@ -13,94 +13,115 @@
   <img src="docs/assets/logo.svg" alt="QIWI SDK" /> 
 </center>
 
-Язык: **Русский** | [English](./README.en.md)
+> Typed QIWI Wallet SDK for NodeJS. Supported API's: Personal & P2P Bill Payments
 
-## 🍬 Почему именно эта библиотека?
+## 👅 Язык
 
-1. **Полная.** Покрывает следующие API:
-   - API Кошелька - [Wallet Personal](https://developer.qiwi.com/ru/qiwi-wallet-personal/);
-   - P2P Счетов - [P2P Payments](https://developer.qiwi.com/ru/p2p-payments/).
-2. **Простая.** Все методы названы как в документации QIWI и собраны в подклассы. Ко всем методам есть комментарии JSDoc.
-   - **Много [примеров](#примеры)**.
-3. **Надёжная.** Библиотека написана на TypeScript и покрыта тестами.
-4. [**Безопасная.**](./SECURITY.md) У библиотеки всего 3 зависимости, и она постоянно сканируется Code QL и [Snyk](https://snyk.io/advisor/npm-package/qiwi-sdk) на наличие уязвимостей.
-5. **Совместимая.** Код с версии `1.1.0` (18 янв. 2020) будет работать на версии `3.1.0` (26 апр. 2022) с незначительными изменениями.
-   - [Миграция с версии 1 на 2](/docs/migration-from-1x.md)
-   - [Миграция с версии 2 на 3](/docs/migration-from-2x.md)
-6. **Мощная.** Поддерживается работа с [**прокси**](./examples/7-proxy.js), и даже редко используемые API:
-   - Персональные Вебхуки;
-   - Блокировка метода оплаты P2P;
-   - API работы с картами Qiwi Master.
+Весь JSDoc библиотеки на русском языке, как и большая часть документации.
+Основной `README.md` файл на английском потому что:
 
-## 📦 Установка
+1. NPM лучше индексирует текст на английском + хочется чтобы не русскоговорящие
+   люди, нашедшие эту библиотеку на NPM не пугались того, что всё на Русском.
+2. Английский - это язык из которого пошли программистские термины, в том числе те,
+   что нельзя перевести. (например: Contributing)
 
-- **Используя `NPM`**
+Language: [Русский](./README.ru.md) | **English**
+
+## 🍬 Why use this lib?
+
+1. **Full.** Covers the following APIs:
+   - [Wallet Personal](https://developer.qiwi.com/ru/qiwi-wallet-personal/);
+   - [P2P Payments](https://developer.qiwi.com/ru/p2p-payments/).
+2. **Simple.** All methods are named as in QIWI documentation and collected into subclasses. All methods have JSDoc comments.
+   - **Lot of [examples](#examples)**.
+3. **Reliable.** The library is written in **TypeScript** and covered by tests.
+4. [**Secure.**](./SECURITY.md) The library has only 3 dependencies and is constantly scanned by Code QL and [Snyk](https://snyk.io/advisor/npm-package/qiwi-sdk) for vulnerabilities.
+5. **Compatible.** Code from version `1.1.0` (18 Jan. 2020) will work on version `3.1.0` (26 Apr. 2022) with little changes. Also `qiwi-sdk` provides classes to make migration from similar libs effortless.
+   - [Migration from version 1 to 2](./docs/migrations/from-1-to-2);
+   - [Migration from version 2 to 3](./docs/migrations/from-2-to-3.md);
+   - [Migration from `node-qiwi`](./docs/migrations/from-node-qiwi.md);
+   - [Migration from `@qiwi/bill-payments-node-js-sdk`](./docs/migrations/from-bill-payments-sdk.md).
+6. **Powerful.** Supports http & socks [**proxy**](./examples/7-proxy.js) out of the box, and rarely used APIs:
+   - Personal Webhooks;
+   - P2P payment method blocking;
+   - "Qiwi Master" Card API.
+
+Language: [Русский](./README.ru.md) | **English**
+
+## 📦 Installation
+
+- **Using `npm`**
   ```shell
   npm i qiwi-sdk
   ```
-- **Используя `Yarn`**
+- **Using `Yarn`**
   ```shell
   yarn add qiwi-sdk
   ```
-- **Используя `pnpm`**
+- **Using `pnpm`**
   ```shell
   pnpm add qiwi-sdk
   ```
 
-## 🛠️ Использование
+Language: [Русский](./README.ru.md) | **English**
 
-### Импорт
+## 🛠️ Usage
 
-Из библиотеки можно импортировать все API по отдельности, так как
-случаи их применения разные.
+### Import
 
-- **CommonJS** (способ по умолчанию для **Node JS**)
+From the library you can import all the APIs separately, because
+use cases are different.
+
+- **CommonJS** (default for **Node JS**)
   ```javascript
   const { P2p, Wallet, Detector } = require("qiwi-sdk");
   ```
-- **TypeScript** или **ES Модули**
+- **TypeScript** or **ES Модули**
   ```javascript
   import { P2p, Wallet, Detector } from "qiwi-sdk";
   ```
 
-### Документация
+### Documentation
 
-Каждый импортированный класс реализует 1 API. В таблице указанны
-текущие реализованные API.
+The table shows the currently implemented APIs.
 
-**Класс (Legacy v2)** - это класс совместимости только для тех,
-кто переходит с версии 2. Остальным рекомендуется использовать
-новый вариант работы с API - Класс v3.
+**Class (Legacy v2)** is a compatible class only for those
+who are upgrading from version 2. The rest are advised to use
+the new version of the API - Class v3.
 
-| **Класс (v3)**                                    | ~~Класс (Legacy v2)~~                                         | Документация от QIWI                                                 |
+### API Overview
+
+| Class (v3)                                        | ~~Class (Legacy v2)~~                                         | Documentation by QIWI                                                |
 | ------------------------------------------------- | ------------------------------------------------------------- | -------------------------------------------------------------------- |
-| [`Wallet`](./docs/api/classes/QIWI.Wallet.md)     | [`Personal`](./docs/api/classes/QIWI.WalletCompat.md)         | https://developer.qiwi.com/ru/qiwi-wallet-personal                   |
-| [`P2p`](./docs/api/classes/QIWI.P2p.md)           | [`P2P`](./docs/api/classes/QIWI.P2pCompat.md)                 | https://developer.qiwi.com/ru/p2p-payments                           |
-| [`Detector`](./docs/api/classes/QIWI.Detector.md) | [`DetectorCompat`](./docs/api/classes/QIWI.DetectorCompat.md) | https://developer.qiwi.com/ru/qiwi-wallet-personal/#search-providers |
+| [`Wallet`](./docs/api/classes/QIWI.Wallet.md)     | [`Personal`](./docs/api/classes/QIWI.WalletCompat.md)         | https://developer.qiwi.com/en/qiwi-wallet-personal                   |
+| [`P2p`](./docs/api/classes/QIWI.P2p.md)           | [`P2P`](./docs/api/classes/QIWI.P2pCompat.md)                 | https://developer.qiwi.com/en/p2p-payments                           |
+| [`P2p`](./docs/api/classes/QIWI.P2p.md)           | -                                                             | https://developer.qiwi.com/en/bill-payments                          |
+| [`Detector`](./docs/api/classes/QIWI.Detector.md) | [`DetectorCompat`](./docs/api/classes/QIWI.DetectorCompat.md) | https://developer.qiwi.com/en/qiwi-wallet-personal/#search-providers |
 
-Чтобы посмотреть детальную документацию по классу, нажмите на его
-название.
+To see detailed documentation on a class, click on its name.
 
-#### Миграция
+#### Migration
 
-1. [Миграция с версии 2 на 3](/docs/migration-from-2x.md)
-2. [Миграция с версии 1 на 2](/docs/migration-from-1x.md) (на всякий случай)
+1. [Migration from version 2 to 3](./docs/migrations/from-1-to-2.md);
+2. [Migration from version 1 to 2](./docs/migrations/from-1-to-2) (just in case);
+3. [Migration from `node-qiwi`](./docs/migrations/from-node-qiwi.md);
+4. [Migration from `@qiwi/bill-payments-node-js-sdk`](./docs/migrations/from-bill-payments-sdk.md).
 
-#### Полная документация
+#### Full documentation
 
-[**Смотреть всю документацию**](./docs/api/modules.md)
+[**👉 View full documentation 👈**](./docs/api/modules.md)
 
-### Создание
+### Instantiation
 
 ```javascript
 const { Wallet, P2p, Detector } = require("qiwi-sdk");
 
-// ✅ - Правильный способ (с версии 3.0.0)
+// ✅ - The right way (since v3.0.0)
 const wallet = Wallet.create(process.env.QIWI_TOKEN, process.env.QIWI_WALLET);
 const p2p = P2p.create(process.env.QIWI_SECRET_KEY, process.env.QIWI_PUBLIC_KEY);
 const detect = Detector.create();
 
-// ✅ - Тоже правильный способ (с версии 3.2.0)
+// ✅ - Also right way (but since v3.2.0)
 const wallet = new Wallet({
   token: process.env.QIWI_TOKEN,
   walletId: process.env.QIWI_WALLET
@@ -112,68 +133,70 @@ const p2p = new P2p({
 const detect = new Detector();
 ```
 
-#### Переменные окружения
+#### Environment variables
 
-В этом примере использовались следующие переменные окружения.
-Все данные для доступа к API рекомендуется хранить в переменных
-окружения либо в другом защищённом месте, но не в коде.
+The following environment variables were used in this example.
+It's recommended to store all data for API access in environment
+variables or in another protected place, but not in the code.
 
-| Название                              | Тип                              | Описание                                                           |
-| ------------------------------------- | -------------------------------- | ------------------------------------------------------------------ |
-| `QIWI_TOKEN`                          | Строка(32 сим) - Hex             | Токен киви, полученный на https://qiwi.com/api                     |
-| `QIWI_WALLET`                         | Строка(10-16 сим) - только цифры | Номер телефона кошелька, к которому привязан                       |
-| `QIWI_SECRET_KEY` и `QIWI_PUBLIC_KEY` | Строки                           | Пара ключей, созданные на https://qiwi.com/p2p-admin/transfers/api |
+| Name                                  | Type                         | Description                                                  |
+| ------------------------------------- | ---------------------------- | ------------------------------------------------------------ |
+| `QIWI_TOKEN`                          | String(32 chars) - Hex       | Qiwi token got on https://qiwi.com/api                       |
+| `QIWI_WALLET`                         | String(10-16 chars) - Digits | Wallet's phone number                                        |
+| `QIWI_SECRET_KEY` и `QIWI_PUBLIC_KEY` | Strings                      | Key paid created on https://qiwi.com/p2p-admin/transfers/api |
 
-### Примеры
+### Examples
 
-1. [🥝 Получение информации о кошельке](./examples/1-info.js)
-2. [📬 Отправка платежа куда угодно](./examples/2-sending-payment.ts)
-3. [🛠️ Создание ключей P2P и создание счёта](./examples/3-p2p.js)
-4. [🔐 Получение лимитов (на ESM)](./examples/4-limits.mjs)
-5. [🤖 Телеграм бот с оплатой напрямую (по номеру кошелька)](./examples/5-bot.js)
-6. [🖥️ Магазин на Express](./examples/6-express.js)
-7. [🌐 Использование прокси](./examples/7-proxy.js)
+1. [🥝 Getting info about wallet](./examples/1-info.js)
+2. [📬 Sending payment](./examples/2-sending-payment.ts)
+3. [🛠️ Using P2P api](./examples/3-p2p.js)
+4. [🔐 Getting wallet limits (using ESM)](./examples/4-limits.mjs)
+5. [🤖 Telegram bot with direct payments (by wallet phone number)](./examples/5-bot.js)
+6. [🖥️ Shop on Express](./examples/6-express.js)
+7. [🌐 Using proxy](./examples/7-proxy.js)
 
-## 🎩 О пакете
+Language: [Русский](./README.ru.md) | **English**
 
-### Лицензия
+## 🎩 About the Project
 
-Проект распространяется под лицензией [**MIT**](./LICENSE)
+### License
 
-### Цели проекта
+Project is distributed under the [**MIT**](./LICENSE) License.
 
-- [ ] Покрыть все [API QIWI](https://developer.qiwi.com/) (в том числе для юридических лиц)
-  - [x] API QIWI Кошелька - (все API)
-  - [ ] Прием платежей
-  - [ ] Денежные выплаты
+### Project Goals
+
+- [ ] Cover all [APIs](https://developer.qiwi.com/) (в том числе для юридических лиц)
+  - [x] API QIWI Wallet
+  - [ ] Payments
+  - [ ] Payouts
   - [ ] Bank as a Service
-  - [ ] Идентификация
-        клиентов
-- [x] Сохранять обратную совместимость
+- [x] Keep versions backwards compatible
   - [x] v2 и v3
   - [x] v1 и v2
-- [x] Обеспечить максимальную надёжность и качество кода
-  - [x] Типы: TypeScript
-  - [x] Тесты: Jest, Codecov
-  - [x] Авто-тесты в репозитории: Github Actions
-  - [x] Линтинг: Eslint, Prettier, Editorconfig
-  - [x] Безопасность: Eslint Плагин, Code QL, ручная проверка в Snyk
+- [x] Ensure maximum reliability and code quality
+  - [x] Types: TypeScript
+  - [x] Tests: Jest, Codecov
+  - [x] Auto-tests in the repository: Github Actions
+  - [x] Linking: Eslint, Prettier, Editorconfig
+  - [x] Security: Eslint Plugin, Code QL, manual check in Snyk
 
-### Содействие (Contributing)
+### Contributing
 
-1. ⁉️ Не стесняйтесь писать [Issues](https://github.com/AlexXanderGrib/node-qiwi-sdk/issues/new)
-2. 🛠️ Если хотите что-то поправить в коде, следуйте [`CONTRIBUTING.md`](./CONTRIBUTING.md)
-3. 💸 Так-же можете отправить донат 👉 https://qiwi.com/n/ALEXXGRIB
-4. 🌟 Или поставить библиотеке [звёздочку](https://github.com/AlexXanderGrib/node-qiwi-sdk/stargazers), если она вам понравилась
+1. ⁉️ Do not hesitate to create [Issues](https://github.com/AlexXanderGrib/node-qiwi-sdk/issues/new)
+2. 🛠️ If you want to contribute to code, follow [`CONTRIBUTING.md`](./CONTRIBUTING.md)
+3. 💸 Also please donate 👉 https://qiwi.com/n/ALEXXGRIB
+4. 🌟 Or give this repo [a star](https://github.com/AlexXanderGrib/node-qiwi-sdk/stargazers), if you liked this lib
 
-### Поддержка
+### ISupport
 
-Вы можете написать `Issue`, а если я долго не отвечаю пишите в
+You can write issue, or if i am slow to answer it, you can DM me in
 
 **Telegram: [@AlexXanderGrib](https://t.me/AlexXanderGrib)**
 
-### 💜 Пакет для YooMoney
+### 💜 YooMoney package
 
-**Интересует приём платежей от физ. лиц по РФ?**
+**Interested in P2P acquiring in Russia?**
 
-Попробуйте мою другую библиотеку - SDK для ЮMoney 👉 [**github.com/AlexXanderGrib/yoomoney-sdk**](https://github.com/AlexXanderGrib/yoomoney-sdk)
+Check out my other SDK for YooMoney (formerly Yandex.Money) 👉 [**github.com/AlexXanderGrib/yoomoney-sdk**](https://github.com/AlexXanderGrib/yoomoney-sdk)
+
+Language: [Русский](./README.ru.md) | **English**

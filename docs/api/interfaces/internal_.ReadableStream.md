@@ -59,7 +59,7 @@
 
 #### Defined in
 
-node_modules/@types/node/globals.d.ts:191
+node_modules/@types/node/globals.d.ts:201
 
 ## Methods
 
@@ -73,7 +73,7 @@ node_modules/@types/node/globals.d.ts:191
 
 #### Defined in
 
-node_modules/@types/node/globals.d.ts:201
+node_modules/@types/node/globals.d.ts:211
 
 ___
 
@@ -240,7 +240,7 @@ ___
 
 #### Defined in
 
-node_modules/@types/node/globals.d.ts:196
+node_modules/@types/node/globals.d.ts:206
 
 ___
 
@@ -451,7 +451,7 @@ ___
 
 #### Defined in
 
-node_modules/@types/node/globals.d.ts:194
+node_modules/@types/node/globals.d.ts:204
 
 ___
 
@@ -479,7 +479,7 @@ ___
 
 #### Defined in
 
-node_modules/@types/node/globals.d.ts:197
+node_modules/@types/node/globals.d.ts:207
 
 ___
 
@@ -630,7 +630,7 @@ ___
 
 #### Defined in
 
-node_modules/@types/node/globals.d.ts:192
+node_modules/@types/node/globals.d.ts:202
 
 ___
 
@@ -782,7 +782,7 @@ ___
 
 #### Defined in
 
-node_modules/@types/node/globals.d.ts:195
+node_modules/@types/node/globals.d.ts:205
 
 ___
 
@@ -802,7 +802,7 @@ ___
 
 #### Defined in
 
-node_modules/@types/node/globals.d.ts:193
+node_modules/@types/node/globals.d.ts:203
 
 ___
 
@@ -855,7 +855,7 @@ ___
 
 #### Defined in
 
-node_modules/@types/node/globals.d.ts:198
+node_modules/@types/node/globals.d.ts:208
 
 ___
 
@@ -876,7 +876,7 @@ ___
 
 #### Defined in
 
-node_modules/@types/node/globals.d.ts:199
+node_modules/@types/node/globals.d.ts:209
 
 ___
 
@@ -896,4 +896,4 @@ ___
 
 #### Defined in
 
-node_modules/@types/node/globals.d.ts:200
+node_modules/@types/node/globals.d.ts:210

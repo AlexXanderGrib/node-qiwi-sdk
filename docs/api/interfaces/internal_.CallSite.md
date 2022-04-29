@@ -36,7 +36,7 @@ Current column number [if this function was defined in a script]
 
 #### Defined in
 
-node_modules/@types/node/globals.d.ts:154
+node_modules/@types/node/globals.d.ts:164
 
 ___
 
@@ -53,7 +53,7 @@ A call site object representing the location where eval was called
 
 #### Defined in
 
-node_modules/@types/node/globals.d.ts:160
+node_modules/@types/node/globals.d.ts:170
 
 ___
 
@@ -69,7 +69,7 @@ Name of the script [if this function was defined in a script]
 
 #### Defined in
 
-node_modules/@types/node/globals.d.ts:144
+node_modules/@types/node/globals.d.ts:154
 
 ___
 
@@ -85,7 +85,7 @@ Current function
 
 #### Defined in
 
-node_modules/@types/node/globals.d.ts:126
+node_modules/@types/node/globals.d.ts:136
 
 ___
 
@@ -103,7 +103,7 @@ to infer a name from the function's context.
 
 #### Defined in
 
-node_modules/@types/node/globals.d.ts:133
+node_modules/@types/node/globals.d.ts:143
 
 ___
 
@@ -119,7 +119,7 @@ Current line number [if this function was defined in a script]
 
 #### Defined in
 
-node_modules/@types/node/globals.d.ts:149
+node_modules/@types/node/globals.d.ts:159
 
 ___
 
@@ -136,7 +136,7 @@ the current function
 
 #### Defined in
 
-node_modules/@types/node/globals.d.ts:139
+node_modules/@types/node/globals.d.ts:149
 
 ___
 
@@ -152,7 +152,7 @@ Value of "this"
 
 #### Defined in
 
-node_modules/@types/node/globals.d.ts:113
+node_modules/@types/node/globals.d.ts:123
 
 ___
 
@@ -171,7 +171,7 @@ property.
 
 #### Defined in
 
-node_modules/@types/node/globals.d.ts:121
+node_modules/@types/node/globals.d.ts:131
 
 ___
 
@@ -187,7 +187,7 @@ Is this a constructor call?
 
 #### Defined in
 
-node_modules/@types/node/globals.d.ts:180
+node_modules/@types/node/globals.d.ts:190
 
 ___
 
@@ -203,7 +203,7 @@ Does this call take place in code defined by a call to eval?
 
 #### Defined in
 
-node_modules/@types/node/globals.d.ts:170
+node_modules/@types/node/globals.d.ts:180
 
 ___
 
@@ -219,7 +219,7 @@ Is this call in native V8 code?
 
 #### Defined in
 
-node_modules/@types/node/globals.d.ts:175
+node_modules/@types/node/globals.d.ts:185
 
 ___
 
@@ -235,4 +235,4 @@ Is this a toplevel invocation, that is, is "this" the global object?
 
 #### Defined in
 
-node_modules/@types/node/globals.d.ts:165
+node_modules/@types/node/globals.d.ts:175

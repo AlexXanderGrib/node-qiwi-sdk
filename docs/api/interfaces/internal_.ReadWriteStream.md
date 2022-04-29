@@ -61,7 +61,7 @@
 
 #### Defined in
 
-node_modules/@types/node/globals.d.ts:191
+node_modules/@types/node/globals.d.ts:201
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 #### Defined in
 
-node_modules/@types/node/globals.d.ts:205
+node_modules/@types/node/globals.d.ts:215
 
 ## Methods
 
@@ -93,7 +93,7 @@ node_modules/@types/node/globals.d.ts:205
 
 #### Defined in
 
-node_modules/@types/node/globals.d.ts:201
+node_modules/@types/node/globals.d.ts:211
 
 ___
 
@@ -211,7 +211,7 @@ ___
 
 #### Defined in
 
-node_modules/@types/node/globals.d.ts:208
+node_modules/@types/node/globals.d.ts:218
 
 ▸ **end**(`data`, `cb?`): [`ReadWriteStream`](internal_.ReadWriteStream.md)
 
@@ -232,7 +232,7 @@ node_modules/@types/node/globals.d.ts:208
 
 #### Defined in
 
-node_modules/@types/node/globals.d.ts:209
+node_modules/@types/node/globals.d.ts:219
 
 ▸ **end**(`str`, `encoding?`, `cb?`): [`ReadWriteStream`](internal_.ReadWriteStream.md)
 
@@ -254,7 +254,7 @@ node_modules/@types/node/globals.d.ts:209
 
 #### Defined in
 
-node_modules/@types/node/globals.d.ts:210
+node_modules/@types/node/globals.d.ts:220
 
 ___
 
@@ -331,7 +331,7 @@ ___
 
 #### Defined in
 
-node_modules/@types/node/globals.d.ts:196
+node_modules/@types/node/globals.d.ts:206
 
 ___
 
@@ -546,7 +546,7 @@ ___
 
 #### Defined in
 
-node_modules/@types/node/globals.d.ts:194
+node_modules/@types/node/globals.d.ts:204
 
 ___
 
@@ -578,7 +578,7 @@ ___
 
 #### Defined in
 
-node_modules/@types/node/globals.d.ts:197
+node_modules/@types/node/globals.d.ts:207
 
 ___
 
@@ -733,7 +733,7 @@ ___
 
 #### Defined in
 
-node_modules/@types/node/globals.d.ts:192
+node_modules/@types/node/globals.d.ts:202
 
 ___
 
@@ -889,7 +889,7 @@ ___
 
 #### Defined in
 
-node_modules/@types/node/globals.d.ts:195
+node_modules/@types/node/globals.d.ts:205
 
 ___
 
@@ -913,7 +913,7 @@ ___
 
 #### Defined in
 
-node_modules/@types/node/globals.d.ts:193
+node_modules/@types/node/globals.d.ts:203
 
 ___
 
@@ -970,7 +970,7 @@ ___
 
 #### Defined in
 
-node_modules/@types/node/globals.d.ts:198
+node_modules/@types/node/globals.d.ts:208
 
 ___
 
@@ -995,7 +995,7 @@ ___
 
 #### Defined in
 
-node_modules/@types/node/globals.d.ts:199
+node_modules/@types/node/globals.d.ts:209
 
 ___
 
@@ -1019,7 +1019,7 @@ ___
 
 #### Defined in
 
-node_modules/@types/node/globals.d.ts:200
+node_modules/@types/node/globals.d.ts:210
 
 ___
 
@@ -1044,7 +1044,7 @@ ___
 
 #### Defined in
 
-node_modules/@types/node/globals.d.ts:206
+node_modules/@types/node/globals.d.ts:216
 
 ▸ **write**(`str`, `encoding?`, `cb?`): `boolean`
 
@@ -1066,4 +1066,4 @@ node_modules/@types/node/globals.d.ts:206
 
 #### Defined in
 
-node_modules/@types/node/globals.d.ts:207
+node_modules/@types/node/globals.d.ts:217

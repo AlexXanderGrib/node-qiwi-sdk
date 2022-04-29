@@ -16,23 +16,26 @@ import {
  * @deprecated Используйте класс `P2p` и новые сигнатуры
  * методов
  * @export
- * @class P2pCompat
+ * @class _P2pCompat
  * @extends {P2p}
  */
-export class P2pCompat extends P2p {
+export class _P2pCompat extends P2p {
   static readonly Currency = BillCurrency;
   static readonly PaySource = BillPaySource;
   static readonly Status = BillStatus;
 
   /**
-   * Creates an instance of P2pCompat.
+   * Creates an instance of _P2pCompat.
    * @param {string} secretKey
    * @param {string} publicKey
-   * @memberof P2pCompat
+   * @memberof _P2pCompat
    */
-  constructor(public readonly secretKey: string, public readonly publicKey: string) {
+  constructor(
+    public readonly secretKey: string,
+    public readonly publicKey: string = ""
+  ) {
     super({
-      http: P2pCompat.httpClientFactory(secretKey),
+      http: _P2pCompat.httpClientFactory(secretKey),
       publicKey,
       secretKey
     });

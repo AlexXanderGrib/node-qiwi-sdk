@@ -60,7 +60,7 @@ Creates an instance of WalletApi.
 
 #### Defined in
 
-[src/apis/wallet/api.ts:36](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/wallet/api.ts#L36)
+[src/apis/wallet/api.ts:36](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/285ce1c/src/apis/wallet/api.ts#L36)
 
 ## Properties
 
@@ -92,7 +92,7 @@ WalletApi.http
 
 #### Defined in
 
-[src/apis/wallet/api.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/wallet/api.ts#L16)
+[src/apis/wallet/api.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/285ce1c/src/apis/wallet/api.ts#L16)
 
 ___
 
@@ -114,7 +114,7 @@ WalletApi.walletId
 
 #### Defined in
 
-[src/apis/wallet/api.ts:27](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/wallet/api.ts#L27)
+[src/apis/wallet/api.ts:27](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/285ce1c/src/apis/wallet/api.ts#L27)
 
 ## Methods
 
@@ -146,7 +146,7 @@ WalletApi.walletId
 
 #### Defined in
 
-[src/apis/wallet/payment-history.api.ts:36](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/wallet/payment-history.api.ts#L36)
+[src/apis/wallet/payment-history.api.ts:36](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/285ce1c/src/apis/wallet/payment-history.api.ts#L36)
 
 ___
 
@@ -177,13 +177,13 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/payment-history.api.ts:57](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/wallet/payment-history.api.ts#L57)
+[src/apis/wallet/payment-history.api.ts:57](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/285ce1c/src/apis/wallet/payment-history.api.ts#L57)
 
 ___
 
 ### getTransaction
 
-▸ **getTransaction**(`transactionId`, `type?`): `Promise`<[`Transaction`](../modules/QIWI.md#transaction-1)\>
+▸ **getTransaction**(`transactionId`, `type?`): `Promise`<[`Transaction`](../modules/QIWI.md#transaction)\>
 
 ## Информация о транзакции
 
@@ -196,18 +196,18 @@ ___
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `transactionId` | `number` | Номер транзакции |
-| `type?` | [`TransactionType`](../enums/QIWI.TransactionType.md) | - |
+| `transactionId` | [`StringOrNumber`](../modules/QIWI.md#stringornumber) | Номер транзакции |
+| `type?` | [`TransactionTypeAny`](../modules/QIWI.md#transactiontypeany) | - |
 
 #### Returns
 
-`Promise`<[`Transaction`](../modules/QIWI.md#transaction-1)\>
+`Promise`<[`Transaction`](../modules/QIWI.md#transaction)\>
 
 {Promise<Transaction>}
 
 #### Defined in
 
-[src/apis/wallet/payment-history.api.ts:77](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/wallet/payment-history.api.ts#L77)
+[src/apis/wallet/payment-history.api.ts:77](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/285ce1c/src/apis/wallet/payment-history.api.ts#L77)
 
 ___
 
@@ -224,7 +224,7 @@ ___
 | Name | Type | Default value | Description |
 | :------ | :------ | :------ | :------ |
 | `transactionId` | [`StringOrNumber`](../modules/QIWI.md#stringornumber) | `undefined` | номер транзакции из [getHistory](internal_.WalletPaymentHistoryApi.md#gethistory) (параметр `data[].txnId` в ответе) |
-| `type` | [`TransactionType`](../enums/QIWI.TransactionType.md) | `undefined` | тип транзакции из [getHistory](internal_.WalletPaymentHistoryApi.md#gethistory) (параметр `data[].type` в ответе) |
+| `type` | [`TransactionTypeAny`](../modules/QIWI.md#transactiontypeany) | `undefined` | тип транзакции из [getHistory](internal_.WalletPaymentHistoryApi.md#gethistory) (параметр `data[].type` в ответе) |
 | `format` | [`ChequeFormat`](../enums/QIWI.ChequeFormat.md) | `ChequeFormat.JPEG` | тип файла, в который сохраняется квитанция. Допустимые значения: `JPEG`, `PDF` |
 
 #### Returns
@@ -235,7 +235,7 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/payment-history.api.ts:97](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/wallet/payment-history.api.ts#L97)
+[src/apis/wallet/payment-history.api.ts:97](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/285ce1c/src/apis/wallet/payment-history.api.ts#L97)
 
 ___
 
@@ -252,7 +252,7 @@ ___
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `transactionId` | [`StringOrNumber`](../modules/QIWI.md#stringornumber) | номер транзакции из [getHistory](internal_.WalletPaymentHistoryApi.md#gethistory) (параметр `data[].txnId` в ответе) |
-| `type` | [`TransactionType`](../enums/QIWI.TransactionType.md) | тип транзакции из [getHistory](internal_.WalletPaymentHistoryApi.md#gethistory) (параметр `data[].type` в ответе) |
+| `type` | [`TransactionTypeAny`](../modules/QIWI.md#transactiontypeany) | тип транзакции из [getHistory](internal_.WalletPaymentHistoryApi.md#gethistory) (параметр `data[].type` в ответе) |
 | `email` | `string` | Адрес для отправки электронной квитанции |
 
 #### Returns
@@ -263,4 +263,4 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/payment-history.api.ts:123](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/wallet/payment-history.api.ts#L123)
+[src/apis/wallet/payment-history.api.ts:123](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/285ce1c/src/apis/wallet/payment-history.api.ts#L123)

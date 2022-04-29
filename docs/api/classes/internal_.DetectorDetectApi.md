@@ -54,7 +54,7 @@ Creates an instance of DetectorApi.
 
 #### Defined in
 
-[src/apis/detector/api.ts:25](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/detector/api.ts#L25)
+[src/apis/detector/api.ts:25](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/285ce1c/src/apis/detector/api.ts#L25)
 
 ## Properties
 
@@ -86,7 +86,7 @@ DetectorApi.http
 
 #### Defined in
 
-[src/apis/detector/api.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/detector/api.ts#L16)
+[src/apis/detector/api.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/285ce1c/src/apis/detector/api.ts#L16)
 
 ## Methods
 
@@ -110,7 +110,7 @@ ID провайдера
 
 #### Defined in
 
-[src/apis/detector/detect.api.ts:19](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/detector/detect.api.ts#L19)
+[src/apis/detector/detect.api.ts:19](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/285ce1c/src/apis/detector/detect.api.ts#L19)
 
 ___
 
@@ -136,7 +136,7 @@ ___
 
 #### Defined in
 
-[src/apis/detector/detect.api.ts:48](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/detector/detect.api.ts#L48)
+[src/apis/detector/detect.api.ts:48](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/285ce1c/src/apis/detector/detect.api.ts#L48)
 
 ___
 
@@ -159,4 +159,4 @@ ___
 
 #### Defined in
 
-[src/apis/detector/detect.api.ts:33](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/52e2fc4/src/apis/detector/detect.api.ts#L33)
+[src/apis/detector/detect.api.ts:33](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/285ce1c/src/apis/detector/detect.api.ts#L33)

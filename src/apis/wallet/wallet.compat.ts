@@ -8,22 +8,22 @@ import * as types from "./wallet.types";
  * методов
  *
  * @export
- * @class WalletCompat
+ * @class _WalletCompat
  * @extends {Wallet}
  */
-export class WalletCompat extends Wallet {
+export class _WalletCompat extends Wallet {
   static readonly IdentificationLevel = types.PersonIdentificationLevel;
   static readonly ReceiptFormat = types.ChequeFormat;
 
   /**
-   * Creates an instance of WalletCompat.
+   * Creates an instance of _WalletCompat.
    * @param {string} token
    * @param {string} [walletId=""]
-   * @memberof WalletCompat
+   * @memberof _WalletCompat
    */
   constructor(public readonly token: string, public readonly walletId = "") {
     super({
-      http: WalletCompat.httpClientFactory(token),
+      http: _WalletCompat.httpClientFactory(token),
       token,
       walletId
     });
@@ -33,7 +33,7 @@ export class WalletCompat extends Wallet {
    *
    *
    * @readonly
-   * @memberof WalletCompat
+   * @memberof _WalletCompat
    */
   get API_TOKEN() {
     return this.token;
@@ -43,7 +43,7 @@ export class WalletCompat extends Wallet {
    *
    *
    * @readonly
-   * @memberof WalletCompat
+   * @memberof _WalletCompat
    */
   get webhookKey() {
     return this.webhooks.keys;
@@ -53,7 +53,7 @@ export class WalletCompat extends Wallet {
    *
    *
    * @readonly
-   * @memberof WalletCompat
+   * @memberof _WalletCompat
    */
   get hookId() {
     return this.webhooks.activeId;
@@ -246,7 +246,7 @@ export class WalletCompat extends Wallet {
     provider: number | types.Recipients,
     options: types.FormUrlOptions = {}
   ): string {
-    return WalletCompat.PaymentsApi.createFormUrl(provider, options);
+    return _WalletCompat.PaymentsApi.createFormUrl(provider, options);
   }
 
   /**
@@ -282,7 +282,7 @@ export class WalletCompat extends Wallet {
     provider: types.PayParameters["provider"],
     account: types.PayParameters["account"],
     amount: types.PayParameters["amount"],
-    currency: types.PayParameters["currency"] = WalletCompat.Currency.RUB,
+    currency: types.PayParameters["currency"] = _WalletCompat.Currency.RUB,
     fields: types.PayParameters["fields"] = {},
     comment: types.PayParameters["comment"] = ""
   ): Promise<types.PaymentResponse> {
@@ -300,9 +300,9 @@ export class WalletCompat extends Wallet {
   async pay2({
     account,
     amount,
-    provider = WalletCompat.Recipients.QIWI,
+    provider = _WalletCompat.Recipients.QIWI,
     comment = "",
-    currency = WalletCompat.Currency.RUB,
+    currency = _WalletCompat.Currency.RUB,
     fields = {}
   }: types.PayParameters): Promise<types.PaymentResponse> {
     return await this.payments.pay({
@@ -341,9 +341,9 @@ export class WalletCompat extends Wallet {
    *
    * @see {@link https://developer.qiwi.com/ru/qiwi-wallet-personal-advanced/?http#intro|Документация}
    */
-  async createOauthToken(): Promise<types.PrettyTokenResponse<WalletCompat>> {
+  async createOauthToken(): Promise<types.PrettyTokenResponse<_WalletCompat>> {
     const { token, expiry } = await super.createOauthToken();
-    const client = new WalletCompat(token, this.options.walletId);
+    const client = new _WalletCompat(token, this.options.walletId);
     Object.assign(client.options, { http: this.options.http });
 
     return {

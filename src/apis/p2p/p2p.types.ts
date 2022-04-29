@@ -21,23 +21,25 @@ export enum BillCurrency {
 export type BillCurrencyPlain = keyof typeof BillCurrency;
 export type BillCurrencyAny = BillCurrency | BillCurrencyPlain;
 
+export type BillMoneyAmount = {
+  /**
+   * Сумма, на которую выставляется счет, округленная в меньшую
+   * сторону до 2 десятичных знаков
+   *
+   * @type {number|string} Number(6.2)
+   */
+  value: number | string;
+  /**
+   * Валюта суммы счета. Возможные значения:
+   * `RUB` - рубли
+   * `KZT` - тенге
+   */
+  currency: BillCurrencyAny;
+};
+
 export type BillCreationRequest = {
   /** Данные о сумме счета */
-  amount: {
-    /**
-     * Сумма, на которую выставляется счет, округленная в меньшую
-     * сторону до 2 десятичных знаков
-     *
-     * @type {number|string} Number(6.2)
-     */
-    value: number | string;
-    /**
-     * Валюта суммы счета. Возможные значения:
-     * `RUB` - рубли
-     * `KZT` - тенге
-     */
-    currency: BillCurrency;
-  };
+  amount: BillMoneyAmount;
 
   /**
    * Дата, до которой счет будет доступен для оплаты. Если перевод
@@ -86,7 +88,7 @@ export type BillStatusData = {
   siteId: string;
 
   /** Данные о сумме счета */
-  amount: BillCreationRequest["amount"];
+  amount: BillMoneyAmount;
 
   status: {
     /** Текущий статус счета */
@@ -121,6 +123,10 @@ export type BillStatusData = {
    * `ГГГГ-ММ-ДДTчч:мм:сс+\-чч:мм`
    */
   expirationDateTime: string;
+};
+
+export type BillStatusBody = {
+  bill: BillStatusData;
 };
 
 export type BillError = {
@@ -185,3 +191,23 @@ export type BillCreateParameters = BillCreationRequest &
   PayUrlPatchParameters & {
     billId?: string;
   };
+
+export type RefundCreationRequest = {
+  refundId?: string;
+  amount: BillMoneyAmount;
+};
+
+export enum BillRefundStatus {
+  FULL = "FULL",
+  PARTIAL = "PARTIAL"
+}
+
+export type BillRefundStatusPlain = keyof typeof BillRefundStatus;
+export type BillRefundStatusAny = BillRefundStatus | BillRefundStatusPlain;
+
+export type BillRefundStatusData = {
+  datetime: string;
+  amount: BillMoneyAmount;
+  refundId: string;
+  status: BillRefundStatusAny;
+};

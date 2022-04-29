@@ -51,7 +51,7 @@
 
 #### Defined in
 
-node_modules/@types/node/globals.d.ts:205
+node_modules/@types/node/globals.d.ts:215
 
 ## Methods
 
@@ -165,7 +165,7 @@ ___
 
 #### Defined in
 
-node_modules/@types/node/globals.d.ts:208
+node_modules/@types/node/globals.d.ts:218
 
 ▸ **end**(`data`, `cb?`): [`WritableStream`](internal_.WritableStream.md)
 
@@ -182,7 +182,7 @@ node_modules/@types/node/globals.d.ts:208
 
 #### Defined in
 
-node_modules/@types/node/globals.d.ts:209
+node_modules/@types/node/globals.d.ts:219
 
 ▸ **end**(`str`, `encoding?`, `cb?`): [`WritableStream`](internal_.WritableStream.md)
 
@@ -200,7 +200,7 @@ node_modules/@types/node/globals.d.ts:209
 
 #### Defined in
 
-node_modules/@types/node/globals.d.ts:210
+node_modules/@types/node/globals.d.ts:220
 
 ___
 
@@ -779,7 +779,7 @@ ___
 
 #### Defined in
 
-node_modules/@types/node/globals.d.ts:206
+node_modules/@types/node/globals.d.ts:216
 
 ▸ **write**(`str`, `encoding?`, `cb?`): `boolean`
 
@@ -797,4 +797,4 @@ node_modules/@types/node/globals.d.ts:206
 
 #### Defined in
 
-node_modules/@types/node/globals.d.ts:207
+node_modules/@types/node/globals.d.ts:217

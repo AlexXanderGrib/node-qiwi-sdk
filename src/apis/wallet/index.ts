@@ -1,5 +1,13 @@
 export { Wallet } from "./wallet";
-export { WalletCompat, WalletCompat as Personal } from "./wallet.compat";
+export {
+  _WalletCompat,
+  _WalletCompat as WalletCompat,
+  _WalletCompat as Personal
+} from "./wallet.compat";
+export {
+  _WalletCompatNodeQiwi,
+  _WalletCompatNodeQiwi as NodeQiwi
+} from "./wallet.compat-node-qiwi";
 export type { WalletApiOptions } from "./wallet.options";
 export {
   WalletApiError,
