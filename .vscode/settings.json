@@ -4,9 +4,11 @@
     "коммиты",
     "codecov",
     "Compat",
+    "pnpm",
     "PUBK",
     "qiwi",
-    "QIWI"
+    "QIWI",
+    "Snyk"
   ],
   "editor.rulers": [
     65,

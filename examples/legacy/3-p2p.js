@@ -1,10 +1,10 @@
 // const { Personal, P2P, BillPaySource } = require("qiwi-sdk");
 const { Personal, P2P, BillPaySource } = require("../..");
 
-const qiwi = new Personal(process.env.QIWI_TOKEN);
+const wallet = new Personal(process.env.QIWI_TOKEN);
 
 async function main() {
-  const [publicKey, secretKey] = await qiwi.createP2PKeyPair("My super pair name");
+  const [publicKey, secretKey] = await wallet.createP2PKeyPair("My super pair name");
 
   // Да, они обратном в порядке,
   // так как PublicKey не всегда нужен

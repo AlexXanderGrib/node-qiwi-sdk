@@ -1,10 +1,10 @@
 // const { Wallet, P2p, BillPaySource, formatOffsetDate } = require("qiwi-sdk");
 const { Wallet, P2p, BillPaySource, formatOffsetDate } = require("..");
 
-const qiwi = Wallet.create(process.env.QIWI_TOKEN);
+const wallet = Wallet.create(process.env.QIWI_TOKEN);
 
 async function main() {
-  const { publicKey, secretKey } = await qiwi.bills.createP2PKeyPair(
+  const { publicKey, secretKey } = await wallet.bills.createP2PKeyPair(
     "My super pair name"
   );
 

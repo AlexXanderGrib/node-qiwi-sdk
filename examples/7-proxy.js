@@ -17,7 +17,7 @@ async function checkBalance(token) {
 
   // Метод `createAndFetchWalletId()` под капотом делает Http запрос
   // чтобы получить номер телефона, привязанного к аккаунту.
-  const qiwi = await Wallet.createAndFetchWalletId(token, {
+  const wallet = await Wallet.createAndFetchWalletId(token, {
     // `setupHttp` позволяет настроить Http клиент перед тем, как он
     // будет использован для вызова метода получения номера телефона
     setupHttp(http) {
@@ -29,7 +29,7 @@ async function checkBalance(token) {
   });
 
   // Номер телефона потребуется тут, для вызова метода `getAccounts`
-  const accounts = await qiwi.fundingSources.getAccounts();
+  const accounts = await wallet.fundingSources.getAccounts();
   const defaultAccount = accounts.find((account) => account.defaultAccount === true);
 
   return defaultAccount.balance;

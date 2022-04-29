@@ -1,11 +1,11 @@
 // import { Wallet, LimitType } from "qiwi-sdk";
 import { Wallet, LimitType } from "..";
 
-const qp = Wallet.create(process.env.QIWI_TOKEN, process.env.QIWI_WALLET);
+const wallet = Wallet.create(process.env.QIWI_TOKEN, process.env.QIWI_WALLET);
 
 async function main() {
   // 2.0
-  const { limits } = await qp.limits.get([LimitType.TURNOVER]);
+  const { limits } = await wallet.limits.get([LimitType.TURNOVER]);
 
   const [limit] = limits.RU;
 

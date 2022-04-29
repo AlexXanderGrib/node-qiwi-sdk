@@ -3,14 +3,14 @@
 // import { Currency, Wallet, QuickPayRecipientsAny, CommissionPayer } from "qiwi-sdk";
 import { Currency, Wallet, QuickPayRecipientsAny, CommissionPayer } from "..";
 
-const qiwi = Wallet.create(process.env.QIWI_TOKEN ?? "");
+const wallet = Wallet.create(process.env.QIWI_TOKEN ?? "");
 
 async function sendPayment(
   method: QuickPayRecipientsAny,
   account: string,
   amount: number
 ) {
-  await qiwi.payments.quickPay({
+  await wallet.payments.quickPay({
     // Пускай комиссию платит получатель
     amount,
     account,

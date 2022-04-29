@@ -3,7 +3,7 @@
 // import { Personal, Recipients, Detector, Currency } from "qiwi-sdk";
 import { Personal, Recipients, Currency, DetectorCompat } from "../..";
 
-const qiwi = new Personal(process.env.QIWI_TOKEN ?? "");
+const wallet = new Personal(process.env.QIWI_TOKEN ?? "");
 const detector = new DetectorCompat();
 
 type PayoutMethod = "qiwi" | "yoomoney" | "card" | "mobile";
@@ -32,10 +32,10 @@ async function getProvider(
 
 async function sendPayment(method: PayoutMethod, account: string, amount: number) {
   const provider = await getProvider(method, account);
-  const commission = await qiwi.getCommission(provider, account, amount);
+  const commission = await wallet.getCommission(provider, account, amount);
 
   // Используем метод `pay2` вместо `pay` для лучшей читаемости
-  await qiwi.pay2({
+  await wallet.pay2({
     // Пускай комиссию платит получатель
     amount: amount - commission,
     account,

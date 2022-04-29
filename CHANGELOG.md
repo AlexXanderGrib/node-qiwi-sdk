@@ -64,4 +64,4 @@ const qiwi = new Personal("token", "79123456789");
 
 Да собственно кроме этого ничего не изменилось
 
-[Миграция с версии 1](./docs/migrations/from-1-to-2)
+[Миграция с версии 1](./docs/migrations/from-1-to-2.md)

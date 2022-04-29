@@ -29,7 +29,6 @@ jobs:
           QIWI_SECRET_KEY: ${{ secrets.QIWI_PK }}
           QIWI_PUBLIC_KEY: ${{ secrets.QIWI_PUBK }}
 
-
       - name: Upload coverage
         run: npx codecov
         env:

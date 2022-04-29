@@ -4,13 +4,13 @@ const { Telegraf } = require("telegraf");
 const { promisify } = require("util");
 
 const bot = new Telegraf(process.env.TELEGRAM_BOT_TOKEN);
-const qiwi = Wallet.create(process.env.QIWI_TOKEN, process.env.QIWI_WALLET);
+const wallet = Wallet.create(process.env.QIWI_TOKEN, process.env.QIWI_WALLET);
 const sleep = promisify(setTimeout);
 
 /** ... */
 
 bot.hears("оплатить", (ctx) => {
-  qiwi.payments.createFormUrl(Personal.Recipients.QIWI, {
+  wallet.payments.createFormUrl(Personal.Recipients.QIWI, {
     // Можно не указывать. Подставляется текущий номер телефона
     // по умолчанию если ID провайдера - 99 (QIWI)
     // account: process.env.QIWI_WALLET
@@ -29,7 +29,7 @@ const processedTransactions = new Set();
 async function checkPayments() {
   // Начинаем проверять список транзакций каждые 60 секунд
   while (true) {
-    const { data } = await qiwi.paymentHistory.getHistory({
+    const { data } = await wallet.paymentHistory.getHistory({
       operation: Personal.TransactionType.IN,
       rows: 30
     });

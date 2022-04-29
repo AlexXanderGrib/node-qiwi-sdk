@@ -2,20 +2,21 @@ qiwi-sdk / [Exports](modules.md)
 
 # QIWI SDK
 
-[![Test Status](https://github.com/AlexXanderGrib/node-qiwi-sdk/actions/workflows/test.yml/badge.svg)](https://github.com/AlexXanderGrib/node-qiwi-sdk)
-[![codecov](https://codecov.io/gh/AlexXanderGrib/node-qiwi-sdk/branch/main/graph/badge.svg)](https://codecov.io/gh/AlexXanderGrib/node-qiwi-sdk)
-[![license MIT](https://img.shields.io/npm/l/qiwi-sdk.svg)](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/main/LICENSE)
-[![npm](https://img.shields.io/npm/v/qiwi-sdk.svg)](https://npmjs.com/package/qiwi-sdk)
-[![GitHub](https://img.shields.io/github/stars/AlexXanderGrib/node-qiwi-sdk.svg)](https://github.com/AlexXanderGrib/node-qiwi-sdk)
-[![last commit](https://img.shields.io/github/last-commit/AlexXanderGrib/node-qiwi-sdk.svg)](https://github.com/AlexXanderGrib/node-qiwi-sdk)
-[![qiwi-sdk](https://snyk.io/advisor/npm-package/qiwi-sdk/badge.svg)](https://snyk.io/advisor/npm-package/qiwi-sdk)
-[![Quality (npms.io)](https://img.shields.io/npms-io/quality-score/qiwi-sdk.svg?label=Quality%20%28npms.io%29&)](https://npms.io/search?q=qiwi-sdk)
+> Typed QIWI Wallet SDK for NodeJS. Supported API's: Personal & P2P Bill Payments
 
 <center>
   <img src="docs/assets/logo.svg" alt="QIWI SDK" /> 
 </center>
 
-> Typed QIWI Wallet SDK for NodeJS. Supported API's: Personal & P2P Bill Payments
+[![Test Status](https://github.com/AlexXanderGrib/node-qiwi-sdk/actions/workflows/test.yml/badge.svg)](https://github.com/AlexXanderGrib/node-qiwi-sdk)
+[![codecov](https://img.shields.io/codecov/c/github/AlexXanderGrib/node-qiwi-sdk/main.svg)](https://codecov.io/gh/AlexXanderGrib/node-qiwi-sdk)
+[![license MIT](https://img.shields.io/npm/l/qiwi-sdk.svg)](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/main/LICENSE)
+[![npm](https://img.shields.io/npm/v/qiwi-sdk.svg)](https://npmjs.com/package/qiwi-sdk)
+[![GitHub](https://img.shields.io/github/stars/AlexXanderGrib/node-qiwi-sdk.svg)](https://github.com/AlexXanderGrib/node-qiwi-sdk)
+[![last commit](https://img.shields.io/github/last-commit/AlexXanderGrib/node-qiwi-sdk.svg)](https://github.com/AlexXanderGrib/node-qiwi-sdk)
+[![qiwi-sdk](https://snyk.io/advisor/npm-package/qiwi-sdk/badge.svg)](https://snyk.io/advisor/npm-package/qiwi-sdk)
+[![Quality](https://img.shields.io/npms-io/quality-score/qiwi-sdk.svg?label=Quality%20%28npms.io%29&)](https://npms.io/search?q=qiwi-sdk)
+[![Downloads](https://img.shields.io/npm/dt/qiwi-sdk.svg)]
 
 ## 👅 Язык
 
@@ -93,12 +94,12 @@ the new version of the API - Class v3.
 
 ### API Overview
 
-| Class (v3)                                        | ~~Class (Legacy v2)~~                                         | Documentation by QIWI                                                |
-| ------------------------------------------------- | ------------------------------------------------------------- | -------------------------------------------------------------------- |
-| [`Wallet`](./docs/api/classes/QIWI.Wallet.md)     | [`Personal`](./docs/api/classes/QIWI.WalletCompat.md)         | https://developer.qiwi.com/en/qiwi-wallet-personal                   |
-| [`P2p`](./docs/api/classes/QIWI.P2p.md)           | [`P2P`](./docs/api/classes/QIWI.P2pCompat.md)                 | https://developer.qiwi.com/en/p2p-payments                           |
-| [`P2p`](./docs/api/classes/QIWI.P2p.md)           | -                                                             | https://developer.qiwi.com/en/bill-payments                          |
-| [`Detector`](./docs/api/classes/QIWI.Detector.md) | [`DetectorCompat`](./docs/api/classes/QIWI.DetectorCompat.md) | https://developer.qiwi.com/en/qiwi-wallet-personal/#search-providers |
+| Class (v3)                                        | ~~Class (Legacy v2)~~                                         | Documentation by QIWI                                                | Recommended var name |
+| ------------------------------------------------- | ------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------- |
+| [`Wallet`](./docs/api/classes/QIWI.Wallet.md)     | [`Personal`](./docs/api/classes/QIWI.WalletCompat.md)         | https://developer.qiwi.com/en/qiwi-wallet-personal                   | `wallet` (or `qiwi`) |
+| [`P2p`](./docs/api/classes/QIWI.P2p.md)           | [`P2P`](./docs/api/classes/QIWI.P2pCompat.md)                 | https://developer.qiwi.com/en/p2p-payments                           | `p2p`                |
+| [`P2p`](./docs/api/classes/QIWI.P2p.md)           | -                                                             | https://developer.qiwi.com/en/bill-payments                          | `p2p` (or `payment`) |
+| [`Detector`](./docs/api/classes/QIWI.Detector.md) | [`DetectorCompat`](./docs/api/classes/QIWI.DetectorCompat.md) | https://developer.qiwi.com/en/qiwi-wallet-personal/#search-providers | `detector`           |
 
 To see detailed documentation on a class, click on its name.
 
@@ -149,6 +150,62 @@ variables or in another protected place, but not in the code.
 
 ### Examples
 
+#### Getting info about wallet
+
+```javascript
+const wallet = Wallet.create(process.env.QIWI_TOKEN);
+
+wallet.personProfile.getCurrent().then(console.log);
+// => { contractInfo: {...}, authInfo: {...}, userInfo: {...} }
+```
+
+#### Sending payment
+
+```javascript
+const wallet = Wallet.create(process.env.QIWI_TOKEN);
+
+// 100 RUB from RUB account to QIWI (99) `79123456789` including commission
+// All above can be configured
+wallet.payments.quickPay({
+  amount: 100,
+  account: "79123456789"
+});
+```
+
+#### Using P2P
+
+```javascript
+const p2p = P2p.create(process.env.QIWI_SECRET_KEY);
+
+p2p.bills
+  .create({
+    amount: {
+      value: 1000,
+      currency: P2p.Currency.RUB
+    },
+    successUrl: "https://youtu.be/dQw4w9WgXcQ"
+  })
+  .then(console.log);
+
+// => { payUrl: 'https://oplata.qiwi.com/...' }
+```
+
+#### Using Proxy
+
+```javascript
+const { SocksProxyAgent } = require("socks-proxy-agent");
+
+const wallet = Wallet.create(process.env.QIWI_TOKEN);
+wallet.agent = new SocksProxyAgent("socks://login:password@host:port");
+
+// do work here
+
+// Remember to dispose agent
+wallet.agent = undefined;
+```
+
+#### Full examples
+
 1. [🥝 Getting info about wallet](./examples/1-info.js)
 2. [📬 Sending payment](./examples/2-sending-payment.ts)
 3. [🛠️ Using P2P api](./examples/3-p2p.js)
@@ -163,7 +220,7 @@ Language: [Русский](./README.ru.md) | **English**
 
 ### License
 
-Project is distributed under the [**MIT**](./LICENSE) License.
+Distributed under the MIT License. See [LICENSE](./LICENSE) for more information.
 
 ### Project Goals
 
@@ -171,7 +228,6 @@ Project is distributed under the [**MIT**](./LICENSE) License.
   - [x] API QIWI Wallet
   - [ ] Payments
   - [ ] Payouts
-  - [ ] Bank as a Service
 - [x] Keep versions backwards compatible
   - [x] v2 и v3
   - [x] v1 и v2
@@ -189,7 +245,7 @@ Project is distributed under the [**MIT**](./LICENSE) License.
 3. 💸 Also please donate 👉 https://qiwi.com/n/ALEXXGRIB
 4. 🌟 Or give this repo [a star](https://github.com/AlexXanderGrib/node-qiwi-sdk/stargazers), if you liked this lib
 
-### ISupport
+### Support
 
 You can write issue, or if i am slow to answer it, you can DM me in
 

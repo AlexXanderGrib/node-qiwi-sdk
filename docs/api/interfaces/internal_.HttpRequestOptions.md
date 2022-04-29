@@ -48,7 +48,7 @@ Partial.agent
 
 #### Defined in
 
-[src/http.ts:8](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/285ce1c/src/http.ts#L8)
+[src/http.ts:8](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/116975d/src/http.ts#L8)
 
 ___
 
@@ -62,7 +62,7 @@ Partial.baseURL
 
 #### Defined in
 
-[src/http.ts:10](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/285ce1c/src/http.ts#L10)
+[src/http.ts:10](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/116975d/src/http.ts#L10)
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 #### Defined in
 
-[src/http.ts:22](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/285ce1c/src/http.ts#L22)
+[src/http.ts:22](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/116975d/src/http.ts#L22)
 
 ___
 
@@ -86,7 +86,7 @@ Partial.headers
 
 #### Defined in
 
-[src/http.ts:7](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/285ce1c/src/http.ts#L7)
+[src/http.ts:7](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/116975d/src/http.ts#L7)
 
 ___
 
@@ -96,7 +96,7 @@ ___
 
 #### Defined in
 
-[src/http.ts:21](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/285ce1c/src/http.ts#L21)
+[src/http.ts:21](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/116975d/src/http.ts#L21)
 
 ___
 
@@ -110,7 +110,7 @@ Partial.okStatusCodes
 
 #### Defined in
 
-[src/http.ts:9](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/285ce1c/src/http.ts#L9)
+[src/http.ts:9](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/116975d/src/http.ts#L9)
 
 ___
 
@@ -124,7 +124,7 @@ Partial.timeout
 
 #### Defined in
 
-[src/http.ts:11](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/285ce1c/src/http.ts#L11)
+[src/http.ts:11](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/116975d/src/http.ts#L11)
 
 ___
 
@@ -134,7 +134,7 @@ ___
 
 #### Defined in
 
-[src/http.ts:20](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/285ce1c/src/http.ts#L20)
+[src/http.ts:20](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/116975d/src/http.ts#L20)
 
 ## Methods
 
@@ -158,7 +158,7 @@ Partial.mapHttpErrors
 
 #### Defined in
 
-[src/http.ts:15](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/285ce1c/src/http.ts#L15)
+[src/http.ts:15](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/116975d/src/http.ts#L15)
 
 ___
 
@@ -182,7 +182,7 @@ Partial.parseResponse
 
 #### Defined in
 
-[src/http.ts:14](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/285ce1c/src/http.ts#L14)
+[src/http.ts:14](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/116975d/src/http.ts#L14)
 
 ___
 
@@ -206,4 +206,4 @@ Partial.stringifyBody
 
 #### Defined in
 
-[src/http.ts:13](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/285ce1c/src/http.ts#L13)
+[src/http.ts:13](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/116975d/src/http.ts#L13)
