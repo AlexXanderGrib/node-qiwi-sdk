@@ -1,5 +1,4 @@
-import { WalletApi } from './api.mjs';
-
+import { WalletApi } from "./api.mjs";
 /**
  * # Профиль пользователя
  * [Документация QIWI](https://developer.qiwi.com/ru/qiwi-wallet-personal/#profile)
@@ -9,18 +8,17 @@ import { WalletApi } from './api.mjs';
  * @extends {WalletApi}
  */
 class WalletPersonProfileApi extends WalletApi {
-    /**
-     * ## Профиль пользователя
-     *
-     * Запрос возвращает информацию о вашем профиле - наборе
-     * пользовательских данных и настроек вашего QIWI кошелька.
-     *
-     * @return {Promise<PersonProfile>} {Promise<PersonProfile>}
-     * @memberof WalletPersonProfileApi
-     */
-    async getCurrent() {
-        return await this.http.get("person-profile/v1/profile/current");
-    }
+  /**
+   * ## Профиль пользователя
+   *
+   * Запрос возвращает информацию о вашем профиле - наборе
+   * пользовательских данных и настроек вашего QIWI кошелька.
+   *
+   * @return {Promise<PersonProfile>} {Promise<PersonProfile>}
+   * @memberof WalletPersonProfileApi
+   */
+  async getCurrent() {
+    return await this.http.get("person-profile/v1/profile/current");
+  }
 }
-
 export { WalletPersonProfileApi };

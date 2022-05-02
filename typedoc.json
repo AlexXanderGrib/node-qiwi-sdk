@@ -1,0 +1,12 @@
+{
+  "name": "QIWI SDK",
+  "out": "./docs/api",
+  "entryPoints": ["./index.d.ts", "./wallet.d.ts", "./p2p.d.ts", "./detector.d.ts"],
+  "exclude": ["src/__test__", "**/node_modules/**"],
+  "externalPattern": ["**/node_modules/**"],
+  "excludePrivate": false,
+  "hideGenerator": true,
+  "readme": "README.md",
+  "theme": "default",
+  "tsconfig": "./tsconfig.json"
+}

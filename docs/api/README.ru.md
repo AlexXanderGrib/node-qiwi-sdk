@@ -7,14 +7,15 @@
 </center>
 
 [![Test Status](https://github.com/AlexXanderGrib/node-qiwi-sdk/actions/workflows/test.yml/badge.svg)](https://github.com/AlexXanderGrib/node-qiwi-sdk)
-[![codecov](https://img.shields.io/codecov/c/github/AlexXanderGrib/node-qiwi-sdk/main.svg)](https://codecov.io/gh/AlexXanderGrib/node-qiwi-sdk)
-[![license MIT](https://img.shields.io/npm/l/qiwi-sdk.svg)](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/main/LICENSE.txt)
-[![npm](https://img.shields.io/npm/v/qiwi-sdk.svg)](https://npmjs.com/package/qiwi-sdk)
-[![GitHub](https://img.shields.io/github/stars/AlexXanderGrib/node-qiwi-sdk.svg)](https://github.com/AlexXanderGrib/node-qiwi-sdk)
-[![last commit](https://img.shields.io/github/last-commit/AlexXanderGrib/node-qiwi-sdk.svg)](https://github.com/AlexXanderGrib/node-qiwi-sdk)
-[![qiwi-sdk](https://snyk.io/advisor/npm-package/qiwi-sdk/badge.svg)](https://snyk.io/advisor/npm-package/qiwi-sdk)
-[![Quality](https://img.shields.io/npms-io/quality-score/qiwi-sdk.svg?label=Quality%20%28npms.io%29&)](https://npms.io/search?q=qiwi-sdk)
 [![Downloads](https://img.shields.io/npm/dt/qiwi-sdk.svg)](https://npmjs.com/package/qiwi-sdk)
+[![last commit](https://img.shields.io/github/last-commit/AlexXanderGrib/node-qiwi-sdk.svg)](https://github.com/AlexXanderGrib/node-qiwi-sdk)
+[![codecov](https://img.shields.io/codecov/c/github/AlexXanderGrib/node-qiwi-sdk/main.svg)](https://codecov.io/gh/AlexXanderGrib/node-qiwi-sdk)
+[![GitHub](https://img.shields.io/github/stars/AlexXanderGrib/node-qiwi-sdk.svg)](https://github.com/AlexXanderGrib/node-qiwi-sdk)
+[![qiwi-sdk](https://snyk.io/advisor/npm-package/qiwi-sdk/badge.svg)](https://snyk.io/advisor/npm-package/qiwi-sdk)
+[![Known Vulnerabilities](https://snyk.io/test/npm/axios/badge.svg)](https://snyk.io/test/npm/axios)
+[![Quality](https://img.shields.io/npms-io/quality-score/qiwi-sdk.svg?label=quality%20%28npms.io%29&)](https://npms.io/search?q=qiwi-sdk)
+[![npm](https://img.shields.io/npm/v/qiwi-sdk.svg)](https://npmjs.com/package/qiwi-sdk)
+[![license MIT](https://img.shields.io/npm/l/qiwi-sdk.svg)](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/main/LICENSE.txt)
 
 Язык: **Русский** | [English](./README.md)
 
@@ -74,6 +75,8 @@
 
 ### Документация
 
+[👉 Смотреть документацию API 👈](./docs/api/modules.md)
+
 В таблице указанны текущие реализованные API.
 
 **Класс (Legacy v2)** - это класс совместимости только для тех,
@@ -93,13 +96,9 @@
 #### Миграция
 
 1. [Миграция с версии 2 на 3](./docs/migrations/from-2-to-3.md);
-2. [Миграция с версии 1 на 2](./docs/migrations/from-1-to-2) (на всякий случай);
+2. [Миграция с версии 1 на 2](./docs/migrations/from-1-to-2.md) (на всякий случай);
 3. [Миграция c `node-qiwi`](./docs/migrations/from-node-qiwi.md);
 4. [Миграция с `@qiwi/bill-payments-node-js-sdk`](./docs/migrations/from-bill-payments-sdk.md).
-
-#### Полная документация
-
-[**👉 Смотреть всю документацию 👈**](./docs/api/modules.md)
 
 ### Создание
 

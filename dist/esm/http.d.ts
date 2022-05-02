@@ -1,5 +1,7 @@
 /// <reference types="node" />
+import { AxiosResponse } from "axios";
 import { Collection, ReadonlyRecord } from "./apis/shared";
+import { OptionsWrapperWithSetter } from "./options-wrapper";
 export declare type Headers = ReadonlyRecord<string, string>;
 export interface HttpClientOptions<Rq = any, Rs = any> {
     headers?: Headers;
@@ -50,15 +52,14 @@ export interface HttpClient<Rq = any, Rs = any> {
  * @class DefaultHttpClient
  * @implements {HttpClient}
  */
-export declare class DefaultHttpClient implements HttpClient {
-    options: HttpClientOptions;
-    private readonly _axios;
+export declare class DefaultHttpClient extends OptionsWrapperWithSetter<HttpClientOptions> implements HttpClient {
     /**
-     * Creates an instance of DefaultHttpClient.
-     * @param {HttpClientOptions} options
+     *
+     *
+     * @protected
      * @memberof DefaultHttpClient
      */
-    constructor(options: HttpClientOptions);
+    protected readonly _axios: import("axios").AxiosInstance;
     /**
      *
      *
@@ -70,13 +71,13 @@ export declare class DefaultHttpClient implements HttpClient {
     /**
      *
      *
-     * @private
+     * @protected
      * @param {AxiosResponse} axiosResponse
      * @param {HttpRequestOptions} request
      * @return {HttpResponse}  {HttpResponse}
      * @memberof DefaultHttpClient
      */
-    private _mapResponse;
+    protected _mapResponse(axiosResponse: AxiosResponse, request: HttpRequestOptions): HttpResponse;
 }
 /**
  *

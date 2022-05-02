@@ -55,17 +55,19 @@ describe(P2P.name, () => {
     expect(response?.billId).toBe(billId);
     expect(response?.amount?.currency).toStrictEqual(amount.currency);
 
-    const hash = createHmac("sha256", qiwi.secretKey).update(
-      [
-        response.amount.currency,
-        response.amount.value,
-        response.billId,
-        response.siteId,
-        response.status.value
-      ].join("|")
-    );
+    const hash = createHmac("sha256", qiwi.secretKey)
+      .update(
+        [
+          response.amount.currency,
+          response.amount.value,
+          response.billId,
+          response.siteId,
+          response.status.value
+        ].join("|")
+      )
+      .digest("hex");
 
-    expect(qiwi.checkNotificationSignature(hash.digest("hex"), response)).toBe(true);
+    expect(qiwi.checkNotificationSignature(hash, response)).toBe(true);
     expect(
       P2P.patchPayUrl(response.payUrl, { paySource: P2P.PaySource.QIWI })
     ).toContain("paySource=qw");
@@ -177,24 +179,23 @@ describe(P2P.name, () => {
      * @return {Promise<Response>}
      */
     function sendNotification(bill: BillStatusData, valid = true) {
-      const hash = createHmac(
-        "sha256",
-        valid ? qiwi.secretKey : randomBytes(2)
-      ).update(
-        [
-          bill.amount.currency,
-          bill.amount.value,
-          bill.billId,
-          bill.siteId,
-          bill.status.value
-        ].join("|")
-      );
+      const hash = createHmac("sha256", valid ? qiwi.secretKey : randomBytes(2))
+        .update(
+          [
+            bill.amount.currency,
+            bill.amount.value,
+            bill.billId,
+            bill.siteId,
+            bill.status.value
+          ].join("|")
+        )
+        .digest("hex");
 
       return axios
         .post(url, JSON.stringify({ bill }), {
           headers: {
             "Content-Type": "application/json",
-            "X-Api-Signature-SHA256": hash.digest("hex")
+            "X-Api-Signature-SHA256": hash
           }
         })
         .catch((error) =>

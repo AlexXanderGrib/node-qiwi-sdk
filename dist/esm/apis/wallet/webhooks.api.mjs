@@ -1,10 +1,6 @@
-import { createHmac, timingSafeEqual } from 'crypto';
-import { formatQuerystring } from '../shared/querystring.mjs';
-import '../shared/time.mjs';
-import 'uuid';
-import { WalletApi } from './api.mjs';
-
-/* istanbul ignore file */
+import { WalletApi } from "./api.mjs";
+import { compareHmac } from "../shared/hmac.mjs";
+import { formatQuerystring } from "../shared/querystring.mjs";
 /**
  * # Уведомления (вебхуки)
  *
@@ -32,102 +28,104 @@ import { WalletApi } from './api.mjs';
  * @extends {WalletApi}
  */
 class WalletWebhooksApi extends WalletApi {
-    constructor() {
-        super(...arguments);
-        this.keys = new Map();
+  constructor() {
+    super(...arguments);
+    this.keys = new Map();
+  }
+  /**
+   * Регистрирует обработчик вебхука
+   * @param {string} parameter Адрес сервера обработки вебхуков. **Внимание! Длина исходного (не URL-encoded) адреса сервиса обработчика не должна превышать 100 символов.**
+   * @param {number} txnType Тип транзакций, по которым будут включены уведомления.. 0 - "входящие", 1 - "исходящие". 2 - "все"
+   * @return {Promise<WebHookInfo>}
+   */
+  async add(parameter, txnType) {
+    const hookResponse = await this.http.put(
+      `payment-notifier/v1/hooks?${formatQuerystring({
+        hookType: 1,
+        param: parameter,
+        txnType
+      })}`
+    );
+    this.activeId = hookResponse.hookId;
+    return hookResponse;
+  }
+  /**
+   * Удаляет обработчик вебхука
+   * @param {string} hookId UUID вебхука
+   * @return {Promise<*>}
+   */
+  remove(hookId = this.activeId) {
+    this.keys.delete(hookId);
+    this.activeId = undefined;
+    return this.http.delete(`payment-notifier/v1/hooks/${hookId}`);
+  }
+  /**
+   * Получает секретный ключ вебхука
+   * @param {string} hookId UUID вебхука
+   * @return {Promise<string>}
+   */
+  async getSecret(hookId = this.activeId) {
+    const { key } = await this.http.get(`payment-notifier/v1/hooks/${hookId}/key`);
+    this.keys.set(hookId, key);
+    return key;
+  }
+  /**
+   * Измененяет секретный ключ вебхука
+   * @param {string} hookId UUID вебхука
+   * @return {Promise<string>}
+   */
+  async updateSecret(hookId = this.activeId) {
+    const { key } = await this.http.post(
+      `payment-notifier/v1/hooks/${hookId}/newkey`
+    );
+    this.keys.set(hookId, key);
+    return key;
+  }
+  /**
+   *
+   * @return {Promise<WebHookInfo>}
+   */
+  async getActiveWebhook() {
+    const hookResponse = await this.http.get("payment-notifier/v1/hooks/active");
+    this.activeId = hookResponse.hookId;
+    return hookResponse;
+  }
+  /**
+   * Отправляет тестовое уведомление
+   * @link https://developer.qiwi.com/ru/qiwi-wallet-personal/#hook_test
+   *
+   * @return {Promise<*>}
+   */
+  testActiveWebhook() {
+    return this.http.get("payment-notifier/v1/hooks/test");
+  }
+  /**
+   * Проверяет подпись уведомления вебхука
+   * @param {WebhookTransaction} transaction Объект уведомления транзакции вебхука
+   * @return {Promise<boolean | undefined>}
+   */
+  async checkSign(transaction) {
+    const { hookId, payment, hash } = transaction;
+    if (!this.keys.has(hookId)) {
+      try {
+        await this.getSecret(hookId);
+      } catch (_a) {
+        return;
+      }
     }
-    /**
-     * Регистрирует обработчик вебхука
-     * @param {string} parameter Адрес сервера обработки вебхуков. **Внимание! Длина исходного (не URL-encoded) адреса сервиса обработчика не должна превышать 100 символов.**
-     * @param {number} txnType Тип транзакций, по которым будут включены уведомления.. 0 - "входящие", 1 - "исходящие". 2 - "все"
-     * @return {Promise<WebHookInfo>}
-     */
-    async add(parameter, txnType) {
-        const hookResponse = await this.http.put(`payment-notifier/v1/hooks?${formatQuerystring({
-            hookType: 1,
-            param: parameter,
-            txnType
-        })}`);
-        this.activeId = hookResponse.hookId;
-        return hookResponse;
-    }
-    /**
-     * Удаляет обработчик вебхука
-     * @param {string} hookId UUID вебхука
-     * @return {Promise<*>}
-     */
-    remove(hookId = this.activeId) {
-        this.keys.delete(hookId);
-        this.activeId = undefined;
-        return this.http.delete(`payment-notifier/v1/hooks/${hookId}`);
-    }
-    /**
-     * Получает секретный ключ вебхука
-     * @param {string} hookId UUID вебхука
-     * @return {Promise<string>}
-     */
-    async getSecret(hookId = this.activeId) {
-        const { key } = await this.http.get(`payment-notifier/v1/hooks/${hookId}/key`);
-        this.keys.set(hookId, key);
-        return key;
-    }
-    /**
-     * Измененяет секретный ключ вебхука
-     * @param {string} hookId UUID вебхука
-     * @return {Promise<string>}
-     */
-    async updateSecret(hookId = this.activeId) {
-        const { key } = await this.http.post(`payment-notifier/v1/hooks/${hookId}/newkey`);
-        this.keys.set(hookId, key);
-        return key;
-    }
-    /**
-     *
-     * @return {Promise<WebHookInfo>}
-     */
-    async getActiveWebhook() {
-        const hookResponse = await this.http.get("payment-notifier/v1/hooks/active");
-        this.activeId = hookResponse.hookId;
-        return hookResponse;
-    }
-    /**
-     * Отправляет тестовое уведомление
-     * @link https://developer.qiwi.com/ru/qiwi-wallet-personal/#hook_test
-     *
-     * @return {Promise<*>}
-     */
-    testActiveWebhook() {
-        return this.http.get("payment-notifier/v1/hooks/test");
-    }
-    /**
-     * Проверяет подпись уведомления вебхука
-     * @param {WebhookTransaction} transaction Объект уведомления транзакции вебхука
-     * @return {Promise<boolean | undefined>}
-     */
-    async checkSign(transaction) {
-        const { hookId, payment, hash } = transaction;
-        if (!this.keys.has(hookId)) {
-            try {
-                await this.getSecret(hookId);
-            }
-            catch (_a) {
-                return;
-            }
-        }
-        const signPayload = payment.signFields
-            .split(",")
-            .map((p) => 
-        // eslint-disable-next-line unicorn/no-array-reduce
+    const signPayload = payment.signFields
+      .split(",")
+      .map((p) =>
         p.split(".").reduce((p, c) => {
-            // eslint-disable-next-line security/detect-object-injection
-            return (p === null || p === void 0 ? void 0 : p[c]) || "null";
-        }, payment))
-            .join("|");
-        const hash2 = createHmac("sha256", Buffer.from(this.keys.get(hookId), "base64"))
-            .update(signPayload)
-            .digest();
-        return timingSafeEqual(Buffer.from(hash), hash2);
-    }
+          return (p === null || p === void 0 ? void 0 : p[c]) || "null";
+        }, payment)
+      )
+      .join("|");
+    return compareHmac({
+      key: Buffer.from(this.keys.get(hookId), "base64"),
+      data: signPayload,
+      digest: hash
+    });
+  }
 }
-
 export { WalletWebhooksApi };

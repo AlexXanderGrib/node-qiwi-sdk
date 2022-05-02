@@ -1,7 +1,7 @@
-import { stringify } from "querystring";
 import { SimpleJsonHttp } from "../../http";
 import { USER_AGENT } from "../../identity";
 import { ApiClass } from "../api";
+import { formatQuerystring } from "../shared";
 import { DetectorDetectApi } from "./detect.api";
 import { DetectorApiOptions } from "./detector.options";
 
@@ -26,7 +26,7 @@ export class Detector extends ApiClass<DetectorApiOptions> {
 
     http.client.options = {
       ...http.client.options,
-      stringifyBody: (body) => stringify(body),
+      stringifyBody: (body) => formatQuerystring(body),
       baseURL: "https://qiwi.com/",
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",

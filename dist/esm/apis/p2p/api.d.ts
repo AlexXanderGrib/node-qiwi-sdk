@@ -1,20 +1,12 @@
-import { P2pApiOptions } from "./p2p.options";
+import { ApiSubclass } from "../api";
+import type { P2pApiOptions } from "./p2p.options";
 /**
  *
  *
  * @export
  * @class P2pApi
  */
-export declare class P2pApi {
-    protected readonly _options: P2pApiOptions;
-    /**
-     *
-     *
-     * @readonly
-     * @protected
-     * @memberof P2pApi
-     */
-    protected get http(): import("../../http").SimpleJsonHttp;
+export declare class P2pApi extends ApiSubclass<P2pApiOptions> {
     /**
      *
      *
@@ -31,10 +23,4 @@ export declare class P2pApi {
      * @memberof P2pApi
      */
     protected get secretKey(): string;
-    /**
-     * Creates an instance of P2pApi.
-     * @param {P2pApiOptions} _options
-     * @memberof P2pApi
-     */
-    constructor(_options: P2pApiOptions);
 }

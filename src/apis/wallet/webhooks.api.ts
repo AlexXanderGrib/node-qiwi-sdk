@@ -1,7 +1,6 @@
 /* istanbul ignore file */
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
-import { createHmac, timingSafeEqual } from "crypto";
-import { formatQuerystring } from "../shared";
+import { compareHmac, formatQuerystring } from "../shared";
 import { WalletApi } from "./api";
 import { WebHookInfo, WebhookTransaction } from "./wallet.types";
 
@@ -143,10 +142,10 @@ export class WalletWebhooksApi extends WalletApi {
       )
       .join("|");
 
-    const hash2 = createHmac("sha256", Buffer.from(this.keys.get(hookId)!, "base64"))
-      .update(signPayload)
-      .digest();
-
-    return timingSafeEqual(Buffer.from(hash), hash2);
+    return compareHmac({
+      key: Buffer.from(this.keys.get(hookId)!, "base64"),
+      data: signPayload,
+      digest: hash
+    });
   }
 }

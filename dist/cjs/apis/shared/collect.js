@@ -1,7 +1,5 @@
-'use strict';
-
-Object.defineProperty(exports, '__esModule', { value: true });
-
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 /**
  *
  *
@@ -11,8 +9,6 @@ Object.defineProperty(exports, '__esModule', { value: true });
  * @return {T[]}
  */
 function collect(collection) {
-    // eslint-disable-next-line unicorn/prefer-spread
-    return Array.from(collection);
+  return Array.from(collection);
 }
-
 exports.collect = collect;

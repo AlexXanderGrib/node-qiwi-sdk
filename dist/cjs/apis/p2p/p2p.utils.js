@@ -1,8 +1,5 @@
-'use strict';
-
-Object.defineProperty(exports, '__esModule', { value: true });
-
-/* istanbul ignore file */
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 /**
  * @template {CallableFunction} T
  *
@@ -10,18 +7,15 @@ Object.defineProperty(exports, '__esModule', { value: true });
  * @return {T}
  */
 function promise(function_) {
-    const wrapper = (...parameters) => {
-        try {
-            const result = function_(...parameters);
-            if (result instanceof Promise)
-                return result;
-            return Promise.resolve(result);
-        }
-        catch (error) {
-            return Promise.reject(error);
-        }
-    };
-    return wrapper;
+  const wrapper = (...parameters) => {
+    try {
+      const result = function_(...parameters);
+      if (result instanceof Promise) return result;
+      return Promise.resolve(result);
+    } catch (error) {
+      return Promise.reject(error);
+    }
+  };
+  return wrapper;
 }
-
 exports.promise = promise;

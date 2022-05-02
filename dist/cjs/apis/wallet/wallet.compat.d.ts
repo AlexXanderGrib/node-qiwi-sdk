@@ -25,6 +25,17 @@ export declare class _WalletCompat extends Wallet {
     /**
      *
      *
+     * @private
+     * @template T
+     * @param {(types.StringOrNumber | undefined)} walletId
+     * @param {Function} executor
+     * @return {*}  {Promise<T>}
+     * @memberof _WalletCompat
+     */
+    private _executeWithWalletId;
+    /**
+     *
+     *
      * @readonly
      * @memberof _WalletCompat
      */
@@ -53,13 +64,19 @@ export declare class _WalletCompat extends Wallet {
      * вашего QIWI кошелька.
      *
      * @param {types.IdentificationBase} data
+     * @param {types.StringOrNumber} [walletId] Номер телефона привязанный к кошельку
+     * @return {Promise<types.IdentificationResponse>} {Promise<types.IdentificationResponse>}
+     *
      */
-    setIdentification(data: types.IdentificationBase): Promise<types.IdentificationResponse>;
+    setIdentification(data: types.IdentificationBase, walletId?: types.StringOrNumber): Promise<types.IdentificationResponse>;
     /**
      * Данный запрос позволяет выгрузить маскированные данные и
      * статус идентификации своего QIWI кошелька.
+     *
+     * @param {types.StringOrNumber} [walletId] Номер телефона привязанный к кошельку
+     * @return {Promise<types.IdentificationResponse>} {Promise<types.IdentificationResponse>}
      */
-    getIdentification(): Promise<types.IdentificationResponse>;
+    getIdentification(walletId?: types.StringOrNumber): Promise<types.IdentificationResponse>;
     /**
      * Запрос возвращает текущие уровни лимитов по операциям в вашем
      * QIWI кошельке. Лимиты действуют как ограничения на сумму
@@ -67,28 +84,32 @@ export declare class _WalletCompat extends Wallet {
      *
      * @template Limits
      * @param {Limits} limits
+     * @param {types.StringOrNumber} [walletId] Номер телефона привязанный к кошельку
      */
-    getLimits<Limits extends types.LimitTypeAny[] = types.LimitTypeAny[]>(limits: Limits): Promise<types.LimitsResponse<Limits[number]>>;
+    getLimits<Limits extends types.LimitTypeAny[] = types.LimitTypeAny[]>(limits: Limits, walletId?: types.StringOrNumber): Promise<types.LimitsResponse<Limits[number]>>;
     /**
      * Запрос проверяет, есть ли ограничение на исходящие платежи с
      * QIWI Кошелька.
+     * @param {types.StringOrNumber} [walletId] Номер телефона привязанный к кошельку
      */
-    getRestrictions(): Promise<types.Restrictions>;
+    getRestrictions(walletId?: types.StringOrNumber): Promise<types.Restrictions>;
     /**
      * Запрос выгружает список платежей и пополнений вашего кошелька.
      * Можно использовать фильтр по количеству, ID и дате
      * (интервалу дат) транзакций.
      *
      * @param {types.GetPaymentHistoryParams} parameters Тело запроса
+     * @param {types.StringOrNumber} [walletId] Номер телефона привязанный к кошельку
      */
-    getPaymentHistory(parameters: types.GetPaymentHistoryParams): Promise<types.GetTransactionsHistoryResponse>;
+    getPaymentHistory(parameters: types.GetPaymentHistoryParams, walletId?: types.StringOrNumber): Promise<types.GetTransactionsHistoryResponse>;
     /**
      * Данный запрос используется для получения сводной статистики
      * по суммам платежей за заданный период.
      *
      * @param {types.GetPaymentHistoryTotalParams} parameters
+     * @param {types.StringOrNumber} [walletId] Номер телефона привязанный к кошельку
      */
-    getPaymentHistoryTotal(parameters: types.GetPaymentHistoryTotalParams): Promise<types.GetPaymentHistoryTotalResponse>;
+    getPaymentHistoryTotal(parameters: types.GetPaymentHistoryTotalParams, walletId?: types.StringOrNumber): Promise<types.GetPaymentHistoryTotalResponse>;
     /**
      * Запрос используется для получения информации по определенной
      * транзакции из вашей истории платежей.
@@ -114,27 +135,29 @@ export declare class _WalletCompat extends Wallet {
     /**
      * Успешный ответ содержит JSON-массив счетов вашего QIWI
      * Кошелька для фондирования платежей и текущие балансы счетов
+     * @param {types.StringOrNumber} [walletId] Номер телефона привязанный к кошельку
      */
-    getAccounts(): Promise<types.GetAccountsResponse["accounts"]>;
+    getAccounts(walletId?: types.StringOrNumber): Promise<types.GetAccountsResponse["accounts"]>;
     /**
      * Успешный JSON-ответ содержит данные о счетах, которые можно
      * создать
+     * @param {types.StringOrNumber} [walletId] Номер телефона привязанный к кошельку
      */
-    getAccountOffers(): Promise<types.GetAccountOffersResponse>;
+    getAccountOffers(walletId?: types.StringOrNumber): Promise<types.GetAccountOffersResponse>;
     /**
      * Создаёт новый счёт по параметру `alias`
      * Успешный ответ возвращает пустую строку
      * @param {string} alias Псевдоним нового счета (см. {@link https://developer.qiwi.com/ru/qiwi-wallet-personal/?http#funding_offer|запрос доступных счетов})
-     * @param {StringOrNumber} wallet Номер кошелька
+     * @param {types.StringOrNumber} [walletId] Номер телефона привязанный к кошельку
      */
-    createAccount(alias: string): Promise<"">;
+    createAccount(alias: string, walletId?: types.StringOrNumber): Promise<"">;
     /**
      * Устанавливает счёт по умолчанию
      * Успешный ответ возвращает пустую строку
      * @param {string} alias Псевдоним счета (см. {@link https://developer.qiwi.com/ru/qiwi-wallet-personal/?http#funding_offer|запрос доступных счетов})
-     * @param {StringOrNumber} wallet Номер кошелька
+     * @param {types.StringOrNumber} [walletId] Номер телефона привязанный к кошельку
      */
-    setDefaultAccount(alias: string): Promise<"">;
+    setDefaultAccount(alias: string, walletId?: types.StringOrNumber): Promise<"">;
     /**
      *
      * Получает сумму комиссии по заданным реквизитам
@@ -215,32 +238,35 @@ export declare class _WalletCompat extends Wallet {
      * Блокирует карту
      *
      * @param {types.StringOrNumber} cardId
+     * @param {types.StringOrNumber} [walletId] Номер телефона привязанный к кошельку
      *
      * @return {Promise<*>}
      */
-    blockCard(cardId: types.StringOrNumber): Promise<any>;
+    blockCard(cardId: types.StringOrNumber, walletId?: types.StringOrNumber): Promise<any>;
     /**
      * Разблокирует карту
      *
-     * @param {types.CardUnblockResponse} cardId
-     * @param {types.CardUnblockResponse} wallet
+     * @param {types.StringOrNumber} cardId
+     * @param {types.StringOrNumber} [walletId] Номер телефона привязанный к кошельку
      * @return {Promise<types.CardUnblockResponse>}
      */
-    unblockCard(cardId: types.StringOrNumber): Promise<types.CardUnblockResponse>;
+    unblockCard(cardId: types.StringOrNumber, walletId?: types.StringOrNumber): Promise<types.CardUnblockResponse>;
     /**
      * Получает реквизиты карты
      *
      * @param {types.StringOrNumber} cardId
+     * @param {types.StringOrNumber} [walletId] Номер телефона привязанный к кошельку
      * @return {Promise<types.CardRequisitesResponse>}
      */
-    getCardRequisites(cardId: types.StringOrNumber): Promise<types.CardRequisitesResponse>;
+    getCardRequisites(cardId: types.StringOrNumber, walletId?: types.StringOrNumber): Promise<types.CardRequisitesResponse>;
     /**
      *
      * @param {types.StringOrNumber} cardId
      * @param {string} alias
+     * @param {types.StringOrNumber} [walletId] Номер телефона привязанный к кошельку
      * @return {Promise<types.CardRenameResponse>}
      */
-    renameCard(cardId: types.StringOrNumber, alias: string): Promise<types.CardRenameResponse>;
+    renameCard(cardId: types.StringOrNumber, alias: string, walletId?: types.StringOrNumber): Promise<types.CardRenameResponse>;
     /**
      * Регистрирует обработчик вебхука
      * @param {string} parameter Адрес сервера обработки вебхуков. **Внимание! Длина исходного (не URL-encoded) адреса сервиса обработчика не должна превышать 100 символов.**

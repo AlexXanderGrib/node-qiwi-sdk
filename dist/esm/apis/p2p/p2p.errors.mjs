@@ -1,7 +1,5 @@
-import { ExtendedError } from '../../error.mjs';
-import { HttpError } from '../../http.mjs';
-
-/* istanbul ignore file */
+import { ExtendedError } from "../../error.mjs";
+import { HttpError } from "../../http.mjs";
 /**
  *
  *
@@ -10,17 +8,17 @@ import { HttpError } from '../../http.mjs';
  * @extends {ExtendedError}
  */
 class P2pApiError extends ExtendedError {
-    /**
-     * Creates an instance of P2pApiError.
-     * @param {P2pApiErrorResponse} response
-     * @memberof P2pApiError
-     */
-    constructor(response) {
-        super(response.userMessage);
-        this.response = response;
-        this.dateTime = new Date(this.response.dateTime);
-        this.serviceName = this.response.serviceName;
-    }
+  /**
+   * Creates an instance of P2pApiError.
+   * @param {P2pApiErrorResponse} response
+   * @memberof P2pApiError
+   */
+  constructor(response) {
+    super(response.userMessage);
+    this.response = response;
+    this.dateTime = new Date(this.response.dateTime);
+    this.serviceName = this.response.serviceName;
+  }
 }
 /**
  *
@@ -30,13 +28,13 @@ class P2pApiError extends ExtendedError {
  * @extends {ExtendedError}
  */
 class P2pAuthorizationError extends ExtendedError {
-    /**
-     * Creates an instance of P2pAuthorizationError.
-     * @memberof P2pAuthorizationError
-     */
-    constructor() {
-        super("Unauthorized api request");
-    }
+  /**
+   * Creates an instance of P2pAuthorizationError.
+   * @memberof P2pAuthorizationError
+   */
+  constructor() {
+    super("Unauthorized api request");
+  }
 }
 /**
  *
@@ -46,13 +44,13 @@ class P2pAuthorizationError extends ExtendedError {
  * @extends {ExtendedError}
  */
 class P2pBillNotificationError extends ExtendedError {
-    /**
-     * Creates an instance of P2pBillNotificationError.
-     * @memberof P2pBillNotificationError
-     */
-    constructor() {
-        super("Notification signature mismatch");
-    }
+  /**
+   * Creates an instance of P2pBillNotificationError.
+   * @memberof P2pBillNotificationError
+   */
+  constructor() {
+    super("Notification signature mismatch");
+  }
 }
 /**
  *
@@ -62,17 +60,20 @@ class P2pBillNotificationError extends ExtendedError {
  * @return {*}
  */
 function mapHttpErrors(error) {
-    var _a;
-    if (!(error instanceof HttpError))
-        return error;
-    const response = error.response;
-    if (response.statusCode === 401) {
-        return new P2pAuthorizationError();
-    }
-    if ((_a = response.body) === null || _a === void 0 ? void 0 : _a.description) {
-        return new P2pApiError(response.body);
-    }
-    return error;
+  var _a;
+  if (!(error instanceof HttpError)) return error;
+  const response = error.response;
+  if (response.statusCode === 401) {
+    return new P2pAuthorizationError();
+  }
+  if ((_a = response.body) === null || _a === void 0 ? void 0 : _a.description) {
+    return new P2pApiError(response.body);
+  }
+  return error;
 }
-
-export { P2pApiError, P2pAuthorizationError, P2pBillNotificationError, mapHttpErrors };
+export {
+  P2pApiError,
+  P2pAuthorizationError,
+  P2pBillNotificationError,
+  mapHttpErrors
+};

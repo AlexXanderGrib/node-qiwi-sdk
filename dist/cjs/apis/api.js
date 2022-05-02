@@ -1,50 +1,50 @@
-'use strict';
-
-Object.defineProperty(exports, '__esModule', { value: true });
-
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const optionsWrapper = require("../options-wrapper.js");
 /**
  *
  *
  * @export
- * @abstract
  * @class ApiClass
  * @template T
  */
-class ApiClass {
-    /**
-     * Creates an instance of ApiClass.
-     * @param {T} _options
-     * @memberof ApiClass
-     */
-    constructor(_options) {
-        this._options = _options;
-    }
-    /**
-     *
-     *
-     * @memberof WalletCompat
-     */
-    get agent() {
-        return this.options.http.client.options.agent;
-    }
-    /**
-     *
-     * @param {*} agent
-     * @memberof WalletCompat
-     */
-    set agent(agent) {
-        /* istanbul ignore next */
-        this.options.http.client.options.agent = agent;
-    }
-    /**
-     *
-     *
-     * @readonly
-     * @memberof ApiClass
-     */
-    get options() {
-        return this._options;
-    }
+class ApiClass extends optionsWrapper.OptionsWrapperWithGetter {
+  /**
+   *
+   *
+   * @memberof WalletCompat
+   */
+  get agent() {
+    return this.options.http.client.options.agent;
+  }
+  /**
+   *
+   * @param {*} agent
+   * @memberof WalletCompat
+   */
+  set agent(agent) {
+    this.options.http.client.options.agent = agent;
+  }
 }
-
+/**
+ *
+ *
+ * @export
+ * @class ApiSubclass
+ * @extends {OptionsWrapper<T>}
+ * @template T
+ */
+class ApiSubclass extends optionsWrapper.OptionsWrapper {
+  /**
+   *
+   *
+   * @readonly
+   * @protected
+   * @memberof ApiSubclass
+   */
+  get http() {
+    return this._options.http;
+  }
+}
 exports.ApiClass = ApiClass;
+exports.ApiSubclass = ApiSubclass;

@@ -27,11 +27,12 @@ import {
   CodeResponse,
   TokenResponse
 } from "./wallet.types";
-import { stringify } from "querystring";
+
 import { USER_AGENT } from "../../identity";
 import { mapHttpErrors } from "./wallet.errors";
 import { ApiClass } from "../api";
 import { WalletProvidersApi } from "./providers.api";
+import { formatQuerystring } from "../shared";
 
 /**
  * @callback SetupHttp
@@ -194,15 +195,17 @@ export class Wallet extends ApiClass<WalletApiOptions> {
       headers: {
         "Content-Type": "application/x-www-form-urlencoded"
       },
-      stringifyBody: stringify
+      stringifyBody: formatQuerystring
     };
+
+    const clientId = "api_wallet_private";
 
     const codeResponse: CodeResponse = await this._options.http.request({
       ...commonOptions,
       url: "authorize",
       body: {
         response_type: "code",
-        client_id: "api_wallet_private",
+        client_id: clientId,
         token: this.options.token,
         client_software: "api"
       }
@@ -215,7 +218,7 @@ export class Wallet extends ApiClass<WalletApiOptions> {
       url: "token",
       body: {
         grant_type: "authorization_code",
-        client_id: "api_wallet_private",
+        client_id: clientId,
         client_secret: "hTFPyt",
         code
       }

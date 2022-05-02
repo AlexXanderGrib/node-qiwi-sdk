@@ -1,3 +1,4 @@
+import { AnyResponse } from "../shared";
 import { DetectorApi } from "./api";
 /**
  *
@@ -10,10 +11,11 @@ export declare class DetectorDetectApi extends DetectorApi {
     /**
      * Вытаскивает ID провайдера из объекта ответа
      *
+     * @protected
      * @param {*} response
      * @return {number} ID провайдера
      */
-    private _extractProvider;
+    protected _extractProvider(response: AnyResponse): number;
     /**
      * Возвращает ID провайдера QIWI по номеру телефона.
      * Используется для пополнения на счёта мобильного

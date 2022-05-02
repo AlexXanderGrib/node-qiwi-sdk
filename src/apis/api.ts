@@ -1,4 +1,5 @@
 import { SimpleJsonHttp } from "../http";
+import { OptionsWrapper, OptionsWrapperWithGetter } from "../options-wrapper";
 
 export interface ApiClassOptions {
   readonly http: SimpleJsonHttp;
@@ -8,11 +9,12 @@ export interface ApiClassOptions {
  *
  *
  * @export
- * @abstract
  * @class ApiClass
  * @template T
  */
-export abstract class ApiClass<T extends ApiClassOptions = ApiClassOptions> {
+export class ApiClass<
+  T extends ApiClassOptions = ApiClassOptions
+> extends OptionsWrapperWithGetter<T> {
   /**
    *
    *
@@ -31,21 +33,27 @@ export abstract class ApiClass<T extends ApiClassOptions = ApiClassOptions> {
     /* istanbul ignore next */
     this.options.http.client.options.agent = agent;
   }
+}
 
+/**
+ *
+ *
+ * @export
+ * @class ApiSubclass
+ * @extends {OptionsWrapper<T>}
+ * @template T
+ */
+export class ApiSubclass<
+  T extends ApiClassOptions = ApiClassOptions
+> extends OptionsWrapper<T> {
   /**
    *
    *
    * @readonly
-   * @memberof ApiClass
+   * @protected
+   * @memberof ApiSubclass
    */
-  get options() {
-    return this._options;
+  protected get http() {
+    return this._options.http;
   }
-
-  /**
-   * Creates an instance of ApiClass.
-   * @param {T} _options
-   * @memberof ApiClass
-   */
-  constructor(protected readonly _options: T) {}
 }

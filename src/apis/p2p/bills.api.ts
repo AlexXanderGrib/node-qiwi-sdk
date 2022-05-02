@@ -1,5 +1,9 @@
-import { createHmac, timingSafeEqual } from "crypto";
-import { formatOffsetDate, formatQuerystring, generateUUID } from "../shared";
+import {
+  compareHmac,
+  formatOffsetDate,
+  formatQuerystring,
+  generateUUID
+} from "../shared";
 import { P2pApi } from "./api";
 import {
   BillCreateParameters,
@@ -149,9 +153,12 @@ export class P2pBillsApi extends P2pApi {
       body.siteId,
       body.status.value
     ].join("|");
-    const hash = createHmac("sha256", merchantSecret).update(data).digest();
 
-    return timingSafeEqual(Buffer.from(signature, "hex"), hash);
+    return compareHmac({
+      key: merchantSecret,
+      data,
+      digest: signature
+    });
   }
 
   /**

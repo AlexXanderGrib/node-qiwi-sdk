@@ -1,15 +1,10 @@
-'use strict';
-
-Object.defineProperty(exports, '__esModule', { value: true });
-
-var wallet = require('./wallet.js');
-var wallet_compat = require('./wallet.compat.js');
-var wallet_compatNodeQiwi = require('./wallet.compat-node-qiwi.js');
-var wallet_errors = require('./wallet.errors.js');
-var wallet_types = require('./wallet.types.js');
-
-
-
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const wallet = require("./wallet.js"),
+  wallet_compat = require("./wallet.compat.js"),
+  wallet_compatNodeQiwi = require("./wallet.compat-node-qiwi.js"),
+  wallet_errors = require("./wallet.errors.js"),
+  wallet_types = require("./wallet.types.js");
 exports.Wallet = wallet.Wallet;
 exports.Personal = wallet_compat._WalletCompat;
 exports.WalletCompat = wallet_compat._WalletCompat;
@@ -20,51 +15,51 @@ exports.PersonalApiError = wallet_errors.WalletApiError;
 exports.WalletApiError = wallet_errors.WalletApiError;
 exports.WalletApiShortError = wallet_errors.WalletApiShortError;
 exports.WalletAuthorizationError = wallet_errors.WalletAuthorizationError;
-Object.defineProperty(exports, 'CardActionStatus', {
+Object.defineProperty(exports, "CardActionStatus", {
   enumerable: true,
-  get: function () { return wallet_types.CardActionStatus; }
+  get: () => wallet_types.CardActionStatus
 });
-Object.defineProperty(exports, 'CardStatus', {
+Object.defineProperty(exports, "CardStatus", {
   enumerable: true,
-  get: function () { return wallet_types.CardStatus; }
+  get: () => wallet_types.CardStatus
 });
-Object.defineProperty(exports, 'ChequeFormat', {
+Object.defineProperty(exports, "ChequeFormat", {
   enumerable: true,
-  get: function () { return wallet_types.ChequeFormat; }
+  get: () => wallet_types.ChequeFormat
 });
-Object.defineProperty(exports, 'CommissionPayer', {
+Object.defineProperty(exports, "CommissionPayer", {
   enumerable: true,
-  get: function () { return wallet_types.CommissionPayer; }
+  get: () => wallet_types.CommissionPayer
 });
-Object.defineProperty(exports, 'Currency', {
+Object.defineProperty(exports, "Currency", {
   enumerable: true,
-  get: function () { return wallet_types.Currency; }
+  get: () => wallet_types.Currency
 });
-Object.defineProperty(exports, 'LimitType', {
+Object.defineProperty(exports, "LimitType", {
   enumerable: true,
-  get: function () { return wallet_types.LimitType; }
+  get: () => wallet_types.LimitType
 });
-Object.defineProperty(exports, 'PaymentHistorySource', {
+Object.defineProperty(exports, "PaymentHistorySource", {
   enumerable: true,
-  get: function () { return wallet_types.PaymentHistorySource; }
+  get: () => wallet_types.PaymentHistorySource
 });
-Object.defineProperty(exports, 'PersonIdentificationLevel', {
+Object.defineProperty(exports, "PersonIdentificationLevel", {
   enumerable: true,
-  get: function () { return wallet_types.PersonIdentificationLevel; }
+  get: () => wallet_types.PersonIdentificationLevel
 });
-Object.defineProperty(exports, 'QuickPayRecipients', {
+Object.defineProperty(exports, "QuickPayRecipients", {
   enumerable: true,
-  get: function () { return wallet_types.QuickPayRecipients; }
+  get: () => wallet_types.QuickPayRecipients
 });
-Object.defineProperty(exports, 'Recipients', {
+Object.defineProperty(exports, "Recipients", {
   enumerable: true,
-  get: function () { return wallet_types.Recipients; }
+  get: () => wallet_types.Recipients
 });
-Object.defineProperty(exports, 'TransactionStatus', {
+Object.defineProperty(exports, "TransactionStatus", {
   enumerable: true,
-  get: function () { return wallet_types.TransactionStatus; }
+  get: () => wallet_types.TransactionStatus
 });
-Object.defineProperty(exports, 'TransactionType', {
+Object.defineProperty(exports, "TransactionType", {
   enumerable: true,
-  get: function () { return wallet_types.TransactionType; }
+  get: () => wallet_types.TransactionType
 });

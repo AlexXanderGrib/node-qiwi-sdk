@@ -32,6 +32,36 @@ export class _WalletCompat extends Wallet {
   /**
    *
    *
+   * @private
+   * @template T
+   * @param {(types.StringOrNumber | undefined)} walletId
+   * @param {Function} executor
+   * @return {*}  {Promise<T>}
+   * @memberof _WalletCompat
+   */
+  private async _executeWithWalletId<T>(
+    walletId: types.StringOrNumber | undefined,
+    executor: (wallet: _WalletCompat) => Promise<T>
+  ): Promise<T> {
+    if (!walletId || walletId === this.walletId) {
+      // Если walletId не меняется, то нет смысла показывать
+      // `_executeWithWalletId` в стактрейсе
+      return executor(this);
+    }
+
+    const instance = new _WalletCompat(this.token, walletId.toString());
+    instance.agent = this.agent;
+
+    try {
+      return await executor(instance);
+    } finally {
+      instance.agent = undefined;
+    }
+  }
+
+  /**
+   *
+   *
    * @readonly
    * @memberof _WalletCompat
    */
@@ -72,19 +102,32 @@ export class _WalletCompat extends Wallet {
    * вашего QIWI кошелька.
    *
    * @param {types.IdentificationBase} data
+   * @param {types.StringOrNumber} [walletId] Номер телефона привязанный к кошельку
+   * @return {Promise<types.IdentificationResponse>} {Promise<types.IdentificationResponse>}
+   *
    */
   async setIdentification(
-    data: types.IdentificationBase
+    data: types.IdentificationBase,
+    walletId: types.StringOrNumber = this.walletId
   ): Promise<types.IdentificationResponse> {
-    return await this.identification.set(data);
+    return await this._executeWithWalletId(walletId, async () => {
+      return await this.identification.set(data);
+    });
   }
 
   /**
    * Данный запрос позволяет выгрузить маскированные данные и
    * статус идентификации своего QIWI кошелька.
+   *
+   * @param {types.StringOrNumber} [walletId] Номер телефона привязанный к кошельку
+   * @return {Promise<types.IdentificationResponse>} {Promise<types.IdentificationResponse>}
    */
-  async getIdentification(): Promise<types.IdentificationResponse> {
-    return await this.identification.get();
+  async getIdentification(
+    walletId: types.StringOrNumber = this.walletId
+  ): Promise<types.IdentificationResponse> {
+    return await this._executeWithWalletId(walletId, async () => {
+      return await this.identification.get();
+    });
   }
 
   /**
@@ -94,19 +137,28 @@ export class _WalletCompat extends Wallet {
    *
    * @template Limits
    * @param {Limits} limits
+   * @param {types.StringOrNumber} [walletId] Номер телефона привязанный к кошельку
    */
   async getLimits<Limits extends types.LimitTypeAny[] = types.LimitTypeAny[]>(
-    limits: Limits
+    limits: Limits,
+    walletId: types.StringOrNumber = this.walletId
   ): Promise<types.LimitsResponse<Limits[number]>> {
-    return await this.limits.get<Limits>(limits);
+    return await this._executeWithWalletId(walletId, async () => {
+      return await this.limits.get<Limits>(limits);
+    });
   }
 
   /**
    * Запрос проверяет, есть ли ограничение на исходящие платежи с
    * QIWI Кошелька.
+   * @param {types.StringOrNumber} [walletId] Номер телефона привязанный к кошельку
    */
-  async getRestrictions(): Promise<types.Restrictions> {
-    return await this.restrictions.get();
+  async getRestrictions(
+    walletId: types.StringOrNumber = this.walletId
+  ): Promise<types.Restrictions> {
+    return await this._executeWithWalletId(walletId, async () => {
+      return await this.restrictions.get();
+    });
   }
 
   /**
@@ -115,22 +167,30 @@ export class _WalletCompat extends Wallet {
    * (интервалу дат) транзакций.
    *
    * @param {types.GetPaymentHistoryParams} parameters Тело запроса
+   * @param {types.StringOrNumber} [walletId] Номер телефона привязанный к кошельку
    */
   async getPaymentHistory(
-    parameters: types.GetPaymentHistoryParams
+    parameters: types.GetPaymentHistoryParams,
+    walletId: types.StringOrNumber = this.walletId
   ): Promise<types.GetTransactionsHistoryResponse> {
-    return await this.paymentHistory.getHistory(parameters);
+    return await this._executeWithWalletId(walletId, async () => {
+      return await this.paymentHistory.getHistory(parameters);
+    });
   }
   /**
    * Данный запрос используется для получения сводной статистики
    * по суммам платежей за заданный период.
    *
    * @param {types.GetPaymentHistoryTotalParams} parameters
+   * @param {types.StringOrNumber} [walletId] Номер телефона привязанный к кошельку
    */
   async getPaymentHistoryTotal(
-    parameters: types.GetPaymentHistoryTotalParams
+    parameters: types.GetPaymentHistoryTotalParams,
+    walletId: types.StringOrNumber = this.walletId
   ): Promise<types.GetPaymentHistoryTotalResponse> {
-    return await this.paymentHistory.getTotal(parameters);
+    return await this._executeWithWalletId(walletId, async () => {
+      return await this.paymentHistory.getTotal(parameters);
+    });
   }
   /**
    * Запрос используется для получения информации по определенной
@@ -183,27 +243,42 @@ export class _WalletCompat extends Wallet {
   /**
    * Успешный ответ содержит JSON-массив счетов вашего QIWI
    * Кошелька для фондирования платежей и текущие балансы счетов
+   * @param {types.StringOrNumber} [walletId] Номер телефона привязанный к кошельку
    */
-  async getAccounts(): Promise<types.GetAccountsResponse["accounts"]> {
-    return await this.fundingSources.getAccounts();
+  async getAccounts(
+    walletId: types.StringOrNumber = this.walletId
+  ): Promise<types.GetAccountsResponse["accounts"]> {
+    return await this._executeWithWalletId(walletId, async () => {
+      return await this.fundingSources.getAccounts();
+    });
   }
 
   /**
    * Успешный JSON-ответ содержит данные о счетах, которые можно
    * создать
+   * @param {types.StringOrNumber} [walletId] Номер телефона привязанный к кошельку
    */
-  async getAccountOffers(): Promise<types.GetAccountOffersResponse> {
-    return await this.fundingSources.getAccountOffers();
+  async getAccountOffers(
+    walletId: types.StringOrNumber = this.walletId
+  ): Promise<types.GetAccountOffersResponse> {
+    return await this._executeWithWalletId(walletId, async () => {
+      return await this.fundingSources.getAccountOffers();
+    });
   }
 
   /**
    * Создаёт новый счёт по параметру `alias`
    * Успешный ответ возвращает пустую строку
    * @param {string} alias Псевдоним нового счета (см. {@link https://developer.qiwi.com/ru/qiwi-wallet-personal/?http#funding_offer|запрос доступных счетов})
-   * @param {StringOrNumber} wallet Номер кошелька
+   * @param {types.StringOrNumber} [walletId] Номер телефона привязанный к кошельку
    */
-  async createAccount(alias: string): Promise<""> {
-    await this.fundingSources.createAccount(alias);
+  async createAccount(
+    alias: string,
+    walletId: types.StringOrNumber = this.walletId
+  ): Promise<""> {
+    await this._executeWithWalletId(walletId, async () => {
+      await this.fundingSources.createAccount(alias);
+    });
     return "";
   }
 
@@ -211,10 +286,15 @@ export class _WalletCompat extends Wallet {
    * Устанавливает счёт по умолчанию
    * Успешный ответ возвращает пустую строку
    * @param {string} alias Псевдоним счета (см. {@link https://developer.qiwi.com/ru/qiwi-wallet-personal/?http#funding_offer|запрос доступных счетов})
-   * @param {StringOrNumber} wallet Номер кошелька
+   * @param {types.StringOrNumber} [walletId] Номер телефона привязанный к кошельку
    */
-  async setDefaultAccount(alias: string): Promise<""> {
-    await this.fundingSources.setDefaultAccount(alias);
+  async setDefaultAccount(
+    alias: string,
+    walletId: types.StringOrNumber = this.walletId
+  ): Promise<""> {
+    await this._executeWithWalletId(walletId, async () => {
+      await this.fundingSources.setDefaultAccount(alias);
+    });
     return "";
   }
 
@@ -366,50 +446,67 @@ export class _WalletCompat extends Wallet {
    * Блокирует карту
    *
    * @param {types.StringOrNumber} cardId
+   * @param {types.StringOrNumber} [walletId] Номер телефона привязанный к кошельку
    *
    * @return {Promise<*>}
    */
-  async blockCard(cardId: types.StringOrNumber): Promise<any> {
-    return await this.cards.block(cardId);
+  async blockCard(
+    cardId: types.StringOrNumber,
+    walletId: types.StringOrNumber = this.walletId
+  ): Promise<any> {
+    return await this._executeWithWalletId(walletId, async () => {
+      return await this.cards.block(cardId);
+    });
   }
 
   /**
    * Разблокирует карту
    *
-   * @param {types.CardUnblockResponse} cardId
-   * @param {types.CardUnblockResponse} wallet
+   * @param {types.StringOrNumber} cardId
+   * @param {types.StringOrNumber} [walletId] Номер телефона привязанный к кошельку
    * @return {Promise<types.CardUnblockResponse>}
    */
   async unblockCard(
-    cardId: types.StringOrNumber
+    cardId: types.StringOrNumber,
+    walletId: types.StringOrNumber = this.walletId
   ): Promise<types.CardUnblockResponse> {
-    return await this.cards.unblock(cardId);
+    return await this._executeWithWalletId(walletId, async () => {
+      return await this.cards.unblock(cardId);
+    });
   }
 
   /**
    * Получает реквизиты карты
    *
    * @param {types.StringOrNumber} cardId
+   * @param {types.StringOrNumber} [walletId] Номер телефона привязанный к кошельку
    * @return {Promise<types.CardRequisitesResponse>}
    */
   async getCardRequisites(
-    cardId: types.StringOrNumber
+    cardId: types.StringOrNumber,
+    walletId: types.StringOrNumber = this.walletId
   ): Promise<types.CardRequisitesResponse> {
-    return await this.cards.getRequisites(cardId);
+    return await this._executeWithWalletId(walletId, async () => {
+      return await this.cards.getRequisites(cardId);
+    });
   }
 
   /**
    *
    * @param {types.StringOrNumber} cardId
    * @param {string} alias
+   * @param {types.StringOrNumber} [walletId] Номер телефона привязанный к кошельку
    * @return {Promise<types.CardRenameResponse>}
    */
   async renameCard(
     cardId: types.StringOrNumber,
-    alias: string
+    alias: string,
+    walletId: types.StringOrNumber = this.walletId
   ): Promise<types.CardRenameResponse> {
-    // eslint-disable-next-line security/detect-non-literal-fs-filename
-    return await this.cards.rename(cardId, alias);
+    return await this._executeWithWalletId(walletId, async () => {
+      // eslint-disable-next-line security/detect-non-literal-fs-filename
+      return await this.cards.rename(cardId, alias);
+    });
   }
 
   /**

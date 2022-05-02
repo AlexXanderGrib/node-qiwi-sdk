@@ -1,46 +1,47 @@
+import { OptionsWrapperWithGetter, OptionsWrapper } from "../options-wrapper.mjs";
 /**
  *
  *
  * @export
- * @abstract
  * @class ApiClass
  * @template T
  */
-class ApiClass {
-    /**
-     * Creates an instance of ApiClass.
-     * @param {T} _options
-     * @memberof ApiClass
-     */
-    constructor(_options) {
-        this._options = _options;
-    }
-    /**
-     *
-     *
-     * @memberof WalletCompat
-     */
-    get agent() {
-        return this.options.http.client.options.agent;
-    }
-    /**
-     *
-     * @param {*} agent
-     * @memberof WalletCompat
-     */
-    set agent(agent) {
-        /* istanbul ignore next */
-        this.options.http.client.options.agent = agent;
-    }
-    /**
-     *
-     *
-     * @readonly
-     * @memberof ApiClass
-     */
-    get options() {
-        return this._options;
-    }
+class ApiClass extends OptionsWrapperWithGetter {
+  /**
+   *
+   *
+   * @memberof WalletCompat
+   */
+  get agent() {
+    return this.options.http.client.options.agent;
+  }
+  /**
+   *
+   * @param {*} agent
+   * @memberof WalletCompat
+   */
+  set agent(agent) {
+    this.options.http.client.options.agent = agent;
+  }
 }
-
-export { ApiClass };
+/**
+ *
+ *
+ * @export
+ * @class ApiSubclass
+ * @extends {OptionsWrapper<T>}
+ * @template T
+ */
+class ApiSubclass extends OptionsWrapper {
+  /**
+   *
+   *
+   * @readonly
+   * @protected
+   * @memberof ApiSubclass
+   */
+  get http() {
+    return this._options.http;
+  }
+}
+export { ApiClass, ApiSubclass };

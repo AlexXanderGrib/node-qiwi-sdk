@@ -1,7 +1,5 @@
-'use strict';
-
-Object.defineProperty(exports, '__esModule', { value: true });
-
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 /**
  * Ошибка, которую можно преобразовать в JSON
  *
@@ -10,33 +8,32 @@ Object.defineProperty(exports, '__esModule', { value: true });
  * @extends {Error}
  */
 class ExtendedError extends Error {
-    constructor() {
-        super(...arguments);
-        this.name = this.constructor.name;
-    }
-    /**
-     *
-     *
-     * @return {*}  {Error}
-     * @memberof ExtendedError
-     */
-    toJSON() {
-        return {
-            message: this.message,
-            name: this.name,
-            stack: this.stack
-        };
-    }
-    /**
-     *
-     *
-     * @readonly
-     * @type {string}
-     * @memberof ExtendedError
-     */
-    get [Symbol.toStringTag]() {
-        return this.name;
-    }
+  constructor() {
+    super(...arguments);
+    this.name = this.constructor.name;
+  }
+  /**
+   *
+   *
+   * @return {*}  {Error}
+   * @memberof ExtendedError
+   */
+  toJSON() {
+    return {
+      message: this.message,
+      name: this.name,
+      stack: this.stack
+    };
+  }
+  /**
+   *
+   *
+   * @readonly
+   * @type {string}
+   * @memberof ExtendedError
+   */
+  get [Symbol.toStringTag]() {
+    return this.name;
+  }
 }
-
 exports.ExtendedError = ExtendedError;

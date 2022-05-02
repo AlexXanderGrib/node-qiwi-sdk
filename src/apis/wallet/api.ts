@@ -1,22 +1,12 @@
-import { WalletApiOptions } from "./wallet.options";
+import { ApiSubclass } from "../api";
+import type { WalletApiOptions } from "./wallet.options";
 /**
  *
  *
  * @export
  * @class WalletApi
  */
-export class WalletApi {
-  /**
-   *
-   *
-   * @readonly
-   * @protected
-   * @memberof WalletApi
-   */
-  protected get http() {
-    return this._options.http;
-  }
-
+export class WalletApi extends ApiSubclass<WalletApiOptions> {
   /**
    *
    *
@@ -27,11 +17,4 @@ export class WalletApi {
   protected get walletId() {
     return this._options.walletId;
   }
-
-  /**
-   * Creates an instance of WalletApi.
-   * @param {WalletApiOptions} _options
-   * @memberof WalletApi
-   */
-  constructor(protected readonly _options: WalletApiOptions) {}
 }

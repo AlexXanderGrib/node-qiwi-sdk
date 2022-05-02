@@ -13,10 +13,11 @@ export class DetectorDetectApi extends DetectorApi {
   /**
    * Вытаскивает ID провайдера из объекта ответа
    *
+   * @protected
    * @param {*} response
    * @return {number} ID провайдера
    */
-  private _extractProvider(response: AnyResponse): number {
+  protected _extractProvider(response: AnyResponse): number {
     // Legacy проверка ответа
     /* istanbul ignore next */
     if (response.code.value !== "0") throw new DetectorError(response.message);
