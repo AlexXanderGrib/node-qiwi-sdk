@@ -59,7 +59,7 @@ Creates an instance of WalletApi.
 
 #### Defined in
 
-[src/apis/wallet/api.ts:36](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/apis/wallet/api.ts#L36)
+[src/apis/wallet/api.ts:36](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/16c3ee8/src/apis/wallet/api.ts#L36)
 
 ## Properties
 
@@ -91,7 +91,7 @@ WalletApi.http
 
 #### Defined in
 
-[src/apis/wallet/api.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/apis/wallet/api.ts#L16)
+[src/apis/wallet/api.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/16c3ee8/src/apis/wallet/api.ts#L16)
 
 ___
 
@@ -113,7 +113,7 @@ WalletApi.walletId
 
 #### Defined in
 
-[src/apis/wallet/api.ts:27](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/apis/wallet/api.ts#L27)
+[src/apis/wallet/api.ts:27](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/16c3ee8/src/apis/wallet/api.ts#L27)
 
 ## Methods
 
@@ -144,7 +144,7 @@ WalletApi.walletId
 
 #### Defined in
 
-[src/apis/wallet/funding-sources.api.ts:43](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/apis/wallet/funding-sources.api.ts#L43)
+[src/apis/wallet/funding-sources.api.ts:43](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/16c3ee8/src/apis/wallet/funding-sources.api.ts#L43)
 
 ___
 
@@ -169,7 +169,7 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/funding-sources.api.ts:62](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/apis/wallet/funding-sources.api.ts#L62)
+[src/apis/wallet/funding-sources.api.ts:62](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/16c3ee8/src/apis/wallet/funding-sources.api.ts#L62)
 
 ___
 
@@ -193,7 +193,7 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/funding-sources.api.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/apis/wallet/funding-sources.api.ts#L23)
+[src/apis/wallet/funding-sources.api.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/16c3ee8/src/apis/wallet/funding-sources.api.ts#L23)
 
 ___
 
@@ -225,4 +225,4 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/funding-sources.api.ts:81](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/apis/wallet/funding-sources.api.ts#L81)
+[src/apis/wallet/funding-sources.api.ts:81](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/16c3ee8/src/apis/wallet/funding-sources.api.ts#L81)

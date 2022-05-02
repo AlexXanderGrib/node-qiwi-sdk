@@ -129,7 +129,7 @@ Error.name
 
 #### Defined in
 
-[src/error.ts:9](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/error.ts#L9)
+[src/error.ts:9](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/16c3ee8/src/error.ts#L9)
 
 ___
 
@@ -208,7 +208,7 @@ node_modules/@types/node/globals.d.ts:13
 
 #### Defined in
 
-[src/error.ts:32](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/error.ts#L32)
+[src/error.ts:32](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/16c3ee8/src/error.ts#L32)
 
 ## Methods
 
@@ -226,7 +226,7 @@ node_modules/@types/node/globals.d.ts:13
 
 #### Defined in
 
-[src/error.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/error.ts#L17)
+[src/error.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/16c3ee8/src/error.ts#L17)
 
 ___
 

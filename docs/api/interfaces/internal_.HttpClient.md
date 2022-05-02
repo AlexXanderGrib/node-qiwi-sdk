@@ -29,7 +29,7 @@
 
 #### Defined in
 
-[src/http.ts:52](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/http.ts#L52)
+[src/http.ts:52](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/16c3ee8/src/http.ts#L52)
 
 ## Methods
 
@@ -49,4 +49,4 @@
 
 #### Defined in
 
-[src/http.ts:53](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/http.ts#L53)
+[src/http.ts:53](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/16c3ee8/src/http.ts#L53)

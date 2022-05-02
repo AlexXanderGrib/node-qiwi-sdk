@@ -30,7 +30,7 @@
 
 #### Defined in
 
-[src/apis/api.ts:4](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/apis/api.ts#L4)
+[src/apis/api.ts:4](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/16c3ee8/src/apis/api.ts#L4)
 
 ___
 
@@ -40,7 +40,7 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/wallet.options.ts:4](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/apis/wallet/wallet.options.ts#L4)
+[src/apis/wallet/wallet.options.ts:4](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/16c3ee8/src/apis/wallet/wallet.options.ts#L4)
 
 ___
 
@@ -50,4 +50,4 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/wallet.options.ts:5](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/apis/wallet/wallet.options.ts#L5)
+[src/apis/wallet/wallet.options.ts:5](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/16c3ee8/src/apis/wallet/wallet.options.ts#L5)

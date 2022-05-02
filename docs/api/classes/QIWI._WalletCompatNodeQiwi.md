@@ -102,7 +102,7 @@ Creates an instance of _WalletCompatNodeQiwi.
 
 #### Defined in
 
-[src/apis/wallet/wallet.compat-node-qiwi.ts:21](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/apis/wallet/wallet.compat-node-qiwi.ts#L21)
+[src/apis/wallet/wallet.compat-node-qiwi.ts:21](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/16c3ee8/src/apis/wallet/wallet.compat-node-qiwi.ts#L21)
 
 ## Properties
 
@@ -126,7 +126,7 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/wallet.ts:180](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/apis/wallet/wallet.ts#L180)
+[src/apis/wallet/wallet.ts:180](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/16c3ee8/src/apis/wallet/wallet.ts#L180)
 
 ___
 
@@ -140,7 +140,7 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/wallet.ts:178](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/apis/wallet/wallet.ts#L178)
+[src/apis/wallet/wallet.ts:178](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/16c3ee8/src/apis/wallet/wallet.ts#L178)
 
 ___
 
@@ -160,7 +160,7 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/wallet.ts:177](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/apis/wallet/wallet.ts#L177)
+[src/apis/wallet/wallet.ts:177](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/16c3ee8/src/apis/wallet/wallet.ts#L177)
 
 ___
 
@@ -174,7 +174,7 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/wallet.ts:173](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/apis/wallet/wallet.ts#L173)
+[src/apis/wallet/wallet.ts:173](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/16c3ee8/src/apis/wallet/wallet.ts#L173)
 
 ___
 
@@ -194,7 +194,7 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/wallet.ts:174](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/apis/wallet/wallet.ts#L174)
+[src/apis/wallet/wallet.ts:174](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/16c3ee8/src/apis/wallet/wallet.ts#L174)
 
 ___
 
@@ -208,7 +208,7 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/wallet.ts:176](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/apis/wallet/wallet.ts#L176)
+[src/apis/wallet/wallet.ts:176](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/16c3ee8/src/apis/wallet/wallet.ts#L176)
 
 ___
 
@@ -222,7 +222,7 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/wallet.ts:179](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/apis/wallet/wallet.ts#L179)
+[src/apis/wallet/wallet.ts:179](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/16c3ee8/src/apis/wallet/wallet.ts#L179)
 
 ___
 
@@ -236,7 +236,7 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/wallet.ts:172](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/apis/wallet/wallet.ts#L172)
+[src/apis/wallet/wallet.ts:172](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/16c3ee8/src/apis/wallet/wallet.ts#L172)
 
 ___
 
@@ -250,7 +250,7 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/wallet.ts:182](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/apis/wallet/wallet.ts#L182)
+[src/apis/wallet/wallet.ts:182](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/16c3ee8/src/apis/wallet/wallet.ts#L182)
 
 ___
 
@@ -264,7 +264,7 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/wallet.ts:175](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/apis/wallet/wallet.ts#L175)
+[src/apis/wallet/wallet.ts:175](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/16c3ee8/src/apis/wallet/wallet.ts#L175)
 
 ___
 
@@ -278,7 +278,7 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/wallet.ts:181](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/apis/wallet/wallet.ts#L181)
+[src/apis/wallet/wallet.ts:181](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/16c3ee8/src/apis/wallet/wallet.ts#L181)
 
 ___
 
@@ -292,7 +292,7 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/wallet.ts:74](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/apis/wallet/wallet.ts#L74)
+[src/apis/wallet/wallet.ts:74](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/16c3ee8/src/apis/wallet/wallet.ts#L74)
 
 ___
 
@@ -306,7 +306,7 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/wallet.ts:64](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/apis/wallet/wallet.ts#L64)
+[src/apis/wallet/wallet.ts:64](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/16c3ee8/src/apis/wallet/wallet.ts#L64)
 
 ___
 
@@ -320,7 +320,7 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/wallet.ts:63](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/apis/wallet/wallet.ts#L63)
+[src/apis/wallet/wallet.ts:63](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/16c3ee8/src/apis/wallet/wallet.ts#L63)
 
 ___
 
@@ -334,7 +334,7 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/wallet.ts:72](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/apis/wallet/wallet.ts#L72)
+[src/apis/wallet/wallet.ts:72](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/16c3ee8/src/apis/wallet/wallet.ts#L72)
 
 ___
 
@@ -348,7 +348,7 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/wallet.ts:59](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/apis/wallet/wallet.ts#L59)
+[src/apis/wallet/wallet.ts:59](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/16c3ee8/src/apis/wallet/wallet.ts#L59)
 
 ___
 
@@ -362,7 +362,7 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/wallet.ts:58](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/apis/wallet/wallet.ts#L58)
+[src/apis/wallet/wallet.ts:58](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/16c3ee8/src/apis/wallet/wallet.ts#L58)
 
 ___
 
@@ -376,7 +376,7 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/wallet.ts:71](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/apis/wallet/wallet.ts#L71)
+[src/apis/wallet/wallet.ts:71](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/16c3ee8/src/apis/wallet/wallet.ts#L71)
 
 ___
 
@@ -390,7 +390,7 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/wallet.ts:67](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/apis/wallet/wallet.ts#L67)
+[src/apis/wallet/wallet.ts:67](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/16c3ee8/src/apis/wallet/wallet.ts#L67)
 
 ___
 
@@ -404,7 +404,7 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/wallet.ts:62](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/apis/wallet/wallet.ts#L62)
+[src/apis/wallet/wallet.ts:62](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/16c3ee8/src/apis/wallet/wallet.ts#L62)
 
 ___
 
@@ -418,7 +418,7 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/wallet.ts:68](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/apis/wallet/wallet.ts#L68)
+[src/apis/wallet/wallet.ts:68](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/16c3ee8/src/apis/wallet/wallet.ts#L68)
 
 ___
 
@@ -432,7 +432,7 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/wallet.ts:70](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/apis/wallet/wallet.ts#L70)
+[src/apis/wallet/wallet.ts:70](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/16c3ee8/src/apis/wallet/wallet.ts#L70)
 
 ___
 
@@ -446,7 +446,7 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/wallet.ts:61](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/apis/wallet/wallet.ts#L61)
+[src/apis/wallet/wallet.ts:61](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/16c3ee8/src/apis/wallet/wallet.ts#L61)
 
 ___
 
@@ -460,7 +460,7 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/wallet.ts:73](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/apis/wallet/wallet.ts#L73)
+[src/apis/wallet/wallet.ts:73](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/16c3ee8/src/apis/wallet/wallet.ts#L73)
 
 ___
 
@@ -474,7 +474,7 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/wallet.ts:55](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/apis/wallet/wallet.ts#L55)
+[src/apis/wallet/wallet.ts:55](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/16c3ee8/src/apis/wallet/wallet.ts#L55)
 
 ___
 
@@ -488,7 +488,7 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/wallet.ts:66](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/apis/wallet/wallet.ts#L66)
+[src/apis/wallet/wallet.ts:66](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/16c3ee8/src/apis/wallet/wallet.ts#L66)
 
 ___
 
@@ -502,7 +502,7 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/wallet.ts:76](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/apis/wallet/wallet.ts#L76)
+[src/apis/wallet/wallet.ts:76](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/16c3ee8/src/apis/wallet/wallet.ts#L76)
 
 ___
 
@@ -516,7 +516,7 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/wallet.ts:60](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/apis/wallet/wallet.ts#L60)
+[src/apis/wallet/wallet.ts:60](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/16c3ee8/src/apis/wallet/wallet.ts#L60)
 
 ___
 
@@ -530,7 +530,7 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/wallet.ts:69](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/apis/wallet/wallet.ts#L69)
+[src/apis/wallet/wallet.ts:69](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/16c3ee8/src/apis/wallet/wallet.ts#L69)
 
 ___
 
@@ -544,7 +544,7 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/wallet.ts:57](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/apis/wallet/wallet.ts#L57)
+[src/apis/wallet/wallet.ts:57](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/16c3ee8/src/apis/wallet/wallet.ts#L57)
 
 ___
 
@@ -558,7 +558,7 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/wallet.ts:56](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/apis/wallet/wallet.ts#L56)
+[src/apis/wallet/wallet.ts:56](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/16c3ee8/src/apis/wallet/wallet.ts#L56)
 
 ___
 
@@ -572,7 +572,7 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/wallet.ts:75](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/apis/wallet/wallet.ts#L75)
+[src/apis/wallet/wallet.ts:75](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/16c3ee8/src/apis/wallet/wallet.ts#L75)
 
 ## Accessors
 
@@ -592,7 +592,7 @@ Wallet.agent
 
 #### Defined in
 
-[src/apis/api.ts:21](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/apis/api.ts#L21)
+[src/apis/api.ts:21](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/16c3ee8/src/apis/api.ts#L21)
 
 • `set` **agent**(`agent`): `void`
 
@@ -614,7 +614,7 @@ Wallet.agent
 
 #### Defined in
 
-[src/apis/api.ts:30](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/apis/api.ts#L30)
+[src/apis/api.ts:30](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/16c3ee8/src/apis/api.ts#L30)
 
 ___
 
@@ -636,7 +636,7 @@ Wallet.options
 
 #### Defined in
 
-[src/apis/api.ts:41](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/apis/api.ts#L41)
+[src/apis/api.ts:41](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/16c3ee8/src/apis/api.ts#L41)
 
 ## Methods
 
@@ -667,7 +667,7 @@ Wallet.options
 
 #### Defined in
 
-[src/apis/wallet/wallet.compat-node-qiwi.ts:39](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/apis/wallet/wallet.compat-node-qiwi.ts#L39)
+[src/apis/wallet/wallet.compat-node-qiwi.ts:39](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/16c3ee8/src/apis/wallet/wallet.compat-node-qiwi.ts#L39)
 
 ___
 
@@ -689,7 +689,7 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/wallet.ts:189](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/apis/wallet/wallet.ts#L189)
+[src/apis/wallet/wallet.ts:189](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/16c3ee8/src/apis/wallet/wallet.ts#L189)
 
 ___
 
@@ -707,7 +707,7 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/wallet.compat-node-qiwi.ts:137](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/apis/wallet/wallet.compat-node-qiwi.ts#L137)
+[src/apis/wallet/wallet.compat-node-qiwi.ts:137](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/16c3ee8/src/apis/wallet/wallet.compat-node-qiwi.ts#L137)
 
 ___
 
@@ -732,7 +732,7 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/wallet.compat-node-qiwi.ts:80](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/apis/wallet/wallet.compat-node-qiwi.ts#L80)
+[src/apis/wallet/wallet.compat-node-qiwi.ts:80](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/16c3ee8/src/apis/wallet/wallet.compat-node-qiwi.ts#L80)
 
 ___
 
@@ -757,7 +757,7 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/wallet.compat-node-qiwi.ts:61](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/apis/wallet/wallet.compat-node-qiwi.ts#L61)
+[src/apis/wallet/wallet.compat-node-qiwi.ts:61](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/16c3ee8/src/apis/wallet/wallet.compat-node-qiwi.ts#L61)
 
 ___
 
@@ -775,7 +775,7 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/wallet.compat-node-qiwi.ts:127](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/apis/wallet/wallet.compat-node-qiwi.ts#L127)
+[src/apis/wallet/wallet.compat-node-qiwi.ts:127](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/16c3ee8/src/apis/wallet/wallet.compat-node-qiwi.ts#L127)
 
 ___
 
@@ -801,7 +801,7 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/wallet.compat-node-qiwi.ts:114](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/apis/wallet/wallet.compat-node-qiwi.ts#L114)
+[src/apis/wallet/wallet.compat-node-qiwi.ts:114](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/16c3ee8/src/apis/wallet/wallet.compat-node-qiwi.ts#L114)
 
 ___
 
@@ -826,7 +826,7 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/wallet.compat-node-qiwi.ts:97](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/apis/wallet/wallet.compat-node-qiwi.ts#L97)
+[src/apis/wallet/wallet.compat-node-qiwi.ts:97](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/16c3ee8/src/apis/wallet/wallet.compat-node-qiwi.ts#L97)
 
 ___
 
@@ -852,7 +852,7 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/wallet.compat-node-qiwi.ts:150](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/apis/wallet/wallet.compat-node-qiwi.ts#L150)
+[src/apis/wallet/wallet.compat-node-qiwi.ts:150](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/16c3ee8/src/apis/wallet/wallet.compat-node-qiwi.ts#L150)
 
 ___
 
@@ -883,7 +883,7 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/wallet.ts:115](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/apis/wallet/wallet.ts#L115)
+[src/apis/wallet/wallet.ts:115](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/16c3ee8/src/apis/wallet/wallet.ts#L115)
 
 ___
 
@@ -925,7 +925,7 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/wallet.ts:140](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/apis/wallet/wallet.ts#L140)
+[src/apis/wallet/wallet.ts:140](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/16c3ee8/src/apis/wallet/wallet.ts#L140)
 
 ___
 
@@ -955,4 +955,4 @@ ___
 
 #### Defined in
 
-[src/apis/wallet/wallet.ts:86](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/apis/wallet/wallet.ts#L86)
+[src/apis/wallet/wallet.ts:86](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/16c3ee8/src/apis/wallet/wallet.ts#L86)
