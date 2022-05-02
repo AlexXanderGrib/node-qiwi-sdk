@@ -227,7 +227,7 @@ Distributed under the MIT License. See [LICENSE.txt](./LICENSE.txt) for more inf
 
 ### Project Goals
 
-- [ ] Cover all [APIs](https://developer.qiwi.com/) (в том числе для юридических лиц)
+- [ ] Cover all [APIs](https://developer.qiwi.com/) (both for persons & legal entities)
   - [x] API QIWI Wallet
   - [ ] Payments
   - [ ] Payouts

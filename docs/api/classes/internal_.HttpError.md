@@ -69,7 +69,7 @@ Error.constructor
 
 #### Defined in
 
-[src/http.ts:46](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/1999c21/src/http.ts#L46)
+[src/http.ts:46](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/http.ts#L46)
 
 ## Properties
 

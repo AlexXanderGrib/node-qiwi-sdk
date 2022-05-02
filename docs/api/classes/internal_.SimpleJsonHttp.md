@@ -44,7 +44,7 @@ Creates an instance of SimpleJsonHttp.
 
 #### Defined in
 
-[src/http.ts:181](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/1999c21/src/http.ts#L181)
+[src/http.ts:181](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/http.ts#L181)
 
 ## Properties
 
@@ -79,7 +79,7 @@ Creates an instance of SimpleJsonHttp.
 
 #### Defined in
 
-[src/http.ts:250](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/1999c21/src/http.ts#L250)
+[src/http.ts:250](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/http.ts#L250)
 
 ___
 
@@ -107,7 +107,7 @@ ___
 
 #### Defined in
 
-[src/http.ts:196](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/1999c21/src/http.ts#L196)
+[src/http.ts:196](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/http.ts#L196)
 
 ___
 
@@ -136,7 +136,7 @@ ___
 
 #### Defined in
 
-[src/http.ts:235](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/1999c21/src/http.ts#L235)
+[src/http.ts:235](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/http.ts#L235)
 
 ___
 
@@ -165,7 +165,7 @@ ___
 
 #### Defined in
 
-[src/http.ts:209](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/1999c21/src/http.ts#L209)
+[src/http.ts:209](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/http.ts#L209)
 
 ___
 
@@ -194,7 +194,7 @@ ___
 
 #### Defined in
 
-[src/http.ts:222](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/1999c21/src/http.ts#L222)
+[src/http.ts:222](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/http.ts#L222)
 
 ___
 
@@ -224,7 +224,7 @@ ___
 
 #### Defined in
 
-[src/http.ts:276](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/1999c21/src/http.ts#L276)
+[src/http.ts:276](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/http.ts#L276)
 
 ___
 
@@ -256,4 +256,4 @@ ___
 
 #### Defined in
 
-[src/http.ts:265](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/1999c21/src/http.ts#L265)
+[src/http.ts:265](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4aeb538/src/http.ts#L265)
