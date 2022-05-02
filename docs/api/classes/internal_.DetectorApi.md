@@ -44,7 +44,7 @@ Creates an instance of DetectorApi.
 
 #### Defined in
 
-[src/apis/detector/api.ts:25](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/7ca37ed/src/apis/detector/api.ts#L25)
+[src/apis/detector/api.ts:25](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/1999c21/src/apis/detector/api.ts#L25)
 
 ## Properties
 
@@ -68,4 +68,4 @@ Creates an instance of DetectorApi.
 
 #### Defined in
 
-[src/apis/detector/api.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/7ca37ed/src/apis/detector/api.ts#L16)
+[src/apis/detector/api.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/1999c21/src/apis/detector/api.ts#L16)

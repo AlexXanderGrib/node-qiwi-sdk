@@ -19,15 +19,18 @@
 
 ### Установка
 
-```bash
-# Клонируем репу
-git clone https://github.com/AlexXanderGrib/node-qiwi-sdk.git
-cd node-qiwi-sdk
-
-# Ставим зависимости
-npm i
-# или yarn install
-```
+1. Клонируем репозиторий
+   ```bash
+   git clone https://github.com/AlexXanderGrib/node-qiwi-sdk.git
+   ```
+2. Заходим в папку
+   ```bash
+   cd node-qiwi-sdk
+   ```
+3. Устанавливаем зависимости
+   ```bash
+   npm install
+   ```
 
 ### Тестирования
 
@@ -35,12 +38,12 @@ npm i
 
 1. Вписываем это в файл `.env`:
 
-```
-QIWI_TOKEN=<TOKEN>
-QIWI_WALLET=<PHONE>
-QIWI_SECRET_KEY=<KEY>
-QIWI_PUBLIC_KEY=<PUB_KEY>
-```
+   ```bash
+   QIWI_TOKEN=<TOKEN>
+   QIWI_WALLET=<PHONE>
+   QIWI_SECRET_KEY=<KEY>
+   QIWI_PUBLIC_KEY=<PUB_KEY>
+   ```
 
 2. Меняем:
    1. `<TOKEN>` на ваш токен киви, полученный на [официальном сайте](https://qiwi.com/api) (должен быть со всеми правами)
@@ -49,6 +52,6 @@ QIWI_PUBLIC_KEY=<PUB_KEY>
    4. `<PUB_KEY>` на публичный ключ
 3. Запускаем
 
-```
-npm test
-```
+   ```bash
+   npm test
+   ```

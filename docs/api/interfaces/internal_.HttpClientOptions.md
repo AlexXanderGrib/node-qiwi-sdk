@@ -35,7 +35,7 @@
 
 #### Defined in
 
-[src/http.ts:8](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/7ca37ed/src/http.ts#L8)
+[src/http.ts:8](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/1999c21/src/http.ts#L8)
 
 ___
 
@@ -45,7 +45,7 @@ ___
 
 #### Defined in
 
-[src/http.ts:10](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/7ca37ed/src/http.ts#L10)
+[src/http.ts:10](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/1999c21/src/http.ts#L10)
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 #### Defined in
 
-[src/http.ts:7](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/7ca37ed/src/http.ts#L7)
+[src/http.ts:7](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/1999c21/src/http.ts#L7)
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 #### Defined in
 
-[src/http.ts:9](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/7ca37ed/src/http.ts#L9)
+[src/http.ts:9](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/1999c21/src/http.ts#L9)
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 #### Defined in
 
-[src/http.ts:11](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/7ca37ed/src/http.ts#L11)
+[src/http.ts:11](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/1999c21/src/http.ts#L11)
 
 ## Methods
 
@@ -95,7 +95,7 @@ ___
 
 #### Defined in
 
-[src/http.ts:15](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/7ca37ed/src/http.ts#L15)
+[src/http.ts:15](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/1999c21/src/http.ts#L15)
 
 ___
 
@@ -115,7 +115,7 @@ ___
 
 #### Defined in
 
-[src/http.ts:14](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/7ca37ed/src/http.ts#L14)
+[src/http.ts:14](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/1999c21/src/http.ts#L14)
 
 ___
 
@@ -135,4 +135,4 @@ ___
 
 #### Defined in
 
-[src/http.ts:13](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/7ca37ed/src/http.ts#L13)
+[src/http.ts:13](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/1999c21/src/http.ts#L13)

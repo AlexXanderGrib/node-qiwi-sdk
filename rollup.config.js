@@ -2,10 +2,11 @@ import typescript from "rollup-plugin-typescript2";
 import { builtinModules } from "module";
 import { dependencies, devDependencies, name, version } from "./package.json";
 import replace from "@rollup/plugin-replace";
+import glob from "glob";
 
 /** @type {import('rollup').RollupOptions} */
 const config = {
-  input: "./src/index.ts",
+  input: ["./src/index.ts", ...glob.sync("./src/apis/**/index.ts")],
   external: [
     ...builtinModules,
     ...Object.keys({ ...devDependencies, ...dependencies })
@@ -15,13 +16,17 @@ const config = {
       dir: "./dist/cjs",
       format: "commonjs",
       exports: "named",
-      preserveModules: true
+      preserveModules: true,
+      chunkFileNames: "[name].js",
+      entryFileNames: "[name].js"
     },
     {
       dir: "./dist/esm",
       format: "module",
       exports: "named",
-      preserveModules: true
+      preserveModules: true,
+      chunkFileNames: "[name].mjs",
+      entryFileNames: "[name].mjs"
     }
   ],
   plugins: [
