@@ -1,6 +1,6 @@
 import express, { Application } from "express";
 import { createServer } from "http";
-import { AddressInfo } from "net";
+import type { AddressInfo } from "net";
 
 export type MockServer = {
   url: string;

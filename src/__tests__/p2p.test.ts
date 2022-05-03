@@ -1,7 +1,7 @@
 import axios from "axios";
 import { createHmac, randomBytes } from "crypto";
 import { config } from "dotenv";
-import { Application, ErrorRequestHandler } from "express";
+import type { Application, ErrorRequestHandler } from "express";
 
 import {
   BillCurrency,
