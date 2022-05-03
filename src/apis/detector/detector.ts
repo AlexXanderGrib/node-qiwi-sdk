@@ -3,7 +3,7 @@ import { USER_AGENT } from "../../identity";
 import { ApiClass } from "../api";
 import { formatQuerystring } from "../shared";
 import { DetectorDetectApi } from "./detect.api";
-import { DetectorApiOptions } from "./detector.options";
+import type { DetectorApiOptions } from "./detector.options";
 
 /**
  * API получения ID провайдера QIWI по Номеру Телефона/Карте

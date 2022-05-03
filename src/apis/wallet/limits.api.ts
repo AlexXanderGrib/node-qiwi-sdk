@@ -1,6 +1,6 @@
 import { formatQuerystring } from "../shared";
 import { WalletApi } from "./api";
-import { LimitsResponse, LimitTypeAny } from "./wallet.types";
+import type { LimitsResponse, LimitTypeAny } from "./wallet.types";
 
 /**
  * # Лимиты QIWI Кошелька

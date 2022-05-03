@@ -1,7 +1,7 @@
 /* istanbul ignore file */
 import { formatQuerystring } from "../shared";
 import { WalletApi } from "./api";
-import {
+import type {
   Bill,
   BillPayResponse,
   BillsGetParameters,

@@ -1,5 +1,5 @@
 import { WalletApi } from "./api";
-import { Restrictions } from "./wallet.types";
+import type { Restrictions } from "./wallet.types";
 
 /**
  * # Проверка ограничений исходящих платежей с QIWI Кошелька

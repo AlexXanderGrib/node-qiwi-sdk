@@ -1,5 +1,5 @@
 import { WalletApi } from "./api";
-import { GetAccountsResponse, GetAccountOffersResponse } from "./wallet.types";
+import type { GetAccountsResponse, GetAccountOffersResponse } from "./wallet.types";
 
 /**
  * # Баланс QIWI Кошелька

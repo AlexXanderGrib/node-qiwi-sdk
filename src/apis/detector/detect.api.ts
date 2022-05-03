@@ -1,4 +1,4 @@
-import { AnyResponse } from "../shared";
+import type { AnyResponse } from "../shared";
 import { DetectorApi } from "./api";
 import { DetectorError } from "./detector.errors";
 

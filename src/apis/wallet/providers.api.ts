@@ -1,5 +1,5 @@
 import { WalletApi } from "./api";
-import { ProviderInfo } from "./wallet.types";
+import type { ProviderInfo } from "./wallet.types";
 
 /**
  * # Информация о провайдере

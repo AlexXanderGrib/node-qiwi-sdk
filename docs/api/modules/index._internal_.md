@@ -57,7 +57,7 @@
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.types.d.ts:782](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.types.d.ts#L782)
+[dist/cjs/apis/wallet/wallet.types.d.ts:782](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.types.d.ts#L782)
 
 ___
 
@@ -73,7 +73,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.d.ts:22](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.d.ts#L22)
+[dist/cjs/apis/wallet/wallet.d.ts:22](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.d.ts#L22)
 
 ___
 
@@ -92,7 +92,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.types.d.ts:765](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.types.d.ts#L765)
+[dist/cjs/apis/wallet/wallet.types.d.ts:765](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.types.d.ts#L765)
 
 ___
 
@@ -109,7 +109,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.types.d.ts:1204](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.types.d.ts#L1204)
+[dist/cjs/apis/wallet/wallet.types.d.ts:1204](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.types.d.ts#L1204)
 
 ___
 
@@ -126,7 +126,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.types.d.ts:778](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.types.d.ts#L778)
+[dist/cjs/apis/wallet/wallet.types.d.ts:778](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.types.d.ts#L778)
 
 ___
 
@@ -152,4 +152,4 @@ nothing
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.d.ts:21](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.d.ts#L21)
+[dist/cjs/apis/wallet/wallet.d.ts:21](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.d.ts#L21)

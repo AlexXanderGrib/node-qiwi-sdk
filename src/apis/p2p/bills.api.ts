@@ -5,7 +5,7 @@ import {
   generateUUID
 } from "../shared";
 import { P2pApi } from "./api";
-import {
+import type {
   BillCreateParameters,
   BillFormParameters as BillFormParameters,
   BillRefundStatusData,

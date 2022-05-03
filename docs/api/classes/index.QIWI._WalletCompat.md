@@ -133,7 +133,7 @@ Creates an instance of _WalletCompat.
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.compat.d.ts:24](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.compat.d.ts#L24)
+[dist/cjs/apis/wallet/wallet.compat.d.ts:24](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.compat.d.ts#L24)
 
 ## Properties
 
@@ -153,7 +153,7 @@ Creates an instance of _WalletCompat.
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.compat.d.ts:35](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.compat.d.ts#L35)
+[dist/cjs/apis/wallet/wallet.compat.d.ts:35](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.compat.d.ts#L35)
 
 ___
 
@@ -171,7 +171,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/options-wrapper.d.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/options-wrapper.d.ts#L16)
+[dist/cjs/options-wrapper.d.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/options-wrapper.d.ts#L16)
 
 ___
 
@@ -185,7 +185,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.d.ts:123](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.d.ts#L123)
+[dist/cjs/apis/wallet/wallet.d.ts:123](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.d.ts#L123)
 
 ___
 
@@ -199,7 +199,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.d.ts:121](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.d.ts#L121)
+[dist/cjs/apis/wallet/wallet.d.ts:121](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.d.ts#L121)
 
 ___
 
@@ -213,7 +213,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.d.ts:120](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.d.ts#L120)
+[dist/cjs/apis/wallet/wallet.d.ts:120](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.d.ts#L120)
 
 ___
 
@@ -227,7 +227,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.d.ts:116](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.d.ts#L116)
+[dist/cjs/apis/wallet/wallet.d.ts:116](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.d.ts#L116)
 
 ___
 
@@ -241,7 +241,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.d.ts:117](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.d.ts#L117)
+[dist/cjs/apis/wallet/wallet.d.ts:117](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.d.ts#L117)
 
 ___
 
@@ -255,7 +255,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.d.ts:119](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.d.ts#L119)
+[dist/cjs/apis/wallet/wallet.d.ts:119](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.d.ts#L119)
 
 ___
 
@@ -269,7 +269,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.d.ts:122](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.d.ts#L122)
+[dist/cjs/apis/wallet/wallet.d.ts:122](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.d.ts#L122)
 
 ___
 
@@ -283,7 +283,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.d.ts:115](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.d.ts#L115)
+[dist/cjs/apis/wallet/wallet.d.ts:115](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.d.ts#L115)
 
 ___
 
@@ -297,7 +297,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.d.ts:125](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.d.ts#L125)
+[dist/cjs/apis/wallet/wallet.d.ts:125](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.d.ts#L125)
 
 ___
 
@@ -311,7 +311,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.d.ts:118](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.d.ts#L118)
+[dist/cjs/apis/wallet/wallet.d.ts:118](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.d.ts#L118)
 
 ___
 
@@ -321,7 +321,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.compat.d.ts:14](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.compat.d.ts#L14)
+[dist/cjs/apis/wallet/wallet.compat.d.ts:14](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.compat.d.ts#L14)
 
 ___
 
@@ -331,7 +331,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.compat.d.ts:15](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.compat.d.ts#L15)
+[dist/cjs/apis/wallet/wallet.compat.d.ts:15](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.compat.d.ts#L15)
 
 ___
 
@@ -345,7 +345,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.d.ts:124](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.d.ts#L124)
+[dist/cjs/apis/wallet/wallet.d.ts:124](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.d.ts#L124)
 
 ___
 
@@ -359,7 +359,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.d.ts:51](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.d.ts#L51)
+[dist/cjs/apis/wallet/wallet.d.ts:51](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.d.ts#L51)
 
 ___
 
@@ -373,7 +373,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.d.ts:42](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.d.ts#L42)
+[dist/cjs/apis/wallet/wallet.d.ts:42](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.d.ts#L42)
 
 ___
 
@@ -387,7 +387,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.d.ts:41](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.d.ts#L41)
+[dist/cjs/apis/wallet/wallet.d.ts:41](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.d.ts#L41)
 
 ___
 
@@ -401,7 +401,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.d.ts:49](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.d.ts#L49)
+[dist/cjs/apis/wallet/wallet.d.ts:49](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.d.ts#L49)
 
 ___
 
@@ -415,7 +415,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.d.ts:37](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.d.ts#L37)
+[dist/cjs/apis/wallet/wallet.d.ts:37](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.d.ts#L37)
 
 ___
 
@@ -429,7 +429,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.d.ts:36](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.d.ts#L36)
+[dist/cjs/apis/wallet/wallet.d.ts:36](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.d.ts#L36)
 
 ___
 
@@ -443,7 +443,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.d.ts:48](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.d.ts#L48)
+[dist/cjs/apis/wallet/wallet.d.ts:48](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.d.ts#L48)
 
 ___
 
@@ -457,7 +457,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.d.ts:44](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.d.ts#L44)
+[dist/cjs/apis/wallet/wallet.d.ts:44](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.d.ts#L44)
 
 ___
 
@@ -467,7 +467,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.compat.d.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.compat.d.ts#L16)
+[dist/cjs/apis/wallet/wallet.compat.d.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.compat.d.ts#L16)
 
 ___
 
@@ -481,7 +481,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.d.ts:40](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.d.ts#L40)
+[dist/cjs/apis/wallet/wallet.d.ts:40](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.d.ts#L40)
 
 ___
 
@@ -495,7 +495,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.d.ts:45](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.d.ts#L45)
+[dist/cjs/apis/wallet/wallet.d.ts:45](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.d.ts#L45)
 
 ___
 
@@ -509,7 +509,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.d.ts:47](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.d.ts#L47)
+[dist/cjs/apis/wallet/wallet.d.ts:47](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.d.ts#L47)
 
 ___
 
@@ -523,7 +523,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.d.ts:39](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.d.ts#L39)
+[dist/cjs/apis/wallet/wallet.d.ts:39](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.d.ts#L39)
 
 ___
 
@@ -537,7 +537,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.d.ts:50](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.d.ts#L50)
+[dist/cjs/apis/wallet/wallet.d.ts:50](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.d.ts#L50)
 
 ___
 
@@ -551,7 +551,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.d.ts:33](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.d.ts#L33)
+[dist/cjs/apis/wallet/wallet.d.ts:33](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.d.ts#L33)
 
 ___
 
@@ -565,7 +565,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.d.ts:43](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.d.ts#L43)
+[dist/cjs/apis/wallet/wallet.d.ts:43](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.d.ts#L43)
 
 ___
 
@@ -579,7 +579,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.d.ts:53](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.d.ts#L53)
+[dist/cjs/apis/wallet/wallet.d.ts:53](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.d.ts#L53)
 
 ___
 
@@ -589,7 +589,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.compat.d.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.compat.d.ts#L17)
+[dist/cjs/apis/wallet/wallet.compat.d.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.compat.d.ts#L17)
 
 ___
 
@@ -603,7 +603,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.d.ts:38](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.d.ts#L38)
+[dist/cjs/apis/wallet/wallet.d.ts:38](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.d.ts#L38)
 
 ___
 
@@ -617,7 +617,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.d.ts:46](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.d.ts#L46)
+[dist/cjs/apis/wallet/wallet.d.ts:46](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.d.ts#L46)
 
 ___
 
@@ -631,7 +631,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.d.ts:35](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.d.ts#L35)
+[dist/cjs/apis/wallet/wallet.d.ts:35](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.d.ts#L35)
 
 ___
 
@@ -645,7 +645,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.d.ts:34](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.d.ts#L34)
+[dist/cjs/apis/wallet/wallet.d.ts:34](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.d.ts#L34)
 
 ___
 
@@ -659,7 +659,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.d.ts:52](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.d.ts#L52)
+[dist/cjs/apis/wallet/wallet.d.ts:52](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.d.ts#L52)
 
 ___
 
@@ -693,7 +693,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.d.ts:62](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.d.ts#L62)
+[dist/cjs/apis/wallet/wallet.d.ts:62](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.d.ts#L62)
 
 ## Accessors
 
@@ -711,7 +711,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.compat.d.ts:42](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.compat.d.ts#L42)
+[dist/cjs/apis/wallet/wallet.compat.d.ts:42](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.compat.d.ts#L42)
 
 ___
 
@@ -731,7 +731,7 @@ Wallet.agent
 
 #### Defined in
 
-[dist/cjs/apis/api.d.ts:19](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/api.d.ts#L19)
+[dist/cjs/apis/api.d.ts:19](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/api.d.ts#L19)
 
 • `set` **agent**(`agent`): `void`
 
@@ -753,7 +753,7 @@ Wallet.agent
 
 #### Defined in
 
-[dist/cjs/apis/api.d.ts:25](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/api.d.ts#L25)
+[dist/cjs/apis/api.d.ts:25](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/api.d.ts#L25)
 
 ___
 
@@ -771,7 +771,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.compat.d.ts:56](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.compat.d.ts#L56)
+[dist/cjs/apis/wallet/wallet.compat.d.ts:56](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.compat.d.ts#L56)
 
 ___
 
@@ -793,7 +793,7 @@ Wallet.options
 
 #### Defined in
 
-[dist/cjs/options-wrapper.d.ts:40](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/options-wrapper.d.ts#L40)
+[dist/cjs/options-wrapper.d.ts:40](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/options-wrapper.d.ts#L40)
 
 ___
 
@@ -811,7 +811,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.compat.d.ts:49](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.compat.d.ts#L49)
+[dist/cjs/apis/wallet/wallet.compat.d.ts:49](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.compat.d.ts#L49)
 
 ## Methods
 
@@ -834,7 +834,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.compat.d.ts:276](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.compat.d.ts#L276)
+[dist/cjs/apis/wallet/wallet.compat.d.ts:276](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.compat.d.ts#L276)
 
 ___
 
@@ -857,7 +857,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.compat.d.ts:245](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.compat.d.ts#L245)
+[dist/cjs/apis/wallet/wallet.compat.d.ts:245](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.compat.d.ts#L245)
 
 ___
 
@@ -879,7 +879,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.compat.d.ts:312](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.compat.d.ts#L312)
+[dist/cjs/apis/wallet/wallet.compat.d.ts:312](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.compat.d.ts#L312)
 
 ___
 
@@ -903,7 +903,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.compat.d.ts:153](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.compat.d.ts#L153)
+[dist/cjs/apis/wallet/wallet.compat.d.ts:153](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.compat.d.ts#L153)
 
 ___
 
@@ -926,7 +926,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.compat.d.ts:186](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.compat.d.ts#L186)
+[dist/cjs/apis/wallet/wallet.compat.d.ts:186](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.compat.d.ts#L186)
 
 ___
 
@@ -948,7 +948,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.compat.d.ts:230](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.compat.d.ts#L230)
+[dist/cjs/apis/wallet/wallet.compat.d.ts:230](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.compat.d.ts#L230)
 
 ___
 
@@ -977,7 +977,7 @@ const [PublicKey, SecretKey] = await createP2PKeyPair('my-key-pair');
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.compat.d.ts:224](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.compat.d.ts#L224)
+[dist/cjs/apis/wallet/wallet.compat.d.ts:224](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.compat.d.ts#L224)
 
 ___
 
@@ -1000,7 +1000,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.compat.d.ts:146](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.compat.d.ts#L146)
+[dist/cjs/apis/wallet/wallet.compat.d.ts:146](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.compat.d.ts#L146)
 
 ___
 
@@ -1023,7 +1023,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.compat.d.ts:140](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.compat.d.ts#L140)
+[dist/cjs/apis/wallet/wallet.compat.d.ts:140](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.compat.d.ts#L140)
 
 ___
 
@@ -1037,7 +1037,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.compat.d.ts:299](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.compat.d.ts#L299)
+[dist/cjs/apis/wallet/wallet.compat.d.ts:299](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.compat.d.ts#L299)
 
 ___
 
@@ -1060,7 +1060,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.compat.d.ts:261](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.compat.d.ts#L261)
+[dist/cjs/apis/wallet/wallet.compat.d.ts:261](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.compat.d.ts#L261)
 
 ___
 
@@ -1076,7 +1076,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.compat.d.ts:236](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.compat.d.ts#L236)
+[dist/cjs/apis/wallet/wallet.compat.d.ts:236](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.compat.d.ts#L236)
 
 ___
 
@@ -1100,7 +1100,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.compat.d.ts:170](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.compat.d.ts#L170)
+[dist/cjs/apis/wallet/wallet.compat.d.ts:170](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.compat.d.ts#L170)
 
 ___
 
@@ -1125,7 +1125,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.compat.d.ts:79](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.compat.d.ts#L79)
+[dist/cjs/apis/wallet/wallet.compat.d.ts:79](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.compat.d.ts#L79)
 
 ___
 
@@ -1156,7 +1156,7 @@ QIWI кошельке. Лимиты действуют как ограничен
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.compat.d.ts:89](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.compat.d.ts#L89)
+[dist/cjs/apis/wallet/wallet.compat.d.ts:89](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.compat.d.ts#L89)
 
 ___
 
@@ -1178,7 +1178,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.compat.d.ts:294](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.compat.d.ts#L294)
+[dist/cjs/apis/wallet/wallet.compat.d.ts:294](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.compat.d.ts#L294)
 
 ___
 
@@ -1203,7 +1203,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.compat.d.ts:104](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.compat.d.ts#L104)
+[dist/cjs/apis/wallet/wallet.compat.d.ts:104](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.compat.d.ts#L104)
 
 ___
 
@@ -1227,7 +1227,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.compat.d.ts:112](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.compat.d.ts#L112)
+[dist/cjs/apis/wallet/wallet.compat.d.ts:112](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.compat.d.ts#L112)
 
 ___
 
@@ -1244,7 +1244,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.compat.d.ts:61](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.compat.d.ts#L61)
+[dist/cjs/apis/wallet/wallet.compat.d.ts:61](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.compat.d.ts#L61)
 
 ___
 
@@ -1267,7 +1267,7 @@ QIWI Кошелька.
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.compat.d.ts:95](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.compat.d.ts#L95)
+[dist/cjs/apis/wallet/wallet.compat.d.ts:95](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.compat.d.ts#L95)
 
 ___
 
@@ -1291,7 +1291,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.compat.d.ts:120](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.compat.d.ts#L120)
+[dist/cjs/apis/wallet/wallet.compat.d.ts:120](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.compat.d.ts#L120)
 
 ___
 
@@ -1313,7 +1313,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.compat.d.ts:127](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.compat.d.ts#L127)
+[dist/cjs/apis/wallet/wallet.compat.d.ts:127](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.compat.d.ts#L127)
 
 ___
 
@@ -1335,7 +1335,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.compat.d.ts:288](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.compat.d.ts#L288)
+[dist/cjs/apis/wallet/wallet.compat.d.ts:288](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.compat.d.ts#L288)
 
 ___
 
@@ -1366,7 +1366,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.compat.d.ts:202](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.compat.d.ts#L202)
+[dist/cjs/apis/wallet/wallet.compat.d.ts:202](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.compat.d.ts#L202)
 
 ___
 
@@ -1390,7 +1390,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.compat.d.ts:211](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.compat.d.ts#L211)
+[dist/cjs/apis/wallet/wallet.compat.d.ts:211](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.compat.d.ts#L211)
 
 ___
 
@@ -1412,7 +1412,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.compat.d.ts:282](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.compat.d.ts#L282)
+[dist/cjs/apis/wallet/wallet.compat.d.ts:282](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.compat.d.ts#L282)
 
 ___
 
@@ -1434,7 +1434,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.compat.d.ts:269](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.compat.d.ts#L269)
+[dist/cjs/apis/wallet/wallet.compat.d.ts:269](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.compat.d.ts#L269)
 
 ___
 
@@ -1456,7 +1456,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.compat.d.ts:134](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.compat.d.ts#L134)
+[dist/cjs/apis/wallet/wallet.compat.d.ts:134](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.compat.d.ts#L134)
 
 ___
 
@@ -1480,7 +1480,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.compat.d.ts:160](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.compat.d.ts#L160)
+[dist/cjs/apis/wallet/wallet.compat.d.ts:160](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.compat.d.ts#L160)
 
 ___
 
@@ -1506,7 +1506,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.compat.d.ts:71](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.compat.d.ts#L71)
+[dist/cjs/apis/wallet/wallet.compat.d.ts:71](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.compat.d.ts#L71)
 
 ___
 
@@ -1524,7 +1524,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.compat.d.ts:306](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.compat.d.ts#L306)
+[dist/cjs/apis/wallet/wallet.compat.d.ts:306](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.compat.d.ts#L306)
 
 ___
 
@@ -1547,7 +1547,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.compat.d.ts:253](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.compat.d.ts#L253)
+[dist/cjs/apis/wallet/wallet.compat.d.ts:253](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.compat.d.ts#L253)
 
 ___
 
@@ -1585,7 +1585,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.d.ts:78](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.d.ts#L78)
+[dist/cjs/apis/wallet/wallet.d.ts:78](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.d.ts#L78)
 
 ___
 
@@ -1627,7 +1627,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.d.ts:108](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.d.ts#L108)
+[dist/cjs/apis/wallet/wallet.d.ts:108](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.d.ts#L108)
 
 ___
 
@@ -1650,7 +1650,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.compat.d.ts:178](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.compat.d.ts#L178)
+[dist/cjs/apis/wallet/wallet.compat.d.ts:178](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.compat.d.ts#L178)
 
 ___
 
@@ -1685,4 +1685,4 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.d.ts:90](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/wallet.d.ts#L90)
+[dist/cjs/apis/wallet/wallet.d.ts:90](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.d.ts#L90)

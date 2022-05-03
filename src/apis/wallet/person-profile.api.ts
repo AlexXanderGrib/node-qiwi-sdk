@@ -1,5 +1,5 @@
 import { WalletApi } from "./api";
-import { PersonProfile } from "./wallet.types";
+import type { PersonProfile } from "./wallet.types";
 
 /**
  * # Профиль пользователя

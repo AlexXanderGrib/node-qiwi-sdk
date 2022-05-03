@@ -1,4 +1,4 @@
-import { SimpleJsonHttp } from "../http";
+import type { SimpleJsonHttp } from "../http";
 import { OptionsWrapper, OptionsWrapperWithGetter } from "../options-wrapper";
 
 export interface ApiClassOptions {

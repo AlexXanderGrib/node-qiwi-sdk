@@ -66,7 +66,7 @@ Creates an instance of OptionsWrapper.
 
 #### Defined in
 
-[dist/cjs/options-wrapper.d.ts:22](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/options-wrapper.d.ts#L22)
+[dist/cjs/options-wrapper.d.ts:22](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/options-wrapper.d.ts#L22)
 
 ## Properties
 
@@ -84,7 +84,7 @@ Creates an instance of OptionsWrapper.
 
 #### Defined in
 
-[dist/cjs/options-wrapper.d.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/options-wrapper.d.ts#L16)
+[dist/cjs/options-wrapper.d.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/options-wrapper.d.ts#L16)
 
 ___
 
@@ -102,7 +102,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/p2p/bills.api.d.ts:27](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/p2p/bills.api.d.ts#L27)
+[dist/cjs/apis/p2p/bills.api.d.ts:27](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/p2p/bills.api.d.ts#L27)
 
 ## Accessors
 
@@ -124,7 +124,7 @@ P2pApi.http
 
 #### Defined in
 
-[dist/cjs/apis/api.d.ts:43](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/api.d.ts#L43)
+[dist/cjs/apis/api.d.ts:43](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/api.d.ts#L43)
 
 ___
 
@@ -146,7 +146,7 @@ P2pApi.publicKey
 
 #### Defined in
 
-[dist/cjs/apis/p2p/api.d.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/p2p/api.d.ts#L17)
+[dist/cjs/apis/p2p/api.d.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/p2p/api.d.ts#L17)
 
 ___
 
@@ -168,7 +168,7 @@ P2pApi.secretKey
 
 #### Defined in
 
-[dist/cjs/apis/p2p/api.d.ts:25](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/p2p/api.d.ts#L25)
+[dist/cjs/apis/p2p/api.d.ts:25](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/p2p/api.d.ts#L25)
 
 ## Methods
 
@@ -190,7 +190,7 @@ P2pApi.secretKey
 
 #### Defined in
 
-[dist/cjs/apis/p2p/bills.api.d.ts:26](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/p2p/bills.api.d.ts#L26)
+[dist/cjs/apis/p2p/bills.api.d.ts:26](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/p2p/bills.api.d.ts#L26)
 
 ___
 
@@ -216,7 +216,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/p2p/bills.api.d.ts:77](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/p2p/bills.api.d.ts#L77)
+[dist/cjs/apis/p2p/bills.api.d.ts:77](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/p2p/bills.api.d.ts#L77)
 
 ___
 
@@ -255,7 +255,7 @@ server2server с использованием авторизации. Метод
 
 #### Defined in
 
-[dist/cjs/apis/p2p/bills.api.d.ts:48](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/p2p/bills.api.d.ts#L48)
+[dist/cjs/apis/p2p/bills.api.d.ts:48](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/p2p/bills.api.d.ts#L48)
 
 ___
 
@@ -279,7 +279,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/p2p/bills.api.d.ts:85](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/p2p/bills.api.d.ts#L85)
+[dist/cjs/apis/p2p/bills.api.d.ts:85](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/p2p/bills.api.d.ts#L85)
 
 ___
 
@@ -306,7 +306,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/p2p/bills.api.d.ts:103](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/p2p/bills.api.d.ts#L103)
+[dist/cjs/apis/p2p/bills.api.d.ts:103](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/p2p/bills.api.d.ts#L103)
 
 ___
 
@@ -333,7 +333,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/p2p/bills.api.d.ts:58](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/p2p/bills.api.d.ts#L58)
+[dist/cjs/apis/p2p/bills.api.d.ts:58](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/p2p/bills.api.d.ts#L58)
 
 ___
 
@@ -360,7 +360,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/p2p/bills.api.d.ts:94](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/p2p/bills.api.d.ts#L94)
+[dist/cjs/apis/p2p/bills.api.d.ts:94](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/p2p/bills.api.d.ts#L94)
 
 ___
 
@@ -386,7 +386,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/p2p/bills.api.d.ts:67](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/p2p/bills.api.d.ts#L67)
+[dist/cjs/apis/p2p/bills.api.d.ts:67](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/p2p/bills.api.d.ts#L67)
 
 ___
 
@@ -411,4 +411,4 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/p2p/bills.api.d.ts:19](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/p2p/bills.api.d.ts#L19)
+[dist/cjs/apis/p2p/bills.api.d.ts:19](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/p2p/bills.api.d.ts#L19)

@@ -79,7 +79,7 @@ Creates an instance of _P2pCompatBillPayments.
 
 #### Defined in
 
-[dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts:20](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts#L20)
+[dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts:20](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts#L20)
 
 ## Properties
 
@@ -97,7 +97,7 @@ Creates an instance of _P2pCompatBillPayments.
 
 #### Defined in
 
-[dist/cjs/options-wrapper.d.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/options-wrapper.d.ts#L16)
+[dist/cjs/options-wrapper.d.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/options-wrapper.d.ts#L16)
 
 ___
 
@@ -111,7 +111,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/p2p/p2p.d.ts:54](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/p2p/p2p.d.ts#L54)
+[dist/cjs/apis/p2p/p2p.d.ts:54](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/p2p/p2p.d.ts#L54)
 
 ___
 
@@ -121,7 +121,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts:13](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts#L13)
+[dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts:13](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts#L13)
 
 ___
 
@@ -131,7 +131,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts:12](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts#L12)
+[dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts:12](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts#L12)
 
 ___
 
@@ -145,7 +145,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/p2p/p2p.d.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/p2p/p2p.d.ts#L16)
+[dist/cjs/apis/p2p/p2p.d.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/p2p/p2p.d.ts#L16)
 
 ___
 
@@ -159,7 +159,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/p2p/p2p.d.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/p2p/p2p.d.ts#L17)
+[dist/cjs/apis/p2p/p2p.d.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/p2p/p2p.d.ts#L17)
 
 ___
 
@@ -173,7 +173,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/p2p/p2p.d.ts:18](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/p2p/p2p.d.ts#L18)
+[dist/cjs/apis/p2p/p2p.d.ts:18](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/p2p/p2p.d.ts#L18)
 
 ___
 
@@ -187,7 +187,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/p2p/p2p.d.ts:15](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/p2p/p2p.d.ts#L15)
+[dist/cjs/apis/p2p/p2p.d.ts:15](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/p2p/p2p.d.ts#L15)
 
 ___
 
@@ -221,7 +221,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/p2p/p2p.d.ts:27](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/p2p/p2p.d.ts#L27)
+[dist/cjs/apis/p2p/p2p.d.ts:27](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/p2p/p2p.d.ts#L27)
 
 ## Accessors
 
@@ -239,7 +239,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts:27](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts#L27)
+[dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts:27](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts#L27)
 
 ___
 
@@ -259,7 +259,7 @@ P2p.agent
 
 #### Defined in
 
-[dist/cjs/apis/api.d.ts:19](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/api.d.ts#L19)
+[dist/cjs/apis/api.d.ts:19](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/api.d.ts#L19)
 
 • `set` **agent**(`agent`): `void`
 
@@ -281,7 +281,7 @@ P2p.agent
 
 #### Defined in
 
-[dist/cjs/apis/api.d.ts:25](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/api.d.ts#L25)
+[dist/cjs/apis/api.d.ts:25](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/api.d.ts#L25)
 
 ___
 
@@ -299,7 +299,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts:34](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts#L34)
+[dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts:34](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts#L34)
 
 ___
 
@@ -321,7 +321,7 @@ P2p.options
 
 #### Defined in
 
-[dist/cjs/options-wrapper.d.ts:40](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/options-wrapper.d.ts#L40)
+[dist/cjs/options-wrapper.d.ts:40](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/options-wrapper.d.ts#L40)
 
 ## Methods
 
@@ -347,7 +347,7 @@ Normalize amount
 
 #### Defined in
 
-[dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts:42](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts#L42)
+[dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts:42](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts#L42)
 
 ___
 
@@ -373,7 +373,7 @@ Cancelling unpaid bill
 
 #### Defined in
 
-[dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts:102](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts#L102)
+[dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts:102](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts#L102)
 
 ___
 
@@ -401,7 +401,7 @@ Checks notification data signature
 
 #### Defined in
 
-[dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts:52](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts#L52)
+[dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts:52](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts#L52)
 
 ___
 
@@ -428,7 +428,7 @@ Creating bill
 
 #### Defined in
 
-[dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts:86](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts#L86)
+[dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts:86](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts#L86)
 
 ___
 
@@ -454,7 +454,7 @@ Creating checkout link
 
 #### Defined in
 
-[dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts:75](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts#L75)
+[dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts:75](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts#L75)
 
 ___
 
@@ -474,7 +474,7 @@ Return uuid v4
 
 #### Defined in
 
-[dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts:67](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts#L67)
+[dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts:67](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts#L67)
 
 ___
 
@@ -500,7 +500,7 @@ Getting bill info
 
 #### Defined in
 
-[dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts:94](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts#L94)
+[dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts:94](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts#L94)
 
 ___
 
@@ -526,7 +526,7 @@ Lifetime in ISO
 
 #### Defined in
 
-[dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts:60](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts#L60)
+[dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts:60](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts#L60)
 
 ___
 
@@ -554,7 +554,7 @@ Method is not available for individuals
 
 #### Defined in
 
-[dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts:112](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts#L112)
+[dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts:112](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts#L112)
 
 ___
 
@@ -612,7 +612,7 @@ app.use((error, request, response, next) => {
 
 #### Defined in
 
-[dist/cjs/apis/p2p/p2p.d.ts:95](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/p2p/p2p.d.ts#L95)
+[dist/cjs/apis/p2p/p2p.d.ts:95](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/p2p/p2p.d.ts#L95)
 
 ___
 
@@ -642,7 +642,7 @@ Method is not available for individuals
 
 #### Defined in
 
-[dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts:124](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts#L124)
+[dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts:124](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts#L124)
 
 ___
 
@@ -673,7 +673,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/p2p/p2p.d.ts:37](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/p2p/p2p.d.ts#L37)
+[dist/cjs/apis/p2p/p2p.d.ts:37](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/p2p/p2p.d.ts#L37)
 
 ___
 
@@ -704,4 +704,4 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/p2p/p2p.d.ts:47](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/p2p/p2p.d.ts#L47)
+[dist/cjs/apis/p2p/p2p.d.ts:47](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/p2p/p2p.d.ts#L47)

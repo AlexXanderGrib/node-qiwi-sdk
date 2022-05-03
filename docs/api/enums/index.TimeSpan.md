@@ -25,7 +25,7 @@
 
 #### Defined in
 
-[dist/cjs/apis/shared/time.d.ts:15](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/shared/time.d.ts#L15)
+[dist/cjs/apis/shared/time.d.ts:15](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/shared/time.d.ts#L15)
 
 ___
 
@@ -35,7 +35,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/shared/time.d.ts:14](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/shared/time.d.ts#L14)
+[dist/cjs/apis/shared/time.d.ts:14](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/shared/time.d.ts#L14)
 
 ___
 
@@ -45,7 +45,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/shared/time.d.ts:11](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/shared/time.d.ts#L11)
+[dist/cjs/apis/shared/time.d.ts:11](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/shared/time.d.ts#L11)
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/shared/time.d.ts:13](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/shared/time.d.ts#L13)
+[dist/cjs/apis/shared/time.d.ts:13](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/shared/time.d.ts#L13)
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/shared/time.d.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/shared/time.d.ts#L17)
+[dist/cjs/apis/shared/time.d.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/shared/time.d.ts#L17)
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/shared/time.d.ts:12](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/shared/time.d.ts#L12)
+[dist/cjs/apis/shared/time.d.ts:12](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/shared/time.d.ts#L12)
 
 ___
 
@@ -85,7 +85,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/shared/time.d.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/shared/time.d.ts#L16)
+[dist/cjs/apis/shared/time.d.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/shared/time.d.ts#L16)
 
 ___
 
@@ -95,4 +95,4 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/shared/time.d.ts:18](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/shared/time.d.ts#L18)
+[dist/cjs/apis/shared/time.d.ts:18](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/shared/time.d.ts#L18)

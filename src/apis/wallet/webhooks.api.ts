@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { compareHmac, formatQuerystring } from "../shared";
 import { WalletApi } from "./api";
-import { WebHookInfo, WebhookTransaction } from "./wallet.types";
+import type { WebHookInfo, WebhookTransaction } from "./wallet.types";
 
 /**
  * # Уведомления (вебхуки)

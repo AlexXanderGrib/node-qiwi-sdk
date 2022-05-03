@@ -1,6 +1,6 @@
 /* istanbul ignore file */
 import { Wallet } from "./wallet";
-import * as types from "./wallet.types";
+import type * as types from "./wallet.types";
 
 /**
  *

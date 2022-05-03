@@ -9,7 +9,7 @@ import { WalletPaymentHistoryApi } from "./payment-history.api";
 import { WalletPaymentsApi } from "./payments.api";
 import { WalletPersonProfileApi } from "./person-profile.api";
 import { WalletRestrictionsApi } from "./restrictions.api";
-import { WalletApiOptions } from "./wallet.options";
+import type { WalletApiOptions } from "./wallet.options";
 import { WalletWebhooksApi } from "./webhooks.api";
 
 import {

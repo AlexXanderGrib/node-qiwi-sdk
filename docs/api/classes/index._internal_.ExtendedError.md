@@ -95,7 +95,7 @@ Error.name
 
 #### Defined in
 
-[dist/cjs/error.d.ts:9](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/error.d.ts#L9)
+[dist/cjs/error.d.ts:9](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/error.d.ts#L9)
 
 ## Accessors
 
@@ -113,7 +113,7 @@ Error.name
 
 #### Defined in
 
-[dist/cjs/error.d.ts:24](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/error.d.ts#L24)
+[dist/cjs/error.d.ts:24](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/error.d.ts#L24)
 
 ## Methods
 
@@ -131,4 +131,4 @@ Error.name
 
 #### Defined in
 
-[dist/cjs/error.d.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/error.d.ts#L16)
+[dist/cjs/error.d.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/error.d.ts#L16)

@@ -1,11 +1,11 @@
-import { RequestHandler } from "express";
+import type { RequestHandler } from "express";
 import { SimpleJsonHttp } from "../../http";
 import { USER_AGENT } from "../../identity";
 import { ApiClass } from "../api";
 import { environment } from "../shared";
 import { P2pBillsApi } from "./bills.api";
 import { mapHttpErrors, P2pBillNotificationError } from "./p2p.errors";
-import { P2pApiOptions } from "./p2p.options";
+import type { P2pApiOptions } from "./p2p.options";
 import {
   BillStatusData,
   BillCurrency,

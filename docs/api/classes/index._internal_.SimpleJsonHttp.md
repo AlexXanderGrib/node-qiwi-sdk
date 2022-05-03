@@ -44,7 +44,7 @@ Creates an instance of SimpleJsonHttp.
 
 #### Defined in
 
-[dist/cjs/http.d.ts:95](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/http.d.ts#L95)
+[dist/cjs/http.d.ts:95](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/http.d.ts#L95)
 
 ## Properties
 
@@ -54,7 +54,7 @@ Creates an instance of SimpleJsonHttp.
 
 #### Defined in
 
-[dist/cjs/http.d.ts:89](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/http.d.ts#L89)
+[dist/cjs/http.d.ts:89](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/http.d.ts#L89)
 
 ## Methods
 
@@ -83,7 +83,7 @@ Creates an instance of SimpleJsonHttp.
 
 #### Defined in
 
-[dist/cjs/http.d.ts:144](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/http.d.ts#L144)
+[dist/cjs/http.d.ts:144](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/http.d.ts#L144)
 
 ___
 
@@ -111,7 +111,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/http.d.ts:104](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/http.d.ts#L104)
+[dist/cjs/http.d.ts:104](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/http.d.ts#L104)
 
 ___
 
@@ -140,7 +140,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/http.d.ts:134](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/http.d.ts#L134)
+[dist/cjs/http.d.ts:134](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/http.d.ts#L134)
 
 ___
 
@@ -169,7 +169,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/http.d.ts:114](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/http.d.ts#L114)
+[dist/cjs/http.d.ts:114](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/http.d.ts#L114)
 
 ___
 
@@ -198,7 +198,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/http.d.ts:124](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/http.d.ts#L124)
+[dist/cjs/http.d.ts:124](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/http.d.ts#L124)
 
 ___
 
@@ -228,7 +228,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/http.d.ts:162](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/http.d.ts#L162)
+[dist/cjs/http.d.ts:162](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/http.d.ts#L162)
 
 ___
 
@@ -260,4 +260,4 @@ ___
 
 #### Defined in
 
-[dist/cjs/http.d.ts:154](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/http.d.ts#L154)
+[dist/cjs/http.d.ts:154](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/http.d.ts#L154)

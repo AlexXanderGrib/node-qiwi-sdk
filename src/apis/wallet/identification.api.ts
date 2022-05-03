@@ -1,5 +1,5 @@
 import { WalletApi } from "./api";
-import { IdentificationBase, IdentificationResponse } from "./wallet.types";
+import type { IdentificationBase, IdentificationResponse } from "./wallet.types";
 
 /**
  * # Идентификация
