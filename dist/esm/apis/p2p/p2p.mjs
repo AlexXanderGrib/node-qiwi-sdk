@@ -5,6 +5,7 @@ import { P2pBillsApi } from "./bills.api.mjs";
 import { P2pBillNotificationError, mapHttpErrors } from "./p2p.errors.mjs";
 import { BillCurrency, BillPaySource, BillStatus } from "./p2p.types.mjs";
 import { promise } from "./p2p.utils.mjs";
+import { environment } from "../shared/environment.mjs";
 /**
  * # P2P-счета
  * [Документация QIWI](https://developer.qiwi.com/ru/p2p-payments/)
@@ -41,6 +42,21 @@ class P2p extends ApiClass {
       publicKey,
       secretKey
     });
+  }
+  /**
+   *
+   *
+   * @static
+   * @param {string} [secretKey=process.env.QIWI_SECRET_KEY]
+   * @param {string} [publicKey=process.env.QIWI_PUBLIC_KEY]
+   * @return {P2p}  {P2p}
+   * @memberof P2p
+   */
+  static env(
+    secretKey = environment.QIWI_SECRET_KEY,
+    publicKey = environment.QIWI_PUBLIC_KEY
+  ) {
+    return this.create(secretKey, publicKey);
   }
   /**
    * `[Экспериментально]` Упрощает интеграцию с `express`

@@ -43,6 +43,13 @@ describe(Personal.name, () => {
     expect(wallet.options.walletId).toBe(process.env.QIWI_WALLET as string);
   });
 
+  test("[v3] .env() loads environment correctly", () => {
+    const auto = Wallet.env();
+
+    expect(auto.options.token).toBe(qiwi.options.token);
+    expect(auto.options.walletId).toBe(qiwi.options.walletId);
+  });
+
   test("Can get person profile", async () => {
     const response = await qiwi.getPersonProfile();
 

@@ -6,7 +6,8 @@ const http = require("../../http.js"),
   bills_api = require("./bills.api.js"),
   p2p_errors = require("./p2p.errors.js"),
   p2p_types = require("./p2p.types.js"),
-  p2p_utils = require("./p2p.utils.js");
+  p2p_utils = require("./p2p.utils.js"),
+  environment = require("../shared/environment.js");
 /**
  * # P2P-счета
  * [Документация QIWI](https://developer.qiwi.com/ru/p2p-payments/)
@@ -43,6 +44,21 @@ class P2p extends api.ApiClass {
       publicKey,
       secretKey
     });
+  }
+  /**
+   *
+   *
+   * @static
+   * @param {string} [secretKey=process.env.QIWI_SECRET_KEY]
+   * @param {string} [publicKey=process.env.QIWI_PUBLIC_KEY]
+   * @return {P2p}  {P2p}
+   * @memberof P2p
+   */
+  static env(
+    secretKey = environment.environment.QIWI_SECRET_KEY,
+    publicKey = environment.environment.QIWI_PUBLIC_KEY
+  ) {
+    return this.create(secretKey, publicKey);
   }
   /**
    * `[Экспериментально]` Упрощает интеграцию с `express`

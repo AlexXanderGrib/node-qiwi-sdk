@@ -32,7 +32,7 @@ import { USER_AGENT } from "../../identity";
 import { mapHttpErrors } from "./wallet.errors";
 import { ApiClass } from "../api";
 import { WalletProvidersApi } from "./providers.api";
-import { formatQuerystring } from "../shared";
+import { environment, formatQuerystring } from "../shared";
 
 /**
  * @callback SetupHttp
@@ -105,6 +105,12 @@ export class Wallet extends ApiClass<WalletApiOptions> {
   };
 
   /**
+   * Создаёт экземпляр класса.
+   *
+   * Если используете с переменными окружения, то:
+   * - Переименуйте переменную с токеном в `QIWI_TOKEN`
+   * - Переименуйте переменную с номером кошелька (если есть) в `QIWI_WALLET`
+   * - Используйте статический метод {@link env} вместо этого
    *
    *
    * @static
@@ -119,6 +125,24 @@ export class Wallet extends ApiClass<WalletApiOptions> {
       token,
       walletId
     });
+  }
+
+  /**
+   * Подхватывает токен из переменной окружения `QIWI_TOKEN` и
+   * номер телефона из переменной `QIWI_WALLET` и использует их
+   * для создания экземпляра
+   *
+   * @static
+   * @param {string} [token=process.env.QIWI_TOKEN]
+   * @param {string} [walletId=process.env.QIWI_WALLET]
+   * @return {Wallet}  {Wallet}
+   * @memberof Wallet
+   */
+  static env(
+    token = environment.QIWI_TOKEN,
+    walletId = environment.QIWI_WALLET
+  ): Wallet {
+    return this.create(token, walletId);
   }
 
   /**

@@ -56,7 +56,7 @@ Creates an instance of OptionsWrapper.
 
 #### Defined in
 
-dist/cjs/options-wrapper.d.ts:22
+[dist/cjs/options-wrapper.d.ts:22](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/options-wrapper.d.ts#L22)
 
 ## Properties
 
@@ -74,7 +74,7 @@ dist/cjs/options-wrapper.d.ts:22
 
 #### Defined in
 
-dist/cjs/options-wrapper.d.ts:16
+[dist/cjs/options-wrapper.d.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/options-wrapper.d.ts#L16)
 
 ## Accessors
 
@@ -96,7 +96,7 @@ WalletApi.http
 
 #### Defined in
 
-[dist/cjs/apis/api.d.ts:43](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/26a7b1c/dist/cjs/apis/api.d.ts#L43)
+[dist/cjs/apis/api.d.ts:43](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/api.d.ts#L43)
 
 ___
 
@@ -118,7 +118,7 @@ WalletApi.walletId
 
 #### Defined in
 
-[dist/cjs/apis/wallet/api.d.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/26a7b1c/dist/cjs/apis/wallet/api.d.ts#L17)
+[dist/cjs/apis/wallet/api.d.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/api.d.ts#L17)
 
 ## Methods
 
@@ -156,4 +156,4 @@ WalletApi.walletId
 
 #### Defined in
 
-[dist/cjs/apis/wallet/limits.api.d.ts:26](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/26a7b1c/dist/cjs/apis/wallet/limits.api.d.ts#L26)
+[dist/cjs/apis/wallet/limits.api.d.ts:26](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/limits.api.d.ts#L26)

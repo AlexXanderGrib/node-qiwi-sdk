@@ -1,7 +1,7 @@
 {
   "name": "qiwi-sdk",
-  "version": "3.4.1",
-  "description": "Typed QIWI Wallet SDK. Supported API's: Personal & P2P Bill Payments",
+  "version": "3.6.0",
+  "description": "⭐ Typed QIWI Wallet SDK. Supported API's: Personal & P2P Bill Payments",
   "keywords": [
     "qiwi",
     "wallet",
@@ -37,6 +37,10 @@
     "./detector": {
       "require": "./detector.js",
       "import": "./detector.mjs"
+    },
+    "./shared": {
+      "require": "./shared.js",
+      "import": "./shared.mjs"
     }
   },
   "directories": {

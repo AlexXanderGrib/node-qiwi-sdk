@@ -55,7 +55,7 @@ Creates an instance of DetectorCompat.
 
 #### Defined in
 
-[dist/cjs/apis/detector/detector.compat.d.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/26a7b1c/dist/cjs/apis/detector/detector.compat.d.ts#L16)
+[dist/cjs/apis/detector/detector.compat.d.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/detector/detector.compat.d.ts#L16)
 
 ## Properties
 
@@ -73,7 +73,7 @@ Creates an instance of DetectorCompat.
 
 #### Defined in
 
-dist/cjs/options-wrapper.d.ts:16
+[dist/cjs/options-wrapper.d.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/options-wrapper.d.ts#L16)
 
 ___
 
@@ -87,7 +87,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/detector/detector.d.ts:35](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/26a7b1c/dist/cjs/apis/detector/detector.d.ts#L35)
+[dist/cjs/apis/detector/detector.d.ts:35](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/detector/detector.d.ts#L35)
 
 ___
 
@@ -101,7 +101,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/detector/detector.d.ts:12](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/26a7b1c/dist/cjs/apis/detector/detector.d.ts#L12)
+[dist/cjs/apis/detector/detector.d.ts:12](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/detector/detector.d.ts#L12)
 
 ___
 
@@ -129,7 +129,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/detector/detector.d.ts:20](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/26a7b1c/dist/cjs/apis/detector/detector.d.ts#L20)
+[dist/cjs/apis/detector/detector.d.ts:20](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/detector/detector.d.ts#L20)
 
 ## Accessors
 
@@ -149,7 +149,7 @@ Detector.agent
 
 #### Defined in
 
-[dist/cjs/apis/api.d.ts:19](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/26a7b1c/dist/cjs/apis/api.d.ts#L19)
+[dist/cjs/apis/api.d.ts:19](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/api.d.ts#L19)
 
 • `set` **agent**(`agent`): `void`
 
@@ -171,7 +171,7 @@ Detector.agent
 
 #### Defined in
 
-[dist/cjs/apis/api.d.ts:25](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/26a7b1c/dist/cjs/apis/api.d.ts#L25)
+[dist/cjs/apis/api.d.ts:25](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/api.d.ts#L25)
 
 ___
 
@@ -193,7 +193,7 @@ Detector.options
 
 #### Defined in
 
-dist/cjs/options-wrapper.d.ts:40
+[dist/cjs/options-wrapper.d.ts:40](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/options-wrapper.d.ts#L40)
 
 ## Methods
 
@@ -217,7 +217,7 @@ dist/cjs/options-wrapper.d.ts:40
 
 #### Defined in
 
-[dist/cjs/apis/detector/detector.compat.d.ts:30](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/26a7b1c/dist/cjs/apis/detector/detector.compat.d.ts#L30)
+[dist/cjs/apis/detector/detector.compat.d.ts:30](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/detector/detector.compat.d.ts#L30)
 
 ___
 
@@ -241,7 +241,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/detector/detector.compat.d.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/26a7b1c/dist/cjs/apis/detector/detector.compat.d.ts#L23)
+[dist/cjs/apis/detector/detector.compat.d.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/detector/detector.compat.d.ts#L23)
 
 ___
 
@@ -265,4 +265,4 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/detector/detector.d.ts:28](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/26a7b1c/dist/cjs/apis/detector/detector.d.ts#L28)
+[dist/cjs/apis/detector/detector.d.ts:28](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/detector/detector.d.ts#L28)

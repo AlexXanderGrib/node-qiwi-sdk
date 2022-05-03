@@ -59,7 +59,7 @@ Error.constructor
 
 #### Defined in
 
-[dist/cjs/http.d.ts:42](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/26a7b1c/dist/cjs/http.d.ts#L42)
+[dist/cjs/http.d.ts:42](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/http.d.ts#L42)
 
 ## Properties
 
@@ -69,4 +69,4 @@ Error.constructor
 
 #### Defined in
 
-[dist/cjs/http.d.ts:35](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/26a7b1c/dist/cjs/http.d.ts#L35)
+[dist/cjs/http.d.ts:35](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/http.d.ts#L35)

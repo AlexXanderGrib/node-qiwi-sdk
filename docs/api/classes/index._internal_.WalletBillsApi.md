@@ -63,7 +63,7 @@ Creates an instance of OptionsWrapper.
 
 #### Defined in
 
-dist/cjs/options-wrapper.d.ts:22
+[dist/cjs/options-wrapper.d.ts:22](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/options-wrapper.d.ts#L22)
 
 ## Properties
 
@@ -81,7 +81,7 @@ dist/cjs/options-wrapper.d.ts:22
 
 #### Defined in
 
-dist/cjs/options-wrapper.d.ts:16
+[dist/cjs/options-wrapper.d.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/options-wrapper.d.ts#L16)
 
 ## Accessors
 
@@ -103,7 +103,7 @@ WalletApi.http
 
 #### Defined in
 
-[dist/cjs/apis/api.d.ts:43](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/26a7b1c/dist/cjs/apis/api.d.ts#L43)
+[dist/cjs/apis/api.d.ts:43](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/api.d.ts#L43)
 
 ___
 
@@ -125,7 +125,7 @@ WalletApi.walletId
 
 #### Defined in
 
-[dist/cjs/apis/wallet/api.d.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/26a7b1c/dist/cjs/apis/wallet/api.d.ts#L17)
+[dist/cjs/apis/wallet/api.d.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/api.d.ts#L17)
 
 ## Methods
 
@@ -161,7 +161,7 @@ const { publicKey, secretKey } = await createP2PKeyPair('my-key-pair');
 
 #### Defined in
 
-[dist/cjs/apis/wallet/bills.api.d.ts:34](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/26a7b1c/dist/cjs/apis/wallet/bills.api.d.ts#L34)
+[dist/cjs/apis/wallet/bills.api.d.ts:34](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/bills.api.d.ts#L34)
 
 ___
 
@@ -194,7 +194,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/bills.api.d.ts:49](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/26a7b1c/dist/cjs/apis/wallet/bills.api.d.ts#L49)
+[dist/cjs/apis/wallet/bills.api.d.ts:49](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/bills.api.d.ts#L49)
 
 ___
 
@@ -214,7 +214,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/bills.api.d.ts:50](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/26a7b1c/dist/cjs/apis/wallet/bills.api.d.ts#L50)
+[dist/cjs/apis/wallet/bills.api.d.ts:50](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/bills.api.d.ts#L50)
 
 ▸ **pay**(`id`, `currency`): `Promise`<[`BillPayResponse`](../modules/index.QIWI.md#billpayresponse)\>
 
@@ -231,7 +231,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/bills.api.d.ts:51](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/26a7b1c/dist/cjs/apis/wallet/bills.api.d.ts#L51)
+[dist/cjs/apis/wallet/bills.api.d.ts:51](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/bills.api.d.ts#L51)
 
 ___
 
@@ -260,4 +260,4 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/bills.api.d.ts:62](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/26a7b1c/dist/cjs/apis/wallet/bills.api.d.ts#L62)
+[dist/cjs/apis/wallet/bills.api.d.ts:62](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/wallet/bills.api.d.ts#L62)

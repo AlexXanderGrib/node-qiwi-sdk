@@ -28,7 +28,7 @@
 
 #### Defined in
 
-[dist/cjs/http.d.ts:25](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/26a7b1c/dist/cjs/http.d.ts#L25)
+[dist/cjs/http.d.ts:25](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/http.d.ts#L25)
 
 ___
 
@@ -38,7 +38,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/http.d.ts:24](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/26a7b1c/dist/cjs/http.d.ts#L24)
+[dist/cjs/http.d.ts:24](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/http.d.ts#L24)
 
 ___
 
@@ -48,7 +48,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/http.d.ts:22](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/26a7b1c/dist/cjs/http.d.ts#L22)
+[dist/cjs/http.d.ts:22](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/http.d.ts#L22)
 
 ___
 
@@ -58,4 +58,4 @@ ___
 
 #### Defined in
 
-[dist/cjs/http.d.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/26a7b1c/dist/cjs/http.d.ts#L23)
+[dist/cjs/http.d.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/http.d.ts#L23)

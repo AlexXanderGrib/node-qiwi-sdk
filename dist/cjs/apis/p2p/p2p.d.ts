@@ -36,6 +36,16 @@ export declare class P2p extends ApiClass<P2pApiOptions> {
      */
     static create(secretKey: string, publicKey?: string): P2p;
     /**
+     *
+     *
+     * @static
+     * @param {string} [secretKey=process.env.QIWI_SECRET_KEY]
+     * @param {string} [publicKey=process.env.QIWI_PUBLIC_KEY]
+     * @return {P2p}  {P2p}
+     * @memberof P2p
+     */
+    static env(secretKey?: string, publicKey?: string): P2p;
+    /**
      * Creates an instance of P2p.
      * @param {P2pApiOptions} [options]
      * @memberof P2p

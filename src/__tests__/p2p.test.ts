@@ -35,6 +35,13 @@ describe(P2P.name, () => {
     expect(P2p.create("")).toBeInstanceOf(P2p);
   });
 
+  test("[v3] .env() loads environment correctly", () => {
+    const auto = P2p.env();
+
+    expect(auto.options.publicKey).toBe(qiwi.options.publicKey);
+    expect(auto.options.secretKey).toBe(qiwi.options.secretKey);
+  });
+
   test("Can create Bill", async () => {
     const date = P2P.formatLifetimeDays(1 + Math.round(Math.random() * 39));
 

@@ -25,6 +25,7 @@ import { USER_AGENT } from "../../identity.mjs";
 import { mapHttpErrors } from "./wallet.errors.mjs";
 import { ApiClass } from "../api.mjs";
 import { WalletProvidersApi } from "./providers.api.mjs";
+import { environment } from "../shared/environment.mjs";
 import { formatQuerystring } from "../shared/querystring.mjs";
 /**
  * # API Кошелька
@@ -58,6 +59,12 @@ class Wallet extends ApiClass {
     this.providers = new Wallet.ProvidersApi(this._options);
   }
   /**
+   * Создаёт экземпляр класса.
+   *
+   * Если используете с переменными окружения, то:
+   * - Переименуйте переменную с токеном в `QIWI_TOKEN`
+   * - Переименуйте переменную с номером кошелька (если есть) в `QIWI_WALLET`
+   * - Используйте статический метод {@link env} вместо этого
    *
    *
    * @static
@@ -72,6 +79,20 @@ class Wallet extends ApiClass {
       token,
       walletId
     });
+  }
+  /**
+   * Подхватывает токен из переменной окружения `QIWI_TOKEN` и
+   * номер телефона из переменной `QIWI_WALLET` и использует их
+   * для создания экземпляра
+   *
+   * @static
+   * @param {string} [token=process.env.QIWI_TOKEN]
+   * @param {string} [walletId=process.env.QIWI_WALLET]
+   * @return {Wallet}  {Wallet}
+   * @memberof Wallet
+   */
+  static env(token = environment.QIWI_TOKEN, walletId = environment.QIWI_WALLET) {
+    return this.create(token, walletId);
   }
   /**
    * Автоматически подтягивает номер телефона из API QIWI.

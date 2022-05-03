@@ -61,6 +61,12 @@ export declare class Wallet extends ApiClass<WalletApiOptions> {
      */
     static httpClientFactory: (token: string) => SimpleJsonHttp;
     /**
+     * Создаёт экземпляр класса.
+     *
+     * Если используете с переменными окружения, то:
+     * - Переименуйте переменную с токеном в `QIWI_TOKEN`
+     * - Переименуйте переменную с номером кошелька (если есть) в `QIWI_WALLET`
+     * - Используйте статический метод {@link env} вместо этого
      *
      *
      * @static
@@ -70,6 +76,18 @@ export declare class Wallet extends ApiClass<WalletApiOptions> {
      * @memberof Wallet
      */
     static create(token: string, walletId?: string): Wallet;
+    /**
+     * Подхватывает токен из переменной окружения `QIWI_TOKEN` и
+     * номер телефона из переменной `QIWI_WALLET` и использует их
+     * для создания экземпляра
+     *
+     * @static
+     * @param {string} [token=process.env.QIWI_TOKEN]
+     * @param {string} [walletId=process.env.QIWI_WALLET]
+     * @return {Wallet}  {Wallet}
+     * @memberof Wallet
+     */
+    static env(token?: string, walletId?: string): Wallet;
     /**
      * Автоматически подтягивает номер телефона из API QIWI.
      * Номер телефона требуется для вызова большинства методов из

@@ -44,6 +44,7 @@
 
 - [notificationMiddleware](index.QIWI.P2p.md#notificationmiddleware)
 - [create](index.QIWI.P2p.md#create)
+- [env](index.QIWI.P2p.md#env)
 
 ## Constructors
 
@@ -67,7 +68,7 @@ Creates an instance of P2p.
 
 #### Defined in
 
-[dist/cjs/apis/p2p/p2p.d.ts:43](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/26a7b1c/dist/cjs/apis/p2p/p2p.d.ts#L43)
+[dist/cjs/apis/p2p/p2p.d.ts:53](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/p2p/p2p.d.ts#L53)
 
 ## Properties
 
@@ -85,7 +86,7 @@ Creates an instance of P2p.
 
 #### Defined in
 
-dist/cjs/options-wrapper.d.ts:16
+[dist/cjs/options-wrapper.d.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/options-wrapper.d.ts#L16)
 
 ___
 
@@ -95,7 +96,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/p2p/p2p.d.ts:44](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/26a7b1c/dist/cjs/apis/p2p/p2p.d.ts#L44)
+[dist/cjs/apis/p2p/p2p.d.ts:54](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/p2p/p2p.d.ts#L54)
 
 ___
 
@@ -105,7 +106,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/p2p/p2p.d.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/26a7b1c/dist/cjs/apis/p2p/p2p.d.ts#L16)
+[dist/cjs/apis/p2p/p2p.d.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/p2p/p2p.d.ts#L16)
 
 ___
 
@@ -115,7 +116,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/p2p/p2p.d.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/26a7b1c/dist/cjs/apis/p2p/p2p.d.ts#L17)
+[dist/cjs/apis/p2p/p2p.d.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/p2p/p2p.d.ts#L17)
 
 ___
 
@@ -125,7 +126,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/p2p/p2p.d.ts:18](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/26a7b1c/dist/cjs/apis/p2p/p2p.d.ts#L18)
+[dist/cjs/apis/p2p/p2p.d.ts:18](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/p2p/p2p.d.ts#L18)
 
 ___
 
@@ -135,7 +136,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/p2p/p2p.d.ts:15](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/26a7b1c/dist/cjs/apis/p2p/p2p.d.ts#L15)
+[dist/cjs/apis/p2p/p2p.d.ts:15](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/p2p/p2p.d.ts#L15)
 
 ___
 
@@ -165,7 +166,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/p2p/p2p.d.ts:27](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/26a7b1c/dist/cjs/apis/p2p/p2p.d.ts#L27)
+[dist/cjs/apis/p2p/p2p.d.ts:27](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/p2p/p2p.d.ts#L27)
 
 ## Accessors
 
@@ -185,7 +186,7 @@ ApiClass.agent
 
 #### Defined in
 
-[dist/cjs/apis/api.d.ts:19](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/26a7b1c/dist/cjs/apis/api.d.ts#L19)
+[dist/cjs/apis/api.d.ts:19](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/api.d.ts#L19)
 
 • `set` **agent**(`agent`): `void`
 
@@ -207,7 +208,7 @@ ApiClass.agent
 
 #### Defined in
 
-[dist/cjs/apis/api.d.ts:25](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/26a7b1c/dist/cjs/apis/api.d.ts#L25)
+[dist/cjs/apis/api.d.ts:25](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/api.d.ts#L25)
 
 ___
 
@@ -229,7 +230,7 @@ ApiClass.options
 
 #### Defined in
 
-dist/cjs/options-wrapper.d.ts:40
+[dist/cjs/options-wrapper.d.ts:40](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/options-wrapper.d.ts#L40)
 
 ## Methods
 
@@ -283,7 +284,7 @@ app.use((error, request, response, next) => {
 
 #### Defined in
 
-[dist/cjs/apis/p2p/p2p.d.ts:85](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/26a7b1c/dist/cjs/apis/p2p/p2p.d.ts#L85)
+[dist/cjs/apis/p2p/p2p.d.ts:95](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/p2p/p2p.d.ts#L95)
 
 ___
 
@@ -310,4 +311,31 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/p2p/p2p.d.ts:37](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/26a7b1c/dist/cjs/apis/p2p/p2p.d.ts#L37)
+[dist/cjs/apis/p2p/p2p.d.ts:37](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/p2p/p2p.d.ts#L37)
+
+___
+
+### env
+
+▸ `Static` **env**(`secretKey?`, `publicKey?`): [`P2p`](index.QIWI.P2p.md)
+
+**`static`**
+
+**`memberof`** P2p
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `secretKey?` | `string` |
+| `publicKey?` | `string` |
+
+#### Returns
+
+[`P2p`](index.QIWI.P2p.md)
+
+{P2p}
+
+#### Defined in
+
+[dist/cjs/apis/p2p/p2p.d.ts:47](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/p2p/p2p.d.ts#L47)

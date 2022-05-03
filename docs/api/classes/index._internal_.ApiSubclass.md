@@ -66,7 +66,7 @@ Creates an instance of OptionsWrapper.
 
 #### Defined in
 
-dist/cjs/options-wrapper.d.ts:22
+[dist/cjs/options-wrapper.d.ts:22](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/options-wrapper.d.ts#L22)
 
 ## Properties
 
@@ -84,7 +84,7 @@ dist/cjs/options-wrapper.d.ts:22
 
 #### Defined in
 
-dist/cjs/options-wrapper.d.ts:16
+[dist/cjs/options-wrapper.d.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/options-wrapper.d.ts#L16)
 
 ## Accessors
 
@@ -102,4 +102,4 @@ dist/cjs/options-wrapper.d.ts:16
 
 #### Defined in
 
-[dist/cjs/apis/api.d.ts:43](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/26a7b1c/dist/cjs/apis/api.d.ts#L43)
+[dist/cjs/apis/api.d.ts:43](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/87e5174/dist/cjs/apis/api.d.ts#L43)

@@ -2,6 +2,7 @@ import { RequestHandler } from "express";
 import { SimpleJsonHttp } from "../../http";
 import { USER_AGENT } from "../../identity";
 import { ApiClass } from "../api";
+import { environment } from "../shared";
 import { P2pBillsApi } from "./bills.api";
 import { mapHttpErrors, P2pBillNotificationError } from "./p2p.errors";
 import { P2pApiOptions } from "./p2p.options";
@@ -70,6 +71,22 @@ export class P2p extends ApiClass<P2pApiOptions> {
       publicKey,
       secretKey
     });
+  }
+
+  /**
+   *
+   *
+   * @static
+   * @param {string} [secretKey=process.env.QIWI_SECRET_KEY]
+   * @param {string} [publicKey=process.env.QIWI_PUBLIC_KEY]
+   * @return {P2p}  {P2p}
+   * @memberof P2p
+   */
+  static env(
+    secretKey = environment.QIWI_SECRET_KEY,
+    publicKey = environment.QIWI_PUBLIC_KEY
+  ): P2p {
+    return this.create(secretKey, publicKey);
   }
 
   /**

@@ -41,6 +41,7 @@ export {
 } from "./apis/shared/time.mjs";
 export { generateUUID } from "./apis/shared/uuid.mjs";
 export { compareHmac } from "./apis/shared/hmac.mjs";
+export { environment } from "./apis/shared/environment.mjs";
 export { P2p } from "./apis/p2p/p2p.mjs";
 export {
   _P2pCompat as P2P,
