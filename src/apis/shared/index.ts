@@ -5,3 +5,5 @@ export * from "./types";
 export * from "./uuid";
 export * from "./hmac";
 export * from "./environment";
+export * from "./http";
+export * from "./identity";

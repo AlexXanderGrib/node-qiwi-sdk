@@ -1,4 +1,4 @@
-import { ExtendedError } from "../../error";
+import { ExtendedError } from "../error";
 
 /**
  * Ошибка, которую выбрасывает персональное API в случае

@@ -14,7 +14,7 @@ import {
 /**
  *
  * @deprecated Это класс для тех, кто мигрирует с `@qiwi/bill-payments-node-js-sdk`.
- * Остальным рекомендуется использовать
+ * Остальным рекомендуется использовать класс `P2p`
  * @export
  * @class _P2pCompatBillPayments
  * @extends {P2p}

@@ -1,6 +1,6 @@
 [QIWI SDK](../README.md) / [Modules](../modules.md) / [index](../modules/index.md) / [<internal\>](../modules/index._internal_.md) / HttpResponse
 
-# Interface: HttpResponse<Rq, Rs\>
+# Interface: HttpResponse<Request, Response\>
 
 [index](../modules/index.md).[<internal>](../modules/index._internal_.md).HttpResponse
 
@@ -8,8 +8,8 @@
 
 | Name | Type |
 | :------ | :------ |
-| `Rq` | `any` |
-| `Rs` | `any` |
+| `Request` | `any` |
+| `Response` | `any` |
 
 ## Table of contents
 
@@ -24,11 +24,11 @@
 
 ### body
 
-• `Optional` **body**: `Rs`
+• `Optional` **body**: `Response`
 
 #### Defined in
 
-[dist/cjs/http.d.ts:25](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/http.d.ts#L25)
+dist/cjs/http.d.ts:25
 
 ___
 
@@ -38,17 +38,17 @@ ___
 
 #### Defined in
 
-[dist/cjs/http.d.ts:24](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/http.d.ts#L24)
+dist/cjs/http.d.ts:24
 
 ___
 
 ### request
 
-• **request**: [`HttpRequestOptions`](index._internal_.HttpRequestOptions.md)<`Rq`, `Rs`\>
+• **request**: [`HttpRequestOptions`](index._internal_.HttpRequestOptions.md)<`Request`, `Response`\>
 
 #### Defined in
 
-[dist/cjs/http.d.ts:22](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/http.d.ts#L22)
+dist/cjs/http.d.ts:22
 
 ___
 
@@ -58,4 +58,4 @@ ___
 
 #### Defined in
 
-[dist/cjs/http.d.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/http.d.ts#L23)
+dist/cjs/http.d.ts:23

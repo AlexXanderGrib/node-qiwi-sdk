@@ -8,12 +8,40 @@
 
 ### Enumeration members
 
+- [CHF](index.QIWI.Currency.md#chf)
+- [CNY](index.QIWI.Currency.md#cny)
 - [EUR](index.QIWI.Currency.md#eur)
 - [KZT](index.QIWI.Currency.md#kzt)
 - [RUB](index.QIWI.Currency.md#rub)
+- [TJS](index.QIWI.Currency.md#tjs)
+- [UAH](index.QIWI.Currency.md#uah)
 - [USD](index.QIWI.Currency.md#usd)
 
 ## Enumeration members
+
+### CHF
+
+• **CHF** = `756`
+
+Швейцарские франки
+
+#### Defined in
+
+dist/cjs/apis/wallet/wallet.types.d.ts:55
+
+___
+
+### CNY
+
+• **CNY** = `156`
+
+Китайские юани
+
+#### Defined in
+
+dist/cjs/apis/wallet/wallet.types.d.ts:57
+
+___
 
 ### EUR
 
@@ -23,7 +51,7 @@
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.types.d.ts:47](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.types.d.ts#L47)
+dist/cjs/apis/wallet/wallet.types.d.ts:47
 
 ___
 
@@ -35,7 +63,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.types.d.ts:49](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.types.d.ts#L49)
+dist/cjs/apis/wallet/wallet.types.d.ts:49
 
 ___
 
@@ -47,7 +75,31 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.types.d.ts:43](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.types.d.ts#L43)
+dist/cjs/apis/wallet/wallet.types.d.ts:43
+
+___
+
+### TJS
+
+• **TJS** = `972`
+
+Таджикские сомони
+
+#### Defined in
+
+dist/cjs/apis/wallet/wallet.types.d.ts:53
+
+___
+
+### UAH
+
+• **UAH** = `980`
+
+Гривны
+
+#### Defined in
+
+dist/cjs/apis/wallet/wallet.types.d.ts:51
 
 ___
 
@@ -59,4 +111,4 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.types.d.ts:45](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.types.d.ts#L45)
+dist/cjs/apis/wallet/wallet.types.d.ts:45

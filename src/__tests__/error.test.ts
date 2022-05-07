@@ -1,4 +1,4 @@
-import { ExtendedError, ErrorWithCode } from "../error";
+import { ExtendedError, ErrorWithCode } from "../apis/error";
 
 describe("Error Classes", () => {
   const message = "Abo ba";

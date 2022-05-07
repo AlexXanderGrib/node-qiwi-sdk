@@ -54,7 +54,7 @@ Creates an instance of WalletApiShortError.
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.errors.d.ts:48](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.errors.d.ts#L48)
+dist/cjs/apis/wallet/wallet.errors.d.ts:48
 
 ## Properties
 
@@ -64,7 +64,7 @@ Creates an instance of WalletApiShortError.
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.errors.d.ts:42](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.errors.d.ts#L42)
+dist/cjs/apis/wallet/wallet.errors.d.ts:42
 
 ___
 
@@ -78,7 +78,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/error.d.ts:9](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/error.d.ts#L9)
+dist/cjs/error.d.ts:9
 
 ___
 
@@ -88,7 +88,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.errors.d.ts:41](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.errors.d.ts#L41)
+dist/cjs/apis/wallet/wallet.errors.d.ts:41
 
 ## Accessors
 
@@ -110,7 +110,7 @@ ExtendedError.\_\_@toStringTag@11
 
 #### Defined in
 
-[dist/cjs/error.d.ts:24](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/error.d.ts#L24)
+dist/cjs/error.d.ts:24
 
 ## Methods
 
@@ -132,4 +132,4 @@ ExtendedError.\_\_@toStringTag@11
 
 #### Defined in
 
-[dist/cjs/error.d.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/error.d.ts#L16)
+dist/cjs/error.d.ts:16

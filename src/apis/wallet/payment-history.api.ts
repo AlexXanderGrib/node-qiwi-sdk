@@ -1,9 +1,9 @@
 import { formatQuerystring } from "../shared";
 import { WalletApi } from "./api";
 import {
-  GetPaymentHistoryParams as GetPaymentHistoryParameters,
+  GetPaymentHistoryParameters as GetPaymentHistoryParameters,
   GetTransactionsHistoryResponse,
-  GetPaymentHistoryTotalParams as GetPaymentHistoryTotalParameters,
+  GetPaymentHistoryTotalParameters as GetPaymentHistoryTotalParameters,
   GetPaymentHistoryTotalResponse,
   Transaction,
   StringOrNumber,

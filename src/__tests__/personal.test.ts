@@ -43,6 +43,19 @@ describe(Personal.name, () => {
     expect(wallet.options.walletId).toBe(process.env.QIWI_WALLET as string);
   });
 
+  test("[v3] Can get rates", async () => {
+    const [rate] = await qiwi.payments.getRates();
+    expect(Currency).toHaveProperty(rate.from.toString());
+    expect(Currency).toHaveProperty(rate.to.toString());
+    expect(typeof rate.to).toBe("number");
+  });
+
+  test("[v3] Can get nickname", async () => {
+    const data = await qiwi.nickname.getCurrent();
+
+    expect(typeof data.nickname).toBe("string");
+  });
+
   test("[v3] .env() loads environment correctly", () => {
     const auto = Wallet.env();
 

@@ -5,7 +5,7 @@ import type * as types from "./wallet.types";
 /**
  *
  * @deprecated Это класс для тех, кто мигрирует с `node-qiwi`.
- * Остальным рекомендуется использовать
+ * Остальным рекомендуется использовать класс `Wallet`
  *
  * @export
  * @class _WalletCompatNodeQiwi
@@ -73,13 +73,13 @@ export class _WalletCompatNodeQiwi extends Wallet {
    *
    *
    * @param {(string | number)} contractId
-   * @param {types.GetPaymentHistoryParams} settings
+   * @param {types.GetPaymentHistoryParameters} settings
    * @return {Promise<types.GetTransactionsHistoryResponse>}  {Promise<types.GetTransactionsHistoryResponse>}
    * @memberof _WalletCompatNodeQiwi
    */
   async getHistory(
     contractId: string | number,
-    settings: Partial<types.GetPaymentHistoryParams> = {}
+    settings: Partial<types.GetPaymentHistoryParameters> = {}
   ): Promise<types.GetTransactionsHistoryResponse> {
     return await this._executeWithContractId(contractId, async (wallet) => {
       return await wallet.paymentHistory.getHistory({ rows: 50, ...settings });
@@ -90,13 +90,13 @@ export class _WalletCompatNodeQiwi extends Wallet {
    *
    *
    * @param {(string | number)} contractId
-   * @param {types.GetPaymentHistoryTotalParams} settings
+   * @param {types.GetPaymentHistoryTotalParameters} settings
    * @return {Promise<types.GetPaymentHistoryTotalResponse>}  {Promise<types.GetPaymentHistoryTotalResponse>}
    * @memberof _WalletCompatNodeQiwi
    */
   async getTransactionsStats(
     contractId: string | number,
-    settings: types.GetPaymentHistoryTotalParams
+    settings: types.GetPaymentHistoryTotalParameters
   ): Promise<types.GetPaymentHistoryTotalResponse> {
     return await this._executeWithContractId(contractId, async (wallet) => {
       return await wallet.paymentHistory.getTotal(settings);

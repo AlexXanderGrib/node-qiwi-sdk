@@ -1,6 +1,6 @@
 {
   "name": "qiwi-sdk",
-  "version": "3.6.1",
+  "version": "3.6.4",
   "description": "⭐ Typed QIWI Wallet SDK. Supported API's: Personal & P2P Bill Payments",
   "keywords": [
     "qiwi",
@@ -16,31 +16,86 @@
     "nodejs",
     "backend"
   ],
+  "files": [
+    "dist/",
+    "examples/",
+    "coverage/",
+    "docs/",
+    "src/",
+    "index.js",
+    "index.mjs",
+    "index.d.ts",
+    "wallet.js",
+    "wallet.mjs",
+    "wallet.d.ts",
+    "p2p.js",
+    "p2p.mjs",
+    "p2p.d.ts",
+    "detector.js",
+    "detector.mjs",
+    "detector.d.ts",
+    "shared.js",
+    "shared.mjs",
+    "shared.d.ts",
+    "README.md",
+    "README.ru.md",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "LICENSE.txt",
+    "SECURITY.md"
+  ],
   "main": "./index.js",
   "module": "./index.mjs",
   "type": "commonjs",
   "types": "./index.d.ts",
   "typings": "./index.d.ts",
+  "sideEffects": false,
   "exports": {
     ".": {
       "require": "./index.js",
-      "import": "./index.mjs"
+      "import": "./index.mjs",
+      "default": "./index.mjs",
+      "types": "./index.d.ts"
     },
     "./wallet": {
       "require": "./wallet.js",
-      "import": "./wallet.mjs"
+      "import": "./wallet.mjs",
+      "default": "./wallet.mjs",
+      "types": "./wallet.d.ts"
     },
     "./p2p": {
       "require": "./p2p.js",
-      "import": "./p2p.mjs"
+      "import": "./p2p.mjs",
+      "default": "./p2p.mjs",
+      "types": "./p2p.d.ts"
     },
     "./detector": {
       "require": "./detector.js",
-      "import": "./detector.mjs"
+      "import": "./detector.mjs",
+      "default": "./detector.mjs",
+      "types": "./detector.d.ts"
     },
     "./shared": {
       "require": "./shared.js",
-      "import": "./shared.mjs"
+      "import": "./shared.mjs",
+      "default": "./shared.mjs",
+      "types": "./shared.d.ts"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "wallet": [
+        "./wallet.d.ts"
+      ],
+      "p2p": [
+        "./p2p.d.ts"
+      ],
+      "detector": [
+        "./detector.d.ts"
+      ],
+      "shared": [
+        "./shared.d.ts"
+      ]
     }
   },
   "directories": {

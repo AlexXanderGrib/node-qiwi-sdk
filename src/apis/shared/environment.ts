@@ -1,4 +1,3 @@
-/* eslint-disable security/detect-object-injection */
 type Environment<
   K extends string = string,
   X extends string | undefined = string | undefined
@@ -20,6 +19,7 @@ function loadEnvironment<T extends string[]>(
 
   for (const key of keys) {
     Object.defineProperty(environment, key, {
+      // eslint-disable-next-line security/detect-object-injection
       get: () => baseEnvironment[key]
     });
   }

@@ -1,3 +1,3 @@
-import { ApiClassOptions } from "../api";
+import type { ApiClassOptions } from "../api";
 
 export type DetectorApiOptions = ApiClassOptions;

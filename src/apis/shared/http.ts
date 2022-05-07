@@ -1,33 +1,34 @@
 import axios, { AxiosResponse, Method } from "axios";
-import { Collection, collect, ReadonlyRecord } from "./apis/shared";
-import { OptionsWrapperWithSetter } from "./options-wrapper";
+import type { Collection, ReadonlyRecord } from "./types";
+import { OptionsWrapperWithSetter } from "../options-wrapper";
+import { collect } from "./collect";
 
 export type Headers = ReadonlyRecord<string, string>;
 
-export interface HttpClientOptions<Rq = any, Rs = any> {
+export interface HttpClientOptions<Request = any, Response = any> {
   headers?: Headers;
   agent?: any;
   okStatusCodes?: Collection<number>;
   baseURL?: string;
   timeout?: number;
 
-  stringifyBody?: (body: Rq) => string | Buffer;
-  parseResponse?: (body: Buffer) => Rs;
+  stringifyBody?: (body: Request) => string | Buffer;
+  parseResponse?: (body: Buffer) => Response;
   mapHttpErrors?: (error: HttpError) => Error;
 }
 
-export interface HttpRequestOptions<Rq = any, Rs = any>
-  extends Partial<HttpClientOptions<Rq, Rs>> {
+export interface HttpRequestOptions<Request = any, Response = any>
+  extends Partial<HttpClientOptions<Request, Response>> {
   url: string;
   method: string;
-  body?: Rq;
+  body?: Request;
 }
 
-export interface HttpResponse<Rq = any, Rs = any> {
-  request: HttpRequestOptions<Rq, Rs>;
+export interface HttpResponse<Request = any, Response = any> {
+  request: HttpRequestOptions<Request, Response>;
   statusCode: number;
   headers: Headers;
-  body?: Rs;
+  body?: Response;
 }
 
 /**
@@ -205,12 +206,12 @@ export class SimpleJsonHttp {
    *
    * @template T
    * @param {string} url
-   * @param {*} [data]
+   * @param {*} [body]
    * @return {Promise<T>}
    * @memberof SimpleJsonHttp
    */
-  async post<T>(url: string, data?: any): Promise<T> {
-    return await this.simpleRequest("POST", url, data);
+  async post<T>(url: string, body?: any): Promise<T> {
+    return await this.simpleRequest("POST", url, body);
   }
 
   /**
@@ -218,12 +219,12 @@ export class SimpleJsonHttp {
    *
    * @template T
    * @param {string} url
-   * @param {*} [data]
+   * @param {*} [body]
    * @return {Promise<T>}
    * @memberof SimpleJsonHttp
    */
-  async put<T>(url: string, data?: any): Promise<T> {
-    return await this.simpleRequest("PUT", url, data);
+  async put<T>(url: string, body?: any): Promise<T> {
+    return await this.simpleRequest("PUT", url, body);
   }
 
   /**
@@ -231,14 +232,14 @@ export class SimpleJsonHttp {
    *
    * @template T
    * @param {string} url
-   * @param {*} [data]
+   * @param {*} [body]
    * @return {Promise<T>}
    * @memberof SimpleJsonHttp
    */
-  async patch<T>(url: string, data?: any): Promise<T> {
+  async patch<T>(url: string, body?: any): Promise<T> {
     // Метод PATCH не используется в тестах
     /* istanbul ignore next */
-    return await this.simpleRequest("PATCH", url, data);
+    return await this.simpleRequest("PATCH", url, body);
   }
 
   /**
@@ -246,14 +247,14 @@ export class SimpleJsonHttp {
    *
    * @template T
    * @param {string} url
-   * @param {*} [data]
+   * @param {*} [body]
    * @return {Promise<T>}
    * @memberof SimpleJsonHttp
    */
-  async delete<T>(url: string, data?: any): Promise<T> {
+  async delete<T>(url: string, body?: any): Promise<T> {
     // Метод DELETE не используется в тестах
     /* istanbul ignore next */
-    return await this.simpleRequest("DELETE", url, data);
+    return await this.simpleRequest("DELETE", url, body);
   }
 
   /**

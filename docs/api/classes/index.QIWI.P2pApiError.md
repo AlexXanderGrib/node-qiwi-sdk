@@ -55,7 +55,7 @@ Creates an instance of P2pApiError.
 
 #### Defined in
 
-[dist/cjs/apis/p2p/p2p.errors.d.ts:27](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/p2p/p2p.errors.d.ts#L27)
+dist/cjs/apis/p2p/p2p.errors.d.ts:27
 
 ## Properties
 
@@ -65,7 +65,7 @@ Creates an instance of P2pApiError.
 
 #### Defined in
 
-[dist/cjs/apis/p2p/p2p.errors.d.ts:20](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/p2p/p2p.errors.d.ts#L20)
+dist/cjs/apis/p2p/p2p.errors.d.ts:20
 
 ___
 
@@ -79,7 +79,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/error.d.ts:9](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/error.d.ts#L9)
+dist/cjs/error.d.ts:9
 
 ___
 
@@ -89,7 +89,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/p2p/p2p.errors.d.ts:19](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/p2p/p2p.errors.d.ts#L19)
+dist/cjs/apis/p2p/p2p.errors.d.ts:19
 
 ___
 
@@ -99,7 +99,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/p2p/p2p.errors.d.ts:21](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/p2p/p2p.errors.d.ts#L21)
+dist/cjs/apis/p2p/p2p.errors.d.ts:21
 
 ## Accessors
 
@@ -121,7 +121,7 @@ ExtendedError.\_\_@toStringTag@11
 
 #### Defined in
 
-[dist/cjs/error.d.ts:24](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/error.d.ts#L24)
+dist/cjs/error.d.ts:24
 
 ## Methods
 
@@ -143,4 +143,4 @@ ExtendedError.\_\_@toStringTag@11
 
 #### Defined in
 
-[dist/cjs/error.d.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/error.d.ts#L16)
+dist/cjs/error.d.ts:16

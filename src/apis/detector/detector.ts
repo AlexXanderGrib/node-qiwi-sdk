@@ -1,7 +1,5 @@
-import { SimpleJsonHttp } from "../../http";
-import { USER_AGENT } from "../../identity";
 import { ApiClass } from "../api";
-import { formatQuerystring } from "../shared";
+import { formatQuerystring, SimpleJsonHttp, USER_AGENT } from "../shared";
 import { DetectorDetectApi } from "./detect.api";
 import type { DetectorApiOptions } from "./detector.options";
 

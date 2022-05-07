@@ -54,7 +54,7 @@ Creates an instance of OptionsWrapper.
 
 #### Defined in
 
-[dist/cjs/options-wrapper.d.ts:22](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/options-wrapper.d.ts#L22)
+dist/cjs/options-wrapper.d.ts:22
 
 ## Properties
 
@@ -72,7 +72,7 @@ Creates an instance of OptionsWrapper.
 
 #### Defined in
 
-[dist/cjs/options-wrapper.d.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/options-wrapper.d.ts#L16)
+dist/cjs/options-wrapper.d.ts:16
 
 ## Accessors
 
@@ -94,7 +94,7 @@ DetectorApi.http
 
 #### Defined in
 
-[dist/cjs/apis/api.d.ts:43](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/api.d.ts#L43)
+dist/cjs/apis/api.d.ts:43
 
 ## Methods
 
@@ -118,7 +118,7 @@ ID провайдера
 
 #### Defined in
 
-[dist/cjs/apis/detector/detect.api.d.ts:18](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/detector/detect.api.d.ts#L18)
+dist/cjs/apis/detector/detect.api.d.ts:18
 
 ___
 
@@ -144,7 +144,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/detector/detect.api.d.ts:35](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/detector/detect.api.d.ts#L35)
+dist/cjs/apis/detector/detect.api.d.ts:35
 
 ___
 
@@ -167,4 +167,4 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/detector/detect.api.d.ts:25](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/detector/detect.api.d.ts#L25)
+dist/cjs/apis/detector/detect.api.d.ts:25

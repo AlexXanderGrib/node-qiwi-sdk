@@ -1,5 +1,3 @@
-import { HttpRequestOptions, SimpleJsonHttp } from "../../http";
-
 import { WalletBillsApi } from "./bills.api";
 import { WalletCardsApi } from "./cards.api";
 import { WalletFundingSourcesApi } from "./funding-sources.api";
@@ -28,11 +26,17 @@ import {
   TokenResponse
 } from "./wallet.types";
 
-import { USER_AGENT } from "../../identity";
 import { mapHttpErrors } from "./wallet.errors";
 import { ApiClass } from "../api";
 import { WalletProvidersApi } from "./providers.api";
-import { environment, formatQuerystring } from "../shared";
+import {
+  environment,
+  formatQuerystring,
+  HttpRequestOptions,
+  SimpleJsonHttp,
+  USER_AGENT
+} from "../shared";
+import { WalletNicknameApi } from "./nickname.api";
 
 /**
  * @callback SetupHttp
@@ -75,6 +79,7 @@ export class Wallet extends ApiClass<WalletApiOptions> {
   static readonly BillsApi = WalletBillsApi;
   static readonly WebhooksApi = WalletWebhooksApi;
   static readonly ProvidersApi = WalletProvidersApi;
+  static readonly NicknameApi = WalletNicknameApi;
 
   /**
    *
@@ -205,6 +210,7 @@ export class Wallet extends ApiClass<WalletApiOptions> {
   readonly bills = new Wallet.BillsApi(this._options);
   readonly webhooks = new Wallet.WebhooksApi(this._options);
   readonly providers = new Wallet.ProvidersApi(this._options);
+  readonly nickname = new Wallet.NicknameApi(this._options);
 
   /**
    * Создаёт токен с увеличенным сроком действия (10 лет)

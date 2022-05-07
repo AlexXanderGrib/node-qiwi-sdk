@@ -1,5 +1,5 @@
-import type { SimpleJsonHttp } from "../http";
-import { OptionsWrapper, OptionsWrapperWithGetter } from "../options-wrapper";
+import type { SimpleJsonHttp } from "./shared";
+import { OptionsWrapper, OptionsWrapperWithGetter } from "./options-wrapper";
 
 export interface ApiClassOptions {
   readonly http: SimpleJsonHttp;

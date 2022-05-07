@@ -18,6 +18,7 @@ QIWI SDK / [Modules](modules.md)
 [![Quality](https://img.shields.io/npms-io/quality-score/qiwi-sdk.svg?label=quality%20%28npms.io%29&)](https://npms.io/search?q=qiwi-sdk)
 [![npm](https://img.shields.io/npm/v/qiwi-sdk.svg)](https://npmjs.com/package/qiwi-sdk)
 [![license MIT](https://img.shields.io/npm/l/qiwi-sdk.svg)](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/main/LICENSE.txt)
+[![Size](https://img.shields.io/bundlephobia/minzip/qiwi-sdk)](https://bundlephobia.com/package/qiwi-sdk)
 
 ## 👅 Язык
 
@@ -90,7 +91,7 @@ use cases are different.
 
 ### Documentation
 
-[**👉 View API Reference 👈**](./docs/api/modules.md)
+[👉 View API Reference 👈](./docs/api/modules.md)
 
 The table shows the currently implemented APIs.
 
@@ -148,7 +149,7 @@ variables or in another protected place, but not in the code.
 | ------------------------------------- | ---------------------------- | ------------------------------------------------------------ |
 | `QIWI_TOKEN`                          | String(32 chars) - Hex       | Qiwi token got on https://qiwi.com/api                       |
 | `QIWI_WALLET`                         | String(10-16 chars) - Digits | Wallet's phone number                                        |
-| `QIWI_SECRET_KEY` и `QIWI_PUBLIC_KEY` | Strings                      | Key paid created on https://qiwi.com/p2p-admin/transfers/api |
+| `QIWI_SECRET_KEY` и `QIWI_PUBLIC_KEY` | Strings                      | Key pair created on https://qiwi.com/p2p-admin/transfers/api |
 
 ### Examples
 

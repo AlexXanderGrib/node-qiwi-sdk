@@ -1,5 +1,5 @@
 /* istanbul ignore file */
-import { generateUUID } from "../shared";
+import { formatQuerystring, generateUUID } from "../shared";
 import { WalletApi } from "./api";
 import type {
   CardResponse,
@@ -24,11 +24,16 @@ export class WalletCardsApi extends WalletApi {
    * Успешный ответ содержит JSON-массив с информацией о
    * выпущенных картах
    *
+   * @param {*} [options={}]
    * @return {Promise<CardResponse[]>} {Promise<CardResponse[]>}
    * @memberof WalletCardsApi
    */
-  async get(): Promise<CardResponse[]> {
-    return await this.http.get("cards/v1/cards");
+  async get({ onlyQiwiMaster = false } = {}): Promise<CardResponse[]> {
+    return await this.http.get(
+      `cards/v1/cards?${formatQuerystring({
+        "vas-alias": onlyQiwiMaster ? "qvc-master" : undefined
+      })}`
+    );
   }
 
   /**

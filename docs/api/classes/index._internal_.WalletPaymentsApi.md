@@ -35,6 +35,7 @@
 - [\_resolveProvider](index._internal_.WalletPaymentsApi.md#_resolveprovider)
 - [createFormUrl](index._internal_.WalletPaymentsApi.md#createformurl)
 - [getCommission](index._internal_.WalletPaymentsApi.md#getcommission)
+- [getRates](index._internal_.WalletPaymentsApi.md#getrates)
 - [pay](index._internal_.WalletPaymentsApi.md#pay)
 - [quickPay](index._internal_.WalletPaymentsApi.md#quickpay)
 - [createFormUrl](index._internal_.WalletPaymentsApi.md#createformurl-1)
@@ -61,7 +62,7 @@ Creates an instance of OptionsWrapper.
 
 #### Defined in
 
-[dist/cjs/options-wrapper.d.ts:22](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/options-wrapper.d.ts#L22)
+dist/cjs/options-wrapper.d.ts:22
 
 ## Properties
 
@@ -79,7 +80,7 @@ Creates an instance of OptionsWrapper.
 
 #### Defined in
 
-[dist/cjs/options-wrapper.d.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/options-wrapper.d.ts#L16)
+dist/cjs/options-wrapper.d.ts:16
 
 ## Accessors
 
@@ -101,7 +102,7 @@ WalletApi.http
 
 #### Defined in
 
-[dist/cjs/apis/api.d.ts:43](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/api.d.ts#L43)
+dist/cjs/apis/api.d.ts:43
 
 ___
 
@@ -123,7 +124,7 @@ WalletApi.walletId
 
 #### Defined in
 
-[dist/cjs/apis/wallet/api.d.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/api.d.ts#L17)
+dist/cjs/apis/wallet/api.d.ts:17
 
 ## Methods
 
@@ -150,7 +151,7 @@ WalletApi.walletId
 
 #### Defined in
 
-[dist/cjs/apis/wallet/payments.api.d.ts:81](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/payments.api.d.ts#L81)
+dist/cjs/apis/wallet/payments.api.d.ts:81
 
 ___
 
@@ -177,7 +178,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/payments.api.d.ts:48](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/payments.api.d.ts#L48)
+dist/cjs/apis/wallet/payments.api.d.ts:48
 
 ___
 
@@ -211,7 +212,27 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/payments.api.d.ts:26](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/payments.api.d.ts#L26)
+dist/cjs/apis/wallet/payments.api.d.ts:26
+
+___
+
+### getRates
+
+▸ **getRates**(): `Promise`<[`Rate`](../modules/index.QIWI.md#rate)[]\>
+
+Получение курсов валют
+
+**`memberof`** WalletPaymentsApi
+
+#### Returns
+
+`Promise`<[`Rate`](../modules/index.QIWI.md#rate)[]\>
+
+{Promise<Rate[]>}
+
+#### Defined in
+
+dist/cjs/apis/wallet/payments.api.d.ts:88
 
 ___
 
@@ -237,7 +258,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/payments.api.d.ts:58](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/payments.api.d.ts#L58)
+dist/cjs/apis/wallet/payments.api.d.ts:58
 
 ___
 
@@ -268,7 +289,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/payments.api.d.ts:70](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/payments.api.d.ts#L70)
+dist/cjs/apis/wallet/payments.api.d.ts:70
 
 ___
 
@@ -297,4 +318,4 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/payments.api.d.ts:39](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/payments.api.d.ts#L39)
+dist/cjs/apis/wallet/payments.api.d.ts:39

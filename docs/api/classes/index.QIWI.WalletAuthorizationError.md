@@ -46,7 +46,7 @@ Creates an instance of WalletAuthorizationError.
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.errors.d.ts:62](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.errors.d.ts#L62)
+dist/cjs/apis/wallet/wallet.errors.d.ts:62
 
 ## Properties
 
@@ -60,7 +60,7 @@ Creates an instance of WalletAuthorizationError.
 
 #### Defined in
 
-[dist/cjs/error.d.ts:9](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/error.d.ts#L9)
+dist/cjs/error.d.ts:9
 
 ## Accessors
 
@@ -82,7 +82,7 @@ ExtendedError.\_\_@toStringTag@11
 
 #### Defined in
 
-[dist/cjs/error.d.ts:24](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/error.d.ts#L24)
+dist/cjs/error.d.ts:24
 
 ## Methods
 
@@ -104,4 +104,4 @@ ExtendedError.\_\_@toStringTag@11
 
 #### Defined in
 
-[dist/cjs/error.d.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/error.d.ts#L16)
+dist/cjs/error.d.ts:16

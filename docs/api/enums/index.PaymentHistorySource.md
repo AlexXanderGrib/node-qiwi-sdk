@@ -11,6 +11,7 @@
 - [CARD](index.PaymentHistorySource.md#card)
 - [MK](index.PaymentHistorySource.md#mk)
 - [QW\_EUR](index.PaymentHistorySource.md#qw_eur)
+- [QW\_KZT](index.PaymentHistorySource.md#qw_kzt)
 - [QW\_RUB](index.PaymentHistorySource.md#qw_rub)
 - [QW\_USD](index.PaymentHistorySource.md#qw_usd)
 
@@ -25,7 +26,7 @@
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.types.d.ts:338](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.types.d.ts#L338)
+dist/cjs/apis/wallet/wallet.types.d.ts:349
 
 ___
 
@@ -38,7 +39,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.types.d.ts:343](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.types.d.ts#L343)
+dist/cjs/apis/wallet/wallet.types.d.ts:354
 
 ___
 
@@ -50,7 +51,19 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.types.d.ts:333](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.types.d.ts#L333)
+dist/cjs/apis/wallet/wallet.types.d.ts:344
+
+___
+
+### QW\_KZT
+
+• **QW\_KZT** = `"QW_KZT"`
+
+Счет кошелька в тенге
+
+#### Defined in
+
+dist/cjs/apis/wallet/wallet.types.d.ts:336
 
 ___
 
@@ -62,7 +75,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.types.d.ts:325](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.types.d.ts#L325)
+dist/cjs/apis/wallet/wallet.types.d.ts:332
 
 ___
 
@@ -74,4 +87,4 @@ ___
 
 #### Defined in
 
-[dist/cjs/apis/wallet/wallet.types.d.ts:329](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/apis/wallet/wallet.types.d.ts#L329)
+dist/cjs/apis/wallet/wallet.types.d.ts:340

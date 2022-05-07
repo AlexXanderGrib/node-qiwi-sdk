@@ -1,6 +1,6 @@
 [QIWI SDK](../README.md) / [Modules](../modules.md) / [index](../modules/index.md) / [<internal\>](../modules/index._internal_.md) / HttpClientOptions
 
-# Interface: HttpClientOptions<Rq, Rs\>
+# Interface: HttpClientOptions<Request, Response\>
 
 [index](../modules/index.md).[<internal>](../modules/index._internal_.md).HttpClientOptions
 
@@ -8,8 +8,8 @@
 
 | Name | Type |
 | :------ | :------ |
-| `Rq` | `any` |
-| `Rs` | `any` |
+| `Request` | `any` |
+| `Response` | `any` |
 
 ## Table of contents
 
@@ -35,7 +35,7 @@
 
 #### Defined in
 
-[dist/cjs/http.d.ts:8](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/http.d.ts#L8)
+dist/cjs/http.d.ts:8
 
 ___
 
@@ -45,7 +45,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/http.d.ts:10](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/http.d.ts#L10)
+dist/cjs/http.d.ts:10
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/http.d.ts:7](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/http.d.ts#L7)
+dist/cjs/http.d.ts:7
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/http.d.ts:9](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/http.d.ts#L9)
+dist/cjs/http.d.ts:9
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 #### Defined in
 
-[dist/cjs/http.d.ts:11](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/http.d.ts#L11)
+dist/cjs/http.d.ts:11
 
 ## Methods
 
@@ -95,13 +95,13 @@ ___
 
 #### Defined in
 
-[dist/cjs/http.d.ts:14](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/http.d.ts#L14)
+dist/cjs/http.d.ts:14
 
 ___
 
 ### parseResponse
 
-▸ `Optional` **parseResponse**(`body`): `Rs`
+▸ `Optional` **parseResponse**(`body`): `Response`
 
 #### Parameters
 
@@ -111,11 +111,11 @@ ___
 
 #### Returns
 
-`Rs`
+`Response`
 
 #### Defined in
 
-[dist/cjs/http.d.ts:13](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/http.d.ts#L13)
+dist/cjs/http.d.ts:13
 
 ___
 
@@ -127,7 +127,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `body` | `Rq` |
+| `body` | `Request` |
 
 #### Returns
 
@@ -135,4 +135,4 @@ ___
 
 #### Defined in
 
-[dist/cjs/http.d.ts:12](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/59c6cc6/dist/cjs/http.d.ts#L12)
+dist/cjs/http.d.ts:12

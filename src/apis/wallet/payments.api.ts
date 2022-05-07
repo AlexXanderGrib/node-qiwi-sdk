@@ -9,7 +9,8 @@ import {
   PaymentResponse,
   QuickPayParameters,
   CommissionPayer,
-  QuickPayRecipients
+  QuickPayRecipients,
+  Rate
 } from "./wallet.types";
 
 /**
@@ -236,5 +237,21 @@ export class WalletPaymentsApi extends WalletApi {
 
     /* istanbul ignore next */
     throw new DetectorError("Unable to detect provider");
+  }
+
+  /**
+   * Получение курсов валют
+   *
+   * @return {Promise<Rate[]>}  {Promise<Rate[]>}
+   * @memberof WalletPaymentsApi
+   */
+  async getRates(): Promise<Rate[]> {
+    const { result: rates } = await this.http.get<any>("sinap/crossRates");
+
+    return rates.map((data: any) => ({
+      from: Number.parseInt(data.from),
+      to: Number.parseInt(data.from),
+      rate: data.rate
+    }));
   }
 }

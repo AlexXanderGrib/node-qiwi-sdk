@@ -1,5 +1,3 @@
-/* eslint-disable camelcase */
-/* eslint-disable unicorn/prevent-abbreviations */
 export enum PersonIdentificationLevel {
   /** Пользователь не вошёл в кошелёк */
   ANONYMOUS = "ANONYMOUS",
@@ -56,11 +54,18 @@ export enum Currency {
   /** Евро */
   EUR = 978,
   /** Тенге */
-  KZT = 398
+  KZT = 398,
+  /** Гривны */
+  UAH = 980,
+  /** Таджикские сомони */
+  TJS = 972,
+  /** Швейцарские франки */
+  CHF = 756,
+  /** Китайские юани */
+  CNY = 156
 }
 
 export type CurrencyPlain = keyof typeof Currency;
-export type CurrencyAny = Currency | CurrencyPlain;
 
 export type MoneyAmount = {
   /** Сумма */
@@ -387,6 +392,10 @@ export enum PaymentHistorySource {
    */
   QW_RUB = "QW_RUB",
   /**
+   * Счет кошелька в тенге
+   */
+  QW_KZT = "QW_KZT",
+  /**
    * Счет кошелька в долларах
    */
   QW_USD = "QW_USD",
@@ -411,7 +420,7 @@ export type PaymentHistorySourceAny =
   | PaymentHistorySource
   | PaymentHistorySourcePlain;
 
-export type GetPaymentHistoryParamsBase = {
+export type GetPaymentHistoryParametersBase = {
   /**
    * Число платежей в ответе, для разбивки отчета на страницы.
    * Целое число от 1 до 50. Запрос возвращает указанное число
@@ -454,9 +463,11 @@ export type GetPaymentHistoryParamsBase = {
    * все источники
    */
   sources?: PaymentHistorySourceAny[];
+
+  qvxCardId?: StringOrNumber;
 };
 
-export type GetPaymentHistoryParamsStartEnd = {
+export type GetPaymentHistoryParametersStartEnd = {
   /**
    * Начальная дата поиска платежей. **Используется только вместе
    * с `endDate`. Максимальный допустимый интервал между
@@ -486,10 +497,10 @@ export type GetPaymentHistoryParamsStartEnd = {
   endDate: string;
 };
 
-export type GetPaymentHistoryParams =
-  | GetPaymentHistoryParamsBase
-  | (GetPaymentHistoryParamsBase & GetPaymentHistoryParamsStartEnd)
-  | (GetPaymentHistoryParamsBase & {
+export type GetPaymentHistoryParameters =
+  | GetPaymentHistoryParametersBase
+  | (GetPaymentHistoryParametersBase & GetPaymentHistoryParametersStartEnd)
+  | (GetPaymentHistoryParametersBase & {
       /**
        * Дата транзакции для начала отчета (должна быть равна
        * параметру `nextTxnDate` в предыдущем списке). Используется
@@ -507,11 +518,11 @@ export type GetPaymentHistoryParams =
       nextTxnId: number;
     });
 
-export type GetPaymentHistoryTotalParams = Omit<
-  GetPaymentHistoryParamsBase,
+export type GetPaymentHistoryTotalParameters = Omit<
+  GetPaymentHistoryParametersBase,
   "rows"
 > &
-  GetPaymentHistoryParamsStartEnd;
+  GetPaymentHistoryParametersStartEnd;
 
 export type GetPaymentHistoryTotalResponse = {
   /**
@@ -690,11 +701,11 @@ export type LimitTypePlain = keyof typeof LimitType;
 export type LimitTypeAny = LimitType | LimitTypePlain;
 
 export type Limit<
-  Cur extends keyof typeof Currency = "RUB",
+  Current extends keyof typeof Currency = "RUB",
   Type extends LimitTypeAny = LimitTypeAny
 > = {
   /** Валюта операций */
-  currency: Cur;
+  currency: Current;
 
   /**
    * Остаток лимита, который можно потратить в данный период
@@ -1506,4 +1517,17 @@ export type ProviderInfo = {
   searchAvailable: boolean;
   description: null | string;
   extras: KeyValueObject;
+};
+
+export type NicknameData = {
+  nickname: string;
+  canChange: boolean;
+  canUse: boolean;
+  description: string;
+};
+
+export type Rate = {
+  from: Currency;
+  to: Currency;
+  rate: number;
 };

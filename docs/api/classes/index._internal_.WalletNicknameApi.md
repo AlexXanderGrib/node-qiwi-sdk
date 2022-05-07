@@ -1,11 +1,11 @@
-[QIWI SDK](../README.md) / [Modules](../modules.md) / [index](../modules/index.md) / [<internal\>](../modules/index._internal_.md) / WalletPersonProfileApi
+[QIWI SDK](../README.md) / [Modules](../modules.md) / [index](../modules/index.md) / [<internal\>](../modules/index._internal_.md) / WalletNicknameApi
 
-# Class: WalletPersonProfileApi
+# Class: WalletNicknameApi
 
-[index](../modules/index.md).[<internal>](../modules/index._internal_.md).WalletPersonProfileApi
+[index](../modules/index.md).[<internal>](../modules/index._internal_.md).WalletNicknameApi
 
-# Профиль пользователя
-[Документация QIWI](https://developer.qiwi.com/ru/qiwi-wallet-personal/#profile)
+# Получение своего ника
+Не документированное
 
 **`export`**
 
@@ -13,32 +13,32 @@
 
 - [`WalletApi`](index._internal_.WalletApi.md)
 
-  ↳ **`WalletPersonProfileApi`**
+  ↳ **`WalletNicknameApi`**
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](index._internal_.WalletPersonProfileApi.md#constructor)
+- [constructor](index._internal_.WalletNicknameApi.md#constructor)
 
 ### Properties
 
-- [\_options](index._internal_.WalletPersonProfileApi.md#_options)
+- [\_options](index._internal_.WalletNicknameApi.md#_options)
 
 ### Accessors
 
-- [http](index._internal_.WalletPersonProfileApi.md#http)
-- [walletId](index._internal_.WalletPersonProfileApi.md#walletid)
+- [http](index._internal_.WalletNicknameApi.md#http)
+- [walletId](index._internal_.WalletNicknameApi.md#walletid)
 
 ### Methods
 
-- [getCurrent](index._internal_.WalletPersonProfileApi.md#getcurrent)
+- [getCurrent](index._internal_.WalletNicknameApi.md#getcurrent)
 
 ## Constructors
 
 ### constructor
 
-• **new WalletPersonProfileApi**(`options`)
+• **new WalletNicknameApi**(`options`)
 
 Creates an instance of OptionsWrapper.
 
@@ -124,21 +124,20 @@ dist/cjs/apis/wallet/api.d.ts:17
 
 ### getCurrent
 
-▸ **getCurrent**(): `Promise`<[`PersonProfile`](../modules/index.QIWI.md#personprofile)\>
+▸ **getCurrent**(): `Promise`<[`NicknameData`](../modules/index.QIWI.md#nicknamedata)\>
 
-## Профиль пользователя
+## Получение своего ника
 
-Запрос возвращает информацию о вашем профиле - наборе
-пользовательских данных и настроек вашего QIWI кошелька.
+**Этот метод требует наличия валидного `walletId` (номера телефона привязанного к кошельку) в конфигурации API.**
 
-**`memberof`** WalletPersonProfileApi
+**`memberof`** WalletNicknameApi
 
 #### Returns
 
-`Promise`<[`PersonProfile`](../modules/index.QIWI.md#personprofile)\>
+`Promise`<[`NicknameData`](../modules/index.QIWI.md#nicknamedata)\>
 
-{Promise<PersonProfile>}
+{Promise<NicknameData>}
 
 #### Defined in
 
-dist/cjs/apis/wallet/person-profile.api.d.ts:21
+dist/cjs/apis/wallet/nickname.api.d.ts:20

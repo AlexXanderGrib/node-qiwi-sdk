@@ -166,11 +166,11 @@ export class _WalletCompat extends Wallet {
    * Можно использовать фильтр по количеству, ID и дате
    * (интервалу дат) транзакций.
    *
-   * @param {types.GetPaymentHistoryParams} parameters Тело запроса
+   * @param {types.GetPaymentHistoryParameters} parameters Тело запроса
    * @param {types.StringOrNumber} [walletId] Номер телефона привязанный к кошельку
    */
   async getPaymentHistory(
-    parameters: types.GetPaymentHistoryParams,
+    parameters: types.GetPaymentHistoryParameters,
     walletId: types.StringOrNumber = this.walletId
   ): Promise<types.GetTransactionsHistoryResponse> {
     return await this._executeWithWalletId(walletId, async () => {
@@ -181,11 +181,11 @@ export class _WalletCompat extends Wallet {
    * Данный запрос используется для получения сводной статистики
    * по суммам платежей за заданный период.
    *
-   * @param {types.GetPaymentHistoryTotalParams} parameters
+   * @param {types.GetPaymentHistoryTotalParameters} parameters
    * @param {types.StringOrNumber} [walletId] Номер телефона привязанный к кошельку
    */
   async getPaymentHistoryTotal(
-    parameters: types.GetPaymentHistoryTotalParams,
+    parameters: types.GetPaymentHistoryTotalParameters,
     walletId: types.StringOrNumber = this.walletId
   ): Promise<types.GetPaymentHistoryTotalResponse> {
     return await this._executeWithWalletId(walletId, async () => {
