@@ -1,8 +1,8 @@
-[QIWI SDK](../README.md) / [Modules](../modules.md) / [index](../modules/index.md) / [<internal\>](../modules/index._internal_.md) / HttpRequestOptions
+[QIWI SDK](../README.md) / [Modules](../modules.md) / [index](../modules/index.md) / [QIWI](../modules/index.QIWI.md) / HttpRequestOptions
 
 # Interface: HttpRequestOptions<Request, Response\>
 
-[index](../modules/index.md).[<internal>](../modules/index._internal_.md).HttpRequestOptions
+[index](../modules/index.md).[QIWI](../modules/index.QIWI.md).HttpRequestOptions
 
 ## Type parameters
 
@@ -13,7 +13,7 @@
 
 ## Hierarchy
 
-- `Partial`<[`HttpClientOptions`](index._internal_.HttpClientOptions.md)<`Request`, `Response`\>\>
+- `Partial`<[`HttpClientOptions`](index.QIWI.HttpClientOptions.md)<`Request`, `Response`\>\>
 
   ↳ **`HttpRequestOptions`**
 
@@ -21,20 +21,20 @@
 
 ### Properties
 
-- [agent](index._internal_.HttpRequestOptions.md#agent)
-- [baseURL](index._internal_.HttpRequestOptions.md#baseurl)
-- [body](index._internal_.HttpRequestOptions.md#body)
-- [headers](index._internal_.HttpRequestOptions.md#headers)
-- [method](index._internal_.HttpRequestOptions.md#method)
-- [okStatusCodes](index._internal_.HttpRequestOptions.md#okstatuscodes)
-- [timeout](index._internal_.HttpRequestOptions.md#timeout)
-- [url](index._internal_.HttpRequestOptions.md#url)
+- [agent](index.QIWI.HttpRequestOptions.md#agent)
+- [baseURL](index.QIWI.HttpRequestOptions.md#baseurl)
+- [body](index.QIWI.HttpRequestOptions.md#body)
+- [headers](index.QIWI.HttpRequestOptions.md#headers)
+- [method](index.QIWI.HttpRequestOptions.md#method)
+- [okStatusCodes](index.QIWI.HttpRequestOptions.md#okstatuscodes)
+- [timeout](index.QIWI.HttpRequestOptions.md#timeout)
+- [url](index.QIWI.HttpRequestOptions.md#url)
 
 ### Methods
 
-- [mapHttpErrors](index._internal_.HttpRequestOptions.md#maphttperrors)
-- [parseResponse](index._internal_.HttpRequestOptions.md#parseresponse)
-- [stringifyBody](index._internal_.HttpRequestOptions.md#stringifybody)
+- [mapHttpErrors](index.QIWI.HttpRequestOptions.md#maphttperrors)
+- [parseResponse](index.QIWI.HttpRequestOptions.md#parseresponse)
+- [stringifyBody](index.QIWI.HttpRequestOptions.md#stringifybody)
 
 ## Properties
 
@@ -48,7 +48,7 @@ Partial.agent
 
 #### Defined in
 
-dist/cjs/http.d.ts:8
+dist/cjs/apis/shared/http.d.ts:8
 
 ___
 
@@ -62,7 +62,7 @@ Partial.baseURL
 
 #### Defined in
 
-dist/cjs/http.d.ts:10
+dist/cjs/apis/shared/http.d.ts:10
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 #### Defined in
 
-dist/cjs/http.d.ts:19
+dist/cjs/apis/shared/http.d.ts:19
 
 ___
 
@@ -86,7 +86,7 @@ Partial.headers
 
 #### Defined in
 
-dist/cjs/http.d.ts:7
+dist/cjs/apis/shared/http.d.ts:7
 
 ___
 
@@ -96,7 +96,7 @@ ___
 
 #### Defined in
 
-dist/cjs/http.d.ts:18
+dist/cjs/apis/shared/http.d.ts:18
 
 ___
 
@@ -110,7 +110,7 @@ Partial.okStatusCodes
 
 #### Defined in
 
-dist/cjs/http.d.ts:9
+dist/cjs/apis/shared/http.d.ts:9
 
 ___
 
@@ -124,7 +124,7 @@ Partial.timeout
 
 #### Defined in
 
-dist/cjs/http.d.ts:11
+dist/cjs/apis/shared/http.d.ts:11
 
 ___
 
@@ -134,7 +134,7 @@ ___
 
 #### Defined in
 
-dist/cjs/http.d.ts:17
+dist/cjs/apis/shared/http.d.ts:17
 
 ## Methods
 
@@ -146,7 +146,7 @@ dist/cjs/http.d.ts:17
 
 | Name | Type |
 | :------ | :------ |
-| `error` | [`HttpError`](../classes/index._internal_.HttpError.md)<`any`, `any`\> |
+| `error` | [`HttpError`](../classes/index.QIWI.HttpError.md)<`any`, `any`\> |
 
 #### Returns
 
@@ -158,7 +158,7 @@ Partial.mapHttpErrors
 
 #### Defined in
 
-dist/cjs/http.d.ts:14
+dist/cjs/apis/shared/http.d.ts:14
 
 ___
 
@@ -182,7 +182,7 @@ Partial.parseResponse
 
 #### Defined in
 
-dist/cjs/http.d.ts:13
+dist/cjs/apis/shared/http.d.ts:13
 
 ___
 
@@ -206,4 +206,4 @@ Partial.stringifyBody
 
 #### Defined in
 
-dist/cjs/http.d.ts:12
+dist/cjs/apis/shared/http.d.ts:12

@@ -116,7 +116,7 @@ dist/cjs/apis/wallet/wallet.d.ts:116
 
 #### Defined in
 
-dist/cjs/options-wrapper.d.ts:16
+dist/cjs/apis/options-wrapper.d.ts:16
 
 ___
 
@@ -462,11 +462,11 @@ ___
 
 ### httpClientFactory
 
-▪ `Static` **httpClientFactory**: (`token`: `string`) => [`SimpleJsonHttp`](index._internal_.SimpleJsonHttp.md)
+▪ `Static` **httpClientFactory**: (`token`: `string`) => [`SimpleJsonHttp`](index.QIWI.SimpleJsonHttp.md)
 
 #### Type declaration
 
-▸ (`token`): [`SimpleJsonHttp`](index._internal_.SimpleJsonHttp.md)
+▸ (`token`): [`SimpleJsonHttp`](index.QIWI.SimpleJsonHttp.md)
 
 **`static`**
 
@@ -480,7 +480,7 @@ ___
 
 ##### Returns
 
-[`SimpleJsonHttp`](index._internal_.SimpleJsonHttp.md)
+[`SimpleJsonHttp`](index.QIWI.SimpleJsonHttp.md)
 
 {SimpleJsonHttp}
 
@@ -550,7 +550,7 @@ ApiClass.options
 
 #### Defined in
 
-dist/cjs/options-wrapper.d.ts:40
+dist/cjs/apis/options-wrapper.d.ts:40
 
 ## Methods
 

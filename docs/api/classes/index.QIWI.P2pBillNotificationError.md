@@ -21,6 +21,7 @@
 ### Properties
 
 - [name](index.QIWI.P2pBillNotificationError.md#name)
+- [notification](index.QIWI.P2pBillNotificationError.md#notification)
 
 ### Accessors
 
@@ -34,11 +35,17 @@
 
 ### constructor
 
-• **new P2pBillNotificationError**()
+• **new P2pBillNotificationError**(`notification`)
 
 Creates an instance of P2pBillNotificationError.
 
 **`memberof`** P2pBillNotificationError
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `notification` | [`BillStatusData`](../modules/index.QIWI.md#billstatusdata) |
 
 #### Overrides
 
@@ -46,7 +53,7 @@ Creates an instance of P2pBillNotificationError.
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.errors.d.ts:55
+dist/cjs/apis/p2p/p2p.errors.d.ts:57
 
 ## Properties
 
@@ -60,7 +67,17 @@ dist/cjs/apis/p2p/p2p.errors.d.ts:55
 
 #### Defined in
 
-dist/cjs/error.d.ts:9
+dist/cjs/apis/error.d.ts:9
+
+___
+
+### notification
+
+• **notification**: [`BillStatusData`](../modules/index.QIWI.md#billstatusdata)
+
+#### Defined in
+
+dist/cjs/apis/p2p/p2p.errors.d.ts:52
 
 ## Accessors
 
@@ -78,11 +95,11 @@ dist/cjs/error.d.ts:9
 
 #### Inherited from
 
-ExtendedError.\_\_@toStringTag@11
+ExtendedError.\_\_@toStringTag@404
 
 #### Defined in
 
-dist/cjs/error.d.ts:24
+dist/cjs/apis/error.d.ts:24
 
 ## Methods
 
@@ -104,4 +121,4 @@ dist/cjs/error.d.ts:24
 
 #### Defined in
 
-dist/cjs/error.d.ts:16
+dist/cjs/apis/error.d.ts:16

@@ -18,8 +18,6 @@ export class DetectorDetectApi extends DetectorApi {
    * @return {number} ID провайдера
    */
   protected _extractProvider(response: AnyResponse): number {
-    // Legacy проверка ответа
-    /* istanbul ignore next */
     if (response.code.value !== "0") throw new DetectorError(response.message);
 
     return Number.parseInt(response.message);

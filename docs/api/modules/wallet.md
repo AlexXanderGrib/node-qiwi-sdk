@@ -64,10 +64,10 @@
 - [FreePayFields](wallet.md#freepayfields)
 - [GetAccountOffersResponse](wallet.md#getaccountoffersresponse)
 - [GetAccountsResponse](wallet.md#getaccountsresponse)
-- [GetPaymentHistoryParams](wallet.md#getpaymenthistoryparams)
-- [GetPaymentHistoryParamsBase](wallet.md#getpaymenthistoryparamsbase)
-- [GetPaymentHistoryParamsStartEnd](wallet.md#getpaymenthistoryparamsstartend)
-- [GetPaymentHistoryTotalParams](wallet.md#getpaymenthistorytotalparams)
+- [GetPaymentHistoryParameters](wallet.md#getpaymenthistoryparameters)
+- [GetPaymentHistoryParametersBase](wallet.md#getpaymenthistoryparametersbase)
+- [GetPaymentHistoryParametersStartEnd](wallet.md#getpaymenthistoryparametersstartend)
+- [GetPaymentHistoryTotalParameters](wallet.md#getpaymenthistorytotalparameters)
 - [GetPaymentHistoryTotalResponse](wallet.md#getpaymenthistorytotalresponse)
 - [GetTransactionsHistoryResponse](wallet.md#gettransactionshistoryresponse)
 - [IdentificationBase](wallet.md#identificationbase)
@@ -560,9 +560,9 @@ dist/cjs/apis/wallet/wallet.types.d.ts:637
 
 ___
 
-### GetPaymentHistoryParams
+### GetPaymentHistoryParameters
 
-Ƭ **GetPaymentHistoryParams**: [`GetPaymentHistoryParamsBase`](index.QIWI.md#getpaymenthistoryparamsbase) \| [`GetPaymentHistoryParamsBase`](index.QIWI.md#getpaymenthistoryparamsbase) & [`GetPaymentHistoryParamsStartEnd`](index.QIWI.md#getpaymenthistoryparamsstartend) \| [`GetPaymentHistoryParamsBase`](index.QIWI.md#getpaymenthistoryparamsbase) & { `nextTxnDate`: `string` ; `nextTxnId`: `number`  }
+Ƭ **GetPaymentHistoryParameters**: [`GetPaymentHistoryParametersBase`](index.QIWI.md#getpaymenthistoryparametersbase) \| [`GetPaymentHistoryParametersBase`](index.QIWI.md#getpaymenthistoryparametersbase) & [`GetPaymentHistoryParametersStartEnd`](index.QIWI.md#getpaymenthistoryparametersstartend) \| [`GetPaymentHistoryParametersBase`](index.QIWI.md#getpaymenthistoryparametersbase) & { `nextTxnDate`: `string` ; `nextTxnId`: `number`  }
 
 #### Defined in
 
@@ -570,9 +570,9 @@ dist/cjs/apis/wallet/wallet.types.d.ts:429
 
 ___
 
-### GetPaymentHistoryParamsBase
+### GetPaymentHistoryParametersBase
 
-Ƭ **GetPaymentHistoryParamsBase**: `Object`
+Ƭ **GetPaymentHistoryParametersBase**: `Object`
 
 #### Type declaration
 
@@ -589,9 +589,9 @@ dist/cjs/apis/wallet/wallet.types.d.ts:358
 
 ___
 
-### GetPaymentHistoryParamsStartEnd
+### GetPaymentHistoryParametersStartEnd
 
-Ƭ **GetPaymentHistoryParamsStartEnd**: `Object`
+Ƭ **GetPaymentHistoryParametersStartEnd**: `Object`
 
 #### Type declaration
 
@@ -606,9 +606,9 @@ dist/cjs/apis/wallet/wallet.types.d.ts:401
 
 ___
 
-### GetPaymentHistoryTotalParams
+### GetPaymentHistoryTotalParameters
 
-Ƭ **GetPaymentHistoryTotalParams**: `Omit`<[`GetPaymentHistoryParamsBase`](index.QIWI.md#getpaymenthistoryparamsbase), ``"rows"``\> & [`GetPaymentHistoryParamsStartEnd`](index.QIWI.md#getpaymenthistoryparamsstartend)
+Ƭ **GetPaymentHistoryTotalParameters**: `Omit`<[`GetPaymentHistoryParametersBase`](index.QIWI.md#getpaymenthistoryparametersbase), ``"rows"``\> & [`GetPaymentHistoryParametersStartEnd`](index.QIWI.md#getpaymenthistoryparametersstartend)
 
 #### Defined in
 
@@ -703,20 +703,20 @@ ___
 
 ### Limit
 
-Ƭ **Limit**<`Cur`, `Type`\>: `Object`
+Ƭ **Limit**<`Current`, `Type`\>: `Object`
 
 #### Type parameters
 
 | Name | Type |
 | :------ | :------ |
-| `Cur` | extends keyof typeof [`Currency`](../enums/index.QIWI.Currency.md) = ``"RUB"`` |
+| `Current` | extends keyof typeof [`Currency`](../enums/index.QIWI.Currency.md) = ``"RUB"`` |
 | `Type` | extends [`LimitTypeAny`](index.QIWI.md#limittypeany) = [`LimitTypeAny`](index.QIWI.md#limittypeany) |
 
 #### Type declaration
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `currency` | `Cur` | Валюта операций |
+| `currency` | `Current` | Валюта операций |
 | `interval` | { `dateFrom`: `string` ; `dateTill`: `string`  } | Сведения о периоде действия лимита |
 | `interval.dateFrom` | `string` | Начало периода, формат даты `ГГГГ-ММ-ДДТЧЧ:ММ:ССtmz` |
 | `interval.dateTill` | `string` | Конец периода, формат даты `ГГГГ-ММ-ДДТЧЧ:ММ:ССtmz` |

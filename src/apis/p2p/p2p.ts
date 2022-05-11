@@ -2,15 +2,14 @@ import type { RequestHandler } from "express";
 import { ApiClass } from "../api";
 import { environment, SimpleJsonHttp, USER_AGENT } from "../shared";
 import { P2pBillsApi } from "./bills.api";
-import { mapHttpErrors, P2pBillNotificationError } from "./p2p.errors";
-import type { P2pApiOptions } from "./p2p.options";
+import { mapHttpErrors } from "./p2p.errors";
 import {
-  BillStatusData,
-  BillCurrency,
-  BillPaySource,
-  BillStatus
-} from "./p2p.types";
-import { promise } from "./p2p.utils";
+  BillRequestHandler,
+  MiddlewareOptions,
+  createP2pNotificationMiddleware
+} from "./p2p.middleware";
+import type { P2pApiOptions } from "./p2p.options";
+import { BillCurrency, BillPaySource, BillStatus } from "./p2p.types";
 
 /**
  * # P2P-счета
@@ -110,7 +109,7 @@ export class P2p extends ApiClass<P2pApiOptions> {
    * @param {Object} [options={}] Параметры обработки запроса
    * @param {boolean} [options.memo=true] Флаг для включения/отключения пропуска повторяющихся запросов, если один из них был успешно обработан
    *
-   * @param {RequestHandler<Record<string, string>, any, types.BillStatusData>} actualHandler
+   * @param {RequestHandler<Record<string, string>, any, types.BillStatusData>} handler
    *
    * @return {RequestHandler}
    *
@@ -143,54 +142,13 @@ export class P2p extends ApiClass<P2pApiOptions> {
    * ```
    */
   notificationMiddleware(
-    options: { memo?: boolean } = {},
+    /* istanbul ignore next */
+    options: MiddlewareOptions = {},
+
     // Стандартный middleware. Не нуждается в тестировании
     /* istanbul ignore next */
-    actualHandler: RequestHandler<Record<string, string>, any, BillStatusData> = (
-      _request,
-      _response,
-      next
-    ) => next()
+    handler?: BillRequestHandler
   ): RequestHandler {
-    const calls = new Set<string>();
-    const { memo = true } = options;
-
-    return async (request, response, next) => {
-      let notification: any = {};
-
-      if (!request.body) {
-        const text = await new Promise<string>((resolve, reject) => {
-          let accumulated = "";
-
-          request.on("error", (error) => reject(error));
-          request.on("data", (data) => (accumulated += String(data)));
-          request.on("end", () => resolve(accumulated));
-        });
-
-        notification = JSON.parse(text) as any;
-      }
-
-      if (typeof request.body === "object") {
-        // Кейс нужен для обработки body, если до middleware
-        // использовался body-parser
-        /* istanbul ignore next */
-        notification = request.body;
-      }
-
-      const hash = request.headers["x-api-signature-sha256"] as string;
-
-      if (memo && calls.has(hash)) return next();
-
-      if (!this.bills.checkNotificationSignature(hash, notification.bill)) {
-        return next(new P2pBillNotificationError());
-      }
-
-      request.body = notification.bill;
-
-      if (!memo) return actualHandler(request, response, next);
-      await promise(actualHandler)(request, response, next);
-
-      calls.add(hash);
-    };
+    return createP2pNotificationMiddleware(this.bills, options, handler);
   }
 }

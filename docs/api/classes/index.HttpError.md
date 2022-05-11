@@ -1,8 +1,8 @@
-[QIWI SDK](../README.md) / [Modules](../modules.md) / [index](../modules/index.md) / [<internal\>](../modules/index._internal_.md) / HttpError
+[QIWI SDK](../README.md) / [Modules](../modules.md) / [index](../modules/index.md) / HttpError
 
 # Class: HttpError<Rq, Rs\>
 
-[index](../modules/index.md).[<internal>](../modules/index._internal_.md).HttpError
+[index](../modules/index.md).HttpError
 
 **`export`**
 
@@ -23,11 +23,11 @@
 
 ### Constructors
 
-- [constructor](index._internal_.HttpError.md#constructor)
+- [constructor](index.HttpError.md#constructor)
 
 ### Properties
 
-- [response](index._internal_.HttpError.md#response)
+- [response](index.HttpError.md#response)
 
 ## Constructors
 
@@ -51,7 +51,7 @@ Creates an instance of HttpError.
 | Name | Type |
 | :------ | :------ |
 | `message` | `string` |
-| `response` | [`HttpResponse`](../interfaces/index._internal_.HttpResponse.md)<`Rq`, `Rs`\> |
+| `response` | [`HttpResponse`](../interfaces/index.QIWI.HttpResponse.md)<`Rq`, `Rs`\> |
 
 #### Overrides
 
@@ -59,14 +59,14 @@ Error.constructor
 
 #### Defined in
 
-dist/cjs/http.d.ts:42
+dist/cjs/apis/shared/http.d.ts:42
 
 ## Properties
 
 ### response
 
-• **response**: [`HttpResponse`](../interfaces/index._internal_.HttpResponse.md)<`Rq`, `Rs`\>
+• **response**: [`HttpResponse`](../interfaces/index.QIWI.HttpResponse.md)<`Rq`, `Rs`\>
 
 #### Defined in
 
-dist/cjs/http.d.ts:35
+dist/cjs/apis/shared/http.d.ts:35

@@ -3,7 +3,9 @@ const { P2p, P2pBillNotificationError, formatOffsetDate } = require("..");
 
 const express = require("express");
 const app = express();
-const p2p = P2p.create(process.env.QIWI_SECRET_KEY, process.env.QIWI_PUBLIC_KEY);
+const p2p = new P2p({
+  secretKey: process.env.QIWI_SECRET_KEY
+});
 const port = parseInt(process.env.PORT) || 3000;
 
 app.get("/pay", async (req, res) => {

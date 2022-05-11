@@ -63,10 +63,20 @@
 - [TransactionStatus](../enums/index.TransactionStatus.md)
 - [TransactionType](../enums/index.TransactionType.md)
 
+### Classes
+
+- [DefaultHttpClient](../classes/index.DefaultHttpClient.md)
+- [HttpError](../classes/index.HttpError.md)
+- [SimpleJsonHttp](../classes/index.SimpleJsonHttp.md)
+
 ### Interfaces
 
 - [Bill](../interfaces/index.Bill.md)
 - [BillProvider](../interfaces/index.BillProvider.md)
+- [HttpClient](../interfaces/index.HttpClient.md)
+- [HttpClientOptions](../interfaces/index.HttpClientOptions.md)
+- [HttpRequestOptions](../interfaces/index.HttpRequestOptions.md)
+- [HttpResponse](../interfaces/index.HttpResponse.md)
 
 ### Type aliases
 
@@ -108,12 +118,13 @@
 - [FreePayFields](index.md#freepayfields)
 - [GetAccountOffersResponse](index.md#getaccountoffersresponse)
 - [GetAccountsResponse](index.md#getaccountsresponse)
-- [GetPaymentHistoryParams](index.md#getpaymenthistoryparams)
-- [GetPaymentHistoryParamsBase](index.md#getpaymenthistoryparamsbase)
-- [GetPaymentHistoryParamsStartEnd](index.md#getpaymenthistoryparamsstartend)
-- [GetPaymentHistoryTotalParams](index.md#getpaymenthistorytotalparams)
+- [GetPaymentHistoryParameters](index.md#getpaymenthistoryparameters)
+- [GetPaymentHistoryParametersBase](index.md#getpaymenthistoryparametersbase)
+- [GetPaymentHistoryParametersStartEnd](index.md#getpaymenthistoryparametersstartend)
+- [GetPaymentHistoryTotalParameters](index.md#getpaymenthistorytotalparameters)
 - [GetPaymentHistoryTotalResponse](index.md#getpaymenthistorytotalresponse)
 - [GetTransactionsHistoryResponse](index.md#gettransactionshistoryresponse)
+- [Headers](index.md#headers)
 - [HmacOptions](index.md#hmacoptions)
 - [IdentificationBase](index.md#identificationbase)
 - [IdentificationResponse](index.md#identificationresponse)
@@ -159,6 +170,7 @@
 ### Variables
 
 - [TimeSpanMapping](index.md#timespanmapping-1)
+- [USER\_AGENT](index.md#user_agent)
 - [environment](index.md#environment)
 
 ### Functions
@@ -963,9 +975,9 @@ dist/cjs/apis/wallet/wallet.types.d.ts:637
 
 ___
 
-### GetPaymentHistoryParams
+### GetPaymentHistoryParameters
 
-Ƭ **GetPaymentHistoryParams**: [`GetPaymentHistoryParamsBase`](index.QIWI.md#getpaymenthistoryparamsbase) \| [`GetPaymentHistoryParamsBase`](index.QIWI.md#getpaymenthistoryparamsbase) & [`GetPaymentHistoryParamsStartEnd`](index.QIWI.md#getpaymenthistoryparamsstartend) \| [`GetPaymentHistoryParamsBase`](index.QIWI.md#getpaymenthistoryparamsbase) & { `nextTxnDate`: `string` ; `nextTxnId`: `number`  }
+Ƭ **GetPaymentHistoryParameters**: [`GetPaymentHistoryParametersBase`](index.QIWI.md#getpaymenthistoryparametersbase) \| [`GetPaymentHistoryParametersBase`](index.QIWI.md#getpaymenthistoryparametersbase) & [`GetPaymentHistoryParametersStartEnd`](index.QIWI.md#getpaymenthistoryparametersstartend) \| [`GetPaymentHistoryParametersBase`](index.QIWI.md#getpaymenthistoryparametersbase) & { `nextTxnDate`: `string` ; `nextTxnId`: `number`  }
 
 #### Defined in
 
@@ -973,9 +985,9 @@ dist/cjs/apis/wallet/wallet.types.d.ts:429
 
 ___
 
-### GetPaymentHistoryParamsBase
+### GetPaymentHistoryParametersBase
 
-Ƭ **GetPaymentHistoryParamsBase**: `Object`
+Ƭ **GetPaymentHistoryParametersBase**: `Object`
 
 #### Type declaration
 
@@ -992,9 +1004,9 @@ dist/cjs/apis/wallet/wallet.types.d.ts:358
 
 ___
 
-### GetPaymentHistoryParamsStartEnd
+### GetPaymentHistoryParametersStartEnd
 
-Ƭ **GetPaymentHistoryParamsStartEnd**: `Object`
+Ƭ **GetPaymentHistoryParametersStartEnd**: `Object`
 
 #### Type declaration
 
@@ -1009,9 +1021,9 @@ dist/cjs/apis/wallet/wallet.types.d.ts:401
 
 ___
 
-### GetPaymentHistoryTotalParams
+### GetPaymentHistoryTotalParameters
 
-Ƭ **GetPaymentHistoryTotalParams**: `Omit`<[`GetPaymentHistoryParamsBase`](index.QIWI.md#getpaymenthistoryparamsbase), ``"rows"``\> & [`GetPaymentHistoryParamsStartEnd`](index.QIWI.md#getpaymenthistoryparamsstartend)
+Ƭ **GetPaymentHistoryTotalParameters**: `Omit`<[`GetPaymentHistoryParametersBase`](index.QIWI.md#getpaymenthistoryparametersbase), ``"rows"``\> & [`GetPaymentHistoryParametersStartEnd`](index.QIWI.md#getpaymenthistoryparametersstartend)
 
 #### Defined in
 
@@ -1054,6 +1066,16 @@ dist/cjs/apis/wallet/wallet.types.d.ts:550
 
 ___
 
+### Headers
+
+Ƭ **Headers**: [`ReadonlyRecord`](index.QIWI.md#readonlyrecord)<`string`, `string`\>
+
+#### Defined in
+
+dist/cjs/apis/shared/http.d.ts:5
+
+___
+
 ### HmacOptions
 
 Ƭ **HmacOptions**: `Object`
@@ -1063,9 +1085,9 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `algorithm?` | `string` |
-| `data` | `BinaryLike` |
-| `digest` | `BinaryLike` |
-| `key` | `BinaryLike` |
+| `data` | [`BinaryAlike`](index._internal_.md#binaryalike) |
+| `digest` | [`BinaryAlike`](index._internal_.md#binaryalike) |
+| `key` | [`BinaryAlike`](index._internal_.md#binaryalike) |
 
 #### Defined in
 
@@ -1125,20 +1147,20 @@ ___
 
 ### Limit
 
-Ƭ **Limit**<`Cur`, `Type`\>: `Object`
+Ƭ **Limit**<`Current`, `Type`\>: `Object`
 
 #### Type parameters
 
 | Name | Type |
 | :------ | :------ |
-| `Cur` | extends keyof typeof [`Currency`](../enums/index.QIWI.Currency.md) = ``"RUB"`` |
+| `Current` | extends keyof typeof [`Currency`](../enums/index.QIWI.Currency.md) = ``"RUB"`` |
 | `Type` | extends [`LimitTypeAny`](index.QIWI.md#limittypeany) = [`LimitTypeAny`](index.QIWI.md#limittypeany) |
 
 #### Type declaration
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `currency` | `Cur` | Валюта операций |
+| `currency` | `Current` | Валюта операций |
 | `interval` | { `dateFrom`: `string` ; `dateTill`: `string`  } | Сведения о периоде действия лимита |
 | `interval.dateFrom` | `string` | Начало периода, формат даты `ГГГГ-ММ-ДДТЧЧ:ММ:ССtmz` |
 | `interval.dateTill` | `string` | Конец периода, формат даты `ГГГГ-ММ-ДДТЧЧ:ММ:ССtmz` |
@@ -1754,38 +1776,21 @@ dist/cjs/apis/wallet/wallet.types.d.ts:1047
 
 ### TimeSpanMapping
 
-• `Const` **TimeSpanMapping**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `d` | [`TimeSpan`](../enums/index.QIWI.TimeSpan.md) |
-| `day` | [`TimeSpan`](../enums/index.QIWI.TimeSpan.md) |
-| `h` | [`TimeSpan`](../enums/index.QIWI.TimeSpan.md) |
-| `hour` | [`TimeSpan`](../enums/index.QIWI.TimeSpan.md) |
-| `hr` | [`TimeSpan`](../enums/index.QIWI.TimeSpan.md) |
-| `m` | [`TimeSpan`](../enums/index.QIWI.TimeSpan.md) |
-| `millisecond` | [`TimeSpan`](../enums/index.QIWI.TimeSpan.md) |
-| `min` | [`TimeSpan`](../enums/index.QIWI.TimeSpan.md) |
-| `minute` | [`TimeSpan`](../enums/index.QIWI.TimeSpan.md) |
-| `mn` | [`TimeSpan`](../enums/index.QIWI.TimeSpan.md) |
-| `mon` | [`TimeSpan`](../enums/index.QIWI.TimeSpan.md) |
-| `month` | [`TimeSpan`](../enums/index.QIWI.TimeSpan.md) |
-| `ms` | [`TimeSpan`](../enums/index.QIWI.TimeSpan.md) |
-| `msec` | [`TimeSpan`](../enums/index.QIWI.TimeSpan.md) |
-| `s` | [`TimeSpan`](../enums/index.QIWI.TimeSpan.md) |
-| `sec` | [`TimeSpan`](../enums/index.QIWI.TimeSpan.md) |
-| `second` | [`TimeSpan`](../enums/index.QIWI.TimeSpan.md) |
-| `w` | [`TimeSpan`](../enums/index.QIWI.TimeSpan.md) |
-| `week` | [`TimeSpan`](../enums/index.QIWI.TimeSpan.md) |
-| `y` | [`TimeSpan`](../enums/index.QIWI.TimeSpan.md) |
-| `year` | [`TimeSpan`](../enums/index.QIWI.TimeSpan.md) |
-| `yr` | [`TimeSpan`](../enums/index.QIWI.TimeSpan.md) |
+• `Const` **TimeSpanMapping**: `Readonly`<{ `d`: [`TimeSpan`](../enums/index.QIWI.TimeSpan.md) ; `day`: [`TimeSpan`](../enums/index.QIWI.TimeSpan.md) ; `h`: [`TimeSpan`](../enums/index.QIWI.TimeSpan.md) ; `hour`: [`TimeSpan`](../enums/index.QIWI.TimeSpan.md) ; `hr`: [`TimeSpan`](../enums/index.QIWI.TimeSpan.md) ; `m`: [`TimeSpan`](../enums/index.QIWI.TimeSpan.md) ; `millisecond`: [`TimeSpan`](../enums/index.QIWI.TimeSpan.md) ; `min`: [`TimeSpan`](../enums/index.QIWI.TimeSpan.md) ; `minute`: [`TimeSpan`](../enums/index.QIWI.TimeSpan.md) ; `mn`: [`TimeSpan`](../enums/index.QIWI.TimeSpan.md) ; `mon`: [`TimeSpan`](../enums/index.QIWI.TimeSpan.md) ; `month`: [`TimeSpan`](../enums/index.QIWI.TimeSpan.md) ; `ms`: [`TimeSpan`](../enums/index.QIWI.TimeSpan.md) ; `msec`: [`TimeSpan`](../enums/index.QIWI.TimeSpan.md) ; `s`: [`TimeSpan`](../enums/index.QIWI.TimeSpan.md) ; `sec`: [`TimeSpan`](../enums/index.QIWI.TimeSpan.md) ; `second`: [`TimeSpan`](../enums/index.QIWI.TimeSpan.md) ; `w`: [`TimeSpan`](../enums/index.QIWI.TimeSpan.md) ; `week`: [`TimeSpan`](../enums/index.QIWI.TimeSpan.md) ; `y`: [`TimeSpan`](../enums/index.QIWI.TimeSpan.md) ; `year`: [`TimeSpan`](../enums/index.QIWI.TimeSpan.md) ; `yr`: [`TimeSpan`](../enums/index.QIWI.TimeSpan.md)  }\>
 
 #### Defined in
 
 dist/cjs/apis/shared/time.d.ts:20
+
+___
+
+### USER\_AGENT
+
+• `Const` **USER\_AGENT**: `string`
+
+#### Defined in
+
+dist/cjs/apis/shared/identity.d.ts:1
 
 ___
 

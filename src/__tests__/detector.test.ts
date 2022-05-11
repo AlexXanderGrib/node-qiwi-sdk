@@ -4,6 +4,11 @@ import { SAMPLE_CARD, SAMPLE_PHONE } from "./constants";
 describe("Detector", () => {
   const detect = new DetectorCompat();
 
+  test("Instantiation", () => {
+    expect(new Detector()).toBeInstanceOf(Detector);
+    expect(new Detector({})).toBeInstanceOf(Detector);
+  });
+
   test("Phone", async () => {
     // Префикс 7920 принадлежит Мегафону
     const providerId = await detect.getPhoneProvider(SAMPLE_PHONE);

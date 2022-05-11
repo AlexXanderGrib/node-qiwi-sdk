@@ -33,6 +33,8 @@ describe(P2P.name, () => {
   test("Can be initialized", () => {
     expect(qiwi).toBeInstanceOf(P2p);
     expect(P2p.create("")).toBeInstanceOf(P2p);
+    expect(new P2p()).toBeInstanceOf(P2p);
+    expect(new P2p({})).toBeInstanceOf(P2p);
   });
 
   test("[v3] .env() loads environment correctly", () => {
@@ -75,9 +77,25 @@ describe(P2P.name, () => {
       .digest("hex");
 
     expect(qiwi.checkNotificationSignature(hash, response)).toBe(true);
-    expect(
-      P2P.patchPayUrl(response.payUrl, { paySource: P2P.PaySource.QIWI })
-    ).toContain("paySource=qw");
+    const url = P2P.patchPayUrl(response.payUrl, {
+      paySource: P2P.PaySource.QIWI,
+      successUrl: "https://example.com"
+    });
+
+    expect(url).toContain("paySource=qw");
+    expect(url).toContain("successUrl");
+    expect(url).toContain("example.com");
+  });
+
+  test("[v3] Can create bill", async () => {
+    const response = await qiwi.createBill(
+      {
+        amount
+      },
+      billId
+    );
+
+    expect(new Date(response.expirationDateTime)).toBeInstanceOf(Date);
   });
 
   test("Can get bill status", async () => {

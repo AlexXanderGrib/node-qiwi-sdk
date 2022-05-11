@@ -80,7 +80,7 @@ node_modules/typescript/lib/lib.es2022.error.d.ts:30
 
 #### Defined in
 
-dist/cjs/error.d.ts:9
+dist/cjs/apis/error.d.ts:9
 
 ## Accessors
 
@@ -98,11 +98,11 @@ dist/cjs/error.d.ts:9
 
 #### Inherited from
 
-ExtendedError.\_\_@toStringTag@11
+ExtendedError.\_\_@toStringTag@404
 
 #### Defined in
 
-dist/cjs/error.d.ts:24
+dist/cjs/apis/error.d.ts:24
 
 ## Methods
 
@@ -124,4 +124,4 @@ dist/cjs/error.d.ts:24
 
 #### Defined in
 
-dist/cjs/error.d.ts:16
+dist/cjs/apis/error.d.ts:16

@@ -3,8 +3,10 @@ import { config } from "dotenv";
 import { Personal, WalletApiShortError } from "..";
 import {
   Account,
+  ChequeFormat,
   CommissionPayer,
   Currency,
+  DetectorError,
   formatOffsetDate,
   PaymentHistorySource,
   Recipients,
@@ -34,11 +36,23 @@ describe(Personal.name, () => {
   test("Can be initialized", () => {
     expect(qiwi).toBeInstanceOf(Wallet);
     expect(Wallet.create("")).toBeInstanceOf(Wallet);
+    expect(new Wallet()).toBeInstanceOf(Wallet);
+    expect(new Wallet({})).toBeInstanceOf(Wallet);
   });
 
   test("[v3] Wallet id can be fetched", async () => {
     const wallet = await Wallet.createAndFetchWalletId(
       process.env.QIWI_TOKEN as string
+    );
+    expect(wallet.options.walletId).toBe(process.env.QIWI_WALLET as string);
+  });
+
+  test("[v3] Wallet id can be fetched (w/ setupHttp)", async () => {
+    const wallet = await Wallet.createAndFetchWalletId(
+      process.env.QIWI_TOKEN as string,
+      {
+        setupHttp: (http) => http
+      }
     );
     expect(wallet.options.walletId).toBe(process.env.QIWI_WALLET as string);
   });
@@ -109,8 +123,38 @@ describe(Personal.name, () => {
 
       await qiwi.pay2({
         account: SAMPLE_PHONE,
+        amount: 1e6 // 1 лям
+      });
+    }));
+
+  test("[v3] Can't send 1 million rubles to unknown wallet", () =>
+    expectToThrow(WalletApiShortError, async () => {
+      const commission = await qiwi.getCommission(
+        Recipients.QIWI,
+        SAMPLE_PHONE,
+        100
+      );
+      expect(typeof commission).toBe("number");
+
+      await qiwi.payments.pay({
+        account: SAMPLE_PHONE,
+        amount: 1e6 // 1 лям
+      });
+    }));
+
+  test("[v3] Can't send 1 million rubles to unknown wallet (w/ comment)", () =>
+    expectToThrow(WalletApiShortError, async () => {
+      const commission = await qiwi.getCommission(
+        Recipients.QIWI,
+        SAMPLE_PHONE,
+        100
+      );
+      expect(typeof commission).toBe("number");
+
+      await qiwi.payments.pay({
+        account: SAMPLE_PHONE,
         amount: 1e6, // 1 лям
-        comment: "Test npmjs.com/package/qiwi-sdk#pay2"
+        comment: "Test"
       });
     }));
 
@@ -121,9 +165,20 @@ describe(Personal.name, () => {
           account: SAMPLE_CARD,
           amount: 1e6,
           accountCurrency: Currency.KZT,
-          comment: "Test npmjs.com/package/qiwi-sdk#payments.quickPay",
           commissionPayer: CommissionPayer.RECEIVER,
           provider: "card"
+        });
+      });
+    });
+
+    test("Cant send 1m rub to unknown provider", async () => {
+      await expectToThrow(DetectorError, async () => {
+        await qiwi.payments.quickPay({
+          account: SAMPLE_CARD,
+          amount: 1e6,
+          accountCurrency: Currency.KZT,
+          commissionPayer: CommissionPayer.RECEIVER,
+          provider: "unknown" as any
         });
       });
     });
@@ -144,6 +199,15 @@ describe(Personal.name, () => {
           account: SAMPLE_PHONE,
           amount: 1e6,
           provider: "qiwi"
+        });
+      });
+    });
+
+    test("Cant send 1m rub to unknown wallet", async () => {
+      await expectToThrow(WalletApiShortError, async () => {
+        await qiwi.payments.quickPay({
+          account: SAMPLE_PHONE,
+          amount: 1e6
         });
       });
     });
@@ -199,20 +263,46 @@ describe(Personal.name, () => {
 
     expect(totals).toMatchObject({});
 
-    const response = await qiwi.getTransactionCheque(
-      transaction.txnId,
-      transactionType
-    );
-    const buffer = response.slice(0, 32);
+    async function expectBufferToStartWith(
+      buffer: Buffer | Promise<Buffer>,
+      sub: Buffer
+    ) {
+      buffer = await buffer;
 
-    expect(response).toBeInstanceOf(Buffer);
-    expect(
-      /** @see {@link https://github.com/sindresorhus/is-jpg/blob/master/index.js Пакет is-jpeg} */
-      buffer.length > 3 &&
-        buffer[0] === 255 &&
-        buffer[1] === 216 &&
-        buffer[2] === 255
-    ).toBeTruthy();
+      expect(buffer).toBeInstanceOf(Buffer);
+      expect(buffer.length).toBeGreaterThanOrEqual(sub.length);
+      expect(buffer.includes(sub)).toBeTruthy();
+    }
+
+    const JPEG_START = Buffer.of(0xff, 0xd8, 0xff);
+    const PDF_START = Buffer.from("%PDF");
+
+    {
+      const id = transaction.txnId;
+      const type = transactionType;
+      const { JPEG, PDF } = ChequeFormat;
+
+      await Promise.all([
+        expectBufferToStartWith(qiwi.getTransactionCheque(id, type), JPEG_START),
+        expectBufferToStartWith(
+          qiwi.getTransactionCheque(id, type, JPEG),
+          JPEG_START
+        ),
+        expectBufferToStartWith(qiwi.getTransactionCheque(id, type, PDF), PDF_START),
+        expectBufferToStartWith(
+          qiwi.paymentHistory.getTransactionCheque(id, type),
+          JPEG_START
+        ),
+        expectBufferToStartWith(
+          qiwi.paymentHistory.getTransactionCheque(id, type, JPEG),
+          JPEG_START
+        ),
+        expectBufferToStartWith(
+          qiwi.paymentHistory.getTransactionCheque(id, type, PDF),
+          PDF_START
+        )
+      ]);
+    }
   });
 
   test("Payment form URL generation", () => {
@@ -250,7 +340,9 @@ describe(Personal.name, () => {
   });
 
   test("[v3] Can get agent and options", () => {
+    qiwi.agent = undefined;
     expect(qiwi).toHaveProperty("agent");
+
     expect(qiwi.options).toMatchObject({
       token: process.env.QIWI_TOKEN as string,
       walletId: process.env.QIWI_WALLET as string

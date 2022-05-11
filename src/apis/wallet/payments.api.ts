@@ -73,6 +73,7 @@ export class WalletPaymentsApi extends WalletApi {
    */
   static createFormUrl(
     provider: number | Recipients,
+    /* istanbul ignore next */
     options: FormUrlOptions = {}
   ): string {
     const data = {
@@ -88,6 +89,7 @@ export class WalletPaymentsApi extends WalletApi {
     if (options.comment) data["extra['comment']"] = options.comment;
     if (options.account) data["extra['account']"] = options.account;
 
+    /* istanbul ignore next */
     if (options.accountType) data["extra['accountType']"] = options.accountType;
 
     if (options.blocked) data.blocked = options.blocked;
@@ -105,6 +107,8 @@ export class WalletPaymentsApi extends WalletApi {
    */
   createFormUrl(
     provider: number | Recipients,
+
+    /* istanbul ignore next */
     options: FormUrlOptions = {}
   ): string {
     let account = options.account;
@@ -235,7 +239,6 @@ export class WalletPaymentsApi extends WalletApi {
       detector.agent = undefined;
     }
 
-    /* istanbul ignore next */
     throw new DetectorError("Unable to detect provider");
   }
 

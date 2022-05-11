@@ -15,4 +15,5 @@
     85,
     105
   ],
+  "typescript.tsdk": "node_modules/typescript/lib",
 }

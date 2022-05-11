@@ -1,8 +1,8 @@
-[QIWI SDK](../README.md) / [Modules](../modules.md) / [index](../modules/index.md) / [<internal\>](../modules/index._internal_.md) / SimpleJsonHttp
+[QIWI SDK](../README.md) / [Modules](../modules.md) / [index](../modules/index.md) / [QIWI](../modules/index.QIWI.md) / SimpleJsonHttp
 
 # Class: SimpleJsonHttp
 
-[index](../modules/index.md).[<internal>](../modules/index._internal_.md).SimpleJsonHttp
+[index](../modules/index.md).[QIWI](../modules/index.QIWI.md).SimpleJsonHttp
 
 **`export`**
 
@@ -10,21 +10,21 @@
 
 ### Constructors
 
-- [constructor](index._internal_.SimpleJsonHttp.md#constructor)
+- [constructor](index.QIWI.SimpleJsonHttp.md#constructor)
 
 ### Properties
 
-- [client](index._internal_.SimpleJsonHttp.md#client)
+- [client](index.QIWI.SimpleJsonHttp.md#client)
 
 ### Methods
 
-- [delete](index._internal_.SimpleJsonHttp.md#delete)
-- [get](index._internal_.SimpleJsonHttp.md#get)
-- [patch](index._internal_.SimpleJsonHttp.md#patch)
-- [post](index._internal_.SimpleJsonHttp.md#post)
-- [put](index._internal_.SimpleJsonHttp.md#put)
-- [request](index._internal_.SimpleJsonHttp.md#request)
-- [simpleRequest](index._internal_.SimpleJsonHttp.md#simplerequest)
+- [delete](index.QIWI.SimpleJsonHttp.md#delete)
+- [get](index.QIWI.SimpleJsonHttp.md#get)
+- [patch](index.QIWI.SimpleJsonHttp.md#patch)
+- [post](index.QIWI.SimpleJsonHttp.md#post)
+- [put](index.QIWI.SimpleJsonHttp.md#put)
+- [request](index.QIWI.SimpleJsonHttp.md#request)
+- [simpleRequest](index.QIWI.SimpleJsonHttp.md#simplerequest)
 
 ## Constructors
 
@@ -40,21 +40,21 @@ Creates an instance of SimpleJsonHttp.
 
 | Name | Type |
 | :------ | :------ |
-| `client?` | [`HttpClient`](../interfaces/index._internal_.HttpClient.md)<`any`, `any`\> |
+| `client?` | [`HttpClient`](../interfaces/index.QIWI.HttpClient.md)<`any`, `any`\> |
 
 #### Defined in
 
-dist/cjs/http.d.ts:95
+dist/cjs/apis/shared/http.d.ts:95
 
 ## Properties
 
 ### client
 
-• **client**: [`HttpClient`](../interfaces/index._internal_.HttpClient.md)<`any`, `any`\>
+• **client**: [`HttpClient`](../interfaces/index.QIWI.HttpClient.md)<`any`, `any`\>
 
 #### Defined in
 
-dist/cjs/http.d.ts:89
+dist/cjs/apis/shared/http.d.ts:89
 
 ## Methods
 
@@ -83,7 +83,7 @@ dist/cjs/http.d.ts:89
 
 #### Defined in
 
-dist/cjs/http.d.ts:144
+dist/cjs/apis/shared/http.d.ts:144
 
 ___
 
@@ -111,7 +111,7 @@ ___
 
 #### Defined in
 
-dist/cjs/http.d.ts:104
+dist/cjs/apis/shared/http.d.ts:104
 
 ___
 
@@ -140,7 +140,7 @@ ___
 
 #### Defined in
 
-dist/cjs/http.d.ts:134
+dist/cjs/apis/shared/http.d.ts:134
 
 ___
 
@@ -169,7 +169,7 @@ ___
 
 #### Defined in
 
-dist/cjs/http.d.ts:114
+dist/cjs/apis/shared/http.d.ts:114
 
 ___
 
@@ -198,7 +198,7 @@ ___
 
 #### Defined in
 
-dist/cjs/http.d.ts:124
+dist/cjs/apis/shared/http.d.ts:124
 
 ___
 
@@ -218,7 +218,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `option` | [`HttpRequestOptions`](../interfaces/index._internal_.HttpRequestOptions.md)<`any`, `any`\> |
+| `option` | [`HttpRequestOptions`](../interfaces/index.QIWI.HttpRequestOptions.md)<`any`, `any`\> |
 
 #### Returns
 
@@ -228,7 +228,7 @@ ___
 
 #### Defined in
 
-dist/cjs/http.d.ts:162
+dist/cjs/apis/shared/http.d.ts:162
 
 ___
 
@@ -260,4 +260,4 @@ ___
 
 #### Defined in
 
-dist/cjs/http.d.ts:154
+dist/cjs/apis/shared/http.d.ts:154

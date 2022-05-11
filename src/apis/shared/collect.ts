@@ -9,6 +9,5 @@ import type { Collection } from "./types";
  * @return {T[]}
  */
 export function collect<T>(collection: Collection<T>): T[] {
-  // eslint-disable-next-line unicorn/prefer-spread
   return Array.from(collection);
 }

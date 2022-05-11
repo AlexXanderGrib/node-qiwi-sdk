@@ -22,7 +22,7 @@
 
 ### http
 
-• `Readonly` **http**: [`SimpleJsonHttp`](../classes/index._internal_.SimpleJsonHttp.md)
+• `Readonly` **http**: [`SimpleJsonHttp`](../classes/index.QIWI.SimpleJsonHttp.md)
 
 #### Inherited from
 

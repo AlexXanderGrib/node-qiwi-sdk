@@ -52,6 +52,7 @@
 
 ### Methods
 
+- [\_getDefaultHookId](index._internal_.WalletWebhooksApi.md#_getdefaulthookid)
 - [add](index._internal_.WalletWebhooksApi.md#add)
 - [checkSign](index._internal_.WalletWebhooksApi.md#checksign)
 - [getActiveWebhook](index._internal_.WalletWebhooksApi.md#getactivewebhook)
@@ -82,7 +83,7 @@ Creates an instance of OptionsWrapper.
 
 #### Defined in
 
-dist/cjs/options-wrapper.d.ts:22
+dist/cjs/apis/options-wrapper.d.ts:22
 
 ## Properties
 
@@ -100,7 +101,7 @@ dist/cjs/options-wrapper.d.ts:22
 
 #### Defined in
 
-dist/cjs/options-wrapper.d.ts:16
+dist/cjs/apis/options-wrapper.d.ts:16
 
 ___
 
@@ -126,7 +127,7 @@ dist/cjs/apis/wallet/webhooks.api.d.ts:30
 
 ### http
 
-• `Protected` `get` **http**(): [`SimpleJsonHttp`](index._internal_.SimpleJsonHttp.md)
+• `Protected` `get` **http**(): [`SimpleJsonHttp`](index.QIWI.SimpleJsonHttp.md)
 
 **`readonly`**
 
@@ -134,7 +135,7 @@ dist/cjs/apis/wallet/webhooks.api.d.ts:30
 
 #### Returns
 
-[`SimpleJsonHttp`](index._internal_.SimpleJsonHttp.md)
+[`SimpleJsonHttp`](index.QIWI.SimpleJsonHttp.md)
 
 #### Inherited from
 
@@ -168,6 +169,22 @@ dist/cjs/apis/wallet/api.d.ts:17
 
 ## Methods
 
+### \_getDefaultHookId
+
+▸ `Protected` **_getDefaultHookId**(): `string`
+
+**`memberof`** WalletWebhooksApi
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+dist/cjs/apis/wallet/webhooks.api.d.ts:39
+
+___
+
 ### add
 
 ▸ **add**(`parameter`, `txnType`): `Promise`<[`WebHookInfo`](../modules/index.QIWI.md#webhookinfo)\>
@@ -187,7 +204,7 @@ dist/cjs/apis/wallet/api.d.ts:17
 
 #### Defined in
 
-dist/cjs/apis/wallet/webhooks.api.d.ts:38
+dist/cjs/apis/wallet/webhooks.api.d.ts:46
 
 ___
 
@@ -209,7 +226,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/webhooks.api.d.ts:74
+dist/cjs/apis/wallet/webhooks.api.d.ts:82
 
 ___
 
@@ -223,7 +240,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/webhooks.api.d.ts:61
+dist/cjs/apis/wallet/webhooks.api.d.ts:69
 
 ___
 
@@ -245,7 +262,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/webhooks.api.d.ts:50
+dist/cjs/apis/wallet/webhooks.api.d.ts:58
 
 ___
 
@@ -257,9 +274,9 @@ ___
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `hookId?` | `string` | UUID вебхука |
+| Name | Type |
+| :------ | :------ |
+| `hookId?` | `string` |
 
 #### Returns
 
@@ -267,7 +284,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/webhooks.api.d.ts:44
+dist/cjs/apis/wallet/webhooks.api.d.ts:52
 
 ___
 
@@ -285,7 +302,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/webhooks.api.d.ts:68
+dist/cjs/apis/wallet/webhooks.api.d.ts:76
 
 ___
 
@@ -307,4 +324,4 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/webhooks.api.d.ts:56
+dist/cjs/apis/wallet/webhooks.api.d.ts:64

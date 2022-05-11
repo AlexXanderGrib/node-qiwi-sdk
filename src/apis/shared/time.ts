@@ -1,3 +1,5 @@
+import { getOwnProperty } from "./get";
+
 /**
  * Превращает число в двухзначную строку
  * @param {number} number
@@ -31,6 +33,7 @@ export function formatDate(dateTime: Date | number | string): string {
   );
 
   const offset = date.getTimezoneOffset();
+  /* istanbul ignore next */
   const sign = offset > 0 ? "-" : "+";
 
   const base = utc.toISOString().split(".")[0];
@@ -52,7 +55,7 @@ export enum TimeSpan {
   Year = Day * 365
 }
 
-export const TimeSpanMapping = {
+export const TimeSpanMapping = Object.freeze({
   ms: TimeSpan.Millisecond,
   msec: TimeSpan.Millisecond,
   millisecond: TimeSpan.Millisecond,
@@ -75,7 +78,7 @@ export const TimeSpanMapping = {
   y: TimeSpan.Year,
   yr: TimeSpan.Year,
   year: TimeSpan.Year
-};
+});
 export type TimeSpanMapping = typeof TimeSpanMapping;
 export type TimeSpanKeys = keyof TimeSpanMapping;
 /**
@@ -95,8 +98,7 @@ export function formatOffsetDate(
   const date = new Date(currentDate);
 
   if (typeof unit !== "number") {
-    // eslint-disable-next-line security/detect-object-injection
-    unit = TimeSpanMapping[unit];
+    unit = getOwnProperty(TimeSpanMapping, unit);
   }
 
   const time = Math.round(date.getTime() + amount * unit);

@@ -95,7 +95,7 @@ Error.name
 
 #### Defined in
 
-dist/cjs/error.d.ts:9
+dist/cjs/apis/error.d.ts:9
 
 ## Accessors
 
@@ -113,7 +113,7 @@ dist/cjs/error.d.ts:9
 
 #### Defined in
 
-dist/cjs/error.d.ts:24
+dist/cjs/apis/error.d.ts:24
 
 ## Methods
 
@@ -131,4 +131,4 @@ dist/cjs/error.d.ts:24
 
 #### Defined in
 
-dist/cjs/error.d.ts:16
+dist/cjs/apis/error.d.ts:16

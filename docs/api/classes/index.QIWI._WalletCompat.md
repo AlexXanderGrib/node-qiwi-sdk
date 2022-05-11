@@ -173,7 +173,7 @@ ___
 
 #### Defined in
 
-dist/cjs/options-wrapper.d.ts:16
+dist/cjs/apis/options-wrapper.d.ts:16
 
 ___
 
@@ -695,11 +695,11 @@ ___
 
 ### httpClientFactory
 
-▪ `Static` **httpClientFactory**: (`token`: `string`) => [`SimpleJsonHttp`](index._internal_.SimpleJsonHttp.md)
+▪ `Static` **httpClientFactory**: (`token`: `string`) => [`SimpleJsonHttp`](index.QIWI.SimpleJsonHttp.md)
 
 #### Type declaration
 
-▸ (`token`): [`SimpleJsonHttp`](index._internal_.SimpleJsonHttp.md)
+▸ (`token`): [`SimpleJsonHttp`](index.QIWI.SimpleJsonHttp.md)
 
 **`static`**
 
@@ -713,7 +713,7 @@ ___
 
 ##### Returns
 
-[`SimpleJsonHttp`](index._internal_.SimpleJsonHttp.md)
+[`SimpleJsonHttp`](index.QIWI.SimpleJsonHttp.md)
 
 {SimpleJsonHttp}
 
@@ -823,7 +823,7 @@ Wallet.options
 
 #### Defined in
 
-dist/cjs/options-wrapper.d.ts:40
+dist/cjs/apis/options-wrapper.d.ts:40
 
 ___
 
@@ -1224,7 +1224,7 @@ ___
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `parameters` | [`GetPaymentHistoryParams`](../modules/index.QIWI.md#getpaymenthistoryparams) | Тело запроса |
+| `parameters` | [`GetPaymentHistoryParameters`](../modules/index.QIWI.md#getpaymenthistoryparameters) | Тело запроса |
 | `walletId?` | [`StringOrNumber`](../modules/index.QIWI.md#stringornumber) | - |
 
 #### Returns
@@ -1248,7 +1248,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `parameters` | [`GetPaymentHistoryTotalParams`](../modules/index.QIWI.md#getpaymenthistorytotalparams) |
+| `parameters` | [`GetPaymentHistoryTotalParameters`](../modules/index.QIWI.md#getpaymenthistorytotalparameters) |
 | `walletId?` | [`StringOrNumber`](../modules/index.QIWI.md#stringornumber) |
 
 #### Returns

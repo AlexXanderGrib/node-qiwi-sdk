@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 import express, { Application } from "express";
 import { createServer } from "http";
 import type { AddressInfo } from "net";

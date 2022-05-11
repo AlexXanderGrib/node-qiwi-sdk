@@ -1,6 +1,6 @@
 /* istanbul ignore file */
-/* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { compareHmac, formatQuerystring } from "../shared";
+import { getOwnPropertyDeep } from "../shared/get";
 import { WalletApi } from "./api";
 import type { WebHookInfo, WebhookTransaction } from "./wallet.types";
 
@@ -35,6 +35,19 @@ export class WalletWebhooksApi extends WalletApi {
   public activeId?: string;
 
   /**
+   *
+   *
+   * @protected
+   * @return {string}
+   * @memberof WalletWebhooksApi
+   */
+  protected _getDefaultHookId(): string {
+    if (this.activeId) return this.activeId;
+
+    throw new Error("Unable to get default hook id");
+  }
+
+  /**
    * Регистрирует обработчик вебхука
    * @param {string} parameter Адрес сервера обработки вебхуков. **Внимание! Длина исходного (не URL-encoded) адреса сервиса обработчика не должна превышать 100 символов.**
    * @param {number} txnType Тип транзакций, по которым будут включены уведомления.. 0 - "входящие", 1 - "исходящие". 2 - "все"
@@ -54,10 +67,10 @@ export class WalletWebhooksApi extends WalletApi {
 
   /**
    * Удаляет обработчик вебхука
-   * @param {string} hookId UUID вебхука
+   * @param {string} [hookId] UUID вебхука
    * @return {Promise<*>}
    */
-  remove(hookId: string = this.activeId!): Promise<any> {
+  remove(hookId = this._getDefaultHookId()): Promise<any> {
     this.keys.delete(hookId);
     this.activeId = undefined;
     return this.http.delete<{ response: "Hook deleted" }>(
@@ -70,7 +83,7 @@ export class WalletWebhooksApi extends WalletApi {
    * @param {string} hookId UUID вебхука
    * @return {Promise<string>}
    */
-  async getSecret(hookId: string = this.activeId!): Promise<string> {
+  async getSecret(hookId = this._getDefaultHookId()): Promise<string> {
     const { key } = await this.http.get<{ key: string }>(
       `payment-notifier/v1/hooks/${hookId}/key`
     );
@@ -83,7 +96,7 @@ export class WalletWebhooksApi extends WalletApi {
    * @param {string} hookId UUID вебхука
    * @return {Promise<string>}
    */
-  async updateSecret(hookId: string = this.activeId!): Promise<string> {
+  async updateSecret(hookId = this._getDefaultHookId()): Promise<string> {
     const { key } = await this.http.post<{ key: string }>(
       `payment-notifier/v1/hooks/${hookId}/newkey`
     );
@@ -133,17 +146,11 @@ export class WalletWebhooksApi extends WalletApi {
 
     const signPayload = payment.signFields
       .split(",")
-      .map((p) =>
-        // eslint-disable-next-line unicorn/no-array-reduce
-        p.split(".").reduce((p: any, c) => {
-          // eslint-disable-next-line security/detect-object-injection
-          return p?.[c] || "null";
-        }, payment)
-      )
+      .map((fieldName) => getOwnPropertyDeep(payment, fieldName) ?? "null")
       .join("|");
 
     return compareHmac({
-      key: Buffer.from(this.keys.get(hookId)!, "base64"),
+      key: Buffer.from(this.keys.get(hookId) ?? "", "base64"),
       data: signPayload,
       digest: hash
     });

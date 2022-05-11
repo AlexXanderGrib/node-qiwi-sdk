@@ -4,7 +4,10 @@ const { Telegraf } = require("telegraf");
 const { promisify } = require("util");
 
 const bot = new Telegraf(process.env.TELEGRAM_BOT_TOKEN);
-const wallet = Wallet.create(process.env.QIWI_TOKEN, process.env.QIWI_WALLET);
+const wallet = new Wallet({
+  token: process.env.QIWI_TOKEN,
+  walletId: process.env.QIWI_WALLET
+});
 const sleep = promisify(setTimeout);
 
 /** ... */

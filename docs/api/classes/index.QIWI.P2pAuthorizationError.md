@@ -46,7 +46,7 @@ Creates an instance of P2pAuthorizationError.
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.errors.d.ts:41
+dist/cjs/apis/p2p/p2p.errors.d.ts:42
 
 ## Properties
 
@@ -60,7 +60,7 @@ dist/cjs/apis/p2p/p2p.errors.d.ts:41
 
 #### Defined in
 
-dist/cjs/error.d.ts:9
+dist/cjs/apis/error.d.ts:9
 
 ## Accessors
 
@@ -78,11 +78,11 @@ dist/cjs/error.d.ts:9
 
 #### Inherited from
 
-ExtendedError.\_\_@toStringTag@11
+ExtendedError.\_\_@toStringTag@404
 
 #### Defined in
 
-dist/cjs/error.d.ts:24
+dist/cjs/apis/error.d.ts:24
 
 ## Methods
 
@@ -104,4 +104,4 @@ dist/cjs/error.d.ts:24
 
 #### Defined in
 
-dist/cjs/error.d.ts:16
+dist/cjs/apis/error.d.ts:16

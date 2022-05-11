@@ -1,8 +1,8 @@
-[QIWI SDK](../README.md) / [Modules](../modules.md) / [index](../modules/index.md) / [<internal\>](../modules/index._internal_.md) / HttpClientOptions
+[QIWI SDK](../README.md) / [Modules](../modules.md) / [index](../modules/index.md) / [QIWI](../modules/index.QIWI.md) / HttpClientOptions
 
 # Interface: HttpClientOptions<Request, Response\>
 
-[index](../modules/index.md).[<internal>](../modules/index._internal_.md).HttpClientOptions
+[index](../modules/index.md).[QIWI](../modules/index.QIWI.md).HttpClientOptions
 
 ## Type parameters
 
@@ -15,17 +15,17 @@
 
 ### Properties
 
-- [agent](index._internal_.HttpClientOptions.md#agent)
-- [baseURL](index._internal_.HttpClientOptions.md#baseurl)
-- [headers](index._internal_.HttpClientOptions.md#headers)
-- [okStatusCodes](index._internal_.HttpClientOptions.md#okstatuscodes)
-- [timeout](index._internal_.HttpClientOptions.md#timeout)
+- [agent](index.QIWI.HttpClientOptions.md#agent)
+- [baseURL](index.QIWI.HttpClientOptions.md#baseurl)
+- [headers](index.QIWI.HttpClientOptions.md#headers)
+- [okStatusCodes](index.QIWI.HttpClientOptions.md#okstatuscodes)
+- [timeout](index.QIWI.HttpClientOptions.md#timeout)
 
 ### Methods
 
-- [mapHttpErrors](index._internal_.HttpClientOptions.md#maphttperrors)
-- [parseResponse](index._internal_.HttpClientOptions.md#parseresponse)
-- [stringifyBody](index._internal_.HttpClientOptions.md#stringifybody)
+- [mapHttpErrors](index.QIWI.HttpClientOptions.md#maphttperrors)
+- [parseResponse](index.QIWI.HttpClientOptions.md#parseresponse)
+- [stringifyBody](index.QIWI.HttpClientOptions.md#stringifybody)
 
 ## Properties
 
@@ -35,7 +35,7 @@
 
 #### Defined in
 
-dist/cjs/http.d.ts:8
+dist/cjs/apis/shared/http.d.ts:8
 
 ___
 
@@ -45,7 +45,7 @@ ___
 
 #### Defined in
 
-dist/cjs/http.d.ts:10
+dist/cjs/apis/shared/http.d.ts:10
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 #### Defined in
 
-dist/cjs/http.d.ts:7
+dist/cjs/apis/shared/http.d.ts:7
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 #### Defined in
 
-dist/cjs/http.d.ts:9
+dist/cjs/apis/shared/http.d.ts:9
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 #### Defined in
 
-dist/cjs/http.d.ts:11
+dist/cjs/apis/shared/http.d.ts:11
 
 ## Methods
 
@@ -87,7 +87,7 @@ dist/cjs/http.d.ts:11
 
 | Name | Type |
 | :------ | :------ |
-| `error` | [`HttpError`](../classes/index._internal_.HttpError.md)<`any`, `any`\> |
+| `error` | [`HttpError`](../classes/index.QIWI.HttpError.md)<`any`, `any`\> |
 
 #### Returns
 
@@ -95,7 +95,7 @@ dist/cjs/http.d.ts:11
 
 #### Defined in
 
-dist/cjs/http.d.ts:14
+dist/cjs/apis/shared/http.d.ts:14
 
 ___
 
@@ -115,7 +115,7 @@ ___
 
 #### Defined in
 
-dist/cjs/http.d.ts:13
+dist/cjs/apis/shared/http.d.ts:13
 
 ___
 
@@ -135,4 +135,4 @@ ___
 
 #### Defined in
 
-dist/cjs/http.d.ts:12
+dist/cjs/apis/shared/http.d.ts:12

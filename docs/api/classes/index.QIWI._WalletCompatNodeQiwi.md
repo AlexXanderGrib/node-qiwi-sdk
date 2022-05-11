@@ -5,7 +5,7 @@
 [index](../modules/index.md).[QIWI](../modules/index.QIWI.md)._WalletCompatNodeQiwi
 
 **`deprecated`** Это класс для тех, кто мигрирует с `node-qiwi`.
-Остальным рекомендуется использовать
+Остальным рекомендуется использовать класс `Wallet`
 
 **`export`**
 
@@ -123,7 +123,7 @@ dist/cjs/apis/wallet/wallet.compat-node-qiwi.d.ts:21
 
 #### Defined in
 
-dist/cjs/options-wrapper.d.ts:16
+dist/cjs/apis/options-wrapper.d.ts:16
 
 ___
 
@@ -625,11 +625,11 @@ ___
 
 ### httpClientFactory
 
-▪ `Static` **httpClientFactory**: (`token`: `string`) => [`SimpleJsonHttp`](index._internal_.SimpleJsonHttp.md)
+▪ `Static` **httpClientFactory**: (`token`: `string`) => [`SimpleJsonHttp`](index.QIWI.SimpleJsonHttp.md)
 
 #### Type declaration
 
-▸ (`token`): [`SimpleJsonHttp`](index._internal_.SimpleJsonHttp.md)
+▸ (`token`): [`SimpleJsonHttp`](index.QIWI.SimpleJsonHttp.md)
 
 **`static`**
 
@@ -643,7 +643,7 @@ ___
 
 ##### Returns
 
-[`SimpleJsonHttp`](index._internal_.SimpleJsonHttp.md)
+[`SimpleJsonHttp`](index.QIWI.SimpleJsonHttp.md)
 
 {SimpleJsonHttp}
 
@@ -717,7 +717,7 @@ Wallet.options
 
 #### Defined in
 
-dist/cjs/options-wrapper.d.ts:40
+dist/cjs/apis/options-wrapper.d.ts:40
 
 ## Methods
 
@@ -803,7 +803,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `contractId` | `string` \| `number` |
-| `settings?` | `Partial`<[`GetPaymentHistoryParams`](../modules/index.QIWI.md#getpaymenthistoryparams)\> |
+| `settings?` | `Partial`<[`GetPaymentHistoryParameters`](../modules/index.QIWI.md#getpaymenthistoryparameters)\> |
 
 #### Returns
 
@@ -897,7 +897,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `contractId` | `string` \| `number` |
-| `settings` | [`GetPaymentHistoryTotalParams`](../modules/index.QIWI.md#getpaymenthistorytotalparams) |
+| `settings` | [`GetPaymentHistoryTotalParameters`](../modules/index.QIWI.md#getpaymenthistorytotalparameters) |
 
 #### Returns
 

@@ -13,12 +13,11 @@
 - [DetectorApi](../classes/index._internal_.DetectorApi.md)
 - [DetectorDetectApi](../classes/index._internal_.DetectorDetectApi.md)
 - [ExtendedError](../classes/index._internal_.ExtendedError.md)
-- [HttpError](../classes/index._internal_.HttpError.md)
 - [OptionsWrapper](../classes/index._internal_.OptionsWrapper.md)
 - [OptionsWrapperWithGetter](../classes/index._internal_.OptionsWrapperWithGetter.md)
+- [OptionsWrapperWithSetter](../classes/index._internal_.OptionsWrapperWithSetter.md)
 - [P2pApi](../classes/index._internal_.P2pApi.md)
 - [P2pBillsApi](../classes/index._internal_.P2pBillsApi.md)
-- [SimpleJsonHttp](../classes/index._internal_.SimpleJsonHttp.md)
 - [WalletApi](../classes/index._internal_.WalletApi.md)
 - [WalletBillsApi](../classes/index._internal_.WalletBillsApi.md)
 - [WalletCardsApi](../classes/index._internal_.WalletCardsApi.md)
@@ -36,21 +35,40 @@
 ### Interfaces
 
 - [ApiClassOptions](../interfaces/index._internal_.ApiClassOptions.md)
-- [HttpClient](../interfaces/index._internal_.HttpClient.md)
-- [HttpClientOptions](../interfaces/index._internal_.HttpClientOptions.md)
-- [HttpRequestOptions](../interfaces/index._internal_.HttpRequestOptions.md)
-- [HttpResponse](../interfaces/index._internal_.HttpResponse.md)
 
 ### Type aliases
 
+- [BillRequestHandler](index._internal_.md#billrequesthandler)
+- [BinaryAlike](index._internal_.md#binaryalike)
 - [CardType](index._internal_.md#cardtype)
 - [CreateAndFetchWalletIdParameters](index._internal_.md#createandfetchwalletidparameters)
 - [ImageObject](index._internal_.md#imageobject)
 - [KeyValueObject](index._internal_.md#keyvalueobject)
+- [MiddlewareOptions](index._internal_.md#middlewareoptions)
 - [NameValueObject](index._internal_.md#namevalueobject)
 - [SetupHttp](index._internal_.md#setuphttp)
 
 ## Type aliases
+
+### BillRequestHandler
+
+Ƭ **BillRequestHandler**: `RequestHandler`<`Record`<`string`, `string`\>, `any`, [`BillStatusData`](index.QIWI.md#billstatusdata)\>
+
+#### Defined in
+
+dist/cjs/apis/p2p/p2p.middleware.d.ts:23
+
+___
+
+### BinaryAlike
+
+Ƭ **BinaryAlike**: `string` \| `NodeJS.ArrayBufferView`
+
+#### Defined in
+
+dist/cjs/apis/shared/hmac.d.ts:2
+
+___
 
 ### CardType
 
@@ -114,6 +132,23 @@ dist/cjs/apis/wallet/wallet.types.d.ts:1216
 
 ___
 
+### MiddlewareOptions
+
+Ƭ **MiddlewareOptions**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `memo?` | `boolean` |
+| `memoTime?` | `number` |
+
+#### Defined in
+
+dist/cjs/apis/p2p/p2p.middleware.d.ts:24
+
+___
+
 ### NameValueObject
 
 Ƭ **NameValueObject**: `Object`
@@ -133,7 +168,7 @@ ___
 
 ### SetupHttp
 
-Ƭ **SetupHttp**: (`http`: [`SimpleJsonHttp`](../classes/index._internal_.SimpleJsonHttp.md)) => `void`
+Ƭ **SetupHttp**: (`http`: [`SimpleJsonHttp`](../classes/index.QIWI.SimpleJsonHttp.md)) => `void`
 
 #### Type declaration
 
@@ -143,7 +178,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `http` | [`SimpleJsonHttp`](../classes/index._internal_.SimpleJsonHttp.md) |
+| `http` | [`SimpleJsonHttp`](../classes/index.QIWI.SimpleJsonHttp.md) |
 
 ##### Returns
 

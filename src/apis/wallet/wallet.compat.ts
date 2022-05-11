@@ -504,7 +504,6 @@ export class _WalletCompat extends Wallet {
     walletId: types.StringOrNumber = this.walletId
   ): Promise<types.CardRenameResponse> {
     return await this._executeWithWalletId(walletId, async () => {
-      // eslint-disable-next-line security/detect-non-literal-fs-filename
       return await this.cards.rename(cardId, alias);
     });
   }

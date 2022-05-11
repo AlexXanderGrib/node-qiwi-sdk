@@ -12,7 +12,7 @@
 [![codecov](https://img.shields.io/codecov/c/github/AlexXanderGrib/node-qiwi-sdk/main.svg)](https://codecov.io/gh/AlexXanderGrib/node-qiwi-sdk)
 [![GitHub](https://img.shields.io/github/stars/AlexXanderGrib/node-qiwi-sdk.svg)](https://github.com/AlexXanderGrib/node-qiwi-sdk)
 [![qiwi-sdk](https://snyk.io/advisor/npm-package/qiwi-sdk/badge.svg)](https://snyk.io/advisor/npm-package/qiwi-sdk)
-[![Known Vulnerabilities](https://snyk.io/test/npm/axios/badge.svg)](https://snyk.io/test/npm/axios)
+[![Known Vulnerabilities](https://snyk.io/test/npm/qiwi-sdk/badge.svg)](https://snyk.io/test/npm/qiwi-sdk)
 [![Quality](https://img.shields.io/npms-io/quality-score/qiwi-sdk.svg?label=quality%20%28npms.io%29&)](https://npms.io/search?q=qiwi-sdk)
 [![npm](https://img.shields.io/npm/v/qiwi-sdk.svg)](https://npmjs.com/package/qiwi-sdk)
 [![license MIT](https://img.shields.io/npm/l/qiwi-sdk.svg)](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/main/LICENSE.txt)
@@ -48,6 +48,7 @@ Language: [Русский](./README.ru.md) | **English**
    - Personal Webhooks;
    - P2P payment method blocking;
    - "Qiwi Master" Card API.
+   - [`Express` integration](#express-integration) out of the box
 
 Language: [Русский](./README.ru.md) | **English**
 
@@ -99,12 +100,12 @@ the new version of the API - Class v3.
 
 ### API Overview
 
-| Class (v3)                                        | ~~Class (Legacy v2)~~                                         | Documentation by QIWI                                                | Recommended var name |
-| ------------------------------------------------- | ------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------- |
-| [`Wallet`](./docs/api/classes/QIWI.Wallet.md)     | [`Personal`](./docs/api/classes/QIWI.WalletCompat.md)         | https://developer.qiwi.com/en/qiwi-wallet-personal                   | `wallet` (or `qiwi`) |
-| [`P2p`](./docs/api/classes/QIWI.P2p.md)           | [`P2P`](./docs/api/classes/QIWI.P2pCompat.md)                 | https://developer.qiwi.com/en/p2p-payments                           | `p2p`                |
-| [`P2p`](./docs/api/classes/QIWI.P2p.md)           | -                                                             | https://developer.qiwi.com/en/bill-payments                          | `p2p` (or `payment`) |
-| [`Detector`](./docs/api/classes/QIWI.Detector.md) | [`DetectorCompat`](./docs/api/classes/QIWI.DetectorCompat.md) | https://developer.qiwi.com/en/qiwi-wallet-personal/#search-providers | `detector`           |
+| Class (v3)                                        | ~~Class (Legacy v2)~~                                         | Documentation by QIWI                                                | Recommended var name  |
+| ------------------------------------------------- | ------------------------------------------------------------- | -------------------------------------------------------------------- | --------------------- |
+| [`Wallet`](./docs/api/classes/QIWI.Wallet.md)     | [`Personal`](./docs/api/classes/QIWI.WalletCompat.md)         | https://developer.qiwi.com/en/qiwi-wallet-personal                   | `wallet` (or `qiwi`)  |
+| [`P2p`](./docs/api/classes/QIWI.P2p.md)           | [`P2P`](./docs/api/classes/QIWI.P2pCompat.md)                 | https://developer.qiwi.com/en/p2p-payments                           | `p2p`                 |
+| [`P2p`](./docs/api/classes/QIWI.P2p.md)           | -                                                             | https://developer.qiwi.com/en/bill-payments                          | `p2p` (or `payments`) |
+| [`Detector`](./docs/api/classes/QIWI.Detector.md) | [`DetectorCompat`](./docs/api/classes/QIWI.DetectorCompat.md) | https://developer.qiwi.com/en/qiwi-wallet-personal/#search-providers | `detector`            |
 
 To see detailed documentation on a class, click on its name.
 
@@ -203,6 +204,32 @@ wallet.agent = new SocksProxyAgent("socks://login:password@host:port");
 
 // Remember to dispose agent
 wallet.agent = undefined;
+```
+
+### Express integration
+
+```javascript
+const p2p = P2p.create(process.env.QIWI_SECRET_KEY);
+const app = express();
+
+app.post(
+  "/webhook/qiwi",
+  p2p.notificationMiddleware({}, (req, res) => {
+    // Bill body
+    console.log(req.body);
+
+    // { "siteId": "9hh4jb-00", "billId": "cc961e8d-d4d6-4f02-b737-2297e51fb48e", ... }
+  })
+);
+
+app.use((error, req, res, next) => {
+  if (error instanceof P2pBillNotificationError) {
+    // Somebody sent invalid notification
+    console.log(error);
+  }
+
+  return next();
+});
 ```
 
 #### Full examples

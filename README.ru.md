@@ -12,7 +12,7 @@
 [![codecov](https://img.shields.io/codecov/c/github/AlexXanderGrib/node-qiwi-sdk/main.svg)](https://codecov.io/gh/AlexXanderGrib/node-qiwi-sdk)
 [![GitHub](https://img.shields.io/github/stars/AlexXanderGrib/node-qiwi-sdk.svg)](https://github.com/AlexXanderGrib/node-qiwi-sdk)
 [![qiwi-sdk](https://snyk.io/advisor/npm-package/qiwi-sdk/badge.svg)](https://snyk.io/advisor/npm-package/qiwi-sdk)
-[![Known Vulnerabilities](https://snyk.io/test/npm/axios/badge.svg)](https://snyk.io/test/npm/axios)
+[![Known Vulnerabilities](https://snyk.io/test/npm/qiwi-sdk/badge.svg)](https://snyk.io/test/npm/qiwi-sdk)
 [![Quality](https://img.shields.io/npms-io/quality-score/qiwi-sdk.svg?label=quality%20%28npms.io%29&)](https://npms.io/search?q=qiwi-sdk)
 [![npm](https://img.shields.io/npm/v/qiwi-sdk.svg)](https://npmjs.com/package/qiwi-sdk)
 [![license MIT](https://img.shields.io/npm/l/qiwi-sdk.svg)](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/main/LICENSE.txt)
@@ -38,6 +38,7 @@
    - Персональные WebHook'и;
    - Блокировка метода оплаты P2P;
    - API работы с картами Qiwi Master.
+   - [Интеграция с **`Express`**](#интеграция-с-express) из коробки
 
 Язык: **Русский** | [English](./README.md)
 
@@ -88,7 +89,7 @@
 | ------------------------------------------------- | ------------------------------------------------------------- | -------------------------------------------------------------------- | ----------------------------------- |
 | [`Wallet`](./docs/api/classes/QIWI.Wallet.md)     | [`Personal`](./docs/api/classes/QIWI.WalletCompat.md)         | https://developer.qiwi.com/ru/qiwi-wallet-personal                   | `wallet` (или `qiwi`)               |
 | [`P2p`](./docs/api/classes/QIWI.P2p.md)           | [`P2P`](./docs/api/classes/QIWI.P2pCompat.md)                 | https://developer.qiwi.com/ru/p2p-payments                           | `p2p`                               |
-| [`P2p`](./docs/api/classes/QIWI.P2p.md)           | -                                                             | https://developer.qiwi.com/ru/bill-payments                          | `p2p` (или `payment`)               |
+| [`P2p`](./docs/api/classes/QIWI.P2p.md)           | -                                                             | https://developer.qiwi.com/ru/bill-payments                          | `p2p` (или `payments`)              |
 | [`Detector`](./docs/api/classes/QIWI.Detector.md) | [`DetectorCompat`](./docs/api/classes/QIWI.DetectorCompat.md) | https://developer.qiwi.com/ru/qiwi-wallet-personal/#search-providers | `detector`                          |
 
 Чтобы посмотреть детальную документацию по классу, нажмите на его
@@ -189,6 +190,32 @@ wallet.agent = new SocksProxyAgent("socks://login:password@host:port");
 
 // Не забываем очистить объект от агента
 wallet.agent = undefined;
+```
+
+#### Интеграция с Express
+
+```javascript
+const p2p = P2p.create(process.env.QIWI_SECRET_KEY);
+const app = express();
+
+app.post(
+  "/webhook/qiwi",
+  p2p.notificationMiddleware({}, (req, res) => {
+    // Тело запроса
+    console.log(req.body);
+
+    // { "siteId": "9hh4jb-00", "billId": "cc961e8d-d4d6-4f02-b737-2297e51fb48e", ... }
+  })
+);
+
+app.use((error, req, res, next) => {
+  if (error instanceof P2pBillNotificationError) {
+    // Кто то отправил невалидное уведомление
+    console.log(error);
+  }
+
+  return next();
+});
 ```
 
 #### Полные примеры

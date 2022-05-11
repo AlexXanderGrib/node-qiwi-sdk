@@ -1,3 +1,4 @@
+import { URL } from "url";
 import {
   compareHmac,
   formatOffsetDate,
@@ -33,6 +34,7 @@ export class P2pBillsApi extends P2pApi {
    */
   public static patchPayUrl(
     payUrl: string,
+    /* istanbul ignore next */
     options: PayUrlPatchParameters = {}
   ): string {
     const url = new URL(payUrl);
@@ -144,6 +146,7 @@ export class P2pBillsApi extends P2pApi {
     body: BillStatusData | BillStatusBody,
     merchantSecret = this.secretKey
   ): boolean {
+    /* istanbul ignore next */
     if ("bill" in body) body = body.bill;
 
     const data = [

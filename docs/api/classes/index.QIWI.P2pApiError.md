@@ -55,7 +55,7 @@ Creates an instance of P2pApiError.
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.errors.d.ts:27
+dist/cjs/apis/p2p/p2p.errors.d.ts:28
 
 ## Properties
 
@@ -65,7 +65,7 @@ dist/cjs/apis/p2p/p2p.errors.d.ts:27
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.errors.d.ts:20
+dist/cjs/apis/p2p/p2p.errors.d.ts:21
 
 ___
 
@@ -79,7 +79,7 @@ ___
 
 #### Defined in
 
-dist/cjs/error.d.ts:9
+dist/cjs/apis/error.d.ts:9
 
 ___
 
@@ -89,7 +89,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.errors.d.ts:19
+dist/cjs/apis/p2p/p2p.errors.d.ts:20
 
 ___
 
@@ -99,7 +99,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.errors.d.ts:21
+dist/cjs/apis/p2p/p2p.errors.d.ts:22
 
 ## Accessors
 
@@ -117,11 +117,11 @@ dist/cjs/apis/p2p/p2p.errors.d.ts:21
 
 #### Inherited from
 
-ExtendedError.\_\_@toStringTag@11
+ExtendedError.\_\_@toStringTag@404
 
 #### Defined in
 
-dist/cjs/error.d.ts:24
+dist/cjs/apis/error.d.ts:24
 
 ## Methods
 
@@ -143,4 +143,4 @@ dist/cjs/error.d.ts:24
 
 #### Defined in
 
-dist/cjs/error.d.ts:16
+dist/cjs/apis/error.d.ts:16

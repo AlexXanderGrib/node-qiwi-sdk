@@ -1,7 +1,10 @@
 // import { Wallet, LimitType } from "qiwi-sdk";
 import { Wallet, LimitType } from "..";
 
-const wallet = Wallet.create(process.env.QIWI_TOKEN, process.env.QIWI_WALLET);
+const wallet = new Wallet({
+  token: process.env.QIWI_TOKEN,
+  walletId: process.env.QIWI_WALLET
+});
 
 async function main() {
   // 2.0

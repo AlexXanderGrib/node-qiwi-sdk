@@ -63,7 +63,6 @@ export interface HttpClient<Rq = any, Rs = any> {
  * @return {T}
  */
 function _<T>(argument: T): T {
-  /* istanbul ignore next */
   return argument;
 }
 /**
@@ -130,7 +129,7 @@ export class DefaultHttpClient
             );
           }
 
-          // Тесты не покрывают кривые использования API
+          // Выбрасывается если есть ошибки сети
           /* istanbul ignore next */
           throw error;
         });
@@ -161,10 +160,7 @@ export class DefaultHttpClient
     return {
       headers: axiosResponse.headers,
       statusCode: axiosResponse.status,
-      body:
-        axiosResponse.data !== undefined
-          ? (request.parseResponse ?? _)(axiosResponse.data)
-          : undefined,
+      body: (request.parseResponse ?? _)(axiosResponse.data),
       request
     };
   }
@@ -237,8 +233,6 @@ export class SimpleJsonHttp {
    * @memberof SimpleJsonHttp
    */
   async patch<T>(url: string, body?: any): Promise<T> {
-    // Метод PATCH не используется в тестах
-    /* istanbul ignore next */
     return await this.simpleRequest("PATCH", url, body);
   }
 
@@ -252,8 +246,6 @@ export class SimpleJsonHttp {
    * @memberof SimpleJsonHttp
    */
   async delete<T>(url: string, body?: any): Promise<T> {
-    // Метод DELETE не используется в тестах
-    /* istanbul ignore next */
     return await this.simpleRequest("DELETE", url, body);
   }
 

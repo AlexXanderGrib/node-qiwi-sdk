@@ -1,22 +1,25 @@
-import { BinaryLike, createHmac, timingSafeEqual } from "crypto";
+import { createHmac, timingSafeEqual } from "crypto";
+
+// For compatibility with NodeJS v10 typings
+type BinaryAlike = string | NodeJS.ArrayBufferView;
 
 /**
  *
  *
- * @param {BinaryLike} data
+ * @param {BinaryAlike} data
  * @return {NodeJS.ArrayBufferView}  {NodeJS.ArrayBufferView}
  */
-function parseBinaryAlike(data: BinaryLike) {
+function parseBinaryAlike(data: BinaryAlike): NodeJS.ArrayBufferView {
   if (typeof data === "string") return Buffer.from(data, "hex");
-  /* istanbul ignore next */
+
   return data;
 }
 
 export type HmacOptions = {
   algorithm?: string;
-  key: BinaryLike;
-  data: BinaryLike;
-  digest: BinaryLike;
+  key: BinaryAlike;
+  data: BinaryAlike;
+  digest: BinaryAlike;
 };
 
 /**

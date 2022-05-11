@@ -30,7 +30,6 @@ export class ApiClass<
    * @memberof WalletCompat
    */
   set agent(agent: any) {
-    /* istanbul ignore next */
     this.options.http.client.options.agent = agent;
   }
 }

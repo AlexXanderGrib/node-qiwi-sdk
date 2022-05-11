@@ -50,7 +50,7 @@ Creates an instance of OptionsWrapper.
 
 #### Defined in
 
-dist/cjs/options-wrapper.d.ts:22
+dist/cjs/apis/options-wrapper.d.ts:22
 
 ## Properties
 
@@ -68,13 +68,13 @@ dist/cjs/options-wrapper.d.ts:22
 
 #### Defined in
 
-dist/cjs/options-wrapper.d.ts:16
+dist/cjs/apis/options-wrapper.d.ts:16
 
 ## Accessors
 
 ### http
 
-• `Protected` `get` **http**(): [`SimpleJsonHttp`](index._internal_.SimpleJsonHttp.md)
+• `Protected` `get` **http**(): [`SimpleJsonHttp`](index.QIWI.SimpleJsonHttp.md)
 
 **`readonly`**
 
@@ -82,7 +82,7 @@ dist/cjs/options-wrapper.d.ts:16
 
 #### Returns
 
-[`SimpleJsonHttp`](index._internal_.SimpleJsonHttp.md)
+[`SimpleJsonHttp`](index.QIWI.SimpleJsonHttp.md)
 
 #### Inherited from
 

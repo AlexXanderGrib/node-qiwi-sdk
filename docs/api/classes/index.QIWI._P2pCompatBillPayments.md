@@ -5,7 +5,7 @@
 [index](../modules/index.md).[QIWI](../modules/index.QIWI.md)._P2pCompatBillPayments
 
 **`deprecated`** Это класс для тех, кто мигрирует с `@qiwi/bill-payments-node-js-sdk`.
-Остальным рекомендуется использовать
+Остальным рекомендуется использовать класс `P2p`
 
 **`export`**
 
@@ -97,7 +97,7 @@ dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts:20
 
 #### Defined in
 
-dist/cjs/options-wrapper.d.ts:16
+dist/cjs/apis/options-wrapper.d.ts:16
 
 ___
 
@@ -111,7 +111,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.d.ts:54
+dist/cjs/apis/p2p/p2p.d.ts:55
 
 ___
 
@@ -145,7 +145,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.d.ts:16
+dist/cjs/apis/p2p/p2p.d.ts:17
 
 ___
 
@@ -159,7 +159,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.d.ts:17
+dist/cjs/apis/p2p/p2p.d.ts:18
 
 ___
 
@@ -173,7 +173,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.d.ts:18
+dist/cjs/apis/p2p/p2p.d.ts:19
 
 ___
 
@@ -187,17 +187,17 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.d.ts:15
+dist/cjs/apis/p2p/p2p.d.ts:16
 
 ___
 
 ### httpClientFactory
 
-▪ `Static` **httpClientFactory**: (`secretKey`: `string`) => [`SimpleJsonHttp`](index._internal_.SimpleJsonHttp.md)
+▪ `Static` **httpClientFactory**: (`secretKey`: `string`) => [`SimpleJsonHttp`](index.QIWI.SimpleJsonHttp.md)
 
 #### Type declaration
 
-▸ (`secretKey`): [`SimpleJsonHttp`](index._internal_.SimpleJsonHttp.md)
+▸ (`secretKey`): [`SimpleJsonHttp`](index.QIWI.SimpleJsonHttp.md)
 
 **`static`**
 
@@ -211,7 +211,7 @@ ___
 
 ##### Returns
 
-[`SimpleJsonHttp`](index._internal_.SimpleJsonHttp.md)
+[`SimpleJsonHttp`](index.QIWI.SimpleJsonHttp.md)
 
 {SimpleJsonHttp}
 
@@ -221,7 +221,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.d.ts:27
+dist/cjs/apis/p2p/p2p.d.ts:28
 
 ## Accessors
 
@@ -321,7 +321,7 @@ P2p.options
 
 #### Defined in
 
-dist/cjs/options-wrapper.d.ts:40
+dist/cjs/apis/options-wrapper.d.ts:40
 
 ## Methods
 
@@ -560,7 +560,7 @@ ___
 
 ### notificationMiddleware
 
-▸ **notificationMiddleware**(`options?`, `actualHandler?`): `RequestHandler`<`ParamsDictionary`, `any`, `any`, `ParsedQs`, `Record`<`string`, `any`\>\>
+▸ **notificationMiddleware**(`options?`, `handler?`): `RequestHandler`<`ParamsDictionary`, `any`, `any`, `ParsedQs`, `Record`<`string`, `any`\>\>
 
 `[Экспериментально]` Упрощает интеграцию с `express`
 
@@ -570,9 +570,8 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `options?` | `Object` |
-| `options.memo?` | `boolean` |
-| `actualHandler?` | `RequestHandler`<`Record`<`string`, `string`\>, `any`, [`BillStatusData`](../modules/index.QIWI.md#billstatusdata), `ParsedQs`, `Record`<`string`, `any`\>\> |
+| `options?` | [`MiddlewareOptions`](../modules/index._internal_.md#middlewareoptions) |
+| `handler?` | [`BillRequestHandler`](../modules/index._internal_.md#billrequesthandler) |
 
 #### Returns
 
@@ -612,7 +611,7 @@ app.use((error, request, response, next) => {
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.d.ts:95
+dist/cjs/apis/p2p/p2p.d.ts:96
 
 ___
 
@@ -673,7 +672,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.d.ts:37
+dist/cjs/apis/p2p/p2p.d.ts:38
 
 ___
 
@@ -704,4 +703,4 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.d.ts:47
+dist/cjs/apis/p2p/p2p.d.ts:48
