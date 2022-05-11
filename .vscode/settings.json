@@ -4,11 +4,13 @@
     "коммиты",
     "codecov",
     "Compat",
+    "instanceof",
     "pnpm",
     "PUBK",
     "qiwi",
     "QIWI",
-    "Snyk"
+    "Snyk",
+    "typedoc"
   ],
   "editor.rulers": [
     65,
