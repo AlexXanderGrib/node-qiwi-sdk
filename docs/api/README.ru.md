@@ -85,12 +85,12 @@
 кто переходит с версии 2. Остальным рекомендуется использовать
 новый вариант работы с API - Класс v3.
 
-| **Класс (v3)**                                    | ~~Класс (Legacy v2)~~                                         | Документация от QIWI                                                 | Рекомендованное название переменной |
-| ------------------------------------------------- | ------------------------------------------------------------- | -------------------------------------------------------------------- | ----------------------------------- |
-| [`Wallet`](./docs/api/classes/QIWI.Wallet.md)     | [`Personal`](./docs/api/classes/QIWI.WalletCompat.md)         | https://developer.qiwi.com/ru/qiwi-wallet-personal                   | `wallet` (или `qiwi`)               |
-| [`P2p`](./docs/api/classes/QIWI.P2p.md)           | [`P2P`](./docs/api/classes/QIWI.P2pCompat.md)                 | https://developer.qiwi.com/ru/p2p-payments                           | `p2p`                               |
-| [`P2p`](./docs/api/classes/QIWI.P2p.md)           | -                                                             | https://developer.qiwi.com/ru/bill-payments                          | `p2p` (или `payments`)              |
-| [`Detector`](./docs/api/classes/QIWI.Detector.md) | [`DetectorCompat`](./docs/api/classes/QIWI.DetectorCompat.md) | https://developer.qiwi.com/ru/qiwi-wallet-personal/#search-providers | `detector`                          |
+| **Класс (v3)**                                          | ~~Класс (Legacy v2)~~                                               | Документация от QIWI                                                 | Рекомендованное название переменной |
+| ------------------------------------------------------- | ------------------------------------------------------------------- | -------------------------------------------------------------------- | ----------------------------------- |
+| [`Wallet`](./docs/api/classes/index.QIWI.Wallet.md)     | [`Personal`](./docs/api/classes/index.QIWI.WalletCompat.md)         | https://developer.qiwi.com/ru/qiwi-wallet-personal                   | `wallet` (или `qiwi`)               |
+| [`P2p`](./docs/api/classes/index.QIWI.P2p.md)           | [`P2P`](./docs/api/classes/index.QIWI.P2pCompat.md)                 | https://developer.qiwi.com/ru/p2p-payments                           | `p2p`                               |
+| [`P2p`](./docs/api/classes/index.QIWI.P2p.md)           | -                                                                   | https://developer.qiwi.com/ru/bill-payments                          | `p2p` (или `payments`)              |
+| [`Detector`](./docs/api/classes/index.QIWI.Detector.md) | [`DetectorCompat`](./docs/api/classes/index.QIWI.DetectorCompat.md) | https://developer.qiwi.com/ru/qiwi-wallet-personal/#search-providers | `detector`                          |
 
 Чтобы посмотреть детальную документацию по классу, нажмите на его
 название.

@@ -100,12 +100,12 @@ the new version of the API - Class v3.
 
 ### API Overview
 
-| Class (v3)                                        | ~~Class (Legacy v2)~~                                         | Documentation by QIWI                                                | Recommended var name  |
-| ------------------------------------------------- | ------------------------------------------------------------- | -------------------------------------------------------------------- | --------------------- |
-| [`Wallet`](./docs/api/classes/QIWI.Wallet.md)     | [`Personal`](./docs/api/classes/QIWI.WalletCompat.md)         | https://developer.qiwi.com/en/qiwi-wallet-personal                   | `wallet` (or `qiwi`)  |
-| [`P2p`](./docs/api/classes/QIWI.P2p.md)           | [`P2P`](./docs/api/classes/QIWI.P2pCompat.md)                 | https://developer.qiwi.com/en/p2p-payments                           | `p2p`                 |
-| [`P2p`](./docs/api/classes/QIWI.P2p.md)           | -                                                             | https://developer.qiwi.com/en/bill-payments                          | `p2p` (or `payments`) |
-| [`Detector`](./docs/api/classes/QIWI.Detector.md) | [`DetectorCompat`](./docs/api/classes/QIWI.DetectorCompat.md) | https://developer.qiwi.com/en/qiwi-wallet-personal/#search-providers | `detector`            |
+| Class (v3)                                              | ~~Class (Legacy v2)~~                                               | Documentation by QIWI                                                | Recommended var name  |
+| ------------------------------------------------------- | ------------------------------------------------------------------- | -------------------------------------------------------------------- | --------------------- |
+| [`Wallet`](./docs/api/classes/index.QIWI.Wallet.md)     | [`Personal`](./docs/api/classes/index.QIWI.WalletCompat.md)         | https://developer.qiwi.com/en/qiwi-wallet-personal                   | `wallet` (or `qiwi`)  |
+| [`P2p`](./docs/api/classes/index.QIWI.P2p.md)           | [`P2P`](./docs/api/classes/index.QIWI.P2pCompat.md)                 | https://developer.qiwi.com/en/p2p-payments                           | `p2p`                 |
+| [`P2p`](./docs/api/classes/index.QIWI.P2p.md)           | -                                                                   | https://developer.qiwi.com/en/bill-payments                          | `p2p` (or `payments`) |
+| [`Detector`](./docs/api/classes/index.QIWI.Detector.md) | [`DetectorCompat`](./docs/api/classes/index.QIWI.DetectorCompat.md) | https://developer.qiwi.com/en/qiwi-wallet-personal/#search-providers | `detector`            |
 
 To see detailed documentation on a class, click on its name.
 
