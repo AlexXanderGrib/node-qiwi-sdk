@@ -20,6 +20,8 @@
 
 ### Properties
 
+- [cause](index.QIWI.P2pBillNotificationError.md#cause)
+- [message](index.QIWI.P2pBillNotificationError.md#message)
 - [name](index.QIWI.P2pBillNotificationError.md#name)
 - [notification](index.QIWI.P2pBillNotificationError.md#notification)
 
@@ -53,9 +55,37 @@ Creates an instance of P2pBillNotificationError.
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.errors.d.ts:57
+dist/cjs/apis/p2p/p2p.errors.d.ts:59
 
 ## Properties
+
+### cause
+
+• `Optional` **cause**: `Error`
+
+#### Inherited from
+
+[ExtendedError](index._internal_.ExtendedError.md).[cause](index._internal_.ExtendedError.md#cause)
+
+#### Defined in
+
+dist/cjs/apis/error.d.ts:9
+
+___
+
+### message
+
+• **message**: `string`
+
+#### Inherited from
+
+[ExtendedError](index._internal_.ExtendedError.md).[message](index._internal_.ExtendedError.md#message)
+
+#### Defined in
+
+dist/cjs/apis/error.d.ts:8
+
+___
 
 ### name
 
@@ -67,7 +97,7 @@ dist/cjs/apis/p2p/p2p.errors.d.ts:57
 
 #### Defined in
 
-dist/cjs/apis/error.d.ts:9
+dist/cjs/apis/error.d.ts:26
 
 ___
 
@@ -77,7 +107,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.errors.d.ts:52
+dist/cjs/apis/p2p/p2p.errors.d.ts:54
 
 ## Accessors
 
@@ -95,11 +125,11 @@ dist/cjs/apis/p2p/p2p.errors.d.ts:52
 
 #### Inherited from
 
-ExtendedError.\_\_@toStringTag@404
+ExtendedError.\_\_@toStringTag@407
 
 #### Defined in
 
-dist/cjs/apis/error.d.ts:24
+dist/cjs/apis/error.d.ts:41
 
 ## Methods
 
@@ -121,4 +151,4 @@ dist/cjs/apis/error.d.ts:24
 
 #### Defined in
 
-dist/cjs/apis/error.d.ts:16
+dist/cjs/apis/error.d.ts:33

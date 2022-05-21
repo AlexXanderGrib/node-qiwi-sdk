@@ -20,6 +20,8 @@
 
 ### Properties
 
+- [cause](index.QIWI.WalletAuthorizationError.md#cause)
+- [message](index.QIWI.WalletAuthorizationError.md#message)
 - [name](index.QIWI.WalletAuthorizationError.md#name)
 
 ### Accessors
@@ -34,11 +36,17 @@
 
 ### constructor
 
-• **new WalletAuthorizationError**()
+• **new WalletAuthorizationError**(`cause?`)
 
 Creates an instance of WalletAuthorizationError.
 
 **`memberof`** WalletAuthorizationError
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `cause?` | [`HttpError`](index.QIWI.HttpError.md)<`any`, `any`\> |
 
 #### Overrides
 
@@ -46,9 +54,37 @@ Creates an instance of WalletAuthorizationError.
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.errors.d.ts:62
+dist/cjs/apis/wallet/wallet.errors.d.ts:65
 
 ## Properties
+
+### cause
+
+• `Optional` **cause**: [`HttpError`](index.QIWI.HttpError.md)<`any`, `any`\>
+
+#### Overrides
+
+[ExtendedError](index._internal_.ExtendedError.md).[cause](index._internal_.ExtendedError.md#cause)
+
+#### Defined in
+
+dist/cjs/apis/wallet/wallet.errors.d.ts:60
+
+___
+
+### message
+
+• **message**: `string`
+
+#### Inherited from
+
+[ExtendedError](index._internal_.ExtendedError.md).[message](index._internal_.ExtendedError.md#message)
+
+#### Defined in
+
+dist/cjs/apis/error.d.ts:8
+
+___
 
 ### name
 
@@ -60,7 +96,7 @@ dist/cjs/apis/wallet/wallet.errors.d.ts:62
 
 #### Defined in
 
-dist/cjs/apis/error.d.ts:9
+dist/cjs/apis/error.d.ts:26
 
 ## Accessors
 
@@ -78,11 +114,11 @@ dist/cjs/apis/error.d.ts:9
 
 #### Inherited from
 
-ExtendedError.\_\_@toStringTag@404
+ExtendedError.\_\_@toStringTag@407
 
 #### Defined in
 
-dist/cjs/apis/error.d.ts:24
+dist/cjs/apis/error.d.ts:41
 
 ## Methods
 
@@ -104,4 +140,4 @@ dist/cjs/apis/error.d.ts:24
 
 #### Defined in
 
-dist/cjs/apis/error.d.ts:16
+dist/cjs/apis/error.d.ts:33

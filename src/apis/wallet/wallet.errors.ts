@@ -25,10 +25,11 @@ export class WalletApiError extends ExtendedError {
   /**
    * Creates an instance of WalletApiError.
    * @param {WalletApiErrorResponse} response
+   * @param {HttpError} [cause]
    * @memberof WalletApiError
    */
-  constructor(public readonly response: WalletApiErrorResponse) {
-    super(response.userMessage);
+  constructor(public readonly response: WalletApiErrorResponse, cause: HttpError) {
+    super(response.userMessage, cause);
   }
 }
 
@@ -50,10 +51,14 @@ export class WalletApiShortError extends ExtendedError {
   /**
    * Creates an instance of WalletApiShortError.
    * @param {WalletApiShortErrorResponse} response
+   * @param {HttpError} [cause]
    * @memberof WalletApiShortError
    */
-  constructor(public readonly response: WalletApiShortErrorResponse) {
-    super(response.message);
+  constructor(
+    public readonly response: WalletApiShortErrorResponse,
+    cause?: HttpError
+  ) {
+    super(response.message, cause);
   }
 }
 
@@ -69,8 +74,8 @@ export class WalletAuthorizationError extends ExtendedError {
    * Creates an instance of WalletAuthorizationError.
    * @memberof WalletAuthorizationError
    */
-  constructor() {
-    super("Unauthorized api request");
+  constructor(public cause?: HttpError) {
+    super("Unauthorized api request", cause);
   }
 }
 
@@ -86,15 +91,15 @@ export function mapHttpErrors(error: HttpError) {
   const response = error.response;
 
   if (response.statusCode === 401) {
-    return new WalletAuthorizationError();
+    return new WalletAuthorizationError(error);
   }
 
   if (response.body?.description) {
-    return new WalletApiError(response.body);
+    return new WalletApiError(response.body, error);
   }
 
   if (response.body?.code) {
-    return new WalletApiShortError(response.body);
+    return new WalletApiShortError(response.body, error);
   }
 
   return error;

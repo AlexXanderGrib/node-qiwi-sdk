@@ -20,6 +20,8 @@
 
 ### Properties
 
+- [cause](index.QIWI.P2pAuthorizationError.md#cause)
+- [message](index.QIWI.P2pAuthorizationError.md#message)
 - [name](index.QIWI.P2pAuthorizationError.md#name)
 
 ### Accessors
@@ -34,11 +36,17 @@
 
 ### constructor
 
-• **new P2pAuthorizationError**()
+• **new P2pAuthorizationError**(`cause?`)
 
 Creates an instance of P2pAuthorizationError.
 
 **`memberof`** P2pAuthorizationError
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `cause?` | [`HttpError`](index.QIWI.HttpError.md)<`any`, `any`\> |
 
 #### Overrides
 
@@ -46,9 +54,37 @@ Creates an instance of P2pAuthorizationError.
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.errors.d.ts:42
+dist/cjs/apis/p2p/p2p.errors.d.ts:44
 
 ## Properties
+
+### cause
+
+• `Optional` **cause**: `Error`
+
+#### Inherited from
+
+[ExtendedError](index._internal_.ExtendedError.md).[cause](index._internal_.ExtendedError.md#cause)
+
+#### Defined in
+
+dist/cjs/apis/error.d.ts:9
+
+___
+
+### message
+
+• **message**: `string`
+
+#### Inherited from
+
+[ExtendedError](index._internal_.ExtendedError.md).[message](index._internal_.ExtendedError.md#message)
+
+#### Defined in
+
+dist/cjs/apis/error.d.ts:8
+
+___
 
 ### name
 
@@ -60,7 +96,7 @@ dist/cjs/apis/p2p/p2p.errors.d.ts:42
 
 #### Defined in
 
-dist/cjs/apis/error.d.ts:9
+dist/cjs/apis/error.d.ts:26
 
 ## Accessors
 
@@ -78,11 +114,11 @@ dist/cjs/apis/error.d.ts:9
 
 #### Inherited from
 
-ExtendedError.\_\_@toStringTag@404
+ExtendedError.\_\_@toStringTag@407
 
 #### Defined in
 
-dist/cjs/apis/error.d.ts:24
+dist/cjs/apis/error.d.ts:41
 
 ## Methods
 
@@ -104,4 +140,4 @@ dist/cjs/apis/error.d.ts:24
 
 #### Defined in
 
-dist/cjs/apis/error.d.ts:16
+dist/cjs/apis/error.d.ts:33

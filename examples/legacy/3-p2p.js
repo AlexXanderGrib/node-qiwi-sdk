@@ -1,5 +1,5 @@
-// const { Personal, P2P, BillPaySource } = require("qiwi-sdk");
-const { Personal, P2P, BillPaySource } = require("../..");
+// const { Personal, P2P } = require("qiwi-sdk");
+const { Personal, P2P } = require("../..");
 
 const wallet = new Personal(process.env.QIWI_TOKEN);
 
@@ -24,7 +24,7 @@ async function main() {
 
   // Теперь можно оплатить счёт только картой, а после оплаты его перенаправит на рикролл
   const patchedPayUrl = P2P.patchPayUrl(bill.payUrl, {
-    paySource: BillPaySource.Card,
+    paySource: P2P.BillPaySource.Card,
     successUrl: "https://youtu.be/dQw4w9WgXcQ"
   });
 

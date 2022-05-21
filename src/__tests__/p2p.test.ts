@@ -10,7 +10,7 @@ import {
   P2P,
   P2PPaymentError
 } from "..";
-import { P2p } from "../apis";
+import { HttpError, P2p } from "../apis";
 
 import { createMockServer, MockServer } from "./server";
 
@@ -131,6 +131,7 @@ describe(P2P.name, () => {
     } catch (error: any) {
       expect(error).toBeInstanceOf(P2PPaymentError);
       expect(error.message).toContain("Неверные параметры");
+      expect(error.cause).toBeInstanceOf(HttpError);
     }
   });
 

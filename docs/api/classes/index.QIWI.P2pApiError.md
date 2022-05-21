@@ -20,7 +20,9 @@
 
 ### Properties
 
+- [cause](index.QIWI.P2pApiError.md#cause)
 - [dateTime](index.QIWI.P2pApiError.md#datetime)
+- [message](index.QIWI.P2pApiError.md#message)
 - [name](index.QIWI.P2pApiError.md#name)
 - [response](index.QIWI.P2pApiError.md#response)
 - [serviceName](index.QIWI.P2pApiError.md#servicename)
@@ -37,7 +39,7 @@
 
 ### constructor
 
-• **new P2pApiError**(`response`)
+• **new P2pApiError**(`response`, `cause?`)
 
 Creates an instance of P2pApiError.
 
@@ -48,6 +50,7 @@ Creates an instance of P2pApiError.
 | Name | Type |
 | :------ | :------ |
 | `response` | [`P2pApiErrorResponse`](../modules/index.QIWI.md#p2papierrorresponse) |
+| `cause?` | [`HttpError`](index.QIWI.HttpError.md)<`any`, `any`\> |
 
 #### Overrides
 
@@ -55,9 +58,23 @@ Creates an instance of P2pApiError.
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.errors.d.ts:28
+dist/cjs/apis/p2p/p2p.errors.d.ts:29
 
 ## Properties
+
+### cause
+
+• `Optional` **cause**: `Error`
+
+#### Inherited from
+
+[ExtendedError](index._internal_.ExtendedError.md).[cause](index._internal_.ExtendedError.md#cause)
+
+#### Defined in
+
+dist/cjs/apis/error.d.ts:9
+
+___
 
 ### dateTime
 
@@ -66,6 +83,20 @@ dist/cjs/apis/p2p/p2p.errors.d.ts:28
 #### Defined in
 
 dist/cjs/apis/p2p/p2p.errors.d.ts:21
+
+___
+
+### message
+
+• **message**: `string`
+
+#### Inherited from
+
+[ExtendedError](index._internal_.ExtendedError.md).[message](index._internal_.ExtendedError.md#message)
+
+#### Defined in
+
+dist/cjs/apis/error.d.ts:8
 
 ___
 
@@ -79,7 +110,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/error.d.ts:9
+dist/cjs/apis/error.d.ts:26
 
 ___
 
@@ -117,11 +148,11 @@ dist/cjs/apis/p2p/p2p.errors.d.ts:22
 
 #### Inherited from
 
-ExtendedError.\_\_@toStringTag@404
+ExtendedError.\_\_@toStringTag@407
 
 #### Defined in
 
-dist/cjs/apis/error.d.ts:24
+dist/cjs/apis/error.d.ts:41
 
 ## Methods
 
@@ -143,4 +174,4 @@ dist/cjs/apis/error.d.ts:24
 
 #### Defined in
 
-dist/cjs/apis/error.d.ts:16
+dist/cjs/apis/error.d.ts:33

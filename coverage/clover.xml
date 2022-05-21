@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1652271456124" clover="3.2.0">
-  <project timestamp="1652271456124" name="All files">
-    <metrics statements="536" coveredstatements="536" conditionals="139" coveredconditionals="137" methods="156" coveredmethods="134" elements="831" coveredelements="807" complexity="0" loc="536" ncloc="536" packages="6" files="41" classes="41"/>
+<coverage generated="1652578329517" clover="3.2.0">
+  <project timestamp="1652578329517" name="All files">
+    <metrics statements="510" coveredstatements="510" conditionals="139" coveredconditionals="137" methods="136" coveredmethods="129" elements="785" coveredelements="776" complexity="0" loc="510" ncloc="510" packages="6" files="39" classes="39"/>
     <package name="src">
       <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="exports.ts" path="/home/alexxgrib/Projects/qiwi-api/src/exports.ts">
@@ -17,7 +17,7 @@
       </file>
     </package>
     <package name="src.apis">
-      <metrics statements="26" coveredstatements="26" conditionals="0" coveredconditionals="0" methods="13" coveredmethods="13"/>
+      <metrics statements="29" coveredstatements="29" conditionals="0" coveredconditionals="0" methods="14" coveredmethods="14"/>
       <file name="api.ts" path="/home/alexxgrib/Projects/qiwi-api/src/apis/api.ts">
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
         <line num="2" count="6" type="stmt"/>
@@ -28,16 +28,19 @@
         <line num="56" count="49" type="stmt"/>
       </file>
       <file name="error.ts" path="/home/alexxgrib/Projects/qiwi-api/src/apis/error.ts">
-        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
-        <line num="8" count="7" type="stmt"/>
-        <line num="9" count="16" type="stmt"/>
-        <line num="18" count="1" type="stmt"/>
-        <line num="33" count="1" type="stmt"/>
-        <line num="45" count="7" type="stmt"/>
-        <line num="54" count="1" type="stmt"/>
-        <line num="55" count="1" type="stmt"/>
-        <line num="65" count="1" type="stmt"/>
-        <line num="80" count="1" type="stmt"/>
+        <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="7"/>
+        <line num="7" count="7" type="stmt"/>
+        <line num="14" count="16" type="stmt"/>
+        <line num="15" count="16" type="stmt"/>
+        <line num="26" count="7" type="stmt"/>
+        <line num="27" count="16" type="stmt"/>
+        <line num="36" count="1" type="stmt"/>
+        <line num="51" count="1" type="stmt"/>
+        <line num="63" count="7" type="stmt"/>
+        <line num="72" count="1" type="stmt"/>
+        <line num="73" count="1" type="stmt"/>
+        <line num="83" count="1" type="stmt"/>
+        <line num="98" count="1" type="stmt"/>
       </file>
       <file name="index.ts" path="/home/alexxgrib/Projects/qiwi-api/src/apis/index.ts">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -113,7 +116,7 @@
       </file>
     </package>
     <package name="src.apis.p2p">
-      <metrics statements="114" coveredstatements="114" conditionals="38" coveredconditionals="36" methods="44" coveredmethods="33"/>
+      <metrics statements="99" coveredstatements="99" conditionals="38" coveredconditionals="36" methods="33" coveredmethods="30"/>
       <file name="api.ts" path="/home/alexxgrib/Projects/qiwi-api/src/apis/p2p/api.ts">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="1" count="6" type="stmt"/>
@@ -148,24 +151,6 @@
         <line num="187" count="1" type="cond" truecount="3" falsecount="1"/>
         <line num="189" count="1" type="stmt"/>
         <line num="191" count="1" type="stmt"/>
-      </file>
-      <file name="index.ts" path="/home/alexxgrib/Projects/qiwi-api/src/apis/p2p/index.ts">
-        <metrics statements="15" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="11" coveredmethods="3"/>
-        <line num="1" count="14" type="stmt"/>
-        <line num="3" count="6" type="stmt"/>
-        <line num="4" count="6" type="stmt"/>
-        <line num="5" count="6" type="stmt"/>
-        <line num="6" count="21" type="stmt"/>
-        <line num="8" count="6" type="stmt"/>
-        <line num="9" count="6" type="stmt"/>
-        <line num="10" count="6" type="stmt"/>
-        <line num="12" count="6" type="stmt"/>
-        <line num="13" count="6" type="stmt"/>
-        <line num="15" count="7" type="stmt"/>
-        <line num="16" count="6" type="stmt"/>
-        <line num="17" count="6" type="stmt"/>
-        <line num="18" count="6" type="stmt"/>
-        <line num="20" count="6" type="stmt"/>
       </file>
       <file name="p2p.middleware.ts" path="/home/alexxgrib/Projects/qiwi-api/src/apis/p2p/p2p.middleware.ts">
         <metrics statements="35" coveredstatements="35" conditionals="9" coveredconditionals="9" methods="10" coveredmethods="9"/>
@@ -384,7 +369,7 @@
       </file>
     </package>
     <package name="src.apis.wallet">
-      <metrics statements="254" coveredstatements="254" conditionals="68" coveredconditionals="68" methods="54" coveredmethods="43"/>
+      <metrics statements="240" coveredstatements="240" conditionals="68" coveredconditionals="68" methods="44" coveredmethods="40"/>
       <file name="api.ts" path="/home/alexxgrib/Projects/qiwi-api/src/apis/wallet/api.ts">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="6" type="stmt"/>
@@ -403,24 +388,7 @@
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
         <line num="1" count="6" type="stmt"/>
         <line num="12" count="6" type="stmt"/>
-        <line num="49" count="1" type="stmt"/>
-      </file>
-      <file name="index.ts" path="/home/alexxgrib/Projects/qiwi-api/src/apis/wallet/index.ts">
-        <metrics statements="14" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="3"/>
-        <line num="1" count="16" type="stmt"/>
-        <line num="2" count="6" type="stmt"/>
-        <line num="3" count="6" type="stmt"/>
-        <line num="4" count="6" type="stmt"/>
-        <line num="5" count="23" type="stmt"/>
-        <line num="7" count="6" type="stmt"/>
-        <line num="8" count="6" type="stmt"/>
-        <line num="9" count="6" type="stmt"/>
-        <line num="12" count="6" type="stmt"/>
-        <line num="13" count="6" type="stmt"/>
-        <line num="14" count="6" type="stmt"/>
-        <line num="16" count="6" type="stmt"/>
-        <line num="17" count="15" type="stmt"/>
-        <line num="20" count="6" type="stmt"/>
+        <line num="47" count="1" type="stmt"/>
       </file>
       <file name="limits.api.ts" path="/home/alexxgrib/Projects/qiwi-api/src/apis/wallet/limits.api.ts">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>

@@ -1,8 +1,8 @@
-[QIWI SDK](../README.md) / [Modules](../modules.md) / [index](../modules/index.md) / [QIWI](../modules/index.QIWI.md) / HttpClient
+[QIWI SDK](../README.md) / [Modules](../modules.md) / [shared](../modules/shared.md) / HttpClient
 
 # Interface: HttpClient<Rq, Rs\>
 
-[index](../modules/index.md).[QIWI](../modules/index.QIWI.md).HttpClient
+[shared](../modules/shared.md).HttpClient
 
 ## Type parameters
 
@@ -11,21 +11,15 @@
 | `Rq` | `any` |
 | `Rs` | `any` |
 
-## Implemented by
-
-- [`DefaultHttpClient`](../classes/index.QIWI.DefaultHttpClient.md)
-- [`DefaultHttpClient`](../classes/index.DefaultHttpClient.md)
-- [`DefaultHttpClient`](../classes/shared.DefaultHttpClient.md)
-
 ## Table of contents
 
 ### Properties
 
-- [options](index.QIWI.HttpClient.md#options)
+- [options](shared.HttpClient.md#options)
 
 ### Methods
 
-- [request](index.QIWI.HttpClient.md#request)
+- [request](shared.HttpClient.md#request)
 
 ## Properties
 

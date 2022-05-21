@@ -12,6 +12,7 @@
 - [ApiSubclass](../classes/index._internal_.ApiSubclass.md)
 - [DetectorApi](../classes/index._internal_.DetectorApi.md)
 - [DetectorDetectApi](../classes/index._internal_.DetectorDetectApi.md)
+- [ErrorWithCause](../classes/index._internal_.ErrorWithCause.md)
 - [ExtendedError](../classes/index._internal_.ExtendedError.md)
 - [OptionsWrapper](../classes/index._internal_.OptionsWrapper.md)
 - [OptionsWrapperWithGetter](../classes/index._internal_.OptionsWrapperWithGetter.md)

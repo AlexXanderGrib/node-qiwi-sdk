@@ -1,5 +1,5 @@
 // const { Wallet, P2p, BillPaySource, formatOffsetDate } = require("qiwi-sdk");
-const { Wallet, P2p, BillPaySource, formatOffsetDate } = require("..");
+const { Wallet, P2p, formatOffsetDate } = require("..");
 
 const wallet = Wallet.create(process.env.QIWI_TOKEN);
 
@@ -19,7 +19,7 @@ async function main() {
     },
     expirationDateTime: formatOffsetDate(2, "day"),
     comment: "Создание сайта",
-    paySource: BillPaySource.Card,
+    paySource: P2p.BillPaySource.Card,
     successUrl: "https://youtu.be/dQw4w9WgXcQ"
   });
 

@@ -9,4 +9,5 @@
 - [detector](modules/detector.md)
 - [index](modules/index.md)
 - [p2p](modules/p2p.md)
+- [shared](modules/shared.md)
 - [wallet](modules/wallet.md)

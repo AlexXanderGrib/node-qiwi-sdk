@@ -10,7 +10,7 @@
 
 ## Hierarchy
 
-- `Error`
+- [`ErrorWithCause`](index._internal_.ErrorWithCause.md)
 
   ↳ **`ExtendedError`**
 
@@ -36,6 +36,8 @@
 
 ### Properties
 
+- [cause](index._internal_.ExtendedError.md#cause)
+- [message](index._internal_.ExtendedError.md#message)
 - [name](index._internal_.ExtendedError.md#name)
 
 ### Accessors
@@ -50,40 +52,56 @@
 
 ### constructor
 
-• **new ExtendedError**(`message?`)
+• **new ExtendedError**(`message`, `cause?`)
+
+Creates an instance of ErrorWithCause.
+
+**`memberof`** ErrorWithCause
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `message?` | `string` |
+| `message` | `string` |
+| `cause?` | `Error` |
 
 #### Inherited from
 
-Error.constructor
+[ErrorWithCause](index._internal_.ErrorWithCause.md).[constructor](index._internal_.ErrorWithCause.md#constructor)
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1028
-
-• **new ExtendedError**(`message?`, `options?`)
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `message?` | `string` |
-| `options?` | `ErrorOptions` |
-
-#### Inherited from
-
-Error.constructor
-
-#### Defined in
-
-node_modules/typescript/lib/lib.es2022.error.d.ts:30
+dist/cjs/apis/error.d.ts:16
 
 ## Properties
+
+### cause
+
+• `Optional` **cause**: `Error`
+
+#### Inherited from
+
+[ErrorWithCause](index._internal_.ErrorWithCause.md).[cause](index._internal_.ErrorWithCause.md#cause)
+
+#### Defined in
+
+dist/cjs/apis/error.d.ts:9
+
+___
+
+### message
+
+• **message**: `string`
+
+#### Inherited from
+
+[ErrorWithCause](index._internal_.ErrorWithCause.md).[message](index._internal_.ErrorWithCause.md#message)
+
+#### Defined in
+
+dist/cjs/apis/error.d.ts:8
+
+___
 
 ### name
 
@@ -91,11 +109,11 @@ node_modules/typescript/lib/lib.es2022.error.d.ts:30
 
 #### Overrides
 
-Error.name
+ErrorWithCause.name
 
 #### Defined in
 
-dist/cjs/apis/error.d.ts:9
+dist/cjs/apis/error.d.ts:26
 
 ## Accessors
 
@@ -113,7 +131,7 @@ dist/cjs/apis/error.d.ts:9
 
 #### Defined in
 
-dist/cjs/apis/error.d.ts:24
+dist/cjs/apis/error.d.ts:41
 
 ## Methods
 
@@ -131,4 +149,4 @@ dist/cjs/apis/error.d.ts:24
 
 #### Defined in
 
-dist/cjs/apis/error.d.ts:16
+dist/cjs/apis/error.d.ts:33

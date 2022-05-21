@@ -1,3 +1,10 @@
+type AnyRecord = Record<string, unknown>;
+
+export function getOwnProperty<O extends AnyRecord, K extends keyof O>(
+  object: O,
+  key: K
+): O[K];
+
 /**
  * Безопасно получает свойство объекта
  *
@@ -7,13 +14,10 @@
  * @param {string} key
  * @return {T|undefined}  {(T | undefined)}
  */
-export function getOwnProperty<O extends Record<string, unknown>, K extends keyof O>(
-  object: O,
-  key: K
-): O[K] {
+export function getOwnProperty(object: AnyRecord, key: string): unknown | undefined {
   const keys = Object.keys(object);
 
-  if (!keys.includes(key as string)) return undefined as O[K];
+  if (!keys.includes(key as string)) return undefined;
 
   return Reflect.get(object, key);
 }

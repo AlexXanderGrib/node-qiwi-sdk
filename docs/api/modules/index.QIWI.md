@@ -1647,7 +1647,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.errors.d.ts:29
+dist/cjs/apis/wallet/wallet.errors.d.ts:30
 
 ___
 

@@ -20,7 +20,9 @@
 
 ### Properties
 
+- [cause](index.QIWI.WalletApiError.md#cause)
 - [dateTime](index.QIWI.WalletApiError.md#datetime)
+- [message](index.QIWI.WalletApiError.md#message)
 - [name](index.QIWI.WalletApiError.md#name)
 - [response](index.QIWI.WalletApiError.md#response)
 - [serviceName](index.QIWI.WalletApiError.md#servicename)
@@ -37,7 +39,7 @@
 
 ### constructor
 
-• **new WalletApiError**(`response`)
+• **new WalletApiError**(`response`, `cause`)
 
 Creates an instance of WalletApiError.
 
@@ -48,6 +50,7 @@ Creates an instance of WalletApiError.
 | Name | Type |
 | :------ | :------ |
 | `response` | [`WalletApiErrorResponse`](../modules/index.QIWI.md#walletapierrorresponse) |
+| `cause` | [`HttpError`](index.QIWI.HttpError.md)<`any`, `any`\> |
 
 #### Overrides
 
@@ -55,9 +58,23 @@ Creates an instance of WalletApiError.
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.errors.d.ts:27
+dist/cjs/apis/wallet/wallet.errors.d.ts:28
 
 ## Properties
+
+### cause
+
+• `Optional` **cause**: `Error`
+
+#### Inherited from
+
+[ExtendedError](index._internal_.ExtendedError.md).[cause](index._internal_.ExtendedError.md#cause)
+
+#### Defined in
+
+dist/cjs/apis/error.d.ts:9
+
+___
 
 ### dateTime
 
@@ -66,6 +83,20 @@ dist/cjs/apis/wallet/wallet.errors.d.ts:27
 #### Defined in
 
 dist/cjs/apis/wallet/wallet.errors.d.ts:20
+
+___
+
+### message
+
+• **message**: `string`
+
+#### Inherited from
+
+[ExtendedError](index._internal_.ExtendedError.md).[message](index._internal_.ExtendedError.md#message)
+
+#### Defined in
+
+dist/cjs/apis/error.d.ts:8
 
 ___
 
@@ -79,7 +110,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/error.d.ts:9
+dist/cjs/apis/error.d.ts:26
 
 ___
 
@@ -117,11 +148,11 @@ dist/cjs/apis/wallet/wallet.errors.d.ts:21
 
 #### Inherited from
 
-ExtendedError.\_\_@toStringTag@404
+ExtendedError.\_\_@toStringTag@407
 
 #### Defined in
 
-dist/cjs/apis/error.d.ts:24
+dist/cjs/apis/error.d.ts:41
 
 ## Methods
 
@@ -143,4 +174,4 @@ dist/cjs/apis/error.d.ts:24
 
 #### Defined in
 
-dist/cjs/apis/error.d.ts:16
+dist/cjs/apis/error.d.ts:33

@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 export { Wallet } from "./wallet";
 export {
   _WalletCompat,

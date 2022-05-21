@@ -17,7 +17,7 @@ function loadEnvironment<T extends string[]>(
   baseEnvironment: Environment,
   ...keys: T
 ): Environment<T[number], string> {
-  const environment = {} as Environment<string, string>;
+  const environment = Object.create(null) as Environment<string, string>;
 
   for (const key of keys) {
     Object.defineProperty(environment, key, {

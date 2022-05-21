@@ -1,11 +1,29 @@
 /**
+ *
+ *
+ * @class ErrorWithCause
+ * @extends {Error}
+ */
+export class ErrorWithCause extends Error {
+  /**
+   * Creates an instance of ErrorWithCause.
+   * @param {string} message
+   * @param {Error} [cause]
+   * @memberof ErrorWithCause
+   */
+  constructor(public message: string, public cause?: Error) {
+    super(message, { cause });
+  }
+}
+
+/**
  * Ошибка, которую можно преобразовать в JSON
  *
  * @export
  * @class ExtendedError
  * @extends {Error}
  */
-export class ExtendedError extends Error {
+export class ExtendedError extends ErrorWithCause {
   name = this.constructor.name;
 
   /**

@@ -22,6 +22,8 @@
 
   ↳↳ [`DefaultHttpClient`](index.DefaultHttpClient.md)
 
+  ↳↳ [`DefaultHttpClient`](shared.DefaultHttpClient.md)
+
 ## Table of contents
 
 ### Constructors

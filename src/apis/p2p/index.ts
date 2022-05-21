@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 export { P2p } from "./p2p";
 export type { P2pApiOptions } from "./p2p.options";
 export {

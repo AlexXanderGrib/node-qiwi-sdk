@@ -13,7 +13,7 @@ const sleep = promisify(setTimeout);
 /** ... */
 
 bot.hears("оплатить", (ctx) => {
-  wallet.payments.createFormUrl(Personal.Recipients.QIWI, {
+  wallet.payments.createFormUrl(Wallet.Recipients.QIWI, {
     // Можно не указывать. Подставляется текущий номер телефона
     // по умолчанию если ID провайдера - 99 (QIWI)
     // account: process.env.QIWI_WALLET
@@ -33,7 +33,7 @@ async function checkPayments() {
   // Начинаем проверять список транзакций каждые 60 секунд
   while (true) {
     const { data } = await wallet.paymentHistory.getHistory({
-      operation: Personal.TransactionType.IN,
+      operation: Wallet.TransactionType.IN,
       rows: 30
     });
 

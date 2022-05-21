@@ -144,7 +144,7 @@ dist/cjs/apis/wallet/api.d.ts:17
 
 #### Defined in
 
-dist/cjs/apis/wallet/identification.api.d.ts:38
+dist/cjs/apis/wallet/identification.api.d.ts:36
 
 ___
 
@@ -175,4 +175,4 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/identification.api.d.ts:25
+dist/cjs/apis/wallet/identification.api.d.ts:24

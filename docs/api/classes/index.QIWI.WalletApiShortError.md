@@ -20,7 +20,9 @@
 
 ### Properties
 
+- [cause](index.QIWI.WalletApiShortError.md#cause)
 - [code](index.QIWI.WalletApiShortError.md#code)
+- [message](index.QIWI.WalletApiShortError.md#message)
 - [name](index.QIWI.WalletApiShortError.md#name)
 - [response](index.QIWI.WalletApiShortError.md#response)
 
@@ -36,7 +38,7 @@
 
 ### constructor
 
-• **new WalletApiShortError**(`response`)
+• **new WalletApiShortError**(`response`, `cause?`)
 
 Creates an instance of WalletApiShortError.
 
@@ -47,6 +49,7 @@ Creates an instance of WalletApiShortError.
 | Name | Type |
 | :------ | :------ |
 | `response` | [`WalletApiShortErrorResponse`](../modules/index.QIWI.md#walletapishorterrorresponse) |
+| `cause?` | [`HttpError`](index.QIWI.HttpError.md)<`any`, `any`\> |
 
 #### Overrides
 
@@ -54,9 +57,23 @@ Creates an instance of WalletApiShortError.
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.errors.d.ts:48
+dist/cjs/apis/wallet/wallet.errors.d.ts:50
 
 ## Properties
+
+### cause
+
+• `Optional` **cause**: `Error`
+
+#### Inherited from
+
+[ExtendedError](index._internal_.ExtendedError.md).[cause](index._internal_.ExtendedError.md#cause)
+
+#### Defined in
+
+dist/cjs/apis/error.d.ts:9
+
+___
 
 ### code
 
@@ -64,7 +81,21 @@ dist/cjs/apis/wallet/wallet.errors.d.ts:48
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.errors.d.ts:42
+dist/cjs/apis/wallet/wallet.errors.d.ts:43
+
+___
+
+### message
+
+• **message**: `string`
+
+#### Inherited from
+
+[ExtendedError](index._internal_.ExtendedError.md).[message](index._internal_.ExtendedError.md#message)
+
+#### Defined in
+
+dist/cjs/apis/error.d.ts:8
 
 ___
 
@@ -78,7 +109,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/error.d.ts:9
+dist/cjs/apis/error.d.ts:26
 
 ___
 
@@ -88,7 +119,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.errors.d.ts:41
+dist/cjs/apis/wallet/wallet.errors.d.ts:42
 
 ## Accessors
 
@@ -106,11 +137,11 @@ dist/cjs/apis/wallet/wallet.errors.d.ts:41
 
 #### Inherited from
 
-ExtendedError.\_\_@toStringTag@404
+ExtendedError.\_\_@toStringTag@407
 
 #### Defined in
 
-dist/cjs/apis/error.d.ts:24
+dist/cjs/apis/error.d.ts:41
 
 ## Methods
 
@@ -132,4 +163,4 @@ dist/cjs/apis/error.d.ts:24
 
 #### Defined in
 
-dist/cjs/apis/error.d.ts:16
+dist/cjs/apis/error.d.ts:33
