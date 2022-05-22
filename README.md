@@ -252,6 +252,8 @@ Language: [Русский](./README.ru.md) | **English**
 
 Distributed under the MIT License. See [LICENSE.txt](./LICENSE.txt) for more information.
 
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FAlexXanderGrib%2Fnode-qiwi-sdk.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FAlexXanderGrib%2Fnode-qiwi-sdk?ref=badge_large)
+
 ### Project Goals
 
 - [ ] Cover all [APIs](https://developer.qiwi.com/) (both for persons & legal entities)

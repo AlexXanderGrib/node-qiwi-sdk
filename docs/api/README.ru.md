@@ -234,7 +234,9 @@ app.use((error, req, res, next) => {
 
 ### Лицензия
 
-Проект распространяется под лицензией [**MIT**](./LICENSE.txt)
+Проект распространяется под лицензией MIT. Смотрите [LICENSE.txt](./LICENSE.txt)
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FAlexXanderGrib%2Fnode-qiwi-sdk.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FAlexXanderGrib%2Fnode-qiwi-sdk?ref=badge_large)
 
 ### Цели проекта
 
