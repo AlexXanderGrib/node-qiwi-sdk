@@ -1,5 +1,5 @@
 /* istanbul ignore file */
-import { formatQuerystring, generateUUID } from "../shared";
+import { generateUUID, url } from "../shared";
 import { WalletApi } from "./api";
 import type {
   CardResponse,
@@ -30,9 +30,9 @@ export class WalletCardsApi extends WalletApi {
    */
   async get({ onlyQiwiMaster = false } = {}): Promise<CardResponse[]> {
     return await this.http.get(
-      `cards/v1/cards?${formatQuerystring({
+      url`cards/v1/cards`({
         "vas-alias": onlyQiwiMaster ? "qvc-master" : undefined
-      })}`
+      })
     );
   }
 
@@ -46,7 +46,9 @@ export class WalletCardsApi extends WalletApi {
    * @memberof WalletCardsApi
    */
   async block(cardId: StringOrNumber): Promise<void> {
-    await this.http.put(`cards/v2/persons/${this.walletId}/cards/${cardId}/block`);
+    await this.http.put(
+      url`cards/v2/persons/${this.walletId}/cards/${cardId}/block`()
+    );
   }
 
   /**
@@ -62,7 +64,7 @@ export class WalletCardsApi extends WalletApi {
    */
   async unblock(cardId: StringOrNumber): Promise<CardUnblockResponse> {
     return await this.http.put(
-      `cards/v2/persons/${this.walletId}/cards/${cardId}/unblock`
+      url`cards/v2/persons/${this.walletId}/cards/${cardId}/unblock`()
     );
   }
 
@@ -78,7 +80,7 @@ export class WalletCardsApi extends WalletApi {
    * @memberof WalletCardsApi
    */
   async getRequisites(cardId: StringOrNumber): Promise<CardRequisitesResponse> {
-    return await this.http.put(`cards/v1/cards/${cardId}/details`, {
+    return await this.http.put(url`cards/v1/cards/${cardId}/details`(), {
       operationId: generateUUID()
     });
   }
@@ -96,6 +98,6 @@ export class WalletCardsApi extends WalletApi {
    * @memberof WalletCardsApi
    */
   async rename(cardId: StringOrNumber, alias: string): Promise<CardRenameResponse> {
-    return await this.http.put(`cards/v1/cards/${cardId}/alias`, { alias });
+    return await this.http.put(url`cards/v1/cards/${cardId}/alias`(), { alias });
   }
 }

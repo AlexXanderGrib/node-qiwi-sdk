@@ -1,3 +1,4 @@
+import { url } from "../shared";
 import { WalletApi } from "./api";
 import type { IdentificationBase, IdentificationResponse } from "./wallet.types";
 
@@ -27,7 +28,7 @@ export class WalletIdentificationApi extends WalletApi {
     // Он не может быть вызван много раз
     /* istanbul ignore next */
     return await this.http.post(
-      `identification/v1/persons/${this.walletId}/identification`,
+      url`identification/v1/persons/${this.walletId}/identification`(),
       data
     );
   }
@@ -45,7 +46,7 @@ export class WalletIdentificationApi extends WalletApi {
    */
   async get(): Promise<IdentificationResponse> {
     return await this.http.get(
-      `identification/v1/persons/${this.walletId}/identification`
+      url`identification/v1/persons/${this.walletId}/identification`()
     );
   }
 }

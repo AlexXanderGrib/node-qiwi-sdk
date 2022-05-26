@@ -1,5 +1,5 @@
 import { Detector, DetectorError } from "../detector";
-import { formatQuerystring } from "../shared";
+import { url } from "../shared";
 import { WalletApi } from "./api";
 import {
   Recipients,
@@ -43,7 +43,7 @@ export class WalletPaymentsApi extends WalletApi {
     { accountCurrency = Currency.RUB, paymentCurrency = Currency.RUB } = {}
   ): Promise<number> {
     const response: any = await this.http.post(
-      `sinap/providers/${provider}/onlineCommission`,
+      url`sinap/providers/${provider}/onlineCommission`(),
       {
         account,
         paymentMethod: {
@@ -73,7 +73,6 @@ export class WalletPaymentsApi extends WalletApi {
    */
   static createFormUrl(
     provider: number | Recipients,
-    /* istanbul ignore next */
     options: FormUrlOptions = {}
   ): string {
     const data = {
@@ -89,12 +88,11 @@ export class WalletPaymentsApi extends WalletApi {
     if (options.comment) data["extra['comment']"] = options.comment;
     if (options.account) data["extra['account']"] = options.account;
 
-    /* istanbul ignore next */
     if (options.accountType) data["extra['accountType']"] = options.accountType;
 
     if (options.blocked) data.blocked = options.blocked;
 
-    return `https://qiwi.com/payment/form/${provider}?${formatQuerystring(data)}`;
+    return url`https://qiwi.com/payment/form/${provider}`(data);
   }
 
   /**
@@ -107,11 +105,9 @@ export class WalletPaymentsApi extends WalletApi {
    */
   createFormUrl(
     provider: number | Recipients,
-
-    /* istanbul ignore next */
     options: FormUrlOptions = {}
   ): string {
-    let account = options.account;
+    let { account } = options;
 
     if (account === undefined && provider === Recipients.QIWI) {
       account = this.walletId.toString();
@@ -138,7 +134,7 @@ export class WalletPaymentsApi extends WalletApi {
     fields = {},
     accountCurrency = Currency.RUB
   }: PayParameters): Promise<PaymentResponse> {
-    return await this.http.post(`sinap/api/v2/terms/${provider}/payments`, {
+    return await this.http.post(url`sinap/api/v2/terms/${provider}/payments`(), {
       id: (Date.now() * 1000).toString(),
       sum: {
         amount,
@@ -249,7 +245,7 @@ export class WalletPaymentsApi extends WalletApi {
    * @memberof WalletPaymentsApi
    */
   async getRates(): Promise<Rate[]> {
-    const { result: rates } = await this.http.get<any>("sinap/crossRates");
+    const { result: rates } = await this.http.get<any>(url`sinap/crossRates`());
 
     return rates.map((data: any) => ({
       from: Number.parseInt(data.from),

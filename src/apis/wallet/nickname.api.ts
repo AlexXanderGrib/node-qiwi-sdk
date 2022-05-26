@@ -1,3 +1,4 @@
+import { url } from "../shared";
 import { WalletApi } from "./api";
 import type { NicknameData } from "./wallet.types";
 
@@ -19,6 +20,8 @@ export class WalletNicknameApi extends WalletApi {
    * @memberof WalletNicknameApi
    */
   async getCurrent(): Promise<NicknameData> {
-    return await this.http.get(`qw-nicknames/v1/persons/${this.walletId}/nickname`);
+    return await this.http.get(
+      url`qw-nicknames/v1/persons/${this.walletId}/nickname`()
+    );
   }
 }

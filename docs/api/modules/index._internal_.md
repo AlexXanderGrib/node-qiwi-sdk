@@ -48,6 +48,7 @@
 - [MiddlewareOptions](index._internal_.md#middlewareoptions)
 - [NameValueObject](index._internal_.md#namevalueobject)
 - [SetupHttp](index._internal_.md#setuphttp)
+- [URLResult](index._internal_.md#urlresult)
 
 ## Type aliases
 
@@ -190,3 +191,27 @@ nothing
 #### Defined in
 
 dist/cjs/apis/wallet/wallet.d.ts:22
+
+___
+
+### URLResult
+
+Ƭ **URLResult**: (`queryParameters?`: [`ReadonlyRecord`](index.QIWI.md#readonlyrecord)<`string`, `unknown`\>) => `string`
+
+#### Type declaration
+
+▸ (`queryParameters?`): `string`
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `queryParameters?` | [`ReadonlyRecord`](index.QIWI.md#readonlyrecord)<`string`, `unknown`\> |
+
+##### Returns
+
+`string`
+
+#### Defined in
+
+dist/cjs/apis/shared/url.d.ts:2

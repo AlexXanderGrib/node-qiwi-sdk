@@ -1,4 +1,4 @@
-import { formatQuerystring } from "../shared";
+import { url } from "../shared";
 import { WalletApi } from "./api";
 import {
   GetPaymentHistoryParameters as GetPaymentHistoryParameters,
@@ -37,9 +37,7 @@ export class WalletPaymentHistoryApi extends WalletApi {
     parameters: GetPaymentHistoryParameters
   ): Promise<GetTransactionsHistoryResponse> {
     return await this.http.get(
-      `payment-history/v2/persons/${this.walletId}/payments?${formatQuerystring(
-        parameters
-      )}`
+      url`payment-history/v2/persons/${this.walletId}/payments`(parameters)
     );
   }
   /**
@@ -58,9 +56,7 @@ export class WalletPaymentHistoryApi extends WalletApi {
     parameters: GetPaymentHistoryTotalParameters
   ): Promise<GetPaymentHistoryTotalResponse> {
     return await this.http.get(
-      `payment-history/v2/persons/${
-        this.walletId
-      }/payments/total?${formatQuerystring(parameters)}`
+      url`payment-history/v2/persons/${this.walletId}/payments/total`(parameters)
     );
   }
   /**
@@ -79,9 +75,7 @@ export class WalletPaymentHistoryApi extends WalletApi {
     type?: TransactionTypeAny
   ): Promise<Transaction> {
     return await this.http.get(
-      `payment-history/v2/transactions/${transactionId}?${formatQuerystring({
-        type
-      })}`
+      url`payment-history/v2/transactions/${transactionId}`({ type })
     );
   }
 
@@ -100,12 +94,10 @@ export class WalletPaymentHistoryApi extends WalletApi {
     format: ChequeFormat = ChequeFormat.JPEG
   ): Promise<Buffer> {
     return await this.http.request({
-      url: `payment-history/v1/transactions/${transactionId}/cheque/file?${formatQuerystring(
-        {
-          type,
-          format
-        }
-      )}`,
+      url: url`payment-history/v1/transactions/${transactionId}/cheque/file`({
+        type,
+        format
+      }),
       method: "GET",
       parseResponse: (body) => body
     });
@@ -129,11 +121,7 @@ export class WalletPaymentHistoryApi extends WalletApi {
     // несколько раз подряд, что требуется для тестов
     /* istanbul ignore next */
     await this.http.post(
-      `payment-history/v2/transactions/${transactionId}/cheque/send?${formatQuerystring(
-        {
-          type
-        }
-      )}`,
+      url`payment-history/v2/transactions/${transactionId}/cheque/send`({ type }),
       { email }
     );
   }

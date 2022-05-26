@@ -1,5 +1,5 @@
 /* istanbul ignore file */
-import { compareHmac, formatQuerystring } from "../shared";
+import { compareHmac, url } from "../shared";
 import { getOwnPropertyDeep } from "../shared/get";
 import { WalletApi } from "./api";
 import type { WebHookInfo, WebhookTransaction } from "./wallet.types";
@@ -55,11 +55,11 @@ export class WalletWebhooksApi extends WalletApi {
    */
   async add(parameter: string, txnType: 0 | 1 | 2): Promise<WebHookInfo> {
     const hookResponse = await this.http.put<WebHookInfo>(
-      `payment-notifier/v1/hooks?${formatQuerystring({
+      url`payment-notifier/v1/hooks`({
         hookType: 1,
         param: parameter,
         txnType
-      })}`
+      })
     );
     this.activeId = hookResponse.hookId;
     return hookResponse;
@@ -74,7 +74,7 @@ export class WalletWebhooksApi extends WalletApi {
     this.keys.delete(hookId);
     this.activeId = undefined;
     return this.http.delete<{ response: "Hook deleted" }>(
-      `payment-notifier/v1/hooks/${hookId}`
+      url`payment-notifier/v1/hooks/${hookId}`()
     );
   }
 
@@ -85,7 +85,7 @@ export class WalletWebhooksApi extends WalletApi {
    */
   async getSecret(hookId = this._getDefaultHookId()): Promise<string> {
     const { key } = await this.http.get<{ key: string }>(
-      `payment-notifier/v1/hooks/${hookId}/key`
+      url`payment-notifier/v1/hooks/${hookId}/key`()
     );
     this.keys.set(hookId, key);
     return key;
@@ -98,7 +98,7 @@ export class WalletWebhooksApi extends WalletApi {
    */
   async updateSecret(hookId = this._getDefaultHookId()): Promise<string> {
     const { key } = await this.http.post<{ key: string }>(
-      `payment-notifier/v1/hooks/${hookId}/newkey`
+      url`payment-notifier/v1/hooks/${hookId}/newkey`()
     );
     this.keys.set(hookId, key);
     return key;
@@ -110,7 +110,7 @@ export class WalletWebhooksApi extends WalletApi {
    */
   async getActiveWebhook(): Promise<WebHookInfo> {
     const hookResponse = await this.http.get<WebHookInfo>(
-      "payment-notifier/v1/hooks/active"
+      url`payment-notifier/v1/hooks/active`()
     );
     this.activeId = hookResponse.hookId;
     return hookResponse;
@@ -124,7 +124,7 @@ export class WalletWebhooksApi extends WalletApi {
    */
   testActiveWebhook(): Promise<any> {
     return this.http.get<{ response: "Webhook sent" }>(
-      "payment-notifier/v1/hooks/test"
+      url`payment-notifier/v1/hooks/test`()
     );
   }
 

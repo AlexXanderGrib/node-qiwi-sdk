@@ -85,6 +85,9 @@ describe(P2P.name, () => {
     expect(url).toContain("paySource=qw");
     expect(url).toContain("successUrl");
     expect(url).toContain("example.com");
+
+    const url2 = P2P.patchPayUrl(url);
+    expect(url2).toBe(url);
   });
 
   test("[v3] Can create bill", async () => {
@@ -143,6 +146,16 @@ describe(P2P.name, () => {
 
     expect(url).toContain(`${encodeURIComponent("customFields[a]")}=b`);
     expect(url).toContain("amount=100.02");
+  });
+
+  test("Bill form url [options]", () => {
+    const billId = generateUUID();
+    const url = qiwi.createBillFormUrl({
+      amount: 10,
+      billId
+    });
+
+    expect(url).toContain(billId);
   });
 
   describe("Middleware", () => {

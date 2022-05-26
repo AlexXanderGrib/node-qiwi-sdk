@@ -392,4 +392,17 @@ describe(Personal.name, () => {
 
     expect(oauth.client).toBeInstanceOf(Personal);
   });
+
+  test("Create form URL ", () => {
+    let formUrl = Personal.PaymentsApi.createFormUrl(99_999, {
+      accountType: "nickname"
+    });
+    expect(formUrl).toContain("nickname");
+
+    formUrl = Personal.PaymentsApi.createFormUrl(99);
+    expect(formUrl).toContain("/99");
+
+    formUrl = qiwi.payments.createFormUrl(99);
+    expect(formUrl).toContain("/99");
+  });
 });

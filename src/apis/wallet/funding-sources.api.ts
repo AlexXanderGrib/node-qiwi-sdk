@@ -1,3 +1,4 @@
+import { url } from "../shared";
 import { WalletApi } from "./api";
 import type { GetAccountsResponse, GetAccountOffersResponse } from "./wallet.types";
 
@@ -22,7 +23,7 @@ export class WalletFundingSourcesApi extends WalletApi {
    */
   async getAccounts(): Promise<GetAccountsResponse["accounts"]> {
     const { accounts } = await this.http.get(
-      `funding-sources/v2/persons/${this.walletId}/accounts`
+      url`funding-sources/v2/persons/${this.walletId}/accounts`()
     );
 
     return accounts;
@@ -43,9 +44,10 @@ export class WalletFundingSourcesApi extends WalletApi {
   async createAccount(alias: string): Promise<void> {
     // Деструктивный метод
     /* istanbul ignore next */
-    await this.http.post(`funding-sources/v2/persons/${this.walletId}/accounts`, {
-      alias
-    });
+    await this.http.post(
+      url`funding-sources/v2/persons/${this.walletId}/accounts`(),
+      { alias }
+    );
   }
 
   /**
@@ -61,7 +63,7 @@ export class WalletFundingSourcesApi extends WalletApi {
    */
   async getAccountOffers(): Promise<GetAccountOffersResponse> {
     return await this.http.get(
-      `funding-sources/v2/persons/${this.walletId}/accounts/offer`
+      url`funding-sources/v2/persons/${this.walletId}/accounts/offer`()
     );
   }
 
@@ -82,7 +84,7 @@ export class WalletFundingSourcesApi extends WalletApi {
     // Деструктивный метод
     /* istanbul ignore next */
     return await this.http.patch(
-      `funding-sources/v2/persons/${this.walletId}/accounts/${alias}`,
+      url`funding-sources/v2/persons/${this.walletId}/accounts/${alias}`(),
       { defaultAccount: true }
     );
   }

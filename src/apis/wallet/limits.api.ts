@@ -1,4 +1,4 @@
-import { formatQuerystring } from "../shared";
+import { url } from "../shared";
 import { WalletApi } from "./api";
 import type { LimitsResponse, LimitTypeAny } from "./wallet.types";
 
@@ -29,9 +29,9 @@ export class WalletLimitsApi extends WalletApi {
     limits: Limits
   ): Promise<LimitsResponse<Limits[number]>> {
     return await this.http.get(
-      `qw-limits/v1/persons/${this.walletId}/actual-limits?${formatQuerystring({
+      url`qw-limits/v1/persons/${this.walletId}/actual-limits`({
         types: limits
-      })}`
+      })
     );
   }
 }

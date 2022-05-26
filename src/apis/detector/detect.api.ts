@@ -1,4 +1,4 @@
-import type { AnyResponse } from "../shared";
+import { AnyResponse, url } from "../shared";
 import { DetectorApi } from "./api";
 import { DetectorError } from "./detector.errors";
 
@@ -30,7 +30,9 @@ export class DetectorDetectApi extends DetectorApi {
    * @param {string} phone
    */
   async byPhone(phone: string): Promise<number> {
-    const response = await this.http.post<any>("mobile/detect.action", { phone });
+    const response = await this.http.post<any>(url`mobile/detect.action`(), {
+      phone
+    });
 
     return this._extractProvider(response);
   }
@@ -45,7 +47,9 @@ export class DetectorDetectApi extends DetectorApi {
    * Советую использовать константу `Recipients.AnyRusCard` вместо вызова метода.
    */
   async byCardNumber(cardNumber: string): Promise<number> {
-    const response = await this.http.post<any>("card/detect.action", { cardNumber });
+    const response = await this.http.post<any>(url`card/detect.action`(), {
+      cardNumber
+    });
 
     return this._extractProvider(response);
   }

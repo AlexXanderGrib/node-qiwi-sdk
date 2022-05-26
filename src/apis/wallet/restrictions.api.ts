@@ -1,3 +1,4 @@
+import { url } from "../shared";
 import { WalletApi } from "./api";
 import type { Restrictions } from "./wallet.types";
 
@@ -23,7 +24,7 @@ export class WalletRestrictionsApi extends WalletApi {
    */
   async get(): Promise<Restrictions> {
     return await this.http.get(
-      `person-profile/v1/persons/${this.walletId}/status/restrictions`
+      url`person-profile/v1/persons/${this.walletId}/status/restrictions`()
     );
   }
 }

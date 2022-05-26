@@ -116,7 +116,7 @@ export function createP2pNotificationMiddleware(
 
     const { bill } = notification;
 
-    if (!bills.checkNotificationSignature(signature, bill)) {
+    if (!bills.checkNotificationSignature(signature, notification)) {
       return next(new P2pBillNotificationError(bill));
     }
 

@@ -47,6 +47,7 @@
 - [formatQuerystring](shared.md#formatquerystring)
 - [generateUUID](shared.md#generateuuid)
 - [parseQuerystring](shared.md#parsequerystring)
+- [url](shared.md#url)
 
 ## Type aliases
 
@@ -341,3 +342,26 @@ ___
 #### Defined in
 
 dist/cjs/apis/shared/querystring.d.ts:7
+
+___
+
+### url
+
+▸ **url**(`parts`, ...`insertions`): [`URLResult`](index._internal_.md#urlresult)
+
+**`export`**
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `parts` | `TemplateStringsArray` |
+| `...insertions` | `unknown`[] |
+
+#### Returns
+
+[`URLResult`](index._internal_.md#urlresult)
+
+#### Defined in
+
+dist/cjs/apis/shared/url.d.ts:11

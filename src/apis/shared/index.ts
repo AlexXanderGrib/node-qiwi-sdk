@@ -7,3 +7,4 @@ export * from "./hmac";
 export * from "./environment";
 export * from "./http";
 export * from "./identity";
+export * from "./url";

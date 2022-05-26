@@ -1,6 +1,6 @@
 {
   "name": "qiwi-sdk",
-  "version": "3.6.11",
+  "version": "3.6.12",
   "description": "⭐ Typed QIWI Wallet SDK. Supported API's: Personal & P2P Bill Payments",
   "keywords": [
     "qiwi",
