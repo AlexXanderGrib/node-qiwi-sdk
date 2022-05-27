@@ -26,12 +26,12 @@ app.get("/success", (req, res) => {
 
 app.post(
   "/webhook/qiwi",
-  p2p.notificationMiddleware({}, (req, res) => {
+  p2p.notificationMiddleware({}, (req) => {
     req.body; // BillStatusData
   })
 );
 
-app.use((error, req, res, next) => {
+app.use((error, _req, _res, next) => {
   if (error instanceof P2PNotificationError) {
     console.log(error); // Кто-то отправил невалидное уведомление
   }

@@ -19,18 +19,18 @@ app.get("/pay", async (_req, res) => {
   res.redirect(bill.payUrl);
 });
 
-app.get("/success", (req, res) => {
+app.get("/success", (_req, res) => {
   res.end("Спасибо за покупку!");
 });
 
 app.post(
   "/webhook/qiwi",
-  p2p.notificationMiddleware({}, (req, res) => {
+  p2p.notificationMiddleware({}, (req) => {
     req.body; // BillStatusData
   })
 );
 
-app.use((error, req, res, next) => {
+app.use((error, _req, _res, next) => {
   if (error instanceof P2pBillNotificationError) {
     console.log(error); // Кто-то отправил невалидное уведомление
   }
