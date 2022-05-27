@@ -34,3 +34,5 @@ async function checkBalance(token) {
 
   return defaultAccount.balance;
 }
+
+checkBalance("");

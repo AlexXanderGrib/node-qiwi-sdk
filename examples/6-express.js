@@ -8,7 +8,7 @@ const p2p = new P2p({
 });
 const port = parseInt(process.env.PORT, 10) || 3000;
 
-app.get("/pay", async (req, res) => {
+app.get("/pay", async (_req, res) => {
   const bill = await p2p.bills.create({
     amount: { value: 10, currency: P2P.Currency.RUB },
     expirationDateTime: formatOffsetDate(15, "min"),
