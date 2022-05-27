@@ -6,7 +6,7 @@ const app = express();
 const p2p = new P2p({
   secretKey: process.env.QIWI_SECRET_KEY
 });
-const port = parseInt(process.env.PORT) || 3000;
+const port = parseInt(process.env.PORT, 10) || 3000;
 
 app.get("/pay", async (req, res) => {
   const bill = await p2p.bills.create({

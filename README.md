@@ -17,6 +17,7 @@
 [![npm](https://img.shields.io/npm/v/qiwi-sdk.svg)](https://npmjs.com/package/qiwi-sdk)
 [![license MIT](https://img.shields.io/npm/l/qiwi-sdk.svg)](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/main/LICENSE.txt)
 [![Size](https://img.shields.io/bundlephobia/minzip/qiwi-sdk)](https://bundlephobia.com/package/qiwi-sdk)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/79352d0de1de49b591b78acce5bd1900)](https://www.codacy.com/gh/AlexXanderGrib/node-qiwi-sdk/dashboard?utm_source=github.com&utm_medium=referral&utm_content=AlexXanderGrib/node-qiwi-sdk&utm_campaign=Badge_Grade)
 
 ## 👅 Язык
 

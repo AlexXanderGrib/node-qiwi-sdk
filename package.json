@@ -42,7 +42,8 @@
     "CHANGELOG.md",
     "CONTRIBUTING.md",
     "LICENSE.txt",
-    "SECURITY.md"
+    "SECURITY.md",
+    "CODE_OF_CONDUCT.md"
   ],
   "main": "./index.js",
   "module": "./index.mjs",

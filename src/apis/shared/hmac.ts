@@ -39,3 +39,22 @@ export function compareHmac({
 
   return timingSafeEqual(hash, parseBinaryAlike(digest));
 }
+
+const QIWI_JOINER = "|";
+
+/**
+ *
+ *
+ * @export
+ * @param {string} key
+ * @param {string} digest
+ * @param {string[]} data
+ * @return {boolean}  {boolean}
+ */
+export function compareQiwiHmac(
+  key: BinaryAlike,
+  digest: BinaryAlike,
+  data: string[]
+): boolean {
+  return compareHmac({ key, digest, data: data.join(QIWI_JOINER) });
+}

@@ -1,5 +1,5 @@
 import { URL } from "url";
-import { compareHmac, formatOffsetDate, generateUUID, url } from "../shared";
+import { compareQiwiHmac, formatOffsetDate, generateUUID, url } from "../shared";
 import { P2pApi } from "./api";
 import type {
   BillCreateParameters,
@@ -145,19 +145,13 @@ export class P2pBillsApi extends P2pApi {
   ): boolean {
     if ("bill" in body) body = body.bill;
 
-    const data = [
+    return compareQiwiHmac(merchantSecret, signature, [
       body.amount.currency,
-      body.amount.value,
+      body.amount.value.toString(),
       body.billId,
       body.siteId,
       body.status.value
-    ].join("|");
-
-    return compareHmac({
-      key: merchantSecret,
-      data,
-      digest: signature
-    });
+    ]);
   }
 
   /**

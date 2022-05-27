@@ -29,7 +29,12 @@ jobs:
           QIWI_SECRET_KEY: ${{ secrets.QIWI_PK }}
           QIWI_PUBLIC_KEY: ${{ secrets.QIWI_PUBK }}
 
-      - name: Upload coverage
+      - name: Upload coverage to Codecov
         run: npx codecov
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+
+      - name: Upload coverage to Codacy
+        run: bash <(curl -Ls https://coverage.codacy.com/get.sh)
+        with:
+          CODACY_PROJECT_TOKEN: ${{ secrets.CODACY_PROJECT_TOKEN }}

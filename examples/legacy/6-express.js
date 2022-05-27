@@ -4,7 +4,7 @@ const { P2P, P2PNotificationError } = require("..");
 const express = require("express");
 const app = express();
 const p2p = new P2P(process.env.QIWI_SECRET_KEY, process.env.QIWI_PUBLIC_KEY);
-const port = parseInt(process.env.PORT) || 3000;
+const port = parseInt(process.env.PORT, 10) || 3000;
 
 app.get("/pay", async (req, res) => {
   const bill = await p2p.createBill({

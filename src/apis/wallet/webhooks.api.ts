@@ -1,5 +1,5 @@
 /* istanbul ignore file */
-import { compareHmac, url } from "../shared";
+import { compareQiwiHmac, url } from "../shared";
 import { getOwnPropertyDeep } from "../shared/get";
 import { WalletApi } from "./api";
 import type { WebHookInfo, WebhookTransaction } from "./wallet.types";
@@ -146,13 +146,12 @@ export class WalletWebhooksApi extends WalletApi {
 
     const signPayload = payment.signFields
       .split(",")
-      .map((fieldName) => getOwnPropertyDeep(payment, fieldName) ?? "null")
-      .join("|");
+      .map((fieldName) => String(getOwnPropertyDeep(payment, fieldName) ?? "null"));
 
-    return compareHmac({
-      key: Buffer.from(this.keys.get(hookId) ?? "", "base64"),
-      data: signPayload,
-      digest: hash
-    });
+    return compareQiwiHmac(
+      Buffer.from(this.keys.get(hookId) ?? "", "base64"),
+      hash,
+      signPayload
+    );
   }
 }
