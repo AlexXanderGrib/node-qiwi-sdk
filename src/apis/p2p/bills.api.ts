@@ -1,15 +1,18 @@
-import { URL } from "url";
 import { compareQiwiHmac, formatOffsetDate, generateUUID, url } from "../shared";
 import { P2pApi } from "./api";
 import type {
   BillCreateParameters,
   BillFormParameters as BillFormParameters,
+  BillPaySourceAny,
   BillRefundStatusData,
   BillStatusBody,
   BillStatusData,
+  BillStatusNotificationBody,
   PayUrlPatchParameters,
   RefundCreationRequest
 } from "./p2p.types";
+
+declare const URL: typeof import("url").URL;
 
 /**
  * # P2P-счета
@@ -40,12 +43,29 @@ export class P2pBillsApi extends P2pApi {
   }
 
   /**
+   *
+   *
+   * @private
+   * @param {(BillPaySourceAny | BillPaySourceAny[])} paySourcesFilter
+   * @return {string}  {string}
+   * @memberof P2pBillsApi
+   */
+  private _resolvePaySourcesFilter(
+    paySourcesFilter: BillPaySourceAny | BillPaySourceAny[]
+  ): string {
+    return Array.isArray(paySourcesFilter)
+      ? paySourcesFilter.join(",")
+      : String(paySourcesFilter);
+  }
+
+  /**
    * Нормализует сумму до строки с 2 числами после запятой
    *
+   * @private
    * @param {string|number} amount Сумма
    * @return {string}
    */
-  protected _normalizeAmount(amount: string | number): string {
+  private _normalizeAmount(amount: string | number): string {
     if (typeof amount === "number") return amount.toFixed(2);
 
     return this._normalizeAmount(Number.parseFloat(amount));
@@ -78,13 +98,24 @@ export class P2pBillsApi extends P2pApi {
       paySource,
       successUrl,
       billId = this.generateId(),
+      themeCode,
       expirationDateTime = formatOffsetDate(15, "min"),
+      paySourcesFilter,
       ...bill
     } = data;
+
+    const customFields = bill.customFields ?? {};
+
+    if (themeCode) customFields.themeCode = themeCode;
+    if (paySourcesFilter) {
+      customFields.paySourcesFilter =
+        this._resolvePaySourcesFilter(paySourcesFilter);
+    }
 
     const patchedBill = {
       ...bill,
       expirationDateTime,
+      customFields,
       amount: {
         currency: bill.amount.currency,
         value: this._normalizeAmount(bill.amount.value)
@@ -133,14 +164,14 @@ export class P2pBillsApi extends P2pApi {
    *
    *
    * @param {string} signature
-   * @param {(BillStatusData | BillStatusBody)} body
+   * @param {(BillStatusNotificationBody | BillStatusBody | BillStatusBody)} body
    * @param {*} [merchantSecret=this.secretKey]
    * @return {*}  {boolean}
    * @memberof P2pBillsApi
    */
   checkNotificationSignature(
     signature: string,
-    body: BillStatusData | BillStatusBody,
+    body: BillStatusNotificationBody | BillStatusBody,
     merchantSecret = this.secretKey
   ): boolean {
     if ("bill" in body) body = body.bill;
@@ -162,21 +193,36 @@ export class P2pBillsApi extends P2pApi {
    * @return {string} Ссылка на оплату счёта
    */
   createFormUrl(parameters: BillFormParameters): string {
+    const {
+      lifetime = formatOffsetDate(15, "min"),
+      themeCode,
+      customFields = {},
+      billId = this.generateId(),
+      paySourcesFilter,
+      ...bill
+    } = parameters;
+
+    if (themeCode) customFields.themeCode = themeCode;
+    if (paySourcesFilter) {
+      customFields.paySourcesFilter =
+        this._resolvePaySourcesFilter(paySourcesFilter);
+    }
+
+    const mappedCustomFields = Object.fromEntries(
+      Object.entries(customFields).map(([key, value]) => [
+        `customFields[${key}]`,
+        value
+      ])
+    );
+
     const options = {
-      ...parameters,
+      ...bill,
+      billId,
+      lifetime,
       amount: this._normalizeAmount(parameters.amount),
       publicKey: this.publicKey,
-      ...Object.fromEntries(
-        Object.entries(parameters.customFields ?? {}).map(([key, value]) => [
-          `customFields[${key}]`,
-          value
-        ])
-      )
+      ...mappedCustomFields
     };
-
-    options.billId ??= generateUUID();
-
-    delete options.customFields;
 
     return url`https://oplata.qiwi.com/create`(options);
   }

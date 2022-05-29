@@ -1,16 +1,6 @@
 import { getOwnProperty } from "./get";
 
 /**
- * Превращает число в двухзначную строку
- * @param {number} number
- * @return {string}
- *
- * @example
- * 3 // -> '03'
- */
-const dd = (number: number): string => number.toFixed(0).padStart(2, "0");
-
-/**
  * Форматирует дату в понятную для QIWI строку:
  *
  * `ГГГГ-ММ-ДДTЧЧ:ММ:СС+\-ЧЧ:ММ`
@@ -20,28 +10,9 @@ const dd = (number: number): string => number.toFixed(0).padStart(2, "0");
  */
 export function formatDate(dateTime: Date | number | string): string {
   const date = new Date(dateTime);
-  const utc = new Date(
-    Date.UTC(
-      date.getFullYear(),
-      date.getMonth(),
-      date.getDate(),
-      date.getHours(),
-      date.getMinutes(),
-      date.getSeconds(),
-      date.getMilliseconds()
-    )
-  );
+  const base = date.toISOString().split(".")[0];
 
-  const offset = date.getTimezoneOffset();
-  /* istanbul ignore next */
-  const sign = offset > 0 ? "-" : "+";
-
-  const base = utc.toISOString().split(".")[0];
-  const hours = dd(Math.trunc(Math.abs(offset) / 60));
-  const minutes = dd(offset % 60);
-
-  //      [ Дата ][    Временная зона     ]
-  return `${base}${sign}${hours}:${minutes}`;
+  return `${base}+00:00`;
 }
 
 export enum TimeSpan {

@@ -286,12 +286,9 @@ export type PersonProfile = {
       /**
        * Текущий уровень идентификации кошелька.
        * Возможные значения:
-       *
-       * `ANONYMOUS` - без идентификации;
-       *
-       * `SIMPLE`, `VERIFIED` - упрощенная идентификация;
-       *
-       * `FULL` - полная идентификация.
+       * - `ANONYMOUS` - без идентификации;
+       * - `SIMPLE`, `VERIFIED` - упрощенная идентификация;
+       * - `FULL` - полная идентификация.
        */
       identificationLevel: PersonIdentificationLevel;
     }[];
@@ -362,13 +359,10 @@ export type IdentificationResponse = IdentificationBase & {
 
   /**
    * Текущий статус кошелька:
-   *
-   * `SIMPLE` - "Минимальный".
-   *
-   * `VERIFIED` - "Основной" (данные для идентификации успешно
+   * - `SIMPLE` - "Минимальный".
+   * - `VERIFIED` - "Основной" (данные для идентификации успешно
    * прошли проверку).
-   *
-   * `FULL` – "Профессиональный", если кошелек уже ранее получал
+   * - `FULL` – "Профессиональный", если кошелек уже ранее получал
    * полную идентификацию по данным ФИО, номеру паспорта и дате
    * рождения.
    */
@@ -431,16 +425,14 @@ export type GetPaymentHistoryParametersBase = {
 
   /**
    * Тип операций в отчете, для отбора. Допустимые значения:
-   *
-   * `ALL` - все операции,
-   *
-   * `IN` - только пополнения,
-   *
-   * `OUT` - только платежи,
-   *
-   * `QIWI_CARD` - только платежи по картам QIWI (QVC, QVP).
+   * - `ALL` - все операции,
+   * - `IN` - только пополнения,
+   * - `OUT` - только платежи,
+   * - `QIWI_CARD` - только платежи по картам QIWI (QVC, QVP).
    *
    * По умолчанию `ALL`
+   *
+   * @default "ALL"
    */
   operation?: TransactionTypeAny;
 
@@ -449,17 +441,12 @@ export type GetPaymentHistoryParametersBase = {
    * нумеруется, начиная с нуля (`sources[0]`, `sources[1]` и т.д.).
    *
    * Допустимые значения:
-   *
-   * `QW_RUB` - рублевый счет кошелька,
-   *
-   * `QW_USD` - счет кошелька в долларах,
-   *
-   * `QW_EUR` - счет кошелька в евро,
-   *
-   * `CARD` - привязанные и непривязанные к кошельку банковские
+   * - `QW_RUB` - рублевый счет кошелька,
+   * - `QW_USD` - счет кошелька в долларах,
+   * - `QW_EUR` - счет кошелька в евро,
+   * - `CARD` - привязанные и непривязанные к кошельку банковские
    * карты,
-   *
-   * `MK` - счет мобильного оператора. Если не указан, учитываются
+   * - `MK` - счет мобильного оператора. Если не указан, учитываются
    * все источники
    */
   sources?: PaymentHistorySourceAny[];
@@ -560,23 +547,17 @@ export type Transaction = {
 
   /**
    * Тип платежа. Возможные значения:
-   *
-   * `IN` - пополнение,
-   *
-   * `OUT` - платеж,
-   *
-   * `QIWI_CARD` - платеж с карт QIWI (QVC, QVP).
+   * - `IN` - пополнение,
+   * - `OUT` - платеж,
+   * - `QIWI_CARD` - платеж с карт QIWI (QVC, QVP).
    */
   type: TransactionType.IN | TransactionType.OUT | TransactionType.QIWI_CARD;
 
   /**
    * Статус платежа. Возможные значения:
-   *
-   * `WAITING` - платеж проводится
-   *
-   * `SUCCESS` - успешный платеж
-   *
-   * `ERROR` - ошибка платежа.
+   * - `WAITING` - платеж проводится
+   * - `SUCCESS` - успешный платеж
+   * - `ERROR` - ошибка платежа.
    */
   status: TransactionStatus;
 
@@ -880,12 +861,9 @@ export type FormUrlOptions = {
    * поля формы.
    *
    * Допустимые значения:
-   *
-   * `sum` - поле "сумма платежа",
-   *
-   * `account` - поле "номер счета/телефона/карты",
-   *
-   * `comment` - поле "комментарий".
+   * - `sum` - поле "сумма платежа",
+   * - `account` - поле "номер счета/телефона/карты",
+   * - `comment` - поле "комментарий".
    *
    * Пример (неактивное поле суммы платежа): `blocked[0]=sum`
    */
@@ -897,9 +875,8 @@ export type FormUrlOptions = {
    * кошелька. Если вы не хотите, чтобы пользователь видел номер
    * вашего кошелька на форме, используйте перевод по никнейму.
    *
-   * `phone` - для перевода по номеру
-   *
-   * `nickname` - для перевода по никнейму.
+   * - `phone` - для перевода по номеру
+   * - `nickname` - для перевода по никнейму.
    */
   accountType?: string;
 
@@ -924,9 +901,12 @@ export type TokenResponse = {
   refresh_token: string;
 };
 
-export type PrettyTokenResponse<C> = {
+export type ShortTokenResponse = {
   token: string;
   expiry: number;
+};
+
+export type PrettyTokenResponse<C> = ShortTokenResponse & {
   client: C;
 };
 
@@ -1036,9 +1016,8 @@ export type CardResponse = {
 
     /**
      * Тариф карты:
-     *
-     * `amount` - Стоимость обслуживания
-     * `currency` - Код валюты баланса (по ISO)
+     * - `amount` - Стоимость обслуживания
+     * - `currency` - Код валюты баланса (по ISO)
      */
     price: MoneyAmount;
 
@@ -1290,7 +1269,7 @@ export type WebHookInfo = {
 };
 
 /**
- * @see [Документация по вебхукам](https://developer.qiwi.com/ru/qiwi-wallet-personal/#hook_format)
+ * [Документация по вебхукам](https://developer.qiwi.com/ru/qiwi-wallet-personal/#hook_format)
  */
 export type WebhookTransaction = {
   /** Хэш цифровой подписи уведомления */
@@ -1348,10 +1327,8 @@ export type WebhookTransaction = {
 
     /**
      * Тип платежа. Возможные значения:
-     *
-     * `IN` - пополнение,
-     *
-     * `OUT` - платеж.
+     * - `IN` - пополнение,
+     * - `OUT` - платеж.
      */
     type: TransactionType.IN | TransactionType.OUT;
   };

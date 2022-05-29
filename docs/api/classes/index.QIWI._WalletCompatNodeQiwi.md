@@ -32,6 +32,7 @@
 - [key](index.QIWI._WalletCompatNodeQiwi.md#key)
 - [limits](index.QIWI._WalletCompatNodeQiwi.md#limits)
 - [nickname](index.QIWI._WalletCompatNodeQiwi.md#nickname)
+- [oauth](index.QIWI._WalletCompatNodeQiwi.md#oauth)
 - [paymentHistory](index.QIWI._WalletCompatNodeQiwi.md#paymenthistory)
 - [payments](index.QIWI._WalletCompatNodeQiwi.md#payments)
 - [personProfile](index.QIWI._WalletCompatNodeQiwi.md#personprofile)
@@ -46,15 +47,18 @@
 - [Currency](index.QIWI._WalletCompatNodeQiwi.md#currency)
 - [FundingSourcesApi](index.QIWI._WalletCompatNodeQiwi.md#fundingsourcesapi)
 - [IdentificationApi](index.QIWI._WalletCompatNodeQiwi.md#identificationapi)
+- [IdentificationLevel](index.QIWI._WalletCompatNodeQiwi.md#identificationlevel)
 - [LimitType](index.QIWI._WalletCompatNodeQiwi.md#limittype)
 - [LimitsApi](index.QIWI._WalletCompatNodeQiwi.md#limitsapi)
 - [NicknameApi](index.QIWI._WalletCompatNodeQiwi.md#nicknameapi)
+- [OauthApi](index.QIWI._WalletCompatNodeQiwi.md#oauthapi)
 - [PaymentHistoryApi](index.QIWI._WalletCompatNodeQiwi.md#paymenthistoryapi)
 - [PaymentHistorySource](index.QIWI._WalletCompatNodeQiwi.md#paymenthistorysource)
 - [PaymentsApi](index.QIWI._WalletCompatNodeQiwi.md#paymentsapi)
 - [PersonIdentificationLevel](index.QIWI._WalletCompatNodeQiwi.md#personidentificationlevel)
 - [PersonProfileApi](index.QIWI._WalletCompatNodeQiwi.md#personprofileapi)
 - [ProvidersApi](index.QIWI._WalletCompatNodeQiwi.md#providersapi)
+- [ReceiptFormat](index.QIWI._WalletCompatNodeQiwi.md#receiptformat)
 - [Recipients](index.QIWI._WalletCompatNodeQiwi.md#recipients)
 - [RestrictionsApi](index.QIWI._WalletCompatNodeQiwi.md#restrictionsapi)
 - [TransactionStatus](index.QIWI._WalletCompatNodeQiwi.md#transactionstatus)
@@ -137,7 +141,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.d.ts:125
+dist/cjs/apis/wallet/wallet.d.ts:129
 
 ___
 
@@ -151,7 +155,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.d.ts:123
+dist/cjs/apis/wallet/wallet.d.ts:127
 
 ___
 
@@ -175,7 +179,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.d.ts:122
+dist/cjs/apis/wallet/wallet.d.ts:126
 
 ___
 
@@ -189,7 +193,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.d.ts:118
+dist/cjs/apis/wallet/wallet.d.ts:122
 
 ___
 
@@ -213,7 +217,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.d.ts:119
+dist/cjs/apis/wallet/wallet.d.ts:123
 
 ___
 
@@ -227,7 +231,21 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.d.ts:128
+dist/cjs/apis/wallet/wallet.d.ts:132
+
+___
+
+### oauth
+
+• `Readonly` **oauth**: [`WalletOauthApi`](index._internal_.WalletOauthApi.md)
+
+#### Inherited from
+
+[Wallet](index.QIWI.Wallet.md).[oauth](index.QIWI.Wallet.md#oauth)
+
+#### Defined in
+
+dist/cjs/apis/wallet/wallet.d.ts:133
 
 ___
 
@@ -241,7 +259,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.d.ts:121
+dist/cjs/apis/wallet/wallet.d.ts:125
 
 ___
 
@@ -255,7 +273,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.d.ts:124
+dist/cjs/apis/wallet/wallet.d.ts:128
 
 ___
 
@@ -269,7 +287,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.d.ts:117
+dist/cjs/apis/wallet/wallet.d.ts:121
 
 ___
 
@@ -283,7 +301,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.d.ts:127
+dist/cjs/apis/wallet/wallet.d.ts:131
 
 ___
 
@@ -297,7 +315,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.d.ts:120
+dist/cjs/apis/wallet/wallet.d.ts:124
 
 ___
 
@@ -311,7 +329,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.d.ts:126
+dist/cjs/apis/wallet/wallet.d.ts:130
 
 ___
 
@@ -325,7 +343,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.d.ts:52
+dist/cjs/apis/wallet/wallet.d.ts:55
 
 ___
 
@@ -339,7 +357,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.d.ts:43
+dist/cjs/apis/wallet/wallet.d.ts:44
 
 ___
 
@@ -353,7 +371,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.d.ts:42
+dist/cjs/apis/wallet/wallet.d.ts:43
 
 ___
 
@@ -367,7 +385,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.d.ts:50
+dist/cjs/apis/wallet/wallet.d.ts:53
 
 ___
 
@@ -381,7 +399,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.d.ts:38
+dist/cjs/apis/wallet/wallet.d.ts:39
 
 ___
 
@@ -395,7 +413,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.d.ts:37
+dist/cjs/apis/wallet/wallet.d.ts:38
 
 ___
 
@@ -409,7 +427,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.d.ts:49
+dist/cjs/apis/wallet/wallet.d.ts:52
 
 ___
 
@@ -420,6 +438,20 @@ ___
 #### Inherited from
 
 [Wallet](index.QIWI.Wallet.md).[IdentificationApi](index.QIWI.Wallet.md#identificationapi)
+
+#### Defined in
+
+dist/cjs/apis/wallet/wallet.d.ts:48
+
+___
+
+### IdentificationLevel
+
+▪ `Static` `Readonly` **IdentificationLevel**: typeof [`PersonIdentificationLevel`](../enums/index.QIWI.PersonIdentificationLevel.md)
+
+#### Inherited from
+
+[Wallet](index.QIWI.Wallet.md).[IdentificationLevel](index.QIWI.Wallet.md#identificationlevel)
 
 #### Defined in
 
@@ -437,7 +469,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.d.ts:41
+dist/cjs/apis/wallet/wallet.d.ts:42
 
 ___
 
@@ -451,7 +483,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.d.ts:46
+dist/cjs/apis/wallet/wallet.d.ts:49
 
 ___
 
@@ -465,7 +497,21 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.d.ts:55
+dist/cjs/apis/wallet/wallet.d.ts:58
+
+___
+
+### OauthApi
+
+▪ `Static` `Readonly` **OauthApi**: typeof [`WalletOauthApi`](index._internal_.WalletOauthApi.md)
+
+#### Inherited from
+
+[Wallet](index.QIWI.Wallet.md).[OauthApi](index.QIWI.Wallet.md#oauthapi)
+
+#### Defined in
+
+dist/cjs/apis/wallet/wallet.d.ts:59
 
 ___
 
@@ -479,7 +525,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.d.ts:48
+dist/cjs/apis/wallet/wallet.d.ts:51
 
 ___
 
@@ -493,7 +539,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.d.ts:40
+dist/cjs/apis/wallet/wallet.d.ts:41
 
 ___
 
@@ -507,7 +553,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.d.ts:51
+dist/cjs/apis/wallet/wallet.d.ts:54
 
 ___
 
@@ -521,7 +567,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.d.ts:34
+dist/cjs/apis/wallet/wallet.d.ts:35
 
 ___
 
@@ -535,7 +581,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.d.ts:44
+dist/cjs/apis/wallet/wallet.d.ts:47
 
 ___
 
@@ -549,7 +595,21 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.d.ts:54
+dist/cjs/apis/wallet/wallet.d.ts:57
+
+___
+
+### ReceiptFormat
+
+▪ `Static` `Readonly` **ReceiptFormat**: typeof [`ChequeFormat`](../enums/index.QIWI.ChequeFormat.md)
+
+#### Inherited from
+
+[Wallet](index.QIWI.Wallet.md).[ReceiptFormat](index.QIWI.Wallet.md#receiptformat)
+
+#### Defined in
+
+dist/cjs/apis/wallet/wallet.d.ts:46
 
 ___
 
@@ -563,7 +623,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.d.ts:39
+dist/cjs/apis/wallet/wallet.d.ts:40
 
 ___
 
@@ -577,7 +637,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.d.ts:47
+dist/cjs/apis/wallet/wallet.d.ts:50
 
 ___
 
@@ -591,7 +651,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.d.ts:36
+dist/cjs/apis/wallet/wallet.d.ts:37
 
 ___
 
@@ -605,7 +665,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.d.ts:35
+dist/cjs/apis/wallet/wallet.d.ts:36
 
 ___
 
@@ -619,7 +679,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.d.ts:53
+dist/cjs/apis/wallet/wallet.d.ts:56
 
 ___
 
@@ -653,7 +713,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.d.ts:64
+dist/cjs/apis/wallet/wallet.d.ts:68
 
 ## Accessors
 
@@ -758,7 +818,7 @@ ___
 
 Создаёт токен с увеличенным сроком действия (10 лет)
 
-**`see`** [Документация](https://developer.qiwi.com/ru/qiwi-wallet-personal-advanced/?http#intro)
+**`see`** [Документация](https://developer.qiwi.com/ru/qiwi-wallet-personal-advanced/)
 
 #### Returns
 
@@ -770,7 +830,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.d.ts:134
+dist/cjs/apis/wallet/wallet.d.ts:139
 
 ___
 
@@ -971,7 +1031,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.d.ts:80
+dist/cjs/apis/wallet/wallet.d.ts:84
 
 ___
 
@@ -1013,7 +1073,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.d.ts:110
+dist/cjs/apis/wallet/wallet.d.ts:114
 
 ___
 
@@ -1048,4 +1108,4 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.d.ts:92
+dist/cjs/apis/wallet/wallet.d.ts:96

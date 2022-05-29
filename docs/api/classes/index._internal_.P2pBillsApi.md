@@ -23,7 +23,9 @@
 
 ### Properties
 
+- [\_normalizeAmount](index._internal_.P2pBillsApi.md#_normalizeamount)
 - [\_options](index._internal_.P2pBillsApi.md#_options)
+- [\_resolvePaySourcesFilter](index._internal_.P2pBillsApi.md#_resolvepaysourcesfilter)
 - [generateId](index._internal_.P2pBillsApi.md#generateid)
 
 ### Accessors
@@ -34,7 +36,6 @@
 
 ### Methods
 
-- [\_normalizeAmount](index._internal_.P2pBillsApi.md#_normalizeamount)
 - [checkNotificationSignature](index._internal_.P2pBillsApi.md#checknotificationsignature)
 - [create](index._internal_.P2pBillsApi.md#create)
 - [createFormUrl](index._internal_.P2pBillsApi.md#createformurl)
@@ -70,6 +71,22 @@ dist/cjs/apis/options-wrapper.d.ts:22
 
 ## Properties
 
+### \_normalizeAmount
+
+• `Private` **\_normalizeAmount**: `any`
+
+Нормализует сумму до строки с 2 числами после запятой
+
+**`param`** Сумма
+
+**`returns`**
+
+#### Defined in
+
+dist/cjs/apis/p2p/bills.api.d.ts:36
+
+___
+
 ### \_options
 
 • `Protected` `Readonly` **\_options**: [`P2pApiOptions`](../interfaces/index.QIWI.P2pApiOptions.md)
@@ -88,6 +105,22 @@ dist/cjs/apis/options-wrapper.d.ts:16
 
 ___
 
+### \_resolvePaySourcesFilter
+
+• `Private` **\_resolvePaySourcesFilter**: `any`
+
+**`param`**
+
+**`returns`** {string}
+
+**`memberof`** P2pBillsApi
+
+#### Defined in
+
+dist/cjs/apis/p2p/bills.api.d.ts:28
+
+___
+
 ### generateId
 
 • **generateId**: () => `string`
@@ -102,7 +135,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/p2p/bills.api.d.ts:27
+dist/cjs/apis/p2p/bills.api.d.ts:37
 
 ## Accessors
 
@@ -172,28 +205,6 @@ dist/cjs/apis/p2p/api.d.ts:25
 
 ## Methods
 
-### \_normalizeAmount
-
-▸ `Protected` **_normalizeAmount**(`amount`): `string`
-
-Нормализует сумму до строки с 2 числами после запятой
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `amount` | `string` \| `number` | Сумма |
-
-#### Returns
-
-`string`
-
-#### Defined in
-
-dist/cjs/apis/p2p/bills.api.d.ts:26
-
-___
-
 ### checkNotificationSignature
 
 ▸ **checkNotificationSignature**(`signature`, `body`, `merchantSecret?`): `boolean`
@@ -216,7 +227,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/p2p/bills.api.d.ts:77
+dist/cjs/apis/p2p/bills.api.d.ts:87
 
 ___
 
@@ -255,7 +266,7 @@ server2server с использованием авторизации. Метод
 
 #### Defined in
 
-dist/cjs/apis/p2p/bills.api.d.ts:48
+dist/cjs/apis/p2p/bills.api.d.ts:58
 
 ___
 
@@ -269,7 +280,7 @@ ___
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `parameters` | { `amount`: `string` \| `number` ; `billId?`: `string` ; `comment?`: `string` ; `customFields?`: `Record`<`string`, `string`\> ; `lifetime?`: `string` ; `successUrl?`: `string`  } & { `account?`: `string` ; `email?`: `string` ; `phone?`: `string`  } | GET-параметры ссылки |
+| `parameters` | [`PayUrlPatchParameters`](../modules/index.QIWI.md#payurlpatchparameters) & [`BillCustomFieldsExtension`](../modules/index._internal_.md#billcustomfieldsextension) & { `amount`: `string` \| `number` ; `billId?`: `string` ; `comment?`: `string` ; `customFields?`: [`CustomFields`](../modules/index._internal_.md#customfields) ; `lifetime?`: `string` ; `themeCode?`: `string`  } & { `account?`: `string` ; `email?`: `string` ; `phone?`: `string`  } | GET-параметры ссылки |
 
 #### Returns
 
@@ -279,7 +290,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/p2p/bills.api.d.ts:85
+dist/cjs/apis/p2p/bills.api.d.ts:95
 
 ___
 
@@ -306,7 +317,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/p2p/bills.api.d.ts:103
+dist/cjs/apis/p2p/bills.api.d.ts:113
 
 ___
 
@@ -333,7 +344,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/p2p/bills.api.d.ts:58
+dist/cjs/apis/p2p/bills.api.d.ts:68
 
 ___
 
@@ -360,7 +371,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/p2p/bills.api.d.ts:94
+dist/cjs/apis/p2p/bills.api.d.ts:104
 
 ___
 
@@ -386,7 +397,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/p2p/bills.api.d.ts:67
+dist/cjs/apis/p2p/bills.api.d.ts:77
 
 ___
 
@@ -401,7 +412,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `payUrl` | `string` |
-| `options?` | `Partial`<{ `paySource`: [`BillPaySource`](../enums/index.QIWI.BillPaySource.md) ; `successUrl`: `string`  }\> |
+| `options?` | [`PayUrlPatchParameters`](../modules/index.QIWI.md#payurlpatchparameters) |
 
 #### Returns
 

@@ -1,5 +1,5 @@
 /* istanbul ignore file */
-import { formatOffsetDate, generateUUID } from "../shared";
+import { formatOffsetDate, generateUUID, ReadonlyRecord } from "../shared";
 import { P2p } from "./p2p";
 import {
   BillCreateParameters,
@@ -116,7 +116,7 @@ export class _P2pCompatBillPayments extends P2p {
   createPaymentForm(
     parameters: Pick<BillFormParameters, "billId" | "amount" | "successUrl"> & {
       publicKey?: string;
-    } & Record<string, any>
+    } & ReadonlyRecord<string, any>
   ): string {
     return this.bills.createFormUrl(parameters);
   }

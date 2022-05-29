@@ -19,7 +19,7 @@
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.types.d.ts:168
+dist/cjs/apis/p2p/p2p.types.d.ts:221
 
 ___
 
@@ -29,4 +29,4 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.types.d.ts:169
+dist/cjs/apis/p2p/p2p.types.d.ts:222

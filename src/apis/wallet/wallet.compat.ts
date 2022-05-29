@@ -12,9 +12,6 @@ import * as types from "./wallet.types";
  * @extends {Wallet}
  */
 export class _WalletCompat extends Wallet {
-  static readonly IdentificationLevel = types.PersonIdentificationLevel;
-  static readonly ReceiptFormat = types.ChequeFormat;
-
   /**
    * Creates an instance of _WalletCompat.
    * @param {string} token
@@ -36,7 +33,7 @@ export class _WalletCompat extends Wallet {
    * @template T
    * @param {(types.StringOrNumber | undefined)} walletId
    * @param {Function} executor
-   * @return {*}  {Promise<T>}
+   * @return {Promise<T>}  {Promise<T>}
    * @memberof _WalletCompat
    */
   private async _executeWithWalletId<T>(
@@ -422,15 +419,11 @@ export class _WalletCompat extends Wallet {
    * @see {@link https://developer.qiwi.com/ru/qiwi-wallet-personal-advanced/?http#intro|Документация}
    */
   async createOauthToken(): Promise<types.PrettyTokenResponse<_WalletCompat>> {
-    const { token, expiry } = await super.createOauthToken();
+    const { token, expiry } = await this.oauth.createToken();
     const client = new _WalletCompat(token, this.options.walletId);
     Object.assign(client.options, { http: this.options.http });
 
-    return {
-      token,
-      expiry,
-      client
-    };
+    return { token, expiry, client };
   }
 
   /**

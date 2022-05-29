@@ -19,7 +19,7 @@
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:1023
+dist/cjs/apis/wallet/wallet.types.d.ts:1001
 
 ___
 
@@ -29,4 +29,4 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:1024
+dist/cjs/apis/wallet/wallet.types.d.ts:1002

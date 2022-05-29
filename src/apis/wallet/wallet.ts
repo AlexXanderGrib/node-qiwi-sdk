@@ -1,3 +1,4 @@
+import type { WalletApiOptions } from "./wallet.options";
 import { WalletBillsApi } from "./bills.api";
 import { WalletCardsApi } from "./cards.api";
 import { WalletFundingSourcesApi } from "./funding-sources.api";
@@ -7,7 +8,6 @@ import { WalletPaymentHistoryApi } from "./payment-history.api";
 import { WalletPaymentsApi } from "./payments.api";
 import { WalletPersonProfileApi } from "./person-profile.api";
 import { WalletRestrictionsApi } from "./restrictions.api";
-import type { WalletApiOptions } from "./wallet.options";
 import { WalletWebhooksApi } from "./webhooks.api";
 
 import {
@@ -21,22 +21,15 @@ import {
   LimitType,
   CardStatus,
   CardActionStatus,
-  PrettyTokenResponse,
-  CodeResponse,
-  TokenResponse
+  PrettyTokenResponse
 } from "./wallet.types";
 
 import { mapHttpErrors } from "./wallet.errors";
 import { ApiClass } from "../api";
 import { WalletProvidersApi } from "./providers.api";
-import {
-  environment,
-  formatQuerystring,
-  HttpRequestOptions,
-  SimpleJsonHttp,
-  USER_AGENT
-} from "../shared";
+import { environment, SimpleJsonHttp, url, USER_AGENT } from "../shared";
 import { WalletNicknameApi } from "./nickname.api";
+import { WalletOauthApi } from "./oauth.api";
 
 /**
  * @callback SetupHttp
@@ -67,6 +60,8 @@ export class Wallet extends ApiClass<WalletApiOptions> {
   static readonly LimitType = LimitType;
   static readonly CardStatus = CardStatus;
   static readonly CardActionStatus = CardActionStatus;
+  static readonly IdentificationLevel = PersonIdentificationLevel;
+  static readonly ReceiptFormat = ChequeFormat;
 
   static readonly PersonProfileApi = WalletPersonProfileApi;
   static readonly IdentificationApi = WalletIdentificationApi;
@@ -80,6 +75,7 @@ export class Wallet extends ApiClass<WalletApiOptions> {
   static readonly WebhooksApi = WalletWebhooksApi;
   static readonly ProvidersApi = WalletProvidersApi;
   static readonly NicknameApi = WalletNicknameApi;
+  static readonly OauthApi = WalletOauthApi;
 
   /**
    *
@@ -94,7 +90,7 @@ export class Wallet extends ApiClass<WalletApiOptions> {
 
     http.client.options = {
       ...http.client.options,
-      baseURL: "https://edge.qiwi.com/",
+      baseURL: url`https://edge.qiwi.com/`(),
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
@@ -211,58 +207,18 @@ export class Wallet extends ApiClass<WalletApiOptions> {
   readonly webhooks = new Wallet.WebhooksApi(this._options);
   readonly providers = new Wallet.ProvidersApi(this._options);
   readonly nickname = new Wallet.NicknameApi(this._options);
+  readonly oauth = new Wallet.OauthApi(this._options);
 
   /**
    * Создаёт токен с увеличенным сроком действия (10 лет)
    *
-   * @see {@link https://developer.qiwi.com/ru/qiwi-wallet-personal-advanced/?http#intro|Документация}
+   * @see {@link https://developer.qiwi.com/ru/qiwi-wallet-personal-advanced/|Документация}
    */
   async createOauthToken(): Promise<PrettyTokenResponse<Wallet>> {
-    const commonOptions: HttpRequestOptions = {
-      baseURL: "https://qiwi.com/oauth/",
-      url: "",
-      method: "POST",
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded"
-      },
-      stringifyBody: formatQuerystring
-    };
+    /* istanbul ignore next */
+    const { expiry, token } = await this.oauth.createToken();
 
-    const clientId = "api_wallet_private";
-
-    const codeResponse: CodeResponse = await this._options.http.request({
-      ...commonOptions,
-      url: "authorize",
-      body: {
-        response_type: "code",
-        client_id: clientId,
-        token: this.options.token,
-        client_software: "api"
-      }
-    });
-
-    const { code } = codeResponse;
-
-    const tokenResponse: TokenResponse = await this._options.http.request({
-      ...commonOptions,
-      url: "token",
-      body: {
-        grant_type: "authorization_code",
-        client_id: clientId,
-        client_secret: "hTFPyt",
-        code
-      }
-    });
-
-    const { access_token: token, expires_in: expiry } = tokenResponse;
-
-    return {
-      token,
-      expiry: Number.parseInt(expiry, 10),
-      client: new Wallet({
-        ...this._options,
-        token
-      })
-    };
+    /* istanbul ignore next */
+    return { expiry, token, client: new Wallet({ ...this._options, token }) };
   }
 }

@@ -36,6 +36,8 @@
 
   ↳↳ [`WalletNicknameApi`](index._internal_.WalletNicknameApi.md)
 
+  ↳↳ [`WalletOauthApi`](index._internal_.WalletOauthApi.md)
+
 ## Table of contents
 
 ### Constructors

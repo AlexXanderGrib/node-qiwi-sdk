@@ -20,6 +20,39 @@ export enum BillCurrency {
 export type BillCurrencyPlain = keyof typeof BillCurrency;
 export type BillCurrencyAny = BillCurrency | BillCurrencyPlain;
 
+export enum BillPaySource {
+  QIWI = "qw",
+  Card = "card",
+  Mobile = "mobile"
+}
+
+export type BillPaySourcePlain = "qw" | "card" | "mobile";
+export type BillPaySourceAny = BillPaySource | BillPaySourcePlain;
+
+type CustomFields = {
+  /**
+   * Код персонализации формы
+   *
+   * [Документация](https://developer.qiwi.com/ru/p2p-payments/#custom)
+   *
+   * Код получить можно в [настройках p2p](https://qiwi.com/p2p-admin/transfers/link)
+   */
+  themeCode?: string;
+
+  /**
+   * Строка с разделителями-запятыми. При [открытии формы](https://developer.qiwi.com/ru/p2p-payments/#payurl) будут
+   * отображаться только указанные способы перевода (один или
+   * несколько), если они доступны. Возможные значения:
+   * - `qw` - QIWI Кошелек,
+   * - `card` - банковская карта.
+   *
+   * @example
+   *
+   * [BillPaySource.QIWI, BillPaySource.CARD].join(',')
+   */
+  paySourcesFilter?: string;
+} & Record<string, string>;
+
 export type BillMoneyAmount = {
   /**
    * Сумма, на которую выставляется счет, округленная в меньшую
@@ -30,13 +63,29 @@ export type BillMoneyAmount = {
   value: number | string;
   /**
    * Валюта суммы счета. Возможные значения:
-   * `RUB` - рубли
-   * `KZT` - тенге
+   * - `RUB` - рубли
+   * - `KZT` - тенге
    */
   currency: BillCurrencyAny;
 };
 
-export type BillCreationRequest = {
+type BillCustomFieldsExtension = {
+  /**
+   * Код персонализации темы, добавляется в поле `customFields`
+   */
+  themeCode?: string;
+
+  /**
+   * Строка с разделителями-запятыми. При [открытии формы](https://developer.qiwi.com/ru/p2p-payments/#payurl) будут
+   * отображаться только указанные способы перевода (один или
+   * несколько), если они доступны. Возможные значения:
+   * - `qw` - QIWI Кошелек,
+   * - `card` - банковская карта.
+   */
+  paySourcesFilter?: BillPaySourceAny | BillPaySourceAny[];
+};
+
+export type BillCreationRequest = BillCustomFieldsExtension & {
   /** Данные о сумме счета */
   amount: BillMoneyAmount;
 
@@ -76,7 +125,7 @@ export type BillCreationRequest = {
    * {@link https://developer.qiwi.com/ru/p2p-payments/#custom|персонализацию}
    * вашей формы, передав переменную `themeCode`
    */
-  customFields?: Record<string, string>;
+  customFields?: CustomFields;
 };
 
 export type BillStatusData = {
@@ -97,7 +146,7 @@ export type BillStatusData = {
   };
 
   /** Объект строковых дополнительных параметров, переданных вами */
-  customFields: Record<string, string>;
+  customFields?: CustomFields;
 
   /** Идентификаторы пользователя */
   customer?: BillCreationRequest["customer"];
@@ -122,10 +171,18 @@ export type BillStatusData = {
    * `ГГГГ-ММ-ДДTчч:мм:сс+\-чч:мм`
    */
   expirationDateTime: string;
+
+  /**
+   * Номер телефона привязанный к киви кошельку, на который
+   * совершается платёж
+   */
+  recipientPhoneNumber?: string;
 };
 
+export type BillStatusNotificationBody = BillStatusData;
+
 export type BillStatusBody = {
-  bill: BillStatusData;
+  bill: BillStatusNotificationBody;
 };
 
 export type BillError = {
@@ -143,48 +200,56 @@ export type BillError = {
   traceId: string;
 };
 
-export type BillFormParameters = {
-  /** Уникальный идентификатор выставляемого счета в вашей системе */
-  billId?: string;
-  // /** Ваш ключ идентификации полученный в p2p.qiwi.com */
-  // publicKey: string;
+export type PayUrlPatchParameters = {
   /**
-   * Сумма, на которую выставляется счет, округленная в меньшую
-   * сторону до 2 десятичных знаков
+   * Выбранный по умолчанию метод оплаты
    */
-  amount: string | number;
+  paySource?: BillPaySourceAny;
+
   /**
    * URL для переадресации в случае успешного перевода с баланса
    * QIWI Кошелька. При ином способе оплаты переадресация не
    * выполняется. Ссылка должна вести на ваш сайт.
    */
   successUrl?: string;
-  /** Комментарий к счету */
-  comment?: string;
-  /** Дополнительные данные счета */
-  customFields?: Record<string, string>;
-  /**
-   * Дата, до которой счет будет доступен для перевода. Если
-   * перевод по счету не будет произведен до этой даты, ему
-   * присваивается финальный статус EXPIRED и последующий перевод
-   * станет невозможен.
-   *
-   * **Внимание! По истечении 45 суток от даты выставления счет
-   * автоматически будет переведен в финальный статус**
-   */
-  lifetime?: string;
-} & BillCreationRequest["customer"];
+};
 
-export enum BillPaySource {
-  QIWI = "qw",
-  Card = "card",
-  Mobile = "mobile"
-}
+export type BillFormParameters = PayUrlPatchParameters &
+  BillCustomFieldsExtension & {
+    /** Уникальный идентификатор выставляемого счета в вашей системе */
+    billId?: string;
 
-export type PayUrlPatchParameters = Partial<{
-  paySource: BillPaySource;
-  successUrl: string;
-}>;
+    /**
+     * Сумма в рублях, на которую выставляется счет, округленная в меньшую
+     * сторону до 2 десятичных знаков
+     */
+    amount: string | number;
+
+    /** Комментарий к счету */
+    comment?: string;
+
+    /** Дополнительные данные счета */
+    customFields?: CustomFields;
+
+    /**
+     * Код персонализации формы. Добавляется в `customFields`
+     */
+    themeCode?: string;
+
+    /**
+     * Дата, до которой счет будет доступен для перевода. Если
+     * перевод по счету не будет произведен до этой даты, ему
+     * присваивается финальный статус EXPIRED и последующий перевод
+     * станет невозможен.
+     *
+     * **Внимание! По истечении 45 суток от даты выставления счет
+     * автоматически будет переведен в финальный статус**
+     *
+     * По умолчанию сроком истечения является день, через 45 суток
+     * от времени перехода по ссылке
+     */
+    lifetime?: string;
+  } & BillCreationRequest["customer"];
 
 export type BillCreateParameters = BillCreationRequest &
   PayUrlPatchParameters & {

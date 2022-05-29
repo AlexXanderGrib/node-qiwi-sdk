@@ -1,13 +1,12 @@
 /* istanbul ignore file */
 import { formatOffsetDate } from "../shared";
 import { P2p } from "./p2p";
-import {
+import type {
   BillCreationRequest,
-  BillCurrency,
   BillFormParameters,
-  BillPaySource,
-  BillStatus,
+  BillStatusBody,
   BillStatusData,
+  BillStatusNotificationBody,
   PayUrlPatchParameters
 } from "./p2p.types";
 
@@ -20,10 +19,6 @@ import {
  * @extends {P2p}
  */
 export class _P2pCompat extends P2p {
-  static readonly Currency = BillCurrency;
-  static readonly PaySource = BillPaySource;
-  static readonly Status = BillStatus;
-
   /**
    * Creates an instance of _P2pCompat.
    * @param {string} secretKey
@@ -126,7 +121,7 @@ export class _P2pCompat extends P2p {
    * @deprecated Используйте {@link formatLifetimeDays} или {@link formatLifetimeMinutes}
    */
   static formatLifetime(days = 1): string {
-    return formatOffsetDate(days, "day");
+    return this.formatLifetimeDays(days);
   }
 
   /**
@@ -162,10 +157,13 @@ export class _P2pCompat extends P2p {
    * Проверяет подпись уведомления о статусе счёта
    *
    * @param {string} signature Подпись
-   * @param {BillStatusData} body Объект уведомления
+   * @param {BillStatusNotificationBody} body Объект уведомления
    * @return {boolean} Признак валидности
    */
-  checkNotificationSignature(signature: string, body: BillStatusData): boolean {
+  checkNotificationSignature(
+    signature: string,
+    body: BillStatusNotificationBody | BillStatusBody
+  ): boolean {
     return this.bills.checkNotificationSignature(signature, body);
   }
 }

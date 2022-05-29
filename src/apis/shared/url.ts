@@ -1,7 +1,7 @@
 import { formatQuerystring } from "./querystring";
-import type { ReadonlyRecord } from "./types";
+import type { AnyRecord } from "./types";
 
-type URLResult = (queryParameters?: ReadonlyRecord<string, unknown>) => string;
+type URLResult = (queryParameters?: AnyRecord) => string;
 
 /**
  *
@@ -28,7 +28,7 @@ export function url(
     if (typeof insertion === "string") url += insertion;
   }
 
-  return function createUrl(queryParameters: Record<string, unknown> = {}): string {
+  return function createUrl(queryParameters: AnyRecord = {}): string {
     const querystring = formatQuerystring(queryParameters);
 
     if (querystring.length > 0) url += `?${querystring}`;

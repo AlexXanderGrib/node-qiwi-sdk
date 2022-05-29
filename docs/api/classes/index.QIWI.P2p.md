@@ -33,6 +33,9 @@
 - [BillPaySource](index.QIWI.P2p.md#billpaysource)
 - [BillStatus](index.QIWI.P2p.md#billstatus)
 - [BillsApi](index.QIWI.P2p.md#billsapi)
+- [Currency](index.QIWI.P2p.md#currency)
+- [PaySource](index.QIWI.P2p.md#paysource)
+- [Status](index.QIWI.P2p.md#status)
 - [httpClientFactory](index.QIWI.P2p.md#httpclientfactory)
 
 ### Accessors
@@ -68,7 +71,7 @@ Creates an instance of P2p.
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.d.ts:54
+dist/cjs/apis/p2p/p2p.d.ts:57
 
 ## Properties
 
@@ -96,7 +99,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.d.ts:55
+dist/cjs/apis/p2p/p2p.d.ts:58
 
 ___
 
@@ -140,6 +143,36 @@ dist/cjs/apis/p2p/p2p.d.ts:16
 
 ___
 
+### Currency
+
+▪ `Static` `Readonly` **Currency**: typeof [`BillCurrency`](../enums/index.QIWI.BillCurrency.md)
+
+#### Defined in
+
+dist/cjs/apis/p2p/p2p.d.ts:20
+
+___
+
+### PaySource
+
+▪ `Static` `Readonly` **PaySource**: typeof [`BillPaySource`](../enums/index.QIWI.BillPaySource.md)
+
+#### Defined in
+
+dist/cjs/apis/p2p/p2p.d.ts:21
+
+___
+
+### Status
+
+▪ `Static` `Readonly` **Status**: typeof [`BillStatus`](../enums/index.QIWI.BillStatus.md)
+
+#### Defined in
+
+dist/cjs/apis/p2p/p2p.d.ts:22
+
+___
+
 ### httpClientFactory
 
 ▪ `Static` **httpClientFactory**: (`secretKey`: `string`) => [`SimpleJsonHttp`](index.QIWI.SimpleJsonHttp.md)
@@ -166,7 +199,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.d.ts:28
+dist/cjs/apis/p2p/p2p.d.ts:31
 
 ## Accessors
 
@@ -262,7 +295,7 @@ const p2p = new QIWI.P2P(process.env.QIWI_PRIVATE_KEY);
 
 ```js
 app.post('/webhook/qiwi', p2p.notificationMiddleware(), (req, res) => {
- req.body // Это `BillStatusData`
+ req.body // Это `BillStatusNotificationBody`
 })
 ```
 
@@ -270,7 +303,7 @@ app.post('/webhook/qiwi', p2p.notificationMiddleware(), (req, res) => {
 
 ```js
 app.post('/webhook/qiwi', p2p.notificationMiddleware({}, (req, res) => {
- req.body // Это `BillStatusData`
+ req.body // Это `BillStatusNotificationBody`
 }))
 ```
 
@@ -283,7 +316,7 @@ app.use((error, request, response, next) => {
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.d.ts:96
+dist/cjs/apis/p2p/p2p.d.ts:99
 
 ___
 
@@ -310,7 +343,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.d.ts:38
+dist/cjs/apis/p2p/p2p.d.ts:41
 
 ___
 
@@ -337,4 +370,4 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.d.ts:48
+dist/cjs/apis/p2p/p2p.d.ts:51

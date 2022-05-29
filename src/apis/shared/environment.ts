@@ -1,17 +1,18 @@
 import { getOwnProperty } from "./get";
+import type { ReadonlyRecord } from "./types";
 
 type Environment<
   K extends string = string,
   X extends string | undefined = string | undefined
-> = Readonly<Record<K, X>>;
+> = ReadonlyRecord<K, X>;
 
 /**
  * Создаёт копию `process.env` ограниченную по ключам
  *
  * @template T
- * @param {Record<string, string | string>} baseEnvironment
+ * @param {ReadonlyRecord<string, string | string>} baseEnvironment
  * @param {...T} keys
- * @return {Object}  {(Record<T[number], string | undefined>)}
+ * @return {Object}  {(ReadonlyRecord<T[number], string | undefined>)}
  */
 function loadEnvironment<T extends string[]>(
   baseEnvironment: Environment,
@@ -29,7 +30,8 @@ function loadEnvironment<T extends string[]>(
 }
 
 export const environment = loadEnvironment(
-  process.env,
+  /* istanbul ignore next */
+  typeof process === "object" && process?.env ? process.env : {},
   "QIWI_TOKEN",
   "QIWI_WALLET",
   "QIWI_SECRET_KEY",

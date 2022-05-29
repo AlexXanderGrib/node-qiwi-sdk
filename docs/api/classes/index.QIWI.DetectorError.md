@@ -116,7 +116,7 @@ dist/cjs/apis/error.d.ts:26
 
 #### Inherited from
 
-ExtendedError.\_\_@toStringTag@407
+ExtendedError.\_\_@toStringTag@410
 
 #### Defined in
 

@@ -23,6 +23,7 @@
 
 ### Type aliases
 
+- [AnyRecord](shared.md#anyrecord)
 - [AnyResponse](shared.md#anyresponse)
 - [Collection](shared.md#collection)
 - [Headers](shared.md#headers)
@@ -42,14 +43,24 @@
 
 - [collect](shared.md#collect)
 - [compareHmac](shared.md#comparehmac)
+- [compareQiwiHmac](shared.md#compareqiwihmac)
 - [formatDate](shared.md#formatdate)
 - [formatOffsetDate](shared.md#formatoffsetdate)
 - [formatQuerystring](shared.md#formatquerystring)
 - [generateUUID](shared.md#generateuuid)
-- [parseQuerystring](shared.md#parsequerystring)
 - [url](shared.md#url)
 
 ## Type aliases
+
+### AnyRecord
+
+Ƭ **AnyRecord**: [`ReadonlyRecord`](index.QIWI.md#readonlyrecord)<`string`, `unknown`\>
+
+#### Defined in
+
+dist/cjs/apis/shared/types.d.ts:5
+
+___
 
 ### AnyResponse
 
@@ -233,6 +244,32 @@ dist/cjs/apis/shared/hmac.d.ts:16
 
 ___
 
+### compareQiwiHmac
+
+▸ **compareQiwiHmac**(`key`, `digest`, `data`): `boolean`
+
+**`export`**
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `key` | [`BinaryAlike`](index._internal_.md#binaryalike) |
+| `digest` | [`BinaryAlike`](index._internal_.md#binaryalike) |
+| `data` | `string`[] |
+
+#### Returns
+
+`boolean`
+
+{boolean}
+
+#### Defined in
+
+dist/cjs/apis/shared/hmac.d.ts:26
+
+___
+
 ### formatDate
 
 ▸ **formatDate**(`dateTime`): `string`
@@ -301,7 +338,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/shared/querystring.d.ts:14
+dist/cjs/apis/shared/querystring.d.ts:8
 
 ___
 
@@ -320,28 +357,6 @@ ___
 #### Defined in
 
 dist/cjs/apis/shared/uuid.d.ts:7
-
-___
-
-### parseQuerystring
-
-▸ **parseQuerystring**(`querystring`): [`AnyResponse`](index.QIWI.md#anyresponse)
-
-Разбирает строку запроса, в том формате, который передаёт QIWI
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `querystring` | `string` | Строка запроса |
-
-#### Returns
-
-[`AnyResponse`](index.QIWI.md#anyresponse)
-
-#### Defined in
-
-dist/cjs/apis/shared/querystring.d.ts:7
 
 ___
 

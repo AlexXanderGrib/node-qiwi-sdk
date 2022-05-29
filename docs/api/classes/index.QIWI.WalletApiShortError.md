@@ -137,7 +137,7 @@ dist/cjs/apis/wallet/wallet.errors.d.ts:42
 
 #### Inherited from
 
-ExtendedError.\_\_@toStringTag@407
+ExtendedError.\_\_@toStringTag@410
 
 #### Defined in
 

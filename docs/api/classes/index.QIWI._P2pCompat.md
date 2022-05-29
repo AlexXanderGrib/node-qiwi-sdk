@@ -80,7 +80,7 @@ Creates an instance of _P2pCompat.
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.compat.d.ts:23
+dist/cjs/apis/p2p/p2p.compat.d.ts:20
 
 ## Properties
 
@@ -112,7 +112,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.d.ts:55
+dist/cjs/apis/p2p/p2p.d.ts:58
 
 ___
 
@@ -196,9 +196,13 @@ ___
 
 ▪ `Static` `Readonly` **Currency**: typeof [`BillCurrency`](../enums/index.QIWI.BillCurrency.md)
 
+#### Inherited from
+
+[P2p](index.QIWI.P2p.md).[Currency](index.QIWI.P2p.md#currency)
+
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.compat.d.ts:14
+dist/cjs/apis/p2p/p2p.d.ts:20
 
 ___
 
@@ -206,9 +210,13 @@ ___
 
 ▪ `Static` `Readonly` **PaySource**: typeof [`BillPaySource`](../enums/index.QIWI.BillPaySource.md)
 
+#### Inherited from
+
+[P2p](index.QIWI.P2p.md).[PaySource](index.QIWI.P2p.md#paysource)
+
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.compat.d.ts:15
+dist/cjs/apis/p2p/p2p.d.ts:21
 
 ___
 
@@ -216,9 +224,13 @@ ___
 
 ▪ `Static` `Readonly` **Status**: typeof [`BillStatus`](../enums/index.QIWI.BillStatus.md)
 
+#### Inherited from
+
+[P2p](index.QIWI.P2p.md).[Status](index.QIWI.P2p.md#status)
+
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.compat.d.ts:16
+dist/cjs/apis/p2p/p2p.d.ts:22
 
 ___
 
@@ -252,7 +264,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.d.ts:28
+dist/cjs/apis/p2p/p2p.d.ts:31
 
 ## Accessors
 
@@ -345,7 +357,7 @@ dist/cjs/apis/options-wrapper.d.ts:40
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.compat.d.ts:63
+dist/cjs/apis/p2p/p2p.compat.d.ts:60
 
 ___
 
@@ -360,7 +372,7 @@ ___
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `signature` | `string` | Подпись |
-| `body` | [`BillStatusData`](../modules/index.QIWI.md#billstatusdata) | Объект уведомления |
+| `body` | [`BillStatusData`](../modules/index.QIWI.md#billstatusdata) \| [`BillStatusBody`](../modules/index.QIWI.md#billstatusbody) | Объект уведомления |
 
 #### Returns
 
@@ -370,7 +382,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.compat.d.ts:118
+dist/cjs/apis/p2p/p2p.compat.d.ts:115
 
 ___
 
@@ -406,7 +418,7 @@ server2server с использованием авторизации. Метод
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.compat.d.ts:44
+dist/cjs/apis/p2p/p2p.compat.d.ts:41
 
 ___
 
@@ -420,7 +432,7 @@ ___
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `parameters` | { `amount`: `string` \| `number` ; `billId?`: `string` ; `comment?`: `string` ; `customFields?`: `Record`<`string`, `string`\> ; `lifetime?`: `string` ; `successUrl?`: `string`  } & { `account?`: `string` ; `email?`: `string` ; `phone?`: `string`  } | GET-параметры ссылки |
+| `parameters` | [`PayUrlPatchParameters`](../modules/index.QIWI.md#payurlpatchparameters) & [`BillCustomFieldsExtension`](../modules/index._internal_.md#billcustomfieldsextension) & { `amount`: `string` \| `number` ; `billId?`: `string` ; `comment?`: `string` ; `customFields?`: [`CustomFields`](../modules/index._internal_.md#customfields) ; `lifetime?`: `string` ; `themeCode?`: `string`  } & { `account?`: `string` ; `email?`: `string` ; `phone?`: `string`  } | GET-параметры ссылки |
 
 #### Returns
 
@@ -430,7 +442,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.compat.d.ts:52
+dist/cjs/apis/p2p/p2p.compat.d.ts:49
 
 ___
 
@@ -457,7 +469,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.compat.d.ts:73
+dist/cjs/apis/p2p/p2p.compat.d.ts:70
 
 ___
 
@@ -489,7 +501,7 @@ const p2p = new QIWI.P2P(process.env.QIWI_PRIVATE_KEY);
 
 ```js
 app.post('/webhook/qiwi', p2p.notificationMiddleware(), (req, res) => {
- req.body // Это `BillStatusData`
+ req.body // Это `BillStatusNotificationBody`
 })
 ```
 
@@ -497,7 +509,7 @@ app.post('/webhook/qiwi', p2p.notificationMiddleware(), (req, res) => {
 
 ```js
 app.post('/webhook/qiwi', p2p.notificationMiddleware({}, (req, res) => {
- req.body // Это `BillStatusData`
+ req.body // Это `BillStatusNotificationBody`
 }))
 ```
 
@@ -514,7 +526,7 @@ app.use((error, request, response, next) => {
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.d.ts:96
+dist/cjs/apis/p2p/p2p.d.ts:99
 
 ___
 
@@ -540,7 +552,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.compat.d.ts:82
+dist/cjs/apis/p2p/p2p.compat.d.ts:79
 
 ___
 
@@ -571,7 +583,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.d.ts:38
+dist/cjs/apis/p2p/p2p.d.ts:41
 
 ___
 
@@ -602,7 +614,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.d.ts:48
+dist/cjs/apis/p2p/p2p.d.ts:51
 
 ___
 
@@ -626,7 +638,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.compat.d.ts:90
+dist/cjs/apis/p2p/p2p.compat.d.ts:87
 
 ___
 
@@ -648,7 +660,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.compat.d.ts:104
+dist/cjs/apis/p2p/p2p.compat.d.ts:101
 
 ___
 
@@ -670,7 +682,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.compat.d.ts:110
+dist/cjs/apis/p2p/p2p.compat.d.ts:107
 
 ___
 
@@ -685,7 +697,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `payUrl` | `string` |
-| `options?` | `Partial`<{ `paySource`: [`BillPaySource`](../enums/index.QIWI.BillPaySource.md) ; `successUrl`: `string`  }\> |
+| `options?` | [`PayUrlPatchParameters`](../modules/index.QIWI.md#payurlpatchparameters) |
 
 #### Returns
 
@@ -695,4 +707,4 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.compat.d.ts:98
+dist/cjs/apis/p2p/p2p.compat.d.ts:95

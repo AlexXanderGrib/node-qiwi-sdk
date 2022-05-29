@@ -20,7 +20,7 @@
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.types.d.ts:153
+dist/cjs/apis/p2p/p2p.types.d.ts:21
 
 ___
 
@@ -30,7 +30,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.types.d.ts:154
+dist/cjs/apis/p2p/p2p.types.d.ts:22
 
 ___
 
@@ -40,4 +40,4 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.types.d.ts:152
+dist/cjs/apis/p2p/p2p.types.d.ts:20

@@ -95,6 +95,7 @@
 - [QuickPayRecipientsPlain](wallet.md#quickpayrecipientsplain)
 - [Rate](wallet.md#rate)
 - [Restrictions](wallet.md#restrictions)
+- [ShortTokenResponse](wallet.md#shorttokenresponse)
 - [StringOrNumber](wallet.md#stringornumber)
 - [TokenResponse](wallet.md#tokenresponse)
 - [Transaction](wallet.md#transaction)
@@ -207,7 +208,7 @@ Re-exports [_WalletCompatNodeQiwi](../classes/index.QIWI._WalletCompatNodeQiwi.m
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:611
+dist/cjs/apis/wallet/wallet.types.d.ts:592
 
 ___
 
@@ -224,7 +225,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:641
+dist/cjs/apis/wallet/wallet.types.d.ts:622
 
 ___
 
@@ -242,7 +243,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:1204
+dist/cjs/apis/wallet/wallet.types.d.ts:1180
 
 ___
 
@@ -263,7 +264,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:1170
+dist/cjs/apis/wallet/wallet.types.d.ts:1146
 
 ___
 
@@ -273,7 +274,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:881
+dist/cjs/apis/wallet/wallet.types.d.ts:859
 
 ___
 
@@ -283,7 +284,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:880
+dist/cjs/apis/wallet/wallet.types.d.ts:858
 
 ___
 
@@ -301,7 +302,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:898
+dist/cjs/apis/wallet/wallet.types.d.ts:876
 
 ___
 
@@ -324,7 +325,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:888
+dist/cjs/apis/wallet/wallet.types.d.ts:866
 
 ___
 
@@ -352,7 +353,7 @@ ___
 | `info.details.tariffs` | [`NameValueObject`](index._internal_.md#namevalueobject)[] | Список условий обслуживания карты |
 | `info.name` | `string` | Название карты |
 | `info.period` | `string` | Период обслуживания (по тарифу). Пример: `за год` |
-| `info.price` | [`MoneyAmount`](index.QIWI.md#moneyamount) | Тариф карты:  `amount` - Стоимость обслуживания `currency` - Код валюты баланса (по ISO) |
+| `info.price` | [`MoneyAmount`](index.QIWI.md#moneyamount) | Тариф карты: - `amount` - Стоимость обслуживания - `currency` - Код валюты баланса (по ISO) |
 | `qvx` | { `activated`: `string` ; `blockedDate`: `string` ; `cardAlias`: `string` ; `cardExpire`: `string` ; `cardExpireMonth`: `string` ; `cardExpireYear`: `string` ; `cardLimit`: ``null`` \| { `currencyCode`: [`Currency`](../enums/index.QIWI.Currency.md) ; `value`: `number`  } ; `cardType`: [`CardType`](index._internal_.md#cardtype) ; `id`: `number` ; `maskedPan`: `string` ; `smsResended`: `string` ; `status`: [`CardStatus`](../enums/index.QIWI.CardStatus.md) ; `txnId`: `string` ; `unblockAvailable`: `boolean`  } | Общая информация о карте |
 | `qvx.activated` | `string` | Дата активации карты в формате: `2022-01-31T00:00:00+03:00` |
 | `qvx.blockedDate` | `string` | Дата блокировки в формате: `2022-01-31T00:00:00+03:00` |
@@ -371,7 +372,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:795
+dist/cjs/apis/wallet/wallet.types.d.ts:774
 
 ___
 
@@ -381,7 +382,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:776
+dist/cjs/apis/wallet/wallet.types.d.ts:755
 
 ___
 
@@ -391,7 +392,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:775
+dist/cjs/apis/wallet/wallet.types.d.ts:754
 
 ___
 
@@ -410,7 +411,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:882
+dist/cjs/apis/wallet/wallet.types.d.ts:860
 
 ___
 
@@ -446,7 +447,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:744
+dist/cjs/apis/wallet/wallet.types.d.ts:721
 
 ___
 
@@ -456,7 +457,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:1021
+dist/cjs/apis/wallet/wallet.types.d.ts:999
 
 ___
 
@@ -466,7 +467,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:1020
+dist/cjs/apis/wallet/wallet.types.d.ts:998
 
 ___
 
@@ -489,15 +490,15 @@ ___
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `account?` | `string` | Формат совпадает с форматом параметра `fields.account` при оплате соответствующих провайдеров: для провайдера `99` - номер кошелька получателя; для провайдеров сотовой связи - номер мобильного телефона для пополнения (без префикса 8); для провайдеров перевода на карту - номер банковской карты получателя (без пробелов), для других провайдеров - идентификатор пользователя. Для провайдера `99999` указывается никнейм или номер кошелька получателя (задайте соответствующее значение параметра `extra['accountType']`). |
-| `accountType?` | `string` | **Параметр используется только для ID=99999**. Значение определяет перевод на QIWI кошелек по никнейму или по номеру кошелька. Если вы не хотите, чтобы пользователь видел номер вашего кошелька на форме, используйте перевод по никнейму.  `phone` - для перевода по номеру  `nickname` - для перевода по никнейму. |
+| `accountType?` | `string` | **Параметр используется только для ID=99999**. Значение определяет перевод на QIWI кошелек по никнейму или по номеру кошелька. Если вы не хотите, чтобы пользователь видел номер вашего кошелька на форме, используйте перевод по никнейму.  - `phone` - для перевода по номеру - `nickname` - для перевода по никнейму. |
 | `amount?` | `number` | Сумма платежа в рублях |
-| `blocked?` | [`LockableField`](index.QIWI.md#lockablefield)[] | Признак неактивного поля формы. Пользователь не сможет менять значение данного поля. Каждый параметр задает соответствующее поле формы и нумеруется начиная с нуля (blocked[0], blocked[1]  и т.д.). Если не указан, пользователь сможет изменить все поля формы.  Допустимые значения:  `sum` - поле "сумма платежа",  `account` - поле "номер счета/телефона/карты",  `comment` - поле "комментарий".  Пример (неактивное поле суммы платежа): `blocked[0]=sum` |
+| `blocked?` | [`LockableField`](index.QIWI.md#lockablefield)[] | Признак неактивного поля формы. Пользователь не сможет менять значение данного поля. Каждый параметр задает соответствующее поле формы и нумеруется начиная с нуля (blocked[0], blocked[1]  и т.д.). Если не указан, пользователь сможет изменить все поля формы.  Допустимые значения: - `sum` - поле "сумма платежа", - `account` - поле "номер счета/телефона/карты", - `comment` - поле "комментарий".  Пример (неактивное поле суммы платежа): `blocked[0]=sum` |
 | `comment?` | `string` | Комментарий. **Параметр используется только для `ID=99`** |
 | `custom?` | `Record`<`string`, `unknown`\> | - |
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:696
+dist/cjs/apis/wallet/wallet.types.d.ts:677
 
 ___
 
@@ -530,7 +531,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:905
+dist/cjs/apis/wallet/wallet.types.d.ts:883
 
 ___
 
@@ -540,7 +541,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:647
+dist/cjs/apis/wallet/wallet.types.d.ts:628
 
 ___
 
@@ -556,7 +557,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:637
+dist/cjs/apis/wallet/wallet.types.d.ts:618
 
 ___
 
@@ -566,7 +567,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:429
+dist/cjs/apis/wallet/wallet.types.d.ts:416
 
 ___
 
@@ -578,14 +579,14 @@ ___
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `operation?` | [`TransactionTypeAny`](index.QIWI.md#transactiontypeany) | Тип операций в отчете, для отбора. Допустимые значения:  `ALL` - все операции,  `IN` - только пополнения,  `OUT` - только платежи,  `QIWI_CARD` - только платежи по картам QIWI (QVC, QVP).  По умолчанию `ALL` |
+| `operation?` | [`TransactionTypeAny`](index.QIWI.md#transactiontypeany) | Тип операций в отчете, для отбора. Допустимые значения: - `ALL` - все операции, - `IN` - только пополнения, - `OUT` - только платежи, - `QIWI_CARD` - только платежи по картам QIWI (QVC, QVP).  По умолчанию `ALL`   **`default`** "ALL" |
 | `qvxCardId?` | [`StringOrNumber`](index.QIWI.md#stringornumber) | - |
 | `rows` | `number` | Число платежей в ответе, для разбивки отчета на страницы. Целое число от 1 до 50. Запрос возвращает указанное число платежей в обратном хронологическом порядке, начиная от текущей даты или даты в параметре `startDate` |
-| `sources?` | [`PaymentHistorySourceAny`](index.QIWI.md#paymenthistorysourceany)[] | Список источников платежа, для фильтра. Каждый источник нумеруется, начиная с нуля (`sources[0]`, `sources[1]` и т.д.).  Допустимые значения:  `QW_RUB` - рублевый счет кошелька,  `QW_USD` - счет кошелька в долларах,  `QW_EUR` - счет кошелька в евро,  `CARD` - привязанные и непривязанные к кошельку банковские карты,  `MK` - счет мобильного оператора. Если не указан, учитываются все источники |
+| `sources?` | [`PaymentHistorySourceAny`](index.QIWI.md#paymenthistorysourceany)[] | Список источников платежа, для фильтра. Каждый источник нумеруется, начиная с нуля (`sources[0]`, `sources[1]` и т.д.).  Допустимые значения: - `QW_RUB` - рублевый счет кошелька, - `QW_USD` - счет кошелька в долларах, - `QW_EUR` - счет кошелька в евро, - `CARD` - привязанные и непривязанные к кошельку банковские карты, - `MK` - счет мобильного оператора. Если не указан, учитываются все источники |
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:358
+dist/cjs/apis/wallet/wallet.types.d.ts:352
 
 ___
 
@@ -602,7 +603,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:401
+dist/cjs/apis/wallet/wallet.types.d.ts:388
 
 ___
 
@@ -612,7 +613,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:445
+dist/cjs/apis/wallet/wallet.types.d.ts:432
 
 ___
 
@@ -629,7 +630,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:446
+dist/cjs/apis/wallet/wallet.types.d.ts:433
 
 ___
 
@@ -647,7 +648,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:550
+dist/cjs/apis/wallet/wallet.types.d.ts:531
 
 ___
 
@@ -670,7 +671,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:287
+dist/cjs/apis/wallet/wallet.types.d.ts:284
 
 ___
 
@@ -680,7 +681,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:305
+dist/cjs/apis/wallet/wallet.types.d.ts:302
 
 ___
 
@@ -697,7 +698,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:1102
+dist/cjs/apis/wallet/wallet.types.d.ts:1078
 
 ___
 
@@ -727,7 +728,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:581
+dist/cjs/apis/wallet/wallet.types.d.ts:562
 
 ___
 
@@ -737,7 +738,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:580
+dist/cjs/apis/wallet/wallet.types.d.ts:561
 
 ___
 
@@ -747,7 +748,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:579
+dist/cjs/apis/wallet/wallet.types.d.ts:560
 
 ___
 
@@ -771,7 +772,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:603
+dist/cjs/apis/wallet/wallet.types.d.ts:584
 
 ___
 
@@ -781,7 +782,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:695
+dist/cjs/apis/wallet/wallet.types.d.ts:676
 
 ___
 
@@ -817,7 +818,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:1233
+dist/cjs/apis/wallet/wallet.types.d.ts:1209
 
 ___
 
@@ -841,7 +842,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:976
+dist/cjs/apis/wallet/wallet.types.d.ts:954
 
 ___
 
@@ -862,7 +863,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:648
+dist/cjs/apis/wallet/wallet.types.d.ts:629
 
 ___
 
@@ -872,7 +873,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:357
+dist/cjs/apis/wallet/wallet.types.d.ts:351
 
 ___
 
@@ -882,7 +883,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:356
+dist/cjs/apis/wallet/wallet.types.d.ts:350
 
 ___
 
@@ -907,7 +908,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:668
+dist/cjs/apis/wallet/wallet.types.d.ts:649
 
 ___
 
@@ -979,7 +980,7 @@ ___
 
 ### PrettyTokenResponse
 
-Ƭ **PrettyTokenResponse**<`C`\>: `Object`
+Ƭ **PrettyTokenResponse**<`C`\>: [`ShortTokenResponse`](index.QIWI.md#shorttokenresponse) & { `client`: `C`  }
 
 #### Type parameters
 
@@ -987,17 +988,9 @@ ___
 | :------ |
 | `C` |
 
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `client` | `C` |
-| `expiry` | `number` |
-| `token` | `string` |
-
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:757
+dist/cjs/apis/wallet/wallet.types.d.ts:738
 
 ___
 
@@ -1023,7 +1016,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:1220
+dist/cjs/apis/wallet/wallet.types.d.ts:1196
 
 ___
 
@@ -1033,7 +1026,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:1028
+dist/cjs/apis/wallet/wallet.types.d.ts:1006
 
 ___
 
@@ -1043,7 +1036,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:1027
+dist/cjs/apis/wallet/wallet.types.d.ts:1005
 
 ___
 
@@ -1053,7 +1046,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:1026
+dist/cjs/apis/wallet/wallet.types.d.ts:1004
 
 ___
 
@@ -1071,7 +1064,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:1239
+dist/cjs/apis/wallet/wallet.types.d.ts:1215
 
 ___
 
@@ -1081,7 +1074,24 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:322
+dist/cjs/apis/wallet/wallet.types.d.ts:316
+
+___
+
+### ShortTokenResponse
+
+Ƭ **ShortTokenResponse**: `Object`
+
+#### Type declaration
+
+| Name | Type |
+| :------ | :------ |
+| `expiry` | `number` |
+| `token` | `string` |
+
+#### Defined in
+
+dist/cjs/apis/wallet/wallet.types.d.ts:734
 
 ___
 
@@ -1091,7 +1101,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:1101
+dist/cjs/apis/wallet/wallet.types.d.ts:1077
 
 ___
 
@@ -1110,7 +1120,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:747
+dist/cjs/apis/wallet/wallet.types.d.ts:724
 
 ___
 
@@ -1146,17 +1156,17 @@ ___
 | `provider.shortName` | `string` | краткое наименование провайдера |
 | `provider.siteUrl` | `string` \| ``null`` | сайт провайдера |
 | `source` | `object` | Служебная информация |
-| `status` | [`TransactionStatus`](../enums/index.QIWI.TransactionStatus.md) | Статус платежа. Возможные значения:  `WAITING` - платеж проводится  `SUCCESS` - успешный платеж  `ERROR` - ошибка платежа. |
+| `status` | [`TransactionStatus`](../enums/index.QIWI.TransactionStatus.md) | Статус платежа. Возможные значения: - `WAITING` - платеж проводится - `SUCCESS` - успешный платеж - `ERROR` - ошибка платежа. |
 | `statusText` | `string` | Текстовое описание статуса платежа |
 | `sum` | [`MoneyAmount`](index.QIWI.md#moneyamount) | Данные о сумме платежа или пополнения. |
 | `total` | [`MoneyAmount`](index.QIWI.md#moneyamount) | Данные о фактической сумме платежа или пополнения. |
 | `trmTxnId` | `string` | Клиентский ID транзакции |
 | `txnId` | `number` | ID транзакции в сервисе QIWI Кошелек |
-| `type` | [`IN`](../enums/index.QIWI.TransactionType.md#in) \| [`OUT`](../enums/index.QIWI.TransactionType.md#out) \| [`QIWI_CARD`](../enums/index.QIWI.TransactionType.md#qiwi_card) | Тип платежа. Возможные значения:  `IN` - пополнение,  `OUT` - платеж,  `QIWI_CARD` - платеж с карт QIWI (QVC, QVP). |
+| `type` | [`IN`](../enums/index.QIWI.TransactionType.md#in) \| [`OUT`](../enums/index.QIWI.TransactionType.md#out) \| [`QIWI_CARD`](../enums/index.QIWI.TransactionType.md#qiwi_card) | Тип платежа. Возможные значения: - `IN` - пополнение, - `OUT` - платеж, - `QIWI_CARD` - платеж с карт QIWI (QVC, QVP). |
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:455
+dist/cjs/apis/wallet/wallet.types.d.ts:442
 
 ___
 
@@ -1216,7 +1226,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:1032
+dist/cjs/apis/wallet/wallet.types.d.ts:1010
 
 ___
 
@@ -1224,7 +1234,7 @@ ___
 
 Ƭ **WebhookTransaction**: `Object`
 
-**`see`** [Документация по вебхукам](https://developer.qiwi.com/ru/qiwi-wallet-personal/#hook_format)
+[Документация по вебхукам](https://developer.qiwi.com/ru/qiwi-wallet-personal/#hook_format)
 
 #### Type declaration
 
@@ -1246,10 +1256,10 @@ ___
 | `payment.sum` | [`MoneyAmount`](index.QIWI.md#moneyamount) \| ``null`` | Данные о сумме платежа или пополнения |
 | `payment.total` | [`MoneyAmount`](index.QIWI.md#moneyamount) \| ``null`` | Данные об итоговой сумме платежа или пополнения |
 | `payment.txnId` | `number` | ID транзакции в процессинге QIWI Wallet |
-| `payment.type` | [`IN`](../enums/index.QIWI.TransactionType.md#in) \| [`OUT`](../enums/index.QIWI.TransactionType.md#out) | Тип платежа. Возможные значения:  `IN` - пополнение,  `OUT` - платеж. |
+| `payment.type` | [`IN`](../enums/index.QIWI.TransactionType.md#in) \| [`OUT`](../enums/index.QIWI.TransactionType.md#out) | Тип платежа. Возможные значения: - `IN` - пополнение, - `OUT` - платеж. |
 | `test` | `boolean` | Признак тестового сообщения |
 | `version` | `string` | Версия API |
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:1047
+dist/cjs/apis/wallet/wallet.types.d.ts:1025

@@ -1,7 +1,7 @@
 import type { Request, RequestHandler } from "express";
 import type { P2pBillsApi } from "./bills.api";
 import { P2pBillNotificationError } from "./p2p.errors";
-import type { BillStatusBody, BillStatusData } from "./p2p.types";
+import type { BillStatusBody, BillStatusNotificationBody } from "./p2p.types";
 
 type Promisify<T> = T extends Promise<any> ? T : Promise<T>;
 type AnyCallableFunction = (...parameters: any[]) => unknown;
@@ -46,12 +46,13 @@ export async function parseJsonRequestBody<T>(request: Request): Promise<T> {
   }
 
   return new Promise((resolve, reject) => {
-    const buffers: Buffer[] = [];
+    let body = "";
 
     request.on("error", (error) => reject(error));
-    request.on("data", (chunk: Buffer) => buffers.push(chunk));
+    request.on("data", (chunk) => {
+      body += chunk.toString();
+    });
     request.on("end", () => {
-      const body = Buffer.concat(buffers);
       const data = JSON.parse(body.toString());
 
       resolve(data);
@@ -62,7 +63,7 @@ export async function parseJsonRequestBody<T>(request: Request): Promise<T> {
 export type BillRequestHandler = RequestHandler<
   Record<string, string>,
   any,
-  BillStatusData
+  BillStatusNotificationBody
 >;
 
 export type MiddlewareOptions = {

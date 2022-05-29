@@ -125,7 +125,7 @@ dist/cjs/apis/p2p/p2p.errors.d.ts:54
 
 #### Inherited from
 
-ExtendedError.\_\_@toStringTag@407
+ExtendedError.\_\_@toStringTag@410
 
 #### Defined in
 

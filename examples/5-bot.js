@@ -1,4 +1,4 @@
-// const { Wallet } = require('qiwi-sdk');
+// const { Wallet } = require("qiwi-sdk");
 const { Wallet } = require("..");
 const { Telegraf } = require("telegraf");
 const { promisify } = require("util");

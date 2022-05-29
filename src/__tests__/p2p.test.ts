@@ -8,9 +8,9 @@ import {
   BillStatusData,
   generateUUID,
   P2P,
-  P2PPaymentError
+  BillPaySource,
+  P2p
 } from "..";
-import { HttpError, P2p } from "../apis";
 
 import { createMockServer, MockServer } from "./server";
 
@@ -29,6 +29,8 @@ describe(P2P.name, () => {
     currency: Math.random() >= 0.5 ? P2P.Currency.RUB : P2P.Currency.KZT,
     value: 20 + Math.round(Math.random() * 100)
   };
+
+  const themeCode = "Aleksandr-Kc3TIEub-N";
 
   test("Can be initialized", () => {
     expect(qiwi).toBeInstanceOf(P2p);
@@ -53,16 +55,26 @@ describe(P2P.name, () => {
         expirationDateTime: date,
         comment: "Тест",
         customer: {},
+        themeCode,
+        paySourcesFilter: [BillPaySource.Card, BillPaySource.QIWI],
         customFields: {}
       },
       billId
     );
 
-    expect(typeof response?.payUrl).toBe("string");
+    expect(typeof response.payUrl).toBe("string");
 
-    expect(response?.status?.value).toBe(P2P.BillStatus.WAITING);
-    expect(response?.billId).toBe(billId);
-    expect(response?.amount?.currency).toStrictEqual(amount.currency);
+    expect(response.status.value).toBe(P2P.BillStatus.WAITING);
+    expect(response.billId).toBe(billId);
+    expect(response.amount.currency).toStrictEqual(amount.currency);
+    expect(response.customFields).toStrictEqual({
+      themeCode,
+      paySourcesFilter: "card,qw"
+    });
+
+    expect(new Date(date).toISOString()).toBe(
+      new Date(response.expirationDateTime).toISOString()
+    );
 
     const hash = createHmac("sha256", qiwi.secretKey)
       .update(
@@ -90,52 +102,41 @@ describe(P2P.name, () => {
     expect(url2).toBe(url);
   });
 
-  test("[v3] Can create bill", async () => {
-    const response = await qiwi.createBill(
-      {
-        amount
-      },
-      billId
-    );
-
-    expect(new Date(response.expirationDateTime)).toBeInstanceOf(Date);
-  });
-
   test("Can get bill status", async () => {
     const response = await qiwi.billStatus(billId);
 
-    expect(typeof response?.payUrl).toBe("string");
+    expect(typeof response.payUrl).toBe("string");
 
-    expect(response?.status?.value).toBe(P2P.BillStatus.WAITING);
-    expect(response?.billId).toBe(billId);
-    expect(response?.amount?.currency).toStrictEqual(amount.currency);
+    expect(response.status.value).toBe(P2P.BillStatus.WAITING);
+    expect(response.billId).toBe(billId);
+    expect(response.amount.currency).toStrictEqual(amount.currency);
   });
 
   test("Can delete bill", async () => {
     const response = await qiwi.rejectBill(billId);
 
-    expect(typeof response?.payUrl).toBe("string");
+    expect(typeof response.payUrl).toBe("string");
 
-    expect(response?.status?.value).toBe(P2P.BillStatus.REJECTED);
-    expect(response?.billId).toBe(billId);
-    expect(response?.amount?.currency).toStrictEqual(amount.currency);
+    expect(response.status.value).toBe(P2P.BillStatus.REJECTED);
+    expect(response.billId).toBe(billId);
+    expect(response.amount.currency).toStrictEqual(amount.currency);
   });
 
-  test("Cant create Bill date back", async () => {
-    const date = P2P.formatLifetimeDays(-1);
+  test("Default bill expiration is 15 min", async () => {
+    const bill = await qiwi.createBill({
+      amount: { currency: P2P.Currency.RUB, value: 99 }
+    });
 
-    try {
-      await qiwi.createBill({
-        expirationDateTime: date,
-        amount: { currency: P2P.Currency.RUB, value: 99 }
-      });
+    const expiry = new Date(bill.expirationDateTime).getTime();
+    const now = Date.now();
 
-      expect(false).toBeTruthy();
-    } catch (error: any) {
-      expect(error).toBeInstanceOf(P2PPaymentError);
-      expect(error.message).toContain("Неверные параметры");
-      expect(error.cause).toBeInstanceOf(HttpError);
-    }
+    const FIFTEEN_MINUTES = 15 * 60 * 1000;
+    const THRESHOLD = 5000; // 5 sec
+
+    const difference = expiry - now;
+
+    expect(difference).toBeLessThanOrEqual(FIFTEEN_MINUTES);
+    expect(difference).toBeGreaterThan(FIFTEEN_MINUTES - THRESHOLD);
   });
 
   test("Bill form url", () => {
@@ -152,10 +153,16 @@ describe(P2P.name, () => {
     const billId = generateUUID();
     const url = qiwi.createBillFormUrl({
       amount: 10,
-      billId
+      billId,
+      paySourcesFilter: "qw",
+      themeCode
     });
 
     expect(url).toContain(billId);
+    expect(url).toContain(
+      `${encodeURIComponent("customFields[paySourcesFilter]")}=qw`
+    );
+    expect(url).toContain(themeCode);
   });
 
   describe("Middleware", () => {

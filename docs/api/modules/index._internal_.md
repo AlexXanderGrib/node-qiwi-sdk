@@ -26,6 +26,7 @@
 - [WalletIdentificationApi](../classes/index._internal_.WalletIdentificationApi.md)
 - [WalletLimitsApi](../classes/index._internal_.WalletLimitsApi.md)
 - [WalletNicknameApi](../classes/index._internal_.WalletNicknameApi.md)
+- [WalletOauthApi](../classes/index._internal_.WalletOauthApi.md)
 - [WalletPaymentHistoryApi](../classes/index._internal_.WalletPaymentHistoryApi.md)
 - [WalletPaymentsApi](../classes/index._internal_.WalletPaymentsApi.md)
 - [WalletPersonProfileApi](../classes/index._internal_.WalletPersonProfileApi.md)
@@ -39,10 +40,12 @@
 
 ### Type aliases
 
+- [BillCustomFieldsExtension](index._internal_.md#billcustomfieldsextension)
 - [BillRequestHandler](index._internal_.md#billrequesthandler)
 - [BinaryAlike](index._internal_.md#binaryalike)
 - [CardType](index._internal_.md#cardtype)
 - [CreateAndFetchWalletIdParameters](index._internal_.md#createandfetchwalletidparameters)
+- [CustomFields](index._internal_.md#customfields)
 - [ImageObject](index._internal_.md#imageobject)
 - [KeyValueObject](index._internal_.md#keyvalueobject)
 - [MiddlewareOptions](index._internal_.md#middlewareoptions)
@@ -52,9 +55,26 @@
 
 ## Type aliases
 
+### BillCustomFieldsExtension
+
+Ƭ **BillCustomFieldsExtension**: `Object`
+
+#### Type declaration
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `paySourcesFilter?` | [`BillPaySourceAny`](index.QIWI.md#billpaysourceany) \| [`BillPaySourceAny`](index.QIWI.md#billpaysourceany)[] | Строка с разделителями-запятыми. При [открытии формы](https://developer.qiwi.com/ru/p2p-payments/#payurl) будут отображаться только указанные способы перевода (один или несколько), если они доступны. Возможные значения: - `qw` - QIWI Кошелек, - `card` - банковская карта. |
+| `themeCode?` | `string` | Код персонализации темы, добавляется в поле `customFields` |
+
+#### Defined in
+
+dist/cjs/apis/p2p/p2p.types.d.ts:63
+
+___
+
 ### BillRequestHandler
 
-Ƭ **BillRequestHandler**: `RequestHandler`<`Record`<`string`, `string`\>, `any`, [`BillStatusData`](index.QIWI.md#billstatusdata)\>
+Ƭ **BillRequestHandler**: `RequestHandler`<`Record`<`string`, `string`\>, `any`, [`BillStatusNotificationBody`](index.QIWI.md#billstatusnotificationbody)\>
 
 #### Defined in
 
@@ -78,7 +98,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:794
+dist/cjs/apis/wallet/wallet.types.d.ts:773
 
 ___
 
@@ -94,7 +114,17 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.d.ts:23
+dist/cjs/apis/wallet/wallet.d.ts:24
+
+___
+
+### CustomFields
+
+Ƭ **CustomFields**: { `paySourcesFilter?`: `string` ; `themeCode?`: `string`  } & `Record`<`string`, `string`\>
+
+#### Defined in
+
+dist/cjs/apis/p2p/p2p.types.d.ts:26
 
 ___
 
@@ -113,7 +143,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:777
+dist/cjs/apis/wallet/wallet.types.d.ts:756
 
 ___
 
@@ -130,7 +160,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:1216
+dist/cjs/apis/wallet/wallet.types.d.ts:1192
 
 ___
 
@@ -164,7 +194,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:790
+dist/cjs/apis/wallet/wallet.types.d.ts:769
 
 ___
 
@@ -190,13 +220,13 @@ nothing
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.d.ts:22
+dist/cjs/apis/wallet/wallet.d.ts:23
 
 ___
 
 ### URLResult
 
-Ƭ **URLResult**: (`queryParameters?`: [`ReadonlyRecord`](index.QIWI.md#readonlyrecord)<`string`, `unknown`\>) => `string`
+Ƭ **URLResult**: (`queryParameters?`: [`AnyRecord`](index.QIWI.md#anyrecord)) => `string`
 
 #### Type declaration
 
@@ -206,7 +236,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `queryParameters?` | [`ReadonlyRecord`](index.QIWI.md#readonlyrecord)<`string`, `unknown`\> |
+| `queryParameters?` | [`AnyRecord`](index.QIWI.md#anyrecord) |
 
 ##### Returns
 

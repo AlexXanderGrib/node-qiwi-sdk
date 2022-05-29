@@ -1,5 +1,5 @@
 import { createHmac, randomBytes } from "crypto";
-import { compareHmac, parseQuerystring } from "../apis";
+import { compareHmac } from "../apis";
 import { promise, resolveHeaderValue } from "../apis/p2p/p2p.middleware";
 import { getOwnProperty, getOwnPropertyDeep } from "../apis/shared/get";
 
@@ -52,10 +52,6 @@ describe("Getters", () => {
     expect(
       object.signFields.split(",").map((field) => getOwnPropertyDeep(object, field))
     ).toEqual([643, 1.73, "OUT", "myAccount", "13117338074", undefined]);
-  });
-
-  test("parseQuerystring", () => {
-    expect(parseQuerystring("a[0]=1")).toEqual({ a: [1] });
   });
 
   test("Compare HMAC", () => {

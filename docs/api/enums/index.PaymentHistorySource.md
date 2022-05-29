@@ -26,7 +26,7 @@
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:349
+dist/cjs/apis/wallet/wallet.types.d.ts:343
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:354
+dist/cjs/apis/wallet/wallet.types.d.ts:348
 
 ___
 
@@ -51,7 +51,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:344
+dist/cjs/apis/wallet/wallet.types.d.ts:338
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:336
+dist/cjs/apis/wallet/wallet.types.d.ts:330
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:332
+dist/cjs/apis/wallet/wallet.types.d.ts:326
 
 ___
 
@@ -87,4 +87,4 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:340
+dist/cjs/apis/wallet/wallet.types.d.ts:334

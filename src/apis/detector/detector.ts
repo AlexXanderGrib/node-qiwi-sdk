@@ -1,5 +1,5 @@
 import { ApiClass } from "../api";
-import { formatQuerystring, SimpleJsonHttp, USER_AGENT } from "../shared";
+import { formatQuerystring, SimpleJsonHttp, url, USER_AGENT } from "../shared";
 import { DetectorDetectApi } from "./detect.api";
 import type { DetectorApiOptions } from "./detector.options";
 
@@ -25,7 +25,7 @@ export class Detector extends ApiClass<DetectorApiOptions> {
     http.client.options = {
       ...http.client.options,
       stringifyBody: (body) => formatQuerystring(body),
-      baseURL: "https://qiwi.com/",
+      baseURL: url`https://qiwi.com/`(),
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
         Accept: "application/json",

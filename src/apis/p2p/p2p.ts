@@ -1,6 +1,6 @@
 import type { RequestHandler } from "express";
 import { ApiClass } from "../api";
-import { environment, SimpleJsonHttp, USER_AGENT } from "../shared";
+import { environment, SimpleJsonHttp, url, USER_AGENT } from "../shared";
 import { P2pBillsApi } from "./bills.api";
 import { mapHttpErrors } from "./p2p.errors";
 import {
@@ -25,6 +25,10 @@ export class P2p extends ApiClass<P2pApiOptions> {
   static readonly BillPaySource = BillPaySource;
   static readonly BillStatus = BillStatus;
 
+  static readonly Currency = BillCurrency;
+  static readonly PaySource = BillPaySource;
+  static readonly Status = BillStatus;
+
   /**
    *
    *
@@ -38,7 +42,7 @@ export class P2p extends ApiClass<P2pApiOptions> {
 
     http.client.options = {
       ...http.client.options,
-      baseURL: "https://api.qiwi.com/partner/bill/v1/bills/",
+      baseURL: url`https://api.qiwi.com/partner/bill/v1/bills/`(),
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
@@ -109,7 +113,7 @@ export class P2p extends ApiClass<P2pApiOptions> {
    * @param {Object} [options={}] Параметры обработки запроса
    * @param {boolean} [options.memo=true] Флаг для включения/отключения пропуска повторяющихся запросов, если один из них был успешно обработан
    *
-   * @param {RequestHandler<Record<string, string>, any, types.BillStatusData>} handler
+   * @param {RequestHandler<Record<string, string>, any, BillStatusNotificationBody>} handler
    *
    * @return {RequestHandler}
    *
@@ -122,7 +126,7 @@ export class P2p extends ApiClass<P2pApiOptions> {
    *
    * ```js
    * app.post('/webhook/qiwi', p2p.notificationMiddleware(), (req, res) => {
-   *  req.body // Это `BillStatusData`
+   *  req.body // Это `BillStatusNotificationBody`
    * })
    * ```
    *
@@ -130,7 +134,7 @@ export class P2p extends ApiClass<P2pApiOptions> {
    *
    * ```js
    * app.post('/webhook/qiwi', p2p.notificationMiddleware({}, (req, res) => {
-   *  req.body // Это `BillStatusData`
+   *  req.body // Это `BillStatusNotificationBody`
    * }))
    * ```
    *

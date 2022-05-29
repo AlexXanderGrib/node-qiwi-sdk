@@ -1,7 +1,7 @@
 /* istanbul ignore file */
 import { ExtendedError } from "../error";
 import { HttpError } from "../shared";
-import type { BillStatusData } from "./p2p.types";
+import type { BillStatusNotificationBody } from "./p2p.types";
 
 export type P2pApiErrorResponse = {
   serviceName: string;
@@ -64,7 +64,7 @@ export class P2pBillNotificationError extends ExtendedError {
    * Creates an instance of P2pBillNotificationError.
    * @memberof P2pBillNotificationError
    */
-  constructor(public notification: BillStatusData) {
+  constructor(public notification: BillStatusNotificationBody) {
     super("Notification signature mismatch");
   }
 }

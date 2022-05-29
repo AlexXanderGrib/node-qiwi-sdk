@@ -31,6 +31,9 @@
 - [BillPaySource](index.QIWI._P2pCompatBillPayments.md#billpaysource)
 - [BillStatus](index.QIWI._P2pCompatBillPayments.md#billstatus)
 - [BillsApi](index.QIWI._P2pCompatBillPayments.md#billsapi)
+- [Currency](index.QIWI._P2pCompatBillPayments.md#currency)
+- [PaySource](index.QIWI._P2pCompatBillPayments.md#paysource)
+- [Status](index.QIWI._P2pCompatBillPayments.md#status)
 - [httpClientFactory](index.QIWI._P2pCompatBillPayments.md#httpclientfactory)
 
 ### Accessors
@@ -79,7 +82,7 @@ Creates an instance of _P2pCompatBillPayments.
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts:20
+dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts:21
 
 ## Properties
 
@@ -111,7 +114,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.d.ts:55
+dist/cjs/apis/p2p/p2p.d.ts:58
 
 ___
 
@@ -121,7 +124,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts:13
+dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts:14
 
 ___
 
@@ -131,7 +134,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts:12
+dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts:13
 
 ___
 
@@ -191,6 +194,48 @@ dist/cjs/apis/p2p/p2p.d.ts:16
 
 ___
 
+### Currency
+
+▪ `Static` `Readonly` **Currency**: typeof [`BillCurrency`](../enums/index.QIWI.BillCurrency.md)
+
+#### Inherited from
+
+[P2p](index.QIWI.P2p.md).[Currency](index.QIWI.P2p.md#currency)
+
+#### Defined in
+
+dist/cjs/apis/p2p/p2p.d.ts:20
+
+___
+
+### PaySource
+
+▪ `Static` `Readonly` **PaySource**: typeof [`BillPaySource`](../enums/index.QIWI.BillPaySource.md)
+
+#### Inherited from
+
+[P2p](index.QIWI.P2p.md).[PaySource](index.QIWI.P2p.md#paysource)
+
+#### Defined in
+
+dist/cjs/apis/p2p/p2p.d.ts:21
+
+___
+
+### Status
+
+▪ `Static` `Readonly` **Status**: typeof [`BillStatus`](../enums/index.QIWI.BillStatus.md)
+
+#### Inherited from
+
+[P2p](index.QIWI.P2p.md).[Status](index.QIWI.P2p.md#status)
+
+#### Defined in
+
+dist/cjs/apis/p2p/p2p.d.ts:22
+
+___
+
 ### httpClientFactory
 
 ▪ `Static` **httpClientFactory**: (`secretKey`: `string`) => [`SimpleJsonHttp`](index.QIWI.SimpleJsonHttp.md)
@@ -221,7 +266,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.d.ts:28
+dist/cjs/apis/p2p/p2p.d.ts:31
 
 ## Accessors
 
@@ -239,7 +284,7 @@ dist/cjs/apis/p2p/p2p.d.ts:28
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts:27
+dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts:28
 
 ___
 
@@ -299,7 +344,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts:34
+dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts:35
 
 ___
 
@@ -347,7 +392,7 @@ Normalize amount
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts:42
+dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts:43
 
 ___
 
@@ -373,7 +418,7 @@ Cancelling unpaid bill
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts:102
+dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts:103
 
 ___
 
@@ -401,7 +446,7 @@ Checks notification data signature
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts:52
+dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts:53
 
 ___
 
@@ -428,7 +473,7 @@ Creating bill
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts:86
+dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts:87
 
 ___
 
@@ -444,7 +489,7 @@ Creating checkout link
 
 | Name | Type |
 | :------ | :------ |
-| `parameters` | `Pick`<{ `amount`: `string` \| `number` ; `billId?`: `string` ; `comment?`: `string` ; `customFields?`: `Record`<`string`, `string`\> ; `lifetime?`: `string` ; `successUrl?`: `string`  } & { `account?`: `string` ; `email?`: `string` ; `phone?`: `string`  }, ``"amount"`` \| ``"billId"`` \| ``"successUrl"``\> & { `publicKey?`: `string`  } & `Record`<`string`, `any`\> |
+| `parameters` | `Pick`<[`PayUrlPatchParameters`](../modules/index.QIWI.md#payurlpatchparameters) & [`BillCustomFieldsExtension`](../modules/index._internal_.md#billcustomfieldsextension) & { `amount`: `string` \| `number` ; `billId?`: `string` ; `comment?`: `string` ; `customFields?`: [`CustomFields`](../modules/index._internal_.md#customfields) ; `lifetime?`: `string` ; `themeCode?`: `string`  } & { `account?`: `string` ; `email?`: `string` ; `phone?`: `string`  }, ``"amount"`` \| ``"billId"`` \| ``"successUrl"``\> & { `publicKey?`: `string`  } & `Readonly`<`Record`<`string`, `any`\>\> |
 
 #### Returns
 
@@ -454,7 +499,7 @@ Creating checkout link
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts:75
+dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts:76
 
 ___
 
@@ -474,7 +519,7 @@ Return uuid v4
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts:67
+dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts:68
 
 ___
 
@@ -500,7 +545,7 @@ Getting bill info
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts:94
+dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts:95
 
 ___
 
@@ -526,7 +571,7 @@ Lifetime in ISO
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts:60
+dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts:61
 
 ___
 
@@ -554,7 +599,7 @@ Method is not available for individuals
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts:112
+dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts:113
 
 ___
 
@@ -586,7 +631,7 @@ const p2p = new QIWI.P2P(process.env.QIWI_PRIVATE_KEY);
 
 ```js
 app.post('/webhook/qiwi', p2p.notificationMiddleware(), (req, res) => {
- req.body // Это `BillStatusData`
+ req.body // Это `BillStatusNotificationBody`
 })
 ```
 
@@ -594,7 +639,7 @@ app.post('/webhook/qiwi', p2p.notificationMiddleware(), (req, res) => {
 
 ```js
 app.post('/webhook/qiwi', p2p.notificationMiddleware({}, (req, res) => {
- req.body // Это `BillStatusData`
+ req.body // Это `BillStatusNotificationBody`
 }))
 ```
 
@@ -611,7 +656,7 @@ app.use((error, request, response, next) => {
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.d.ts:96
+dist/cjs/apis/p2p/p2p.d.ts:99
 
 ___
 
@@ -641,7 +686,7 @@ Method is not available for individuals
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts:124
+dist/cjs/apis/p2p/p2p.compat-bill-payments.d.ts:125
 
 ___
 
@@ -672,7 +717,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.d.ts:38
+dist/cjs/apis/p2p/p2p.d.ts:41
 
 ___
 
@@ -703,4 +748,4 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.d.ts:48
+dist/cjs/apis/p2p/p2p.d.ts:51
