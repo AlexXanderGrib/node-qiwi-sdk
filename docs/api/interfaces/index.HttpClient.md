@@ -29,7 +29,7 @@
 
 #### Defined in
 
-dist/cjs/apis/shared/http.d.ts:45
+apis/shared/http.types.ts:52
 
 ## Methods
 
@@ -49,4 +49,4 @@ dist/cjs/apis/shared/http.d.ts:45
 
 #### Defined in
 
-dist/cjs/apis/shared/http.d.ts:46
+apis/shared/http.types.ts:53

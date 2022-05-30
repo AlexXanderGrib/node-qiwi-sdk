@@ -16,8 +16,6 @@
 
 - **`OptionsWrapper`**
 
-  ↳ [`OptionsWrapperWithSetter`](index._internal_.OptionsWrapperWithSetter.md)
-
   ↳ [`OptionsWrapperWithGetter`](index._internal_.OptionsWrapperWithGetter.md)
 
   ↳ [`ApiSubclass`](index._internal_.ApiSubclass.md)
@@ -56,7 +54,7 @@ Creates an instance of OptionsWrapper.
 
 #### Defined in
 
-dist/cjs/apis/options-wrapper.d.ts:22
+[apis/options-wrapper.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/options-wrapper.ts#L23)
 
 ## Properties
 
@@ -70,4 +68,4 @@ dist/cjs/apis/options-wrapper.d.ts:22
 
 #### Defined in
 
-dist/cjs/apis/options-wrapper.d.ts:16
+[apis/options-wrapper.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/options-wrapper.ts#L16)

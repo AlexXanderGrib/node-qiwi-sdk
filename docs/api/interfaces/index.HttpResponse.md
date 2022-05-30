@@ -28,7 +28,7 @@
 
 #### Defined in
 
-dist/cjs/apis/shared/http.d.ts:25
+apis/shared/http.types.ts:29
 
 ___
 
@@ -38,7 +38,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/shared/http.d.ts:24
+apis/shared/http.types.ts:28
 
 ___
 
@@ -48,7 +48,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/shared/http.d.ts:22
+apis/shared/http.types.ts:26
 
 ___
 
@@ -58,4 +58,4 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/shared/http.d.ts:23
+apis/shared/http.types.ts:27

@@ -60,7 +60,7 @@ Creates an instance of OptionsWrapper.
 
 #### Defined in
 
-dist/cjs/apis/options-wrapper.d.ts:22
+[apis/options-wrapper.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/options-wrapper.ts#L23)
 
 ## Properties
 
@@ -78,7 +78,7 @@ dist/cjs/apis/options-wrapper.d.ts:22
 
 #### Defined in
 
-dist/cjs/apis/options-wrapper.d.ts:16
+[apis/options-wrapper.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/options-wrapper.ts#L16)
 
 ## Accessors
 
@@ -100,7 +100,7 @@ WalletApi.http
 
 #### Defined in
 
-dist/cjs/apis/api.d.ts:43
+[apis/api.ts:55](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/api.ts#L55)
 
 ___
 
@@ -122,7 +122,7 @@ WalletApi.walletId
 
 #### Defined in
 
-dist/cjs/apis/wallet/api.d.ts:17
+[apis/wallet/api.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/api.ts#L17)
 
 ## Methods
 
@@ -150,7 +150,7 @@ dist/cjs/apis/wallet/api.d.ts:17
 
 #### Defined in
 
-dist/cjs/apis/wallet/cards.api.d.ts:34
+[apis/wallet/cards.api.ts:48](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/cards.api.ts#L48)
 
 ___
 
@@ -169,8 +169,8 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `[options={}]?` | `Object` |
-| `[options={}].onlyQiwiMaster?` | `boolean` |
+| `[options={}]` | `Object` |
+| `[options={}].onlyQiwiMaster` | `undefined` \| `boolean` |
 
 #### Returns
 
@@ -180,7 +180,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/cards.api.d.ts:22
+[apis/wallet/cards.api.ts:31](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/cards.api.ts#L31)
 
 ___
 
@@ -210,7 +210,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/cards.api.d.ts:58
+[apis/wallet/cards.api.ts:82](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/cards.api.ts#L82)
 
 ___
 
@@ -241,7 +241,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/cards.api.d.ts:71
+[apis/wallet/cards.api.ts:100](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/cards.api.ts#L100)
 
 ___
 
@@ -271,4 +271,4 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/cards.api.d.ts:46
+[apis/wallet/cards.api.ts:65](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/cards.api.ts#L65)

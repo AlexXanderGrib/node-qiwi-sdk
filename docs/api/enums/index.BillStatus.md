@@ -23,7 +23,7 @@
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.types.d.ts:9
+[apis/p2p/p2p.types.ts:9](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/p2p/p2p.types.ts#L9)
 
 ___
 
@@ -35,7 +35,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.types.d.ts:5
+[apis/p2p/p2p.types.ts:5](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/p2p/p2p.types.ts#L5)
 
 ___
 
@@ -47,7 +47,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.types.d.ts:7
+[apis/p2p/p2p.types.ts:7](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/p2p/p2p.types.ts#L7)
 
 ___
 
@@ -59,4 +59,4 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.types.d.ts:3
+[apis/p2p/p2p.types.ts:3](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/p2p/p2p.types.ts#L3)

@@ -35,7 +35,7 @@
 
 #### Defined in
 
-dist/cjs/apis/shared/http.d.ts:8
+apis/shared/http.types.ts:8
 
 ___
 
@@ -45,7 +45,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/shared/http.d.ts:10
+apis/shared/http.types.ts:10
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/shared/http.d.ts:7
+apis/shared/http.types.ts:7
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/shared/http.d.ts:9
+apis/shared/http.types.ts:9
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/shared/http.d.ts:11
+apis/shared/http.types.ts:11
 
 ## Methods
 
@@ -95,7 +95,7 @@ dist/cjs/apis/shared/http.d.ts:11
 
 #### Defined in
 
-dist/cjs/apis/shared/http.d.ts:14
+apis/shared/http.types.ts:15
 
 ___
 
@@ -107,7 +107,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `body` | `Buffer` |
+| `body` | `Uint8Array` |
 
 #### Returns
 
@@ -115,13 +115,13 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/shared/http.d.ts:13
+apis/shared/http.types.ts:14
 
 ___
 
 ### stringifyBody
 
-▸ `Optional` **stringifyBody**(`body`): `string` \| `Buffer`
+▸ `Optional` **stringifyBody**(`body`): `string` \| `Uint8Array`
 
 #### Parameters
 
@@ -131,8 +131,8 @@ ___
 
 #### Returns
 
-`string` \| `Buffer`
+`string` \| `Uint8Array`
 
 #### Defined in
 
-dist/cjs/apis/shared/http.d.ts:12
+apis/shared/http.types.ts:13

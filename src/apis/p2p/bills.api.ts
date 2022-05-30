@@ -1,4 +1,11 @@
-import { compareQiwiHmac, formatOffsetDate, generateUUID, url } from "../shared";
+import {
+  compareQiwiHmac,
+  formatOffsetAltLifetimeDate,
+  formatOffsetDate,
+  generateUUID,
+  URL,
+  url
+} from "../shared";
 import { P2pApi } from "./api";
 import type {
   BillCreateParameters,
@@ -11,8 +18,6 @@ import type {
   PayUrlPatchParameters,
   RefundCreationRequest
 } from "./p2p.types";
-
-declare const URL: typeof import("url").URL;
 
 /**
  * # P2P-счета
@@ -194,7 +199,7 @@ export class P2pBillsApi extends P2pApi {
    */
   createFormUrl(parameters: BillFormParameters): string {
     const {
-      lifetime = formatOffsetDate(15, "min"),
+      lifetime = formatOffsetAltLifetimeDate(15, "min"),
       themeCode,
       customFields = {},
       billId = this.generateId(),
@@ -208,20 +213,13 @@ export class P2pBillsApi extends P2pApi {
         this._resolvePaySourcesFilter(paySourcesFilter);
     }
 
-    const mappedCustomFields = Object.fromEntries(
-      Object.entries(customFields).map(([key, value]) => [
-        `customFields[${key}]`,
-        value
-      ])
-    );
-
     const options = {
       ...bill,
       billId,
       lifetime,
       amount: this._normalizeAmount(parameters.amount),
       publicKey: this.publicKey,
-      ...mappedCustomFields
+      customFields
     };
 
     return url`https://oplata.qiwi.com/create`(options);

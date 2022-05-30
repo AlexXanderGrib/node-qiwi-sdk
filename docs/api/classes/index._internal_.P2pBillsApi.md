@@ -23,10 +23,7 @@
 
 ### Properties
 
-- [\_normalizeAmount](index._internal_.P2pBillsApi.md#_normalizeamount)
 - [\_options](index._internal_.P2pBillsApi.md#_options)
-- [\_resolvePaySourcesFilter](index._internal_.P2pBillsApi.md#_resolvepaysourcesfilter)
-- [generateId](index._internal_.P2pBillsApi.md#generateid)
 
 ### Accessors
 
@@ -36,9 +33,12 @@
 
 ### Methods
 
+- [\_normalizeAmount](index._internal_.P2pBillsApi.md#_normalizeamount)
+- [\_resolvePaySourcesFilter](index._internal_.P2pBillsApi.md#_resolvepaysourcesfilter)
 - [checkNotificationSignature](index._internal_.P2pBillsApi.md#checknotificationsignature)
 - [create](index._internal_.P2pBillsApi.md#create)
 - [createFormUrl](index._internal_.P2pBillsApi.md#createformurl)
+- [generateId](index._internal_.P2pBillsApi.md#generateid)
 - [getRefundStatus](index._internal_.P2pBillsApi.md#getrefundstatus)
 - [getStatus](index._internal_.P2pBillsApi.md#getstatus)
 - [refund](index._internal_.P2pBillsApi.md#refund)
@@ -67,25 +67,9 @@ Creates an instance of OptionsWrapper.
 
 #### Defined in
 
-dist/cjs/apis/options-wrapper.d.ts:22
+[apis/options-wrapper.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/options-wrapper.ts#L23)
 
 ## Properties
-
-### \_normalizeAmount
-
-• `Private` **\_normalizeAmount**: `any`
-
-Нормализует сумму до строки с 2 числами после запятой
-
-**`param`** Сумма
-
-**`returns`**
-
-#### Defined in
-
-dist/cjs/apis/p2p/bills.api.d.ts:36
-
-___
 
 ### \_options
 
@@ -101,41 +85,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/options-wrapper.d.ts:16
-
-___
-
-### \_resolvePaySourcesFilter
-
-• `Private` **\_resolvePaySourcesFilter**: `any`
-
-**`param`**
-
-**`returns`** {string}
-
-**`memberof`** P2pBillsApi
-
-#### Defined in
-
-dist/cjs/apis/p2p/bills.api.d.ts:28
-
-___
-
-### generateId
-
-• **generateId**: () => `string`
-
-#### Type declaration
-
-▸ (): `string`
-
-##### Returns
-
-`string`
-
-#### Defined in
-
-dist/cjs/apis/p2p/bills.api.d.ts:37
+[apis/options-wrapper.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/options-wrapper.ts#L16)
 
 ## Accessors
 
@@ -157,7 +107,7 @@ P2pApi.http
 
 #### Defined in
 
-dist/cjs/apis/api.d.ts:43
+[apis/api.ts:55](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/api.ts#L55)
 
 ___
 
@@ -179,7 +129,7 @@ P2pApi.publicKey
 
 #### Defined in
 
-dist/cjs/apis/p2p/api.d.ts:17
+[apis/p2p/api.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/p2p/api.ts#L17)
 
 ___
 
@@ -201,9 +151,55 @@ P2pApi.secretKey
 
 #### Defined in
 
-dist/cjs/apis/p2p/api.d.ts:25
+[apis/p2p/api.ts:28](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/p2p/api.ts#L28)
 
 ## Methods
+
+### \_normalizeAmount
+
+▸ `Private` **_normalizeAmount**(`amount`): `string`
+
+Нормализует сумму до строки с 2 числами после запятой
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `amount` | `string` \| `number` | Сумма |
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+[apis/p2p/bills.api.ts:73](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/p2p/bills.api.ts#L73)
+
+___
+
+### \_resolvePaySourcesFilter
+
+▸ `Private` **_resolvePaySourcesFilter**(`paySourcesFilter`): `string`
+
+**`memberof`** P2pBillsApi
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `paySourcesFilter` | [`BillPaySourceAny`](../modules/index.QIWI.md#billpaysourceany) \| [`BillPaySourceAny`](../modules/index.QIWI.md#billpaysourceany)[] |
+
+#### Returns
+
+`string`
+
+{string}
+
+#### Defined in
+
+[apis/p2p/bills.api.ts:58](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/p2p/bills.api.ts#L58)
+
+___
 
 ### checkNotificationSignature
 
@@ -217,7 +213,7 @@ dist/cjs/apis/p2p/api.d.ts:25
 | :------ | :------ |
 | `signature` | `string` |
 | `body` | [`BillStatusData`](../modules/index.QIWI.md#billstatusdata) \| [`BillStatusBody`](../modules/index.QIWI.md#billstatusbody) |
-| `merchantSecret?` | `string` |
+| `merchantSecret` | `string` |
 
 #### Returns
 
@@ -227,7 +223,7 @@ dist/cjs/apis/p2p/api.d.ts:25
 
 #### Defined in
 
-dist/cjs/apis/p2p/bills.api.d.ts:87
+[apis/p2p/bills.api.ts:177](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/p2p/bills.api.ts#L177)
 
 ___
 
@@ -266,7 +262,7 @@ server2server с использованием авторизации. Метод
 
 #### Defined in
 
-dist/cjs/apis/p2p/bills.api.d.ts:58
+[apis/p2p/bills.api.ts:101](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/p2p/bills.api.ts#L101)
 
 ___
 
@@ -290,7 +286,21 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/p2p/bills.api.d.ts:95
+[apis/p2p/bills.api.ts:200](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/p2p/bills.api.ts#L200)
+
+___
+
+### generateId
+
+▸ **generateId**(): `string`
+
+#### Returns
+
+`string`
+
+#### Defined in
+
+[apis/p2p/bills.api.ts:79](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/p2p/bills.api.ts#L79)
 
 ___
 
@@ -317,7 +327,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/p2p/bills.api.d.ts:113
+[apis/p2p/bills.api.ts:258](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/p2p/bills.api.ts#L258)
 
 ___
 
@@ -344,7 +354,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/p2p/bills.api.d.ts:68
+[apis/p2p/bills.api.ts:152](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/p2p/bills.api.ts#L152)
 
 ___
 
@@ -371,7 +381,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/p2p/bills.api.d.ts:104
+[apis/p2p/bills.api.ts:236](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/p2p/bills.api.ts#L236)
 
 ___
 
@@ -397,7 +407,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/p2p/bills.api.d.ts:77
+[apis/p2p/bills.api.ts:164](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/p2p/bills.api.ts#L164)
 
 ___
 
@@ -412,7 +422,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `payUrl` | `string` |
-| `options?` | [`PayUrlPatchParameters`](../modules/index.QIWI.md#payurlpatchparameters) |
+| `options` | [`PayUrlPatchParameters`](../modules/index.QIWI.md#payurlpatchparameters) |
 
 #### Returns
 
@@ -422,4 +432,4 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/p2p/bills.api.d.ts:19
+[apis/p2p/bills.api.ts:38](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/p2p/bills.api.ts#L38)

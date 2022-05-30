@@ -56,7 +56,7 @@ Creates an instance of OptionsWrapper.
 
 #### Defined in
 
-dist/cjs/apis/options-wrapper.d.ts:22
+[apis/options-wrapper.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/options-wrapper.ts#L23)
 
 ## Properties
 
@@ -74,7 +74,7 @@ dist/cjs/apis/options-wrapper.d.ts:22
 
 #### Defined in
 
-dist/cjs/apis/options-wrapper.d.ts:16
+[apis/options-wrapper.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/options-wrapper.ts#L16)
 
 ## Accessors
 
@@ -96,7 +96,7 @@ WalletApi.http
 
 #### Defined in
 
-dist/cjs/apis/api.d.ts:43
+[apis/api.ts:55](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/api.ts#L55)
 
 ___
 
@@ -118,7 +118,7 @@ WalletApi.walletId
 
 #### Defined in
 
-dist/cjs/apis/wallet/api.d.ts:17
+[apis/wallet/api.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/api.ts#L17)
 
 ## Methods
 
@@ -143,4 +143,4 @@ QIWI Кошелька.
 
 #### Defined in
 
-dist/cjs/apis/wallet/restrictions.api.d.ts:23
+[apis/wallet/restrictions.api.ts:25](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/restrictions.api.ts#L25)

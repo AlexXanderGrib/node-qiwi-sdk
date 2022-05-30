@@ -41,8 +41,8 @@ Language: [Русский](./README.ru.md) | **English**
 2. **Simple.** All methods are named as in QIWI documentation and collected into subclasses. All methods have JSDoc comments.
    - **Lot of [examples](#examples)**.
 3. **Reliable.** The library is written in **TypeScript** and covered by tests.
-4. [**Secure.**](./SECURITY.md) The library has only 3 dependencies and is constantly scanned by Code QL and [Snyk](https://snyk.io/advisor/npm-package/qiwi-sdk) for vulnerabilities.
-5. **Compatible.** Code from version `1.1.0` (18 Jan. 2020) will work on version `3.1.0` (26 Apr. 2022) with little changes. Also `qiwi-sdk` provides classes to make migration from similar libs effortless.
+4. [**Secure.**](./SECURITY.md) The library has only 1 dependency (axios) and is constantly scanned by Code QL and [Snyk](https://snyk.io/advisor/npm-package/qiwi-sdk) for vulnerabilities.
+5. **Compatible.** Code from version `1.1.0` (18 Jan. 2020) will work on version `4.0.0` (26 May 2022) with little changes. Also `qiwi-sdk` provides classes to make migration from similar libs effortless.
    - [Migration from version 1 to 2](./docs/migrations/from-1-to-2);
    - [Migration from version 2 to 3](./docs/migrations/from-2-to-3.md);
    - [Migration from `node-qiwi`](./docs/migrations/from-node-qiwi.md);
@@ -52,6 +52,7 @@ Language: [Русский](./README.ru.md) | **English**
    - P2P payment method blocking;
    - "Qiwi Master" Card API.
    - [`Express` integration](#express-integration) out of the box
+7. **Cross Platform.** Works in browser
 
 Language: [Русский](./README.ru.md) | **English**
 
@@ -85,7 +86,7 @@ use cases are different.
   const { P2p, Wallet, Detector } = require("qiwi-sdk");
   ```
 
-- **TypeScript** or **ES Модули**
+- **TypeScript** or **ES Modules**
 
   ```javascript
   import { P2p, Wallet, Detector } from "qiwi-sdk";

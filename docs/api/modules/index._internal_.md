@@ -16,7 +16,6 @@
 - [ExtendedError](../classes/index._internal_.ExtendedError.md)
 - [OptionsWrapper](../classes/index._internal_.OptionsWrapper.md)
 - [OptionsWrapperWithGetter](../classes/index._internal_.OptionsWrapperWithGetter.md)
-- [OptionsWrapperWithSetter](../classes/index._internal_.OptionsWrapperWithSetter.md)
 - [P2pApi](../classes/index._internal_.P2pApi.md)
 - [P2pBillsApi](../classes/index._internal_.P2pBillsApi.md)
 - [WalletApi](../classes/index._internal_.WalletApi.md)
@@ -46,11 +45,13 @@
 - [CardType](index._internal_.md#cardtype)
 - [CreateAndFetchWalletIdParameters](index._internal_.md#createandfetchwalletidparameters)
 - [CustomFields](index._internal_.md#customfields)
+- [DateValue](index._internal_.md#datevalue)
 - [ImageObject](index._internal_.md#imageobject)
 - [KeyValueObject](index._internal_.md#keyvalueobject)
 - [MiddlewareOptions](index._internal_.md#middlewareoptions)
 - [NameValueObject](index._internal_.md#namevalueobject)
 - [SetupHttp](index._internal_.md#setuphttp)
+- [TimeUnit](index._internal_.md#timeunit)
 - [URLResult](index._internal_.md#urlresult)
 
 ## Type aliases
@@ -68,7 +69,7 @@
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.types.d.ts:63
+[apis/p2p/p2p.types.ts:72](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/p2p/p2p.types.ts#L72)
 
 ___
 
@@ -78,17 +79,17 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.middleware.d.ts:23
+[apis/p2p/p2p.middleware.ts:63](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/p2p/p2p.middleware.ts#L63)
 
 ___
 
 ### BinaryAlike
 
-Ƭ **BinaryAlike**: `string` \| `NodeJS.ArrayBufferView`
+Ƭ **BinaryAlike**: `string` \| `Uint8Array`
 
 #### Defined in
 
-dist/cjs/apis/shared/hmac.d.ts:2
+apis/shared/platform/node/crypto/shared.ts:1
 
 ___
 
@@ -98,7 +99,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:773
+[apis/wallet/wallet.types.ts:953](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/wallet.types.ts#L953)
 
 ___
 
@@ -114,7 +115,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.d.ts:24
+[apis/wallet/wallet.ts:41](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/wallet.ts#L41)
 
 ___
 
@@ -124,7 +125,17 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.types.d.ts:26
+[apis/p2p/p2p.types.ts:32](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/p2p/p2p.types.ts#L32)
+
+___
+
+### DateValue
+
+Ƭ **DateValue**: `Date` \| `number` \| `string`
+
+#### Defined in
+
+[apis/shared/time.ts:3](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/shared/time.ts#L3)
 
 ___
 
@@ -143,7 +154,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:756
+[apis/wallet/wallet.types.ts:934](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/wallet.types.ts#L934)
 
 ___
 
@@ -160,7 +171,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:1192
+[apis/wallet/wallet.types.ts:1483](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/wallet.types.ts#L1483)
 
 ___
 
@@ -177,7 +188,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/p2p/p2p.middleware.d.ts:24
+[apis/p2p/p2p.middleware.ts:69](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/p2p/p2p.middleware.ts#L69)
 
 ___
 
@@ -194,7 +205,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:769
+[apis/wallet/wallet.types.ts:951](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/wallet.types.ts#L951)
 
 ___
 
@@ -220,7 +231,17 @@ nothing
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.d.ts:23
+[apis/wallet/wallet.ts:39](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/wallet.ts#L39)
+
+___
+
+### TimeUnit
+
+Ƭ **TimeUnit**: [`TimeSpan`](../enums/index.QIWI.TimeSpan.md) \| `number` \| [`TimeSpanKeys`](index.QIWI.md#timespankeys)
+
+#### Defined in
+
+[apis/shared/time.ts:80](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/shared/time.ts#L80)
 
 ___
 
@@ -244,4 +265,4 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/shared/url.d.ts:2
+[apis/shared/url.ts:4](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/shared/url.ts#L4)

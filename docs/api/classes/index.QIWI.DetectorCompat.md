@@ -26,7 +26,6 @@
 - [\_options](index.QIWI.DetectorCompat.md#_options)
 - [detectProvider](index.QIWI.DetectorCompat.md#detectprovider)
 - [DetectApi](index.QIWI.DetectorCompat.md#detectapi)
-- [httpClientFactory](index.QIWI.DetectorCompat.md#httpclientfactory)
 
 ### Accessors
 
@@ -38,6 +37,7 @@
 - [getCardProvider](index.QIWI.DetectorCompat.md#getcardprovider)
 - [getPhoneProvider](index.QIWI.DetectorCompat.md#getphoneprovider)
 - [create](index.QIWI.DetectorCompat.md#create)
+- [httpClientFactory](index.QIWI.DetectorCompat.md#httpclientfactory)
 
 ## Constructors
 
@@ -55,7 +55,7 @@ Creates an instance of DetectorCompat.
 
 #### Defined in
 
-dist/cjs/apis/detector/detector.compat.d.ts:16
+[apis/detector/detector.compat.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/detector/detector.compat.ts#L17)
 
 ## Properties
 
@@ -73,7 +73,7 @@ dist/cjs/apis/detector/detector.compat.d.ts:16
 
 #### Defined in
 
-dist/cjs/apis/options-wrapper.d.ts:16
+[apis/options-wrapper.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/options-wrapper.ts#L16)
 
 ___
 
@@ -87,13 +87,13 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/detector/detector.d.ts:35
+[apis/detector/detector.ts:63](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/detector/detector.ts#L63)
 
 ___
 
 ### DetectApi
 
-▪ `Static` `Readonly` **DetectApi**: typeof [`DetectorDetectApi`](index._internal_.DetectorDetectApi.md)
+▪ `Static` `Readonly` **DetectApi**: typeof [`DetectorDetectApi`](index._internal_.DetectorDetectApi.md) = `DetectorDetectApi`
 
 #### Inherited from
 
@@ -101,35 +101,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/detector/detector.d.ts:12
-
-___
-
-### httpClientFactory
-
-▪ `Static` **httpClientFactory**: () => [`SimpleJsonHttp`](index.QIWI.SimpleJsonHttp.md)
-
-#### Type declaration
-
-▸ (): [`SimpleJsonHttp`](index.QIWI.SimpleJsonHttp.md)
-
-**`static`**
-
-**`memberof`** Detector
-
-##### Returns
-
-[`SimpleJsonHttp`](index.QIWI.SimpleJsonHttp.md)
-
-{SimpleJsonHttp}
-
-#### Inherited from
-
-[Detector](index.QIWI.Detector.md).[httpClientFactory](index.QIWI.Detector.md#httpclientfactory)
-
-#### Defined in
-
-dist/cjs/apis/detector/detector.d.ts:20
+[apis/detector/detector.ts:13](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/detector/detector.ts#L13)
 
 ## Accessors
 
@@ -149,7 +121,7 @@ Detector.agent
 
 #### Defined in
 
-dist/cjs/apis/api.d.ts:19
+[apis/api.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/api.ts#L23)
 
 • `set` **agent**(`agent`): `void`
 
@@ -171,7 +143,7 @@ Detector.agent
 
 #### Defined in
 
-dist/cjs/apis/api.d.ts:25
+[apis/api.ts:32](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/api.ts#L32)
 
 ___
 
@@ -193,7 +165,7 @@ Detector.options
 
 #### Defined in
 
-dist/cjs/apis/options-wrapper.d.ts:40
+[apis/options-wrapper.ts:44](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/options-wrapper.ts#L44)
 
 ## Methods
 
@@ -217,7 +189,7 @@ dist/cjs/apis/options-wrapper.d.ts:40
 
 #### Defined in
 
-dist/cjs/apis/detector/detector.compat.d.ts:30
+[apis/detector/detector.compat.ts:37](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/detector/detector.compat.ts#L37)
 
 ___
 
@@ -241,7 +213,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/detector/detector.compat.d.ts:23
+[apis/detector/detector.compat.ts:27](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/detector/detector.compat.ts#L27)
 
 ___
 
@@ -265,4 +237,28 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/detector/detector.d.ts:28
+[apis/detector/detector.ts:48](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/detector/detector.ts#L48)
+
+___
+
+### httpClientFactory
+
+▸ `Static` **httpClientFactory**(): [`SimpleJsonHttp`](index.QIWI.SimpleJsonHttp.md)
+
+**`static`**
+
+**`memberof`** Detector
+
+#### Returns
+
+[`SimpleJsonHttp`](index.QIWI.SimpleJsonHttp.md)
+
+{SimpleJsonHttp}
+
+#### Inherited from
+
+[Detector](index.QIWI.Detector.md).[httpClientFactory](index.QIWI.Detector.md#httpclientfactory)
+
+#### Defined in
+
+[apis/detector/detector.ts:22](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/detector/detector.ts#L22)

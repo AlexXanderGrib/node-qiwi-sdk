@@ -239,7 +239,7 @@ export type BillFormParameters = PayUrlPatchParameters &
     /**
      * Дата, до которой счет будет доступен для перевода. Если
      * перевод по счету не будет произведен до этой даты, ему
-     * присваивается финальный статус EXPIRED и последующий перевод
+     * присваивается финальный статус `EXPIRED` и последующий перевод
      * станет невозможен.
      *
      * **Внимание! По истечении 45 суток от даты выставления счет
@@ -247,6 +247,8 @@ export type BillFormParameters = PayUrlPatchParameters &
      *
      * По умолчанию сроком истечения является день, через 45 суток
      * от времени перехода по ссылке
+     *
+     * Для форматирования используйте функцию `formatAltLifetimeDate()` или `formatOffsetAltLifetimeDate()`
      */
     lifetime?: string;
   } & BillCreationRequest["customer"];

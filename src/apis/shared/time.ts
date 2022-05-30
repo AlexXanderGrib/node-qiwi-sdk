@@ -1,18 +1,42 @@
 import { getOwnProperty } from "./get";
 
+type DateValue = Date | number | string;
+
 /**
  * Форматирует дату в понятную для QIWI строку:
  *
  * `ГГГГ-ММ-ДДTЧЧ:ММ:СС+\-ЧЧ:ММ`
  *
- * @param {Date | number | string} dateTime Аргумент для конструктора
+ * @param {DateValue} dateTime Аргумент для конструктора
  * @return {string}
  */
-export function formatDate(dateTime: Date | number | string): string {
+export function formatDate(dateTime: DateValue): string {
   const date = new Date(dateTime);
   const base = date.toISOString().split(".")[0];
 
   return `${base}+00:00`;
+}
+
+/**
+ * **Используется только для параметра `lifetime` при создании ссылки на форму оплаты**
+ *
+ * Форматирует дату в понятную для QIWI строку:
+ *
+ * `ГГГГ-ММ-ДДTччмм`
+ *
+ * @export
+ * @param {DateValue} dateTime
+ * @return {string}  {string}
+ */
+export function formaAltLifetimeDate(dateTime: DateValue): string {
+  const date = new Date(dateTime);
+  const base = date.toISOString().split("T")[0];
+
+  const time =
+    date.getHours().toString().padStart(2, "0") +
+    date.getMinutes().toString().padStart(2, "0");
+
+  return base + "T" + time;
 }
 
 export enum TimeSpan {
@@ -52,6 +76,30 @@ export const TimeSpanMapping = Object.freeze({
 });
 export type TimeSpanMapping = typeof TimeSpanMapping;
 export type TimeSpanKeys = keyof TimeSpanMapping;
+
+type TimeUnit = TimeSpan | number | TimeSpanKeys;
+
+/**
+ *
+ *
+ * @param {number} amount
+ * @param {TimeUnit} unit
+ * @param {Date} currentDate
+ * @return {Date}
+ */
+function offsetDate(amount: number, unit: TimeUnit, currentDate: Date): Date {
+  const date = new Date(currentDate);
+
+  if (typeof unit !== "number") {
+    unit = getOwnProperty(TimeSpanMapping, unit);
+  }
+
+  const time = Math.round(date.getTime() + amount * unit);
+  date.setTime(time);
+
+  return date;
+}
+
 /**
  *
  *
@@ -63,17 +111,25 @@ export type TimeSpanKeys = keyof TimeSpanMapping;
  */
 export function formatOffsetDate(
   amount: number,
-  unit: TimeSpan | number | TimeSpanKeys = TimeSpan.Millisecond,
+  unit: TimeUnit = TimeSpan.Millisecond,
   currentDate = new Date()
 ): string {
-  const date = new Date(currentDate);
+  return formatDate(offsetDate(amount, unit, currentDate));
+}
 
-  if (typeof unit !== "number") {
-    unit = getOwnProperty(TimeSpanMapping, unit);
-  }
-
-  const time = Math.round(date.getTime() + amount * unit);
-  date.setTime(time);
-
-  return formatDate(date);
+/**
+ *
+ *
+ * @export
+ * @param {number} amount
+ * @param {(TimeSpan | number | TimeSpanKeys)} unit
+ * @param {Date} [currentDate=new Date()]
+ * @return {string}  {string}
+ */
+export function formatOffsetAltLifetimeDate(
+  amount: number,
+  unit: TimeUnit = TimeSpan.Millisecond,
+  currentDate = new Date()
+): string {
+  return formaAltLifetimeDate(offsetDate(amount, unit, currentDate));
 }

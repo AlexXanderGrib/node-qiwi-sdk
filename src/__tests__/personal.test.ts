@@ -328,8 +328,8 @@ describe(Personal.name, () => {
     });
 
     expect(url).toContain(`extra%5B%27account%27%5D=${qiwi.walletId}`);
-    expect(url).toContain(`blocked[0]=account`);
-    expect(url).toContain(`blocked[1]=sum`);
+    expect(url).toContain(`blocked%5B0%5D=account`);
+    expect(url).toContain(`blocked%5B1%5D=sum`);
 
     const url2 = qiwi.createFormUrl(Personal.Recipients.QIWINickname, {
       custom: { a: "b" }

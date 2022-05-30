@@ -11,12 +11,6 @@
 | `Rq` | `any` |
 | `Rs` | `any` |
 
-## Implemented by
-
-- [`DefaultHttpClient`](../classes/index.QIWI.DefaultHttpClient.md)
-- [`DefaultHttpClient`](../classes/index.DefaultHttpClient.md)
-- [`DefaultHttpClient`](../classes/shared.DefaultHttpClient.md)
-
 ## Table of contents
 
 ### Properties
@@ -35,7 +29,7 @@
 
 #### Defined in
 
-dist/cjs/apis/shared/http.d.ts:45
+apis/shared/http.types.ts:52
 
 ## Methods
 
@@ -55,4 +49,4 @@ dist/cjs/apis/shared/http.d.ts:45
 
 #### Defined in
 
-dist/cjs/apis/shared/http.d.ts:46
+apis/shared/http.types.ts:53

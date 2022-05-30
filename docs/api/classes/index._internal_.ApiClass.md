@@ -67,7 +67,7 @@ Creates an instance of OptionsWrapper.
 
 #### Defined in
 
-dist/cjs/apis/options-wrapper.d.ts:22
+[apis/options-wrapper.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/options-wrapper.ts#L23)
 
 ## Properties
 
@@ -85,7 +85,7 @@ dist/cjs/apis/options-wrapper.d.ts:22
 
 #### Defined in
 
-dist/cjs/apis/options-wrapper.d.ts:16
+[apis/options-wrapper.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/options-wrapper.ts#L16)
 
 ## Accessors
 
@@ -101,7 +101,7 @@ dist/cjs/apis/options-wrapper.d.ts:16
 
 #### Defined in
 
-dist/cjs/apis/api.d.ts:19
+[apis/api.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/api.ts#L23)
 
 • `set` **agent**(`agent`): `void`
 
@@ -119,7 +119,7 @@ dist/cjs/apis/api.d.ts:19
 
 #### Defined in
 
-dist/cjs/apis/api.d.ts:25
+[apis/api.ts:32](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/api.ts#L32)
 
 ___
 
@@ -141,4 +141,4 @@ OptionsWrapperWithGetter.options
 
 #### Defined in
 
-dist/cjs/apis/options-wrapper.d.ts:40
+[apis/options-wrapper.ts:44](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/options-wrapper.ts#L44)

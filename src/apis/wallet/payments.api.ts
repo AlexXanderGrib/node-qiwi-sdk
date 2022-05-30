@@ -77,6 +77,12 @@ export class WalletPaymentsApi extends WalletApi {
   ): string {
     const data = {
       currency: Currency.RUB,
+      extra: {
+        "'comment'": options.comment,
+        "'account'": options.account,
+        "'accountType'": options.accountType
+      },
+      blocked: options.blocked,
       ...options.custom
     } as any;
 
@@ -84,13 +90,6 @@ export class WalletPaymentsApi extends WalletApi {
       data.amountInteger = Math.trunc(options.amount);
       data.amountFraction = Math.round((options.amount - data.amountInteger) * 100);
     }
-
-    if (options.comment) data["extra['comment']"] = options.comment;
-    if (options.account) data["extra['account']"] = options.account;
-
-    if (options.accountType) data["extra['accountType']"] = options.accountType;
-
-    if (options.blocked) data.blocked = options.blocked;
 
     return url`https://qiwi.com/payment/form/${provider}`(data);
   }

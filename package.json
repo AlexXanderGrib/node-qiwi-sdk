@@ -1,6 +1,6 @@
 {
   "name": "qiwi-sdk",
-  "version": "3.7.0",
+  "version": "4.0.0-alpha3",
   "description": "⭐ Typed QIWI Wallet SDK. Supported API's: Personal & P2P Bill Payments",
   "keywords": [
     "qiwi",
@@ -50,33 +50,39 @@
   "type": "commonjs",
   "types": "./index.d.ts",
   "typings": "./index.d.ts",
+  "browser": "./dist/web/index.js",
   "sideEffects": false,
   "exports": {
     "./package.json": "./package.json",
     ".": {
       "require": "./index.js",
       "import": "./index.mjs",
-      "types": "./index.d.ts"
+      "types": "./index.d.ts",
+      "browser": "./dist/web/index.js"
     },
     "./wallet": {
       "require": "./wallet.js",
       "import": "./wallet.mjs",
-      "types": "./wallet.d.ts"
+      "types": "./wallet.d.ts",
+      "browser": "./dist/web/wallet.js"
     },
     "./p2p": {
       "require": "./p2p.js",
       "import": "./p2p.mjs",
-      "types": "./p2p.d.ts"
+      "types": "./p2p.d.ts",
+      "browser": "./dist/web/p2p.js"
     },
     "./detector": {
       "require": "./detector.js",
       "import": "./detector.mjs",
-      "types": "./detector.d.ts"
+      "types": "./detector.d.ts",
+      "browser": "./dist/web/detector.js"
     },
     "./shared": {
       "require": "./shared.js",
       "import": "./shared.mjs",
-      "types": "./shared.d.ts"
+      "types": "./shared.d.ts",
+      "shared": "./dist/web/shared.js"
     }
   },
   "publishConfig": {
@@ -140,16 +146,15 @@
     "prettify": "prettier --write src/**/*"
   },
   "dependencies": {
-    "axios": "^0.27.2",
-    "query-string": "^7.1.1",
-    "uuid": "^8.3.2"
+    "axios": "^0.27.2"
   },
   "devDependencies": {
+    "@rollup/plugin-alias": "^3.1.9",
+    "@rollup/plugin-node-resolve": "^13.3.0",
     "@rollup/plugin-replace": "^4.0.0",
     "@types/express": "^4.17.13",
     "@types/jest": "^27.4.1",
     "@types/node": "10",
-    "@types/uuid": "^8.3.4",
     "@typescript-eslint/eslint-plugin": "^5.21.0",
     "@typescript-eslint/parser": "^5.21.0",
     "dotenv": "^16.0.0",

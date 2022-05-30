@@ -48,7 +48,7 @@ Partial.agent
 
 #### Defined in
 
-dist/cjs/apis/shared/http.d.ts:8
+apis/shared/http.types.ts:8
 
 ___
 
@@ -62,7 +62,7 @@ Partial.baseURL
 
 #### Defined in
 
-dist/cjs/apis/shared/http.d.ts:10
+apis/shared/http.types.ts:10
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/shared/http.d.ts:19
+apis/shared/http.types.ts:22
 
 ___
 
@@ -86,7 +86,7 @@ Partial.headers
 
 #### Defined in
 
-dist/cjs/apis/shared/http.d.ts:7
+apis/shared/http.types.ts:7
 
 ___
 
@@ -96,7 +96,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/shared/http.d.ts:18
+apis/shared/http.types.ts:21
 
 ___
 
@@ -110,7 +110,7 @@ Partial.okStatusCodes
 
 #### Defined in
 
-dist/cjs/apis/shared/http.d.ts:9
+apis/shared/http.types.ts:9
 
 ___
 
@@ -124,7 +124,7 @@ Partial.timeout
 
 #### Defined in
 
-dist/cjs/apis/shared/http.d.ts:11
+apis/shared/http.types.ts:11
 
 ___
 
@@ -134,7 +134,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/shared/http.d.ts:17
+apis/shared/http.types.ts:20
 
 ## Methods
 
@@ -158,7 +158,7 @@ Partial.mapHttpErrors
 
 #### Defined in
 
-dist/cjs/apis/shared/http.d.ts:14
+apis/shared/http.types.ts:15
 
 ___
 
@@ -170,7 +170,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `body` | `Buffer` |
+| `body` | `Uint8Array` |
 
 #### Returns
 
@@ -182,13 +182,13 @@ Partial.parseResponse
 
 #### Defined in
 
-dist/cjs/apis/shared/http.d.ts:13
+apis/shared/http.types.ts:14
 
 ___
 
 ### stringifyBody
 
-▸ `Optional` **stringifyBody**(`body`): `string` \| `Buffer`
+▸ `Optional` **stringifyBody**(`body`): `string` \| `Uint8Array`
 
 #### Parameters
 
@@ -198,7 +198,7 @@ ___
 
 #### Returns
 
-`string` \| `Buffer`
+`string` \| `Uint8Array`
 
 #### Inherited from
 
@@ -206,4 +206,4 @@ Partial.stringifyBody
 
 #### Defined in
 
-dist/cjs/apis/shared/http.d.ts:12
+apis/shared/http.types.ts:13

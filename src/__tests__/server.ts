@@ -17,8 +17,7 @@ export type MockServer = {
 export async function createMockServer(): Promise<MockServer> {
   const app = express();
   const server = createServer(app);
-  // eslint-disable-next-line unicorn/consistent-function-scoping
-  let onListening: CallableFunction = () => void 0;
+  let onListening: CallableFunction;
   const whenReady = new Promise((resolve) => {
     onListening = resolve;
   });
@@ -30,7 +29,7 @@ export async function createMockServer(): Promise<MockServer> {
     port = (server.address() as AddressInfo).port;
 
     url = `http://${host}:${port}`;
-    onListening();
+    onListening?.();
   });
 
   await whenReady;

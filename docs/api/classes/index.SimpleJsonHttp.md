@@ -40,21 +40,17 @@ Creates an instance of SimpleJsonHttp.
 
 | Name | Type |
 | :------ | :------ |
-| `client?` | [`HttpClient`](../interfaces/index.QIWI.HttpClient.md)<`any`, `any`\> |
+| `client` | [`HttpClient`](../interfaces/index.QIWI.HttpClient.md)<`any`, `any`\> |
 
 #### Defined in
 
-dist/cjs/apis/shared/http.d.ts:95
+[apis/shared/http.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/shared/http.ts#L17)
 
 ## Properties
 
 ### client
 
 • **client**: [`HttpClient`](../interfaces/index.QIWI.HttpClient.md)<`any`, `any`\>
-
-#### Defined in
-
-dist/cjs/apis/shared/http.d.ts:89
 
 ## Methods
 
@@ -83,7 +79,7 @@ dist/cjs/apis/shared/http.d.ts:89
 
 #### Defined in
 
-dist/cjs/apis/shared/http.d.ts:144
+[apis/shared/http.ts:84](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/shared/http.ts#L84)
 
 ___
 
@@ -111,7 +107,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/shared/http.d.ts:104
+[apis/shared/http.ts:32](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/shared/http.ts#L32)
 
 ___
 
@@ -140,7 +136,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/shared/http.d.ts:134
+[apis/shared/http.ts:71](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/shared/http.ts#L71)
 
 ___
 
@@ -169,7 +165,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/shared/http.d.ts:114
+[apis/shared/http.ts:45](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/shared/http.ts#L45)
 
 ___
 
@@ -198,7 +194,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/shared/http.d.ts:124
+[apis/shared/http.ts:58](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/shared/http.ts#L58)
 
 ___
 
@@ -228,7 +224,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/shared/http.d.ts:162
+[apis/shared/http.ts:108](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/shared/http.ts#L108)
 
 ___
 
@@ -260,4 +256,4 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/shared/http.d.ts:154
+[apis/shared/http.ts:97](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/shared/http.ts#L97)

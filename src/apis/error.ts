@@ -12,7 +12,9 @@ export class ErrorWithCause extends Error {
    * @memberof ErrorWithCause
    */
   constructor(public message: string, public cause?: Error) {
-    super(message, { cause });
+    const parameters = [message, { cause }] as any;
+
+    super(...parameters);
   }
 }
 

@@ -1,2 +1,2 @@
-export * from "./dist/cjs/index";
-export { default } from "./dist/cjs/index";
+export * from "./dist/dts/index";
+export { default } from "./dist/dts/index";

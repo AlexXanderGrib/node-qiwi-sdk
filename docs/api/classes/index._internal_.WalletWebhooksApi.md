@@ -83,7 +83,7 @@ Creates an instance of OptionsWrapper.
 
 #### Defined in
 
-dist/cjs/apis/options-wrapper.d.ts:22
+[apis/options-wrapper.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/options-wrapper.ts#L23)
 
 ## Properties
 
@@ -101,7 +101,7 @@ dist/cjs/apis/options-wrapper.d.ts:22
 
 #### Defined in
 
-dist/cjs/apis/options-wrapper.d.ts:16
+[apis/options-wrapper.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/options-wrapper.ts#L16)
 
 ___
 
@@ -111,7 +111,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/webhooks.api.d.ts:31
+[apis/wallet/webhooks.api.ts:36](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/webhooks.api.ts#L36)
 
 ___
 
@@ -121,7 +121,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/webhooks.api.d.ts:30
+[apis/wallet/webhooks.api.ts:35](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/webhooks.api.ts#L35)
 
 ## Accessors
 
@@ -143,7 +143,7 @@ WalletApi.http
 
 #### Defined in
 
-dist/cjs/apis/api.d.ts:43
+[apis/api.ts:55](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/api.ts#L55)
 
 ___
 
@@ -165,7 +165,7 @@ WalletApi.walletId
 
 #### Defined in
 
-dist/cjs/apis/wallet/api.d.ts:17
+[apis/wallet/api.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/api.ts#L17)
 
 ## Methods
 
@@ -181,7 +181,7 @@ dist/cjs/apis/wallet/api.d.ts:17
 
 #### Defined in
 
-dist/cjs/apis/wallet/webhooks.api.d.ts:39
+[apis/wallet/webhooks.api.ts:45](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/webhooks.api.ts#L45)
 
 ___
 
@@ -196,7 +196,7 @@ ___
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `parameter` | `string` | Адрес сервера обработки вебхуков. **Внимание! Длина исходного (не URL-encoded) адреса сервиса обработчика не должна превышать 100 символов.** |
-| `txnType` | ``0`` \| ``2`` \| ``1`` | Тип транзакций, по которым будут включены уведомления.. 0 - "входящие", 1 - "исходящие". 2 - "все" |
+| `txnType` | ``0`` \| ``1`` \| ``2`` | Тип транзакций, по которым будут включены уведомления.. 0 - "входящие", 1 - "исходящие". 2 - "все" |
 
 #### Returns
 
@@ -204,7 +204,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/webhooks.api.d.ts:46
+[apis/wallet/webhooks.api.ts:57](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/webhooks.api.ts#L57)
 
 ___
 
@@ -226,7 +226,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/webhooks.api.d.ts:82
+[apis/wallet/webhooks.api.ts:137](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/webhooks.api.ts#L137)
 
 ___
 
@@ -240,7 +240,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/webhooks.api.d.ts:69
+[apis/wallet/webhooks.api.ts:112](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/webhooks.api.ts#L112)
 
 ___
 
@@ -254,7 +254,7 @@ ___
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `hookId?` | `string` | UUID вебхука |
+| `hookId` | `string` | UUID вебхука |
 
 #### Returns
 
@@ -262,7 +262,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/webhooks.api.d.ts:58
+[apis/wallet/webhooks.api.ts:87](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/webhooks.api.ts#L87)
 
 ___
 
@@ -276,7 +276,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `hookId?` | `string` |
+| `hookId` | `string` |
 
 #### Returns
 
@@ -284,7 +284,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/webhooks.api.d.ts:52
+[apis/wallet/webhooks.api.ts:74](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/webhooks.api.ts#L74)
 
 ___
 
@@ -302,7 +302,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/webhooks.api.d.ts:76
+[apis/wallet/webhooks.api.ts:126](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/webhooks.api.ts#L126)
 
 ___
 
@@ -316,7 +316,7 @@ ___
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `hookId?` | `string` | UUID вебхука |
+| `hookId` | `string` | UUID вебхука |
 
 #### Returns
 
@@ -324,4 +324,4 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/webhooks.api.d.ts:64
+[apis/wallet/webhooks.api.ts:100](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/webhooks.api.ts#L100)

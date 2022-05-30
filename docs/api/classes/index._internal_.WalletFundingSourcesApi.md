@@ -59,7 +59,7 @@ Creates an instance of OptionsWrapper.
 
 #### Defined in
 
-dist/cjs/apis/options-wrapper.d.ts:22
+[apis/options-wrapper.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/options-wrapper.ts#L23)
 
 ## Properties
 
@@ -77,7 +77,7 @@ dist/cjs/apis/options-wrapper.d.ts:22
 
 #### Defined in
 
-dist/cjs/apis/options-wrapper.d.ts:16
+[apis/options-wrapper.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/options-wrapper.ts#L16)
 
 ## Accessors
 
@@ -99,7 +99,7 @@ WalletApi.http
 
 #### Defined in
 
-dist/cjs/apis/api.d.ts:43
+[apis/api.ts:55](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/api.ts#L55)
 
 ___
 
@@ -121,7 +121,7 @@ WalletApi.walletId
 
 #### Defined in
 
-dist/cjs/apis/wallet/api.d.ts:17
+[apis/wallet/api.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/api.ts#L17)
 
 ## Methods
 
@@ -152,7 +152,7 @@ dist/cjs/apis/wallet/api.d.ts:17
 
 #### Defined in
 
-dist/cjs/apis/wallet/funding-sources.api.d.ts:35
+[apis/wallet/funding-sources.api.ts:44](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/funding-sources.api.ts#L44)
 
 ___
 
@@ -177,7 +177,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/funding-sources.api.d.ts:47
+[apis/wallet/funding-sources.api.ts:64](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/funding-sources.api.ts#L64)
 
 ___
 
@@ -201,7 +201,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/funding-sources.api.d.ts:22
+[apis/wallet/funding-sources.api.ts:24](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/funding-sources.api.ts#L24)
 
 ___
 
@@ -233,4 +233,4 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/funding-sources.api.d.ts:61
+[apis/wallet/funding-sources.api.ts:83](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/funding-sources.api.ts#L83)

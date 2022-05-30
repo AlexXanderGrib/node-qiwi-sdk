@@ -46,7 +46,7 @@ Error.constructor
 
 #### Defined in
 
-dist/cjs/apis/error.d.ts:16
+[apis/error.ts:14](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/error.ts#L14)
 
 ## Properties
 
@@ -54,24 +54,12 @@ dist/cjs/apis/error.d.ts:16
 
 • `Optional` **cause**: `Error`
 
-#### Overrides
-
-Error.cause
-
-#### Defined in
-
-dist/cjs/apis/error.d.ts:9
-
 ___
 
 ### message
 
 • **message**: `string`
 
-#### Overrides
+#### Inherited from
 
 Error.message
-
-#### Defined in
-
-dist/cjs/apis/error.d.ts:8

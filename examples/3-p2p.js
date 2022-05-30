@@ -1,5 +1,5 @@
 // const { Wallet, P2p, BillPaySource, formatOffsetDate } = require("qiwi-sdk");
-const { Wallet, P2p, formatOffsetDate } = require("..");
+const { Wallet, P2p, formatOffsetDate, formatOffsetAltLifetimeDate } = require("..");
 
 const wallet = Wallet.create(process.env.QIWI_TOKEN);
 
@@ -43,6 +43,33 @@ async function main() {
 
   // Выводим ссылку чтобы отправить заказчику
   console.log(bill.payUrl);
+
+  // # Альтернативный способ
+
+  const payUrl = p2p.bills.createFormUrl({
+    // Валюту указать нельзя. Используются только рубли
+    amount: 10,
+
+    account: "Заказчик #15",
+    email: "zakaz@mail.ru",
+    phone: "+79123456789",
+
+    comment: "Создание сайта",
+    successUrl: "https://youtu.be/dQw4w9WgXcQ",
+
+    // Будет обёрнуто в customFields
+    themeCode: "Aleksandr-Kc3TIEub-N",
+
+    // Разрешаем только оплату киви и картой
+    // Будет обёрнуто в customFields
+    paySourcesFilter: [P2p.BillPaySource.Card, P2p.BillPaySource.QIWI],
+
+    // Выбираем по умолчанию карту
+    paySource: P2p.BillPaySource.Card,
+
+    // В ссылке на оплату используется другой формат даты
+    lifetime: formatOffsetAltLifetimeDate(2, "day")
+  });
 }
 
 main();

@@ -1,12 +1,13 @@
 {
+  "$schema": "https://typedoc.org/schema.json",
   "name": "QIWI SDK",
   "out": "./docs/api",
   "entryPoints": [
-    "./index.d.ts",
-    "./wallet.d.ts",
-    "./p2p.d.ts",
-    "./detector.d.ts",
-    "./shared.d.ts"
+    "./src/index.ts",
+    "./src/apis/wallet/index.ts",
+    "./src/apis/p2p/index.ts",
+    "./src/apis/detector/index.ts",
+    "./src/apis/shared/index.ts"
   ],
   "exclude": ["src/__test__", "**/node_modules/**"],
   "externalPattern": ["**/node_modules/**"],
@@ -14,5 +15,5 @@
   "hideGenerator": true,
   "readme": "README.md",
   "theme": "default",
-  "tsconfig": "./tsconfig.json"
+  "tsconfig": "./tsconfig.build.json"
 }

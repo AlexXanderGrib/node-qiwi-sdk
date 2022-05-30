@@ -19,6 +19,19 @@ export function getOwnProperty(object: AnyRecord, key: string): unknown | undefi
 }
 
 /**
+ *
+ *
+ * @export
+ * @template T
+ * @param {ArrayLike<T>} array
+ * @param {number} index
+ * @return {T}  {(T | undefined)}
+ */
+export function getByIndex<T>(array: ArrayLike<T>, index: number): T | undefined {
+  return getOwnProperty<Record<string, T>, string>(array as any, index.toString());
+}
+
+/**
  * Safe _.get
  *
  * @export

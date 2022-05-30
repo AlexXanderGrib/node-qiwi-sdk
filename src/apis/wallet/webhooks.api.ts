@@ -1,4 +1,5 @@
 /* istanbul ignore file */
+import { base64ToUint8Array } from "@platform/decode";
 import { compareQiwiHmac, url } from "../shared";
 import { getOwnPropertyDeep } from "../shared/get";
 import { WalletApi } from "./api";
@@ -149,7 +150,7 @@ export class WalletWebhooksApi extends WalletApi {
       .map((fieldName) => String(getOwnPropertyDeep(payment, fieldName) ?? "null"));
 
     return compareQiwiHmac(
-      Buffer.from(this.keys.get(hookId) ?? "", "base64"),
+      base64ToUint8Array(this.keys.get(hookId) ?? ""),
       hash,
       signPayload
     );

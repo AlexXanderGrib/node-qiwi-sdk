@@ -1,4 +1,5 @@
-import { AnyResponse, url } from "../shared";
+import { AnyRecord, url } from "../shared";
+import { getOwnPropertyDeep } from "../shared/get";
 import { DetectorApi } from "./api";
 import { DetectorError } from "./detector.errors";
 
@@ -14,13 +15,15 @@ export class DetectorDetectApi extends DetectorApi {
    * Вытаскивает ID провайдера из объекта ответа
    *
    * @protected
-   * @param {*} response
+   * @param {AnyRecord} response
    * @return {number} ID провайдера
    */
-  protected _extractProvider(response: AnyResponse): number {
-    if (response.code.value !== "0") throw new DetectorError(response.message);
+  protected _extractProvider(response: AnyRecord): number {
+    if (getOwnPropertyDeep(response, "code.value") !== "0") {
+      throw new DetectorError(response.message as string);
+    }
 
-    return Number.parseInt(response.message);
+    return Number.parseInt(response.message as string);
   }
 
   /**

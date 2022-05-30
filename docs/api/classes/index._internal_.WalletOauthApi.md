@@ -61,7 +61,7 @@ Creates an instance of OptionsWrapper.
 
 #### Defined in
 
-dist/cjs/apis/options-wrapper.d.ts:22
+[apis/options-wrapper.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/options-wrapper.ts#L23)
 
 ## Properties
 
@@ -71,7 +71,7 @@ dist/cjs/apis/options-wrapper.d.ts:22
 
 #### Defined in
 
-dist/cjs/apis/wallet/oauth.api.d.ts:16
+[apis/wallet/oauth.api.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/oauth.api.ts#L23)
 
 ___
 
@@ -89,7 +89,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/options-wrapper.d.ts:16
+[apis/options-wrapper.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/options-wrapper.ts#L16)
 
 ___
 
@@ -99,7 +99,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/oauth.api.d.ts:13
+[apis/wallet/oauth.api.ts:19](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/oauth.api.ts#L19)
 
 ___
 
@@ -109,7 +109,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/oauth.api.d.ts:14
+[apis/wallet/oauth.api.ts:20](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/oauth.api.ts#L20)
 
 ___
 
@@ -119,7 +119,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/oauth.api.d.ts:15
+[apis/wallet/oauth.api.ts:21](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/oauth.api.ts#L21)
 
 ## Accessors
 
@@ -141,7 +141,7 @@ WalletApi.http
 
 #### Defined in
 
-dist/cjs/apis/api.d.ts:43
+[apis/api.ts:55](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/api.ts#L55)
 
 ___
 
@@ -163,7 +163,7 @@ WalletApi.walletId
 
 #### Defined in
 
-dist/cjs/apis/wallet/api.d.ts:17
+[apis/wallet/api.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/api.ts#L17)
 
 ## Methods
 
@@ -179,7 +179,7 @@ dist/cjs/apis/wallet/api.d.ts:17
 
 #### Defined in
 
-dist/cjs/apis/wallet/oauth.api.d.ts:24
+[apis/wallet/oauth.api.ts:32](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/oauth.api.ts#L32)
 
 ___
 
@@ -203,4 +203,4 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/oauth.api.d.ts:35
+[apis/wallet/oauth.api.ts:57](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/oauth.api.ts#L57)

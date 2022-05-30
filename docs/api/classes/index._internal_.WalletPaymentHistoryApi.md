@@ -60,7 +60,7 @@ Creates an instance of OptionsWrapper.
 
 #### Defined in
 
-dist/cjs/apis/options-wrapper.d.ts:22
+[apis/options-wrapper.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/options-wrapper.ts#L23)
 
 ## Properties
 
@@ -78,7 +78,7 @@ dist/cjs/apis/options-wrapper.d.ts:22
 
 #### Defined in
 
-dist/cjs/apis/options-wrapper.d.ts:16
+[apis/options-wrapper.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/options-wrapper.ts#L16)
 
 ## Accessors
 
@@ -100,7 +100,7 @@ WalletApi.http
 
 #### Defined in
 
-dist/cjs/apis/api.d.ts:43
+[apis/api.ts:55](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/api.ts#L55)
 
 ___
 
@@ -122,7 +122,7 @@ WalletApi.walletId
 
 #### Defined in
 
-dist/cjs/apis/wallet/api.d.ts:17
+[apis/wallet/api.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/api.ts#L17)
 
 ## Methods
 
@@ -154,7 +154,7 @@ dist/cjs/apis/wallet/api.d.ts:17
 
 #### Defined in
 
-dist/cjs/apis/wallet/payment-history.api.d.ts:26
+[apis/wallet/payment-history.api.ts:36](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/payment-history.api.ts#L36)
 
 ___
 
@@ -185,7 +185,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/payment-history.api.d.ts:39
+[apis/wallet/payment-history.api.ts:55](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/payment-history.api.ts#L55)
 
 ___
 
@@ -215,7 +215,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/payment-history.api.d.ts:51
+[apis/wallet/payment-history.api.ts:73](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/payment-history.api.ts#L73)
 
 ___
 
@@ -229,11 +229,11 @@ ___
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `transactionId` | [`StringOrNumber`](../modules/index.QIWI.md#stringornumber) | номер транзакции из [getHistory](index._internal_.WalletPaymentHistoryApi.md#gethistory) (параметр `data[].txnId` в ответе) |
-| `type` | [`TransactionTypeAny`](../modules/index.QIWI.md#transactiontypeany) | тип транзакции из [getHistory](index._internal_.WalletPaymentHistoryApi.md#gethistory) (параметр `data[].type` в ответе) |
-| `format?` | [`ChequeFormat`](../enums/index.QIWI.ChequeFormat.md) | тип файла, в который сохраняется квитанция. Допустимые значения: `JPEG`, `PDF` |
+| Name | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `transactionId` | [`StringOrNumber`](../modules/index.QIWI.md#stringornumber) | `undefined` | номер транзакции из [getHistory](index._internal_.WalletPaymentHistoryApi.md#gethistory) (параметр `data[].txnId` в ответе) |
+| `type` | [`TransactionTypeAny`](../modules/index.QIWI.md#transactiontypeany) | `undefined` | тип транзакции из [getHistory](index._internal_.WalletPaymentHistoryApi.md#gethistory) (параметр `data[].type` в ответе) |
+| `format` | [`ChequeFormat`](../enums/index.QIWI.ChequeFormat.md) | `ChequeFormat.JPEG` | тип файла, в который сохраняется квитанция. Допустимые значения: `JPEG`, `PDF` |
 
 #### Returns
 
@@ -243,7 +243,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/payment-history.api.d.ts:61
+[apis/wallet/payment-history.api.ts:91](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/payment-history.api.ts#L91)
 
 ___
 
@@ -271,4 +271,4 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/payment-history.api.d.ts:71
+[apis/wallet/payment-history.api.ts:115](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/payment-history.api.ts#L115)

@@ -1,19 +1,5 @@
-import { createHmac, timingSafeEqual } from "crypto";
-
-// For compatibility with NodeJS v10 typings
-type BinaryAlike = string | NodeJS.ArrayBufferView;
-
-/**
- *
- *
- * @param {BinaryAlike} data
- * @return {NodeJS.ArrayBufferView}  {NodeJS.ArrayBufferView}
- */
-function parseBinaryAlike(data: BinaryAlike): NodeJS.ArrayBufferView {
-  if (typeof data === "string") return Buffer.from(data, "hex");
-
-  return data;
-}
+import { hmac, timingSafeEqual, BinaryAlike } from "@platform/crypto";
+import { hexToUint8Array, utf8ToUint8Array } from "@platform/decode";
 
 export type HmacOptions = {
   algorithm?: string;
@@ -35,9 +21,12 @@ export function compareHmac({
   digest,
   key
 }: HmacOptions) {
-  const hash = createHmac(algorithm, key).update(data).digest();
+  if (typeof key === "string") key = utf8ToUint8Array(key);
+  if (typeof data === "string") data = utf8ToUint8Array(data);
+  if (typeof digest === "string") digest = hexToUint8Array(digest);
 
-  return timingSafeEqual(hash, parseBinaryAlike(digest));
+  const hash = hmac(algorithm, key, data);
+  return timingSafeEqual(hash, digest);
 }
 
 const QIWI_JOINER = "|";

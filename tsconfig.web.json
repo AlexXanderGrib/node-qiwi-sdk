@@ -1,0 +1,17 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "module": "ESNext",
+    "paths": {
+      "@platform/*": [
+        "apis/shared/platform/web/*"
+      ]
+    }
+  },
+  "exclude": [
+    "src/__tests__",
+    "dist",
+    "examples",
+    "node_modules"
+  ]
+}

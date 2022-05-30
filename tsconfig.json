@@ -3,11 +3,20 @@
     "target": "es2018",
     "module": "es2020",
     "lib": [
-      "ESNext"
+      "ES2018",
+      "DOM",
+      "DOM.Iterable"
     ],
     "declaration": true,
+    "declarationDir": "./dist/dts",
     "outDir": "./dist",
     "rootDir": "./src",
+    "baseUrl": "./src",
+    "paths": {
+      "@platform/*": [
+        "apis/shared/platform/node/*"
+      ]
+    },
     "removeComments": false,
     "noEmit": false,
     "strict": true,
@@ -35,9 +44,14 @@
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "stripInternal": true,
-    "importsNotUsedAsValues": "error"
+    "importsNotUsedAsValues": "error",
+    "importHelpers": false
   },
+  "include": [
+    "src/**/*"
+  ],
   "exclude": [
+    "node_modules",
     "dist",
     "examples"
   ]

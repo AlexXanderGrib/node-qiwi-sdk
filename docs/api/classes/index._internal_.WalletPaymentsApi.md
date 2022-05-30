@@ -62,7 +62,7 @@ Creates an instance of OptionsWrapper.
 
 #### Defined in
 
-dist/cjs/apis/options-wrapper.d.ts:22
+[apis/options-wrapper.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/options-wrapper.ts#L23)
 
 ## Properties
 
@@ -80,7 +80,7 @@ dist/cjs/apis/options-wrapper.d.ts:22
 
 #### Defined in
 
-dist/cjs/apis/options-wrapper.d.ts:16
+[apis/options-wrapper.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/options-wrapper.ts#L16)
 
 ## Accessors
 
@@ -102,7 +102,7 @@ WalletApi.http
 
 #### Defined in
 
-dist/cjs/apis/api.d.ts:43
+[apis/api.ts:55](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/api.ts#L55)
 
 ___
 
@@ -124,7 +124,7 @@ WalletApi.walletId
 
 #### Defined in
 
-dist/cjs/apis/wallet/api.d.ts:17
+[apis/wallet/api.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/api.ts#L17)
 
 ## Methods
 
@@ -151,7 +151,7 @@ dist/cjs/apis/wallet/api.d.ts:17
 
 #### Defined in
 
-dist/cjs/apis/wallet/payments.api.d.ts:81
+[apis/wallet/payments.api.ts:207](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/payments.api.ts#L207)
 
 ___
 
@@ -168,7 +168,7 @@ ___
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `provider` | `number` | Идентификатор провайдера |
-| `options?` | [`FormUrlOptions`](../modules/index.QIWI.md#formurloptions) | - |
+| `options` | [`FormUrlOptions`](../modules/index.QIWI.md#formurloptions) | - |
 
 #### Returns
 
@@ -178,7 +178,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/payments.api.d.ts:48
+[apis/wallet/payments.api.ts:105](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/payments.api.ts#L105)
 
 ___
 
@@ -202,9 +202,9 @@ ___
 | `provider` | `number` | Идентификатор провайдера |
 | `account` | `string` | Пользовательский идентификатор (номер телефона с международным префиксом, номер карты/счета получателя, и т.д., в зависимости от провайдера) |
 | `amount` | `number` | Сумма |
-| `__namedParameters?` | `Object` | - |
-| `__namedParameters.accountCurrency?` | [`Currency`](../enums/index.QIWI.Currency.md) | - |
-| `__namedParameters.paymentCurrency?` | [`Currency`](../enums/index.QIWI.Currency.md) | - |
+| `__namedParameters` | `Object` | - |
+| `__namedParameters.accountCurrency` | `undefined` \| [`Currency`](../enums/index.QIWI.Currency.md) | - |
+| `__namedParameters.paymentCurrency` | `undefined` \| [`Currency`](../enums/index.QIWI.Currency.md) | - |
 
 #### Returns
 
@@ -212,7 +212,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/payments.api.d.ts:26
+[apis/wallet/payments.api.ts:39](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/payments.api.ts#L39)
 
 ___
 
@@ -232,7 +232,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/payments.api.d.ts:88
+[apis/wallet/payments.api.ts:246](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/payments.api.ts#L246)
 
 ___
 
@@ -258,7 +258,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/payments.api.d.ts:58
+[apis/wallet/payments.api.ts:127](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/payments.api.ts#L127)
 
 ___
 
@@ -289,7 +289,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/payments.api.d.ts:70
+[apis/wallet/payments.api.ts:165](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/payments.api.ts#L165)
 
 ___
 
@@ -308,7 +308,7 @@ ___
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `provider` | `number` | Идентификатор провайдера |
-| `options?` | [`FormUrlOptions`](../modules/index.QIWI.md#formurloptions) | - |
+| `options` | [`FormUrlOptions`](../modules/index.QIWI.md#formurloptions) | - |
 
 #### Returns
 
@@ -318,4 +318,4 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/payments.api.d.ts:39
+[apis/wallet/payments.api.ts:74](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/payments.api.ts#L74)

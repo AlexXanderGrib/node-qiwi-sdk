@@ -71,7 +71,7 @@ Creates an instance of ErrorWithCause.
 
 #### Defined in
 
-dist/cjs/apis/error.d.ts:16
+[apis/error.ts:14](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/error.ts#L14)
 
 ## Properties
 
@@ -83,10 +83,6 @@ dist/cjs/apis/error.d.ts:16
 
 [ErrorWithCause](index._internal_.ErrorWithCause.md).[cause](index._internal_.ErrorWithCause.md#cause)
 
-#### Defined in
-
-dist/cjs/apis/error.d.ts:9
-
 ___
 
 ### message
@@ -96,10 +92,6 @@ ___
 #### Inherited from
 
 [ErrorWithCause](index._internal_.ErrorWithCause.md).[message](index._internal_.ErrorWithCause.md#message)
-
-#### Defined in
-
-dist/cjs/apis/error.d.ts:8
 
 ___
 
@@ -113,7 +105,7 @@ ErrorWithCause.name
 
 #### Defined in
 
-dist/cjs/apis/error.d.ts:26
+[apis/error.ts:29](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/error.ts#L29)
 
 ## Accessors
 
@@ -131,7 +123,7 @@ dist/cjs/apis/error.d.ts:26
 
 #### Defined in
 
-dist/cjs/apis/error.d.ts:41
+[apis/error.ts:52](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/error.ts#L52)
 
 ## Methods
 
@@ -149,4 +141,4 @@ dist/cjs/apis/error.d.ts:41
 
 #### Defined in
 
-dist/cjs/apis/error.d.ts:33
+[apis/error.ts:37](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/error.ts#L37)

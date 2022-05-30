@@ -59,14 +59,10 @@ Error.constructor
 
 #### Defined in
 
-dist/cjs/apis/shared/http.d.ts:42
+apis/shared/http.types.ts:46
 
 ## Properties
 
 ### response
 
 • **response**: [`HttpResponse`](../interfaces/index.QIWI.HttpResponse.md)<`Rq`, `Rs`\>
-
-#### Defined in
-
-dist/cjs/apis/shared/http.d.ts:35

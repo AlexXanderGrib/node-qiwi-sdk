@@ -21,7 +21,7 @@
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:856
+[apis/wallet/wallet.types.ts:1067](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/wallet.types.ts#L1067)
 
 ___
 
@@ -31,7 +31,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:855
+[apis/wallet/wallet.types.ts:1066](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/wallet.types.ts#L1066)
 
 ___
 
@@ -41,7 +41,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:854
+[apis/wallet/wallet.types.ts:1065](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/wallet.types.ts#L1065)
 
 ___
 
@@ -51,4 +51,4 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.types.d.ts:853
+[apis/wallet/wallet.types.ts:1064](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/wallet.types.ts#L1064)

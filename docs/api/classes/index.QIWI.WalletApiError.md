@@ -58,7 +58,7 @@ Creates an instance of WalletApiError.
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.errors.d.ts:28
+[apis/wallet/wallet.errors.ts:31](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/wallet.errors.ts#L31)
 
 ## Properties
 
@@ -70,10 +70,6 @@ dist/cjs/apis/wallet/wallet.errors.d.ts:28
 
 [ExtendedError](index._internal_.ExtendedError.md).[cause](index._internal_.ExtendedError.md#cause)
 
-#### Defined in
-
-dist/cjs/apis/error.d.ts:9
-
 ___
 
 ### dateTime
@@ -82,7 +78,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.errors.d.ts:20
+[apis/wallet/wallet.errors.ts:22](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/wallet.errors.ts#L22)
 
 ___
 
@@ -93,10 +89,6 @@ ___
 #### Inherited from
 
 [ExtendedError](index._internal_.ExtendedError.md).[message](index._internal_.ExtendedError.md#message)
-
-#### Defined in
-
-dist/cjs/apis/error.d.ts:8
 
 ___
 
@@ -110,17 +102,13 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/error.d.ts:26
+[apis/error.ts:29](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/error.ts#L29)
 
 ___
 
 ### response
 
 • `Readonly` **response**: [`WalletApiErrorResponse`](../modules/index.QIWI.md#walletapierrorresponse)
-
-#### Defined in
-
-dist/cjs/apis/wallet/wallet.errors.d.ts:19
 
 ___
 
@@ -130,7 +118,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/wallet/wallet.errors.d.ts:21
+[apis/wallet/wallet.errors.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/wallet.errors.ts#L23)
 
 ## Accessors
 
@@ -148,11 +136,11 @@ dist/cjs/apis/wallet/wallet.errors.d.ts:21
 
 #### Inherited from
 
-ExtendedError.\_\_@toStringTag@410
+ExtendedError.\_\_@toStringTag@458
 
 #### Defined in
 
-dist/cjs/apis/error.d.ts:41
+[apis/error.ts:52](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/error.ts#L52)
 
 ## Methods
 
@@ -174,4 +162,4 @@ dist/cjs/apis/error.d.ts:41
 
 #### Defined in
 
-dist/cjs/apis/error.d.ts:33
+[apis/error.ts:37](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/error.ts#L37)

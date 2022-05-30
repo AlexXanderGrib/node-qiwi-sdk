@@ -54,7 +54,7 @@ Creates an instance of OptionsWrapper.
 
 #### Defined in
 
-dist/cjs/apis/options-wrapper.d.ts:22
+[apis/options-wrapper.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/options-wrapper.ts#L23)
 
 ## Properties
 
@@ -72,7 +72,7 @@ dist/cjs/apis/options-wrapper.d.ts:22
 
 #### Defined in
 
-dist/cjs/apis/options-wrapper.d.ts:16
+[apis/options-wrapper.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/options-wrapper.ts#L16)
 
 ## Accessors
 
@@ -94,7 +94,7 @@ DetectorApi.http
 
 #### Defined in
 
-dist/cjs/apis/api.d.ts:43
+[apis/api.ts:55](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/api.ts#L55)
 
 ## Methods
 
@@ -108,7 +108,7 @@ dist/cjs/apis/api.d.ts:43
 
 | Name | Type |
 | :------ | :------ |
-| `response` | [`AnyResponse`](../modules/index.QIWI.md#anyresponse) |
+| `response` | `Readonly`<`Record`<`string`, `unknown`\>\> |
 
 #### Returns
 
@@ -118,7 +118,7 @@ ID провайдера
 
 #### Defined in
 
-dist/cjs/apis/detector/detect.api.d.ts:18
+[apis/detector/detect.api.ts:21](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/detector/detect.api.ts#L21)
 
 ___
 
@@ -144,7 +144,7 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/detector/detect.api.d.ts:35
+[apis/detector/detect.api.ts:52](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/detector/detect.api.ts#L52)
 
 ___
 
@@ -167,4 +167,4 @@ ___
 
 #### Defined in
 
-dist/cjs/apis/detector/detect.api.d.ts:25
+[apis/detector/detect.api.ts:35](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/detector/detect.api.ts#L35)
