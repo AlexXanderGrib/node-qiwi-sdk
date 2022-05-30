@@ -1,7 +1,8 @@
+import { base64ToUint8Array } from "@platform/decode";
 import { createHmac, randomBytes } from "crypto";
-import { compareHmac } from "../apis";
+import { compareHmac, formatOffsetAltLifetimeDate } from "../apis";
 import { promise, resolveHeaderValue } from "../apis/p2p/p2p.middleware";
-import { getOwnProperty, getOwnPropertyDeep } from "../apis/shared/get";
+import { getByIndex, getOwnProperty, getOwnPropertyDeep } from "../apis/shared/get";
 
 describe("P2p Internals", () => {
   test("promise()", async () => {
@@ -69,5 +70,28 @@ describe("Getters", () => {
     });
 
     expect(result).toBeTruthy();
+  });
+
+  test("formatOffsetAltLifetimeDate()", () => {
+    const date = formatOffsetAltLifetimeDate(10);
+
+    // ГГГГ-ММ-ДДTччмм
+    expect(date).toMatch(/^\d{4}-\d{2}-\d{2}T\d{4}$/);
+  });
+
+  test("getByIndex()", () => {
+    const array = { length: 3, 0: 1, 1: 3, 2: 5 };
+
+    expect(getByIndex(array, 2)).toBe(5);
+  });
+
+  test("base64ToUint8Array()", () => {
+    const original = "data";
+
+    expect(
+      Buffer.from(
+        base64ToUint8Array(Buffer.from(original).toString("base64"))
+      ).toString()
+    ).toBe(original);
   });
 });

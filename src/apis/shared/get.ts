@@ -28,6 +28,7 @@ export function getOwnProperty(object: AnyRecord, key: string): unknown | undefi
  * @return {T}  {(T | undefined)}
  */
 export function getByIndex<T>(array: ArrayLike<T>, index: number): T | undefined {
+  /* istanbul ignore next: used in web platform adapters */
   return getOwnProperty<Record<string, T>, string>(array as any, index.toString());
 }
 

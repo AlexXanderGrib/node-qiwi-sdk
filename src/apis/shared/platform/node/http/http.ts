@@ -107,6 +107,7 @@ export class AxiosHttpClient
       headers: axiosResponse.headers,
       statusCode: axiosResponse.status,
       body: (request.parseResponse ?? _)(
+        /* istanbul ignore next */
         axiosResponse.data instanceof ArrayBuffer
           ? new Uint8Array(axiosResponse.data)
           : axiosResponse.data

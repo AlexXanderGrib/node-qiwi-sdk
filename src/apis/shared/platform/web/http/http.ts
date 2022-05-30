@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 import { OptionsWrapperWithSetter } from "apis/options-wrapper";
 import { collect } from "apis/shared/collect";
 import {

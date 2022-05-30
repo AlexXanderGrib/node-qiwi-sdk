@@ -1,6 +1,6 @@
 {
   "name": "qiwi-sdk",
-  "version": "4.0.0-alpha3",
+  "version": "4.0.0",
   "description": "⭐ Typed QIWI Wallet SDK. Supported API's: Personal & P2P Bill Payments",
   "keywords": [
     "qiwi",
@@ -14,7 +14,8 @@
     "typescript",
     "node",
     "nodejs",
-    "backend"
+    "backend",
+    "front-end"
   ],
   "files": [
     "dist/",

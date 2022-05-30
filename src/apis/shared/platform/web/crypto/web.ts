@@ -1,4 +1,4 @@
-/* istanbul ignore */
+/* istanbul ignore file */
 import { getByIndex } from "apis/shared/get";
 
 /**

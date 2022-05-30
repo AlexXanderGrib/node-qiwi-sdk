@@ -36,9 +36,11 @@ export function formatQuerystring(object: AnyRecord): string {
       for (const [subKey, subValue] of Object.entries(value)) {
         let string: string;
 
-        if (isPrimitive(subValue)) string = String(subValue);
-        else if (Array.isArray(subValue)) string = subValue.join(",");
-        else continue;
+        if (isPrimitive(subValue)) {
+          string = String(subValue);
+        } else {
+          continue;
+        }
 
         parameters.set(`${key}[${subKey}]`, string);
       }

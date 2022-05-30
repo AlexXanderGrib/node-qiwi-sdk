@@ -28,7 +28,7 @@ export function formatDate(dateTime: DateValue): string {
  * @param {DateValue} dateTime
  * @return {string}  {string}
  */
-export function formaAltLifetimeDate(dateTime: DateValue): string {
+export function formatAltLifetimeDate(dateTime: DateValue): string {
   const date = new Date(dateTime);
   const base = date.toISOString().split("T")[0];
 
@@ -36,7 +36,7 @@ export function formaAltLifetimeDate(dateTime: DateValue): string {
     date.getHours().toString().padStart(2, "0") +
     date.getMinutes().toString().padStart(2, "0");
 
-  return base + "T" + time;
+  return `${base}T${time}`;
 }
 
 export enum TimeSpan {
@@ -101,7 +101,11 @@ function offsetDate(amount: number, unit: TimeUnit, currentDate: Date): Date {
 }
 
 /**
+ * **Используется только для параметра `lifetime` при создании ссылки на форму оплаты**
  *
+ * Форматирует дату в понятную для QIWI строку:
+ *
+ * `ГГГГ-ММ-ДДTччмм`
  *
  * @export
  * @param {number} amount
@@ -131,5 +135,5 @@ export function formatOffsetAltLifetimeDate(
   unit: TimeUnit = TimeSpan.Millisecond,
   currentDate = new Date()
 ): string {
-  return formaAltLifetimeDate(offsetDate(amount, unit, currentDate));
+  return formatAltLifetimeDate(offsetDate(amount, unit, currentDate));
 }
