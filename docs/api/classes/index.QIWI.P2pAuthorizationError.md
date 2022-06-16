@@ -54,7 +54,7 @@ Creates an instance of P2pAuthorizationError.
 
 #### Defined in
 
-[apis/p2p/p2p.errors.ts:50](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/p2p/p2p.errors.ts#L50)
+[apis/p2p/p2p.errors.ts:50](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/p2p.errors.ts#L50)
 
 ## Properties
 
@@ -88,7 +88,7 @@ ___
 
 #### Defined in
 
-[apis/error.ts:29](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/error.ts#L29)
+[apis/error.ts:29](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/error.ts#L29)
 
 ## Accessors
 
@@ -106,11 +106,11 @@ ___
 
 #### Inherited from
 
-ExtendedError.\_\_@toStringTag@458
+ExtendedError.\_\_@toStringTag@454
 
 #### Defined in
 
-[apis/error.ts:52](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/error.ts#L52)
+[apis/error.ts:52](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/error.ts#L52)
 
 ## Methods
 
@@ -132,4 +132,4 @@ ExtendedError.\_\_@toStringTag@458
 
 #### Defined in
 
-[apis/error.ts:37](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/error.ts#L37)
+[apis/error.ts:37](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/error.ts#L37)

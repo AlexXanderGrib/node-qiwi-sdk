@@ -103,15 +103,17 @@ export class AxiosHttpClient
     axiosResponse: AxiosResponse,
     request: HttpRequestOptions
   ): HttpResponse {
+    const body =
+      /* istanbul ignore next */
+      axiosResponse.data instanceof ArrayBuffer ||
+      axiosResponse.data instanceof Uint8Array
+        ? new Uint8Array(axiosResponse.data)
+        : new Uint8Array();
+
     return {
       headers: axiosResponse.headers,
       statusCode: axiosResponse.status,
-      body: (request.parseResponse ?? _)(
-        /* istanbul ignore next */
-        axiosResponse.data instanceof ArrayBuffer
-          ? new Uint8Array(axiosResponse.data)
-          : axiosResponse.data
-      ),
+      body: (request.parseResponse ?? _)(body),
       request
     };
   }

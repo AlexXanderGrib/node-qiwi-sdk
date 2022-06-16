@@ -214,11 +214,13 @@ export class _WalletCompat extends Wallet {
     type: types.TransactionType,
     format: types.ChequeFormat = types.ChequeFormat.JPEG
   ): Promise<Buffer> {
-    return await this.paymentHistory.getTransactionCheque(
+    const data = await this.paymentHistory.getTransactionCheque(
       transactionId,
       type,
       format
     );
+
+    return typeof Buffer === "undefined" ? (data as Buffer) : Buffer.from(data);
   }
 
   /**

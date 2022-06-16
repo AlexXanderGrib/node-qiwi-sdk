@@ -60,7 +60,7 @@ Creates an instance of OptionsWrapper.
 
 #### Defined in
 
-[apis/options-wrapper.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/options-wrapper.ts#L23)
+[apis/options-wrapper.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/options-wrapper.ts#L23)
 
 ## Properties
 
@@ -78,7 +78,7 @@ Creates an instance of OptionsWrapper.
 
 #### Defined in
 
-[apis/options-wrapper.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/options-wrapper.ts#L16)
+[apis/options-wrapper.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/options-wrapper.ts#L16)
 
 ## Accessors
 
@@ -100,7 +100,7 @@ WalletApi.http
 
 #### Defined in
 
-[apis/api.ts:55](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/api.ts#L55)
+[apis/api.ts:55](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/api.ts#L55)
 
 ___
 
@@ -122,7 +122,7 @@ WalletApi.walletId
 
 #### Defined in
 
-[apis/wallet/api.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/api.ts#L17)
+[apis/wallet/api.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/api.ts#L17)
 
 ## Methods
 
@@ -150,7 +150,7 @@ WalletApi.walletId
 
 #### Defined in
 
-[apis/wallet/cards.api.ts:48](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/cards.api.ts#L48)
+[apis/wallet/cards.api.ts:48](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/cards.api.ts#L48)
 
 ___
 
@@ -180,7 +180,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/cards.api.ts:31](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/cards.api.ts#L31)
+[apis/wallet/cards.api.ts:31](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/cards.api.ts#L31)
 
 ___
 
@@ -210,7 +210,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/cards.api.ts:82](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/cards.api.ts#L82)
+[apis/wallet/cards.api.ts:82](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/cards.api.ts#L82)
 
 ___
 
@@ -241,7 +241,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/cards.api.ts:100](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/cards.api.ts#L100)
+[apis/wallet/cards.api.ts:100](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/cards.api.ts#L100)
 
 ___
 
@@ -271,4 +271,4 @@ ___
 
 #### Defined in
 
-[apis/wallet/cards.api.ts:65](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/cards.api.ts#L65)
+[apis/wallet/cards.api.ts:65](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/cards.api.ts#L65)

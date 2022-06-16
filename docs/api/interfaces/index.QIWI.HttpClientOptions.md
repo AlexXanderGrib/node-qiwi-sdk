@@ -35,7 +35,7 @@
 
 #### Defined in
 
-apis/shared/http.types.ts:8
+[apis/shared/http.types.ts:8](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/shared/http.types.ts#L8)
 
 ___
 
@@ -45,7 +45,7 @@ ___
 
 #### Defined in
 
-apis/shared/http.types.ts:10
+[apis/shared/http.types.ts:10](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/shared/http.types.ts#L10)
 
 ___
 
@@ -55,7 +55,7 @@ ___
 
 #### Defined in
 
-apis/shared/http.types.ts:7
+[apis/shared/http.types.ts:7](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/shared/http.types.ts#L7)
 
 ___
 
@@ -65,7 +65,7 @@ ___
 
 #### Defined in
 
-apis/shared/http.types.ts:9
+[apis/shared/http.types.ts:9](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/shared/http.types.ts#L9)
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 #### Defined in
 
-apis/shared/http.types.ts:11
+[apis/shared/http.types.ts:11](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/shared/http.types.ts#L11)
 
 ## Methods
 
@@ -95,7 +95,7 @@ apis/shared/http.types.ts:11
 
 #### Defined in
 
-apis/shared/http.types.ts:15
+[apis/shared/http.types.ts:15](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/shared/http.types.ts#L15)
 
 ___
 
@@ -115,7 +115,7 @@ ___
 
 #### Defined in
 
-apis/shared/http.types.ts:14
+[apis/shared/http.types.ts:14](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/shared/http.types.ts#L14)
 
 ___
 
@@ -135,4 +135,4 @@ ___
 
 #### Defined in
 
-apis/shared/http.types.ts:13
+[apis/shared/http.types.ts:13](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/shared/http.types.ts#L13)

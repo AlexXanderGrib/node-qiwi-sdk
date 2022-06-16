@@ -60,7 +60,7 @@ Creates an instance of OptionsWrapper.
 
 #### Defined in
 
-[apis/options-wrapper.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/options-wrapper.ts#L23)
+[apis/options-wrapper.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/options-wrapper.ts#L23)
 
 ## Properties
 
@@ -78,7 +78,7 @@ Creates an instance of OptionsWrapper.
 
 #### Defined in
 
-[apis/options-wrapper.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/options-wrapper.ts#L16)
+[apis/options-wrapper.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/options-wrapper.ts#L16)
 
 ## Accessors
 
@@ -100,7 +100,7 @@ WalletApi.http
 
 #### Defined in
 
-[apis/api.ts:55](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/api.ts#L55)
+[apis/api.ts:55](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/api.ts#L55)
 
 ___
 
@@ -122,7 +122,7 @@ WalletApi.walletId
 
 #### Defined in
 
-[apis/wallet/api.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/api.ts#L17)
+[apis/wallet/api.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/api.ts#L17)
 
 ## Methods
 
@@ -154,7 +154,7 @@ WalletApi.walletId
 
 #### Defined in
 
-[apis/wallet/payment-history.api.ts:36](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/payment-history.api.ts#L36)
+[apis/wallet/payment-history.api.ts:36](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/payment-history.api.ts#L36)
 
 ___
 
@@ -185,7 +185,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/payment-history.api.ts:55](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/payment-history.api.ts#L55)
+[apis/wallet/payment-history.api.ts:55](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/payment-history.api.ts#L55)
 
 ___
 
@@ -215,13 +215,13 @@ ___
 
 #### Defined in
 
-[apis/wallet/payment-history.api.ts:73](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/payment-history.api.ts#L73)
+[apis/wallet/payment-history.api.ts:73](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/payment-history.api.ts#L73)
 
 ___
 
 ### getTransactionCheque
 
-▸ **getTransactionCheque**(`transactionId`, `type`, `format?`): `Promise`<`Buffer`\>
+▸ **getTransactionCheque**(`transactionId`, `type`, `format?`): `Promise`<`Uint8Array`\>
 
 ### Файл квитанции
 
@@ -237,13 +237,13 @@ ___
 
 #### Returns
 
-`Promise`<`Buffer`\>
+`Promise`<`Uint8Array`\>
 
-{Promise<Buffer>}
+{Promise<Uint8Array>}
 
 #### Defined in
 
-[apis/wallet/payment-history.api.ts:91](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/payment-history.api.ts#L91)
+[apis/wallet/payment-history.api.ts:91](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/payment-history.api.ts#L91)
 
 ___
 
@@ -271,4 +271,4 @@ ___
 
 #### Defined in
 
-[apis/wallet/payment-history.api.ts:115](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/payment-history.api.ts#L115)
+[apis/wallet/payment-history.api.ts:115](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/payment-history.api.ts#L115)

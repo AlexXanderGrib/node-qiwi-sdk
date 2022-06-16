@@ -83,7 +83,7 @@ Creates an instance of OptionsWrapper.
 
 #### Defined in
 
-[apis/options-wrapper.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/options-wrapper.ts#L23)
+[apis/options-wrapper.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/options-wrapper.ts#L23)
 
 ## Properties
 
@@ -101,7 +101,7 @@ Creates an instance of OptionsWrapper.
 
 #### Defined in
 
-[apis/options-wrapper.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/options-wrapper.ts#L16)
+[apis/options-wrapper.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/options-wrapper.ts#L16)
 
 ___
 
@@ -111,7 +111,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/webhooks.api.ts:36](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/webhooks.api.ts#L36)
+[apis/wallet/webhooks.api.ts:36](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/webhooks.api.ts#L36)
 
 ___
 
@@ -121,7 +121,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/webhooks.api.ts:35](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/webhooks.api.ts#L35)
+[apis/wallet/webhooks.api.ts:35](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/webhooks.api.ts#L35)
 
 ## Accessors
 
@@ -143,7 +143,7 @@ WalletApi.http
 
 #### Defined in
 
-[apis/api.ts:55](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/api.ts#L55)
+[apis/api.ts:55](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/api.ts#L55)
 
 ___
 
@@ -165,7 +165,7 @@ WalletApi.walletId
 
 #### Defined in
 
-[apis/wallet/api.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/api.ts#L17)
+[apis/wallet/api.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/api.ts#L17)
 
 ## Methods
 
@@ -181,7 +181,7 @@ WalletApi.walletId
 
 #### Defined in
 
-[apis/wallet/webhooks.api.ts:45](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/webhooks.api.ts#L45)
+[apis/wallet/webhooks.api.ts:45](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/webhooks.api.ts#L45)
 
 ___
 
@@ -204,7 +204,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/webhooks.api.ts:57](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/webhooks.api.ts#L57)
+[apis/wallet/webhooks.api.ts:57](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/webhooks.api.ts#L57)
 
 ___
 
@@ -226,7 +226,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/webhooks.api.ts:137](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/webhooks.api.ts#L137)
+[apis/wallet/webhooks.api.ts:137](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/webhooks.api.ts#L137)
 
 ___
 
@@ -240,7 +240,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/webhooks.api.ts:112](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/webhooks.api.ts#L112)
+[apis/wallet/webhooks.api.ts:112](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/webhooks.api.ts#L112)
 
 ___
 
@@ -262,7 +262,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/webhooks.api.ts:87](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/webhooks.api.ts#L87)
+[apis/wallet/webhooks.api.ts:87](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/webhooks.api.ts#L87)
 
 ___
 
@@ -284,7 +284,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/webhooks.api.ts:74](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/webhooks.api.ts#L74)
+[apis/wallet/webhooks.api.ts:74](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/webhooks.api.ts#L74)
 
 ___
 
@@ -302,7 +302,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/webhooks.api.ts:126](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/webhooks.api.ts#L126)
+[apis/wallet/webhooks.api.ts:126](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/webhooks.api.ts#L126)
 
 ___
 
@@ -324,4 +324,4 @@ ___
 
 #### Defined in
 
-[apis/wallet/webhooks.api.ts:100](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/wallet/webhooks.api.ts#L100)
+[apis/wallet/webhooks.api.ts:100](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/webhooks.api.ts#L100)

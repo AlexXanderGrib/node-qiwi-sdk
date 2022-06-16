@@ -59,7 +59,7 @@ Error.constructor
 
 #### Defined in
 
-apis/shared/http.types.ts:46
+[apis/shared/http.types.ts:46](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/shared/http.types.ts#L46)
 
 ## Properties
 

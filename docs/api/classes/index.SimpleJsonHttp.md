@@ -44,7 +44,7 @@ Creates an instance of SimpleJsonHttp.
 
 #### Defined in
 
-[apis/shared/http.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/shared/http.ts#L17)
+[apis/shared/http.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/shared/http.ts#L17)
 
 ## Properties
 
@@ -79,7 +79,7 @@ Creates an instance of SimpleJsonHttp.
 
 #### Defined in
 
-[apis/shared/http.ts:84](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/shared/http.ts#L84)
+[apis/shared/http.ts:84](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/shared/http.ts#L84)
 
 ___
 
@@ -107,7 +107,7 @@ ___
 
 #### Defined in
 
-[apis/shared/http.ts:32](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/shared/http.ts#L32)
+[apis/shared/http.ts:32](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/shared/http.ts#L32)
 
 ___
 
@@ -136,7 +136,7 @@ ___
 
 #### Defined in
 
-[apis/shared/http.ts:71](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/shared/http.ts#L71)
+[apis/shared/http.ts:71](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/shared/http.ts#L71)
 
 ___
 
@@ -165,7 +165,7 @@ ___
 
 #### Defined in
 
-[apis/shared/http.ts:45](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/shared/http.ts#L45)
+[apis/shared/http.ts:45](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/shared/http.ts#L45)
 
 ___
 
@@ -194,7 +194,7 @@ ___
 
 #### Defined in
 
-[apis/shared/http.ts:58](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/shared/http.ts#L58)
+[apis/shared/http.ts:58](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/shared/http.ts#L58)
 
 ___
 
@@ -224,7 +224,7 @@ ___
 
 #### Defined in
 
-[apis/shared/http.ts:108](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/shared/http.ts#L108)
+[apis/shared/http.ts:108](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/shared/http.ts#L108)
 
 ___
 
@@ -256,4 +256,4 @@ ___
 
 #### Defined in
 
-[apis/shared/http.ts:97](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/shared/http.ts#L97)
+[apis/shared/http.ts:97](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/shared/http.ts#L97)

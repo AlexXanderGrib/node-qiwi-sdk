@@ -85,14 +85,14 @@ export class WalletPaymentHistoryApi extends WalletApi {
    * @param {StringOrNumber} transactionId  номер транзакции из {@link getHistory} (параметр `data[].txnId` в ответе)
    * @param {TransactionTypeAny} type тип транзакции из {@link getHistory} (параметр `data[].type` в ответе)
    * @param {ChequeFormat} format тип файла, в который сохраняется квитанция. Допустимые значения: `JPEG`, `PDF`
-   * @return {Promise<Buffer>} {Promise<Buffer>}
+   * @return {Promise<Uint8Array>} {Promise<Uint8Array>}
    * @memberof WalletPaymentHistoryApi
    */
   async getTransactionCheque(
     transactionId: StringOrNumber,
     type: TransactionTypeAny,
     format: ChequeFormat = ChequeFormat.JPEG
-  ): Promise<Buffer> {
+  ): Promise<Uint8Array> {
     return await this.http.request({
       url: url`payment-history/v1/transactions/${transactionId}/cheque/file`({
         type,

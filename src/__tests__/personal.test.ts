@@ -264,14 +264,15 @@ describe(Personal.name, () => {
     expect(totals).toMatchObject({});
 
     async function expectBufferToStartWith(
-      buffer: Buffer | Promise<Buffer>,
-      sub: Buffer
+      data: Uint8Array | Promise<Uint8Array>,
+      sub: Uint8Array
     ) {
-      buffer = await buffer;
+      data = await data;
+      const buffer = Buffer.from(data);
 
-      expect(buffer).toBeInstanceOf(Buffer);
-      expect(buffer.length).toBeGreaterThanOrEqual(sub.length);
-      expect(buffer.includes(sub)).toBeTruthy();
+      expect(data).toBeInstanceOf(Uint8Array);
+      expect(data.length).toBeGreaterThanOrEqual(sub.length);
+      expect(buffer.includes(Buffer.from(sub))).toBeTruthy();
     }
 
     const JPEG_START = Buffer.of(0xff, 0xd8, 0xff);

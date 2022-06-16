@@ -1,4 +1,5 @@
 /* eslint-disable security/detect-object-injection */
+import { uint8ArrayToUtf8 } from "@platform/decode";
 import { randomBytes } from "crypto";
 import express, { Application } from "express";
 import { HttpError, SimpleJsonHttp } from "../apis";
@@ -66,7 +67,7 @@ describe("Http", () => {
 
     const response = await http.post("/def", data);
 
-    expect(response).toEqual(data);
+    expect(response).toEqual(new Uint8Array(data));
   });
 
   test("Default serialization", async () => {
@@ -77,7 +78,7 @@ describe("Http", () => {
     http.client.options = {
       ...http.client.options,
       stringifyBody: undefined,
-      parseResponse: (body) => JSON.parse(body.toString())
+      parseResponse: (body) => JSON.parse(uint8ArrayToUtf8(body))
     };
 
     try {
@@ -107,7 +108,7 @@ describe("Http", () => {
       await http.get("/empty");
     } catch (error: any) {
       expect(error).toBeInstanceOf(HttpError);
-      expect(error.response.body).toEqual(Buffer.alloc(0));
+      expect(error.response.body).toEqual(new Uint8Array());
     }
   });
 

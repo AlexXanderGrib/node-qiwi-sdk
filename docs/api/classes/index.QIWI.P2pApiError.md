@@ -58,7 +58,7 @@ Creates an instance of P2pApiError.
 
 #### Defined in
 
-[apis/p2p/p2p.errors.ts:32](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/p2p/p2p.errors.ts#L32)
+[apis/p2p/p2p.errors.ts:32](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/p2p.errors.ts#L32)
 
 ## Properties
 
@@ -78,7 +78,7 @@ ___
 
 #### Defined in
 
-[apis/p2p/p2p.errors.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/p2p/p2p.errors.ts#L23)
+[apis/p2p/p2p.errors.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/p2p.errors.ts#L23)
 
 ___
 
@@ -102,7 +102,7 @@ ___
 
 #### Defined in
 
-[apis/error.ts:29](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/error.ts#L29)
+[apis/error.ts:29](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/error.ts#L29)
 
 ___
 
@@ -118,7 +118,7 @@ ___
 
 #### Defined in
 
-[apis/p2p/p2p.errors.ts:24](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/p2p/p2p.errors.ts#L24)
+[apis/p2p/p2p.errors.ts:24](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/p2p.errors.ts#L24)
 
 ## Accessors
 
@@ -136,11 +136,11 @@ ___
 
 #### Inherited from
 
-ExtendedError.\_\_@toStringTag@458
+ExtendedError.\_\_@toStringTag@454
 
 #### Defined in
 
-[apis/error.ts:52](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/error.ts#L52)
+[apis/error.ts:52](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/error.ts#L52)
 
 ## Methods
 
@@ -162,4 +162,4 @@ ExtendedError.\_\_@toStringTag@458
 
 #### Defined in
 
-[apis/error.ts:37](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8834c22/src/apis/error.ts#L37)
+[apis/error.ts:37](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/error.ts#L37)
