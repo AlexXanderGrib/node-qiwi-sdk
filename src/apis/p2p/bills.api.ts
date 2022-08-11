@@ -52,7 +52,7 @@ export class P2pBillsApi extends P2pApi {
    *
    * @private
    * @param {(BillPaySourceAny | BillPaySourceAny[])} paySourcesFilter
-   * @return {string}  {string}
+   * @return {string} string
    * @memberof P2pBillsApi
    */
   private _resolvePaySourcesFilter(
@@ -90,12 +90,12 @@ export class P2pBillsApi extends P2pApi {
    * вернется параметр `payUrl` - ссылка для редиректа
    * пользователя на форму.
    *
-   * {@link https://developer.qiwi.com/ru/p2p-payments/#option|Настройки формы и счета}
+   * [Настройки формы и счета](https://developer.qiwi.com/ru/p2p-payments/#option)
    *
    * **Для тестирования и отладки сервиса рекомендуем выставлять и оплачивать счета суммой 1 рубль.**
    *
    * @param {BillCreateParameters} data
-   * @return {Promise<BillStatusData>}  {Promise<BillStatusData>}
+   * @return {Promise<BillStatusData>} Promise<BillStatusData>
    * @memberof P2pBillsApi
    */
   async create(data: BillCreateParameters): Promise<BillStatusData> {
@@ -171,7 +171,7 @@ export class P2pBillsApi extends P2pApi {
    * @param {string} signature
    * @param {(BillStatusNotificationBody | BillStatusBody | BillStatusBody)} body
    * @param {*} [merchantSecret=this.secretKey]
-   * @return {*}  {boolean}
+   * @return {*} boolean
    * @memberof P2pBillsApi
    */
   checkNotificationSignature(
@@ -230,7 +230,7 @@ export class P2pBillsApi extends P2pApi {
    * @deprecated API заархивировано
    * @param {string} billId
    * @param {RefundCreationRequest} options
-   * @return {Promise<BillRefundStatusData>}  {Promise<BillRefundStatusData>}
+   * @return {Promise<BillRefundStatusData>} Promise<BillRefundStatusData>
    * @memberof P2pBillsApi
    */
   async refund(
@@ -252,7 +252,7 @@ export class P2pBillsApi extends P2pApi {
    * @deprecated API заархивировано
    * @param {string} billId
    * @param {string} refundId
-   * @return {Promise<BillRefundStatusData>}  {Promise<BillRefundStatusData>}
+   * @return {Promise<BillRefundStatusData>} Promise<BillRefundStatusData>
    * @memberof P2pBillsApi
    */
   async getRefundStatus(

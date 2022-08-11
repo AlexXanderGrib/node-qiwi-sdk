@@ -4,10 +4,12 @@
 
 [index](../modules/index.md).[QIWI](../modules/index.QIWI.md)._P2pCompat
 
-**`deprecated`** Используйте класс `P2p` и новые сигнатуры
+**`Deprecated`**
+
+Используйте класс `P2p` и новые сигнатуры
 методов
 
-**`export`**
+**`Export`**
 
 ## Hierarchy
 
@@ -65,7 +67,9 @@
 
 Creates an instance of _P2pCompat.
 
-**`memberof`** _P2pCompat
+**`Memberof`**
+
+_P2pCompat
 
 #### Parameters
 
@@ -80,7 +84,7 @@ Creates an instance of _P2pCompat.
 
 #### Defined in
 
-[apis/p2p/p2p.compat.ts:28](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/p2p.compat.ts#L28)
+[apis/p2p/p2p.compat.ts:28](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/p2p.compat.ts#L28)
 
 ## Properties
 
@@ -88,9 +92,9 @@ Creates an instance of _P2pCompat.
 
 • `Protected` `Readonly` **\_options**: [`P2pApiOptions`](../interfaces/index.QIWI.P2pApiOptions.md)
 
-**`readonly`**
+**`Memberof`**
 
-**`memberof`** OptionsWrapper
+OptionsWrapper
 
 #### Inherited from
 
@@ -98,7 +102,7 @@ Creates an instance of _P2pCompat.
 
 #### Defined in
 
-[apis/options-wrapper.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/options-wrapper.ts#L16)
+[apis/options-wrapper.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/options-wrapper.ts#L16)
 
 ___
 
@@ -112,7 +116,7 @@ ___
 
 #### Defined in
 
-[apis/p2p/p2p.ts:106](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/p2p.ts#L106)
+[apis/p2p/p2p.ts:106](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/p2p.ts#L106)
 
 ___
 
@@ -120,11 +124,19 @@ ___
 
 • `Readonly` **publicKey**: `string` = `""`
 
+#### Defined in
+
+[apis/p2p/p2p.compat.ts:30](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/p2p.compat.ts#L30)
+
 ___
 
 ### secretKey
 
 • `Readonly` **secretKey**: `string`
+
+#### Defined in
+
+[apis/p2p/p2p.compat.ts:29](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/p2p.compat.ts#L29)
 
 ___
 
@@ -138,7 +150,7 @@ ___
 
 #### Defined in
 
-[apis/p2p/p2p.ts:24](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/p2p.ts#L24)
+[apis/p2p/p2p.ts:24](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/p2p.ts#L24)
 
 ___
 
@@ -152,7 +164,7 @@ ___
 
 #### Defined in
 
-[apis/p2p/p2p.ts:25](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/p2p.ts#L25)
+[apis/p2p/p2p.ts:25](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/p2p.ts#L25)
 
 ___
 
@@ -166,7 +178,7 @@ ___
 
 #### Defined in
 
-[apis/p2p/p2p.ts:26](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/p2p.ts#L26)
+[apis/p2p/p2p.ts:26](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/p2p.ts#L26)
 
 ___
 
@@ -180,7 +192,7 @@ ___
 
 #### Defined in
 
-[apis/p2p/p2p.ts:22](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/p2p.ts#L22)
+[apis/p2p/p2p.ts:22](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/p2p.ts#L22)
 
 ___
 
@@ -194,7 +206,7 @@ ___
 
 #### Defined in
 
-[apis/p2p/p2p.ts:28](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/p2p.ts#L28)
+[apis/p2p/p2p.ts:28](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/p2p.ts#L28)
 
 ___
 
@@ -208,7 +220,7 @@ ___
 
 #### Defined in
 
-[apis/p2p/p2p.ts:29](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/p2p.ts#L29)
+[apis/p2p/p2p.ts:29](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/p2p.ts#L29)
 
 ___
 
@@ -222,7 +234,7 @@ ___
 
 #### Defined in
 
-[apis/p2p/p2p.ts:30](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/p2p.ts#L30)
+[apis/p2p/p2p.ts:30](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/p2p.ts#L30)
 
 ## Accessors
 
@@ -230,7 +242,9 @@ ___
 
 • `get` **agent**(): `any`
 
-**`memberof`** WalletCompat
+**`Memberof`**
+
+WalletCompat
 
 #### Returns
 
@@ -242,11 +256,13 @@ P2p.agent
 
 #### Defined in
 
-[apis/api.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/api.ts#L23)
+[apis/api.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/api.ts#L23)
 
 • `set` **agent**(`agent`): `void`
 
-**`memberof`** WalletCompat
+**`Memberof`**
+
+WalletCompat
 
 #### Parameters
 
@@ -264,7 +280,7 @@ P2p.agent
 
 #### Defined in
 
-[apis/api.ts:32](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/api.ts#L32)
+[apis/api.ts:32](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/api.ts#L32)
 
 ___
 
@@ -272,9 +288,9 @@ ___
 
 • `get` **options**(): `T`
 
-**`readonly`**
+**`Memberof`**
 
-**`memberof`** OptionsWrapperWithGetter
+OptionsWrapperWithGetter
 
 #### Returns
 
@@ -286,7 +302,7 @@ P2p.options
 
 #### Defined in
 
-[apis/options-wrapper.ts:44](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/options-wrapper.ts#L44)
+[apis/options-wrapper.ts:44](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/options-wrapper.ts#L44)
 
 ## Methods
 
@@ -299,7 +315,9 @@ P2p.options
 Метод позволяет проверить статус перевода по счету. Рекомендуется
 его использовать после получения уведомления о переводе.
 
-**`deprecated`** Используйте метод [getBillStatus](index.QIWI._P2pCompat.md#getbillstatus)
+**`Deprecated`**
+
+Используйте метод [getBillStatus](index.QIWI._P2pCompat.md#getbillstatus)
 
 #### Parameters
 
@@ -315,7 +333,7 @@ P2p.options
 
 #### Defined in
 
-[apis/p2p/p2p.compat.ts:87](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/p2p.compat.ts#L87)
+[apis/p2p/p2p.compat.ts:87](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/p2p.compat.ts#L87)
 
 ___
 
@@ -340,7 +358,7 @@ ___
 
 #### Defined in
 
-[apis/p2p/p2p.compat.ts:163](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/p2p.compat.ts#L163)
+[apis/p2p/p2p.compat.ts:163](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/p2p.compat.ts#L163)
 
 ___
 
@@ -368,7 +386,7 @@ server2server с использованием авторизации. Метод
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `data` | [`BillCreationRequest`](../modules/index.QIWI.md#billcreationrequest) | Сформированный запрос на создание счёта |
-| `billId?` | `string` | - |
+| `billId?` | `string` | Свой ID счёта. По умолчанию генерируется UUID |
 
 #### Returns
 
@@ -376,7 +394,7 @@ server2server с использованием авторизации. Метод
 
 #### Defined in
 
-[apis/p2p/p2p.compat.ts:59](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/p2p.compat.ts#L59)
+[apis/p2p/p2p.compat.ts:59](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/p2p.compat.ts#L59)
 
 ___
 
@@ -384,7 +402,7 @@ ___
 
 ▸ **createBillFormUrl**(`parameters`): `string`
 
- Создаёт ссылку оплаты счёта без запроса к API
+Создаёт ссылку оплаты счёта без запроса к API
 
 #### Parameters
 
@@ -400,7 +418,7 @@ ___
 
 #### Defined in
 
-[apis/p2p/p2p.compat.ts:73](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/p2p.compat.ts#L73)
+[apis/p2p/p2p.compat.ts:73](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/p2p.compat.ts#L73)
 
 ___
 
@@ -427,7 +445,7 @@ ___
 
 #### Defined in
 
-[apis/p2p/p2p.compat.ts:100](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/p2p.compat.ts#L100)
+[apis/p2p/p2p.compat.ts:100](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/p2p.compat.ts#L100)
 
 ___
 
@@ -441,10 +459,10 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options` | [`MiddlewareOptions`](../modules/index._internal_.md#middlewareoptions) |
-| `handler?` | [`BillRequestHandler`](../modules/index._internal_.md#billrequesthandler) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `options?` | [`MiddlewareOptions`](../modules/index._internal_.md#middlewareoptions) | Параметры обработки запроса |
+| `handler?` | [`BillRequestHandler`](../modules/index._internal_.md#billrequesthandler) |  |
 
 #### Returns
 
@@ -484,7 +502,7 @@ app.use((error, request, response, next) => {
 
 #### Defined in
 
-[apis/p2p/p2p.ts:148](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/p2p.ts#L148)
+[apis/p2p/p2p.ts:148](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/p2p.ts#L148)
 
 ___
 
@@ -510,7 +528,7 @@ ___
 
 #### Defined in
 
-[apis/p2p/p2p.compat.ts:112](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/p2p.compat.ts#L112)
+[apis/p2p/p2p.compat.ts:112](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/p2p.compat.ts#L112)
 
 ___
 
@@ -518,22 +536,24 @@ ___
 
 ▸ `Static` **create**(`secretKey`, `publicKey?`): [`P2p`](index.QIWI.P2p.md)
 
-**`static`**
+**`Static`**
 
-**`memberof`** P2p
+**`Memberof`**
+
+P2p
 
 #### Parameters
 
 | Name | Type | Default value |
 | :------ | :------ | :------ |
 | `secretKey` | `string` | `undefined` |
-| `publicKey` | `string` | `""` |
+| `publicKey?` | `string` | `""` |
 
 #### Returns
 
 [`P2p`](index.QIWI.P2p.md)
 
-{P2p}
+P2p
 
 #### Inherited from
 
@@ -541,7 +561,7 @@ ___
 
 #### Defined in
 
-[apis/p2p/p2p.ts:69](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/p2p.ts#L69)
+[apis/p2p/p2p.ts:69](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/p2p.ts#L69)
 
 ___
 
@@ -549,22 +569,24 @@ ___
 
 ▸ `Static` **env**(`secretKey?`, `publicKey?`): [`P2p`](index.QIWI.P2p.md)
 
-**`static`**
+**`Static`**
 
-**`memberof`** P2p
+**`Memberof`**
+
+P2p
 
 #### Parameters
 
 | Name | Type | Default value |
 | :------ | :------ | :------ |
-| `secretKey` | `string` | `environment.QIWI_SECRET_KEY` |
-| `publicKey` | `string` | `environment.QIWI_PUBLIC_KEY` |
+| `secretKey?` | `string` | `environment.QIWI_SECRET_KEY` |
+| `publicKey?` | `string` | `environment.QIWI_PUBLIC_KEY` |
 
 #### Returns
 
 [`P2p`](index.QIWI.P2p.md)
 
-{P2p}
+P2p
 
 #### Inherited from
 
@@ -572,7 +594,7 @@ ___
 
 #### Defined in
 
-[apis/p2p/p2p.ts:86](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/p2p.ts#L86)
+[apis/p2p/p2p.ts:86](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/p2p.ts#L86)
 
 ___
 
@@ -580,7 +602,9 @@ ___
 
 ▸ `Static` **formatLifetime**(`days?`): `string`
 
-**`deprecated`** Используйте [formatLifetimeDays](index.QIWI._P2pCompat.md#formatlifetimedays) или [formatLifetimeMinutes](index.QIWI._P2pCompat.md#formatlifetimeminutes)
+**`Deprecated`**
+
+Используйте [formatLifetimeDays](index.QIWI._P2pCompat.md#formatlifetimedays) или [formatLifetimeMinutes](index.QIWI._P2pCompat.md#formatlifetimeminutes)
 
 #### Parameters
 
@@ -596,7 +620,7 @@ ___
 
 #### Defined in
 
-[apis/p2p/p2p.compat.ts:123](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/p2p.compat.ts#L123)
+[apis/p2p/p2p.compat.ts:123](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/p2p.compat.ts#L123)
 
 ___
 
@@ -618,7 +642,7 @@ ___
 
 #### Defined in
 
-[apis/p2p/p2p.compat.ts:143](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/p2p.compat.ts#L143)
+[apis/p2p/p2p.compat.ts:143](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/p2p.compat.ts#L143)
 
 ___
 
@@ -628,9 +652,9 @@ ___
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `minutes` | `number` | `15` |
+| Name | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `minutes?` | `number` | `15` | Кол-во минут жизни счёта (может быть не целым числом) |
 
 #### Returns
 
@@ -640,7 +664,7 @@ ___
 
 #### Defined in
 
-[apis/p2p/p2p.compat.ts:152](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/p2p.compat.ts#L152)
+[apis/p2p/p2p.compat.ts:152](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/p2p.compat.ts#L152)
 
 ___
 
@@ -648,9 +672,11 @@ ___
 
 ▸ `Static` **httpClientFactory**(`secretKey`): [`SimpleJsonHttp`](index.QIWI.SimpleJsonHttp.md)
 
-**`static`**
+**`Static`**
 
-**`memberof`** P2p
+**`Memberof`**
+
+P2p
 
 #### Parameters
 
@@ -662,7 +688,7 @@ ___
 
 [`SimpleJsonHttp`](index.QIWI.SimpleJsonHttp.md)
 
-{SimpleJsonHttp}
+SimpleJsonHttp
 
 #### Inherited from
 
@@ -670,7 +696,7 @@ ___
 
 #### Defined in
 
-[apis/p2p/p2p.ts:40](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/p2p.ts#L40)
+[apis/p2p/p2p.ts:40](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/p2p.ts#L40)
 
 ___
 
@@ -695,4 +721,4 @@ ___
 
 #### Defined in
 
-[apis/p2p/p2p.compat.ts:134](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/p2p.compat.ts#L134)
+[apis/p2p/p2p.compat.ts:134](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/p2p.compat.ts#L134)

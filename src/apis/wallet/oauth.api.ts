@@ -49,9 +49,9 @@ export class WalletOauthApi extends WalletApi {
    *
    * Создаёт токен с увеличенным сроком действия (10 лет)
    *
-   * @see {@link https://developer.qiwi.com/ru/qiwi-wallet-personal-advanced/?http#intro|Документация}
+   * [Документация](https://developer.qiwi.com/ru/qiwi-wallet-personal-advanced/?http#intro)
    *
-   * @return {Promise<TokenResponse<Wallet>>}  {Promise<PrettyTokenResponse<Wallet>>}
+   * @return {Promise<TokenResponse<Wallet>>} Promise<PrettyTokenResponse<Wallet>>
    * @memberof WalletOauthApi
    */
   async createToken(): Promise<ShortTokenResponse> {

@@ -19,7 +19,7 @@ export class WalletRestrictionsApi extends WalletApi {
    *
    * **Этот метод требует наличия валидного `walletId` (номера телефона привязанного к кошельку) в конфигурации API.**
    *
-   * @return {Promise<Restrictions>} {Promise<Restrictions>}
+   * @return {Promise<Restrictions>} Promise<Restrictions>
    * @memberof WalletRestrictionsApi
    */
   async get(): Promise<Restrictions> {

@@ -33,7 +33,7 @@ export class WalletBillsApi extends WalletApi {
    * @param {string} name Название связки ключей
    * @param {string=} [server] URL сервера для отправки уведомлений
    *
-   * @return {Promise<KeyPair>} {Promise<KeyPair>}
+   * @return {Promise<KeyPair>} Promise<KeyPair>
    * @memberof WalletBillsApi
    *
    * @example
@@ -65,8 +65,8 @@ export class WalletBillsApi extends WalletApi {
    * более 50). В запросе можно использовать фильтры по времени
    * выставления счета, начальному идентификатору счета.
    *
-   * @param {BillsGetParameters} [parameters={}]
-   * @return {Promise<Bill[]>}  {Promise<Bill[]>}
+   * @param {BillsGetParameters} [parameters]
+   * @return {Promise<Bill[]>} Promise<Bill[]>
    * @memberof WalletBillsApi
    */
   async get(parameters: BillsGetParameters = {}): Promise<Bill[]> {
@@ -85,7 +85,7 @@ export class WalletBillsApi extends WalletApi {
    *
    * @param {(number|Bill)} bill
    * @param {Currency=} [currency]
-   * @return {Promise<BillPayResponse>}  {Promise<BillPayResponse>}
+   * @return {Promise<BillPayResponse>} Promise<BillPayResponse>
    * @memberof WalletBillsApi
    */
   async pay(bill: Bill["id"] | Bill, currency?: Currency): Promise<BillPayResponse> {
@@ -107,7 +107,7 @@ export class WalletBillsApi extends WalletApi {
    * недоступным для оплаты.
    *
    * @param {number} id
-   * @return {Promise<void>}  {Promise<void>}
+   * @return {Promise<void>} Promise<void>
    * @memberof WalletBillsApi
    */
   async reject(id: Bill["id"]): Promise<void> {

@@ -1,14 +1,14 @@
 /* istanbul ignore file */
-import { OptionsWrapperWithSetter } from "apis/options-wrapper";
-import { collect } from "apis/shared/collect";
+import { OptionsWrapperWithSetter } from "@apis/options-wrapper";
+import { collect } from "@shared/collect";
 import {
   HttpClient,
   HttpClientOptions,
   HttpError,
   HttpRequestOptions,
   HttpResponse
-} from "apis/shared/http.types";
-import { _ } from "apis/shared/pass";
+} from "@shared/http.types";
+import { _ } from "@shared/pass";
 
 /**
  *
@@ -83,11 +83,14 @@ export class FetchHttpClient
 
       return responseData;
     } catch (error: unknown) {
-      if (!(error instanceof HttpError)) throw error;
+      if (
+        typeof request.mapHttpErrors === "function" &&
+        error instanceof HttpError
+      ) {
+        throw request.mapHttpErrors(error);
+      }
 
-      if (typeof request.mapHttpErrors !== "function") throw error;
-
-      throw request.mapHttpErrors(error);
+      throw error;
     }
   }
 }

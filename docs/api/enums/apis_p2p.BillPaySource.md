@@ -6,38 +6,38 @@
 
 ## Table of contents
 
-### Enumeration members
+### Enumeration Members
 
 - [Card](apis_p2p.BillPaySource.md#card)
 - [Mobile](apis_p2p.BillPaySource.md#mobile)
 - [QIWI](apis_p2p.BillPaySource.md#qiwi)
 
-## Enumeration members
+## Enumeration Members
 
 ### Card
 
-• **Card** = `"card"`
+• **Card** = ``"card"``
 
 #### Defined in
 
-[apis/p2p/p2p.types.ts:25](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/p2p.types.ts#L25)
+[apis/p2p/p2p.types.ts:25](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/p2p.types.ts#L25)
 
 ___
 
 ### Mobile
 
-• **Mobile** = `"mobile"`
+• **Mobile** = ``"mobile"``
 
 #### Defined in
 
-[apis/p2p/p2p.types.ts:26](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/p2p.types.ts#L26)
+[apis/p2p/p2p.types.ts:26](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/p2p.types.ts#L26)
 
 ___
 
 ### QIWI
 
-• **QIWI** = `"qw"`
+• **QIWI** = ``"qw"``
 
 #### Defined in
 
-[apis/p2p/p2p.types.ts:24](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/p2p.types.ts#L24)
+[apis/p2p/p2p.types.ts:24](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/p2p.types.ts#L24)

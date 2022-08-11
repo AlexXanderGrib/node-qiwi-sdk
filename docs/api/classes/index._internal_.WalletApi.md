@@ -4,7 +4,7 @@
 
 [index](../modules/index.md).[<internal>](../modules/index._internal_.md).WalletApi
 
-**`export`**
+**`Export`**
 
 ## Hierarchy
 
@@ -61,7 +61,9 @@
 
 Creates an instance of OptionsWrapper.
 
-**`memberof`** OptionsWrapper
+**`Memberof`**
+
+OptionsWrapper
 
 #### Parameters
 
@@ -75,7 +77,7 @@ Creates an instance of OptionsWrapper.
 
 #### Defined in
 
-[apis/options-wrapper.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/options-wrapper.ts#L23)
+[apis/options-wrapper.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/options-wrapper.ts#L23)
 
 ## Properties
 
@@ -83,9 +85,9 @@ Creates an instance of OptionsWrapper.
 
 • `Protected` `Readonly` **\_options**: [`WalletApiOptions`](../interfaces/index.QIWI.WalletApiOptions.md)
 
-**`readonly`**
+**`Memberof`**
 
-**`memberof`** OptionsWrapper
+OptionsWrapper
 
 #### Inherited from
 
@@ -93,7 +95,7 @@ Creates an instance of OptionsWrapper.
 
 #### Defined in
 
-[apis/options-wrapper.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/options-wrapper.ts#L16)
+[apis/options-wrapper.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/options-wrapper.ts#L16)
 
 ## Accessors
 
@@ -101,9 +103,9 @@ Creates an instance of OptionsWrapper.
 
 • `Protected` `get` **http**(): [`SimpleJsonHttp`](index.QIWI.SimpleJsonHttp.md)
 
-**`readonly`**
+**`Memberof`**
 
-**`memberof`** ApiSubclass
+ApiSubclass
 
 #### Returns
 
@@ -115,7 +117,7 @@ ApiSubclass.http
 
 #### Defined in
 
-[apis/api.ts:55](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/api.ts#L55)
+[apis/api.ts:55](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/api.ts#L55)
 
 ___
 
@@ -123,9 +125,9 @@ ___
 
 • `Protected` `get` **walletId**(): `string`
 
-**`readonly`**
+**`Memberof`**
 
-**`memberof`** WalletApi
+WalletApi
 
 #### Returns
 
@@ -133,4 +135,4 @@ ___
 
 #### Defined in
 
-[apis/wallet/api.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/api.ts#L17)
+[apis/wallet/api.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/api.ts#L17)

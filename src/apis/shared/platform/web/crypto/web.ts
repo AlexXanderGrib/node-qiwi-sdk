@@ -1,5 +1,5 @@
 /* istanbul ignore file */
-import { getByIndex } from "apis/shared/get";
+import { getByIndex } from "@shared/get";
 
 /**
  *
@@ -7,7 +7,7 @@ import { getByIndex } from "apis/shared/get";
  * @export
  * @param {Uint8Array} array1
  * @param {Uint8Array} array2
- * @return {boolean} {boolean}
+ * @return {boolean} boolean
  */
 export function timingSafeEqual(array1: Uint8Array, array2: Uint8Array): boolean {
   if (!(array1 instanceof Uint8Array)) {
@@ -43,7 +43,7 @@ declare const crypto: any;
  *
  * @export
  * @param {number} size
- * @return {Uint8Array}  {Uint8Array}
+ * @return {Uint8Array} Uint8Array
  */
 export function randomBytes(size: number): Uint8Array {
   if (typeof crypto === "undefined") {

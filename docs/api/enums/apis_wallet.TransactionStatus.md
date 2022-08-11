@@ -8,44 +8,44 @@
 
 ## Table of contents
 
-### Enumeration members
+### Enumeration Members
 
 - [ERROR](apis_wallet.TransactionStatus.md#error)
 - [SUCCESS](apis_wallet.TransactionStatus.md#success)
 - [WAITING](apis_wallet.TransactionStatus.md#waiting)
 
-## Enumeration members
+## Enumeration Members
 
 ### ERROR
 
-• **ERROR** = `"ERROR"`
+• **ERROR** = ``"ERROR"``
 
 Ошибка платежа
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:43](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/wallet.types.ts#L43)
+[apis/wallet/wallet.types.ts:43](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L43)
 
 ___
 
 ### SUCCESS
 
-• **SUCCESS** = `"SUCCESS"`
+• **SUCCESS** = ``"SUCCESS"``
 
 Успешный платеж
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:41](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/wallet.types.ts#L41)
+[apis/wallet/wallet.types.ts:41](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L41)
 
 ___
 
 ### WAITING
 
-• **WAITING** = `"WAITING"`
+• **WAITING** = ``"WAITING"``
 
 Платеж проводится
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:39](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/wallet.types.ts#L39)
+[apis/wallet/wallet.types.ts:39](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L39)

@@ -12,7 +12,7 @@ type Environment<
  * @template T
  * @param {ReadonlyRecord<string, string | string>} baseEnvironment
  * @param {...T} keys
- * @return {Object}  {(ReadonlyRecord<T[number], string | undefined>)}
+ * @return {Object} (ReadonlyRecord<T[number], string | undefined>)
  */
 function loadEnvironment<T extends string[]>(
   baseEnvironment: Environment,

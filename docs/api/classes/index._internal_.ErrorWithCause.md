@@ -31,7 +31,9 @@
 
 Creates an instance of ErrorWithCause.
 
-**`memberof`** ErrorWithCause
+**`Memberof`**
+
+ErrorWithCause
 
 #### Parameters
 
@@ -46,13 +48,17 @@ Error.constructor
 
 #### Defined in
 
-[apis/error.ts:14](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/error.ts#L14)
+[apis/error.ts:14](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/error.ts#L14)
 
 ## Properties
 
 ### cause
 
 • `Optional` **cause**: `Error`
+
+#### Defined in
+
+[apis/error.ts:14](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/error.ts#L14)
 
 ___
 
@@ -63,3 +69,7 @@ ___
 #### Inherited from
 
 Error.message
+
+#### Defined in
+
+[apis/error.ts:14](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/error.ts#L14)

@@ -81,14 +81,8 @@ describe("Http", () => {
       parseResponse: (body) => JSON.parse(uint8ArrayToUtf8(body))
     };
 
-    try {
-      await http.get("/broken");
-
-      expect(false).toBeTruthy();
-    } catch (error: any) {
-      expect(error).toBeInstanceOf(SyntaxError);
-      expect(error.message).toBe("Unexpected end of JSON input");
-    }
+    const data = await http.get("/broken");
+    expect(data).toEqual(new Uint8Array(Buffer.from('{"')));
   });
 
   test("Empty response", async () => {

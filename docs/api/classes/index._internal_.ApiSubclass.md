@@ -4,7 +4,7 @@
 
 [index](../modules/index.md).[<internal>](../modules/index._internal_.md).ApiSubclass
 
-**`export`**
+**`Export`**
 
 ## Type parameters
 
@@ -46,7 +46,9 @@
 
 Creates an instance of OptionsWrapper.
 
-**`memberof`** OptionsWrapper
+**`Memberof`**
+
+OptionsWrapper
 
 #### Type parameters
 
@@ -66,7 +68,7 @@ Creates an instance of OptionsWrapper.
 
 #### Defined in
 
-[apis/options-wrapper.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/options-wrapper.ts#L23)
+[apis/options-wrapper.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/options-wrapper.ts#L23)
 
 ## Properties
 
@@ -74,9 +76,9 @@ Creates an instance of OptionsWrapper.
 
 • `Protected` `Readonly` **\_options**: `T`
 
-**`readonly`**
+**`Memberof`**
 
-**`memberof`** OptionsWrapper
+OptionsWrapper
 
 #### Inherited from
 
@@ -84,7 +86,7 @@ Creates an instance of OptionsWrapper.
 
 #### Defined in
 
-[apis/options-wrapper.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/options-wrapper.ts#L16)
+[apis/options-wrapper.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/options-wrapper.ts#L16)
 
 ## Accessors
 
@@ -92,9 +94,9 @@ Creates an instance of OptionsWrapper.
 
 • `Protected` `get` **http**(): [`SimpleJsonHttp`](index.QIWI.SimpleJsonHttp.md)
 
-**`readonly`**
+**`Memberof`**
 
-**`memberof`** ApiSubclass
+ApiSubclass
 
 #### Returns
 
@@ -102,4 +104,4 @@ Creates an instance of OptionsWrapper.
 
 #### Defined in
 
-[apis/api.ts:55](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/api.ts#L55)
+[apis/api.ts:55](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/api.ts#L55)

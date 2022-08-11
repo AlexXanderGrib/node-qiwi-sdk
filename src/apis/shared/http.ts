@@ -91,7 +91,7 @@ export class SimpleJsonHttp {
    * @param {string} method
    * @param {string} url
    * @param {*} [body]
-   * @return {Promise<T>} {Promise<T>}
+   * @return {Promise<T>} Promise<T>
    * @memberof SimpleJsonHttp
    */
   async simpleRequest<T>(method: string, url: string, body?: any): Promise<T> {
@@ -102,7 +102,7 @@ export class SimpleJsonHttp {
    *
    * @template T
    * @param {HttpRequestOptions} option
-   * @return {Promise<T>} {Promise<T>}
+   * @return {Promise<T>} Promise<T>
    * @memberof SimpleJsonHttp
    */
   async request<T>(option: HttpRequestOptions): Promise<T> {

@@ -26,7 +26,7 @@ export function formatDate(dateTime: DateValue): string {
  *
  * @export
  * @param {DateValue} dateTime
- * @return {string}  {string}
+ * @return {string} string
  */
 export function formatAltLifetimeDate(dateTime: DateValue): string {
   const date = new Date(dateTime);
@@ -111,7 +111,7 @@ function offsetDate(amount: number, unit: TimeUnit, currentDate: Date): Date {
  * @param {number} amount
  * @param {(TimeSpan | number | TimeSpanKeys)} unit
  * @param {Date} [currentDate=new Date()]
- * @return {string}  {string}
+ * @return {string} string
  */
 export function formatOffsetDate(
   amount: number,
@@ -128,7 +128,7 @@ export function formatOffsetDate(
  * @param {number} amount
  * @param {(TimeSpan | number | TimeSpanKeys)} unit
  * @param {Date} [currentDate=new Date()]
- * @return {string}  {string}
+ * @return {string} string
  */
 export function formatOffsetAltLifetimeDate(
   amount: number,

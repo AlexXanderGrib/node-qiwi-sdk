@@ -82,7 +82,7 @@ export class Wallet extends ApiClass<WalletApiOptions> {
    *
    * @static
    * @param {string} token
-   * @return {SimpleJsonHttp} {SimpleJsonHttp}
+   * @return {SimpleJsonHttp} SimpleJsonHttp
    * @memberof Wallet
    */
   static httpClientFactory = (token: string): SimpleJsonHttp => {
@@ -111,13 +111,13 @@ export class Wallet extends ApiClass<WalletApiOptions> {
    * Если используете с переменными окружения, то:
    * - Переименуйте переменную с токеном в `QIWI_TOKEN`
    * - Переименуйте переменную с номером кошелька (если есть) в `QIWI_WALLET`
-   * - Используйте статический метод {@link env} вместо этого
+   * - Используйте статический метод {@link Wallet.env} вместо этого
    *
    *
    * @static
    * @param {string} token
    * @param {string} [walletId=""]
-   * @return {Wallet}  {Wallet}
+   * @return {Wallet} Wallet
    * @memberof Wallet
    */
   static create(token: string, walletId = ""): Wallet {
@@ -136,7 +136,7 @@ export class Wallet extends ApiClass<WalletApiOptions> {
    * @static
    * @param {string} [token=process.env.QIWI_TOKEN]
    * @param {string} [walletId=process.env.QIWI_WALLET]
-   * @return {Wallet}  {Wallet}
+   * @return {Wallet} Wallet
    * @memberof Wallet
    */
   static env(
@@ -151,16 +151,16 @@ export class Wallet extends ApiClass<WalletApiOptions> {
    * Номер телефона требуется для вызова большинства методов из
    * классов API:
    *
-   * - {@link IdentificationApi}
-   * - {@link LimitsApi}
-   * - {@link RestrictionsApi}
-   * - {@link PaymentHistoryApi}
-   * - {@link FundingSourcesApi}
-   * - {@link CardsApi}
+   * - {@link Wallet.IdentificationApi}
+   * - {@link Wallet.LimitsApi}
+   * - {@link Wallet.RestrictionsApi}
+   * - {@link Wallet.PaymentHistoryApi}
+   * - {@link Wallet.FundingSourcesApi}
+   * - {@link Wallet.CardsApi}
    *
    * @static
    * @param {string} token
-   * @return {Promise<Wallet>}  {Promise<Wallet>}
+   * @return {Promise<Wallet>} Promise<Wallet>
    * @memberof Wallet
    */
   static async createAndFetchWalletId(
@@ -212,7 +212,7 @@ export class Wallet extends ApiClass<WalletApiOptions> {
   /**
    * Создаёт токен с увеличенным сроком действия (10 лет)
    *
-   * @see {@link https://developer.qiwi.com/ru/qiwi-wallet-personal-advanced/|Документация}
+   * [Документация](https://developer.qiwi.com/ru/qiwi-wallet-personal-advanced/)
    */
   async createOauthToken(): Promise<PrettyTokenResponse<Wallet>> {
     /* istanbul ignore next */

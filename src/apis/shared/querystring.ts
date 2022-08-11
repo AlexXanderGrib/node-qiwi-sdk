@@ -7,7 +7,7 @@ type Primitive = string | number | boolean;
  *
  *
  * @param {unknown} value
- * @return {boolean}  {value is Primitive}
+ * @return {boolean} value is Primitive
  */
 function isPrimitive(value: unknown): value is Primitive {
   return (

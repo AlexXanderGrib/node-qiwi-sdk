@@ -34,7 +34,7 @@ export class P2p extends ApiClass<P2pApiOptions> {
    *
    * @static
    * @param {string} secretKey
-   * @return {SimpleJsonHttp} {SimpleJsonHttp}
+   * @return {SimpleJsonHttp} SimpleJsonHttp
    * @memberof P2p
    */
   static httpClientFactory = (secretKey: string): SimpleJsonHttp => {
@@ -63,7 +63,7 @@ export class P2p extends ApiClass<P2pApiOptions> {
    * @static
    * @param {string} secretKey
    * @param {string} [publicKey=""]
-   * @return {P2p}  {P2p}
+   * @return {P2p} P2p
    * @memberof P2p
    */
   static create(secretKey: string, publicKey = ""): P2p {
@@ -80,7 +80,7 @@ export class P2p extends ApiClass<P2pApiOptions> {
    * @static
    * @param {string} [secretKey=process.env.QIWI_SECRET_KEY]
    * @param {string} [publicKey=process.env.QIWI_PUBLIC_KEY]
-   * @return {P2p}  {P2p}
+   * @return {P2p} P2p
    * @memberof P2p
    */
   static env(
@@ -110,7 +110,7 @@ export class P2p extends ApiClass<P2pApiOptions> {
    *
    * ## Это middleware кидает ошибки, позаботьтесь об их обработке
    *
-   * @param {Object} [options={}] Параметры обработки запроса
+   * @param {Object} [options] Параметры обработки запроса
    * @param {boolean} [options.memo=true] Флаг для включения/отключения пропуска повторяющихся запросов, если один из них был успешно обработан
    *
    * @param {RequestHandler<Record<string, string>, any, BillStatusNotificationBody>} handler

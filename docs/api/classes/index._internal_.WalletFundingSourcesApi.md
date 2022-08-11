@@ -7,7 +7,7 @@
 # Баланс QIWI Кошелька
 [Документация QIWI] (https://developer.qiwi.com/ru/qiwi-wallet-personal/#balance)
 
-**`export`**
+**`Export`**
 
 ## Hierarchy
 
@@ -45,7 +45,9 @@
 
 Creates an instance of OptionsWrapper.
 
-**`memberof`** OptionsWrapper
+**`Memberof`**
+
+OptionsWrapper
 
 #### Parameters
 
@@ -59,7 +61,7 @@ Creates an instance of OptionsWrapper.
 
 #### Defined in
 
-[apis/options-wrapper.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/options-wrapper.ts#L23)
+[apis/options-wrapper.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/options-wrapper.ts#L23)
 
 ## Properties
 
@@ -67,9 +69,9 @@ Creates an instance of OptionsWrapper.
 
 • `Protected` `Readonly` **\_options**: [`WalletApiOptions`](../interfaces/index.QIWI.WalletApiOptions.md)
 
-**`readonly`**
+**`Memberof`**
 
-**`memberof`** OptionsWrapper
+OptionsWrapper
 
 #### Inherited from
 
@@ -77,7 +79,7 @@ Creates an instance of OptionsWrapper.
 
 #### Defined in
 
-[apis/options-wrapper.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/options-wrapper.ts#L16)
+[apis/options-wrapper.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/options-wrapper.ts#L16)
 
 ## Accessors
 
@@ -85,9 +87,9 @@ Creates an instance of OptionsWrapper.
 
 • `Protected` `get` **http**(): [`SimpleJsonHttp`](index.QIWI.SimpleJsonHttp.md)
 
-**`readonly`**
+**`Memberof`**
 
-**`memberof`** ApiSubclass
+ApiSubclass
 
 #### Returns
 
@@ -99,7 +101,7 @@ WalletApi.http
 
 #### Defined in
 
-[apis/api.ts:55](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/api.ts#L55)
+[apis/api.ts:55](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/api.ts#L55)
 
 ___
 
@@ -107,9 +109,9 @@ ___
 
 • `Protected` `get` **walletId**(): `string`
 
-**`readonly`**
+**`Memberof`**
 
-**`memberof`** WalletApi
+WalletApi
 
 #### Returns
 
@@ -121,7 +123,7 @@ WalletApi.walletId
 
 #### Defined in
 
-[apis/wallet/api.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/api.ts#L17)
+[apis/wallet/api.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/api.ts#L17)
 
 ## Methods
 
@@ -136,7 +138,9 @@ WalletApi.walletId
 
 **Этот метод требует наличия валидного `walletId` (номера телефона привязанного к кошельку) в конфигурации API.**
 
-**`memberof`** WalletFundingSourcesApi
+**`Memberof`**
+
+WalletFundingSourcesApi
 
 #### Parameters
 
@@ -148,11 +152,11 @@ WalletApi.walletId
 
 `Promise`<`void`\>
 
-{Promise<void>}
+Promise<void>
 
 #### Defined in
 
-[apis/wallet/funding-sources.api.ts:44](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/funding-sources.api.ts#L44)
+[apis/wallet/funding-sources.api.ts:44](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/funding-sources.api.ts#L44)
 
 ___
 
@@ -167,17 +171,19 @@ ___
 
 **Этот метод требует наличия валидного `walletId` (номера телефона привязанного к кошельку) в конфигурации API.**
 
-**`memberof`** WalletFundingSourcesApi
+**`Memberof`**
+
+WalletFundingSourcesApi
 
 #### Returns
 
 `Promise`<[`GetAccountOffersResponse`](../modules/index.QIWI.md#getaccountoffersresponse)\>
 
-{Promise<GetAccountOffersResponse>}
+Promise<GetAccountOffersResponse>
 
 #### Defined in
 
-[apis/wallet/funding-sources.api.ts:64](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/funding-sources.api.ts#L64)
+[apis/wallet/funding-sources.api.ts:64](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/funding-sources.api.ts#L64)
 
 ___
 
@@ -191,17 +197,19 @@ ___
 
 **Этот метод требует наличия валидного `walletId` (номера телефона привязанного к кошельку) в конфигурации API.**
 
-**`memberof`** WalletFundingSourcesApi
+**`Memberof`**
+
+WalletFundingSourcesApi
 
 #### Returns
 
 `Promise`<[`Account`](../modules/index.QIWI.md#account)[]\>
 
-{Promise<GetAccountsResponse["accounts"]>}
+Promise<GetAccountsResponse["accounts"]>
 
 #### Defined in
 
-[apis/wallet/funding-sources.api.ts:24](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/funding-sources.api.ts#L24)
+[apis/wallet/funding-sources.api.ts:24](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/funding-sources.api.ts#L24)
 
 ___
 
@@ -217,7 +225,9 @@ ___
 
 **Этот метод требует наличия валидного `walletId` (номера телефона привязанного к кошельку) в конфигурации API.**
 
-**`memberof`** WalletFundingSourcesApi
+**`Memberof`**
+
+WalletFundingSourcesApi
 
 #### Parameters
 
@@ -229,8 +239,8 @@ ___
 
 `Promise`<`void`\>
 
-{Promise<void>}
+Promise<void>
 
 #### Defined in
 
-[apis/wallet/funding-sources.api.ts:83](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/funding-sources.api.ts#L83)
+[apis/wallet/funding-sources.api.ts:83](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/funding-sources.api.ts#L83)

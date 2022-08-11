@@ -4,7 +4,7 @@
 
 [apis/shared](../modules/apis_shared.md).HttpError
 
-**`export`**
+**`Export`**
 
 ## Type parameters
 
@@ -37,7 +37,9 @@
 
 Creates an instance of HttpError.
 
-**`memberof`** HttpError
+**`Memberof`**
+
+HttpError
 
 #### Type parameters
 
@@ -59,10 +61,14 @@ Error.constructor
 
 #### Defined in
 
-[apis/shared/http.types.ts:46](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/shared/http.types.ts#L46)
+[apis/shared/http.types.ts:46](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/shared/http.types.ts#L46)
 
 ## Properties
 
 ### response
 
 • **response**: [`HttpResponse`](../interfaces/index.QIWI.HttpResponse.md)<`Rq`, `Rs`\>
+
+#### Defined in
+
+[apis/shared/http.types.ts:46](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/shared/http.types.ts#L46)

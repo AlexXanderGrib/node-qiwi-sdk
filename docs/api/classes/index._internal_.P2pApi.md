@@ -4,7 +4,7 @@
 
 [index](../modules/index.md).[<internal>](../modules/index._internal_.md).P2pApi
 
-**`export`**
+**`Export`**
 
 ## Hierarchy
 
@@ -38,7 +38,9 @@
 
 Creates an instance of OptionsWrapper.
 
-**`memberof`** OptionsWrapper
+**`Memberof`**
+
+OptionsWrapper
 
 #### Parameters
 
@@ -52,7 +54,7 @@ Creates an instance of OptionsWrapper.
 
 #### Defined in
 
-[apis/options-wrapper.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/options-wrapper.ts#L23)
+[apis/options-wrapper.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/options-wrapper.ts#L23)
 
 ## Properties
 
@@ -60,9 +62,9 @@ Creates an instance of OptionsWrapper.
 
 • `Protected` `Readonly` **\_options**: [`P2pApiOptions`](../interfaces/index.QIWI.P2pApiOptions.md)
 
-**`readonly`**
+**`Memberof`**
 
-**`memberof`** OptionsWrapper
+OptionsWrapper
 
 #### Inherited from
 
@@ -70,7 +72,7 @@ Creates an instance of OptionsWrapper.
 
 #### Defined in
 
-[apis/options-wrapper.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/options-wrapper.ts#L16)
+[apis/options-wrapper.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/options-wrapper.ts#L16)
 
 ## Accessors
 
@@ -78,9 +80,9 @@ Creates an instance of OptionsWrapper.
 
 • `Protected` `get` **http**(): [`SimpleJsonHttp`](index.QIWI.SimpleJsonHttp.md)
 
-**`readonly`**
+**`Memberof`**
 
-**`memberof`** ApiSubclass
+ApiSubclass
 
 #### Returns
 
@@ -92,7 +94,7 @@ ApiSubclass.http
 
 #### Defined in
 
-[apis/api.ts:55](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/api.ts#L55)
+[apis/api.ts:55](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/api.ts#L55)
 
 ___
 
@@ -100,9 +102,9 @@ ___
 
 • `Protected` `get` **publicKey**(): `string`
 
-**`readonly`**
+**`Memberof`**
 
-**`memberof`** P2pApi
+P2pApi
 
 #### Returns
 
@@ -110,7 +112,7 @@ ___
 
 #### Defined in
 
-[apis/p2p/api.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/api.ts#L17)
+[apis/p2p/api.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/api.ts#L17)
 
 ___
 
@@ -118,9 +120,9 @@ ___
 
 • `Protected` `get` **secretKey**(): `string`
 
-**`readonly`**
+**`Memberof`**
 
-**`memberof`** P2pApi
+P2pApi
 
 #### Returns
 
@@ -128,4 +130,4 @@ ___
 
 #### Defined in
 
-[apis/p2p/api.ts:28](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/api.ts#L28)
+[apis/p2p/api.ts:28](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/api.ts#L28)

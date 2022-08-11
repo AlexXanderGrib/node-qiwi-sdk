@@ -38,7 +38,7 @@ const QIWI_JOINER = "|";
  * @param {string} key
  * @param {string} digest
  * @param {string[]} data
- * @return {boolean}  {boolean}
+ * @return {boolean} boolean
  */
 export function compareQiwiHmac(
   key: BinaryAlike,

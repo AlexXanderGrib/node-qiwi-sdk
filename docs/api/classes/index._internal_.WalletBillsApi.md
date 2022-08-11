@@ -11,7 +11,7 @@
 [API P2P-счетов](https://developer.qiwi.com/ru/p2p-payments/#create).
 Для авторизации используется [токен P2P](https://developer.qiwi.com/ru/qiwi-wallet-personal/#p2p-token).
 
-**`export`**
+**`Export`**
 
 ## Hierarchy
 
@@ -49,7 +49,9 @@
 
 Creates an instance of OptionsWrapper.
 
-**`memberof`** OptionsWrapper
+**`Memberof`**
+
+OptionsWrapper
 
 #### Parameters
 
@@ -63,7 +65,7 @@ Creates an instance of OptionsWrapper.
 
 #### Defined in
 
-[apis/options-wrapper.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/options-wrapper.ts#L23)
+[apis/options-wrapper.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/options-wrapper.ts#L23)
 
 ## Properties
 
@@ -71,9 +73,9 @@ Creates an instance of OptionsWrapper.
 
 • `Protected` `Readonly` **\_options**: [`WalletApiOptions`](../interfaces/index.QIWI.WalletApiOptions.md)
 
-**`readonly`**
+**`Memberof`**
 
-**`memberof`** OptionsWrapper
+OptionsWrapper
 
 #### Inherited from
 
@@ -81,7 +83,7 @@ Creates an instance of OptionsWrapper.
 
 #### Defined in
 
-[apis/options-wrapper.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/options-wrapper.ts#L16)
+[apis/options-wrapper.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/options-wrapper.ts#L16)
 
 ## Accessors
 
@@ -89,9 +91,9 @@ Creates an instance of OptionsWrapper.
 
 • `Protected` `get` **http**(): [`SimpleJsonHttp`](index.QIWI.SimpleJsonHttp.md)
 
-**`readonly`**
+**`Memberof`**
 
-**`memberof`** ApiSubclass
+ApiSubclass
 
 #### Returns
 
@@ -103,7 +105,7 @@ WalletApi.http
 
 #### Defined in
 
-[apis/api.ts:55](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/api.ts#L55)
+[apis/api.ts:55](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/api.ts#L55)
 
 ___
 
@@ -111,9 +113,9 @@ ___
 
 • `Protected` `get` **walletId**(): `string`
 
-**`readonly`**
+**`Memberof`**
 
-**`memberof`** WalletApi
+WalletApi
 
 #### Returns
 
@@ -125,7 +127,7 @@ WalletApi.walletId
 
 #### Defined in
 
-[apis/wallet/api.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/api.ts#L17)
+[apis/wallet/api.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/api.ts#L17)
 
 ## Methods
 
@@ -140,28 +142,32 @@ WalletApi.walletId
 полях ответа PublicKey и SecretKey. Для авторизации
 используется токен API QIWI Кошелька.
 
-**`memberof`** WalletBillsApi
+**`Memberof`**
 
-**`example`**
+WalletBillsApi
 
+**`Example`**
+
+```ts
 const { publicKey, secretKey } = await createP2PKeyPair('my-key-pair');
+```
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `name` | `string` | Название связки ключей |
-| `server?` | `string` | - |
+| `server?` | `string` | URL сервера для отправки уведомлений |
 
 #### Returns
 
 `Promise`<[`KeyPair`](../modules/index.QIWI.md#keypair)\>
 
-{Promise<KeyPair>}
+Promise<KeyPair>
 
 #### Defined in
 
-[apis/wallet/bills.api.ts:43](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/bills.api.ts#L43)
+[apis/wallet/bills.api.ts:43](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/bills.api.ts#L43)
 
 ___
 
@@ -178,23 +184,25 @@ ___
 более 50). В запросе можно использовать фильтры по времени
 выставления счета, начальному идентификатору счета.
 
-**`memberof`** WalletBillsApi
+**`Memberof`**
+
+WalletBillsApi
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `parameters` | [`BillsGetParameters`](../modules/index.QIWI.md#billsgetparameters) |
+| `parameters?` | [`BillsGetParameters`](../modules/index.QIWI.md#billsgetparameters) |
 
 #### Returns
 
 `Promise`<[`Bill`](../interfaces/index.QIWI.Bill.md)[]\>
 
-{Promise<Bill[]>}
+Promise<Bill[]>
 
 #### Defined in
 
-[apis/wallet/bills.api.ts:72](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/bills.api.ts#L72)
+[apis/wallet/bills.api.ts:72](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/bills.api.ts#L72)
 
 ___
 
@@ -202,7 +210,9 @@ ___
 
 ▸ **pay**(`bill`): `Promise`<[`BillPayResponse`](../modules/index.QIWI.md#billpayresponse)\>
 
-**`memberof`** WalletBillsApi
+**`Memberof`**
+
+WalletBillsApi
 
 #### Parameters
 
@@ -214,15 +224,17 @@ ___
 
 `Promise`<[`BillPayResponse`](../modules/index.QIWI.md#billpayresponse)\>
 
-{Promise<BillPayResponse>}
+Promise<BillPayResponse>
 
 #### Defined in
 
-[apis/wallet/bills.api.ts:80](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/bills.api.ts#L80)
+[apis/wallet/bills.api.ts:80](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/bills.api.ts#L80)
 
 ▸ **pay**(`id`, `currency`): `Promise`<[`BillPayResponse`](../modules/index.QIWI.md#billpayresponse)\>
 
-**`memberof`** WalletBillsApi
+**`Memberof`**
+
+WalletBillsApi
 
 #### Parameters
 
@@ -235,11 +247,11 @@ ___
 
 `Promise`<[`BillPayResponse`](../modules/index.QIWI.md#billpayresponse)\>
 
-{Promise<BillPayResponse>}
+Promise<BillPayResponse>
 
 #### Defined in
 
-[apis/wallet/bills.api.ts:81](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/bills.api.ts#L81)
+[apis/wallet/bills.api.ts:81](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/bills.api.ts#L81)
 
 ___
 
@@ -252,7 +264,9 @@ ___
 Метод отклоняет неоплаченный счет. При этом счет становится
 недоступным для оплаты.
 
-**`memberof`** WalletBillsApi
+**`Memberof`**
+
+WalletBillsApi
 
 #### Parameters
 
@@ -264,8 +278,8 @@ ___
 
 `Promise`<`void`\>
 
-{Promise<void>}
+Promise<void>
 
 #### Defined in
 
-[apis/wallet/bills.api.ts:113](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/bills.api.ts#L113)
+[apis/wallet/bills.api.ts:113](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/bills.api.ts#L113)

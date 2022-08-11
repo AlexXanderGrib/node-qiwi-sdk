@@ -48,7 +48,7 @@ export class _P2pCompat extends P2p {
    * вернется параметр `payUrl` - ссылка для редиректа
    * пользователя на форму.
    *
-   * {@link https://developer.qiwi.com/ru/p2p-payments/#option|Настройки формы и счета}
+   * [Настройки формы и счета](https://developer.qiwi.com/ru/p2p-payments/#option)
    *
    * **Для тестирования и отладки сервиса рекомендуем выставлять и оплачивать счета суммой 1 рубль.**
    *
@@ -80,7 +80,7 @@ export class _P2pCompat extends P2p {
    * Метод позволяет проверить статус перевода по счету. Рекомендуется
    * его использовать после получения уведомления о переводе.
    *
-   * @deprecated Используйте метод {@link getBillStatus}
+   * @deprecated Используйте метод {@link _P2pCompat.getBillStatus}
    * @param {string} billId Уникальный идентификатор счета в вашей системе.
    * @return {Promise<BillStatusData>} Объект счёта
    */
@@ -118,7 +118,7 @@ export class _P2pCompat extends P2p {
    * @param {number} days Кол-во дней жизни счёта (может быть не целым числом)
    * @return {string} Дата понятная QIWI
    *
-   * @deprecated Используйте {@link formatLifetimeDays} или {@link formatLifetimeMinutes}
+   * @deprecated Используйте {@link _P2pCompat.formatLifetimeDays} или {@link _P2pCompat.formatLifetimeMinutes}
    */
   static formatLifetime(days = 1): string {
     return this.formatLifetimeDays(days);

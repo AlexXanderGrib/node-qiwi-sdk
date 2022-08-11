@@ -33,7 +33,7 @@ export class _WalletCompat extends Wallet {
    * @template T
    * @param {(types.StringOrNumber | undefined)} walletId
    * @param {Function} executor
-   * @return {Promise<T>}  {Promise<T>}
+   * @return {Promise<T>} Promise<T>
    * @memberof _WalletCompat
    */
   private async _executeWithWalletId<T>(
@@ -100,7 +100,7 @@ export class _WalletCompat extends Wallet {
    *
    * @param {types.IdentificationBase} data
    * @param {types.StringOrNumber} [walletId] Номер телефона привязанный к кошельку
-   * @return {Promise<types.IdentificationResponse>} {Promise<types.IdentificationResponse>}
+   * @return {Promise<types.IdentificationResponse>} Promise<types.IdentificationResponse>
    *
    */
   async setIdentification(
@@ -117,7 +117,7 @@ export class _WalletCompat extends Wallet {
    * статус идентификации своего QIWI кошелька.
    *
    * @param {types.StringOrNumber} [walletId] Номер телефона привязанный к кошельку
-   * @return {Promise<types.IdentificationResponse>} {Promise<types.IdentificationResponse>}
+   * @return {Promise<types.IdentificationResponse>} Promise<types.IdentificationResponse>
    */
   async getIdentification(
     walletId: types.StringOrNumber = this.walletId
@@ -205,8 +205,8 @@ export class _WalletCompat extends Wallet {
 
   /**
    *
-   * @param {types.StringOrNumber} transactionId  номер транзакции из {@link https://developer.qiwi.com/ru/qiwi-wallet-personal/#history_data|истории платежей} (параметр data[].txnId в ответе)
-   * @param {types.TransactionType} type тип транзакции из {@link https://developer.qiwi.com/ru/qiwi-wallet-personal/#history_data|истории платежей} (параметр data[].type в ответе)
+   * @param {types.StringOrNumber} transactionId  номер транзакции из [истории платежей](https://developer.qiwi.com/ru/qiwi-wallet-personal/#history_data) (параметр data[].txnId в ответе)
+   * @param {types.TransactionType} type тип транзакции из [истории платежей](https://developer.qiwi.com/ru/qiwi-wallet-personal/#history_data) (параметр data[].type в ответе)
    * @param {types.ChequeFormat} format тип файла, в который сохраняется квитанция. Допустимые значения: `JPEG`, `PDF`
    */
   async getTransactionCheque(
@@ -225,8 +225,8 @@ export class _WalletCompat extends Wallet {
 
   /**
    *
-   * @param {types.StringOrNumber} transactionId  номер транзакции из {@link https://developer.qiwi.com/ru/qiwi-wallet-personal/#history_data|истории платежей} (параметр data[].txnId в ответе)
-   * @param {types.TransactionType} type тип транзакции из {@link https://developer.qiwi.com/ru/qiwi-wallet-personal/#history_data|истории платежей} (параметр data[].type в ответе)
+   * @param {types.StringOrNumber} transactionId  номер транзакции из [истории платежей](https://developer.qiwi.com/ru/qiwi-wallet-personal/#history_data) (параметр data[].txnId в ответе)
+   * @param {types.TransactionType} type тип транзакции из [истории платежей](https://developer.qiwi.com/ru/qiwi-wallet-personal/#history_data) (параметр data[].type в ответе)
    * @param {string} email Адрес для отправки электронной квитанции
    */
   async sendTransactionCheque(
@@ -268,7 +268,7 @@ export class _WalletCompat extends Wallet {
   /**
    * Создаёт новый счёт по параметру `alias`
    * Успешный ответ возвращает пустую строку
-   * @param {string} alias Псевдоним нового счета (см. {@link https://developer.qiwi.com/ru/qiwi-wallet-personal/?http#funding_offer|запрос доступных счетов})
+   * @param {string} alias Псевдоним нового счета (см. [запрос доступных счетов](https://developer.qiwi.com/ru/qiwi-wallet-personal/?http#funding_offer))
    * @param {types.StringOrNumber} [walletId] Номер телефона привязанный к кошельку
    */
   async createAccount(
@@ -284,7 +284,7 @@ export class _WalletCompat extends Wallet {
   /**
    * Устанавливает счёт по умолчанию
    * Успешный ответ возвращает пустую строку
-   * @param {string} alias Псевдоним счета (см. {@link https://developer.qiwi.com/ru/qiwi-wallet-personal/?http#funding_offer|запрос доступных счетов})
+   * @param {string} alias Псевдоним счета (см. [запрос доступных счетов](https://developer.qiwi.com/ru/qiwi-wallet-personal/?http#funding_offer))
    * @param {types.StringOrNumber} [walletId] Номер телефона привязанный к кошельку
    */
   async setDefaultAccount(
@@ -354,7 +354,7 @@ export class _WalletCompat extends Wallet {
    * @param {Object=} fields Доп. поля, их невозможно типизировать, просто читайте доки
    * @param {string=} comment Комментарий к платежу, необязательный
    *
-   * @deprecated Используйте {@link pay2}, так-как он более читаемый
+   * @deprecated Используйте {@link _WalletCompat.pay2}, так-как он более читаемый
    * @return {Promise<types.PaymentResponse>}
    */
   async pay(
@@ -369,7 +369,7 @@ export class _WalletCompat extends Wallet {
   }
 
   /**
-   * Более читаемая версия метода {@link pay}
+   * Более читаемая версия метода {@link _WalletCompat.pay}
    *
    * [Документация QIWI по методу оплаты](https://developer.qiwi.com/ru/qiwi-wallet-personal/#payments)
    *
@@ -418,7 +418,7 @@ export class _WalletCompat extends Wallet {
   /**
    * Создаёт токен с увеличенным сроком действия (10 лет)
    *
-   * @see {@link https://developer.qiwi.com/ru/qiwi-wallet-personal-advanced/?http#intro|Документация}
+   * [Документация](https://developer.qiwi.com/ru/qiwi-wallet-personal-advanced/?http#intro)
    */
   async createOauthToken(): Promise<types.PrettyTokenResponse<_WalletCompat>> {
     const { token, expiry } = await this.oauth.createToken();

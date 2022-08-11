@@ -122,7 +122,7 @@ export type BillCreationRequest = BillCustomFieldsExtension & {
   /**
    * Дополнительные данные счета. Так же при помощи этого параметра вы
    * можете настроить
-   * {@link https://developer.qiwi.com/ru/p2p-payments/#custom|персонализацию}
+   * [персонализацию](https://developer.qiwi.com/ru/p2p-payments/#custom)
    * вашей формы, передав переменную `themeCode`
    */
   customFields?: CustomFields;
@@ -161,7 +161,7 @@ export type BillStatusData = {
   creationDateTime: string;
 
   /**
-   * {@link https://developer.qiwi.com/ru/p2p-payments/#option|Ссылка для переадресации}
+   * [Ссылка для переадресации](https://developer.qiwi.com/ru/p2p-payments/#option)
    * пользователя на созданную форму
    */
   payUrl: string;

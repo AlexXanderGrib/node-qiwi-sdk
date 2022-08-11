@@ -16,7 +16,7 @@ export class Detector extends ApiClass<DetectorApiOptions> {
    *
    *
    * @static
-   * @return {SimpleJsonHttp} {SimpleJsonHttp}
+   * @return {SimpleJsonHttp} SimpleJsonHttp
    * @memberof Detector
    */
   static httpClientFactory = (): SimpleJsonHttp => {
@@ -42,7 +42,7 @@ export class Detector extends ApiClass<DetectorApiOptions> {
    *
    *
    * @static
-   * @return {Detector}  {Detector}
+   * @return {Detector} Detector
    * @memberof Detector
    */
   static create(): Detector {

@@ -6,49 +6,49 @@
 
 ## Table of contents
 
-### Enumeration members
+### Enumeration Members
 
 - [CONFIRMATION\_LIMIT\_EXCEED](apis_wallet.CardActionStatus.md#confirmation_limit_exceed)
 - [CONFIRMATION\_REQUIRED](apis_wallet.CardActionStatus.md#confirmation_required)
 - [FAIL](apis_wallet.CardActionStatus.md#fail)
 - [OK](apis_wallet.CardActionStatus.md#ok)
 
-## Enumeration members
+## Enumeration Members
 
 ### CONFIRMATION\_LIMIT\_EXCEED
 
-• **CONFIRMATION\_LIMIT\_EXCEED** = `"CONFIRMATION_LIMIT_EXCEED"`
+• **CONFIRMATION\_LIMIT\_EXCEED** = ``"CONFIRMATION_LIMIT_EXCEED"``
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:1067](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/wallet.types.ts#L1067)
+[apis/wallet/wallet.types.ts:1067](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L1067)
 
 ___
 
 ### CONFIRMATION\_REQUIRED
 
-• **CONFIRMATION\_REQUIRED** = `"CONFIRMATION_REQUIRED"`
+• **CONFIRMATION\_REQUIRED** = ``"CONFIRMATION_REQUIRED"``
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:1066](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/wallet.types.ts#L1066)
+[apis/wallet/wallet.types.ts:1066](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L1066)
 
 ___
 
 ### FAIL
 
-• **FAIL** = `"FAIL"`
+• **FAIL** = ``"FAIL"``
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:1065](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/wallet.types.ts#L1065)
+[apis/wallet/wallet.types.ts:1065](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L1065)
 
 ___
 
 ### OK
 
-• **OK** = `"OK"`
+• **OK** = ``"OK"``
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:1064](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/wallet.types.ts#L1064)
+[apis/wallet/wallet.types.ts:1064](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L1064)

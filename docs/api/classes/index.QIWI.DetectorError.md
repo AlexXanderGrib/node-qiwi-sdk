@@ -41,7 +41,9 @@
 
 Creates an instance of ErrorWithCause.
 
-**`memberof`** ErrorWithCause
+**`Memberof`**
+
+ErrorWithCause
 
 #### Parameters
 
@@ -56,7 +58,7 @@ Creates an instance of ErrorWithCause.
 
 #### Defined in
 
-[apis/error.ts:14](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/error.ts#L14)
+[apis/error.ts:14](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/error.ts#L14)
 
 ## Properties
 
@@ -68,6 +70,10 @@ Creates an instance of ErrorWithCause.
 
 [ExtendedError](index._internal_.ExtendedError.md).[cause](index._internal_.ExtendedError.md#cause)
 
+#### Defined in
+
+[apis/error.ts:14](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/error.ts#L14)
+
 ___
 
 ### message
@@ -77,6 +83,10 @@ ___
 #### Inherited from
 
 [ExtendedError](index._internal_.ExtendedError.md).[message](index._internal_.ExtendedError.md#message)
+
+#### Defined in
+
+[apis/error.ts:14](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/error.ts#L14)
 
 ___
 
@@ -90,7 +100,7 @@ ___
 
 #### Defined in
 
-[apis/error.ts:29](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/error.ts#L29)
+[apis/error.ts:29](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/error.ts#L29)
 
 ## Accessors
 
@@ -98,9 +108,9 @@ ___
 
 • `get` **[toStringTag]**(): `string`
 
-**`readonly`**
+**`Memberof`**
 
-**`memberof`** ExtendedError
+ExtendedError
 
 #### Returns
 
@@ -108,11 +118,11 @@ ___
 
 #### Inherited from
 
-ExtendedError.\_\_@toStringTag@454
+ExtendedError.\_\_@toStringTag@478
 
 #### Defined in
 
-[apis/error.ts:52](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/error.ts#L52)
+[apis/error.ts:52](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/error.ts#L52)
 
 ## Methods
 
@@ -120,13 +130,15 @@ ExtendedError.\_\_@toStringTag@454
 
 ▸ **toJSON**(): `Error`
 
-**`memberof`** ExtendedError
+**`Memberof`**
+
+ExtendedError
 
 #### Returns
 
 `Error`
 
-{Error}
+Error
 
 #### Inherited from
 
@@ -134,4 +146,4 @@ ExtendedError.\_\_@toStringTag@454
 
 #### Defined in
 
-[apis/error.ts:37](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/error.ts#L37)
+[apis/error.ts:37](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/error.ts#L37)

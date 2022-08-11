@@ -18,7 +18,7 @@ export class WalletFundingSourcesApi extends WalletApi {
    *
    * **Этот метод требует наличия валидного `walletId` (номера телефона привязанного к кошельку) в конфигурации API.**
    *
-   * @return {Promise<GetAccountsResponse>} {Promise<GetAccountsResponse["accounts"]>}
+   * @return {Promise<GetAccountsResponse>} Promise<GetAccountsResponse["accounts"]>
    * @memberof WalletFundingSourcesApi
    */
   async getAccounts(): Promise<GetAccountsResponse["accounts"]> {
@@ -33,12 +33,12 @@ export class WalletFundingSourcesApi extends WalletApi {
    * ## Создание баланса
    *
    * Запрос создает новый счет и баланс в вашем QIWI Кошельке.
-   * Список доступных для создания счетов можно получить {@link getAccountOffers}.
+   * Список доступных для создания счетов можно получить {@link WalletFundingSourcesApi.getAccountOffers}.
    *
    * **Этот метод требует наличия валидного `walletId` (номера телефона привязанного к кошельку) в конфигурации API.**
    *
-   * @param {string} alias Псевдоним нового счета (см. {@link https://developer.qiwi.com/ru/qiwi-wallet-personal/?http#funding_offer|запрос доступных счетов})
-   * @return {Promise<void>} {Promise<void>}
+   * @param {string} alias Псевдоним нового счета (см. [запрос доступных счетов](https://developer.qiwi.com/ru/qiwi-wallet-personal/?http#funding_offer))
+   * @return {Promise<void>} Promise<void>
    * @memberof WalletFundingSourcesApi
    */
   async createAccount(alias: string): Promise<void> {
@@ -58,7 +58,7 @@ export class WalletFundingSourcesApi extends WalletApi {
    *
    * **Этот метод требует наличия валидного `walletId` (номера телефона привязанного к кошельку) в конфигурации API.**
    *
-   * @return {Promise<GetAccountOffersResponse>} {Promise<GetAccountOffersResponse>}
+   * @return {Promise<GetAccountOffersResponse>} Promise<GetAccountOffersResponse>
    * @memberof WalletFundingSourcesApi
    */
   async getAccountOffers(): Promise<GetAccountOffersResponse> {
@@ -72,12 +72,12 @@ export class WalletFundingSourcesApi extends WalletApi {
    *
    * Запрос устанавливает для вашего QIWI Кошелька счет, баланс
    * которого будет использоваться для фондирования всех платежей
-   * по умолчанию. Счет должен содержаться в {@link getAccounts}
+   * по умолчанию. Счет должен содержаться в {@link WalletFundingSourcesApi.getAccounts}
    *
    * **Этот метод требует наличия валидного `walletId` (номера телефона привязанного к кошельку) в конфигурации API.**
    *
-   * @param {string} alias Псевдоним счета (см. {@link https://developer.qiwi.com/ru/qiwi-wallet-personal/?http#funding_offer|запрос доступных счетов})
-   * @return {Promise<void>} {Promise<void>}
+   * @param {string} alias Псевдоним счета (см. [запрос доступных счетов](https://developer.qiwi.com/ru/qiwi-wallet-personal/?http#funding_offer))
+   * @return {Promise<void>} Promise<void>
    * @memberof WalletFundingSourcesApi
    */
   async setDefaultAccount(alias: string): Promise<void> {

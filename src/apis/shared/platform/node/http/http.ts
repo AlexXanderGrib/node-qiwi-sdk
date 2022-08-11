@@ -1,13 +1,13 @@
-import { OptionsWrapperWithSetter } from "apis/options-wrapper";
-import { collect } from "apis/shared/collect";
+import { OptionsWrapperWithSetter } from "@apis/options-wrapper";
+import { collect } from "@shared/collect";
 import {
   HttpClient,
   HttpClientOptions,
   HttpError,
   HttpRequestOptions,
   HttpResponse
-} from "apis/shared/http.types";
-import { _ } from "apis/shared/pass";
+} from "@shared/http.types";
+import { _ } from "@shared/pass";
 import axios, { AxiosResponse, Method } from "axios";
 
 /**
@@ -82,11 +82,14 @@ export class AxiosHttpClient
 
       return this._mapResponse(axiosResponse, request);
     } catch (error: unknown) {
-      if (!(error instanceof HttpError)) throw error;
+      if (
+        typeof request.mapHttpErrors === "function" &&
+        error instanceof HttpError
+      ) {
+        throw request.mapHttpErrors(error);
+      }
 
-      if (typeof request.mapHttpErrors !== "function") throw error;
-
-      throw request.mapHttpErrors(error);
+      throw error;
     }
   }
 
@@ -96,25 +99,29 @@ export class AxiosHttpClient
    * @protected
    * @param {AxiosResponse} axiosResponse
    * @param {HttpRequestOptions} request
-   * @return {HttpResponse}  {HttpResponse}
+   * @return {HttpResponse} HttpResponse
    * @memberof AxiosHttpClient
    */
   protected _mapResponse(
     axiosResponse: AxiosResponse,
     request: HttpRequestOptions
   ): HttpResponse {
-    const body =
+    const { headers, status: statusCode } = axiosResponse;
+    const data =
       /* istanbul ignore next */
       axiosResponse.data instanceof ArrayBuffer ||
       axiosResponse.data instanceof Uint8Array
         ? new Uint8Array(axiosResponse.data)
         : new Uint8Array();
 
-    return {
-      headers: axiosResponse.headers,
-      statusCode: axiosResponse.status,
-      body: (request.parseResponse ?? _)(body),
-      request
-    };
+    let body: any;
+
+    try {
+      body = (request.parseResponse ?? _)(data);
+    } catch {
+      body = data;
+    }
+
+    return { headers, statusCode, body, request };
   }
 }

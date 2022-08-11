@@ -7,7 +7,7 @@ import type { BinaryAlike } from "./shared";
  * @export
  * @param {Uint8Array} array1
  * @param {Uint8Array} array2
- * @return {boolean} {boolean}
+ * @return {boolean} boolean
  */
 export function timingSafeEqual(array1: Uint8Array, array2: Uint8Array): boolean {
   return crypto.timingSafeEqual(Buffer.from(array1), Buffer.from(array2));
@@ -18,7 +18,7 @@ export function timingSafeEqual(array1: Uint8Array, array2: Uint8Array): boolean
  *
  * @export
  * @param {number} size
- * @return {Uint8Array}  {Uint8Array}
+ * @return {Uint8Array} Uint8Array
  */
 export function randomBytes(size: number): Uint8Array {
   return new Uint8Array(crypto.randomBytes(size));
@@ -31,7 +31,7 @@ export function randomBytes(size: number): Uint8Array {
  * @param {string} algorithm
  * @param {BinaryAlike} key
  * @param {BinaryAlike} data
- * @return {Uint8Array}  {Uint8Array}
+ * @return {Uint8Array} Uint8Array
  */
 export function hmac(
   algorithm: string,

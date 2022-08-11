@@ -7,7 +7,7 @@
 # P2P-счета
 [Документация QIWI](https://developer.qiwi.com/ru/p2p-payments/#p2p-)
 
-**`export`**
+**`Export`**
 
 ## Hierarchy
 
@@ -53,7 +53,9 @@
 
 Creates an instance of OptionsWrapper.
 
-**`memberof`** OptionsWrapper
+**`Memberof`**
+
+OptionsWrapper
 
 #### Parameters
 
@@ -67,7 +69,7 @@ Creates an instance of OptionsWrapper.
 
 #### Defined in
 
-[apis/options-wrapper.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/options-wrapper.ts#L23)
+[apis/options-wrapper.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/options-wrapper.ts#L23)
 
 ## Properties
 
@@ -75,9 +77,9 @@ Creates an instance of OptionsWrapper.
 
 • `Protected` `Readonly` **\_options**: [`P2pApiOptions`](../interfaces/index.QIWI.P2pApiOptions.md)
 
-**`readonly`**
+**`Memberof`**
 
-**`memberof`** OptionsWrapper
+OptionsWrapper
 
 #### Inherited from
 
@@ -85,7 +87,7 @@ Creates an instance of OptionsWrapper.
 
 #### Defined in
 
-[apis/options-wrapper.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/options-wrapper.ts#L16)
+[apis/options-wrapper.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/options-wrapper.ts#L16)
 
 ## Accessors
 
@@ -93,9 +95,9 @@ Creates an instance of OptionsWrapper.
 
 • `Protected` `get` **http**(): [`SimpleJsonHttp`](index.QIWI.SimpleJsonHttp.md)
 
-**`readonly`**
+**`Memberof`**
 
-**`memberof`** ApiSubclass
+ApiSubclass
 
 #### Returns
 
@@ -107,7 +109,7 @@ P2pApi.http
 
 #### Defined in
 
-[apis/api.ts:55](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/api.ts#L55)
+[apis/api.ts:55](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/api.ts#L55)
 
 ___
 
@@ -115,9 +117,9 @@ ___
 
 • `Protected` `get` **publicKey**(): `string`
 
-**`readonly`**
+**`Memberof`**
 
-**`memberof`** P2pApi
+P2pApi
 
 #### Returns
 
@@ -129,7 +131,7 @@ P2pApi.publicKey
 
 #### Defined in
 
-[apis/p2p/api.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/api.ts#L17)
+[apis/p2p/api.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/api.ts#L17)
 
 ___
 
@@ -137,9 +139,9 @@ ___
 
 • `Protected` `get` **secretKey**(): `string`
 
-**`readonly`**
+**`Memberof`**
 
-**`memberof`** P2pApi
+P2pApi
 
 #### Returns
 
@@ -151,7 +153,7 @@ P2pApi.secretKey
 
 #### Defined in
 
-[apis/p2p/api.ts:28](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/api.ts#L28)
+[apis/p2p/api.ts:28](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/api.ts#L28)
 
 ## Methods
 
@@ -173,7 +175,7 @@ P2pApi.secretKey
 
 #### Defined in
 
-[apis/p2p/bills.api.ts:73](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/bills.api.ts#L73)
+[apis/p2p/bills.api.ts:73](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/bills.api.ts#L73)
 
 ___
 
@@ -181,7 +183,9 @@ ___
 
 ▸ `Private` **_resolvePaySourcesFilter**(`paySourcesFilter`): `string`
 
-**`memberof`** P2pBillsApi
+**`Memberof`**
+
+P2pBillsApi
 
 #### Parameters
 
@@ -193,11 +197,11 @@ ___
 
 `string`
 
-{string}
+string
 
 #### Defined in
 
-[apis/p2p/bills.api.ts:58](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/bills.api.ts#L58)
+[apis/p2p/bills.api.ts:58](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/bills.api.ts#L58)
 
 ___
 
@@ -205,7 +209,9 @@ ___
 
 ▸ **checkNotificationSignature**(`signature`, `body`, `merchantSecret?`): `boolean`
 
-**`memberof`** P2pBillsApi
+**`Memberof`**
+
+P2pBillsApi
 
 #### Parameters
 
@@ -213,17 +219,17 @@ ___
 | :------ | :------ |
 | `signature` | `string` |
 | `body` | [`BillStatusData`](../modules/index.QIWI.md#billstatusdata) \| [`BillStatusBody`](../modules/index.QIWI.md#billstatusbody) |
-| `merchantSecret` | `string` |
+| `merchantSecret?` | `string` |
 
 #### Returns
 
 `boolean`
 
-{boolean}
+boolean
 
 #### Defined in
 
-[apis/p2p/bills.api.ts:177](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/bills.api.ts#L177)
+[apis/p2p/bills.api.ts:177](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/bills.api.ts#L177)
 
 ___
 
@@ -246,7 +252,9 @@ server2server с использованием авторизации. Метод
 
 **Для тестирования и отладки сервиса рекомендуем выставлять и оплачивать счета суммой 1 рубль.**
 
-**`memberof`** P2pBillsApi
+**`Memberof`**
+
+P2pBillsApi
 
 #### Parameters
 
@@ -258,11 +266,11 @@ server2server с использованием авторизации. Метод
 
 `Promise`<[`BillStatusData`](../modules/index.QIWI.md#billstatusdata)\>
 
-{Promise<BillStatusData>}
+Promise<BillStatusData>
 
 #### Defined in
 
-[apis/p2p/bills.api.ts:101](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/bills.api.ts#L101)
+[apis/p2p/bills.api.ts:101](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/bills.api.ts#L101)
 
 ___
 
@@ -270,7 +278,7 @@ ___
 
 ▸ **createFormUrl**(`parameters`): `string`
 
- Создаёт ссылку оплаты счёта без запроса к API
+Создаёт ссылку оплаты счёта без запроса к API
 
 #### Parameters
 
@@ -286,7 +294,7 @@ ___
 
 #### Defined in
 
-[apis/p2p/bills.api.ts:200](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/bills.api.ts#L200)
+[apis/p2p/bills.api.ts:200](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/bills.api.ts#L200)
 
 ___
 
@@ -300,7 +308,7 @@ ___
 
 #### Defined in
 
-[apis/p2p/bills.api.ts:79](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/bills.api.ts#L79)
+[apis/p2p/bills.api.ts:79](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/bills.api.ts#L79)
 
 ___
 
@@ -308,9 +316,13 @@ ___
 
 ▸ **getRefundStatus**(`billId`, `refundId`): `Promise`<[`BillRefundStatusData`](../modules/index.QIWI.md#billrefundstatusdata)\>
 
-**`deprecated`** API заархивировано
+**`Deprecated`**
 
-**`memberof`** P2pBillsApi
+API заархивировано
+
+**`Memberof`**
+
+P2pBillsApi
 
 #### Parameters
 
@@ -323,11 +335,11 @@ ___
 
 `Promise`<[`BillRefundStatusData`](../modules/index.QIWI.md#billrefundstatusdata)\>
 
-{Promise<BillRefundStatusData>}
+Promise<BillRefundStatusData>
 
 #### Defined in
 
-[apis/p2p/bills.api.ts:258](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/bills.api.ts#L258)
+[apis/p2p/bills.api.ts:258](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/bills.api.ts#L258)
 
 ___
 
@@ -354,7 +366,7 @@ ___
 
 #### Defined in
 
-[apis/p2p/bills.api.ts:152](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/bills.api.ts#L152)
+[apis/p2p/bills.api.ts:152](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/bills.api.ts#L152)
 
 ___
 
@@ -362,9 +374,13 @@ ___
 
 ▸ **refund**(`billId`, `options`): `Promise`<[`BillRefundStatusData`](../modules/index.QIWI.md#billrefundstatusdata)\>
 
-**`deprecated`** API заархивировано
+**`Deprecated`**
 
-**`memberof`** P2pBillsApi
+API заархивировано
+
+**`Memberof`**
+
+P2pBillsApi
 
 #### Parameters
 
@@ -377,11 +393,11 @@ ___
 
 `Promise`<[`BillRefundStatusData`](../modules/index.QIWI.md#billrefundstatusdata)\>
 
-{Promise<BillRefundStatusData>}
+Promise<BillRefundStatusData>
 
 #### Defined in
 
-[apis/p2p/bills.api.ts:236](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/bills.api.ts#L236)
+[apis/p2p/bills.api.ts:236](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/bills.api.ts#L236)
 
 ___
 
@@ -407,7 +423,7 @@ ___
 
 #### Defined in
 
-[apis/p2p/bills.api.ts:164](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/bills.api.ts#L164)
+[apis/p2p/bills.api.ts:164](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/bills.api.ts#L164)
 
 ___
 
@@ -422,7 +438,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `payUrl` | `string` |
-| `options` | [`PayUrlPatchParameters`](../modules/index.QIWI.md#payurlpatchparameters) |
+| `options?` | [`PayUrlPatchParameters`](../modules/index.QIWI.md#payurlpatchparameters) |
 
 #### Returns
 
@@ -432,4 +448,4 @@ ___
 
 #### Defined in
 
-[apis/p2p/bills.api.ts:38](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/bills.api.ts#L38)
+[apis/p2p/bills.api.ts:38](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/bills.api.ts#L38)

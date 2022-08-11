@@ -1,5 +1,5 @@
 /* istanbul ignore file */
-import { getByIndex } from "apis/shared/get";
+import { getByIndex } from "@shared/get";
 
 declare const TextEncoder: typeof import("util").TextEncoder;
 declare const TextDecoder: typeof import("util").TextDecoder;
@@ -9,7 +9,7 @@ declare const TextDecoder: typeof import("util").TextDecoder;
  *
  * @export
  * @param {string} base64
- * @return {Uint8Array}  {Uint8Array}
+ * @return {Uint8Array} Uint8Array
  */
 export function base64ToUint8Array(base64: string): Uint8Array {
   const alphabet =
@@ -41,7 +41,7 @@ const hexRegExp = /^[\da-f]*$/i;
  *
  * @export
  * @param {string} hex
- * @return {Uint8Array}  {Uint8Array}
+ * @return {Uint8Array} Uint8Array
  */
 export function hexToUint8Array(hex: string): Uint8Array {
   hex = hex.toLowerCase();
@@ -70,7 +70,7 @@ export function hexToUint8Array(hex: string): Uint8Array {
  *
  * @export
  * @param {string} text
- * @return {Uint8Array}  {Uint8Array}
+ * @return {Uint8Array} Uint8Array
  */
 export function utf8ToUint8Array(text: string): Uint8Array {
   return new TextEncoder().encode(text);
@@ -81,7 +81,7 @@ export function utf8ToUint8Array(text: string): Uint8Array {
  *
  * @export
  * @param {Uint8Array} array
- * @return {string}  {string}
+ * @return {string} string
  */
 export function uint8ArrayToUtf8(array: Uint8Array): string {
   return new TextDecoder().decode(array);

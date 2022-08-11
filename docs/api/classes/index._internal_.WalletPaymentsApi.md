@@ -7,7 +7,7 @@
 # Платежное API
 [Документация QIWI](https://developer.qiwi.com/ru/qiwi-wallet-personal/#payments)
 
-**`export`**
+**`Export`**
 
 ## Hierarchy
 
@@ -48,7 +48,9 @@
 
 Creates an instance of OptionsWrapper.
 
-**`memberof`** OptionsWrapper
+**`Memberof`**
+
+OptionsWrapper
 
 #### Parameters
 
@@ -62,7 +64,7 @@ Creates an instance of OptionsWrapper.
 
 #### Defined in
 
-[apis/options-wrapper.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/options-wrapper.ts#L23)
+[apis/options-wrapper.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/options-wrapper.ts#L23)
 
 ## Properties
 
@@ -70,9 +72,9 @@ Creates an instance of OptionsWrapper.
 
 • `Protected` `Readonly` **\_options**: [`WalletApiOptions`](../interfaces/index.QIWI.WalletApiOptions.md)
 
-**`readonly`**
+**`Memberof`**
 
-**`memberof`** OptionsWrapper
+OptionsWrapper
 
 #### Inherited from
 
@@ -80,7 +82,7 @@ Creates an instance of OptionsWrapper.
 
 #### Defined in
 
-[apis/options-wrapper.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/options-wrapper.ts#L16)
+[apis/options-wrapper.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/options-wrapper.ts#L16)
 
 ## Accessors
 
@@ -88,9 +90,9 @@ Creates an instance of OptionsWrapper.
 
 • `Protected` `get` **http**(): [`SimpleJsonHttp`](index.QIWI.SimpleJsonHttp.md)
 
-**`readonly`**
+**`Memberof`**
 
-**`memberof`** ApiSubclass
+ApiSubclass
 
 #### Returns
 
@@ -102,7 +104,7 @@ WalletApi.http
 
 #### Defined in
 
-[apis/api.ts:55](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/api.ts#L55)
+[apis/api.ts:55](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/api.ts#L55)
 
 ___
 
@@ -110,9 +112,9 @@ ___
 
 • `Protected` `get` **walletId**(): `string`
 
-**`readonly`**
+**`Memberof`**
 
-**`memberof`** WalletApi
+WalletApi
 
 #### Returns
 
@@ -124,7 +126,7 @@ WalletApi.walletId
 
 #### Defined in
 
-[apis/wallet/api.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/api.ts#L17)
+[apis/wallet/api.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/api.ts#L17)
 
 ## Methods
 
@@ -132,26 +134,28 @@ WalletApi.walletId
 
 ▸ `Protected` **_resolveProvider**(`provider`, `account`): `Promise`<`number`\>
 
-**`throws`** {DetectorError}
+**`Throws`**
 
-**`memberof`** WalletPaymentsApi
+**`Memberof`**
+
+WalletPaymentsApi
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `provider` | `undefined` \| `number` \| [`Card`](../enums/index.QIWI.QuickPayRecipients.md#card) \| [`Phone`](../enums/index.QIWI.QuickPayRecipients.md#phone) \| ``"card"`` \| ``"phone"`` \| ``"qiwi"`` \| ``"yoomoney"`` |
+| `provider` | `undefined` \| `number` \| ``"card"`` \| ``"phone"`` \| ``"qiwi"`` \| ``"yoomoney"`` \| [`Card`](../enums/index.QIWI.QuickPayRecipients.md#card) \| [`Phone`](../enums/index.QIWI.QuickPayRecipients.md#phone) |
 | `account` | `string` |
 
 #### Returns
 
 `Promise`<`number`\>
 
-{Promise<number>}
+Promise<number>
 
 #### Defined in
 
-[apis/wallet/payments.api.ts:207](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/payments.api.ts#L207)
+[apis/wallet/payments.api.ts:207](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/payments.api.ts#L207)
 
 ___
 
@@ -161,24 +165,26 @@ ___
 
 Данный метод создаёт ссылку на предзаполненную форму оплаты
 
-**`memberof`** WalletPaymentsApi
+**`Memberof`**
+
+WalletPaymentsApi
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `provider` | `number` | Идентификатор провайдера |
-| `options` | [`FormUrlOptions`](../modules/index.QIWI.md#formurloptions) | - |
+| `options?` | [`FormUrlOptions`](../modules/index.QIWI.md#formurloptions) | Параметры формы |
 
 #### Returns
 
 `string`
 
-{string} Ссылка
+string Ссылка
 
 #### Defined in
 
-[apis/wallet/payments.api.ts:105](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/payments.api.ts#L105)
+[apis/wallet/payments.api.ts:105](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/payments.api.ts#L105)
 
 ___
 
@@ -193,7 +199,9 @@ ___
 Возвращается полная комиссия QIWI Кошелька за платеж в пользу
 указанного провайдера с учетом всех тарифов.
 
-**`memberof`** WalletPaymentsApi
+**`Memberof`**
+
+WalletPaymentsApi
 
 #### Parameters
 
@@ -212,7 +220,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/payments.api.ts:39](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/payments.api.ts#L39)
+[apis/wallet/payments.api.ts:39](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/payments.api.ts#L39)
 
 ___
 
@@ -222,17 +230,19 @@ ___
 
 Получение курсов валют
 
-**`memberof`** WalletPaymentsApi
+**`Memberof`**
+
+WalletPaymentsApi
 
 #### Returns
 
 `Promise`<[`Rate`](../modules/index.QIWI.md#rate)[]\>
 
-{Promise<Rate[]>}
+Promise<Rate[]>
 
 #### Defined in
 
-[apis/wallet/payments.api.ts:246](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/payments.api.ts#L246)
+[apis/wallet/payments.api.ts:246](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/payments.api.ts#L246)
 
 ___
 
@@ -242,7 +252,9 @@ ___
 
 [Документация QIWI по методу оплаты](https://developer.qiwi.com/ru/qiwi-wallet-personal/#payments)
 
-**`memberof`** WalletPaymentsApi
+**`Memberof`**
+
+WalletPaymentsApi
 
 #### Parameters
 
@@ -254,11 +266,11 @@ ___
 
 `Promise`<[`PaymentResponse`](../modules/index.QIWI.md#paymentresponse)\>
 
-{Promise<PaymentResponse>}
+Promise<PaymentResponse>
 
 #### Defined in
 
-[apis/wallet/payments.api.ts:127](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/payments.api.ts#L127)
+[apis/wallet/payments.api.ts:127](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/payments.api.ts#L127)
 
 ___
 
@@ -271,9 +283,13 @@ ___
 
 [Документация QIWI по методу оплаты](https://developer.qiwi.com/ru/qiwi-wallet-personal/#payments)
 
-**`throws`** {DetectorError} Под капотом создаётся и вызывается `Detector`. Он может выкинуть эту ошибку
+**`Throws`**
 
-**`memberof`** WalletPaymentsApi
+Под капотом создаётся и вызывается `Detector`. Он может выкинуть эту ошибку
+
+**`Memberof`**
+
+WalletPaymentsApi
 
 #### Parameters
 
@@ -285,11 +301,11 @@ ___
 
 `Promise`<[`PaymentResponse`](../modules/index.QIWI.md#paymentresponse)\>
 
-{Promise<PaymentResponse>}
+Promise<PaymentResponse>
 
 #### Defined in
 
-[apis/wallet/payments.api.ts:165](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/payments.api.ts#L165)
+[apis/wallet/payments.api.ts:165](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/payments.api.ts#L165)
 
 ___
 
@@ -299,23 +315,25 @@ ___
 
 Данный метод создаёт ссылку на предзаполненную форму оплаты
 
-**`static`**
+**`Static`**
 
-**`memberof`** WalletPaymentsApi
+**`Memberof`**
+
+WalletPaymentsApi
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `provider` | `number` | Идентификатор провайдера |
-| `options` | [`FormUrlOptions`](../modules/index.QIWI.md#formurloptions) | - |
+| `options?` | [`FormUrlOptions`](../modules/index.QIWI.md#formurloptions) | Параметры формы |
 
 #### Returns
 
 `string`
 
-{string} Ссылка
+string Ссылка
 
 #### Defined in
 
-[apis/wallet/payments.api.ts:74](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/payments.api.ts#L74)
+[apis/wallet/payments.api.ts:74](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/payments.api.ts#L74)

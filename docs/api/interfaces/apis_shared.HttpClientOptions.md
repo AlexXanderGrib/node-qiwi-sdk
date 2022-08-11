@@ -18,14 +18,11 @@
 - [agent](apis_shared.HttpClientOptions.md#agent)
 - [baseURL](apis_shared.HttpClientOptions.md#baseurl)
 - [headers](apis_shared.HttpClientOptions.md#headers)
-- [okStatusCodes](apis_shared.HttpClientOptions.md#okstatuscodes)
-- [timeout](apis_shared.HttpClientOptions.md#timeout)
-
-### Methods
-
 - [mapHttpErrors](apis_shared.HttpClientOptions.md#maphttperrors)
+- [okStatusCodes](apis_shared.HttpClientOptions.md#okstatuscodes)
 - [parseResponse](apis_shared.HttpClientOptions.md#parseresponse)
 - [stringifyBody](apis_shared.HttpClientOptions.md#stringifybody)
+- [timeout](apis_shared.HttpClientOptions.md#timeout)
 
 ## Properties
 
@@ -35,7 +32,7 @@
 
 #### Defined in
 
-[apis/shared/http.types.ts:8](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/shared/http.types.ts#L8)
+[apis/shared/http.types.ts:8](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/shared/http.types.ts#L8)
 
 ___
 
@@ -45,7 +42,7 @@ ___
 
 #### Defined in
 
-[apis/shared/http.types.ts:10](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/shared/http.types.ts#L10)
+[apis/shared/http.types.ts:10](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/shared/http.types.ts#L10)
 
 ___
 
@@ -55,7 +52,31 @@ ___
 
 #### Defined in
 
-[apis/shared/http.types.ts:7](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/shared/http.types.ts#L7)
+[apis/shared/http.types.ts:7](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/shared/http.types.ts#L7)
+
+___
+
+### mapHttpErrors
+
+• `Optional` **mapHttpErrors**: (`error`: [`HttpError`](../classes/index.QIWI.HttpError.md)<`any`, `any`\>) => `Error`
+
+#### Type declaration
+
+▸ (`error`): `Error`
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `error` | [`HttpError`](../classes/index.QIWI.HttpError.md)<`any`, `any`\> |
+
+##### Returns
+
+`Error`
+
+#### Defined in
+
+[apis/shared/http.types.ts:15](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/shared/http.types.ts#L15)
 
 ___
 
@@ -65,7 +86,55 @@ ___
 
 #### Defined in
 
-[apis/shared/http.types.ts:9](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/shared/http.types.ts#L9)
+[apis/shared/http.types.ts:9](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/shared/http.types.ts#L9)
+
+___
+
+### parseResponse
+
+• `Optional` **parseResponse**: (`body`: `Uint8Array`) => `Response`
+
+#### Type declaration
+
+▸ (`body`): `Response`
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `body` | `Uint8Array` |
+
+##### Returns
+
+`Response`
+
+#### Defined in
+
+[apis/shared/http.types.ts:14](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/shared/http.types.ts#L14)
+
+___
+
+### stringifyBody
+
+• `Optional` **stringifyBody**: (`body`: `Request`) => `string` \| `Uint8Array`
+
+#### Type declaration
+
+▸ (`body`): `string` \| `Uint8Array`
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `body` | `Request` |
+
+##### Returns
+
+`string` \| `Uint8Array`
+
+#### Defined in
+
+[apis/shared/http.types.ts:13](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/shared/http.types.ts#L13)
 
 ___
 
@@ -75,64 +144,4 @@ ___
 
 #### Defined in
 
-[apis/shared/http.types.ts:11](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/shared/http.types.ts#L11)
-
-## Methods
-
-### mapHttpErrors
-
-▸ `Optional` **mapHttpErrors**(`error`): `Error`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `error` | [`HttpError`](../classes/index.QIWI.HttpError.md)<`any`, `any`\> |
-
-#### Returns
-
-`Error`
-
-#### Defined in
-
-[apis/shared/http.types.ts:15](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/shared/http.types.ts#L15)
-
-___
-
-### parseResponse
-
-▸ `Optional` **parseResponse**(`body`): `Response`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `body` | `Uint8Array` |
-
-#### Returns
-
-`Response`
-
-#### Defined in
-
-[apis/shared/http.types.ts:14](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/shared/http.types.ts#L14)
-
-___
-
-### stringifyBody
-
-▸ `Optional` **stringifyBody**(`body`): `string` \| `Uint8Array`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `body` | `Request` |
-
-#### Returns
-
-`string` \| `Uint8Array`
-
-#### Defined in
-
-[apis/shared/http.types.ts:13](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/shared/http.types.ts#L13)
+[apis/shared/http.types.ts:11](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/shared/http.types.ts#L11)

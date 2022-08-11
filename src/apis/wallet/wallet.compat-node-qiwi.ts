@@ -33,7 +33,7 @@ export class _WalletCompatNodeQiwi extends Wallet {
    * @template T
    * @param {(string | number)} contractId
    * @param {*} executor
-   * @return {Promise<T>}  {Promise<T>}
+   * @return {Promise<T>} Promise<T>
    * @memberof _WalletCompatNodeQiwi
    */
   protected async _executeWithContractId<T>(
@@ -55,7 +55,7 @@ export class _WalletCompatNodeQiwi extends Wallet {
    *
    * @param {(string | number)} contractId
    * @param {types.IdentificationBase} [body]
-   * @return {Promise<types.IdentificationResponse>}  {Promise<types.IdentificationResponse>}
+   * @return {Promise<types.IdentificationResponse>} Promise<types.IdentificationResponse>
    * @memberof _WalletCompatNodeQiwi
    */
   async getIdentification(
@@ -74,7 +74,7 @@ export class _WalletCompatNodeQiwi extends Wallet {
    *
    * @param {(string | number)} contractId
    * @param {types.GetPaymentHistoryParameters} settings
-   * @return {Promise<types.GetTransactionsHistoryResponse>}  {Promise<types.GetTransactionsHistoryResponse>}
+   * @return {Promise<types.GetTransactionsHistoryResponse>} Promise<types.GetTransactionsHistoryResponse>
    * @memberof _WalletCompatNodeQiwi
    */
   async getHistory(
@@ -91,7 +91,7 @@ export class _WalletCompatNodeQiwi extends Wallet {
    *
    * @param {(string | number)} contractId
    * @param {types.GetPaymentHistoryTotalParameters} settings
-   * @return {Promise<types.GetPaymentHistoryTotalResponse>}  {Promise<types.GetPaymentHistoryTotalResponse>}
+   * @return {Promise<types.GetPaymentHistoryTotalResponse>} Promise<types.GetPaymentHistoryTotalResponse>
    * @memberof _WalletCompatNodeQiwi
    */
   async getTransactionsStats(
@@ -107,8 +107,8 @@ export class _WalletCompatNodeQiwi extends Wallet {
    *
    *
    * @param {(string | number)} transactionId
-   * @param {{ type: types.TransactionTypeAny? }} [settings={}]
-   * @return {*}  {Promise<types.Transaction>}
+   * @param {{ type: types.TransactionTypeAny? }} [settings]
+   * @return {*} Promise<types.Transaction>
    * @memberof _WalletCompatNodeQiwi
    */
   async getTransaction(
@@ -121,7 +121,7 @@ export class _WalletCompatNodeQiwi extends Wallet {
   /**
    *
    *
-   * @return {*}  {Promise<types.PersonProfile>}
+   * @return {*} Promise<types.PersonProfile>
    * @memberof _WalletCompatNodeQiwi
    */
   async getProfile(): Promise<types.PersonProfile> {
@@ -131,7 +131,7 @@ export class _WalletCompatNodeQiwi extends Wallet {
   /**
    *
    *
-   * @return {Promise<types.Account[]>}  {Promise<types.Account[]>}
+   * @return {Promise<types.Account[]>} Promise<types.Account[]>
    * @memberof _WalletCompatNodeQiwi
    */
   async getBalance(): Promise<types.Account[]> {
@@ -144,7 +144,7 @@ export class _WalletCompatNodeQiwi extends Wallet {
    * @param {number} amount
    * @param {string} account
    * @param {string} [comment]
-   * @return {Promise<types.PaymentResponse>}  {Promise<types.PaymentResponse>}
+   * @return {Promise<types.PaymentResponse>} Promise<types.PaymentResponse>
    * @memberof _WalletCompatNodeQiwi
    */
   async sendPayment(

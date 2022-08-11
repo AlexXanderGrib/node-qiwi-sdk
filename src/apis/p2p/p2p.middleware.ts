@@ -37,7 +37,7 @@ export function promise<T extends AnyCallableFunction>(
  *
  * @template T
  * @param {Request} request
- * @return {Promise<T>}  {Promise<T>}
+ * @return {Promise<T>} Promise<T>
  */
 export async function parseJsonRequestBody<T>(request: Request): Promise<T> {
   /* istanbul ignore next */
@@ -78,7 +78,7 @@ const skipMiddleware: RequestHandler = (_request, _response, next) => next();
  *
  *
  * @param {(string | string[] | undefined)} value
- * @return {string}  {string}
+ * @return {string} string
  */
 export function resolveHeaderValue(value?: string | string[] | undefined): string {
   if (!value) return "";
@@ -95,7 +95,7 @@ export function resolveHeaderValue(value?: string | string[] | undefined): strin
  * @param {P2pBillsApi} bills
  * @param {MiddlewareOptions} [options={}]
  * @param {BillRequestHandler} [handler]
- * @return {BillRequestHandler}  {BillRequestHandler}
+ * @return {BillRequestHandler} BillRequestHandler
  */
 export function createP2pNotificationMiddleware(
   bills: P2pBillsApi,

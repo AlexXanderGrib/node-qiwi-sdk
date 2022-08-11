@@ -20,7 +20,7 @@ export class WalletIdentificationApi extends WalletApi {
    * **Этот метод требует наличия валидного `walletId` (номера телефона привязанного к кошельку) в конфигурации API.**
    *
    * @param {IdentificationBase} data
-   * @return {Promise<IdentificationResponse>} {Promise<IdentificationResponse>}
+   * @return {Promise<IdentificationResponse>} Promise<IdentificationResponse>
    * @memberof WalletIdentificationApi
    */
   async set(data: IdentificationBase): Promise<IdentificationResponse> {
@@ -41,7 +41,7 @@ export class WalletIdentificationApi extends WalletApi {
    *
    * **Этот метод требует наличия валидного `walletId` (номера телефона привязанного к кошельку) в конфигурации API.**
    *
-   * @return {Promise<IdentificationResponse>} {Promise<IdentificationResponse>}
+   * @return {Promise<IdentificationResponse>} Promise<IdentificationResponse>
    * @memberof WalletIdentificationApi
    */
   async get(): Promise<IdentificationResponse> {

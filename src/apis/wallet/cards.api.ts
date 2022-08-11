@@ -24,8 +24,8 @@ export class WalletCardsApi extends WalletApi {
    * Успешный ответ содержит JSON-массив с информацией о
    * выпущенных картах
    *
-   * @param {*} [options={}]
-   * @return {Promise<CardResponse[]>} {Promise<CardResponse[]>}
+   * @param {*} [options]
+   * @return {Promise<CardResponse[]>} Promise<CardResponse[]>
    * @memberof WalletCardsApi
    */
   async get({ onlyQiwiMaster = false } = {}): Promise<CardResponse[]> {
@@ -42,7 +42,7 @@ export class WalletCardsApi extends WalletApi {
    * **Этот метод требует наличия валидного `walletId` (номера телефона привязанного к кошельку) в конфигурации API.**
    *
    * @param {StringOrNumber} cardId
-   * @return {Promise<void>} {Promise<void>}
+   * @return {Promise<void>} Promise<void>
    * @memberof WalletCardsApi
    */
   async block(cardId: StringOrNumber): Promise<void> {
@@ -59,7 +59,7 @@ export class WalletCardsApi extends WalletApi {
    * **Этот метод требует наличия валидного `walletId` (номера телефона привязанного к кошельку) в конфигурации API.**
    *
    * @param {StringOrNumber} cardId
-   * @return {Promise<CardUnblockResponse>} {Promise<CardUnblockResponse>}
+   * @return {Promise<CardUnblockResponse>} Promise<CardUnblockResponse>
    * @memberof WalletCardsApi
    */
   async unblock(cardId: StringOrNumber): Promise<CardUnblockResponse> {
@@ -76,7 +76,7 @@ export class WalletCardsApi extends WalletApi {
    * **Этот метод требует наличия валидного `walletId` (номера телефона привязанного к кошельку) в конфигурации API.**
    *
    * @param {StringOrNumber} cardId
-   * @return {Promise<CardRequisitesResponse>} {Promise<CardRequisitesResponse>}
+   * @return {Promise<CardRequisitesResponse>} Promise<CardRequisitesResponse>
    * @memberof WalletCardsApi
    */
   async getRequisites(cardId: StringOrNumber): Promise<CardRequisitesResponse> {
@@ -94,7 +94,7 @@ export class WalletCardsApi extends WalletApi {
    *
    * @param {StringOrNumber} cardId
    * @param {StringOrNumber} alias
-   * @return {Promise<CardRenameResponse>} {Promise<CardRenameResponse>}
+   * @return {Promise<CardRenameResponse>} Promise<CardRenameResponse>
    * @memberof WalletCardsApi
    */
   async rename(cardId: StringOrNumber, alias: string): Promise<CardRenameResponse> {

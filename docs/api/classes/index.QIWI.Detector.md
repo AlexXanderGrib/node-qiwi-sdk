@@ -6,7 +6,7 @@
 
 API получения ID провайдера QIWI по Номеру Телефона/Карте
 
-**`export`**
+**`Export`**
 
 ## Hierarchy
 
@@ -42,17 +42,19 @@ API получения ID провайдера QIWI по Номеру Телеф
 
 ### constructor
 
-• **new Detector**(`[options]?`)
+• **new Detector**(`options?`)
 
 Creates an instance of P2p.
 
-**`memberof`** P2p
+**`Memberof`**
+
+P2p
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `[options]` | `Partial`<[`ApiClassOptions`](../interfaces/index._internal_.ApiClassOptions.md)\> |
+| `options?` | `Partial`<[`ApiClassOptions`](../interfaces/index._internal_.ApiClassOptions.md)\> |
 
 #### Overrides
 
@@ -60,7 +62,7 @@ Creates an instance of P2p.
 
 #### Defined in
 
-[apis/detector/detector.ts:57](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/detector/detector.ts#L57)
+[apis/detector/detector.ts:57](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/detector/detector.ts#L57)
 
 ## Properties
 
@@ -68,9 +70,9 @@ Creates an instance of P2p.
 
 • `Protected` `Readonly` **\_options**: [`ApiClassOptions`](../interfaces/index._internal_.ApiClassOptions.md)
 
-**`readonly`**
+**`Memberof`**
 
-**`memberof`** OptionsWrapper
+OptionsWrapper
 
 #### Inherited from
 
@@ -78,7 +80,7 @@ Creates an instance of P2p.
 
 #### Defined in
 
-[apis/options-wrapper.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/options-wrapper.ts#L16)
+[apis/options-wrapper.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/options-wrapper.ts#L16)
 
 ___
 
@@ -88,7 +90,7 @@ ___
 
 #### Defined in
 
-[apis/detector/detector.ts:63](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/detector/detector.ts#L63)
+[apis/detector/detector.ts:63](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/detector/detector.ts#L63)
 
 ___
 
@@ -98,7 +100,7 @@ ___
 
 #### Defined in
 
-[apis/detector/detector.ts:13](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/detector/detector.ts#L13)
+[apis/detector/detector.ts:13](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/detector/detector.ts#L13)
 
 ## Accessors
 
@@ -106,7 +108,9 @@ ___
 
 • `get` **agent**(): `any`
 
-**`memberof`** WalletCompat
+**`Memberof`**
+
+WalletCompat
 
 #### Returns
 
@@ -118,11 +122,13 @@ ApiClass.agent
 
 #### Defined in
 
-[apis/api.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/api.ts#L23)
+[apis/api.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/api.ts#L23)
 
 • `set` **agent**(`agent`): `void`
 
-**`memberof`** WalletCompat
+**`Memberof`**
+
+WalletCompat
 
 #### Parameters
 
@@ -140,7 +146,7 @@ ApiClass.agent
 
 #### Defined in
 
-[apis/api.ts:32](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/api.ts#L32)
+[apis/api.ts:32](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/api.ts#L32)
 
 ___
 
@@ -148,9 +154,9 @@ ___
 
 • `get` **options**(): `T`
 
-**`readonly`**
+**`Memberof`**
 
-**`memberof`** OptionsWrapperWithGetter
+OptionsWrapperWithGetter
 
 #### Returns
 
@@ -162,7 +168,7 @@ ApiClass.options
 
 #### Defined in
 
-[apis/options-wrapper.ts:44](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/options-wrapper.ts#L44)
+[apis/options-wrapper.ts:44](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/options-wrapper.ts#L44)
 
 ## Methods
 
@@ -170,19 +176,21 @@ ApiClass.options
 
 ▸ `Static` **create**(): [`Detector`](index.QIWI.Detector.md)
 
-**`static`**
+**`Static`**
 
-**`memberof`** Detector
+**`Memberof`**
+
+Detector
 
 #### Returns
 
 [`Detector`](index.QIWI.Detector.md)
 
-{Detector}
+Detector
 
 #### Defined in
 
-[apis/detector/detector.ts:48](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/detector/detector.ts#L48)
+[apis/detector/detector.ts:48](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/detector/detector.ts#L48)
 
 ___
 
@@ -190,16 +198,18 @@ ___
 
 ▸ `Static` **httpClientFactory**(): [`SimpleJsonHttp`](index.QIWI.SimpleJsonHttp.md)
 
-**`static`**
+**`Static`**
 
-**`memberof`** Detector
+**`Memberof`**
+
+Detector
 
 #### Returns
 
 [`SimpleJsonHttp`](index.QIWI.SimpleJsonHttp.md)
 
-{SimpleJsonHttp}
+SimpleJsonHttp
 
 #### Defined in
 
-[apis/detector/detector.ts:22](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/detector/detector.ts#L22)
+[apis/detector/detector.ts:22](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/detector/detector.ts#L22)

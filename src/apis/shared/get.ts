@@ -12,7 +12,7 @@ export function getOwnProperty<O extends AnyRecord, K extends keyof O>(
  * @template T
  * @param {AnyRecord} object
  * @param {string} key
- * @return {T|undefined}  {(T | undefined)}
+ * @return {T|undefined} (T | undefined)
  */
 export function getOwnProperty(object: AnyRecord, key: string): unknown | undefined {
   return Object.getOwnPropertyDescriptor(object, key)?.value;
@@ -25,7 +25,7 @@ export function getOwnProperty(object: AnyRecord, key: string): unknown | undefi
  * @template T
  * @param {ArrayLike<T>} array
  * @param {number} index
- * @return {T}  {(T | undefined)}
+ * @return {T} (T | undefined)
  */
 export function getByIndex<T>(array: ArrayLike<T>, index: number): T | undefined {
   /* istanbul ignore next: used in web platform adapters */

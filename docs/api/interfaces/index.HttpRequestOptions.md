@@ -25,16 +25,13 @@
 - [baseURL](index.HttpRequestOptions.md#baseurl)
 - [body](index.HttpRequestOptions.md#body)
 - [headers](index.HttpRequestOptions.md#headers)
+- [mapHttpErrors](index.HttpRequestOptions.md#maphttperrors)
 - [method](index.HttpRequestOptions.md#method)
 - [okStatusCodes](index.HttpRequestOptions.md#okstatuscodes)
-- [timeout](index.HttpRequestOptions.md#timeout)
-- [url](index.HttpRequestOptions.md#url)
-
-### Methods
-
-- [mapHttpErrors](index.HttpRequestOptions.md#maphttperrors)
 - [parseResponse](index.HttpRequestOptions.md#parseresponse)
 - [stringifyBody](index.HttpRequestOptions.md#stringifybody)
+- [timeout](index.HttpRequestOptions.md#timeout)
+- [url](index.HttpRequestOptions.md#url)
 
 ## Properties
 
@@ -48,7 +45,7 @@ Partial.agent
 
 #### Defined in
 
-[apis/shared/http.types.ts:8](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/shared/http.types.ts#L8)
+[apis/shared/http.types.ts:8](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/shared/http.types.ts#L8)
 
 ___
 
@@ -62,7 +59,7 @@ Partial.baseURL
 
 #### Defined in
 
-[apis/shared/http.types.ts:10](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/shared/http.types.ts#L10)
+[apis/shared/http.types.ts:10](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/shared/http.types.ts#L10)
 
 ___
 
@@ -72,7 +69,7 @@ ___
 
 #### Defined in
 
-[apis/shared/http.types.ts:22](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/shared/http.types.ts#L22)
+[apis/shared/http.types.ts:22](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/shared/http.types.ts#L22)
 
 ___
 
@@ -86,7 +83,35 @@ Partial.headers
 
 #### Defined in
 
-[apis/shared/http.types.ts:7](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/shared/http.types.ts#L7)
+[apis/shared/http.types.ts:7](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/shared/http.types.ts#L7)
+
+___
+
+### mapHttpErrors
+
+• `Optional` **mapHttpErrors**: (`error`: [`HttpError`](../classes/index.QIWI.HttpError.md)<`any`, `any`\>) => `Error`
+
+#### Type declaration
+
+▸ (`error`): `Error`
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `error` | [`HttpError`](../classes/index.QIWI.HttpError.md)<`any`, `any`\> |
+
+##### Returns
+
+`Error`
+
+#### Inherited from
+
+Partial.mapHttpErrors
+
+#### Defined in
+
+[apis/shared/http.types.ts:15](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/shared/http.types.ts#L15)
 
 ___
 
@@ -96,7 +121,7 @@ ___
 
 #### Defined in
 
-[apis/shared/http.types.ts:21](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/shared/http.types.ts#L21)
+[apis/shared/http.types.ts:21](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/shared/http.types.ts#L21)
 
 ___
 
@@ -110,7 +135,63 @@ Partial.okStatusCodes
 
 #### Defined in
 
-[apis/shared/http.types.ts:9](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/shared/http.types.ts#L9)
+[apis/shared/http.types.ts:9](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/shared/http.types.ts#L9)
+
+___
+
+### parseResponse
+
+• `Optional` **parseResponse**: (`body`: `Uint8Array`) => `Response`
+
+#### Type declaration
+
+▸ (`body`): `Response`
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `body` | `Uint8Array` |
+
+##### Returns
+
+`Response`
+
+#### Inherited from
+
+Partial.parseResponse
+
+#### Defined in
+
+[apis/shared/http.types.ts:14](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/shared/http.types.ts#L14)
+
+___
+
+### stringifyBody
+
+• `Optional` **stringifyBody**: (`body`: `Request`) => `string` \| `Uint8Array`
+
+#### Type declaration
+
+▸ (`body`): `string` \| `Uint8Array`
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `body` | `Request` |
+
+##### Returns
+
+`string` \| `Uint8Array`
+
+#### Inherited from
+
+Partial.stringifyBody
+
+#### Defined in
+
+[apis/shared/http.types.ts:13](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/shared/http.types.ts#L13)
 
 ___
 
@@ -124,7 +205,7 @@ Partial.timeout
 
 #### Defined in
 
-[apis/shared/http.types.ts:11](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/shared/http.types.ts#L11)
+[apis/shared/http.types.ts:11](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/shared/http.types.ts#L11)
 
 ___
 
@@ -134,76 +215,4 @@ ___
 
 #### Defined in
 
-[apis/shared/http.types.ts:20](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/shared/http.types.ts#L20)
-
-## Methods
-
-### mapHttpErrors
-
-▸ `Optional` **mapHttpErrors**(`error`): `Error`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `error` | [`HttpError`](../classes/index.QIWI.HttpError.md)<`any`, `any`\> |
-
-#### Returns
-
-`Error`
-
-#### Inherited from
-
-Partial.mapHttpErrors
-
-#### Defined in
-
-[apis/shared/http.types.ts:15](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/shared/http.types.ts#L15)
-
-___
-
-### parseResponse
-
-▸ `Optional` **parseResponse**(`body`): `Response`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `body` | `Uint8Array` |
-
-#### Returns
-
-`Response`
-
-#### Inherited from
-
-Partial.parseResponse
-
-#### Defined in
-
-[apis/shared/http.types.ts:14](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/shared/http.types.ts#L14)
-
-___
-
-### stringifyBody
-
-▸ `Optional` **stringifyBody**(`body`): `string` \| `Uint8Array`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `body` | `Request` |
-
-#### Returns
-
-`string` \| `Uint8Array`
-
-#### Inherited from
-
-Partial.stringifyBody
-
-#### Defined in
-
-[apis/shared/http.types.ts:13](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/shared/http.types.ts#L13)
+[apis/shared/http.types.ts:20](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/shared/http.types.ts#L20)

@@ -145,7 +145,7 @@ export enum Recipients {
   /**
    * Перевод на QIWI-Кошелёк по никнейму
    * @deprecated Переименовано в `QIWINickname`
-   * @see {@link QIWINickname}
+   * @see {@link Recipients.QIWINickname}
    */
   // eslint-disable-next-line camelcase
   QIWI_Nickname = 99_999,
@@ -159,7 +159,7 @@ export enum Recipients {
   /**
    * Перевод на QIWI-Кошелёк по номеру виртуальной карты
    * @deprecated Переименовано в `QIWIVirtualCard`
-   * @see {@link QIWIVirtualCard}
+   * @see {@link Recipients.QIWIVirtualCard}
    */
   // eslint-disable-next-line camelcase
   QIWI_VirtualCard = 22_351,
@@ -168,7 +168,7 @@ export enum Recipients {
    * Перевод в Яндекс.Деньги
    *
    * @deprecated Сейчас называется `YooMoney`
-   * @see {@link YooMoney}
+   * @see {@link Recipients.YooMoney}
    */
   YandexMoney = 26_476,
 
@@ -278,7 +278,7 @@ export type PersonProfile = {
 
     /**
      * Данные об
-     * {@link https://qiwi.com/settings/identification#ru|идентификации}
+     * [идентификации](https://qiwi.com/settings/identification#ru)
      * пользователя.
      */
     identificationInfo: {
@@ -539,7 +539,7 @@ export type Transaction = {
    */
   date: string;
 
-  /** {@link https://developer.qiwi.com/ru/qiwi-wallet-personal/#errorCode|Код ошибки платежа} */
+  /** [Код ошибки платежа](https://developer.qiwi.com/ru/qiwi-wallet-personal/#errorCode) */
   errorCode: number;
 
   /** Описание ошибки */
@@ -642,7 +642,7 @@ export type Transaction = {
 
 export type GetTransactionsHistoryResponse = {
   /**
-   * Список объектов {@link https://developer.qiwi.com/ru/qiwi-wallet-personal/#txnid|Transaction}.
+   * Список объектов [Transaction](https://developer.qiwi.com/ru/qiwi-wallet-personal/#txnid).
    * Число транзакций в списке меньше или равно параметру rows из
    * запроса
    */
@@ -1299,7 +1299,7 @@ export type WebhookTransaction = {
      */
     date: string;
 
-    /** {@link https://developer.qiwi.com/ru/qiwi-wallet-personal/#errorCode|Код ошибки платежа} */
+    /** [Код ошибки платежа](https://developer.qiwi.com/ru/qiwi-wallet-personal/#errorCode) */
     errorCode: number;
 
     /** Номер кошелька */

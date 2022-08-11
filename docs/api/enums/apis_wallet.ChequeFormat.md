@@ -6,27 +6,27 @@
 
 ## Table of contents
 
-### Enumeration members
+### Enumeration Members
 
 - [JPEG](apis_wallet.ChequeFormat.md#jpeg)
 - [PDF](apis_wallet.ChequeFormat.md#pdf)
 
-## Enumeration members
+## Enumeration Members
 
 ### JPEG
 
-• **JPEG** = `"JPEG"`
+• **JPEG** = ``"JPEG"``
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:79](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/wallet.types.ts#L79)
+[apis/wallet/wallet.types.ts:79](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L79)
 
 ___
 
 ### PDF
 
-• **PDF** = `"PDF"`
+• **PDF** = ``"PDF"``
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:80](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/wallet.types.ts#L80)
+[apis/wallet/wallet.types.ts:80](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L80)

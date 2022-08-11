@@ -4,7 +4,7 @@
 
 [index](../modules/index.md).[QIWI](../modules/index.QIWI.md).WalletApiError
 
-**`export`**
+**`Export`**
 
 ## Hierarchy
 
@@ -39,18 +39,20 @@
 
 ### constructor
 
-• **new WalletApiError**(`response`, `cause`)
+• **new WalletApiError**(`response`, `cause?`)
 
 Creates an instance of WalletApiError.
 
-**`memberof`** WalletApiError
+**`Memberof`**
+
+WalletApiError
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `response` | [`WalletApiErrorResponse`](../modules/index.QIWI.md#walletapierrorresponse) |
-| `cause` | [`HttpError`](index.QIWI.HttpError.md)<`any`, `any`\> |
+| `cause?` | [`HttpError`](index.QIWI.HttpError.md)<`any`, `any`\> |
 
 #### Overrides
 
@@ -58,7 +60,7 @@ Creates an instance of WalletApiError.
 
 #### Defined in
 
-[apis/wallet/wallet.errors.ts:31](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/wallet.errors.ts#L31)
+[apis/wallet/wallet.errors.ts:31](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.errors.ts#L31)
 
 ## Properties
 
@@ -70,6 +72,10 @@ Creates an instance of WalletApiError.
 
 [ExtendedError](index._internal_.ExtendedError.md).[cause](index._internal_.ExtendedError.md#cause)
 
+#### Defined in
+
+[apis/error.ts:14](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/error.ts#L14)
+
 ___
 
 ### dateTime
@@ -78,7 +84,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.errors.ts:22](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/wallet.errors.ts#L22)
+[apis/wallet/wallet.errors.ts:22](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.errors.ts#L22)
 
 ___
 
@@ -89,6 +95,10 @@ ___
 #### Inherited from
 
 [ExtendedError](index._internal_.ExtendedError.md).[message](index._internal_.ExtendedError.md#message)
+
+#### Defined in
+
+[apis/error.ts:14](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/error.ts#L14)
 
 ___
 
@@ -102,13 +112,17 @@ ___
 
 #### Defined in
 
-[apis/error.ts:29](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/error.ts#L29)
+[apis/error.ts:29](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/error.ts#L29)
 
 ___
 
 ### response
 
 • `Readonly` **response**: [`WalletApiErrorResponse`](../modules/index.QIWI.md#walletapierrorresponse)
+
+#### Defined in
+
+[apis/wallet/wallet.errors.ts:31](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.errors.ts#L31)
 
 ___
 
@@ -118,7 +132,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.errors.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/wallet.errors.ts#L23)
+[apis/wallet/wallet.errors.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.errors.ts#L23)
 
 ## Accessors
 
@@ -126,9 +140,9 @@ ___
 
 • `get` **[toStringTag]**(): `string`
 
-**`readonly`**
+**`Memberof`**
 
-**`memberof`** ExtendedError
+ExtendedError
 
 #### Returns
 
@@ -136,11 +150,11 @@ ___
 
 #### Inherited from
 
-ExtendedError.\_\_@toStringTag@454
+ExtendedError.\_\_@toStringTag@478
 
 #### Defined in
 
-[apis/error.ts:52](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/error.ts#L52)
+[apis/error.ts:52](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/error.ts#L52)
 
 ## Methods
 
@@ -148,13 +162,15 @@ ExtendedError.\_\_@toStringTag@454
 
 ▸ **toJSON**(): `Error`
 
-**`memberof`** ExtendedError
+**`Memberof`**
+
+ExtendedError
 
 #### Returns
 
 `Error`
 
-{Error}
+Error
 
 #### Inherited from
 
@@ -162,4 +178,4 @@ ExtendedError.\_\_@toStringTag@454
 
 #### Defined in
 
-[apis/error.ts:37](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/error.ts#L37)
+[apis/error.ts:37](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/error.ts#L37)

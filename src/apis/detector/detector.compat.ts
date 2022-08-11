@@ -21,7 +21,7 @@ export class DetectorCompat extends Detector {
   /**
    *
    * @param {string} phone
-   * @return {*}  {Promise<number>}
+   * @return {*} Promise<number>
    * @memberof Detector
    */
   async getPhoneProvider(phone: string): Promise<number> {
@@ -31,7 +31,7 @@ export class DetectorCompat extends Detector {
   /**
    *
    * @param {string} cardNumber
-   * @return {*}  {Promise<number>}
+   * @return {*} Promise<number>
    * @memberof Detector
    */
   async getCardProvider(cardNumber: string): Promise<number> {

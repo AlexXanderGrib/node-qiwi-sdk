@@ -6,27 +6,27 @@
 
 ## Table of contents
 
-### Enumeration members
+### Enumeration Members
 
 - [Card](apis_wallet.QuickPayRecipients.md#card)
 - [Phone](apis_wallet.QuickPayRecipients.md#phone)
 
-## Enumeration members
+## Enumeration Members
 
 ### Card
 
-• **Card** = `"card"`
+• **Card** = ``"card"``
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:1248](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/wallet.types.ts#L1248)
+[apis/wallet/wallet.types.ts:1248](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L1248)
 
 ___
 
 ### Phone
 
-• **Phone** = `"phone"`
+• **Phone** = ``"phone"``
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:1249](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/wallet.types.ts#L1249)
+[apis/wallet/wallet.types.ts:1249](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L1249)

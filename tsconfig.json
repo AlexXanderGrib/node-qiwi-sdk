@@ -13,6 +13,12 @@
     "rootDir": "./src",
     "baseUrl": "./src",
     "paths": {
+      "@apis/*": [
+        "apis/*"
+      ],
+      "@shared/*": [
+        "apis/shared/*"
+      ],
       "@platform/*": [
         "apis/shared/platform/node/*"
       ]

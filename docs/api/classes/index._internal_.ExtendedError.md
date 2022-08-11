@@ -6,7 +6,7 @@
 
 Ошибка, которую можно преобразовать в JSON
 
-**`export`**
+**`Export`**
 
 ## Hierarchy
 
@@ -56,7 +56,9 @@
 
 Creates an instance of ErrorWithCause.
 
-**`memberof`** ErrorWithCause
+**`Memberof`**
+
+ErrorWithCause
 
 #### Parameters
 
@@ -71,7 +73,7 @@ Creates an instance of ErrorWithCause.
 
 #### Defined in
 
-[apis/error.ts:14](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/error.ts#L14)
+[apis/error.ts:14](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/error.ts#L14)
 
 ## Properties
 
@@ -83,6 +85,10 @@ Creates an instance of ErrorWithCause.
 
 [ErrorWithCause](index._internal_.ErrorWithCause.md).[cause](index._internal_.ErrorWithCause.md#cause)
 
+#### Defined in
+
+[apis/error.ts:14](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/error.ts#L14)
+
 ___
 
 ### message
@@ -92,6 +98,10 @@ ___
 #### Inherited from
 
 [ErrorWithCause](index._internal_.ErrorWithCause.md).[message](index._internal_.ErrorWithCause.md#message)
+
+#### Defined in
+
+[apis/error.ts:14](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/error.ts#L14)
 
 ___
 
@@ -105,7 +115,7 @@ ErrorWithCause.name
 
 #### Defined in
 
-[apis/error.ts:29](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/error.ts#L29)
+[apis/error.ts:29](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/error.ts#L29)
 
 ## Accessors
 
@@ -113,9 +123,9 @@ ErrorWithCause.name
 
 • `get` **[toStringTag]**(): `string`
 
-**`readonly`**
+**`Memberof`**
 
-**`memberof`** ExtendedError
+ExtendedError
 
 #### Returns
 
@@ -123,7 +133,7 @@ ErrorWithCause.name
 
 #### Defined in
 
-[apis/error.ts:52](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/error.ts#L52)
+[apis/error.ts:52](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/error.ts#L52)
 
 ## Methods
 
@@ -131,14 +141,16 @@ ErrorWithCause.name
 
 ▸ **toJSON**(): `Error`
 
-**`memberof`** ExtendedError
+**`Memberof`**
+
+ExtendedError
 
 #### Returns
 
 `Error`
 
-{Error}
+Error
 
 #### Defined in
 
-[apis/error.ts:37](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/error.ts#L37)
+[apis/error.ts:37](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/error.ts#L37)

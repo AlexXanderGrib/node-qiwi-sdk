@@ -31,7 +31,7 @@ export class ExtendedError extends ErrorWithCause {
   /**
    *
    *
-   * @return {*}  {Error}
+   * @return {*} Error
    * @memberof ExtendedError
    */
   toJSON(): Error {
@@ -78,7 +78,7 @@ export class ErrorWithCode<
   /**
    *
    *
-   * @return {*}  {(Error & { code: CodeType })}
+   * @return {*} (Error & { code: CodeType })
    * @memberof ErrorWithCode
    */
   toJSON(): Error & { code: CodeType } {
@@ -93,7 +93,7 @@ export class ErrorWithCode<
   /**
    *
    *
-   * @return {*}  {string}
+   * @return {*} string
    * @memberof ErrorWithCode
    */
   toString(): string {

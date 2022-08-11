@@ -4,7 +4,7 @@
 
 [index](../modules/index.md).[QIWI](../modules/index.QIWI.md).SimpleJsonHttp
 
-**`export`**
+**`Export`**
 
 ## Table of contents
 
@@ -34,7 +34,9 @@
 
 Creates an instance of SimpleJsonHttp.
 
-**`memberof`** SimpleJsonHttp
+**`Memberof`**
+
+SimpleJsonHttp
 
 #### Parameters
 
@@ -44,7 +46,7 @@ Creates an instance of SimpleJsonHttp.
 
 #### Defined in
 
-[apis/shared/http.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/shared/http.ts#L17)
+[apis/shared/http.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/shared/http.ts#L17)
 
 ## Properties
 
@@ -52,13 +54,19 @@ Creates an instance of SimpleJsonHttp.
 
 • **client**: [`HttpClient`](../interfaces/index.QIWI.HttpClient.md)<`any`, `any`\>
 
+#### Defined in
+
+[apis/shared/http.ts:18](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/shared/http.ts#L18)
+
 ## Methods
 
 ### delete
 
 ▸ **delete**<`T`\>(`url`, `body?`): `Promise`<`T`\>
 
-**`memberof`** SimpleJsonHttp
+**`Memberof`**
+
+SimpleJsonHttp
 
 #### Type parameters
 
@@ -79,7 +87,7 @@ Creates an instance of SimpleJsonHttp.
 
 #### Defined in
 
-[apis/shared/http.ts:84](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/shared/http.ts#L84)
+[apis/shared/http.ts:84](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/shared/http.ts#L84)
 
 ___
 
@@ -87,7 +95,9 @@ ___
 
 ▸ **get**<`T`\>(`url`): `Promise`<`T`\>
 
-**`memberof`** SimpleJsonHttp
+**`Memberof`**
+
+SimpleJsonHttp
 
 #### Type parameters
 
@@ -107,7 +117,7 @@ ___
 
 #### Defined in
 
-[apis/shared/http.ts:32](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/shared/http.ts#L32)
+[apis/shared/http.ts:32](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/shared/http.ts#L32)
 
 ___
 
@@ -115,7 +125,9 @@ ___
 
 ▸ **patch**<`T`\>(`url`, `body?`): `Promise`<`T`\>
 
-**`memberof`** SimpleJsonHttp
+**`Memberof`**
+
+SimpleJsonHttp
 
 #### Type parameters
 
@@ -136,7 +148,7 @@ ___
 
 #### Defined in
 
-[apis/shared/http.ts:71](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/shared/http.ts#L71)
+[apis/shared/http.ts:71](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/shared/http.ts#L71)
 
 ___
 
@@ -144,7 +156,9 @@ ___
 
 ▸ **post**<`T`\>(`url`, `body?`): `Promise`<`T`\>
 
-**`memberof`** SimpleJsonHttp
+**`Memberof`**
+
+SimpleJsonHttp
 
 #### Type parameters
 
@@ -165,7 +179,7 @@ ___
 
 #### Defined in
 
-[apis/shared/http.ts:45](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/shared/http.ts#L45)
+[apis/shared/http.ts:45](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/shared/http.ts#L45)
 
 ___
 
@@ -173,7 +187,9 @@ ___
 
 ▸ **put**<`T`\>(`url`, `body?`): `Promise`<`T`\>
 
-**`memberof`** SimpleJsonHttp
+**`Memberof`**
+
+SimpleJsonHttp
 
 #### Type parameters
 
@@ -194,7 +210,7 @@ ___
 
 #### Defined in
 
-[apis/shared/http.ts:58](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/shared/http.ts#L58)
+[apis/shared/http.ts:58](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/shared/http.ts#L58)
 
 ___
 
@@ -202,7 +218,9 @@ ___
 
 ▸ **request**<`T`\>(`option`): `Promise`<`T`\>
 
-**`memberof`** SimpleJsonHttp
+**`Memberof`**
+
+SimpleJsonHttp
 
 #### Type parameters
 
@@ -220,11 +238,11 @@ ___
 
 `Promise`<`T`\>
 
-{Promise<T>}
+Promise<T>
 
 #### Defined in
 
-[apis/shared/http.ts:108](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/shared/http.ts#L108)
+[apis/shared/http.ts:108](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/shared/http.ts#L108)
 
 ___
 
@@ -232,7 +250,9 @@ ___
 
 ▸ **simpleRequest**<`T`\>(`method`, `url`, `body?`): `Promise`<`T`\>
 
-**`memberof`** SimpleJsonHttp
+**`Memberof`**
+
+SimpleJsonHttp
 
 #### Type parameters
 
@@ -252,8 +272,8 @@ ___
 
 `Promise`<`T`\>
 
-{Promise<T>}
+Promise<T>
 
 #### Defined in
 
-[apis/shared/http.ts:97](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/shared/http.ts#L97)
+[apis/shared/http.ts:97](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/shared/http.ts#L97)

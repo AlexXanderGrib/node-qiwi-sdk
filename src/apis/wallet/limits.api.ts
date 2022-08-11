@@ -22,7 +22,7 @@ export class WalletLimitsApi extends WalletApi {
    *
    * @template {LimitTypeAny[]} Limits
    * @param {Limits} limits
-   * @return {Promise<LimitsResponse>} {Promise<LimitsResponse<Limits[number]>>}
+   * @return {Promise<LimitsResponse>} Promise<LimitsResponse<Limits[number]>>
    * @memberof WalletLimitsApi
    */
   async get<Limits extends LimitTypeAny[] = LimitTypeAny[]>(

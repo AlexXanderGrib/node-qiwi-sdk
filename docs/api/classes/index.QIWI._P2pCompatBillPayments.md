@@ -4,10 +4,12 @@
 
 [index](../modules/index.md).[QIWI](../modules/index.QIWI.md)._P2pCompatBillPayments
 
-**`deprecated`** Это класс для тех, кто мигрирует с `@qiwi/bill-payments-node-js-sdk`.
+**`Deprecated`**
+
+Это класс для тех, кто мигрирует с `@qiwi/bill-payments-node-js-sdk`.
 Остальным рекомендуется использовать класс `P2p`
 
-**`export`**
+**`Export`**
 
 ## Hierarchy
 
@@ -67,7 +69,9 @@
 
 Creates an instance of _P2pCompatBillPayments.
 
-**`memberof`** _P2pCompatBillPayments
+**`Memberof`**
+
+_P2pCompatBillPayments
 
 #### Parameters
 
@@ -82,7 +86,7 @@ Creates an instance of _P2pCompatBillPayments.
 
 #### Defined in
 
-[apis/p2p/p2p.compat-bill-payments.ts:29](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/p2p.compat-bill-payments.ts#L29)
+[apis/p2p/p2p.compat-bill-payments.ts:29](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/p2p.compat-bill-payments.ts#L29)
 
 ## Properties
 
@@ -90,9 +94,9 @@ Creates an instance of _P2pCompatBillPayments.
 
 • `Protected` `Readonly` **\_options**: [`P2pApiOptions`](../interfaces/index.QIWI.P2pApiOptions.md)
 
-**`readonly`**
+**`Memberof`**
 
-**`memberof`** OptionsWrapper
+OptionsWrapper
 
 #### Inherited from
 
@@ -100,7 +104,7 @@ Creates an instance of _P2pCompatBillPayments.
 
 #### Defined in
 
-[apis/options-wrapper.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/options-wrapper.ts#L16)
+[apis/options-wrapper.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/options-wrapper.ts#L16)
 
 ___
 
@@ -114,7 +118,7 @@ ___
 
 #### Defined in
 
-[apis/p2p/p2p.ts:106](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/p2p.ts#L106)
+[apis/p2p/p2p.ts:106](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/p2p.ts#L106)
 
 ___
 
@@ -122,11 +126,19 @@ ___
 
 • `Readonly` **publicKey**: `string` = `""`
 
+#### Defined in
+
+[apis/p2p/p2p.compat-bill-payments.ts:31](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/p2p.compat-bill-payments.ts#L31)
+
 ___
 
 ### secretKey
 
 • `Readonly` **secretKey**: `string`
+
+#### Defined in
+
+[apis/p2p/p2p.compat-bill-payments.ts:30](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/p2p.compat-bill-payments.ts#L30)
 
 ___
 
@@ -140,7 +152,7 @@ ___
 
 #### Defined in
 
-[apis/p2p/p2p.ts:24](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/p2p.ts#L24)
+[apis/p2p/p2p.ts:24](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/p2p.ts#L24)
 
 ___
 
@@ -154,7 +166,7 @@ ___
 
 #### Defined in
 
-[apis/p2p/p2p.ts:25](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/p2p.ts#L25)
+[apis/p2p/p2p.ts:25](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/p2p.ts#L25)
 
 ___
 
@@ -168,7 +180,7 @@ ___
 
 #### Defined in
 
-[apis/p2p/p2p.ts:26](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/p2p.ts#L26)
+[apis/p2p/p2p.ts:26](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/p2p.ts#L26)
 
 ___
 
@@ -182,7 +194,7 @@ ___
 
 #### Defined in
 
-[apis/p2p/p2p.ts:22](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/p2p.ts#L22)
+[apis/p2p/p2p.ts:22](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/p2p.ts#L22)
 
 ___
 
@@ -196,7 +208,7 @@ ___
 
 #### Defined in
 
-[apis/p2p/p2p.ts:28](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/p2p.ts#L28)
+[apis/p2p/p2p.ts:28](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/p2p.ts#L28)
 
 ___
 
@@ -210,7 +222,7 @@ ___
 
 #### Defined in
 
-[apis/p2p/p2p.ts:29](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/p2p.ts#L29)
+[apis/p2p/p2p.ts:29](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/p2p.ts#L29)
 
 ___
 
@@ -224,7 +236,7 @@ ___
 
 #### Defined in
 
-[apis/p2p/p2p.ts:30](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/p2p.ts#L30)
+[apis/p2p/p2p.ts:30](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/p2p.ts#L30)
 
 ## Accessors
 
@@ -232,9 +244,9 @@ ___
 
 • `get` **_key**(): `string`
 
-**`readonly`**
+**`Memberof`**
 
-**`memberof`** _P2pCompatBillPaymentsUniversal
+_P2pCompatBillPaymentsUniversal
 
 #### Returns
 
@@ -242,7 +254,7 @@ ___
 
 #### Defined in
 
-[apis/p2p/p2p.compat-bill-payments.ts:46](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/p2p.compat-bill-payments.ts#L46)
+[apis/p2p/p2p.compat-bill-payments.ts:46](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/p2p.compat-bill-payments.ts#L46)
 
 ___
 
@@ -250,7 +262,9 @@ ___
 
 • `get` **agent**(): `any`
 
-**`memberof`** WalletCompat
+**`Memberof`**
+
+WalletCompat
 
 #### Returns
 
@@ -262,11 +276,13 @@ P2p.agent
 
 #### Defined in
 
-[apis/api.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/api.ts#L23)
+[apis/api.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/api.ts#L23)
 
 • `set` **agent**(`agent`): `void`
 
-**`memberof`** WalletCompat
+**`Memberof`**
+
+WalletCompat
 
 #### Parameters
 
@@ -284,7 +300,7 @@ P2p.agent
 
 #### Defined in
 
-[apis/api.ts:32](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/api.ts#L32)
+[apis/api.ts:32](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/api.ts#L32)
 
 ___
 
@@ -292,9 +308,9 @@ ___
 
 • `get` **key**(): `string`
 
-**`readonly`**
+**`Memberof`**
 
-**`memberof`** _P2pCompatBillPaymentsUniversal
+_P2pCompatBillPaymentsUniversal
 
 #### Returns
 
@@ -302,7 +318,7 @@ ___
 
 #### Defined in
 
-[apis/p2p/p2p.compat-bill-payments.ts:56](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/p2p.compat-bill-payments.ts#L56)
+[apis/p2p/p2p.compat-bill-payments.ts:56](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/p2p.compat-bill-payments.ts#L56)
 
 ___
 
@@ -310,9 +326,9 @@ ___
 
 • `get` **options**(): `T`
 
-**`readonly`**
+**`Memberof`**
 
-**`memberof`** OptionsWrapperWithGetter
+OptionsWrapperWithGetter
 
 #### Returns
 
@@ -324,7 +340,7 @@ P2p.options
 
 #### Defined in
 
-[apis/options-wrapper.ts:44](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/options-wrapper.ts#L44)
+[apis/options-wrapper.ts:44](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/options-wrapper.ts#L44)
 
 ## Methods
 
@@ -334,7 +350,9 @@ P2p.options
 
 Normalize amount
 
-**`memberof`** _P2pCompatBillPaymentsUniversal
+**`Memberof`**
+
+_P2pCompatBillPaymentsUniversal
 
 #### Parameters
 
@@ -346,11 +364,11 @@ Normalize amount
 
 `string`
 
-{string}
+string
 
 #### Defined in
 
-[apis/p2p/p2p.compat-bill-payments.ts:67](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/p2p.compat-bill-payments.ts#L67)
+[apis/p2p/p2p.compat-bill-payments.ts:67](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/p2p.compat-bill-payments.ts#L67)
 
 ___
 
@@ -360,7 +378,9 @@ ___
 
 Cancelling unpaid bill
 
-**`memberof`** _P2pCompatBillPaymentsUniversal
+**`Memberof`**
+
+_P2pCompatBillPaymentsUniversal
 
 #### Parameters
 
@@ -372,11 +392,11 @@ Cancelling unpaid bill
 
 `Promise`<[`BillStatusData`](../modules/index.QIWI.md#billstatusdata)\>
 
-{Promise<BillStatusData>}
+Promise<BillStatusData>
 
 #### Defined in
 
-[apis/p2p/p2p.compat-bill-payments.ts:157](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/p2p.compat-bill-payments.ts#L157)
+[apis/p2p/p2p.compat-bill-payments.ts:157](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/p2p.compat-bill-payments.ts#L157)
 
 ___
 
@@ -386,7 +406,9 @@ ___
 
 Checks notification data signature
 
-**`memberof`** _P2pCompatBillPaymentsUniversal
+**`Memberof`**
+
+_P2pCompatBillPaymentsUniversal
 
 #### Parameters
 
@@ -394,17 +416,17 @@ Checks notification data signature
 | :------ | :------ | :------ |
 | `signature` | `string` | The signature |
 | `body` | [`BillStatusBody`](../modules/index.QIWI.md#billstatusbody) | The notification body |
-| `merchantSecret` | `string` | - |
+| `merchantSecret?` | `string` | The merchant key for validating signature |
 
 #### Returns
 
 `boolean`
 
-{boolean}
+boolean
 
 #### Defined in
 
-[apis/p2p/p2p.compat-bill-payments.ts:80](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/p2p.compat-bill-payments.ts#L80)
+[apis/p2p/p2p.compat-bill-payments.ts:80](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/p2p.compat-bill-payments.ts#L80)
 
 ___
 
@@ -414,7 +436,9 @@ ___
 
 Creating bill
 
-**`memberof`** _P2pCompatBillPaymentsUniversal
+**`Memberof`**
+
+_P2pCompatBillPaymentsUniversal
 
 #### Parameters
 
@@ -427,11 +451,11 @@ Creating bill
 
 `Promise`<[`BillStatusData`](../modules/index.QIWI.md#billstatusdata)\>
 
-{Promise<BillStatusData>}
+Promise<BillStatusData>
 
 #### Defined in
 
-[apis/p2p/p2p.compat-bill-payments.ts:132](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/p2p.compat-bill-payments.ts#L132)
+[apis/p2p/p2p.compat-bill-payments.ts:132](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/p2p.compat-bill-payments.ts#L132)
 
 ___
 
@@ -441,23 +465,25 @@ ___
 
 Creating checkout link
 
-**`memberof`** _P2pCompatBillPaymentsUniversal
+**`Memberof`**
+
+_P2pCompatBillPaymentsUniversal
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `parameters` | `Pick`<[`PayUrlPatchParameters`](../modules/index.QIWI.md#payurlpatchparameters) & [`BillCustomFieldsExtension`](../modules/index._internal_.md#billcustomfieldsextension) & { `amount`: `string` \| `number` ; `billId?`: `string` ; `comment?`: `string` ; `customFields?`: [`CustomFields`](../modules/index._internal_.md#customfields) ; `lifetime?`: `string` ; `themeCode?`: `string`  } & { `account?`: `string` ; `email?`: `string` ; `phone?`: `string`  }, ``"amount"`` \| ``"billId"`` \| ``"successUrl"``\> & { `publicKey?`: `string`  } & `Readonly`<`Record`<`string`, `any`\>\> |
+| `parameters` | `Pick`<[`PayUrlPatchParameters`](../modules/index.QIWI.md#payurlpatchparameters) & [`BillCustomFieldsExtension`](../modules/index._internal_.md#billcustomfieldsextension) & { `amount`: `string` \| `number` ; `billId?`: `string` ; `comment?`: `string` ; `customFields?`: [`CustomFields`](../modules/index._internal_.md#customfields) ; `lifetime?`: `string` ; `themeCode?`: `string`  } & { `account?`: `string` ; `email?`: `string` ; `phone?`: `string`  }, ``"amount"`` \| ``"successUrl"`` \| ``"billId"``\> & { `publicKey?`: `string`  } & `Readonly`<`Record`<`string`, `any`\>\> |
 
 #### Returns
 
 `string`
 
-{string}
+string
 
 #### Defined in
 
-[apis/p2p/p2p.compat-bill-payments.ts:116](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/p2p.compat-bill-payments.ts#L116)
+[apis/p2p/p2p.compat-bill-payments.ts:116](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/p2p.compat-bill-payments.ts#L116)
 
 ___
 
@@ -467,7 +493,9 @@ ___
 
 Generate id
 
-**`memberof`** _P2pCompatBillPaymentsUniversal
+**`Memberof`**
+
+_P2pCompatBillPaymentsUniversal
 
 #### Returns
 
@@ -477,7 +505,7 @@ Return uuid v4
 
 #### Defined in
 
-[apis/p2p/p2p.compat-bill-payments.ts:105](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/p2p.compat-bill-payments.ts#L105)
+[apis/p2p/p2p.compat-bill-payments.ts:105](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/p2p.compat-bill-payments.ts#L105)
 
 ___
 
@@ -487,7 +515,9 @@ ___
 
 Getting bill info
 
-**`memberof`** _P2pCompatBillPaymentsUniversal
+**`Memberof`**
+
+_P2pCompatBillPaymentsUniversal
 
 #### Parameters
 
@@ -499,11 +529,11 @@ Getting bill info
 
 `Promise`<[`BillStatusData`](../modules/index.QIWI.md#billstatusdata)\>
 
-{Promise<BillStatusData>}
+Promise<BillStatusData>
 
 #### Defined in
 
-[apis/p2p/p2p.compat-bill-payments.ts:146](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/p2p.compat-bill-payments.ts#L146)
+[apis/p2p/p2p.compat-bill-payments.ts:146](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/p2p.compat-bill-payments.ts#L146)
 
 ___
 
@@ -513,13 +543,15 @@ ___
 
 Generate lifetime in format
 
-**`memberof`** _P2pCompatBillPaymentsUniversal
+**`Memberof`**
+
+_P2pCompatBillPaymentsUniversal
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `days` | `number` | `45` |
+| Name | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `days?` | `number` | `45` | Days of lifetime |
 
 #### Returns
 
@@ -529,7 +561,7 @@ Lifetime in ISO
 
 #### Defined in
 
-[apis/p2p/p2p.compat-bill-payments.ts:95](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/p2p.compat-bill-payments.ts#L95)
+[apis/p2p/p2p.compat-bill-payments.ts:95](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/p2p.compat-bill-payments.ts#L95)
 
 ___
 
@@ -540,7 +572,9 @@ ___
 Getting refund info
 Method is not available for individuals
 
-**`memberof`** _P2pCompatBillPaymentsUniversal
+**`Memberof`**
+
+_P2pCompatBillPaymentsUniversal
 
 #### Parameters
 
@@ -553,11 +587,11 @@ Method is not available for individuals
 
 `Promise`<[`BillRefundStatusData`](../modules/index.QIWI.md#billrefundstatusdata)\>
 
-{Promise<BillRefundStatusData>}
+Promise<BillRefundStatusData>
 
 #### Defined in
 
-[apis/p2p/p2p.compat-bill-payments.ts:170](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/p2p.compat-bill-payments.ts#L170)
+[apis/p2p/p2p.compat-bill-payments.ts:170](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/p2p.compat-bill-payments.ts#L170)
 
 ___
 
@@ -571,10 +605,10 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options` | [`MiddlewareOptions`](../modules/index._internal_.md#middlewareoptions) |
-| `handler?` | [`BillRequestHandler`](../modules/index._internal_.md#billrequesthandler) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `options?` | [`MiddlewareOptions`](../modules/index._internal_.md#middlewareoptions) | Параметры обработки запроса |
+| `handler?` | [`BillRequestHandler`](../modules/index._internal_.md#billrequesthandler) |  |
 
 #### Returns
 
@@ -614,7 +648,7 @@ app.use((error, request, response, next) => {
 
 #### Defined in
 
-[apis/p2p/p2p.ts:148](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/p2p.ts#L148)
+[apis/p2p/p2p.ts:148](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/p2p.ts#L148)
 
 ___
 
@@ -625,7 +659,9 @@ ___
 Refund paid bill
 Method is not available for individuals
 
-**`memberof`** _P2pCompatBillPaymentsUniversal
+**`Memberof`**
+
+_P2pCompatBillPaymentsUniversal
 
 #### Parameters
 
@@ -633,18 +669,18 @@ Method is not available for individuals
 | :------ | :------ | :------ | :------ |
 | `billId` | `string` \| `number` | `undefined` | The bill identifier |
 | `refundId` | `string` \| `number` | `undefined` | The refund identifier |
-| `amount` | `number` | `0` | - |
-| `currency` | [`BillCurrencyAny`](../modules/index.QIWI.md#billcurrencyany) | `BillCurrency.RUB` | - |
+| `amount?` | `number` | `0` | The amount |
+| `currency?` | [`BillCurrencyAny`](../modules/index.QIWI.md#billcurrencyany) | `BillCurrency.RUB` | The currency |
 
 #### Returns
 
 `Promise`<[`BillRefundStatusData`](../modules/index.QIWI.md#billrefundstatusdata)\>
 
-{Promise<BillRefundStatusData>}
+Promise<BillRefundStatusData>
 
 #### Defined in
 
-[apis/p2p/p2p.compat-bill-payments.ts:188](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/p2p.compat-bill-payments.ts#L188)
+[apis/p2p/p2p.compat-bill-payments.ts:188](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/p2p.compat-bill-payments.ts#L188)
 
 ___
 
@@ -652,22 +688,24 @@ ___
 
 ▸ `Static` **create**(`secretKey`, `publicKey?`): [`P2p`](index.QIWI.P2p.md)
 
-**`static`**
+**`Static`**
 
-**`memberof`** P2p
+**`Memberof`**
+
+P2p
 
 #### Parameters
 
 | Name | Type | Default value |
 | :------ | :------ | :------ |
 | `secretKey` | `string` | `undefined` |
-| `publicKey` | `string` | `""` |
+| `publicKey?` | `string` | `""` |
 
 #### Returns
 
 [`P2p`](index.QIWI.P2p.md)
 
-{P2p}
+P2p
 
 #### Inherited from
 
@@ -675,7 +713,7 @@ ___
 
 #### Defined in
 
-[apis/p2p/p2p.ts:69](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/p2p.ts#L69)
+[apis/p2p/p2p.ts:69](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/p2p.ts#L69)
 
 ___
 
@@ -683,22 +721,24 @@ ___
 
 ▸ `Static` **env**(`secretKey?`, `publicKey?`): [`P2p`](index.QIWI.P2p.md)
 
-**`static`**
+**`Static`**
 
-**`memberof`** P2p
+**`Memberof`**
+
+P2p
 
 #### Parameters
 
 | Name | Type | Default value |
 | :------ | :------ | :------ |
-| `secretKey` | `string` | `environment.QIWI_SECRET_KEY` |
-| `publicKey` | `string` | `environment.QIWI_PUBLIC_KEY` |
+| `secretKey?` | `string` | `environment.QIWI_SECRET_KEY` |
+| `publicKey?` | `string` | `environment.QIWI_PUBLIC_KEY` |
 
 #### Returns
 
 [`P2p`](index.QIWI.P2p.md)
 
-{P2p}
+P2p
 
 #### Inherited from
 
@@ -706,7 +746,7 @@ ___
 
 #### Defined in
 
-[apis/p2p/p2p.ts:86](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/p2p.ts#L86)
+[apis/p2p/p2p.ts:86](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/p2p.ts#L86)
 
 ___
 
@@ -714,9 +754,11 @@ ___
 
 ▸ `Static` **httpClientFactory**(`secretKey`): [`SimpleJsonHttp`](index.QIWI.SimpleJsonHttp.md)
 
-**`static`**
+**`Static`**
 
-**`memberof`** P2p
+**`Memberof`**
+
+P2p
 
 #### Parameters
 
@@ -728,7 +770,7 @@ ___
 
 [`SimpleJsonHttp`](index.QIWI.SimpleJsonHttp.md)
 
-{SimpleJsonHttp}
+SimpleJsonHttp
 
 #### Inherited from
 
@@ -736,4 +778,4 @@ ___
 
 #### Defined in
 
-[apis/p2p/p2p.ts:40](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/p2p.ts#L40)
+[apis/p2p/p2p.ts:40](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/p2p.ts#L40)

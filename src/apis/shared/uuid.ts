@@ -35,7 +35,7 @@ const cache = new Map<number, string>();
  *
  *
  * @param {number} byte
- * @return {string}  {string}
+ * @return {string} string
  *
  * @example
  * byteToString(255) // -> "ff"

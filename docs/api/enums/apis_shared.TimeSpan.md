@@ -6,7 +6,7 @@
 
 ## Table of contents
 
-### Enumeration members
+### Enumeration Members
 
 - [Day](apis_shared.TimeSpan.md#day)
 - [Hour](apis_shared.TimeSpan.md#hour)
@@ -17,82 +17,82 @@
 - [Week](apis_shared.TimeSpan.md#week)
 - [Year](apis_shared.TimeSpan.md#year)
 
-## Enumeration members
+## Enumeration Members
 
 ### Day
 
-• **Day** = `86400000`
+• **Day** = ``86400000``
 
 #### Defined in
 
-[apis/shared/time.ts:47](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/shared/time.ts#L47)
+[apis/shared/time.ts:47](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/shared/time.ts#L47)
 
 ___
 
 ### Hour
 
-• **Hour** = `3600000`
+• **Hour** = ``3600000``
 
 #### Defined in
 
-[apis/shared/time.ts:46](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/shared/time.ts#L46)
+[apis/shared/time.ts:46](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/shared/time.ts#L46)
 
 ___
 
 ### Millisecond
 
-• **Millisecond** = `1`
+• **Millisecond** = ``1``
 
 #### Defined in
 
-[apis/shared/time.ts:43](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/shared/time.ts#L43)
+[apis/shared/time.ts:43](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/shared/time.ts#L43)
 
 ___
 
 ### Minute
 
-• **Minute** = `60000`
+• **Minute** = ``60000``
 
 #### Defined in
 
-[apis/shared/time.ts:45](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/shared/time.ts#L45)
+[apis/shared/time.ts:45](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/shared/time.ts#L45)
 
 ___
 
 ### Month
 
-• **Month** = `2592000000`
+• **Month** = ``2592000000``
 
 #### Defined in
 
-[apis/shared/time.ts:49](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/shared/time.ts#L49)
+[apis/shared/time.ts:49](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/shared/time.ts#L49)
 
 ___
 
 ### Second
 
-• **Second** = `1000`
+• **Second** = ``1000``
 
 #### Defined in
 
-[apis/shared/time.ts:44](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/shared/time.ts#L44)
+[apis/shared/time.ts:44](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/shared/time.ts#L44)
 
 ___
 
 ### Week
 
-• **Week** = `604800000`
+• **Week** = ``604800000``
 
 #### Defined in
 
-[apis/shared/time.ts:48](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/shared/time.ts#L48)
+[apis/shared/time.ts:48](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/shared/time.ts#L48)
 
 ___
 
 ### Year
 
-• **Year** = `31536000000`
+• **Year** = ``31536000000``
 
 #### Defined in
 
-[apis/shared/time.ts:50](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/shared/time.ts#L50)
+[apis/shared/time.ts:50](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/shared/time.ts#L50)

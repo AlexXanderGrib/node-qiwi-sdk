@@ -61,7 +61,7 @@ export class _P2pCompatBillPayments extends P2p {
    * Normalize amount
    *
    * @param {(string | number)} amount The amount
-   * @return {string} {string}
+   * @return {string} string
    * @memberof _P2pCompatBillPaymentsUniversal
    */
   public _normalizeAmount(amount: string | number): string {
@@ -74,7 +74,7 @@ export class _P2pCompatBillPayments extends P2p {
    * @param {string} signature The signature
    * @param {BillStatusBody} body The notification body
    * @param {string} [merchantSecret=this.secretKey] The merchant key for validating signature
-   * @return {*}  {boolean}
+   * @return {*} boolean
    * @memberof _P2pCompatBillPaymentsUniversal
    */
   checkNotificationSignature(
@@ -110,7 +110,7 @@ export class _P2pCompatBillPayments extends P2p {
    * Creating checkout link
    *
    * @param {*} parameters
-   * @return {string}  {string}
+   * @return {string} string
    * @memberof _P2pCompatBillPaymentsUniversal
    */
   createPaymentForm(
@@ -126,7 +126,7 @@ export class _P2pCompatBillPayments extends P2p {
    *
    * @param {string} billId
    * @param {BillCreateParameters} parameters
-   * @return {*}  {Promise<BillStatusData>}
+   * @return {*} Promise<BillStatusData>
    * @memberof _P2pCompatBillPaymentsUniversal
    */
   async createBill(
@@ -140,7 +140,7 @@ export class _P2pCompatBillPayments extends P2p {
    * Getting bill info
    *
    * @param {string} billId The bill identifier
-   * @return {Promise<BillStatusData>}  {Promise<BillStatusData>}
+   * @return {Promise<BillStatusData>} Promise<BillStatusData>
    * @memberof _P2pCompatBillPaymentsUniversal
    */
   async getBillInfo(billId: string): Promise<BillStatusData> {
@@ -151,7 +151,7 @@ export class _P2pCompatBillPayments extends P2p {
    * Cancelling unpaid bill
    *
    * @param {string} billId The bill identifier
-   * @return {Promise<BillStatusData>}  {Promise<BillStatusData>}
+   * @return {Promise<BillStatusData>} Promise<BillStatusData>
    * @memberof _P2pCompatBillPaymentsUniversal
    */
   async cancelBill(billId: string): Promise<BillStatusData> {
@@ -164,7 +164,7 @@ export class _P2pCompatBillPayments extends P2p {
    *
    * @param {(string | number)} billId The bill identifier
    * @param {(string | number)} refundId The refund identifier
-   * @return {*}  {Promise<BillRefundStatusData>}
+   * @return {*} Promise<BillRefundStatusData>
    * @memberof _P2pCompatBillPaymentsUniversal
    */
   async getRefundInfo(
@@ -182,7 +182,7 @@ export class _P2pCompatBillPayments extends P2p {
    * @param {(string | number)} refundId The refund identifier
    * @param {number} [amount=0] The amount
    * @param {BillCurrencyAny} [currency=BillCurrency.RUB] The currency
-   * @return {Promise<BillRefundStatusData>}  {Promise<BillRefundStatusData>}
+   * @return {Promise<BillRefundStatusData>} Promise<BillRefundStatusData>
    * @memberof _P2pCompatBillPaymentsUniversal
    */
   async refund(

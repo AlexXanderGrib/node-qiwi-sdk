@@ -7,7 +7,7 @@
 # История платежей
 [Документация QIWI](https://developer.qiwi.com/ru/qiwi-wallet-personal/#payments_history)
 
-**`export`**
+**`Export`**
 
 ## Hierarchy
 
@@ -46,7 +46,9 @@
 
 Creates an instance of OptionsWrapper.
 
-**`memberof`** OptionsWrapper
+**`Memberof`**
+
+OptionsWrapper
 
 #### Parameters
 
@@ -60,7 +62,7 @@ Creates an instance of OptionsWrapper.
 
 #### Defined in
 
-[apis/options-wrapper.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/options-wrapper.ts#L23)
+[apis/options-wrapper.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/options-wrapper.ts#L23)
 
 ## Properties
 
@@ -68,9 +70,9 @@ Creates an instance of OptionsWrapper.
 
 • `Protected` `Readonly` **\_options**: [`WalletApiOptions`](../interfaces/index.QIWI.WalletApiOptions.md)
 
-**`readonly`**
+**`Memberof`**
 
-**`memberof`** OptionsWrapper
+OptionsWrapper
 
 #### Inherited from
 
@@ -78,7 +80,7 @@ Creates an instance of OptionsWrapper.
 
 #### Defined in
 
-[apis/options-wrapper.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/options-wrapper.ts#L16)
+[apis/options-wrapper.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/options-wrapper.ts#L16)
 
 ## Accessors
 
@@ -86,9 +88,9 @@ Creates an instance of OptionsWrapper.
 
 • `Protected` `get` **http**(): [`SimpleJsonHttp`](index.QIWI.SimpleJsonHttp.md)
 
-**`readonly`**
+**`Memberof`**
 
-**`memberof`** ApiSubclass
+ApiSubclass
 
 #### Returns
 
@@ -100,7 +102,7 @@ WalletApi.http
 
 #### Defined in
 
-[apis/api.ts:55](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/api.ts#L55)
+[apis/api.ts:55](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/api.ts#L55)
 
 ___
 
@@ -108,9 +110,9 @@ ___
 
 • `Protected` `get` **walletId**(): `string`
 
-**`readonly`**
+**`Memberof`**
 
-**`memberof`** WalletApi
+WalletApi
 
 #### Returns
 
@@ -122,7 +124,7 @@ WalletApi.walletId
 
 #### Defined in
 
-[apis/wallet/api.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/api.ts#L17)
+[apis/wallet/api.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/api.ts#L17)
 
 ## Methods
 
@@ -138,7 +140,9 @@ WalletApi.walletId
 
 **Этот метод требует наличия валидного `walletId` (номера телефона привязанного к кошельку) в конфигурации API.**
 
-**`memberof`** WalletPaymentHistoryApi
+**`Memberof`**
+
+WalletPaymentHistoryApi
 
 #### Parameters
 
@@ -150,11 +154,11 @@ WalletApi.walletId
 
 `Promise`<[`GetTransactionsHistoryResponse`](../modules/index.QIWI.md#gettransactionshistoryresponse)\>
 
-{Promise<GetTransactionsHistoryResponse>}
+Promise<GetTransactionsHistoryResponse>
 
 #### Defined in
 
-[apis/wallet/payment-history.api.ts:36](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/payment-history.api.ts#L36)
+[apis/wallet/payment-history.api.ts:36](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/payment-history.api.ts#L36)
 
 ___
 
@@ -169,7 +173,9 @@ ___
 
 **Этот метод требует наличия валидного `walletId` (номера телефона привязанного к кошельку) в конфигурации API.**
 
-**`memberof`** WalletPaymentHistoryApi
+**`Memberof`**
+
+WalletPaymentHistoryApi
 
 #### Parameters
 
@@ -181,11 +187,11 @@ ___
 
 `Promise`<[`GetPaymentHistoryTotalResponse`](../modules/index.QIWI.md#getpaymenthistorytotalresponse)\>
 
-{Promise<GetPaymentHistoryTotalResponse>}
+Promise<GetPaymentHistoryTotalResponse>
 
 #### Defined in
 
-[apis/wallet/payment-history.api.ts:55](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/payment-history.api.ts#L55)
+[apis/wallet/payment-history.api.ts:55](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/payment-history.api.ts#L55)
 
 ___
 
@@ -198,24 +204,26 @@ ___
 Запрос используется для получения информации по определенной
 транзакции из вашей истории платежей.
 
-**`memberof`** WalletPaymentHistoryApi
+**`Memberof`**
+
+WalletPaymentHistoryApi
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `transactionId` | [`StringOrNumber`](../modules/index.QIWI.md#stringornumber) | Номер транзакции |
-| `type?` | [`TransactionTypeAny`](../modules/index.QIWI.md#transactiontypeany) | - |
+| `type?` | [`TransactionTypeAny`](../modules/index.QIWI.md#transactiontypeany) | Тип транзакции |
 
 #### Returns
 
 `Promise`<[`Transaction`](../modules/index.QIWI.md#transaction)\>
 
-{Promise<Transaction>}
+Promise<Transaction>
 
 #### Defined in
 
-[apis/wallet/payment-history.api.ts:73](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/payment-history.api.ts#L73)
+[apis/wallet/payment-history.api.ts:73](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/payment-history.api.ts#L73)
 
 ___
 
@@ -225,7 +233,9 @@ ___
 
 ### Файл квитанции
 
-**`memberof`** WalletPaymentHistoryApi
+**`Memberof`**
+
+WalletPaymentHistoryApi
 
 #### Parameters
 
@@ -239,11 +249,11 @@ ___
 
 `Promise`<`Uint8Array`\>
 
-{Promise<Uint8Array>}
+Promise<Uint8Array>
 
 #### Defined in
 
-[apis/wallet/payment-history.api.ts:91](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/payment-history.api.ts#L91)
+[apis/wallet/payment-history.api.ts:91](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/payment-history.api.ts#L91)
 
 ___
 
@@ -253,7 +263,9 @@ ___
 
 ### Отправка квитанции
 
-**`memberof`** WalletPaymentHistoryApi
+**`Memberof`**
+
+WalletPaymentHistoryApi
 
 #### Parameters
 
@@ -267,8 +279,8 @@ ___
 
 `Promise`<`void`\>
 
-{Promise<void>}
+Promise<void>
 
 #### Defined in
 
-[apis/wallet/payment-history.api.ts:115](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/payment-history.api.ts#L115)
+[apis/wallet/payment-history.api.ts:115](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/payment-history.api.ts#L115)

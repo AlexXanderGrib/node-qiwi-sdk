@@ -17,7 +17,7 @@ export class WalletPersonProfileApi extends WalletApi {
    * Запрос возвращает информацию о вашем профиле - наборе
    * пользовательских данных и настроек вашего QIWI кошелька.
    *
-   * @return {Promise<PersonProfile>} {Promise<PersonProfile>}
+   * @return {Promise<PersonProfile>} Promise<PersonProfile>
    * @memberof WalletPersonProfileApi
    */
   async getCurrent(): Promise<PersonProfile> {

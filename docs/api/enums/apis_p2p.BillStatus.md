@@ -6,57 +6,57 @@
 
 ## Table of contents
 
-### Enumeration members
+### Enumeration Members
 
 - [EXPIRED](apis_p2p.BillStatus.md#expired)
 - [PAID](apis_p2p.BillStatus.md#paid)
 - [REJECTED](apis_p2p.BillStatus.md#rejected)
 - [WAITING](apis_p2p.BillStatus.md#waiting)
 
-## Enumeration members
+## Enumeration Members
 
 ### EXPIRED
 
-• **EXPIRED** = `"EXPIRED"`
+• **EXPIRED** = ``"EXPIRED"``
 
 Время жизни счета истекло. Счет не оплачен
 
 #### Defined in
 
-[apis/p2p/p2p.types.ts:9](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/p2p.types.ts#L9)
+[apis/p2p/p2p.types.ts:9](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/p2p.types.ts#L9)
 
 ___
 
 ### PAID
 
-• **PAID** = `"PAID"`
+• **PAID** = ``"PAID"``
 
 Счет оплачен
 
 #### Defined in
 
-[apis/p2p/p2p.types.ts:5](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/p2p.types.ts#L5)
+[apis/p2p/p2p.types.ts:5](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/p2p.types.ts#L5)
 
 ___
 
 ### REJECTED
 
-• **REJECTED** = `"REJECTED"`
+• **REJECTED** = ``"REJECTED"``
 
 Счет отклонен
 
 #### Defined in
 
-[apis/p2p/p2p.types.ts:7](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/p2p.types.ts#L7)
+[apis/p2p/p2p.types.ts:7](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/p2p.types.ts#L7)
 
 ___
 
 ### WAITING
 
-• **WAITING** = `"WAITING"`
+• **WAITING** = ``"WAITING"``
 
 Счет выставлен, ожидает оплаты
 
 #### Defined in
 
-[apis/p2p/p2p.types.ts:3](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/p2p.types.ts#L3)
+[apis/p2p/p2p.types.ts:3](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/p2p.types.ts#L3)

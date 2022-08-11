@@ -4,7 +4,7 @@
 
 [index](../modules/index.md).[<internal>](../modules/index._internal_.md).ApiClass
 
-**`export`**
+**`Export`**
 
 ## Type parameters
 
@@ -47,7 +47,9 @@
 
 Creates an instance of OptionsWrapper.
 
-**`memberof`** OptionsWrapper
+**`Memberof`**
+
+OptionsWrapper
 
 #### Type parameters
 
@@ -67,7 +69,7 @@ Creates an instance of OptionsWrapper.
 
 #### Defined in
 
-[apis/options-wrapper.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/options-wrapper.ts#L23)
+[apis/options-wrapper.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/options-wrapper.ts#L23)
 
 ## Properties
 
@@ -75,9 +77,9 @@ Creates an instance of OptionsWrapper.
 
 • `Protected` `Readonly` **\_options**: `T`
 
-**`readonly`**
+**`Memberof`**
 
-**`memberof`** OptionsWrapper
+OptionsWrapper
 
 #### Inherited from
 
@@ -85,7 +87,7 @@ Creates an instance of OptionsWrapper.
 
 #### Defined in
 
-[apis/options-wrapper.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/options-wrapper.ts#L16)
+[apis/options-wrapper.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/options-wrapper.ts#L16)
 
 ## Accessors
 
@@ -93,7 +95,9 @@ Creates an instance of OptionsWrapper.
 
 • `get` **agent**(): `any`
 
-**`memberof`** WalletCompat
+**`Memberof`**
+
+WalletCompat
 
 #### Returns
 
@@ -101,11 +105,13 @@ Creates an instance of OptionsWrapper.
 
 #### Defined in
 
-[apis/api.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/api.ts#L23)
+[apis/api.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/api.ts#L23)
 
 • `set` **agent**(`agent`): `void`
 
-**`memberof`** WalletCompat
+**`Memberof`**
+
+WalletCompat
 
 #### Parameters
 
@@ -119,7 +125,7 @@ Creates an instance of OptionsWrapper.
 
 #### Defined in
 
-[apis/api.ts:32](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/api.ts#L32)
+[apis/api.ts:32](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/api.ts#L32)
 
 ___
 
@@ -127,9 +133,9 @@ ___
 
 • `get` **options**(): `T`
 
-**`readonly`**
+**`Memberof`**
 
-**`memberof`** OptionsWrapperWithGetter
+OptionsWrapperWithGetter
 
 #### Returns
 
@@ -141,4 +147,4 @@ OptionsWrapperWithGetter.options
 
 #### Defined in
 
-[apis/options-wrapper.ts:44](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/options-wrapper.ts#L44)
+[apis/options-wrapper.ts:44](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/options-wrapper.ts#L44)

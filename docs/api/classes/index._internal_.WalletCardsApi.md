@@ -7,7 +7,7 @@
 # API QIWI Мастер
 [Документация QIWI](https://developer.qiwi.com/ru/qiwi-wallet-personal/#default_balance)
 
-**`export`**
+**`Export`**
 
 ## Hierarchy
 
@@ -46,7 +46,9 @@
 
 Creates an instance of OptionsWrapper.
 
-**`memberof`** OptionsWrapper
+**`Memberof`**
+
+OptionsWrapper
 
 #### Parameters
 
@@ -60,7 +62,7 @@ Creates an instance of OptionsWrapper.
 
 #### Defined in
 
-[apis/options-wrapper.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/options-wrapper.ts#L23)
+[apis/options-wrapper.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/options-wrapper.ts#L23)
 
 ## Properties
 
@@ -68,9 +70,9 @@ Creates an instance of OptionsWrapper.
 
 • `Protected` `Readonly` **\_options**: [`WalletApiOptions`](../interfaces/index.QIWI.WalletApiOptions.md)
 
-**`readonly`**
+**`Memberof`**
 
-**`memberof`** OptionsWrapper
+OptionsWrapper
 
 #### Inherited from
 
@@ -78,7 +80,7 @@ Creates an instance of OptionsWrapper.
 
 #### Defined in
 
-[apis/options-wrapper.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/options-wrapper.ts#L16)
+[apis/options-wrapper.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/options-wrapper.ts#L16)
 
 ## Accessors
 
@@ -86,9 +88,9 @@ Creates an instance of OptionsWrapper.
 
 • `Protected` `get` **http**(): [`SimpleJsonHttp`](index.QIWI.SimpleJsonHttp.md)
 
-**`readonly`**
+**`Memberof`**
 
-**`memberof`** ApiSubclass
+ApiSubclass
 
 #### Returns
 
@@ -100,7 +102,7 @@ WalletApi.http
 
 #### Defined in
 
-[apis/api.ts:55](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/api.ts#L55)
+[apis/api.ts:55](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/api.ts#L55)
 
 ___
 
@@ -108,9 +110,9 @@ ___
 
 • `Protected` `get` **walletId**(): `string`
 
-**`readonly`**
+**`Memberof`**
 
-**`memberof`** WalletApi
+WalletApi
 
 #### Returns
 
@@ -122,7 +124,7 @@ WalletApi.walletId
 
 #### Defined in
 
-[apis/wallet/api.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/api.ts#L17)
+[apis/wallet/api.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/api.ts#L17)
 
 ## Methods
 
@@ -134,7 +136,9 @@ WalletApi.walletId
 
 **Этот метод требует наличия валидного `walletId` (номера телефона привязанного к кошельку) в конфигурации API.**
 
-**`memberof`** WalletCardsApi
+**`Memberof`**
+
+WalletCardsApi
 
 #### Parameters
 
@@ -146,41 +150,43 @@ WalletApi.walletId
 
 `Promise`<`void`\>
 
-{Promise<void>}
+Promise<void>
 
 #### Defined in
 
-[apis/wallet/cards.api.ts:48](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/cards.api.ts#L48)
+[apis/wallet/cards.api.ts:48](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/cards.api.ts#L48)
 
 ___
 
 ### get
 
-▸ **get**(`[options={}]?`): `Promise`<[`CardResponse`](../modules/index.QIWI.md#cardresponse)[]\>
+▸ **get**(`options?`): `Promise`<[`CardResponse`](../modules/index.QIWI.md#cardresponse)[]\>
 
 ## Список карт
 
 Успешный ответ содержит JSON-массив с информацией о
 выпущенных картах
 
-**`memberof`** WalletCardsApi
+**`Memberof`**
+
+WalletCardsApi
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `[options={}]` | `Object` |
-| `[options={}].onlyQiwiMaster` | `undefined` \| `boolean` |
+| `options?` | `Object` |
+| `options.onlyQiwiMaster` | `undefined` \| `boolean` |
 
 #### Returns
 
 `Promise`<[`CardResponse`](../modules/index.QIWI.md#cardresponse)[]\>
 
-{Promise<CardResponse[]>}
+Promise<CardResponse[]>
 
 #### Defined in
 
-[apis/wallet/cards.api.ts:31](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/cards.api.ts#L31)
+[apis/wallet/cards.api.ts:31](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/cards.api.ts#L31)
 
 ___
 
@@ -194,7 +200,9 @@ ___
 
 **Этот метод требует наличия валидного `walletId` (номера телефона привязанного к кошельку) в конфигурации API.**
 
-**`memberof`** WalletCardsApi
+**`Memberof`**
+
+WalletCardsApi
 
 #### Parameters
 
@@ -206,11 +214,11 @@ ___
 
 `Promise`<[`CardRequisitesResponse`](../modules/index.QIWI.md#cardrequisitesresponse)\>
 
-{Promise<CardRequisitesResponse>}
+Promise<CardRequisitesResponse>
 
 #### Defined in
 
-[apis/wallet/cards.api.ts:82](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/cards.api.ts#L82)
+[apis/wallet/cards.api.ts:82](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/cards.api.ts#L82)
 
 ___
 
@@ -224,7 +232,9 @@ ___
 
 **Этот метод требует наличия валидного `walletId` (номера телефона привязанного к кошельку) в конфигурации API.**
 
-**`memberof`** WalletCardsApi
+**`Memberof`**
+
+WalletCardsApi
 
 #### Parameters
 
@@ -237,11 +247,11 @@ ___
 
 `Promise`<[`CardRenameResponse`](../modules/index.QIWI.md#cardrenameresponse)\>
 
-{Promise<CardRenameResponse>}
+Promise<CardRenameResponse>
 
 #### Defined in
 
-[apis/wallet/cards.api.ts:100](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/cards.api.ts#L100)
+[apis/wallet/cards.api.ts:100](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/cards.api.ts#L100)
 
 ___
 
@@ -255,7 +265,9 @@ ___
 
 **Этот метод требует наличия валидного `walletId` (номера телефона привязанного к кошельку) в конфигурации API.**
 
-**`memberof`** WalletCardsApi
+**`Memberof`**
+
+WalletCardsApi
 
 #### Parameters
 
@@ -267,8 +279,8 @@ ___
 
 `Promise`<[`CardUnblockResponse`](../modules/index.QIWI.md#cardunblockresponse)\>
 
-{Promise<CardUnblockResponse>}
+Promise<CardUnblockResponse>
 
 #### Defined in
 
-[apis/wallet/cards.api.ts:65](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/wallet/cards.api.ts#L65)
+[apis/wallet/cards.api.ts:65](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/cards.api.ts#L65)

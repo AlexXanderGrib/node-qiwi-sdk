@@ -18,7 +18,7 @@ export class WalletProvidersApi extends WalletApi {
    * пользовательских данных и настроек вашего QIWI кошелька.
    *
    * @param {number} providerId
-   * @return {Promise<ProviderInfo>} {Promise<ProviderInfo>}
+   * @return {Promise<ProviderInfo>} Promise<ProviderInfo>
    * @memberof WalletProvidersApi
    */
   async getInfo(providerId: number): Promise<ProviderInfo> {

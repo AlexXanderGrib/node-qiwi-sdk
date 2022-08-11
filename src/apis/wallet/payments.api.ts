@@ -67,8 +67,8 @@ export class WalletPaymentsApi extends WalletApi {
    *
    * @static
    * @param {(number | Recipients)} provider Идентификатор провайдера
-   * @param {FormUrlOptions} [options={}] Параметры формы
-   * @return {string} {string} Ссылка
+   * @param {FormUrlOptions} [options] Параметры формы
+   * @return {string} string Ссылка
    * @memberof WalletPaymentsApi
    */
   static createFormUrl(
@@ -98,8 +98,8 @@ export class WalletPaymentsApi extends WalletApi {
    * Данный метод создаёт ссылку на предзаполненную форму оплаты
    *
    * @param {(number | Recipients)} provider Идентификатор провайдера
-   * @param {FormUrlOptions} [options={}] Параметры формы
-   * @return {string} {string} Ссылка
+   * @param {FormUrlOptions} [options] Параметры формы
+   * @return {string} string Ссылка
    * @memberof WalletPaymentsApi
    */
   createFormUrl(
@@ -121,7 +121,7 @@ export class WalletPaymentsApi extends WalletApi {
    * [Документация QIWI по методу оплаты](https://developer.qiwi.com/ru/qiwi-wallet-personal/#payments)
    *
    * @param {PayParameters} params Параметры платежа
-   * @return {Promise<PaymentResponse>} {Promise<PaymentResponse>}
+   * @return {Promise<PaymentResponse>} Promise<PaymentResponse>
    * @memberof WalletPaymentsApi
    */
   async pay({
@@ -159,7 +159,7 @@ export class WalletPaymentsApi extends WalletApi {
    *
    * @param {QuickPayParameters} parameters
    * @throws {DetectorError} Под капотом создаётся и вызывается `Detector`. Он может выкинуть эту ошибку
-   * @return {Promise<PaymentResponse>}  {Promise<PaymentResponse>}
+   * @return {Promise<PaymentResponse>} Promise<PaymentResponse>
    * @memberof WalletPaymentsApi
    */
   async quickPay({
@@ -200,7 +200,7 @@ export class WalletPaymentsApi extends WalletApi {
    * @protected
    * @param {string|number} provider
    * @param {string} account
-   * @return {Promise<number>} {Promise<number>}
+   * @return {Promise<number>} Promise<number>
    * @throws {DetectorError}
    * @memberof WalletPaymentsApi
    */
@@ -240,7 +240,7 @@ export class WalletPaymentsApi extends WalletApi {
   /**
    * Получение курсов валют
    *
-   * @return {Promise<Rate[]>}  {Promise<Rate[]>}
+   * @return {Promise<Rate[]>} Promise<Rate[]>
    * @memberof WalletPaymentsApi
    */
   async getRates(): Promise<Rate[]> {

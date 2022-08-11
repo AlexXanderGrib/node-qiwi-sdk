@@ -6,27 +6,27 @@
 
 ## Table of contents
 
-### Enumeration members
+### Enumeration Members
 
 - [FULL](index.BillRefundStatus.md#full)
 - [PARTIAL](index.BillRefundStatus.md#partial)
 
-## Enumeration members
+## Enumeration Members
 
 ### FULL
 
-• **FULL** = `"FULL"`
+• **FULL** = ``"FULL"``
 
 #### Defined in
 
-[apis/p2p/p2p.types.ts:267](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/p2p.types.ts#L267)
+[apis/p2p/p2p.types.ts:267](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/p2p.types.ts#L267)
 
 ___
 
 ### PARTIAL
 
-• **PARTIAL** = `"PARTIAL"`
+• **PARTIAL** = ``"PARTIAL"``
 
 #### Defined in
 
-[apis/p2p/p2p.types.ts:268](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/05e2fb8/src/apis/p2p/p2p.types.ts#L268)
+[apis/p2p/p2p.types.ts:268](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/p2p/p2p.types.ts#L268)
