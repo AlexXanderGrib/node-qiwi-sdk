@@ -30,7 +30,7 @@ jobs:
           QIWI_PUBLIC_KEY: ${{ secrets.QIWI_PUBK }}
 
       - name: Upload coverage to Codecov
-        run: yarn codecov
+        run: npx codecov
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
