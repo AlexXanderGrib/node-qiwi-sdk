@@ -22,7 +22,7 @@ jobs:
         run: touch .env
 
       - name: Run jest
-        run: yarn test -- --coverage
+        run: yarn test --coverage
         env:
           QIWI_TOKEN: ${{ secrets.QIWI_TOKEN }}
           QIWI_WALLET: ${{ secrets.QIWI_WALLET }}
@@ -30,7 +30,7 @@ jobs:
           QIWI_PUBLIC_KEY: ${{ secrets.QIWI_PUBK }}
 
       - name: Upload coverage to Codecov
-        run: yarn dlx codecov
+        run: yarn codecov
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
