@@ -59,7 +59,7 @@ OptionsWrapper
 
 #### Defined in
 
-[apis/options-wrapper.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/options-wrapper.ts#L23)
+[apis/options-wrapper.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/options-wrapper.ts#L23)
 
 ## Properties
 
@@ -77,7 +77,7 @@ OptionsWrapper
 
 #### Defined in
 
-[apis/options-wrapper.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/options-wrapper.ts#L16)
+[apis/options-wrapper.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/options-wrapper.ts#L16)
 
 ## Accessors
 
@@ -99,7 +99,7 @@ WalletApi.http
 
 #### Defined in
 
-[apis/api.ts:55](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/api.ts#L55)
+[apis/api.ts:55](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/api.ts#L55)
 
 ___
 
@@ -121,7 +121,7 @@ WalletApi.walletId
 
 #### Defined in
 
-[apis/wallet/api.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/api.ts#L17)
+[apis/wallet/api.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/api.ts#L17)
 
 ## Methods
 
@@ -148,7 +148,7 @@ Promise<IdentificationResponse>
 
 #### Defined in
 
-[apis/wallet/identification.api.ts:47](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/identification.api.ts#L47)
+[apis/wallet/identification.api.ts:47](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/identification.api.ts#L47)
 
 ___
 
@@ -181,4 +181,4 @@ Promise<IdentificationResponse>
 
 #### Defined in
 
-[apis/wallet/identification.api.ts:26](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/identification.api.ts#L26)
+[apis/wallet/identification.api.ts:26](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/identification.api.ts#L26)

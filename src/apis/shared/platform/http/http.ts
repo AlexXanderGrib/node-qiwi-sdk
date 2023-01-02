@@ -1,13 +1,14 @@
-import { OptionsWrapperWithSetter } from "@apis/options-wrapper";
-import { collect } from "@shared/collect";
+import type { ReadonlyRecord } from "../../types";
+import { OptionsWrapperWithSetter } from "../../../options-wrapper";
+import { collect } from "../../collect";
 import {
   HttpClient,
   HttpClientOptions,
   HttpError,
   HttpRequestOptions,
   HttpResponse
-} from "@shared/http.types";
-import { _ } from "@shared/pass";
+} from "../../http.types";
+import { _ } from "../../pass";
 import axios, { AxiosResponse, Method } from "axios";
 
 /**
@@ -122,6 +123,11 @@ export class AxiosHttpClient
       body = data;
     }
 
-    return { headers, statusCode, body, request };
+    return {
+      headers: headers as ReadonlyRecord<string, string>,
+      statusCode,
+      body,
+      request
+    };
   }
 }

@@ -1,6 +1,6 @@
 /* istanbul ignore file */
 import { ExtendedError } from "../error";
-import { HttpError } from "../shared";
+import { HttpError } from "../shared/http.types";
 
 export type WalletApiErrorResponse = {
   serviceName: string;

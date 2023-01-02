@@ -535,7 +535,7 @@ export class _WalletCompat extends Wallet {
   }
 
   /**
-   * Измененяет секретный ключ вебхука
+   * Изменяет секретный ключ вебхука
    * @param {string} hookId UUID вебхука
    * @return {Promise<string>}
    */

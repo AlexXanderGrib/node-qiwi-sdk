@@ -9,11 +9,16 @@
     "./src/apis/detector/index.ts",
     "./src/apis/shared/index.ts"
   ],
-  "exclude": ["src/__test__", "**/node_modules/**"],
-  "externalPattern": ["**/node_modules/**"],
+  "exclude": [
+    "src/__test__",
+    "**/node_modules/**"
+  ],
+  "externalPattern": [
+    "**/node_modules/**"
+  ],
   "excludePrivate": false,
   "hideGenerator": true,
   "readme": "README.md",
   "theme": "default",
-  "tsconfig": "./tsconfig.build.json"
+  "tsconfig": "./tsconfig.json"
 }

@@ -35,6 +35,7 @@
 - [ReadonlyRecord](apis_shared.md#readonlyrecord)
 - [TimeSpanKeys](apis_shared.md#timespankeys)
 - [TimeSpanMapping](apis_shared.md#timespanmapping)
+- [URLResult](apis_shared.md#urlresult)
 
 ### Variables
 
@@ -75,7 +76,7 @@ Re-exports [URLSearchParameters](index.QIWI.md#urlsearchparameters)
 
 #### Defined in
 
-[apis/shared/types.ts:4](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/shared/types.ts#L4)
+[apis/shared/types.ts:4](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/shared/types.ts#L4)
 
 ___
 
@@ -91,7 +92,7 @@ ___
 
 #### Defined in
 
-[apis/shared/types.ts:1](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/shared/types.ts#L1)
+[apis/shared/types.ts:1](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/shared/types.ts#L1)
 
 ___
 
@@ -101,7 +102,7 @@ ___
 
 #### Defined in
 
-[apis/shared/http.types.ts:4](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/shared/http.types.ts#L4)
+[apis/shared/http.types.ts:4](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/shared/http.types.ts#L4)
 
 ___
 
@@ -120,7 +121,7 @@ ___
 
 #### Defined in
 
-[apis/shared/hmac.ts:4](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/shared/hmac.ts#L4)
+[apis/shared/hmac.ts:4](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/shared/hmac.ts#L4)
 
 ___
 
@@ -130,7 +131,7 @@ ___
 
 #### Defined in
 
-[apis/shared/types.ts:2](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/shared/types.ts#L2)
+[apis/shared/types.ts:2](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/shared/types.ts#L2)
 
 ___
 
@@ -147,7 +148,7 @@ ___
 
 #### Defined in
 
-[apis/shared/types.ts:3](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/shared/types.ts#L3)
+[apis/shared/types.ts:3](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/shared/types.ts#L3)
 
 ___
 
@@ -157,7 +158,7 @@ ___
 
 #### Defined in
 
-[apis/shared/time.ts:78](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/shared/time.ts#L78)
+[apis/shared/time.ts:78](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/shared/time.ts#L78)
 
 ___
 
@@ -167,9 +168,19 @@ ___
 
 #### Defined in
 
-[apis/shared/time.ts:53](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/shared/time.ts#L53)
+[apis/shared/time.ts:53](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/shared/time.ts#L53)
 
-[apis/shared/time.ts:77](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/shared/time.ts#L77)
+[apis/shared/time.ts:77](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/shared/time.ts#L77)
+
+___
+
+### URLResult
+
+Ƭ **URLResult**: (`queryParameters?`: [`AnyRecord`](index.QIWI.md#anyrecord)) => `string` & { `$$isURL`: ``true``  }
+
+#### Defined in
+
+[apis/shared/url.ts:4](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/shared/url.ts#L4)
 
 ## Variables
 
@@ -179,9 +190,9 @@ ___
 
 #### Defined in
 
-[apis/shared/time.ts:53](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/shared/time.ts#L53)
+[apis/shared/time.ts:53](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/shared/time.ts#L53)
 
-[apis/shared/time.ts:77](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/shared/time.ts#L77)
+[apis/shared/time.ts:77](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/shared/time.ts#L77)
 
 ___
 
@@ -191,7 +202,7 @@ ___
 
 #### Defined in
 
-[apis/shared/identity.ts:1](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/shared/identity.ts#L1)
+[apis/shared/identity.ts:1](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/shared/identity.ts#L1)
 
 ___
 
@@ -201,7 +212,7 @@ ___
 
 #### Defined in
 
-[apis/shared/environment.ts:32](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/shared/environment.ts#L32)
+[apis/shared/environment.ts:32](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/shared/environment.ts#L32)
 
 ## Functions
 
@@ -229,7 +240,7 @@ ___
 
 #### Defined in
 
-[apis/shared/collect.ts:11](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/shared/collect.ts#L11)
+[apis/shared/collect.ts:11](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/shared/collect.ts#L11)
 
 ___
 
@@ -251,7 +262,7 @@ ___
 
 #### Defined in
 
-[apis/shared/hmac.ts:18](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/shared/hmac.ts#L18)
+[apis/shared/hmac.ts:18](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/shared/hmac.ts#L18)
 
 ___
 
@@ -277,7 +288,7 @@ boolean
 
 #### Defined in
 
-[apis/shared/hmac.ts:43](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/shared/hmac.ts#L43)
+[apis/shared/hmac.ts:43](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/shared/hmac.ts#L43)
 
 ___
 
@@ -307,7 +318,7 @@ string
 
 #### Defined in
 
-[apis/shared/time.ts:31](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/shared/time.ts#L31)
+[apis/shared/time.ts:31](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/shared/time.ts#L31)
 
 ___
 
@@ -331,7 +342,7 @@ ___
 
 #### Defined in
 
-[apis/shared/time.ts:13](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/shared/time.ts#L13)
+[apis/shared/time.ts:13](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/shared/time.ts#L13)
 
 ___
 
@@ -357,7 +368,7 @@ string
 
 #### Defined in
 
-[apis/shared/time.ts:133](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/shared/time.ts#L133)
+[apis/shared/time.ts:133](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/shared/time.ts#L133)
 
 ___
 
@@ -389,7 +400,7 @@ string
 
 #### Defined in
 
-[apis/shared/time.ts:116](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/shared/time.ts#L116)
+[apis/shared/time.ts:116](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/shared/time.ts#L116)
 
 ___
 
@@ -411,7 +422,7 @@ ___
 
 #### Defined in
 
-[apis/shared/querystring.ts:27](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/shared/querystring.ts#L27)
+[apis/shared/querystring.ts:27](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/shared/querystring.ts#L27)
 
 ___
 
@@ -429,13 +440,13 @@ ___
 
 #### Defined in
 
-[apis/shared/uuid.ts:9](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/shared/uuid.ts#L9)
+[apis/shared/uuid.ts:9](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/shared/uuid.ts#L9)
 
 ___
 
 ### url
 
-▸ **url**(`parts`, ...`insertions`): [`URLResult`](index._internal_.md#urlresult)
+▸ **url**(`parts`, `...insertions`): [`URLResult`](index.QIWI.md#urlresult)
 
 **`Export`**
 
@@ -448,8 +459,8 @@ ___
 
 #### Returns
 
-[`URLResult`](index._internal_.md#urlresult)
+[`URLResult`](index.QIWI.md#urlresult)
 
 #### Defined in
 
-[apis/shared/url.ts:14](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/shared/url.ts#L14)
+[apis/shared/url.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/shared/url.ts#L16)

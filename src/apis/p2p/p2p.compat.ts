@@ -1,5 +1,5 @@
 /* istanbul ignore file */
-import { formatOffsetDate } from "../shared";
+import { formatOffsetDate } from "../shared/time";
 import { P2p } from "./p2p";
 import type {
   BillCreationRequest,

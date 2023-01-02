@@ -1,4 +1,4 @@
-import { randomBytes } from "@platform/crypto";
+import { randomBytes } from "./platform/crypto";
 
 /**
  * Генерирует UUID

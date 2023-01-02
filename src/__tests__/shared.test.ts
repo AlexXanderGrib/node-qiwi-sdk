@@ -1,6 +1,6 @@
-import { base64ToUint8Array } from "@platform/decode";
+import { base64ToUint8Array } from "../apis/shared/platform/decode";
 import { createHmac, randomBytes } from "crypto";
-import { compareHmac, formatOffsetAltLifetimeDate } from "../apis";
+import { compareHmac, formatOffsetAltLifetimeDate } from "../apis/shared";
 import { promise, resolveHeaderValue } from "../apis/p2p/p2p.middleware";
 import { getByIndex, getOwnProperty, getOwnPropertyDeep } from "../apis/shared/get";
 

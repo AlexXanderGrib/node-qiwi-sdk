@@ -1,7 +1,9 @@
 import { formatQuerystring } from "./querystring";
 import type { AnyRecord } from "./types";
 
-type URLResult = (queryParameters?: AnyRecord) => string;
+export type URLResult = ((queryParameters?: AnyRecord) => string) & {
+  $$isURL: true;
+};
 
 /**
  *
@@ -28,11 +30,21 @@ export function url(
     if (typeof insertion === "string") url += insertion;
   }
 
-  return function createUrl(queryParameters: AnyRecord = {}): string {
+  /**
+   *
+   *
+   * @param {AnyRecord} [queryParameters={}]
+   * @return {string}  {string}
+   */
+  function createUrl(queryParameters: AnyRecord = {}): string {
     const querystring = formatQuerystring(queryParameters);
 
     if (querystring.length > 0) url += `?${querystring}`;
 
     return url;
-  };
+  }
+
+  createUrl.toString = () => createUrl();
+
+  return createUrl as URLResult;
 }

@@ -1,4 +1,4 @@
-import { Recipients, DetectorCompat, DetectorError, Detector } from "../apis";
+import { Recipients, DetectorCompat, DetectorError, Detector } from "../apis/index";
 import { SAMPLE_CARD, SAMPLE_PHONE } from "./constants";
 
 describe("Detector", () => {
@@ -25,6 +25,7 @@ describe("Detector", () => {
   test("Invalid", async () => {
     try {
       await detect.getPhoneProvider("34985");
+      fail("getPhoneProvider() have not thrown an error");
     } catch (error) {
       expect(error).toBeInstanceOf(DetectorError);
     }

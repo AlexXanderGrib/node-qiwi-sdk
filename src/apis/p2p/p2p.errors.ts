@@ -1,6 +1,6 @@
 /* istanbul ignore file */
 import { ExtendedError } from "../error";
-import { HttpError } from "../shared";
+import { HttpError } from "../shared/http.types";
 import type { BillStatusNotificationBody } from "./p2p.types";
 
 export type P2pApiErrorResponse = {

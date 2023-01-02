@@ -27,7 +27,10 @@ import {
 import { mapHttpErrors } from "./wallet.errors";
 import { ApiClass } from "../api";
 import { WalletProvidersApi } from "./providers.api";
-import { environment, SimpleJsonHttp, url, USER_AGENT } from "../shared";
+import { environment } from "../shared/environment";
+import { SimpleJsonHttp } from "../shared/http";
+import { url } from "../shared/url";
+import { USER_AGENT } from "../shared/identity";
 import { WalletNicknameApi } from "./nickname.api";
 import { WalletOauthApi } from "./oauth.api";
 

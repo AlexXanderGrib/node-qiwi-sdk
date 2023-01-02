@@ -1,11 +1,8 @@
-import {
-  compareQiwiHmac,
-  formatOffsetAltLifetimeDate,
-  formatOffsetDate,
-  generateUUID,
-  URL,
-  url
-} from "../shared";
+import { URL } from "../shared/url-globals";
+import { generateUUID } from "../shared/uuid";
+import { url } from "../shared/url";
+import { formatOffsetAltLifetimeDate, formatOffsetDate } from "../shared/time";
+import { compareQiwiHmac } from "../shared/hmac";
 import { P2pApi } from "./api";
 import type {
   BillCreateParameters,
@@ -127,10 +124,7 @@ export class P2pBillsApi extends P2pApi {
       }
     };
 
-    const result = await this.http.put<BillStatusData>(
-      url`${billId}`(),
-      patchedBill
-    );
+    const result = await this.http.put<BillStatusData>(url`${billId}`, patchedBill);
 
     result.payUrl = P2pBillsApi.patchPayUrl(result.payUrl, {
       paySource,
@@ -150,7 +144,7 @@ export class P2pBillsApi extends P2pApi {
    * @return {Promise<BillStatusData>} Объект счёта
    */
   async getStatus(billId: string): Promise<BillStatusData> {
-    return await this.http.get(url`${billId}`());
+    return await this.http.get(url`${billId}`);
   }
 
   /**
@@ -162,7 +156,7 @@ export class P2pBillsApi extends P2pApi {
    * @return {Promise<BillStatusData>} Объект счёта
    */
   async reject(billId: string): Promise<BillStatusData> {
-    return await this.http.post(url`${billId}/reject`());
+    return await this.http.post(url`${billId}/reject`);
   }
 
   /**
@@ -244,7 +238,7 @@ export class P2pBillsApi extends P2pApi {
     amount.value = this._normalizeAmount(amount.value);
 
     /* istanbul ignore next */
-    return await this.http.put(url`${billId}/refunds/${refundId}`());
+    return await this.http.put(url`${billId}/refunds/${refundId}`);
   }
 
   /**
@@ -260,6 +254,6 @@ export class P2pBillsApi extends P2pApi {
     refundId: string
   ): Promise<BillRefundStatusData> {
     /* istanbul ignore next */
-    return await this.http.get(url`${billId}/refunds/${refundId}`());
+    return await this.http.get(url`${billId}/refunds/${refundId}`);
   }
 }

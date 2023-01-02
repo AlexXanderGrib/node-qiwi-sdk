@@ -59,7 +59,7 @@ WalletApiShortError
 
 #### Defined in
 
-[apis/wallet/wallet.errors.ts:57](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.errors.ts#L57)
+[apis/wallet/wallet.errors.ts:57](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.errors.ts#L57)
 
 ## Properties
 
@@ -73,7 +73,7 @@ WalletApiShortError
 
 #### Defined in
 
-[apis/error.ts:14](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/error.ts#L14)
+[apis/error.ts:14](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/error.ts#L14)
 
 ___
 
@@ -83,7 +83,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.errors.ts:49](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.errors.ts#L49)
+[apis/wallet/wallet.errors.ts:49](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.errors.ts#L49)
 
 ___
 
@@ -97,7 +97,7 @@ ___
 
 #### Defined in
 
-[apis/error.ts:14](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/error.ts#L14)
+[apis/error.ts:14](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/error.ts#L14)
 
 ___
 
@@ -111,7 +111,7 @@ ___
 
 #### Defined in
 
-[apis/error.ts:29](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/error.ts#L29)
+[apis/error.ts:29](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/error.ts#L29)
 
 ___
 
@@ -121,7 +121,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.errors.ts:58](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.errors.ts#L58)
+[apis/wallet/wallet.errors.ts:58](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.errors.ts#L58)
 
 ## Accessors
 
@@ -139,11 +139,11 @@ ExtendedError
 
 #### Inherited from
 
-ExtendedError.\_\_@toStringTag@478
+ExtendedError.\_\_@toStringTag@18
 
 #### Defined in
 
-[apis/error.ts:52](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/error.ts#L52)
+[apis/error.ts:52](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/error.ts#L52)
 
 ## Methods
 
@@ -167,4 +167,4 @@ Error
 
 #### Defined in
 
-[apis/error.ts:37](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/error.ts#L37)
+[apis/error.ts:37](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/error.ts#L37)

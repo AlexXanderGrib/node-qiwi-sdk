@@ -61,7 +61,7 @@ OptionsWrapper
 
 #### Defined in
 
-[apis/options-wrapper.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/options-wrapper.ts#L23)
+[apis/options-wrapper.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/options-wrapper.ts#L23)
 
 ## Properties
 
@@ -79,7 +79,7 @@ OptionsWrapper
 
 #### Defined in
 
-[apis/options-wrapper.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/options-wrapper.ts#L16)
+[apis/options-wrapper.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/options-wrapper.ts#L16)
 
 ## Accessors
 
@@ -101,7 +101,7 @@ WalletApi.http
 
 #### Defined in
 
-[apis/api.ts:55](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/api.ts#L55)
+[apis/api.ts:55](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/api.ts#L55)
 
 ___
 
@@ -123,7 +123,7 @@ WalletApi.walletId
 
 #### Defined in
 
-[apis/wallet/api.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/api.ts#L17)
+[apis/wallet/api.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/api.ts#L17)
 
 ## Methods
 
@@ -156,7 +156,7 @@ Promise<void>
 
 #### Defined in
 
-[apis/wallet/funding-sources.api.ts:44](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/funding-sources.api.ts#L44)
+[apis/wallet/funding-sources.api.ts:44](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/funding-sources.api.ts#L44)
 
 ___
 
@@ -183,7 +183,7 @@ Promise<GetAccountOffersResponse>
 
 #### Defined in
 
-[apis/wallet/funding-sources.api.ts:64](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/funding-sources.api.ts#L64)
+[apis/wallet/funding-sources.api.ts:63](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/funding-sources.api.ts#L63)
 
 ___
 
@@ -209,7 +209,7 @@ Promise<GetAccountsResponse["accounts"]>
 
 #### Defined in
 
-[apis/wallet/funding-sources.api.ts:24](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/funding-sources.api.ts#L24)
+[apis/wallet/funding-sources.api.ts:24](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/funding-sources.api.ts#L24)
 
 ___
 
@@ -243,4 +243,4 @@ Promise<void>
 
 #### Defined in
 
-[apis/wallet/funding-sources.api.ts:83](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/funding-sources.api.ts#L83)
+[apis/wallet/funding-sources.api.ts:82](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/funding-sources.api.ts#L82)

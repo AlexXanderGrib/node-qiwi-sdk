@@ -30,20 +30,23 @@ export function formatQuerystring(object: AnyRecord): string {
   for (const [key, value] of Object.entries(object)) {
     if (isPrimitive(value)) {
       parameters.set(key, String(value));
+      continue;
     }
 
-    if (typeof value === "object" && value) {
-      for (const [subKey, subValue] of Object.entries(value)) {
-        let string: string;
+    if (!(typeof value === "object" && value)) {
+      continue;
+    }
 
-        if (isPrimitive(subValue)) {
-          string = String(subValue);
-        } else {
-          continue;
-        }
+    for (const [subKey, subValue] of Object.entries(value)) {
+      let string: string;
 
-        parameters.set(`${key}[${subKey}]`, string);
+      if (isPrimitive(subValue)) {
+        string = String(subValue);
+      } else {
+        continue;
       }
+
+      parameters.set(`${key}[${subKey}]`, string);
     }
   }
 

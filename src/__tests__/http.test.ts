@@ -1,5 +1,5 @@
 /* eslint-disable security/detect-object-injection */
-import { uint8ArrayToUtf8 } from "@platform/decode";
+import { uint8ArrayToUtf8 } from "../apis/shared/platform/decode";
 import { randomBytes } from "crypto";
 import express, { Application } from "express";
 import { HttpError, SimpleJsonHttp } from "../apis";
@@ -100,6 +100,7 @@ describe("Http", () => {
 
     try {
       await http.get("/empty");
+      fail("http.get() should have thrown an error");
     } catch (error: any) {
       expect(error).toBeInstanceOf(HttpError);
       expect(error.response.body).toEqual(new Uint8Array());

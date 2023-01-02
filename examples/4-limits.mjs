@@ -1,10 +1,10 @@
 // import { Wallet, LimitType } from "qiwi-sdk";
 import { Wallet, LimitType } from "..";
 
-const wallet = new Wallet({
-  token: process.env.QIWI_TOKEN,
-  walletId: process.env.QIWI_WALLET
-});
+// Подхватывает токен из переменной окружения QIWI_TOKEN
+// и номер телефона из переменной QIWI_WALLET и использует
+// их для создания экземпляра
+const wallet = Wallet.env();
 
 async function main() {
   // 2.0

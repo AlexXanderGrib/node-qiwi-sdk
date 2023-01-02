@@ -8,21 +8,9 @@
       "DOM.Iterable"
     ],
     "declaration": true,
-    "declarationDir": "./dist/dts",
+    "declarationDir": "./dist/cjs",
     "outDir": "./dist",
     "rootDir": "./src",
-    "baseUrl": "./src",
-    "paths": {
-      "@apis/*": [
-        "apis/*"
-      ],
-      "@shared/*": [
-        "apis/shared/*"
-      ],
-      "@platform/*": [
-        "apis/shared/platform/node/*"
-      ]
-    },
     "removeComments": false,
     "noEmit": false,
     "strict": true,

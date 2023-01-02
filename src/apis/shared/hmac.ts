@@ -1,5 +1,5 @@
-import { hmac, timingSafeEqual, BinaryAlike } from "@platform/crypto";
-import { hexToUint8Array, utf8ToUint8Array } from "@platform/decode";
+import { hmac, timingSafeEqual, BinaryAlike } from "./platform/crypto";
+import { hexToUint8Array, utf8ToUint8Array } from "./platform/decode";
 
 export type HmacOptions = {
   algorithm?: string;

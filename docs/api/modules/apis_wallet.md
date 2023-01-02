@@ -208,7 +208,7 @@ Re-exports [_WalletCompatNodeQiwi](../classes/index.QIWI._WalletCompatNodeQiwi.m
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:725](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L725)
+[apis/wallet/wallet.types.ts:725](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.types.ts#L725)
 
 ___
 
@@ -225,7 +225,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:766](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L766)
+[apis/wallet/wallet.types.ts:766](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.types.ts#L766)
 
 ___
 
@@ -243,7 +243,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:1469](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L1469)
+[apis/wallet/wallet.types.ts:1469](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.types.ts#L1469)
 
 ___
 
@@ -264,7 +264,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:1429](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L1429)
+[apis/wallet/wallet.types.ts:1429](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.types.ts#L1429)
 
 ___
 
@@ -274,7 +274,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:1071](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L1071)
+[apis/wallet/wallet.types.ts:1071](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.types.ts#L1071)
 
 ___
 
@@ -284,7 +284,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:1070](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L1070)
+[apis/wallet/wallet.types.ts:1070](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.types.ts#L1070)
 
 ___
 
@@ -302,7 +302,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:1095](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L1095)
+[apis/wallet/wallet.types.ts:1095](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.types.ts#L1095)
 
 ___
 
@@ -325,7 +325,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:1080](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L1080)
+[apis/wallet/wallet.types.ts:1080](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.types.ts#L1080)
 
 ___
 
@@ -372,7 +372,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:955](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L955)
+[apis/wallet/wallet.types.ts:955](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.types.ts#L955)
 
 ___
 
@@ -382,7 +382,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:932](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L932)
+[apis/wallet/wallet.types.ts:932](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.types.ts#L932)
 
 ___
 
@@ -392,7 +392,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:931](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L931)
+[apis/wallet/wallet.types.ts:931](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.types.ts#L931)
 
 ___
 
@@ -411,7 +411,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:1073](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L1073)
+[apis/wallet/wallet.types.ts:1073](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.types.ts#L1073)
 
 ___
 
@@ -421,7 +421,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:84](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L84)
+[apis/wallet/wallet.types.ts:84](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.types.ts#L84)
 
 ___
 
@@ -431,7 +431,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:83](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L83)
+[apis/wallet/wallet.types.ts:83](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.types.ts#L83)
 
 ___
 
@@ -447,7 +447,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:886](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L886)
+[apis/wallet/wallet.types.ts:886](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.types.ts#L886)
 
 ___
 
@@ -457,7 +457,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:1245](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L1245)
+[apis/wallet/wallet.types.ts:1245](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.types.ts#L1245)
 
 ___
 
@@ -467,7 +467,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:1244](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L1244)
+[apis/wallet/wallet.types.ts:1244](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.types.ts#L1244)
 
 ___
 
@@ -477,7 +477,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:68](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L68)
+[apis/wallet/wallet.types.ts:68](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.types.ts#L68)
 
 ___
 
@@ -490,15 +490,15 @@ ___
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `account?` | `string` | Формат совпадает с форматом параметра `fields.account` при оплате соответствующих провайдеров: для провайдера `99` - номер кошелька получателя; для провайдеров сотовой связи - номер мобильного телефона для пополнения (без префикса 8); для провайдеров перевода на карту - номер банковской карты получателя (без пробелов), для других провайдеров - идентификатор пользователя. Для провайдера `99999` указывается никнейм или номер кошелька получателя (задайте соответствующее значение параметра `extra['accountType']`). |
-| `accountType?` | `string` | **Параметр используется только для ID=99999**. Значение определяет перевод на QIWI кошелек по никнейму или по номеру кошелька. Если вы не хотите, чтобы пользователь видел номер вашего кошелька на форме, используйте перевод по никнейму.  - `phone` - для перевода по номеру - `nickname` - для перевода по никнейму. |
+| `accountType?` | `string` | **Параметр используется только для ID=99999**. Значение определяет перевод на QIWI кошелек по никнейму или по номеру кошелька. Если вы не хотите, чтобы пользователь видел номер вашего кошелька на форме, используйте перевод по никнейму. - `phone` - для перевода по номеру - `nickname` - для перевода по никнейму. |
 | `amount?` | `number` | Сумма платежа в рублях |
-| `blocked?` | [`LockableField`](index.QIWI.md#lockablefield)[] | Признак неактивного поля формы. Пользователь не сможет менять значение данного поля. Каждый параметр задает соответствующее поле формы и нумеруется начиная с нуля (blocked[0], blocked[1]  и т.д.). Если не указан, пользователь сможет изменить все поля формы.  Допустимые значения: - `sum` - поле "сумма платежа", - `account` - поле "номер счета/телефона/карты", - `comment` - поле "комментарий".  Пример (неактивное поле суммы платежа): `blocked[0]=sum` |
+| `blocked?` | [`LockableField`](index.QIWI.md#lockablefield)[] | Признак неактивного поля формы. Пользователь не сможет менять значение данного поля. Каждый параметр задает соответствующее поле формы и нумеруется начиная с нуля (blocked[0], blocked[1] и т.д.). Если не указан, пользователь сможет изменить все поля формы. Допустимые значения: - `sum` - поле "сумма платежа", - `account` - поле "номер счета/телефона/карты", - `comment` - поле "комментарий". Пример (неактивное поле суммы платежа): `blocked[0]=sum` |
 | `comment?` | `string` | Комментарий. **Параметр используется только для `ID=99`** |
 | `custom?` | `Record`<`string`, `unknown`\> | - |
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:836](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L836)
+[apis/wallet/wallet.types.ts:836](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.types.ts#L836)
 
 ___
 
@@ -527,11 +527,11 @@ ___
 | `to_inn` | `string` | ИНН организации |
 | `to_kpp` | `string` | КПП организации |
 | `to_name` | `string` | Наименование организации. Например: `ООО "Технический Центр ДЕЛЬТА"` |
-| `urgent` | ``"0"`` \| ``"1"`` | Признак срочного платежа (`0` - нет, `1` - да). Срочный платеж выполняется от 10 минут. Возможен по будням с 9:00 до 20:30 по московскому времени.  **Стоимость услуги — 25 рублей.** |
+| `urgent` | ``"0"`` \| ``"1"`` | Признак срочного платежа (`0` - нет, `1` - да). Срочный платеж выполняется от 10 минут. Возможен по будням с 9:00 до 20:30 по московскому времени. **Стоимость услуги — 25 рублей.** |
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:1105](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L1105)
+[apis/wallet/wallet.types.ts:1105](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.types.ts#L1105)
 
 ___
 
@@ -541,7 +541,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:774](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L774)
+[apis/wallet/wallet.types.ts:774](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.types.ts#L774)
 
 ___
 
@@ -557,7 +557,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:761](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L761)
+[apis/wallet/wallet.types.ts:761](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.types.ts#L761)
 
 ___
 
@@ -567,7 +567,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:487](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L487)
+[apis/wallet/wallet.types.ts:487](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.types.ts#L487)
 
 ___
 
@@ -579,14 +579,14 @@ ___
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `operation?` | [`TransactionTypeAny`](index.QIWI.md#transactiontypeany) | Тип операций в отчете, для отбора. Допустимые значения: - `ALL` - все операции, - `IN` - только пополнения, - `OUT` - только платежи, - `QIWI_CARD` - только платежи по картам QIWI (QVC, QVP).  По умолчанию `ALL`  **`Default`**  "ALL" |
+| `operation?` | [`TransactionTypeAny`](index.QIWI.md#transactiontypeany) | Тип операций в отчете, для отбора. Допустимые значения: - `ALL` - все операции, - `IN` - только пополнения, - `OUT` - только платежи, - `QIWI_CARD` - только платежи по картам QIWI (QVC, QVP). По умолчанию `ALL` **`Default`** "ALL" |
 | `qvxCardId?` | [`StringOrNumber`](index.QIWI.md#stringornumber) | - |
 | `rows` | `number` | Число платежей в ответе, для разбивки отчета на страницы. Целое число от 1 до 50. Запрос возвращает указанное число платежей в обратном хронологическом порядке, начиная от текущей даты или даты в параметре `startDate` |
-| `sources?` | [`PaymentHistorySourceAny`](index.QIWI.md#paymenthistorysourceany)[] | Список источников платежа, для фильтра. Каждый источник нумеруется, начиная с нуля (`sources[0]`, `sources[1]` и т.д.).  Допустимые значения: - `QW_RUB` - рублевый счет кошелька, - `QW_USD` - счет кошелька в долларах, - `QW_EUR` - счет кошелька в евро, - `CARD` - привязанные и непривязанные к кошельку банковские карты, - `MK` - счет мобильного оператора. Если не указан, учитываются все источники |
+| `sources?` | [`PaymentHistorySourceAny`](index.QIWI.md#paymenthistorysourceany)[] | Список источников платежа, для фильтра. Каждый источник нумеруется, начиная с нуля (`sources[0]`, `sources[1]` и т.д.). Допустимые значения: - `QW_RUB` - рублевый счет кошелька, - `QW_USD` - счет кошелька в долларах, - `QW_EUR` - счет кошелька в евро, - `CARD` - привязанные и непривязанные к кошельку банковские карты, - `MK` - счет мобильного оператора. Если не указан, учитываются все источники |
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:417](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L417)
+[apis/wallet/wallet.types.ts:417](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.types.ts#L417)
 
 ___
 
@@ -598,12 +598,12 @@ ___
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `endDate` | `string` | Начальная дата поиска платежей. **Используется только вместе с `startDate`. Максимальный допустимый интервал между `startDate` и `endDate` - 90 календарных дней.** По умолчанию, равна суточному сдвигу от текущей даты по московскому времени.  Дату можно указать в любой временной зоне `TZD` (формат `ГГГГ-ММ-ДД'T'чч:мм:ссTZD`), однако она должна совпадать с временной зоной в параметре `startDate`. Обозначение временной зоны `TZD`: +`чч:мм` или -`чч:мм` (временной сдвиг от GMT). |
-| `startDate` | `string` | Начальная дата поиска платежей. **Используется только вместе с `endDate`. Максимальный допустимый интервал между `startDate` и `endDate` - 90 календарных дней.** По умолчанию, равна суточному сдвигу от текущей даты по московскому времени.  Дату можно указать в любой временной зоне `TZD` (формат `ГГГГ-ММ-ДД'T'чч:мм:ссTZD`), однако она должна совпадать с временной зоной в параметре `endDate`. Обозначение временной зоны `TZD`: +`чч:мм` или -`чч:мм` (временной сдвиг от GMT). |
+| `endDate` | `string` | Начальная дата поиска платежей. **Используется только вместе с `startDate`. Максимальный допустимый интервал между `startDate` и `endDate` - 90 календарных дней.** По умолчанию, равна суточному сдвигу от текущей даты по московскому времени. Дату можно указать в любой временной зоне `TZD` (формат `ГГГГ-ММ-ДД'T'чч:мм:ссTZD`), однако она должна совпадать с временной зоной в параметре `startDate`. Обозначение временной зоны `TZD`: +`чч:мм` или -`чч:мм` (временной сдвиг от GMT). |
+| `startDate` | `string` | Начальная дата поиска платежей. **Используется только вместе с `endDate`. Максимальный допустимый интервал между `startDate` и `endDate` - 90 календарных дней.** По умолчанию, равна суточному сдвигу от текущей даты по московскому времени. Дату можно указать в любой временной зоне `TZD` (формат `ГГГГ-ММ-ДД'T'чч:мм:ссTZD`), однако она должна совпадать с временной зоной в параметре `endDate`. Обозначение временной зоны `TZD`: +`чч:мм` или -`чч:мм` (временной сдвиг от GMT). |
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:457](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L457)
+[apis/wallet/wallet.types.ts:457](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.types.ts#L457)
 
 ___
 
@@ -613,7 +613,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:508](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L508)
+[apis/wallet/wallet.types.ts:508](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.types.ts#L508)
 
 ___
 
@@ -630,7 +630,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:514](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L514)
+[apis/wallet/wallet.types.ts:514](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.types.ts#L514)
 
 ___
 
@@ -648,7 +648,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:643](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L643)
+[apis/wallet/wallet.types.ts:643](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.types.ts#L643)
 
 ___
 
@@ -671,7 +671,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:330](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L330)
+[apis/wallet/wallet.types.ts:330](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.types.ts#L330)
 
 ___
 
@@ -681,7 +681,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:356](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L356)
+[apis/wallet/wallet.types.ts:356](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.types.ts#L356)
 
 ___
 
@@ -698,7 +698,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:1345](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L1345)
+[apis/wallet/wallet.types.ts:1345](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.types.ts#L1345)
 
 ___
 
@@ -728,7 +728,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:684](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L684)
+[apis/wallet/wallet.types.ts:684](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.types.ts#L684)
 
 ___
 
@@ -738,7 +738,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:682](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L682)
+[apis/wallet/wallet.types.ts:682](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.types.ts#L682)
 
 ___
 
@@ -748,7 +748,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:681](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L681)
+[apis/wallet/wallet.types.ts:681](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.types.ts#L681)
 
 ___
 
@@ -772,7 +772,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:716](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L716)
+[apis/wallet/wallet.types.ts:716](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.types.ts#L716)
 
 ___
 
@@ -782,7 +782,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:834](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L834)
+[apis/wallet/wallet.types.ts:834](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.types.ts#L834)
 
 ___
 
@@ -799,7 +799,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:70](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L70)
+[apis/wallet/wallet.types.ts:70](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.types.ts#L70)
 
 ___
 
@@ -818,7 +818,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:1499](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L1499)
+[apis/wallet/wallet.types.ts:1499](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.types.ts#L1499)
 
 ___
 
@@ -834,17 +834,17 @@ ___
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `account` | `string` | Номер счёта в указанной платёжной системе (у `provider`'а) Если он не задан, то следует указывать номер телефона(киви) получателя.  Записывается в `fields.account`, можно поставить `""`, если переопределяете в `fields` |
+| `account` | `string` | Номер счёта в указанной платёжной системе (у `provider`'а) Если он не задан, то следует указывать номер телефона(киви) получателя. Записывается в `fields.account`, можно поставить `""`, если переопределяете в `fields` |
 | `accountCurrency?` | [`Currency`](../enums/index.QIWI.Currency.md) | Валюта счёта, с которого производится платёж |
 | `amount` | `number` | Сумма платежа в указанной валюте. Если валюта не указана, то в рублях. Советую округлять до 2ух знаков после , |
 | `comment?` | `string` | Комментарий к платежу |
 | `currency?` | [`Currency`](../enums/index.QIWI.Currency.md) | Валюта платежа |
 | `fields?` | `Partial`<[`FreePayFields`](index.QIWI.md#freepayfields)\> & `Record`<`string`, `string`\> | Дополнительные параметры платежа. Обычно необходимо для [платежа по свободным реквизитам](https://developer.qiwi.com/ru/qiwi-wallet-personal/#freepay) |
-| `provider?` | `number` \| [`Recipients`](../enums/index.QIWI.Recipients.md) | Ака ID в доках, номер провайдера(платёжной системы) у QIWI  **`See`**  [Recipients](../enums/apis_wallet.Recipients.md)  **`Default`**  99 |
+| `provider?` | `number` \| [`Recipients`](../enums/index.QIWI.Recipients.md) | Ака ID в доках, номер провайдера(платёжной системы) у QIWI **`See`** [Recipients](../enums/apis_wallet.Recipients.md) **`Default`** 99 |
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:1192](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L1192)
+[apis/wallet/wallet.types.ts:1192](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.types.ts#L1192)
 
 ___
 
@@ -865,7 +865,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:776](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L776)
+[apis/wallet/wallet.types.ts:776](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.types.ts#L776)
 
 ___
 
@@ -875,7 +875,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:413](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L413)
+[apis/wallet/wallet.types.ts:413](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.types.ts#L413)
 
 ___
 
@@ -885,7 +885,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:412](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L412)
+[apis/wallet/wallet.types.ts:412](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.types.ts#L412)
 
 ___
 
@@ -910,7 +910,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:800](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L800)
+[apis/wallet/wallet.types.ts:800](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.types.ts#L800)
 
 ___
 
@@ -920,7 +920,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:18](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L18)
+[apis/wallet/wallet.types.ts:18](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.types.ts#L18)
 
 ___
 
@@ -930,7 +930,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L17)
+[apis/wallet/wallet.types.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.types.ts#L17)
 
 ___
 
@@ -976,7 +976,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:183](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L183)
+[apis/wallet/wallet.types.ts:183](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.types.ts#L183)
 
 ___
 
@@ -992,7 +992,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:909](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L909)
+[apis/wallet/wallet.types.ts:909](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.types.ts#L909)
 
 ___
 
@@ -1018,7 +1018,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:1485](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L1485)
+[apis/wallet/wallet.types.ts:1485](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.types.ts#L1485)
 
 ___
 
@@ -1028,7 +1028,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:1255](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L1255)
+[apis/wallet/wallet.types.ts:1255](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.types.ts#L1255)
 
 ___
 
@@ -1038,7 +1038,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:1253](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L1253)
+[apis/wallet/wallet.types.ts:1253](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.types.ts#L1253)
 
 ___
 
@@ -1048,7 +1048,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:1252](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L1252)
+[apis/wallet/wallet.types.ts:1252](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.types.ts#L1252)
 
 ___
 
@@ -1066,7 +1066,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:1506](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L1506)
+[apis/wallet/wallet.types.ts:1506](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.types.ts#L1506)
 
 ___
 
@@ -1076,7 +1076,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:375](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L375)
+[apis/wallet/wallet.types.ts:375](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.types.ts#L375)
 
 ___
 
@@ -1093,7 +1093,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:904](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L904)
+[apis/wallet/wallet.types.ts:904](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.types.ts#L904)
 
 ___
 
@@ -1103,7 +1103,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:1343](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L1343)
+[apis/wallet/wallet.types.ts:1343](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.types.ts#L1343)
 
 ___
 
@@ -1122,7 +1122,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:890](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L890)
+[apis/wallet/wallet.types.ts:890](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.types.ts#L890)
 
 ___
 
@@ -1138,7 +1138,7 @@ ___
 | `comment` | `string` | Комментарий к платежу |
 | `commission` | [`MoneyAmount`](index.QIWI.md#moneyamount) | Данные о комиссии платежа |
 | `currencyRate` | `number` | Курс конвертации (если применяется в транзакции) |
-| `date` | `string` | Для запросов истории платежей - Дата/время платежа, во временной зоне запроса (см. параметр `startDate`). Формат даты `ГГГГ-ММ-ДД'T'чч:мм:сс+03:00`  Для запросов данных о транзакции - Дата/время платежа, время московское (в формате `ГГГГ-ММ-ДД'T'чч:мм:сс+03:00`) |
+| `date` | `string` | Для запросов истории платежей - Дата/время платежа, во временной зоне запроса (см. параметр `startDate`). Формат даты `ГГГГ-ММ-ДД'T'чч:мм:сс+03:00` Для запросов данных о транзакции - Дата/время платежа, время московское (в формате `ГГГГ-ММ-ДД'T'чч:мм:сс+03:00`) |
 | `error` | `string` \| ``null`` | Описание ошибки |
 | `errorCode` | `number` | [Код ошибки платежа](https://developer.qiwi.com/ru/qiwi-wallet-personal/#errorCode) |
 | `extras` | `object` | Служебная информация |
@@ -1168,7 +1168,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:525](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L525)
+[apis/wallet/wallet.types.ts:525](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.types.ts#L525)
 
 ___
 
@@ -1178,7 +1178,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:47](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L47)
+[apis/wallet/wallet.types.ts:47](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.types.ts#L47)
 
 ___
 
@@ -1188,7 +1188,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:46](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L46)
+[apis/wallet/wallet.types.ts:46](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.types.ts#L46)
 
 ___
 
@@ -1198,7 +1198,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:34](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L34)
+[apis/wallet/wallet.types.ts:34](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.types.ts#L34)
 
 ___
 
@@ -1208,7 +1208,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:33](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L33)
+[apis/wallet/wallet.types.ts:33](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.types.ts#L33)
 
 ___
 
@@ -1228,7 +1228,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:1260](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L1260)
+[apis/wallet/wallet.types.ts:1260](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.types.ts#L1260)
 
 ___
 
@@ -1249,11 +1249,11 @@ ___
 | `payment.account` | `string` | - |
 | `payment.comment` | `string` | - |
 | `payment.commission` | [`MoneyAmount`](index.QIWI.md#moneyamount) \| ``null`` | Данные о комиссии для платежа или пополнения |
-| `payment.date` | `string` | Для запросов истории платежей - Дата/время платежа, во временной зоне запроса (см. параметр `startDate`). Формат даты `ГГГГ-ММ-ДД'T'чч:мм:сс+03:00`  Для запросов данных о транзакции - Дата/время платежа, время московское (в формате `ГГГГ-ММ-ДД'T'чч:мм:сс+03:00`) |
+| `payment.date` | `string` | Для запросов истории платежей - Дата/время платежа, во временной зоне запроса (см. параметр `startDate`). Формат даты `ГГГГ-ММ-ДД'T'чч:мм:сс+03:00` Для запросов данных о транзакции - Дата/время платежа, время московское (в формате `ГГГГ-ММ-ДД'T'чч:мм:сс+03:00`) |
 | `payment.errorCode` | `number` | [Код ошибки платежа](https://developer.qiwi.com/ru/qiwi-wallet-personal/#errorCode) |
 | `payment.personId` | `number` | Номер кошелька |
 | `payment.provider` | `number` \| [`Recipients`](../enums/index.QIWI.Recipients.md) | ID провайдера QIWI Wallet |
-| `payment.signFields` | `string` | Список полей объекта payment (через ,), которые хешируются алгоритмом HmacSHA256 для проверки уведомления (см. параметр `hash`) |
+| `payment.signFields` | `string` | Список полей объекта payment (через ,), которые хэшируются алгоритмом HmacSHA256 для проверки уведомления (см. параметр `hash`) |
 | `payment.status` | [`TransactionStatus`](../enums/index.QIWI.TransactionStatus.md) | Статус платежа |
 | `payment.sum` | [`MoneyAmount`](index.QIWI.md#moneyamount) \| ``null`` | Данные о сумме платежа или пополнения |
 | `payment.total` | [`MoneyAmount`](index.QIWI.md#moneyamount) \| ``null`` | Данные об итоговой сумме платежа или пополнения |
@@ -1264,4 +1264,4 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:1274](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/b60f8c6/src/apis/wallet/wallet.types.ts#L1274)
+[apis/wallet/wallet.types.ts:1274](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/wallet.types.ts#L1274)

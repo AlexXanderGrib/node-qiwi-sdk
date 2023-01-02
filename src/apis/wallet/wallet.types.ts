@@ -180,6 +180,8 @@ export enum Recipients {
   Contact = 26_580
 }
 
+export const Recipient = Recipients;
+
 export type PersonProfile = {
   /**
    * Текущие настройки авторизации. Объект может отсутствовать, в
@@ -1308,7 +1310,7 @@ export type WebhookTransaction = {
     /** ID провайдера QIWI Wallet */
     provider: number | Recipients;
 
-    /** Список полей объекта payment (через ,), которые хешируются алгоритмом HmacSHA256 для проверки уведомления (см. параметр `hash`) */
+    /** Список полей объекта payment (через ,), которые хэшируются алгоритмом HmacSHA256 для проверки уведомления (см. параметр `hash`) */
     signFields: string;
 
     /** Статус платежа */

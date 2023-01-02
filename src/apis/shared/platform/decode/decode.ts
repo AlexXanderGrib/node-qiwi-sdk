@@ -28,7 +28,7 @@ export function hexToUint8Array(hex: string): Uint8Array {
  * @return {Uint8Array} Uint8Array
  */
 export function utf8ToUint8Array(text: string): Uint8Array {
-  return Buffer.from(text);
+  return new Uint8Array(Buffer.from(text));
 }
 
 /**

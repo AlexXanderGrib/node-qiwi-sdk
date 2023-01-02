@@ -1,4 +1,4 @@
-import { url } from "../shared";
+import { url } from "../shared/url";
 import { WalletApi } from "./api";
 import type { LimitsResponse, LimitTypeAny } from "./wallet.types";
 

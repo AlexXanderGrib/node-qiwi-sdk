@@ -1,6 +1,9 @@
 import type { RequestHandler } from "express";
 import { ApiClass } from "../api";
-import { environment, SimpleJsonHttp, url, USER_AGENT } from "../shared";
+import { environment } from "../shared/environment";
+import { SimpleJsonHttp } from "../shared/http";
+import { url } from "../shared/url";
+import { USER_AGENT } from "../shared/identity";
 import { P2pBillsApi } from "./bills.api";
 import { mapHttpErrors } from "./p2p.errors";
 import {

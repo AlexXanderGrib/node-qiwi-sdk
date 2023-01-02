@@ -1,5 +1,7 @@
 /* istanbul ignore file */
-import { formatOffsetDate, generateUUID, ReadonlyRecord } from "../shared";
+import { formatOffsetDate } from "../shared/time";
+import { generateUUID } from "../shared/uuid";
+import type { ReadonlyRecord } from "../shared/types";
 import { P2p } from "./p2p";
 import {
   BillCreateParameters,

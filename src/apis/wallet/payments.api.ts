@@ -1,5 +1,5 @@
 import { Detector, DetectorError } from "../detector";
-import { url } from "../shared";
+import { url } from "../shared/url";
 import { WalletApi } from "./api";
 import {
   Recipients,
@@ -43,7 +43,7 @@ export class WalletPaymentsApi extends WalletApi {
     { accountCurrency = Currency.RUB, paymentCurrency = Currency.RUB } = {}
   ): Promise<number> {
     const response: any = await this.http.post(
-      url`sinap/providers/${provider}/onlineCommission`(),
+      url`sinap/providers/${provider}/onlineCommission`,
       {
         account,
         paymentMethod: {
@@ -133,7 +133,7 @@ export class WalletPaymentsApi extends WalletApi {
     fields = {},
     accountCurrency = Currency.RUB
   }: PayParameters): Promise<PaymentResponse> {
-    return await this.http.post(url`sinap/api/v2/terms/${provider}/payments`(), {
+    return await this.http.post(url`sinap/api/v2/terms/${provider}/payments`, {
       id: (Date.now() * 1000).toString(),
       sum: {
         amount,
@@ -217,18 +217,22 @@ export class WalletPaymentsApi extends WalletApi {
 
       switch (provider) {
         case "card":
-        case QuickPayRecipients.Card:
+        case QuickPayRecipients.Card: {
           return await detector.detectProvider.byCardNumber(account);
+        }
 
         case "phone":
-        case QuickPayRecipients.Phone:
+        case QuickPayRecipients.Phone: {
           return await detector.detectProvider.byPhone(account);
+        }
 
-        case "qiwi":
+        case "qiwi": {
           return Recipients.QIWI;
+        }
 
-        case "yoomoney":
+        case "yoomoney": {
           return Recipients.YooMoney;
+        }
       }
     } finally {
       detector.agent = undefined;
@@ -244,7 +248,7 @@ export class WalletPaymentsApi extends WalletApi {
    * @memberof WalletPaymentsApi
    */
   async getRates(): Promise<Rate[]> {
-    const { result: rates } = await this.http.get<any>(url`sinap/crossRates`());
+    const { result: rates } = await this.http.get<any>(url`sinap/crossRates`);
 
     return rates.map((data: any) => ({
       from: Number.parseInt(data.from),

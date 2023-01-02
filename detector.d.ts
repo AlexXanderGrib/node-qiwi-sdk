@@ -1,1 +1,1 @@
-export * from "./dist/dts/apis/detector/index";
+export * from "./dist/cjs/apis/detector/index";

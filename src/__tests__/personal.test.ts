@@ -1,6 +1,6 @@
 /* eslint-disable unicorn/consistent-function-scoping */
 import { config } from "dotenv";
-import { Personal, WalletApiShortError } from "..";
+import { Personal, WalletApiShortError } from "../apis/wallet";
 import {
   Account,
   ChequeFormat,
@@ -22,6 +22,7 @@ config();
 async function expectToThrow(errorClass: any, executor: () => Promise<void>) {
   try {
     await executor();
+    fail(`Expected ${executor.name}() to throw an error`);
   } catch (error) {
     expect(error).toBeInstanceOf(errorClass);
   }
