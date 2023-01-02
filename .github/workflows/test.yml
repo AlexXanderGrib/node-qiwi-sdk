@@ -16,13 +16,13 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Install dependencies
-        run: npm ci
+        run: yarn
 
       - name: Create empty .env
         run: touch .env
 
       - name: Run jest
-        run: npm test -- --coverage
+        run: yarn test -- --coverage
         env:
           QIWI_TOKEN: ${{ secrets.QIWI_TOKEN }}
           QIWI_WALLET: ${{ secrets.QIWI_WALLET }}
@@ -30,7 +30,7 @@ jobs:
           QIWI_PUBLIC_KEY: ${{ secrets.QIWI_PUBK }}
 
       - name: Upload coverage to Codecov
-        run: npx codecov
+        run: yarn dlx codecov
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
