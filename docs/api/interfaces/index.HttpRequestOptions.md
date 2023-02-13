@@ -45,7 +45,7 @@ Partial.agent
 
 #### Defined in
 
-[apis/shared/http.types.ts:8](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/shared/http.types.ts#L8)
+[apis/shared/http.types.ts:8](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/shared/http.types.ts#L8)
 
 ___
 
@@ -59,7 +59,7 @@ Partial.baseURL
 
 #### Defined in
 
-[apis/shared/http.types.ts:10](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/shared/http.types.ts#L10)
+[apis/shared/http.types.ts:10](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/shared/http.types.ts#L10)
 
 ___
 
@@ -69,7 +69,7 @@ ___
 
 #### Defined in
 
-[apis/shared/http.types.ts:22](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/shared/http.types.ts#L22)
+[apis/shared/http.types.ts:22](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/shared/http.types.ts#L22)
 
 ___
 
@@ -83,7 +83,7 @@ Partial.headers
 
 #### Defined in
 
-[apis/shared/http.types.ts:7](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/shared/http.types.ts#L7)
+[apis/shared/http.types.ts:7](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/shared/http.types.ts#L7)
 
 ___
 
@@ -111,7 +111,7 @@ Partial.mapHttpErrors
 
 #### Defined in
 
-[apis/shared/http.types.ts:15](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/shared/http.types.ts#L15)
+[apis/shared/http.types.ts:15](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/shared/http.types.ts#L15)
 
 ___
 
@@ -121,7 +121,7 @@ ___
 
 #### Defined in
 
-[apis/shared/http.types.ts:21](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/shared/http.types.ts#L21)
+[apis/shared/http.types.ts:21](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/shared/http.types.ts#L21)
 
 ___
 
@@ -135,7 +135,7 @@ Partial.okStatusCodes
 
 #### Defined in
 
-[apis/shared/http.types.ts:9](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/shared/http.types.ts#L9)
+[apis/shared/http.types.ts:9](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/shared/http.types.ts#L9)
 
 ___
 
@@ -163,7 +163,7 @@ Partial.parseResponse
 
 #### Defined in
 
-[apis/shared/http.types.ts:14](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/shared/http.types.ts#L14)
+[apis/shared/http.types.ts:14](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/shared/http.types.ts#L14)
 
 ___
 
@@ -191,7 +191,7 @@ Partial.stringifyBody
 
 #### Defined in
 
-[apis/shared/http.types.ts:13](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/shared/http.types.ts#L13)
+[apis/shared/http.types.ts:13](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/shared/http.types.ts#L13)
 
 ___
 
@@ -205,7 +205,7 @@ Partial.timeout
 
 #### Defined in
 
-[apis/shared/http.types.ts:11](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/shared/http.types.ts#L11)
+[apis/shared/http.types.ts:11](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/shared/http.types.ts#L11)
 
 ___
 
@@ -215,4 +215,4 @@ ___
 
 #### Defined in
 
-[apis/shared/http.types.ts:20](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/shared/http.types.ts#L20)
+[apis/shared/http.types.ts:20](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/shared/http.types.ts#L20)

@@ -56,7 +56,7 @@ OptionsWrapper
 
 #### Defined in
 
-[apis/options-wrapper.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/options-wrapper.ts#L23)
+[apis/options-wrapper.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/options-wrapper.ts#L23)
 
 ## Properties
 
@@ -74,7 +74,7 @@ OptionsWrapper
 
 #### Defined in
 
-[apis/options-wrapper.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/options-wrapper.ts#L16)
+[apis/options-wrapper.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/options-wrapper.ts#L16)
 
 ## Accessors
 
@@ -96,7 +96,7 @@ DetectorApi.http
 
 #### Defined in
 
-[apis/api.ts:55](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/api.ts#L55)
+[apis/api.ts:55](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/api.ts#L55)
 
 ## Methods
 
@@ -120,7 +120,7 @@ ID провайдера
 
 #### Defined in
 
-[apis/detector/detect.api.ts:22](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/detector/detect.api.ts#L22)
+[apis/detector/detect.api.ts:22](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/detector/detect.api.ts#L22)
 
 ___
 
@@ -148,7 +148,7 @@ ___
 
 #### Defined in
 
-[apis/detector/detect.api.ts:53](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/detector/detect.api.ts#L53)
+[apis/detector/detect.api.ts:53](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/detector/detect.api.ts#L53)
 
 ___
 
@@ -171,4 +171,4 @@ ___
 
 #### Defined in
 
-[apis/detector/detect.api.ts:36](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/detector/detect.api.ts#L36)
+[apis/detector/detect.api.ts:36](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/detector/detect.api.ts#L36)

@@ -64,7 +64,7 @@ OptionsWrapper
 
 #### Defined in
 
-[apis/options-wrapper.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/options-wrapper.ts#L23)
+[apis/options-wrapper.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/options-wrapper.ts#L23)
 
 ## Properties
 
@@ -82,7 +82,7 @@ OptionsWrapper
 
 #### Defined in
 
-[apis/options-wrapper.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/options-wrapper.ts#L16)
+[apis/options-wrapper.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/options-wrapper.ts#L16)
 
 ## Accessors
 
@@ -104,7 +104,7 @@ WalletApi.http
 
 #### Defined in
 
-[apis/api.ts:55](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/api.ts#L55)
+[apis/api.ts:55](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/api.ts#L55)
 
 ___
 
@@ -126,7 +126,7 @@ WalletApi.walletId
 
 #### Defined in
 
-[apis/wallet/api.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/api.ts#L17)
+[apis/wallet/api.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/wallet/api.ts#L17)
 
 ## Methods
 
@@ -155,7 +155,7 @@ Promise<number>
 
 #### Defined in
 
-[apis/wallet/payments.api.ts:207](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/payments.api.ts#L207)
+[apis/wallet/payments.api.ts:209](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/wallet/payments.api.ts#L209)
 
 ___
 
@@ -184,7 +184,7 @@ string Ссылка
 
 #### Defined in
 
-[apis/wallet/payments.api.ts:105](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/payments.api.ts#L105)
+[apis/wallet/payments.api.ts:107](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/wallet/payments.api.ts#L107)
 
 ___
 
@@ -220,7 +220,7 @@ WalletPaymentsApi
 
 #### Defined in
 
-[apis/wallet/payments.api.ts:39](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/payments.api.ts#L39)
+[apis/wallet/payments.api.ts:40](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/wallet/payments.api.ts#L40)
 
 ___
 
@@ -242,7 +242,7 @@ Promise<Rate[]>
 
 #### Defined in
 
-[apis/wallet/payments.api.ts:250](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/payments.api.ts#L250)
+[apis/wallet/payments.api.ts:252](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/wallet/payments.api.ts#L252)
 
 ___
 
@@ -270,7 +270,7 @@ Promise<PaymentResponse>
 
 #### Defined in
 
-[apis/wallet/payments.api.ts:127](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/payments.api.ts#L127)
+[apis/wallet/payments.api.ts:129](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/wallet/payments.api.ts#L129)
 
 ___
 
@@ -305,7 +305,7 @@ Promise<PaymentResponse>
 
 #### Defined in
 
-[apis/wallet/payments.api.ts:165](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/payments.api.ts#L165)
+[apis/wallet/payments.api.ts:167](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/wallet/payments.api.ts#L167)
 
 ___
 
@@ -336,4 +336,4 @@ string Ссылка
 
 #### Defined in
 
-[apis/wallet/payments.api.ts:74](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/wallet/payments.api.ts#L74)
+[apis/wallet/payments.api.ts:75](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/wallet/payments.api.ts#L75)

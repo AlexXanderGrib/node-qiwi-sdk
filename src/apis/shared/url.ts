@@ -1,9 +1,7 @@
 import { formatQuerystring } from "./querystring";
 import type { AnyRecord } from "./types";
 
-export type URLResult = ((queryParameters?: AnyRecord) => string) & {
-  $$isURL: true;
-};
+export type URLResult = (queryParameters?: AnyRecord) => string;
 
 /**
  *

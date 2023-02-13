@@ -12,7 +12,7 @@ import type {
 
 /**
  *
- * @deprecated Используйте класс `P2p` и новые сигнатуры
+ * @deprecated Используйте класс {@link P2p} и новые сигнатуры
  * методов
  * @export
  * @class _P2pCompat

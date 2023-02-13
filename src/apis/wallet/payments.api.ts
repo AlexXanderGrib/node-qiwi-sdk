@@ -10,7 +10,8 @@ import {
   QuickPayParameters,
   CommissionPayer,
   QuickPayRecipients,
-  Rate
+  Rate,
+  CommissionResponse
 } from "./wallet.types";
 
 /**
@@ -42,8 +43,8 @@ export class WalletPaymentsApi extends WalletApi {
     amount: number,
     { accountCurrency = Currency.RUB, paymentCurrency = Currency.RUB } = {}
   ): Promise<number> {
-    const response: any = await this.http.post(
-      url`sinap/providers/${provider}/onlineCommission`,
+    const response = await this.http.post<CommissionResponse>(
+      url`sinap/providers/${provider}/onlineCommission`(),
       {
         account,
         paymentMethod: {
@@ -75,7 +76,7 @@ export class WalletPaymentsApi extends WalletApi {
     provider: number | Recipients,
     options: FormUrlOptions = {}
   ): string {
-    const data = {
+    const data: Record<string, unknown> = {
       currency: Currency.RUB,
       extra: {
         "'comment'": options.comment,
@@ -84,11 +85,12 @@ export class WalletPaymentsApi extends WalletApi {
       },
       blocked: options.blocked,
       ...options.custom
-    } as any;
+    };
 
     if (options.amount) {
-      data.amountInteger = Math.trunc(options.amount);
-      data.amountFraction = Math.round((options.amount - data.amountInteger) * 100);
+      const amountInteger = Math.trunc(options.amount);
+      data.amountInteger = amountInteger;
+      data.amountFraction = Math.round((options.amount - amountInteger) * 100);
     }
 
     return url`https://qiwi.com/payment/form/${provider}`(data);
@@ -133,7 +135,7 @@ export class WalletPaymentsApi extends WalletApi {
     fields = {},
     accountCurrency = Currency.RUB
   }: PayParameters): Promise<PaymentResponse> {
-    return await this.http.post(url`sinap/api/v2/terms/${provider}/payments`, {
+    return await this.http.post(url`sinap/api/v2/terms/${provider}/payments`(), {
       id: (Date.now() * 1000).toString(),
       sum: {
         amount,
@@ -248,11 +250,13 @@ export class WalletPaymentsApi extends WalletApi {
    * @memberof WalletPaymentsApi
    */
   async getRates(): Promise<Rate[]> {
-    const { result: rates } = await this.http.get<any>(url`sinap/crossRates`);
+    const { result: rates } = await this.http.get<{ result: Rate[] }>(
+      url`sinap/crossRates`()
+    );
 
-    return rates.map((data: any) => ({
-      from: Number.parseInt(data.from),
-      to: Number.parseInt(data.from),
+    return rates.map((data) => ({
+      from: Number.parseInt(String(data.from)),
+      to: Number.parseInt(String(data.to)),
       rate: data.rate
     }));
   }

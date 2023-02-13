@@ -1,1 +1,1 @@
-module.exports = require("./dist/cjs/apis/wallet");
+module.exports = require("./dist/apis/wallet/index.js");

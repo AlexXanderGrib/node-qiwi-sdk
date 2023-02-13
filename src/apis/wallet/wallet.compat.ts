@@ -4,7 +4,7 @@ import * as types from "./wallet.types";
 
 /**
  *
- * @deprecated Используйте класс `Wallet` и новые сигнатуры
+ * @deprecated Используйте класс {@link Wallet} и новые сигнатуры
  * методов
  *
  * @export
@@ -448,7 +448,7 @@ export class _WalletCompat extends Wallet {
   async blockCard(
     cardId: types.StringOrNumber,
     walletId: types.StringOrNumber = this.walletId
-  ): Promise<any> {
+  ): Promise<void> {
     return await this._executeWithWalletId(walletId, async () => {
       return await this.cards.block(cardId);
     });

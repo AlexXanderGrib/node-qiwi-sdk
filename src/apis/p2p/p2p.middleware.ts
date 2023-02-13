@@ -1,10 +1,11 @@
 import type { Request, RequestHandler } from "express";
+import type { AnyParameters } from "../shared";
 import type { P2pBillsApi } from "./bills.api";
 import { P2pBillNotificationError } from "./p2p.errors";
 import type { BillStatusBody, BillStatusNotificationBody } from "./p2p.types";
 
 type Promisify<T> = T extends Promise<any> ? T : Promise<T>;
-type AnyCallableFunction = (...parameters: any[]) => unknown;
+type AnyCallableFunction = (...parameters: AnyParameters) => unknown;
 type PromisifyReturnType<T extends AnyCallableFunction> = Promisify<ReturnType<T>>;
 type PromiseWrappedFunction<T extends AnyCallableFunction> = (
   ...parameters: Parameters<T>
@@ -19,7 +20,7 @@ type PromiseWrappedFunction<T extends AnyCallableFunction> = (
 export function promise<T extends AnyCallableFunction>(
   callable: T
 ): PromiseWrappedFunction<T> {
-  return (...parameters: any[]): any => {
+  return (...parameters: AnyParameters): any => {
     try {
       const result = callable(...parameters);
 

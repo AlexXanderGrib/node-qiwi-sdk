@@ -24,7 +24,7 @@ export class WalletRestrictionsApi extends WalletApi {
    */
   async get(): Promise<Restrictions> {
     return await this.http.get(
-      url`person-profile/v1/persons/${this.walletId}/status/restrictions`
+      url`person-profile/v1/persons/${this.walletId}/status/restrictions`()
     );
   }
 }

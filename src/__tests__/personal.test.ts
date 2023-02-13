@@ -3,6 +3,7 @@ import { config } from "dotenv";
 import { Personal, WalletApiShortError } from "../apis/wallet";
 import {
   Account,
+  AnyParameters,
   ChequeFormat,
   CommissionPayer,
   Currency,
@@ -19,7 +20,10 @@ jest.setTimeout(30_000);
 config();
 
 // eslint-disable-next-line require-jsdoc
-async function expectToThrow(errorClass: any, executor: () => Promise<void>) {
+async function expectToThrow(
+  errorClass: new (...parameters: AnyParameters) => void,
+  executor: () => Promise<void>
+) {
   try {
     await executor();
     fail(`Expected ${executor.name}() to throw an error`);
@@ -179,7 +183,7 @@ describe(Personal.name, () => {
           amount: 1e6,
           accountCurrency: Currency.KZT,
           commissionPayer: CommissionPayer.RECEIVER,
-          provider: "unknown" as any
+          provider: "unknown" as "card"
         });
       });
     });

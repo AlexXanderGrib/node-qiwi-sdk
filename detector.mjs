@@ -1,1 +1,1 @@
-export * from "./dist/esm/apis/detector/index.mjs";
+export * from "./dist/apis/detector/index.mjs";

@@ -89,14 +89,4 @@ export class ErrorWithCode<
       code: this.code
     };
   }
-
-  /**
-   *
-   *
-   * @return {*} string
-   * @memberof ErrorWithCode
-   */
-  toString(): string {
-    return `[Error ${this.name}; CODE=${this.code}]`;
-  }
 }

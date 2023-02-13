@@ -1,1 +1,1 @@
-export * from "./dist/cjs/apis/wallet/index";
+export * from "./dist/apis/wallet/index";

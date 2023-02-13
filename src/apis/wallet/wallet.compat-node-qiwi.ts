@@ -5,7 +5,7 @@ import type * as types from "./wallet.types";
 /**
  *
  * @deprecated Это класс для тех, кто мигрирует с `node-qiwi`.
- * Остальным рекомендуется использовать класс `Wallet`
+ * Остальным рекомендуется использовать класс {@link Wallet}
  *
  * @export
  * @class _WalletCompatNodeQiwi

@@ -9,16 +9,12 @@ import packageJson from "./package.json" assert { type: "json" };
 import prettierConfig from "./.prettierrc.json" assert { type: "json" };
 
 const nodeInput = ["./src/index.ts"];
-const webInput = {
-  index: "./src/index.ts"
-};
 
 for (const directory of readdirSync("./src/apis")) {
   const path = `./src/apis/${directory}`;
   if (!statSync(path).isDirectory()) continue;
   const file = `${path}/index.ts`;
 
-  webInput[directory] = file;
   nodeInput.push(file);
 }
 
@@ -39,7 +35,7 @@ const configNode = {
   external: ["crypto", "axios"],
   output: [
     {
-      dir: "./dist/cjs",
+      dir: "./dist",
       format: "commonjs",
       exports: "named",
       preserveModules: true,
@@ -47,7 +43,7 @@ const configNode = {
       ...output
     },
     {
-      dir: "./dist/esm",
+      dir: "./dist",
       format: "module",
       exports: "named",
       preserveModules: true,

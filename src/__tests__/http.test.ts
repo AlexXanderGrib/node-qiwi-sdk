@@ -101,9 +101,9 @@ describe("Http", () => {
     try {
       await http.get("/empty");
       fail("http.get() should have thrown an error");
-    } catch (error: any) {
+    } catch (error: unknown) {
       expect(error).toBeInstanceOf(HttpError);
-      expect(error.response.body).toEqual(new Uint8Array());
+      expect((error as HttpError).response.body).toEqual(new Uint8Array());
     }
   });
 

@@ -59,14 +59,14 @@ export class WalletOauthApi extends WalletApi {
   async createToken(): Promise<ShortTokenResponse> {
     const http = this._getHttp();
 
-    const codeResponse = await http.post<CodeResponse>(url`authorize`, {
+    const codeResponse = await http.post<CodeResponse>(url`authorize`(), {
       response_type: "code",
-      client_id: WalletOauthApi.CLIENT_ID,
       token: this._options.token,
+      client_id: WalletOauthApi.CLIENT_ID,
       client_software: WalletOauthApi.CLIENT_SOFTWARE
     });
 
-    const tokenResponse = await http.post<TokenResponse>(url`token`, {
+    const tokenResponse = await http.post<TokenResponse>(url`token`(), {
       grant_type: "authorization_code",
       client_id: WalletOauthApi.CLIENT_ID,
       client_secret: WalletOauthApi.CLIENT_SECRET,

@@ -21,6 +21,6 @@ export class WalletPersonProfileApi extends WalletApi {
    * @memberof WalletPersonProfileApi
    */
   async getCurrent(): Promise<PersonProfile> {
-    return await this.http.get(url`person-profile/v1/profile/current`);
+    return await this.http.get(url`person-profile/v1/profile/current`());
   }
 }

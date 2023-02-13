@@ -1,2 +1,2 @@
-export * from "./dist/esm/index.mjs";
-export { default } from "./dist/esm/index.mjs";
+export * from "./dist/index.mjs";
+export { default } from "./dist/index.mjs";

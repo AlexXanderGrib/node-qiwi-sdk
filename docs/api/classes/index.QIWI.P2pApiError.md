@@ -60,7 +60,7 @@ P2pApiError
 
 #### Defined in
 
-[apis/p2p/p2p.errors.ts:32](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/p2p/p2p.errors.ts#L32)
+[apis/p2p/p2p.errors.ts:32](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/p2p/p2p.errors.ts#L32)
 
 ## Properties
 
@@ -74,7 +74,7 @@ P2pApiError
 
 #### Defined in
 
-[apis/error.ts:14](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/error.ts#L14)
+[apis/error.ts:14](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/error.ts#L14)
 
 ___
 
@@ -84,7 +84,7 @@ ___
 
 #### Defined in
 
-[apis/p2p/p2p.errors.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/p2p/p2p.errors.ts#L23)
+[apis/p2p/p2p.errors.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/p2p/p2p.errors.ts#L23)
 
 ___
 
@@ -98,7 +98,7 @@ ___
 
 #### Defined in
 
-[apis/error.ts:14](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/error.ts#L14)
+[apis/error.ts:14](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/error.ts#L14)
 
 ___
 
@@ -112,7 +112,7 @@ ___
 
 #### Defined in
 
-[apis/error.ts:29](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/error.ts#L29)
+[apis/error.ts:29](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/error.ts#L29)
 
 ___
 
@@ -122,7 +122,7 @@ ___
 
 #### Defined in
 
-[apis/p2p/p2p.errors.ts:32](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/p2p/p2p.errors.ts#L32)
+[apis/p2p/p2p.errors.ts:32](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/p2p/p2p.errors.ts#L32)
 
 ___
 
@@ -132,7 +132,7 @@ ___
 
 #### Defined in
 
-[apis/p2p/p2p.errors.ts:24](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/p2p/p2p.errors.ts#L24)
+[apis/p2p/p2p.errors.ts:24](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/p2p/p2p.errors.ts#L24)
 
 ## Accessors
 
@@ -154,7 +154,7 @@ ExtendedError.\_\_@toStringTag@18
 
 #### Defined in
 
-[apis/error.ts:52](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/error.ts#L52)
+[apis/error.ts:52](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/error.ts#L52)
 
 ## Methods
 
@@ -178,4 +178,4 @@ Error
 
 #### Defined in
 
-[apis/error.ts:37](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/error.ts#L37)
+[apis/error.ts:37](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/error.ts#L37)

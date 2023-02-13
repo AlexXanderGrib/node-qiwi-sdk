@@ -34,7 +34,7 @@ export class DetectorDetectApi extends DetectorApi {
    * @param {string} phone
    */
   async byPhone(phone: string): Promise<number> {
-    const response = await this.http.post<any>(url`mobile/detect.action`, {
+    const response = await this.http.post<AnyRecord>(url`mobile/detect.action`(), {
       phone
     });
 
@@ -51,7 +51,7 @@ export class DetectorDetectApi extends DetectorApi {
    * Советую использовать константу `Recipients.AnyRusCard` вместо вызова метода.
    */
   async byCardNumber(cardNumber: string): Promise<number> {
-    const response = await this.http.post<any>(url`card/detect.action`, {
+    const response = await this.http.post<AnyRecord>(url`card/detect.action`(), {
       cardNumber
     });
 

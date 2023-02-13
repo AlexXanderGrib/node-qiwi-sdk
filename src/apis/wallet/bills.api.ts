@@ -42,7 +42,7 @@ export class WalletBillsApi extends WalletApi {
    */
   async createP2PKeyPair(name: string, server?: string): Promise<KeyPair> {
     const response = await this.http.post<any>(
-      url`widgets-api/api/p2p/protected/keys/create`,
+      url`widgets-api/api/p2p/protected/keys/create`(),
       {
         keysPairName: name,
         ...(server && { serverNotificationsUrl: server })
@@ -94,7 +94,7 @@ export class WalletBillsApi extends WalletApi {
       bill = bill.id;
     }
 
-    return await this.http.post(url`checkout-api/invoice/pay/wallet`, {
+    return await this.http.post(url`checkout-api/invoice/pay/wallet`(), {
       invoice_uid: bill.toString(),
       currency
     });
@@ -111,6 +111,6 @@ export class WalletBillsApi extends WalletApi {
    * @memberof WalletBillsApi
    */
   async reject(id: Bill["id"]): Promise<void> {
-    await this.http.post(url`checkout-api/api/bill/reject`, { id });
+    await this.http.post(url`checkout-api/api/bill/reject`(), { id });
   }
 }

@@ -15,7 +15,6 @@ describe("Error Classes", () => {
     const error = new ErrorWithCode(message, code);
 
     expect(error.code).toBe("TEST");
-    expect(error.toString()).toContain(`CODE=${code}`);
     expect(JSON.stringify(error)).toContain(`"code":"${code}"`);
   });
 });

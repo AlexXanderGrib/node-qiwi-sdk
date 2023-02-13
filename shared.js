@@ -1,1 +1,1 @@
-module.exports = require("./dist/cjs/apis/shared");
+module.exports = require("./dist/apis/shared/index.js");

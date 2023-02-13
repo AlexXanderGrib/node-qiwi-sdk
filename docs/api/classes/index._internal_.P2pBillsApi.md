@@ -69,7 +69,7 @@ OptionsWrapper
 
 #### Defined in
 
-[apis/options-wrapper.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/options-wrapper.ts#L23)
+[apis/options-wrapper.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/options-wrapper.ts#L23)
 
 ## Properties
 
@@ -87,7 +87,7 @@ OptionsWrapper
 
 #### Defined in
 
-[apis/options-wrapper.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/options-wrapper.ts#L16)
+[apis/options-wrapper.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/options-wrapper.ts#L16)
 
 ## Accessors
 
@@ -109,7 +109,7 @@ P2pApi.http
 
 #### Defined in
 
-[apis/api.ts:55](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/api.ts#L55)
+[apis/api.ts:55](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/api.ts#L55)
 
 ___
 
@@ -131,7 +131,7 @@ P2pApi.publicKey
 
 #### Defined in
 
-[apis/p2p/api.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/p2p/api.ts#L17)
+[apis/p2p/api.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/p2p/api.ts#L17)
 
 ___
 
@@ -153,7 +153,7 @@ P2pApi.secretKey
 
 #### Defined in
 
-[apis/p2p/api.ts:28](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/p2p/api.ts#L28)
+[apis/p2p/api.ts:28](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/p2p/api.ts#L28)
 
 ## Methods
 
@@ -175,7 +175,7 @@ P2pApi.secretKey
 
 #### Defined in
 
-[apis/p2p/bills.api.ts:70](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/p2p/bills.api.ts#L70)
+[apis/p2p/bills.api.ts:70](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/p2p/bills.api.ts#L70)
 
 ___
 
@@ -201,7 +201,7 @@ string
 
 #### Defined in
 
-[apis/p2p/bills.api.ts:55](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/p2p/bills.api.ts#L55)
+[apis/p2p/bills.api.ts:55](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/p2p/bills.api.ts#L55)
 
 ___
 
@@ -229,7 +229,7 @@ boolean
 
 #### Defined in
 
-[apis/p2p/bills.api.ts:171](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/p2p/bills.api.ts#L171)
+[apis/p2p/bills.api.ts:174](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/p2p/bills.api.ts#L174)
 
 ___
 
@@ -270,7 +270,7 @@ Promise<BillStatusData>
 
 #### Defined in
 
-[apis/p2p/bills.api.ts:98](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/p2p/bills.api.ts#L98)
+[apis/p2p/bills.api.ts:98](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/p2p/bills.api.ts#L98)
 
 ___
 
@@ -294,7 +294,7 @@ ___
 
 #### Defined in
 
-[apis/p2p/bills.api.ts:194](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/p2p/bills.api.ts#L194)
+[apis/p2p/bills.api.ts:197](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/p2p/bills.api.ts#L197)
 
 ___
 
@@ -308,7 +308,7 @@ ___
 
 #### Defined in
 
-[apis/p2p/bills.api.ts:76](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/p2p/bills.api.ts#L76)
+[apis/p2p/bills.api.ts:76](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/p2p/bills.api.ts#L76)
 
 ___
 
@@ -339,7 +339,7 @@ Promise<BillRefundStatusData>
 
 #### Defined in
 
-[apis/p2p/bills.api.ts:252](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/p2p/bills.api.ts#L252)
+[apis/p2p/bills.api.ts:255](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/p2p/bills.api.ts#L255)
 
 ___
 
@@ -366,7 +366,7 @@ ___
 
 #### Defined in
 
-[apis/p2p/bills.api.ts:146](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/p2p/bills.api.ts#L146)
+[apis/p2p/bills.api.ts:149](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/p2p/bills.api.ts#L149)
 
 ___
 
@@ -397,7 +397,7 @@ Promise<BillRefundStatusData>
 
 #### Defined in
 
-[apis/p2p/bills.api.ts:230](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/p2p/bills.api.ts#L230)
+[apis/p2p/bills.api.ts:233](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/p2p/bills.api.ts#L233)
 
 ___
 
@@ -423,7 +423,7 @@ ___
 
 #### Defined in
 
-[apis/p2p/bills.api.ts:158](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/p2p/bills.api.ts#L158)
+[apis/p2p/bills.api.ts:161](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/p2p/bills.api.ts#L161)
 
 ___
 
@@ -448,4 +448,4 @@ ___
 
 #### Defined in
 
-[apis/p2p/bills.api.ts:35](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/p2p/bills.api.ts#L35)
+[apis/p2p/bills.api.ts:35](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/p2p/bills.api.ts#L35)

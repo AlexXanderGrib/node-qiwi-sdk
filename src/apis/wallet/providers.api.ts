@@ -22,6 +22,6 @@ export class WalletProvidersApi extends WalletApi {
    * @memberof WalletProvidersApi
    */
   async getInfo(providerId: number): Promise<ProviderInfo> {
-    return await this.http.get(url`providers-catalog/v2/providers/${providerId}`);
+    return await this.http.get(url`providers-catalog/v2/providers/${providerId}`());
   }
 }

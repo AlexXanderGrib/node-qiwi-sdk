@@ -1,1 +1,1 @@
-module.exports = require("./dist/cjs/apis/p2p");
+module.exports = require("./dist/apis/p2p/index.js");

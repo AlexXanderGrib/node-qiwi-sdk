@@ -1,9 +1,6 @@
 import { uint8ArrayToUtf8 } from "./platform/decode";
 import { PlatformHttpClient } from "./platform/http";
-import type { URLResult } from "./url";
 import type { HttpClient, HttpRequestOptions } from "./http.types";
-
-type ToString = string | URLResult;
 
 /**
  *
@@ -28,11 +25,11 @@ export class SimpleJsonHttp {
    *
    *
    * @template T
-   * @param {ToString} url
+   * @param {string} url
    * @return {Promise<T>}
    * @memberof SimpleJsonHttp
    */
-  async get<T>(url: ToString): Promise<T> {
+  async get<T>(url: string): Promise<T> {
     return await this.simpleRequest("GET", url.toString());
   }
 
@@ -40,12 +37,12 @@ export class SimpleJsonHttp {
    *
    *
    * @template T
-   * @param {ToString} url
+   * @param {string} url
    * @param {*} [body]
    * @return {Promise<T>}
    * @memberof SimpleJsonHttp
    */
-  async post<T>(url: ToString, body?: any): Promise<T> {
+  async post<T>(url: string, body?: unknown): Promise<T> {
     return await this.simpleRequest("POST", url.toString(), body);
   }
 
@@ -53,12 +50,12 @@ export class SimpleJsonHttp {
    *
    *
    * @template T
-   * @param {ToString} url
+   * @param {string} url
    * @param {*} [body]
    * @return {Promise<T>}
    * @memberof SimpleJsonHttp
    */
-  async put<T>(url: ToString, body?: any): Promise<T> {
+  async put<T>(url: string, body?: unknown): Promise<T> {
     return await this.simpleRequest("PUT", url.toString(), body);
   }
 
@@ -66,12 +63,12 @@ export class SimpleJsonHttp {
    *
    *
    * @template T
-   * @param {ToString} url
+   * @param {string} url
    * @param {*} [body]
    * @return {Promise<T>}
    * @memberof SimpleJsonHttp
    */
-  async patch<T>(url: ToString, body?: any): Promise<T> {
+  async patch<T>(url: string, body?: unknown): Promise<T> {
     return await this.simpleRequest("PATCH", url.toString(), body);
   }
 
@@ -79,12 +76,12 @@ export class SimpleJsonHttp {
    *
    *
    * @template T
-   * @param {ToString} url
+   * @param {string} url
    * @param {*} [body]
    * @return {Promise<T>}
    * @memberof SimpleJsonHttp
    */
-  async delete<T>(url: ToString, body?: any): Promise<T> {
+  async delete<T>(url: string, body?: unknown): Promise<T> {
     return await this.simpleRequest("DELETE", url.toString(), body);
   }
 
@@ -97,7 +94,7 @@ export class SimpleJsonHttp {
    * @return {Promise<T>} Promise<T>
    * @memberof SimpleJsonHttp
    */
-  async simpleRequest<T>(method: string, url: string, body?: any): Promise<T> {
+  async simpleRequest<T>(method: string, url: string, body?: unknown): Promise<T> {
     return await this.request<T>({ method, url, body });
   }
 

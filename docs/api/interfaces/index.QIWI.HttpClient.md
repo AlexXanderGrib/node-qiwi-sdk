@@ -29,7 +29,7 @@
 
 #### Defined in
 
-[apis/shared/http.types.ts:52](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/shared/http.types.ts#L52)
+[apis/shared/http.types.ts:52](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/shared/http.types.ts#L52)
 
 ## Methods
 
@@ -49,4 +49,4 @@
 
 #### Defined in
 
-[apis/shared/http.types.ts:53](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/bc0e99e/src/apis/shared/http.types.ts#L53)
+[apis/shared/http.types.ts:53](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/shared/http.types.ts#L53)

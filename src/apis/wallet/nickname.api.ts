@@ -21,7 +21,7 @@ export class WalletNicknameApi extends WalletApi {
    */
   async getCurrent(): Promise<NicknameData> {
     return await this.http.get(
-      url`qw-nicknames/v1/persons/${this.walletId}/nickname`
+      url`qw-nicknames/v1/persons/${this.walletId}/nickname`()
     );
   }
 }

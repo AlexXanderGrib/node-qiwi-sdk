@@ -1,1 +1,1 @@
-module.exports = require("./dist/cjs/apis/detector");
+module.exports = require("./dist/apis/detector/index.js");

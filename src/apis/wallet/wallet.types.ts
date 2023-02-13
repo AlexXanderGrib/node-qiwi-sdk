@@ -1510,3 +1510,42 @@ export type Rate = {
   to: Currency;
   rate: number;
 };
+
+export type MoneyAmountString = {
+  amount: number;
+  /**
+   * Код валюты в строке.
+   * - "643" - рубли
+   * - "398" - тенге
+   */
+  currency: string;
+};
+
+export type CommissionResponse = {
+  /**
+   * ID провайдера
+   */
+  providerId: number;
+
+  /**
+   * Сумма списания
+   */
+  withdrawSum: MoneyAmountString;
+
+  /**
+   * Сумма зачисления
+   */
+  enrollmentSum: MoneyAmountString;
+
+  /**
+   * Комиссия КИВИ
+   */
+  qwCommission: MoneyAmountString;
+
+  /**
+   * Комиссия источника средств. Обычно 0
+   */
+  fundingSourceCommission: MoneyAmountString;
+
+  withdrawToEnrollmentRate: number;
+};
