@@ -1,6 +1,6 @@
 # QIWI SDK
 
-> Typed QIWI Wallet SDK for NodeJS. Supported API's: Personal & P2P Bill Payments
+> QIWI SDK for node: P2P Payments & Wallet management
 
 <center>
   <img src="docs/assets/logo.svg" alt="QIWI SDK" /> 
@@ -21,25 +21,14 @@
 
 ## 👅 Язык
 
-Весь JSDoc библиотеки на русском языке, как и большая часть документации.
-Основной `README.md` файл на английском потому что:
-
-1. NPM лучше индексирует текст на английском + хочется чтобы не русскоговорящие
-   люди, нашедшие эту библиотеку на NPM не пугались того, что всё на Русском.
-2. Английский - это язык из которого пошли программистские термины, в том числе те,
-   что нельзя перевести. (например: Contributing)
-
 > [👉 Документация на Русском 🇷🇺 👈](./README.ru.md)
 
 Language: [Русский](./README.ru.md) | **English**
 
 ## 🍬 Why use this lib?
 
-1. **Full.** Covers the following APIs:
-   - [Wallet Personal](https://developer.qiwi.com/ru/qiwi-wallet-personal/);
-   - [P2P Payments](https://developer.qiwi.com/ru/p2p-payments/).
-2. **Simple.** All methods are named as in QIWI documentation and collected into subclasses. All methods have JSDoc comments.
-   - **Lot of [examples](#examples)**.
+1. **Full.** Covers the following APIs: [Wallet Personal](https://developer.qiwi.com/ru/qiwi-wallet-personal/), [P2P Payments](https://developer.qiwi.com/ru/p2p-payments/);
+2. **Simple.** All methods are named as in QIWI documentation and collected into subclasses. All methods have JSDoc comments. Lot of [examples](#examples).
 3. **Reliable.** The library is written in **TypeScript** and covered by tests.
 4. [**Secure.**](./SECURITY.md) The library has only 1 dependency (axios) and is constantly scanned by Code QL and [Snyk](https://snyk.io/advisor/npm-package/qiwi-sdk) for vulnerabilities.
 5. **Compatible.** Code from version `1.1.0` (18 Jan. 2020) will work on version `4.0.0` (26 May 2022) with little changes. Also `qiwi-sdk` provides classes to make migration from similar libs effortless.
@@ -47,14 +36,16 @@ Language: [Русский](./README.ru.md) | **English**
    - [Migration from version 2 to 3](./docs/migrations/from-2-to-3.md);
    - [Migration from `node-qiwi`](./docs/migrations/from-node-qiwi.md);
    - [Migration from `@qiwi/bill-payments-node-js-sdk`](./docs/migrations/from-bill-payments-sdk.md).
-6. **Powerful.** Supports http & socks [**proxy**](./examples/7-proxy.js) out of the box, and rarely used APIs:
-   - Personal Webhooks;
-   - P2P payment method blocking;
-   - "Qiwi Master" Card API.
-   - [`Express` integration](#express-integration) out of the box
-7. **Cross Platform.** Works in browser
 
 Language: [Русский](./README.ru.md) | **English**
+
+## Documentation
+
+1. [Installation](#instantiation)
+2. [Import](#import)
+3. [API Overview](#api-overview)
+4. [API Reference](./docs/api/modules.md)
+5. [Examples](#examples)
 
 ## 📦 Installation
 
@@ -125,20 +116,16 @@ To see detailed documentation on a class, click on its name.
 ```javascript
 const { Wallet, P2p, Detector } = require("qiwi-sdk");
 
-// ✅ - The right way (since v3.0.0)
-const wallet = Wallet.create(process.env.QIWI_TOKEN, process.env.QIWI_WALLET);
-const p2p = P2p.create(process.env.QIWI_SECRET_KEY, process.env.QIWI_PUBLIC_KEY);
-const detect = Detector.create();
-
-// ✅ - Also right way (but since v3.2.0)
 const wallet = new Wallet({
   token: process.env.QIWI_TOKEN,
   walletId: process.env.QIWI_WALLET
 });
+
 const p2p = new P2p({
   secretKey: process.env.QIWI_SECRET_KEY,
   publicKey: process.env.QIWI_PUBLIC_KEY
 });
+
 const detect = new Detector();
 ```
 
@@ -256,22 +243,6 @@ Distributed under the MIT License. See [LICENSE.txt](./LICENSE.txt) for more inf
 
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FAlexXanderGrib%2Fnode-qiwi-sdk.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FAlexXanderGrib%2Fnode-qiwi-sdk?ref=badge_large)
 
-### Project Goals
-
-- [ ] Cover all [APIs](https://developer.qiwi.com/) (both for persons & legal entities)
-  - [x] API QIWI Wallet
-  - [ ] Payments
-  - [ ] Payouts
-- [x] Keep versions backwards compatible
-  - [x] v2 и v3
-  - [x] v1 и v2
-- [x] Ensure maximum reliability and code quality
-  - [x] Types: TypeScript
-  - [x] Tests: Jest, Codecov
-  - [x] Auto-tests in the repository: Github Actions
-  - [x] Linking: Eslint, Prettier, Editorconfig
-  - [x] Security: Eslint Plugin, Code QL, manual check in Snyk
-
 ### Contributing
 
 1. ⁉️ Do not hesitate to create [Issues](https://github.com/AlexXanderGrib/node-qiwi-sdk/issues/new)
@@ -280,6 +251,9 @@ Distributed under the MIT License. See [LICENSE.txt](./LICENSE.txt) for more inf
 4. 🌟 Or give this repo [a star](https://github.com/AlexXanderGrib/node-qiwi-sdk/stargazers), if you liked this lib
 
 ### Support
+
+- [Create Issue](https://github.com/AlexXanderGrib/node-qiwi-sdk/issues/new)
+- [Telegram: @AlexXanderGrib](https://t.me/AlexXanderGrib)
 
 You can write issue, or if i am slow to answer it, you can DM me in
 

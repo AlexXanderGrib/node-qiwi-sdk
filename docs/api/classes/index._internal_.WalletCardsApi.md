@@ -62,7 +62,7 @@ OptionsWrapper
 
 #### Defined in
 
-[apis/options-wrapper.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/options-wrapper.ts#L23)
+[apis/options-wrapper.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4602c58/src/apis/options-wrapper.ts#L23)
 
 ## Properties
 
@@ -80,7 +80,7 @@ OptionsWrapper
 
 #### Defined in
 
-[apis/options-wrapper.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/options-wrapper.ts#L16)
+[apis/options-wrapper.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4602c58/src/apis/options-wrapper.ts#L16)
 
 ## Accessors
 
@@ -102,7 +102,7 @@ WalletApi.http
 
 #### Defined in
 
-[apis/api.ts:55](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/api.ts#L55)
+[apis/api.ts:55](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4602c58/src/apis/api.ts#L55)
 
 ___
 
@@ -124,7 +124,7 @@ WalletApi.walletId
 
 #### Defined in
 
-[apis/wallet/api.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/wallet/api.ts#L17)
+[apis/wallet/api.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4602c58/src/apis/wallet/api.ts#L17)
 
 ## Methods
 
@@ -154,7 +154,7 @@ Promise<void>
 
 #### Defined in
 
-[apis/wallet/cards.api.ts:49](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/wallet/cards.api.ts#L49)
+[apis/wallet/cards.api.ts:49](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4602c58/src/apis/wallet/cards.api.ts#L49)
 
 ___
 
@@ -186,7 +186,7 @@ Promise<CardResponse[]>
 
 #### Defined in
 
-[apis/wallet/cards.api.ts:32](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/wallet/cards.api.ts#L32)
+[apis/wallet/cards.api.ts:32](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4602c58/src/apis/wallet/cards.api.ts#L32)
 
 ___
 
@@ -218,7 +218,7 @@ Promise<CardRequisitesResponse>
 
 #### Defined in
 
-[apis/wallet/cards.api.ts:83](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/wallet/cards.api.ts#L83)
+[apis/wallet/cards.api.ts:83](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4602c58/src/apis/wallet/cards.api.ts#L83)
 
 ___
 
@@ -251,7 +251,7 @@ Promise<CardRenameResponse>
 
 #### Defined in
 
-[apis/wallet/cards.api.ts:101](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/wallet/cards.api.ts#L101)
+[apis/wallet/cards.api.ts:101](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4602c58/src/apis/wallet/cards.api.ts#L101)
 
 ___
 
@@ -283,4 +283,4 @@ Promise<CardUnblockResponse>
 
 #### Defined in
 
-[apis/wallet/cards.api.ts:66](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/wallet/cards.api.ts#L66)
+[apis/wallet/cards.api.ts:66](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4602c58/src/apis/wallet/cards.api.ts#L66)

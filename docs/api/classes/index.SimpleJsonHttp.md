@@ -46,7 +46,7 @@ SimpleJsonHttp
 
 #### Defined in
 
-[apis/shared/http.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/shared/http.ts#L17)
+[apis/shared/http.ts:17](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4602c58/src/apis/shared/http.ts#L17)
 
 ## Properties
 
@@ -56,7 +56,7 @@ SimpleJsonHttp
 
 #### Defined in
 
-[apis/shared/http.ts:18](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/shared/http.ts#L18)
+[apis/shared/http.ts:18](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4602c58/src/apis/shared/http.ts#L18)
 
 ## Methods
 
@@ -87,7 +87,7 @@ SimpleJsonHttp
 
 #### Defined in
 
-[apis/shared/http.ts:84](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/shared/http.ts#L84)
+[apis/shared/http.ts:84](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4602c58/src/apis/shared/http.ts#L84)
 
 ___
 
@@ -117,7 +117,7 @@ SimpleJsonHttp
 
 #### Defined in
 
-[apis/shared/http.ts:32](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/shared/http.ts#L32)
+[apis/shared/http.ts:32](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4602c58/src/apis/shared/http.ts#L32)
 
 ___
 
@@ -148,7 +148,7 @@ SimpleJsonHttp
 
 #### Defined in
 
-[apis/shared/http.ts:71](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/shared/http.ts#L71)
+[apis/shared/http.ts:71](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4602c58/src/apis/shared/http.ts#L71)
 
 ___
 
@@ -179,7 +179,7 @@ SimpleJsonHttp
 
 #### Defined in
 
-[apis/shared/http.ts:45](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/shared/http.ts#L45)
+[apis/shared/http.ts:45](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4602c58/src/apis/shared/http.ts#L45)
 
 ___
 
@@ -210,7 +210,7 @@ SimpleJsonHttp
 
 #### Defined in
 
-[apis/shared/http.ts:58](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/shared/http.ts#L58)
+[apis/shared/http.ts:58](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4602c58/src/apis/shared/http.ts#L58)
 
 ___
 
@@ -242,7 +242,7 @@ Promise<T>
 
 #### Defined in
 
-[apis/shared/http.ts:108](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/shared/http.ts#L108)
+[apis/shared/http.ts:108](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4602c58/src/apis/shared/http.ts#L108)
 
 ___
 
@@ -276,4 +276,4 @@ Promise<T>
 
 #### Defined in
 
-[apis/shared/http.ts:97](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/shared/http.ts#L97)
+[apis/shared/http.ts:97](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4602c58/src/apis/shared/http.ts#L97)

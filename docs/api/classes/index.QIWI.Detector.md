@@ -62,7 +62,7 @@ P2p
 
 #### Defined in
 
-[apis/detector/detector.ts:60](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/detector/detector.ts#L60)
+[apis/detector/detector.ts:60](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4602c58/src/apis/detector/detector.ts#L60)
 
 ## Properties
 
@@ -80,7 +80,7 @@ OptionsWrapper
 
 #### Defined in
 
-[apis/options-wrapper.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/options-wrapper.ts#L16)
+[apis/options-wrapper.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4602c58/src/apis/options-wrapper.ts#L16)
 
 ___
 
@@ -90,7 +90,7 @@ ___
 
 #### Defined in
 
-[apis/detector/detector.ts:66](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/detector/detector.ts#L66)
+[apis/detector/detector.ts:66](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4602c58/src/apis/detector/detector.ts#L66)
 
 ___
 
@@ -100,7 +100,7 @@ ___
 
 #### Defined in
 
-[apis/detector/detector.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/detector/detector.ts#L16)
+[apis/detector/detector.ts:16](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4602c58/src/apis/detector/detector.ts#L16)
 
 ## Accessors
 
@@ -122,7 +122,7 @@ ApiClass.agent
 
 #### Defined in
 
-[apis/api.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/api.ts#L23)
+[apis/api.ts:23](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4602c58/src/apis/api.ts#L23)
 
 • `set` **agent**(`agent`): `void`
 
@@ -146,7 +146,7 @@ ApiClass.agent
 
 #### Defined in
 
-[apis/api.ts:32](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/api.ts#L32)
+[apis/api.ts:32](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4602c58/src/apis/api.ts#L32)
 
 ___
 
@@ -168,7 +168,7 @@ ApiClass.options
 
 #### Defined in
 
-[apis/options-wrapper.ts:44](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/options-wrapper.ts#L44)
+[apis/options-wrapper.ts:44](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4602c58/src/apis/options-wrapper.ts#L44)
 
 ## Methods
 
@@ -190,7 +190,7 @@ Detector
 
 #### Defined in
 
-[apis/detector/detector.ts:51](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/detector/detector.ts#L51)
+[apis/detector/detector.ts:51](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4602c58/src/apis/detector/detector.ts#L51)
 
 ___
 
@@ -212,4 +212,4 @@ SimpleJsonHttp
 
 #### Defined in
 
-[apis/detector/detector.ts:25](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/detector/detector.ts#L25)
+[apis/detector/detector.ts:25](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4602c58/src/apis/detector/detector.ts#L25)

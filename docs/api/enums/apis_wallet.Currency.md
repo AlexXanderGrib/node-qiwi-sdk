@@ -27,7 +27,7 @@
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:63](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/wallet/wallet.types.ts#L63)
+[apis/wallet/wallet.types.ts:63](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4602c58/src/apis/wallet/wallet.types.ts#L63)
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:65](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/wallet/wallet.types.ts#L65)
+[apis/wallet/wallet.types.ts:65](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4602c58/src/apis/wallet/wallet.types.ts#L65)
 
 ___
 
@@ -51,7 +51,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:55](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/wallet/wallet.types.ts#L55)
+[apis/wallet/wallet.types.ts:55](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4602c58/src/apis/wallet/wallet.types.ts#L55)
 
 ___
 
@@ -63,7 +63,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:57](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/wallet/wallet.types.ts#L57)
+[apis/wallet/wallet.types.ts:57](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4602c58/src/apis/wallet/wallet.types.ts#L57)
 
 ___
 
@@ -75,7 +75,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:51](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/wallet/wallet.types.ts#L51)
+[apis/wallet/wallet.types.ts:51](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4602c58/src/apis/wallet/wallet.types.ts#L51)
 
 ___
 
@@ -87,7 +87,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:61](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/wallet/wallet.types.ts#L61)
+[apis/wallet/wallet.types.ts:61](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4602c58/src/apis/wallet/wallet.types.ts#L61)
 
 ___
 
@@ -99,7 +99,7 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:59](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/wallet/wallet.types.ts#L59)
+[apis/wallet/wallet.types.ts:59](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4602c58/src/apis/wallet/wallet.types.ts#L59)
 
 ___
 
@@ -111,4 +111,4 @@ ___
 
 #### Defined in
 
-[apis/wallet/wallet.types.ts:53](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/8cf62fb/src/apis/wallet/wallet.types.ts#L53)
+[apis/wallet/wallet.types.ts:53](https://github.com/AlexXanderGrib/node-qiwi-sdk/blob/4602c58/src/apis/wallet/wallet.types.ts#L53)
